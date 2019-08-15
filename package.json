@@ -10,8 +10,14 @@
     "@gridsome/source-filesystem": "^0.5.0",
     "@gridsome/transformer-remark": "^0.3.2",
     "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-vue": "^5.2.3",
     "gridsome": "^0.6.0",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "netlify-cms": "^2.9.7"
+  },
+  "devDependencies": {
+    "eslint-plugin-gridsome": "^1.2.8",
+    "vue-eslint-parser": "^6.0.4"
   }
 }
