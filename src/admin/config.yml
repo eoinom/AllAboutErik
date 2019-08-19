@@ -16,3 +16,13 @@ collections:
       - {label: "Excerpt", name: "excerpt", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "roots&youth videos"
+    label: "Roots & Youth Video"
+    folder: "src/data/roots&youth"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Url", name: "url", widget: "string"}      
+      - {label: "Length", name: "length", widget: "datetime", dateFormat: false, timeFormat: "hh:mm:ss"}
+      - {label: "Caption", name: "caption", widget: "markdown"}
