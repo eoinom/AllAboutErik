@@ -36,5 +36,17 @@ module.exports = {
         publicPath: `/admin`
       }
     },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/roots&youth/**/*.md',
+        typeName: 'RootsVideo',
+        remark: {
+          plugins: [
+            // ...local plugins
+          ]
+        }
+      }
+    }
   ]
 }
