@@ -1,6 +1,7 @@
 <template>
   <Layout>    
    
+    <br>
     <h2>Roots and Youth</h2>
     <div v-for="edge in $page.rootsVideos.edges" :key="edge.node.id">
       <h1>{{ edge.node.title }}</h1>

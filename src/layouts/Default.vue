@@ -1,26 +1,28 @@
 <template>
   <div class="layout">
     <header class="header">
-
+      <div class="openbtn">
+        <g-image alt="Open navigation menu" src="~/assets/images/menu-open.png" width="135px" style="cursor:pointer" immediate=true @click="openNav()" />
+        <g-image alt="Open navigation menu" src="~/assets/images/menu-open-hover.png" width="135px" style="cursor:pointer" immediate=true @click="openNav()" class="img-hover"/>
+      </div>
     </header>
     
     <!-- Main navigation menu -->
     <div id="sideNav-main" class="sidenav">
       <div>
         <div class="closebtn">
-          <g-image alt="Close navigation menu" src="~/assets/images/menu-close.png" @click="closeNav()"/>
-          <g-image alt="Close navigation menu" src="~/assets/images/menu-close-hover.png" @click="closeNav()" class="img-hover"/>
+          <g-image alt="Close navigation menu" src="~/assets/images/menu-close.png" style="cursor:pointer" immediate=true @click="closeNav()"/>
+          <g-image alt="Close navigation menu" src="~/assets/images/menu-close-hover.png" style="cursor:pointer" immediate=true @click="closeNav()" class="img-hover"/>
         </div>
         <nav v-for="nav in navs" :key="nav.label">
           <router-link :to="nav.to" class="nav_item" @mouseover.native="onNavLinkHover(nav)">{{ nav.label.toUpperCase() }}</router-link>
-          <!-- <g-link :to="nav.to" class="nav_item" @mouseover.native="onNavLinkHover(nav)">{{ nav.label.toUpperCase() }}</g-link> -->
           <hr />
         </nav>
       </div>
     </div>
 
     <!-- Sub navigation menu -->
-    <div v-if="showSubSideNav()">
+    <div v-if="showSubSideNav">
       <div id="sideNav-sub" class="sidenav-sub">
         <div class="submenu-img-container">
           <!-- <g-image :src="activeNav.img" width="240px" /> -->
@@ -32,14 +34,16 @@
           </image-component> -->
           <!-- <image-component imageFile="submenu-musical-journey.jpg" /> -->
           <!-- <g-image src="~/assets/images/submenu-musical-journey.jpg" /> -->
-          <g-image :src="activeImg" />
+          <router-link :to="activeNav.to">
+            <g-image :src="activeImg" />
+          </router-link>
           <!-- <image-component :imageFile="activeNav.img" /> -->
         </div> 
 
         <div class="submenu-text-container">
-          <span class="verb-text">{{ activeNav.verb }}</span>
+          <router-link :to="activeNav.to" class="verb-text">{{ activeNav.verb }}</router-link>
           <br>
-          <span class="title-text">{{ activeNav.title }}</span>
+          <router-link :to="activeNav.to" class="title-text">{{ activeNav.title }}</router-link>
 
           <div v-if="showSubPageLinks" class="submenu-nav-container">
             <nav v-for="subpage in activeNav.subpages" :key="subpage.label">
@@ -52,8 +56,6 @@
 
       </div>
     </div>
-
-    <g-image alt="Open navigation menu" src="~/assets/images/menu-open.png" width="135px" @click="openNav()"/>
      
     <slot/>
   </div>
@@ -161,9 +163,9 @@
       activeImg() {
         return '/assets/static/src/assets/images/' + this.activeNav.img
       },
-      // showSubSideNav() {
-      //   return this.activeNav.hasOwnProperty('submenu') && this.activeNav.submenu === true
-      // },
+      showSubSideNav() {
+        return this.activeNav.hasOwnProperty('submenu') && this.activeNav.submenu === true
+      },
       showSubPageLinks() {
         return this.activeNav.hasOwnProperty('subpages') && this.activeNav.subpages.length > 0
       }
@@ -172,31 +174,42 @@
     methods: {    
       openNav() {
         /* Set the width of the side navigation */
-        document.getElementById("sideNav-main").style.width = "190px"
-        document.getElementById("sideNav-main").style.paddingLeft = "18px"
-        document.getElementById("sideNav-main").style.paddingRight = "18px"
-        document.getElementById("sideNav-sub").style.width = "240px"
+        let mainNav = document.getElementById("sideNav-main")
+        let subNav = document.getElementById("sideNav-sub")
+        
+        mainNav.style.transition = "0.5s"   
+        mainNav.style.width = "190px"
+        mainNav.style.paddingLeft = "18px"
+        mainNav.style.paddingRight = "18px"
+
+        subNav.style.transition = "0.5s"        
+        subNav.style.transitionDelay = "0.5s"        
+        subNav.style.width = "240px"
       },    
       closeNav() {
-        /* Hides the navigation menu by setting the width of it to 0 */
-        document.getElementById("sideNav-main").style.width = "0"
-        document.getElementById("sideNav-main").style.paddingLeft = "0"
-        document.getElementById("sideNav-main").style.paddingRight = "0"
-        document.getElementById("sideNav-sub").style.width = "0"
+        /* Hides the navigation menu by setting the width of it to 0 */  
+        let mainNav = document.getElementById("sideNav-main")
+        let subNav = document.getElementById("sideNav-sub")
+        if (subNav === null || subNav.style.width == "0") {
+          mainNav.style.transition = "0.5s"
+        }
+        else {
+          subNav.style.transition = "0.3s"
+          subNav.style.width = "0"
+          mainNav.style.transition = "0.3s"
+          mainNav.style.transitionDelay = "0.3s"
+          
+        }
+        mainNav.style.width = "0"
+        mainNav.style.paddingLeft = "0"
+        mainNav.style.paddingRight = "0"
       },
       onNavLinkHover(nav) {
         this.activeNav = Object.assign({}, nav)
       },
       onSubNavLinkHover(nav) {
         this.activeSubNav = Object.assign({}, nav)
-      },
-      showSubSideNav() {
-        if (this.activeNav.hasOwnProperty('submenu') && this.activeNav.submenu === true) {
-          document.getElementById("sideNav-sub").style.width = "240px"
-          return true
-        }
-        return false
-      },
+      }
     },
 
     components: {
@@ -239,13 +252,13 @@
     padding-left: 0; /* set with JavaScript */
     padding-right: 0; /* set with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 2; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
     background-color: #222222;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 25px; /* Offset content from the top */  
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    /* transition: 0.5s; 0.5 second transition effect to slide in the sidenav */
   }
 
   /* The navigation menu links */
@@ -270,7 +283,7 @@
     font-weight: 400;
     letter-spacing: 3px;  
     text-decoration: none;
-    transition: 0.3s;
+    /* transition: 0.3s; */
   }
 
   /* The navigation (sub)menu links */
@@ -284,20 +297,30 @@
     color: #68c4eb;
   }
 
+  .openbtn {
+    display: block;
+    padding-bottom: 35px;
+    top: 59px;
+    left: 57px;
+    position: relative;  
+    width: 35px;
+    z-index: 1;
+  }
+
   .sidenav .closebtn {
     display: inline-block;
     padding-bottom: 35px;
     position: relative;  
     width: 35px;
   }
-  .sidenav .closebtn .img-hover {
+  .sidenav .closebtn .img-hover, .openbtn .img-hover {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 3;
   }
-  .sidenav .closebtn:hover .img-hover {
+  .sidenav .closebtn:hover .img-hover, .openbtn:hover .img-hover {
     display: inline;
   }
 
@@ -318,18 +341,19 @@
 
   .sidenav-sub {
     height: 100%; /* 100% Full-height */
-    /* width: 240px; */
-    width: 0;  /* Set with Javascript */
+    width: 240px;
+    max-width: 240px;
     padding-left: 0;
     padding-right: 0;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 2; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 226px;
     background-color: #333333;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 0px;
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    /* transition: 0.5s; 0.5 second transition effect to slide in the sidenav */
+    /* transition-delay: 0.3s; */
   }
 
   .submenu-text-container {
@@ -350,6 +374,7 @@
     overflow-wrap: break-word;
     pointer-events: auto;
     text-align: left;
+    text-decoration: none;
     text-rendering: auto;
     text-transform: uppercase;
     transition-delay: 0s;
@@ -376,6 +401,7 @@
     pointer-events: auto;
     text-align: left;
     text-rendering: auto;
+    text-decoration: none;
     text-transform: uppercase;
     transition-delay: 0s;
     transition-duration: 0.5s;
