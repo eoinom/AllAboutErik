@@ -9,24 +9,27 @@
     
     <!-- Main navigation menu -->
     <div id="sideNav-main" class="sidenav">
-      <div>
-        <div class="closebtn">
-          <g-image alt="Close navigation menu" src="~/assets/images/menu-close.png" style="cursor:pointer" immediate=true @click="closeNav()"/>
-          <g-image alt="Close navigation menu" src="~/assets/images/menu-close-hover.png" style="cursor:pointer" immediate=true @click="closeNav()" class="img-hover"/>
+      <simplebar class="simple-scrollbar" data-simplebar-auto-hide="true">
+        <div>
+          <div class="closebtn">
+            <g-image alt="Close navigation menu" src="~/assets/images/menu-close.png" style="cursor:pointer" immediate=true @click="closeNav()"/>
+            <g-image alt="Close navigation menu" src="~/assets/images/menu-close-hover.png" style="cursor:pointer" immediate=true @click="closeNav()" class="img-hover"/>
+          </div>
+
+          <!-- <nav v-for="nav in navs" :key="nav.label">
+            <router-link :to="nav.to" class="nav_item" @mouseover.native="onNavLinkHover(nav)">{{ nav.label.toUpperCase() }}</router-link>
+            <hr />
+          </nav> -->
+
+          <nav v-for="edge in $static.NavItems.edges" :key="edge.node.text">
+            <router-link :to="edge.node.to" class="nav_item" @mouseover.native="onNavLinkHover(edge.node)">{{ edge.node.text.toUpperCase() }}</router-link>
+            <hr />
+          </nav>
+
         </div>
-
-        <!-- <nav v-for="nav in navs" :key="nav.label">
-          <router-link :to="nav.to" class="nav_item" @mouseover.native="onNavLinkHover(nav)">{{ nav.label.toUpperCase() }}</router-link>
-          <hr />
-        </nav> -->
-
-        <nav v-for="edge in $static.NavItems.edges" :key="edge.node.text">
-          <router-link :to="edge.node.to" class="nav_item" @mouseover.native="onNavLinkHover(edge.node)">{{ edge.node.text.toUpperCase() }}</router-link>
-          <hr />
-        </nav>
-
-      </div>
+      </simplebar>
     </div>
+    <!-- </simplebar> -->
 
     <!-- Sub navigation menu -->
     <div v-if="showSubSideNav">
@@ -42,7 +45,11 @@
           <!-- <image-component imageFile="submenu-musical-journey.jpg" /> -->
           <!-- <g-image src="~/assets/images/submenu-musical-journey.jpg" /> -->
           <router-link :to="activeNav.to">
-            <g-image :src="activeImg" />
+            <!-- Maybe try ading a v-for loop of g-image with src to graphql nodes, add a hidden class and activate the one based on active Nav -->
+            <div v-for="edge in $static.NavItems.edges" :key="edge.node.text">
+              <g-image v-if="edge.node.img != null && edge.node.text === activeNav.text" :src="edge.node.img" />
+            </div>
+            <!-- <g-image :src="activeNav.img" /> -->
             <!-- <img :src="activeImg" /> -->
           </router-link>
           <!-- <image-component :imageFile="activeNav.img" /> -->
@@ -90,6 +97,9 @@
 </static-query>
 
 <script type="text/javascript">
+  import simplebar from 'simplebar-vue';
+  import 'simplebar/dist/simplebar.min.css';
+
   export default {
     data () {
       return {
@@ -187,6 +197,8 @@
         return this.activeNav.img
       },
       showSubSideNav() {
+        console.log('in showSubSideNav')
+        console.log(this.activeNav.hasOwnProperty('hasSubMenu') && this.activeNav.hasSubMenu === true)
         return this.activeNav.hasOwnProperty('hasSubMenu') && this.activeNav.hasSubMenu === true
       },
       showSubPageLinks() {
@@ -229,6 +241,8 @@
       },
       onNavLinkHover(nav) {
         this.activeNav = Object.assign({}, nav)
+        console.log('in onNavLinkHover, this.activeNav:')
+        console.log(this.activeNav)
       },
       onSubNavLinkHover(nav) {
         this.activeSubNav = Object.assign({}, nav)
@@ -236,7 +250,8 @@
     },
 
     components: {
-      'image-component':     require('~/components/ImageComponent.vue').default  
+      'image-component':     require('~/components/ImageComponent.vue').default,
+      simplebar
     } 
   }
 </script>
@@ -270,16 +285,18 @@
 
   /* The side navigation menu */
   .sidenav {
-    height: 100%; /* 100% Full-height */
+    height: 100%; /* 100% Full-height
     width: 0; /* set with JavaScript */
     padding-left: 0; /* set with JavaScript */
     padding-right: 0; /* set with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 2; /* Stay on top */
+    /* position:absolute; Stay in place */
+    z-index: 5; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
     background-color: #222222;
     overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: auto; 
     padding-top: 25px; /* Offset content from the top */  
     /* transition: 0.5s; 0.5 second transition effect to slide in the sidenav */
   }
@@ -430,6 +447,10 @@
     transition-duration: 0.5s;
     transition-property: all;
     transition-timing-function: ease;
+  }
+
+  .simple-scrollbar {
+    height: 100%;
   }
 
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
