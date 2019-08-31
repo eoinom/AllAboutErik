@@ -42,8 +42,8 @@
           <!-- <image-component imageFile="submenu-musical-journey.jpg" /> -->
           <!-- <g-image src="~/assets/images/submenu-musical-journey.jpg" /> -->
           <router-link :to="activeNav.to">
-            <!-- <g-image :src="activeImg" /> -->
-            <img :src="activeImg" />
+            <g-image :src="activeImg" />
+            <!-- <img :src="activeImg" /> -->
           </router-link>
           <!-- <image-component :imageFile="activeNav.img" /> -->
         </div> 
