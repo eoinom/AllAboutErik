@@ -14,10 +14,17 @@
           <g-image alt="Close navigation menu" src="~/assets/images/menu-close.png" style="cursor:pointer" immediate=true @click="closeNav()"/>
           <g-image alt="Close navigation menu" src="~/assets/images/menu-close-hover.png" style="cursor:pointer" immediate=true @click="closeNav()" class="img-hover"/>
         </div>
-        <nav v-for="nav in navs" :key="nav.label">
+
+        <!-- <nav v-for="nav in navs" :key="nav.label">
           <router-link :to="nav.to" class="nav_item" @mouseover.native="onNavLinkHover(nav)">{{ nav.label.toUpperCase() }}</router-link>
           <hr />
+        </nav> -->
+
+        <nav v-for="edge in $static.NavItems.edges" :key="edge.node.text">
+          <router-link :to="edge.node.to" class="nav_item" @mouseover.native="onNavLinkHover(edge.node)">{{ edge.node.text.toUpperCase() }}</router-link>
+          <hr />
         </nav>
+
       </div>
     </div>
 
@@ -35,7 +42,8 @@
           <!-- <image-component imageFile="submenu-musical-journey.jpg" /> -->
           <!-- <g-image src="~/assets/images/submenu-musical-journey.jpg" /> -->
           <router-link :to="activeNav.to">
-            <g-image :src="activeImg" />
+            <!-- <g-image :src="activeImg" /> -->
+            <img :src="activeImg" />
           </router-link>
           <!-- <image-component :imageFile="activeNav.img" /> -->
         </div> 
@@ -46,14 +54,12 @@
           <router-link :to="activeNav.to" class="title-text">{{ activeNav.title }}</router-link>
 
           <div v-if="showSubPageLinks" class="submenu-nav-container">
-            <nav v-for="subpage in activeNav.subpages" :key="subpage.label">
-              <router-link :to="subpage.to" class="nav_item" @mouseover.native="onSubNavLinkHover(subpage)">{{ subpage.label.toUpperCase() }}</router-link>
+            <nav v-for="subPage in activeNav.subPages" :key="subPage.subPageText">
+              <router-link :to="subPage.subPageTo" class="nav_item" @mouseover.native="onSubNavLinkHover(subPage)">{{ subPage.subPageText.toUpperCase() }}</router-link>
             </nav>
           </div>
         </div>
-
         
-
       </div>
     </div>
      
@@ -62,6 +68,25 @@
 </template>
 
 <static-query>
+{
+  NavItems: allNavMenuItem(sortBy: "text", order: ASC) {
+    totalCount
+    edges {
+      node {
+        text
+        to
+        hasSubMenu
+        img
+        verb
+        title
+        subPages {
+          subPageTo
+          subPageText
+        }
+      }
+    }
+  }
+}
 </static-query>
 
 <script type="text/javascript">
@@ -70,104 +95,102 @@
       return {
         activeNav: {},
         activeSubNav: {},
-        navs: [
-          {
-            label: 'Home',
-            to: '/',
-            submenu: false
-          },
-          {
-            label: 'Roots & Youth',
-            to: '/roots-and-youth',
-            submenu: true,
-            img: "submenu-roots&youth.jpg",
-            verb: 'watch',
-            title: 'Biography Videos'
-          },
-          {
-            label: 'Musical Journey',
-            to: '/the-episodes',
-            submenu: true,
-            img: 'submenu-musical-journey.jpg',
-            verb: 'listen & watch',
-            subpages: [
-              {
-                label: 'The Episodes',
-                to: '/the-episodes',
-                isSubpage: true
-              },
-              {
-                label: 'Musical Friends',
-                to: '/musical-friends',
-                isSubpage: true
-              },
-              {
-                label: 'Early Productions',
-                to: '/early-productions',
-                isSubpage: true
-              },
-              {
-                label: 'Discography',
-                to: '/discography',
-                isSubpage: true
-              }
-            ]
-          },
-          {
-            label: 'Short Films',
-            to: '/short-films',
-            submenu: true,
-            img: 'submenu-short-films.jpg',
-            verb: 'watch',
-            title: 'Short Films'
-          },
-          {
-            label: 'Travels',
-            to: '/travels',
-            submenu: true,
-            img: 'submenu-travels.jpg',
-            verb: 'watch',
-            title: 'Travel Videos'
-          },
-          {
-            label: 'Collections',
-            to: '/collections',
-            submenu: true,
-            img: 'submenu-collections.jpg',
-            verb: 'view',
-            title: 'Collection Galleries'
-          },
-          {
-            label: 'Publications',
-            to: '/publications',
-            submenu: true,
-            img: 'submenu-publications.jpg',
-            verb: 'read',
-            title: 'Published Books'
-          },
-          {
-            label: 'Archives',
-            to: '/archives',
-            submenu: false
-          },
-          {
-            label: 'Contact',
-            to: '/contact',
-            submenu: false
-          },
-        ]
+        // navs: [
+        //   {
+        //     label: 'Home',
+        //     to: '/',
+        //     submenu: false
+        //   },
+        //   {
+        //     label: 'Roots & Youth',
+        //     to: '/roots-and-youth',
+        //     submenu: true,
+        //     img: "submenu-roots&youth.jpg",
+        //     verb: 'watch',
+        //     title: 'Biography Videos'
+        //   },
+        //   {
+        //     label: 'Musical Journey',
+        //     to: '/the-episodes',
+        //     submenu: true,
+        //     img: 'submenu-musical-journey.jpg',
+        //     verb: 'listen & watch',
+        //     subpages: [
+        //       {
+        //         label: 'The Episodes',
+        //         to: '/the-episodes'
+        //       },
+        //       {
+        //         label: 'Musical Friends',
+        //         to: '/musical-friends'
+        //       },
+        //       {
+        //         label: 'Early Productions',
+        //         to: '/early-productions'
+        //       },
+        //       {
+        //         label: 'Discography',
+        //         to: '/discography'
+        //       }
+        //     ]
+        //   },
+        //   {
+        //     label: 'Short Films',
+        //     to: '/short-films',
+        //     submenu: true,
+        //     img: 'submenu-short-films.jpg',
+        //     verb: 'watch',
+        //     title: 'Short Films'
+        //   },
+        //   {
+        //     label: 'Travels',
+        //     to: '/travels',
+        //     submenu: true,
+        //     img: 'submenu-travels.jpg',
+        //     verb: 'watch',
+        //     title: 'Travel Videos'
+        //   },
+        //   {
+        //     label: 'Collections',
+        //     to: '/collections',
+        //     submenu: true,
+        //     img: 'submenu-collections.jpg',
+        //     verb: 'view',
+        //     title: 'Collection Galleries'
+        //   },
+        //   {
+        //     label: 'Publications',
+        //     to: '/publications',
+        //     submenu: true,
+        //     img: 'submenu-publications.jpg',
+        //     verb: 'read',
+        //     title: 'Published Books'
+        //   },
+        //   {
+        //     label: 'Archives',
+        //     to: '/archives',
+        //     submenu: false
+        //   },
+        //   {
+        //     label: 'Contact',
+        //     to: '/contact',
+        //     submenu: false
+        //   },
+        // ]
       }
     },
     
     computed: {
       activeImg() {
-        return '/assets/static/src/assets/images/' + this.activeNav.img
+        // return '/assets/static/src/assets/images/' + this.activeNav.img
+        // return '@/assets/images/' + this.activeNav.img
+        return this.activeNav.img
       },
       showSubSideNav() {
-        return this.activeNav.hasOwnProperty('submenu') && this.activeNav.submenu === true
+        return this.activeNav.hasOwnProperty('hasSubMenu') && this.activeNav.hasSubMenu === true
       },
       showSubPageLinks() {
-        return this.activeNav.hasOwnProperty('subpages') && this.activeNav.subpages.length > 0
+        return this.activeNav.hasOwnProperty('subPages') && this.activeNav.subPages.length > 0
       }
     },
 

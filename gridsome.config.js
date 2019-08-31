@@ -52,7 +52,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'src/data/navMenu/**/*.md',
-        typeName: 'Nav Menu Item',
+        typeName: 'NavMenuItem',
         remark: {
           plugins: [
             // ...local plugins
