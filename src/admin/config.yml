@@ -2,8 +2,10 @@ backend:
   name: github
   repo: eoinom/AllAboutErik
 
-media_folder: "static/uploads"
-public_folder: "/uploads"
+# media_folder: "static/uploads"
+# public_folder: "/uploads"
+media_folder: "src/assets/uploads"
+public_folder: "/assets/static"
 
 collections:
   - name: "posts"
@@ -26,3 +28,23 @@ collections:
       - {label: "Url", name: "url", widget: "string"}      
       - {label: "Length", name: "length", widget: "datetime", dateFormat: false, timeFormat: "hh:mm:ss"}
       - {label: "Caption", name: "caption", widget: "markdown"}
+  - name: "nav menu items"
+    label: "Nav Menu Item"
+    folder: "src/data/navMenu"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: text
+    fields:
+      - {label: "Text", name: "text", widget: "string"}
+      - {label: "To", name: "to", widget: "string"}      
+      - {label: "HasSubMenu", name: "hasSubMenu", widget: "boolean"}      
+      - {label: "Img", name: "img", widget: "image", required: false}  
+      - {label: "Verb", name: "verb", widget: "string", required: false}  
+      - {label: "Title", name: "title", widget: "string", required: false}  
+      - label: "SubPage"
+        name: "subPages"
+        widget: "list"
+        required: false
+        fields: 
+          - {label: "SubPageText", name: "subPageText", widget: "string"}  
+          - {label: "SubPageTo", name: "subPageTo", widget: "string"}

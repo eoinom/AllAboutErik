@@ -47,6 +47,18 @@ module.exports = {
           ]
         }
       }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/navMenu/**/*.md',
+        typeName: 'Nav Menu Item',
+        remark: {
+          plugins: [
+            // ...local plugins
+          ]
+        }
+      }
     }
   ]
 }
