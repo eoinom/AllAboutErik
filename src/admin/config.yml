@@ -2,10 +2,10 @@ backend:
   name: github
   repo: eoinom/AllAboutErik
 
-# media_folder: "static/uploads"
-# public_folder: "/uploads"
-media_folder: "src/assets/uploads"
-public_folder: "/assets/static"
+media_folder: "static/uploads"
+public_folder: "/uploads"
+# media_folder: "src/assets/uploads"
+# public_folder: "/assets/static"
 
 collections:
   - name: "posts"

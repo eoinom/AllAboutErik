@@ -37,6 +37,10 @@ module.exports = {
       }
     },
     {
+      use: 'gridsome-plugin-netlify-cms-paths',
+      options: { contentTypes: ['NavMenuItem'] }
+    },
+    {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'src/data/roots&youth/**/*.md',

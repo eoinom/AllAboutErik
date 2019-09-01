@@ -48,6 +48,7 @@
             <!-- Maybe try ading a v-for loop of g-image with src to graphql nodes, add a hidden class and activate the one based on active Nav -->
             <div v-for="edge in $static.NavItems.edges" :key="edge.node.text">
               <g-image v-if="edge.node.img != null && edge.node.text === activeNav.text" :src="edge.node.img" />
+              <!-- <g-image v-if="edge.node.img != null && edge.node.text === activeNav.text" :src="require(`!!assets-loader?@${edge.node.img}`)" /> -->
             </div>
             <!-- <g-image :src="activeNav.img" /> -->
             <!-- <img :src="activeImg" /> -->
