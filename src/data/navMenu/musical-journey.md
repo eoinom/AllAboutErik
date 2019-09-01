@@ -2,7 +2,7 @@
 text: Musical Journey
 to: /the-episodes
 hasSubMenu: true
-img: /assets/static/submenu-musical-journey.jpg
+img: /uploads/submenu-musical-journey.jpg
 verb: listen & watch
 subPages:
   - subPageText: The Episodes
