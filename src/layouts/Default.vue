@@ -77,12 +77,13 @@
 
 <static-query>
 {
-  NavItems: allNavMenuItem(sortBy: "text", order: ASC) {
+  NavItems: allNavMenuItem(sortBy: "orderNo", order: ASC) {
     totalCount
     edges {
       node {
         text
         to
+        orderNo
         hasSubMenu
         img
         verb
