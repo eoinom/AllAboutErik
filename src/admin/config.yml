@@ -37,6 +37,7 @@ collections:
     fields:
       - {label: "Text", name: "text", widget: "string"}
       - {label: "To", name: "to", widget: "string"}      
+      - {label: "OrderNo", name: "orderNo", widget: "number", valueType: "int", min: 1}      
       - {label: "HasSubMenu", name: "hasSubMenu", widget: "boolean"}      
       - {label: "Img", name: "img", widget: "image", required: false}  
       - {label: "Verb", name: "verb", widget: "string", required: false}  
