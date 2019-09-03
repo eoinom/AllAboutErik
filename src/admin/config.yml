@@ -56,7 +56,7 @@ collections:
     slug: "{{slug}}"
     identifier_field: pageTitle
     fields:
-      - {label: "Page Title", name: "pageTitle", widget: "image"}  
+      - {label: "Page Title", name: "pageTitle", widget: "string"}  
       - {label: "Heading Image", name: "headingImg", widget: "image"}  
       - {label: 'Main text', name: 'body', widget: 'markdown'}  
       - {label: 'Credit text', name: 'creditText', widget: 'string', required: false}
