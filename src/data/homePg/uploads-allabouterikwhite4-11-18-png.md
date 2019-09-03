@@ -1,5 +1,5 @@
 ---
-pageTitle: /uploads/allabouterikwhite4-11-18.png
+pageTitle: Home | All About Erik
 headingImg: /uploads/allabouterikwhite4-11-18.png
 creditText: Guitar by John Sebastian
 slides:
