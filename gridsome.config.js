@@ -44,24 +44,21 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'src/data/roots&youth/**/*.md',
-        typeName: 'RootsVideo',
-        remark: {
-          plugins: [
-            // ...local plugins
-          ]
-        }
+        typeName: 'RootsVideo'
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'src/data/navMenu/**/*.md',
-        typeName: 'NavMenuItem',
-        remark: {
-          plugins: [
-            // ...local plugins
-          ]
-        }
+        typeName: 'NavMenuItem'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/homePg/**/*.md',
+        typeName: 'HomePage'
       }
     }
   ]

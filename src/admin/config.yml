@@ -36,16 +36,40 @@ collections:
     identifier_field: text
     fields:
       - {label: "Text", name: "text", widget: "string"}
-      - {label: "To", name: "to", widget: "string"}      
-      - {label: "OrderNo", name: "orderNo", widget: "number", valueType: "int", min: 1}      
-      - {label: "HasSubMenu", name: "hasSubMenu", widget: "boolean"}      
-      - {label: "Img", name: "img", widget: "image", required: false}  
+      - {label: "Local url target", name: "to", widget: "string"}      
+      - {label: "List order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}      
+      - {label: "Contains sub-menu?", name: "hasSubMenu", widget: "boolean"}      
+      - {label: "Image", name: "img", widget: "image", required: false}  
       - {label: "Verb", name: "verb", widget: "string", required: false}  
       - {label: "Title", name: "title", widget: "string", required: false}  
-      - label: "SubPage"
+      - label: "Sub Page"
         name: "subPages"
         widget: "list"
         required: false
         fields: 
-          - {label: "SubPageText", name: "subPageText", widget: "string"}  
-          - {label: "SubPageTo", name: "subPageTo", widget: "string"}
+          - {label: "Subpage Text", name: "subPageText", widget: "string"}  
+          - {label: "Subpage url targt", name: "subPageTo", widget: "string"}
+  - name: "homePg" 
+    label: "Home Page"
+    folder: "src/data/homePg"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: text
+    fields:
+      - {label: "Title Image", name: "titleImg", widget: "image"}  
+      - {label: "TitleImg", name: "titleImg", widget: "image"}
+      - {label: 'Blog post content', name: 'body', widget: 'markdown'}  
+      - {label: 'Credit text', name: 'creditText', widget: 'string', required: false}
+      - label: "Slides"
+        name: "slides"
+        widget: "list"
+        fields: 
+          - {label: "Image", name: "img", widget: "image"} 
+          - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100}
+          - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, max: 60}
+          - {label: "Scale from", name: "scaleFrom", widget: "number", valueType: "float", min: 1, max: 2}
+          - {label: "Scale to", name: "scaleTo", widget: "number", valueType: "float", min: 1, max: 2}
+          - label: "Pan start from"
+            name: "panStart"
+            widget: "select"
+            options: ["top-left", "top", "top-right", "left", "centre", "right", "bottom-left", "bottom", "bottom-right"]
