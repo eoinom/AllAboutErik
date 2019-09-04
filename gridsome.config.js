@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'All About Erik',
+  titleTemplate: `%s | All About Erik`,
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
