@@ -3,7 +3,7 @@ pageTitle: Home
 headingImg: /uploads/allabouterikwhite4-11-18.png
 creditText: Guitar by John Sebastian
 slides:
-  - duration: 0
+  - duration: 11
     img: /uploads/slide-1-erik-studio.jpg
     opacity: 57
     orderNo: 1
