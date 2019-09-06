@@ -1,11 +1,11 @@
 <template>
   <div class="layout">
-    <header class="header">
+    <!-- <header class="header"> -->
       <div class="openbtn">
         <g-image alt="Open navigation menu" src="~/assets/images/menu-open.png" width="135px" style="cursor:pointer" immediate=true @click="openNav()" />
         <g-image alt="Open navigation menu" src="~/assets/images/menu-open-hover.png" width="135px" style="cursor:pointer" immediate=true @click="openNav()" class="img-hover"/>
       </div>
-    </header>
+    <!-- </header> -->
     
     <!-- Main navigation menu -->
     <div id="sideNav-main" class="sidenav">
@@ -234,8 +234,7 @@
           subNav.style.transition = "0.3s"
           subNav.style.width = "0"
           mainNav.style.transition = "0.3s"
-          mainNav.style.transitionDelay = "0.3s"
-          
+          mainNav.style.transitionDelay = "0.3s"          
         }
         mainNav.style.width = "0"
         mainNav.style.paddingLeft = "0"
@@ -276,13 +275,13 @@
     padding-right: 20px;
   }
 
-  .header {
+  /* .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
     height: 80px;
-  }
+  } */
 
 
   /* The side navigation menu */

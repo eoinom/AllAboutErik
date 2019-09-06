@@ -1,7 +1,7 @@
 <template>
   <Layout>
     
-    <br>
+    <!-- <br> -->
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <!-- <g-image alt="Example image" src="~/favicon.png" width="135" /> -->
     
@@ -19,6 +19,12 @@
       <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
     </p> -->
 
+    <slideshow-images
+      :slides="slides"
+      height=600
+      width=1280
+    />
+<!-- interval=8000 -->
   </Layout>
 </template>
 
@@ -65,11 +71,28 @@
 
 
 <script>
+import SlideshowImages from '../components/SlideshowImages.vue'
+
 export default {
   metaInfo() {    // https://github.com/gridsome/gridsome/issues/306 (How do you use the queried GraphQL data in the <script>?)
     return {      
       title: this.$page.HomePage.edges[0].node.pageTitle,  // <-- "this" is the Vue instance with $page
     }
+  },
+  computed: {
+    // images() {
+    //   // console.log('images:')
+    //   // console.log(this.slides.map(a => '/static/assets' + a.img))
+    //   // return this.slides.map(a => '/assets/static/static' + a.img)
+    //   return this.slides.map(a => a.img)
+    // },
+    slides() {
+      return this.$page.HomePage.edges[0].node.slides
+    }
+  },
+  components: {
+    // SlideshowImages
+    'slideshow-images':     require('../components/SlideshowImages.vue').default,
   }
 }
 </script>
@@ -78,4 +101,7 @@ export default {
 /* .home-links a {
   margin-right: 1rem;
 } */
+.layout {
+  padding: 0
+}
 </style>
