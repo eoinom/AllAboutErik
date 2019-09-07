@@ -819,10 +819,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.3.tgz#dfa0c92efe44a1d1a7974fb49ffeb40ef2da5a27"
   integrity sha512-zVgvPwGK7c1aVdUVc9Qv7SqepOGRDrqCw7KZPSZziWGxSlbII3gmvGLPzLX4d0n0BMbamBacUrN22zOMyFFEkQ==
 
-"@gridsome/cli@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@gridsome/cli/-/cli-0.2.1.tgz#be8d51e390e6b4d0a21a7f096a2fe298a103ce93"
-  integrity sha512-2J0PBCbuMeuY5w+ica11tMgLAut0RUMTa8zf/j8iW/bsa4waIeRkOZvuGJi8xskKjW9jKnT7CYEX/nBSiGwZvw==
+"@gridsome/cli@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@gridsome/cli/-/cli-0.2.2.tgz#2e817b875b19834df3093ed01ded5026b002231b"
+  integrity sha512-QL93tcPdtQHkPhzjsTaJVimGXVqqX6VFiKZHZycRqWQMnH9sGmFsC0i22RqYU8erndQXdCvS2Dw5r6hUjxXVLg==
   dependencies:
     "@hjvedvik/tasks" "^0.0.8"
     chalk "^2.4.1"
@@ -4499,13 +4499,13 @@ gridsome-plugin-netlify-cms@^1.0.9:
     webpack "^4.29.0"
     webpack-dev-middleware "^3.5.1"
 
-gridsome@^0.6.0:
-  version "0.6.7"
-  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.6.7.tgz#f86232e18426acda78b97b552cccdf310240a765"
-  integrity sha512-0BuCq2YF2edRfkhI4phsBywB2XX9P5yMfbNy4nStNKU6187UsvnQO/aYjSl1m1rxoBSAFvvOBTuo0VXXKpf4Qw==
+gridsome@^0.6.9:
+  version "0.6.9"
+  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.6.9.tgz#2dc8ff8d6124f3be30b056ca5c9715499bbb4dc8"
+  integrity sha512-deHcJU3WooF5zwOONjPdqBlUCu4FXXJyO5dxBRwYG6tG3rneuy735xbc4Xm9+xTXm8PGorSSRXpTQ29cgQdALQ==
   dependencies:
     "@babel/core" "^7.0.0"
-    "@gridsome/cli" "^0.2.1"
+    "@gridsome/cli" "^0.2.2"
     "@sindresorhus/slugify" "^0.8.0"
     "@vue/babel-preset-app" "^3.4.0"
     "@vue/component-compiler-utils" "^2.5.2"

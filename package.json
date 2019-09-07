@@ -12,7 +12,7 @@
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-vue": "^5.2.3",
-    "gridsome": "^0.6.0",
+    "gridsome": "^0.6.9",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-plugin-netlify-cms-paths": "^0.3.0",
     "netlify-cms": "^2.9.7",
