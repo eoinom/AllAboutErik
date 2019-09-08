@@ -343,7 +343,7 @@
     padding-bottom: 35px;
     top: 59px;
     left: 57px;
-    position: relative;  
+    position: absolute;  
     width: 35px;
     z-index: 1;
   }

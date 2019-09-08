@@ -1,51 +1,20 @@
 <template>
   <Layout>
-    
-    <!-- <br> -->
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <!-- <g-image alt="Example image" src="~/favicon.png" width="135" /> -->
-    
-    <!-- <h2>Latest blog posts</h2>
-    <div v-for="edge in $page.posts.edges" :key="edge.node.id">
-      <h1>{{ edge.node.title }}</h1>
-      <br>Date: {{ edge.node.date }}
-      <div v-html="edge.node.content"></div>
-      <hr>
-    </div> -->
 
+    <g-image alt="All About Erik logo" v-if="titleImg != null" :src="titleImg" class="titleImg"/>
 
-    <!-- <p class="home-links">
-      <a href="https://gridsome.org/docs" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p> -->
+    <span v-html="mainText" class="homePgMainText"> </span>
+    
+    <span v-html="creditText" class="homePgCreditText"> </span>
 
     <slideshow-images
       :slides="slides"
-      height=600
-      width=1280
     />
-<!-- interval=8000 -->
+    
   </Layout>
 </template>
 
 <page-query>
-# query Post {
-#   posts: allPost(sortBy: "date", order: ASC) {
-#     totalCount
-#     edges {
-#       node {
-#         id
-#         title
-#         excerpt
-#         date
-#         headings {
-#           value
-#         }
-#         content
-#       }
-#     }
-#   }
-# }
 {
   HomePage: allHomePage(sortBy: "orderNo") {
     edges {
@@ -79,29 +48,79 @@ export default {
       title: this.$page.HomePage.edges[0].node.pageTitle,  // <-- "this" is the Vue instance with $page
     }
   },
-  computed: {
-    // images() {
-    //   // console.log('images:')
-    //   // console.log(this.slides.map(a => '/static/assets' + a.img))
-    //   // return this.slides.map(a => '/assets/static/static' + a.img)
-    //   return this.slides.map(a => a.img)
-    // },
-    slides() {
-      return this.$page.HomePage.edges[0].node.slides
+  
+  data() {
+    return {
+      windowWidth: 0,
+      windowHeight: 0
     }
   },
+
+  computed: {
+    slides() {
+      return this.$page.HomePage.edges[0].node.slides
+    },
+    titleImg() {
+      return this.$page.HomePage.edges[0].node.headingImg
+    },
+    mainText(){
+      return this.$page.HomePage.edges[0].node.content
+    },
+    creditText(){
+      return this.$page.HomePage.edges[0].node.creditText
+    }
+  },
+
   components: {
-    // SlideshowImages
     'slideshow-images':     require('../components/SlideshowImages.vue').default,
+  },
+
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('resize', () => {        
+        this.windowWidth = window.innerWidth
+        this.windowHeight = window.innerHeight
+      });
+    })
   }
 }
 </script>
 
-<style>
-/* .home-links a {
-  margin-right: 1rem;
-} */
+<style scoped>
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+
 .layout {
   padding: 0
+}
+
+.titleImg {
+  max-width:1492px; 
+  position:absolute; 
+  left:530px; 
+  top:180px; 
+  z-index:100;
+}
+
+.homePgMainText {
+  color: white; 
+  font-family: 'Libre Baskerville', serif;
+  font-size: 29px; 
+  position: absolute; 
+  left: 610px; 
+  top: 410px; 
+  text-align: center;
+  line-height: 50%;
+  z-index: 100;
+}
+
+.homePgCreditText {
+  color: white; 
+  font-family: 'Libre Baskerville', serif;
+  font-size: 14px; 
+  position: absolute; 
+  right: 90px; 
+  bottom: 40px; 
+  line-height: 50%;
+  z-index: 100;
 }
 </style>
