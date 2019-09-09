@@ -102,18 +102,10 @@ slides:
     scaleFrom: 1
     scaleTo: 1.06
 ---
-As a boy growing up in the Midwest, I never had a clear idea of what I’d end up doing in life. 
+As a boy growing up in the Midwest, I never had a clear idea of what I’d end up doing in life.  <br />The currents just carried me along. 
 
-The currents just carried me along. 
 
-<br />
 
-I played banjo, but quit to become a music publisher and record producer. 
+I played banjo, but quit to become a music publisher and record producer. <br />I fished, traveled, scuba-dived, collected, and fell in love.
 
-I fished, traveled, scuba-dived, collected, and fell in love.
-
-<br />
-
-I took a lifelong trip into exciting and uncharted waters. 
-
-This stuff is about what happened along the way.
+I took a lifelong trip into exciting and uncharted waters. <br />This stuff is about what happened along the way.
