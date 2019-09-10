@@ -1,16 +1,40 @@
 <template>
   <Layout>
 
-    <g-image alt="All About Erik logo" v-if="titleImg != null" :src="titleImg" class="titleImg"/>
+    <!-- <div class="flex-container"> -->
+    <div class="container">
+      <div class="slideshow">
+        <slideshow-images
+          :slides="slides"
+        />
+      </div>
 
-    <span v-html="mainText" class="homePgMainText"> </span>
-    
-    <span v-html="creditText" class="homePgCreditText"> </span>
+      <div class="mainContent">
+        <g-image alt="All About Erik logo" v-if="titleImg != null" :src="titleImg" class="titleImg"/>
 
-    <slideshow-images
-      :slides="slides"
-    />
-    
+        <span v-html="mainText" class="homePgMainText" />  
+      </div>
+
+      <!-- <span class="homePgMainText">
+        <p>
+          As a boy growing up in the Midwest, I never had a clear idea of what I’d end up doing in life.
+          <br>The currents just carried me along.
+        </p>
+        <p>
+          I played banjo, but quit to become a music publisher and record producer.
+          <br>I fished, traveled, scuba-dived, collected, and fell in love.
+        </p>
+        <p>
+          I took a lifelong trip into exciting and uncharted waters.
+          <br>This stuff is about what happened along the way.
+        </p>
+      </span>    -->
+
+      <div class="homePgCreditText">
+        <span v-html="creditText" />
+      </div>
+    </div>
+
   </Layout>
 </template>
 
@@ -93,24 +117,97 @@ export default {
   padding: 0
 }
 
-.titleImg {
-  max-width:1492px; 
-  position:absolute; 
-  left:530px; 
-  top:180px; 
-  z-index:100;
+/* .flex-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
+
+.flex-container > div {
+  text-align: center;
+} */
+
+.container {
+  /* color: white; */
+  /* text-align: center; */
+  position: absolute;
+  width: 100%;
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
+}
+
+/* .slideshow {
+  position: relative;
+  margin: auto;  
+} */
+
+/* .titleImgContainer {  
+  position: absolute; 
+  margin: auto;  
+  left: 0; 
+  right: 0;
+  top: 20%;
+  width: 100%;
+} */
+
+.mainContent{
+  /* Absolute Centering in CSS: https://codepen.io/shshaw/full/gEiDt */
+  position: absolute;   
+  width: 80%;
+  margin: auto;  
+  left: 0; 
+  right: 0;
+  top: 14%;
+}
+
+.titleImg {  
+  display: block;  
+  width: 100%;
+  max-width: 1492px; 
+  height: auto;
+  /* z-index:90; */
+
+  /* Absolute Centering in CSS: https://codepen.io/shshaw/full/gEiDt */
+  /* position: absolute;   
+  margin: auto;  
+  left: 0; 
+  right: 0;
+  top: 14%; */
+
+  position: relative;
+  margin: auto;  
+  /* left: 0; 
+  right: 0; */
+}
+
 
 .homePgMainText {
   color: white; 
   font-family: 'Libre Baskerville', serif;
-  font-size: 29px; 
-  position: absolute; 
-  left: 610px; 
-  top: 410px; 
+  /* font-size: 29px;  */
+  font-size: calc(1em + 0.5vw); 
   text-align: center;
-  line-height: 50%;
+  /* position: absolute;    */
+  /* top: 410px; 
+  left: 610px;  */
+  /* left: 50%;  */
+  width: 80%;
+  /* margin-left: auto;
+  margin-right: auto; */
+  line-height: 135%;
   z-index: 100;
+
+  /* position: absolute;   
+  margin: auto;  
+  margin-top: 100px;
+  left: 0; 
+  right: 0;
+  top: 32%; */
+
+  position: relative;   
 }
 
 .homePgCreditText {
@@ -118,9 +215,22 @@ export default {
   font-family: 'Libre Baskerville', serif;
   font-size: 14px; 
   position: absolute; 
-  right: 90px; 
+  /* right: 90px;  */
+  right: 3.5%; 
   bottom: 40px; 
   line-height: 50%;
-  z-index: 100;
+  /* z-index: 100; */
 }
+
+/* Centre credit text when aspect ratio <= 1.0 */
+@media (max-aspect-ratio: 1/1) {
+  .homePgCreditText {
+    margin: auto;  
+    left: 0; 
+    right: 0;
+    text-align: center;
+  }
+}
+
+
 </style>

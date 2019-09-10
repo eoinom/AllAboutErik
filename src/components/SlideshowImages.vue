@@ -113,7 +113,7 @@ export default {
       this.time = this.interval(index)      
     },
     applySlideStyles(index) {
-      let i = index
+      let i = parseInt(index)
 
       if (i >= 0 && i < this.slides.length) {
         if (this.slides[i].hasOwnProperty('scaleFrom')) {
@@ -172,9 +172,15 @@ export default {
       this.$el.style.setProperty('--startPosY', this.positionFactor*this.startPos[1])
       this.$el.style.setProperty('--startPosZ', this.positionFactor*this.startPos[2])
 
-      let actualImgWidth = (1920.0/1080.0) * this.windowHeight    // assumes all images are 1920 x 1080px
-      console.log('in applySlideStyles, setting --leftPadding to: ' + ((this.windowWidth - actualImgWidth) / 2) + 'px') 
-      this.$el.style.setProperty('--leftPadding', ((this.windowWidth - actualImgWidth) / 2) + 'px')        
+      // let actualImgWidth = (1920.0/1080.0) * this.windowHeight    // assumes all images are 1920 x 1080px
+      // console.log('in applySlideStyles, setting --imgMargin to: ' + ((this.windowWidth - actualImgWidth) / 2) + 'px') 
+      // this.$el.style.setProperty('--imgMargin', ((this.windowWidth - actualImgWidth) / 2) + 'px')     
+
+      let imgNo = i + 1
+      var img = document.querySelector("img.SlideshowImages__image:nth-child(" + imgNo + ")");
+      console.log('img width x height: ' + img.width + ' x ' + img.height);
+      console.log('in applySlideStyles, setting --leftMargin to: ' + (-(img.width - this.windowWidth) / 2) + 'px') 
+      this.$el.style.setProperty('--imgMargin', (-(img.width - this.windowWidth) / 2) + 'px')    
     },
 
     startInterval() {
@@ -220,9 +226,15 @@ export default {
         this.windowWidth = window.innerWidth
         this.windowHeight = window.innerHeight
 
-        let actualImgWidth = (1920.0/1080.0) * this.windowHeight    // assumes all images are 1920 x 1080px
-        this.$el.style.setProperty('--leftPadding', ((this.windowWidth - actualImgWidth) / 2) + 'px')
-        console.log('in mounted, just set --leftPadding to: ' + ((this.windowWidth - actualImgWidth) / 2) + 'px')
+        // let actualImgWidth = (1920.0/1080.0) * this.windowHeight    // assumes all images are 1920 x 1080px
+        // this.$el.style.setProperty('--imgMargin', ((this.windowWidth - actualImgWidth) / 2) + 'px')
+        // console.log('in mounted, just set --imgMargin to: ' + ((this.windowWidth - actualImgWidth) / 2) + 'px')
+
+        let imgNo = this.activeIndex + 1
+        let img = document.querySelector("img.SlideshowImages__image:nth-child(" + imgNo + ")");
+        console.log('img width x height: ' + img.width + ' x ' + img.height);
+        console.log('in mounted resize listener, setting --leftMargin to: ' + (-(img.width - this.windowWidth) / 2) + 'px') 
+        this.$el.style.setProperty('--imgMargin', (-(img.width - this.windowWidth) / 2) + 'px')    
       });
     })
   },
@@ -242,7 +254,7 @@ body {
   --endScale: 1.1;
   --startPosX: 0;
   --startPosY: 0;
-  --leftPadding: 0;
+  --imgMargin: 0;
   --imgOpacity: 0.6;
 
   // display: block;
@@ -252,12 +264,20 @@ body {
   //   margin-right: auto;
 
   // position: relative;
+
+  // position: absolute;   
+  // width: 100%;
+  // margin: auto;  
+  // left: 0; 
+  // right: 0;
   
 
   &__slides {
     position: relative;
     overflow: hidden;
-    padding-left: var(--leftPadding);
+    // padding-left: var(--imgMargin);
+    margin-left: var(--imgMargin);
+    margin-right: var(--imgMargin);
     // z-index: 100;
 
     // display: block;
@@ -267,11 +287,17 @@ body {
 
   &__image {
     position: absolute;
-    height: 100%;
+    width:inherit;
+    min-width: 100%;
+    min-height: 100%;
+    // width: 100%;
     // margin: 0 auto;
     // display: block;
     // margin-left: auto;
     // margin-right: auto;
+    // margin: auto;  
+    // left: 0; 
+    // right: 0;
     
     opacity: var(--imgOpacity);
     // min-height: 100%;

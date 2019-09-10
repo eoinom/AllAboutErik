@@ -258,209 +258,231 @@
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Lato:100,400&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 
-  body {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    margin:0;
-    padding:0;
-    /* line-height: 1.5; */
-  }
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin:0;
+  padding:0;
+  /* line-height: 1.5; */
+}
 
-  .layout {
-    max-width: 100%;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+.layout {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-  /* .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    height: 80px;
-  } */
+/* .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 80px;
+} */
 
 
-  /* The side navigation menu */
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height
+  width: 0; /* set with JavaScript */
+  padding-left: 0; /* set with JavaScript */
+  padding-right: 0; /* set with JavaScript */
+  position: fixed; /* Stay in place */
+  /* position:absolute; Stay in place */
+  z-index: 5; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #222222;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: auto; 
+  padding-top: 25px; /* Offset content from the top */  
+  /* transition: 0.5s; 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 10px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover,
+.sidenav a.router-link-exact-active {   /* https://stackoverflow.com/questions/46083220/how-to-vuejs-router-link-active-style */
+  color: #E30829;
+}
+
+.nav_item {
+  color: white;
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-feature-settings: "liga";
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 3px;  
+  text-decoration: none;
+  /* transition: 0.3s; */
+}
+
+/* The navigation (sub)menu links */
+.submenu-nav-container a {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.submenu-nav-container a:hover,
+.submenu-nav-container a.router-link-exact-active {   /* https://stackoverflow.com/questions/46083220/how-to-vuejs-router-link-active-style */
+  color: #68c4eb;
+}
+
+.openbtn {
+  display: block;
+  padding-bottom: 35px;
+  top: 57px;
+  left: 57px;
+  position: absolute;  
+  width: 35px;
+  z-index: 1;
+}
+
+.sidenav .closebtn {
+  display: inline-block;
+  padding-bottom: 35px;
+  position: relative;  
+  width: 35px;
+}
+.sidenav .closebtn .img-hover, .openbtn .img-hover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.sidenav .closebtn:hover .img-hover, .openbtn:hover .img-hover {
+  display: inline;
+}
+
+.sidenav hr {
+  border-top: 0.5px solid white;
+  border-bottom: 0.5px solid white;
+  margin: 0;
+}
+
+.submenu-img-container {
+  background: black;
+}
+
+.submenu-img-container img {
+  display: block;
+  margin: 0px auto;
+}
+
+.sidenav-sub {
+  height: 100%; /* 100% Full-height */
+  width: 240px;
+  max-width: 240px;
+  padding-left: 0;
+  padding-right: 0;
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 226px;
+  background-color: #333333;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0px;
+  /* transition: 0.5s; 0.5 second transition effect to slide in the sidenav */
+  /* transition-delay: 0.3s; */
+}
+
+.submenu-text-container {
+  padding: 24px 21px 24px 21px;
+}
+
+.verb-text {
+  color: rgb(198, 156, 109);
+  cursor: pointer;
+  display: block;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-feature-settings: "liga";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 8px;
+  line-height: 18px;
+  overflow-wrap: break-word;
+  pointer-events: auto;
+  text-align: left;
+  text-decoration: none;
+  text-rendering: auto;
+  text-transform: uppercase;
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: ease;
+
+  margin-top: 9px;
+  margin-bottom: 14px;
+}
+
+.title-text {
+  color: rgb(127, 127, 127);
+  cursor: pointer;
+  display: inline;
+  font-family: 'Lato', sans-serif;
+  font-feature-settings: "liga";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 100;
+  letter-spacing: 4px;
+  line-height: 35px;
+  overflow-wrap: break-word;
+  pointer-events: auto;
+  text-align: left;
+  text-rendering: auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+
+.simple-scrollbar {
+  height: 100%;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
   .sidenav {
-    height: 100%; /* 100% Full-height
-    width: 0; /* set with JavaScript */
-    padding-left: 0; /* set with JavaScript */
-    padding-right: 0; /* set with JavaScript */
-    position: fixed; /* Stay in place */
-    /* position:absolute; Stay in place */
-    z-index: 5; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #222222;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    overflow-y: auto; 
-    padding-top: 25px; /* Offset content from the top */  
-    /* transition: 0.5s; 0.5 second transition effect to slide in the sidenav */
+    padding-top: 15px;
   }
-
-  /* The navigation menu links */
   .sidenav a {
-    padding-top: 28px;
-    padding-bottom: 28px;
-    padding-left: 10px;
+    font-size: 18px;
   }
+}
 
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover,
-  .sidenav a.router-link-exact-active {   /* https://stackoverflow.com/questions/46083220/how-to-vuejs-router-link-active-style */
-    color: #E30829;
-  }
-
-  .nav_item {
-    color: white;
-    display: block;
-    font-family: 'Lato', sans-serif;
-    font-feature-settings: "liga";
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 3px;  
-    text-decoration: none;
-    /* transition: 0.3s; */
-  }
-
-  /* The navigation (sub)menu links */
-  .submenu-nav-container a {
-    padding-top: 14px;
-    padding-bottom: 14px;
-  }
-
-  .submenu-nav-container a:hover,
-  .submenu-nav-container a.router-link-exact-active {   /* https://stackoverflow.com/questions/46083220/how-to-vuejs-router-link-active-style */
-    color: #68c4eb;
-  }
-
+@media (min-width : 768px) and (max-width : 1024px) {
   .openbtn {
-    display: block;
-    padding-bottom: 35px;
-    top: 59px;
-    left: 57px;
-    position: absolute;  
-    width: 35px;
-    z-index: 1;
+    top: 46px;
+    left: 46px;
   }
 
-  .sidenav .closebtn {
-    display: inline-block;
-    padding-bottom: 35px;
-    position: relative;  
-    width: 35px;
+  .openbtn img {
+    max-width: 60px;
   }
-  .sidenav .closebtn .img-hover, .openbtn .img-hover {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-  }
-  .sidenav .closebtn:hover .img-hover, .openbtn:hover .img-hover {
-    display: inline;
+}
+
+@media (max-width : 767px) {
+  .openbtn {
+    top: 35px;
+    left: 35px;
   }
 
-  .sidenav hr {
-    border-top: 0.5px solid white;
-    border-bottom: 0.5px solid white;
-    margin: 0;
+  .openbtn img {
+    max-width: 50px;
   }
-
-  .submenu-img-container {
-    background: black;
-  }
-
-  .submenu-img-container img {
-    display: block;
-    margin: 0px auto;
-  }
-
-  .sidenav-sub {
-    height: 100%; /* 100% Full-height */
-    width: 240px;
-    max-width: 240px;
-    padding-left: 0;
-    padding-right: 0;
-    position: fixed; /* Stay in place */
-    z-index: 2; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 226px;
-    background-color: #333333;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 0px;
-    /* transition: 0.5s; 0.5 second transition effect to slide in the sidenav */
-    /* transition-delay: 0.3s; */
-  }
-
-  .submenu-text-container {
-    padding: 24px 21px 24px 21px;
-  }
-
-  .verb-text {
-    color: rgb(198, 156, 109);
-    cursor: pointer;
-    display: block;
-    font-family: 'Ubuntu Condensed', sans-serif;
-    font-feature-settings: "liga";
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 8px;
-    line-height: 18px;
-    overflow-wrap: break-word;
-    pointer-events: auto;
-    text-align: left;
-    text-decoration: none;
-    text-rendering: auto;
-    text-transform: uppercase;
-    transition-delay: 0s;
-    transition-duration: 0.5s;
-    transition-property: all;
-    transition-timing-function: ease;
-
-    margin-top: 9px;
-    margin-bottom: 14px;
-  }
-
-  .title-text {
-    color: rgb(127, 127, 127);
-    cursor: pointer;
-    display: inline;
-    font-family: 'Lato', sans-serif;
-    font-feature-settings: "liga";
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 100;
-    letter-spacing: 4px;
-    line-height: 35px;
-    overflow-wrap: break-word;
-    pointer-events: auto;
-    text-align: left;
-    text-rendering: auto;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition-delay: 0s;
-    transition-duration: 0.5s;
-    transition-property: all;
-    transition-timing-function: ease;
-  }
-
-  .simple-scrollbar {
-    height: 100%;
-  }
-
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {
-      padding-top: 15px;
-    }
-    .sidenav a {
-      font-size: 18px;
-    }
-  }
+}
 </style>
