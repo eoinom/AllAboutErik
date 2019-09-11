@@ -292,7 +292,7 @@ body {
   padding-right: 0; /* set with JavaScript */
   position: fixed; /* Stay in place */
   /* position:absolute; Stay in place */
-  z-index: 5; /* Stay on top */
+  z-index: 2000; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   background-color: #222222;
@@ -345,7 +345,7 @@ body {
   left: 57px;
   position: absolute;  
   width: 35px;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .sidenav .closebtn {
@@ -387,7 +387,7 @@ body {
   padding-left: 0;
   padding-right: 0;
   position: fixed; /* Stay in place */
-  z-index: 2; /* Stay on top */
+  z-index: 2000; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 226px;
   background-color: #333333;

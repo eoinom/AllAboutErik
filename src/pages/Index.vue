@@ -1,18 +1,11 @@
 <template>
   <Layout>
 
-    <!-- <div class="flex-container"> -->
     <div class="container">
-      <div class="slideshow">
-        <slideshow-images
-          :slides="slides"
-        />
-      </div>
-
       <div class="mainContent">
         <g-image alt="All About Erik logo" v-if="titleImg != null" :src="titleImg" class="titleImg"/>
 
-        <span v-html="mainText" class="homePgMainText" />  
+        <span v-html="mainText" class="homePgMainText" />
       </div>
 
       <!-- <span class="homePgMainText">
@@ -30,10 +23,26 @@
         </p>
       </span>    -->
 
-      <div class="homePgCreditText">
-        <span v-html="creditText" />
+      <div class="creditContainer">
+        <span v-html="creditText" class="homePgCreditText"/>
       </div>
     </div>
+
+    <div class="slideshow">
+      <slideshow-images
+        :slides="slides"
+      />
+    </div>
+
+    <!-- <div class="slideshow">
+      <div
+        v-for="image in images"
+        :key="image"
+        :src="image"
+        :style="'background-image: url(' + image + ')'"
+        class="slideshow-image"
+      />
+    </div> -->
 
   </Layout>
 </template>
@@ -58,7 +67,7 @@
         }
       }
     }
-  }	
+  }
 }
 </page-query>
 
@@ -68,11 +77,11 @@ import SlideshowImages from '../components/SlideshowImages.vue'
 
 export default {
   metaInfo() {    // https://github.com/gridsome/gridsome/issues/306 (How do you use the queried GraphQL data in the <script>?)
-    return {      
+    return {
       title: this.$page.HomePage.edges[0].node.pageTitle,  // <-- "this" is the Vue instance with $page
     }
   },
-  
+
   data() {
     return {
       windowWidth: 0,
@@ -83,6 +92,9 @@ export default {
   computed: {
     slides() {
       return this.$page.HomePage.edges[0].node.slides
+    },
+    images() {      
+      return this.slides.map(a => a.img)
     },
     titleImg() {
       return this.$page.HomePage.edges[0].node.headingImg
@@ -101,7 +113,7 @@ export default {
 
   mounted() {
     this.$nextTick(() => {
-      window.addEventListener('resize', () => {        
+      window.addEventListener('resize', () => {
         this.windowWidth = window.innerWidth
         this.windowHeight = window.innerHeight
       });
@@ -110,124 +122,149 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+
+
+$items: 14;
+$animation-time: 5s;
+$transition-time: 3s;
+$scale: 10%;
+
+$total-time: ($animation-time * $items);
+$scale-base-1: (1 + $scale / 100%);
+
+// .slideshow {
+//   position: absolute;
+//   width: 100vw;
+//   height: 100vh;
+//   overflow: hidden;
+// }
+
+// .slideshow-image {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   background: no-repeat 50% 50%;
+//   background-size: cover;
+//   animation-name: kenburns;
+//   animation-timing-function: linear;
+//   animation-iteration-count: infinite;
+//   animation-duration: $total-time;
+//   opacity: 1;
+//   transform: scale($scale-base-1);
+
+//   @for $i from 1 through $items {
+//     &:nth-child(#{$i}) {
+//       animation-name: kenburns-#{$i};
+//       z-index: ($items - $i);
+//     }
+//   }
+// }
+
+// @for $i from 1 through $items {
+//   @keyframes kenburns-#{$i} {
+//     $animation-time-percent: percentage($animation-time / $total-time);
+//     $transition-time-percent: percentage($transition-time / $total-time);
+
+//     $t1: ($animation-time-percent * ($i - 1) - $transition-time-percent / 2);
+//     $t2: ($animation-time-percent * ($i - 1) + $transition-time-percent / 2);
+//     @if($t1 < 0%) { $t1: 0%; }
+//     @if($t2 < 0%) { $t2: 0%; }
+
+//     $t3: ($animation-time-percent * ($i) - $transition-time-percent / 2);
+//     $t4: ($animation-time-percent * ($i) + $transition-time-percent / 2);
+//     @if($t3 > 100%) { $t3: 100%; }
+//     @if($t4 > 100%) { $t4: 100%; }
+
+//     $t5: (100% - $transition-time-percent / 2);
+//     $t6: (($t4 - $t1) * 100% / $t5);
+
+//     #{$t1} { opacity: 1; transform: scale($scale-base-1); }
+//     #{$t2} { opacity: 1; }
+//     #{$t3} { opacity: 1; }
+//     #{$t4} { opacity: 0; transform: scale(1); }
+
+//     @if($i != $items) {
+//       100% { opacity: 0; transform: scale($scale-base-1); }
+//     }
+
+//     @if($i == 1) {
+//       $scale-plus: ($scale * (100% - $t5) / $t4);
+//       $scale-plus-base-1: (1 + ($scale + $scale-plus) / 100%);
+
+//       #{$t5} { opacity: 0; transform: scale($scale-plus-base-1); }
+//       100% { opacity: 1; }
+//     }
+//   }
+// }
+
+
 
 .layout {
   padding: 0
 }
 
-/* .flex-container {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.flex-container > div {
-  text-align: center;
-} */
-
 .container {
-  /* color: white; */
-  /* text-align: center; */
   position: absolute;
   width: 100%;
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column; */
+  height: 100%;
+  z-index: 100;
+  overflow: hidden;
 }
-
-/* .slideshow {
-  position: relative;
-  margin: auto;  
-} */
-
-/* .titleImgContainer {  
-  position: absolute; 
-  margin: auto;  
-  left: 0; 
-  right: 0;
-  top: 20%;
-  width: 100%;
-} */
 
 .mainContent{
   /* Absolute Centering in CSS: https://codepen.io/shshaw/full/gEiDt */
-  position: absolute;   
+  position: absolute;
   width: 80%;
-  margin: auto;  
-  left: 0; 
+  margin: auto;
+  left: 0;
   right: 0;
   top: 14%;
+  z-index: 100;
 }
 
-.titleImg {  
-  display: block;  
+.titleImg {
+  display: block;
   width: 100%;
-  max-width: 1492px; 
+  max-width: 1492px;
   height: auto;
-  /* z-index:90; */
-
-  /* Absolute Centering in CSS: https://codepen.io/shshaw/full/gEiDt */
-  /* position: absolute;   
-  margin: auto;  
-  left: 0; 
-  right: 0;
-  top: 14%; */
-
   position: relative;
-  margin: auto;  
-  /* left: 0; 
-  right: 0; */
+  margin: auto;
 }
-
 
 .homePgMainText {
-  color: white; 
+  color: white;
   font-family: 'Libre Baskerville', serif;
-  /* font-size: 29px;  */
-  font-size: calc(1em + 0.5vw); 
+  font-size: calc(1em + 0.5vw);
   text-align: center;
-  /* position: absolute;    */
-  /* top: 410px; 
-  left: 610px;  */
-  /* left: 50%;  */
   width: 80%;
-  /* margin-left: auto;
-  margin-right: auto; */
   line-height: 135%;
   z-index: 100;
+  position: relative;
+}
 
-  /* position: absolute;   
-  margin: auto;  
-  margin-top: 100px;
-  left: 0; 
+.creditContainer {    
+  position: absolute;
+  width: 93%;
+  height: 55px;
+  margin: auto;
+  left: 0;
   right: 0;
-  top: 32%; */
-
-  position: relative;   
+  bottom: 0;
+  text-align: right;
 }
 
 .homePgCreditText {
-  color: white; 
+  color: white;
   font-family: 'Libre Baskerville', serif;
-  font-size: 14px; 
-  position: absolute; 
-  /* right: 90px;  */
-  right: 3.5%; 
-  bottom: 40px; 
-  line-height: 50%;
-  /* z-index: 100; */
+  font-size: 14px;
+  bottom: 0;
 }
 
 /* Centre credit text when aspect ratio <= 1.0 */
 @media (max-aspect-ratio: 1/1) {
-  .homePgCreditText {
-    margin: auto;  
-    left: 0; 
-    right: 0;
+  .creditContainer {
     text-align: center;
   }
 }

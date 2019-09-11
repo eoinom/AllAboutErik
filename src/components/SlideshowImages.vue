@@ -20,6 +20,13 @@
         class="SlideshowImages__image"
         alt=""
       >
+      <!-- <div
+        v-for="(image, index) in images"
+        v-show="index === activeIndex"
+        :key="image"
+        :style="'background-image: url(' + image + ')'"
+        class="SlideshowImages__image"
+      /> -->
     </transition-group>
 
     <!-- <div class="SlideshowImages__controls">
@@ -77,7 +84,7 @@ export default {
 
       imgOpacity: 0.6,
       startPos: [0, 0, 0],  // x, y, z
-      positionFactor: 1,
+      positionFactor: 1.5,
 
       startPosX: 0,
       startPosY: 0,
@@ -139,16 +146,26 @@ export default {
             case 'top':           this.startPos = [0, -1, 0];      break;
             case 'top-right':     this.startPos = [1, -1, 0];      break;
             case 'left':          this.startPos = [-1, 0, 0];      break;
-            case 'center':        this.startPos = [0, 0, 0];       break;
+            case 'centre':        this.startPos = [0, 0, 0];       break;
             case 'right':         this.startPos = [1, 0, 0];       break;
             case 'bottom-left':   this.startPos = [-1, 1, 0];      break;
             case 'bottom':        this.startPos = [0, 1, 0];       break;
             case 'bottom-right':  this.startPos = [1, 1, 0];       break;
             default:
-              console.log('Did not recognise value for slides.panStart: ' + this.slides.panStart)
+              console.log('Did not recognise value for slides.panStart: ' + this.slides[i].panStart)
           } 
         }
       }
+
+      let slideIndex = i + 1
+      if (i >= 5) {
+        slideIndex = i - 4
+      }
+      if (i >= 10) {
+        slideIndex = i - 9
+      }
+      console.log('in applySlideStyles, setting --animationName to: ' + 'kenburns-'+slideIndex)
+      this.$el.style.setProperty('--animationName', 'kenburns-'+slideIndex)
 
       console.log('in applySlideStyles, setting --startScale to: ' + this.startScale)
       this.$el.style.setProperty('--startScale', this.startScale)
@@ -176,11 +193,11 @@ export default {
       // console.log('in applySlideStyles, setting --imgMargin to: ' + ((this.windowWidth - actualImgWidth) / 2) + 'px') 
       // this.$el.style.setProperty('--imgMargin', ((this.windowWidth - actualImgWidth) / 2) + 'px')     
 
-      let imgNo = i + 1
-      var img = document.querySelector("img.SlideshowImages__image:nth-child(" + imgNo + ")");
-      console.log('img width x height: ' + img.width + ' x ' + img.height);
-      console.log('in applySlideStyles, setting --leftMargin to: ' + (-(img.width - this.windowWidth) / 2) + 'px') 
-      this.$el.style.setProperty('--imgMargin', (-(img.width - this.windowWidth) / 2) + 'px')    
+      // let imgNo = i + 1
+      // var img = document.querySelector("img.SlideshowImages__image:nth-child(" + imgNo + ")");
+      // console.log('img width x height: ' + img.width + ' x ' + img.height);
+      // console.log('in applySlideStyles, setting --leftMargin to: ' + (-(img.width - this.windowWidth) / 2) + 'px') 
+      // this.$el.style.setProperty('--imgMargin', (-(img.width - this.windowWidth) / 2) + 'px')    
     },
 
     startInterval() {
@@ -197,7 +214,8 @@ export default {
     },
     interval(index) {
       console.log('interval: ' + 1000*this.slides[index].duration)
-      return 1000*this.slides[index].duration
+      // return 1000*this.slides[index].duration
+      return 5000;
     },
     next() {
       console.log('in next()');      
@@ -230,11 +248,11 @@ export default {
         // this.$el.style.setProperty('--imgMargin', ((this.windowWidth - actualImgWidth) / 2) + 'px')
         // console.log('in mounted, just set --imgMargin to: ' + ((this.windowWidth - actualImgWidth) / 2) + 'px')
 
-        let imgNo = this.activeIndex + 1
-        let img = document.querySelector("img.SlideshowImages__image:nth-child(" + imgNo + ")");
-        console.log('img width x height: ' + img.width + ' x ' + img.height);
-        console.log('in mounted resize listener, setting --leftMargin to: ' + (-(img.width - this.windowWidth) / 2) + 'px') 
-        this.$el.style.setProperty('--imgMargin', (-(img.width - this.windowWidth) / 2) + 'px')    
+        // let imgNo = this.activeIndex + 1
+        // let img = document.querySelector("img.SlideshowImages__image:nth-child(" + imgNo + ")");
+        // console.log('img width x height: ' + img.width + ' x ' + img.height);
+        // console.log('in mounted resize listener, setting --leftMargin to: ' + (-(img.width - this.windowWidth) / 2) + 'px') 
+        // this.$el.style.setProperty('--imgMargin', (-(img.width - this.windowWidth) / 2) + 'px')    
       });
     })
   },
@@ -250,6 +268,7 @@ body {
 
 .SlideshowImages {
 
+  --animationName: 'kenburns-1';
   --startScale: 1;
   --endScale: 1.1;
   --startPosX: 0;
@@ -275,22 +294,30 @@ body {
   &__slides {
     position: relative;
     overflow: hidden;
-    // padding-left: var(--imgMargin);
-    margin-left: var(--imgMargin);
-    margin-right: var(--imgMargin);
+    // margin-left: var(--imgMargin);
+    // margin-right: var(--imgMargin);
     // z-index: 100;
 
     // display: block;
     // margin-left: auto;
     // margin-right: auto;
+
+    // position: absolute;
+    // width: 100vw;
+    // height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    // align-items: center;
   }
 
   &__image {
     position: absolute;
-    width:inherit;
-    min-width: 100%;
+    width: auto;
+    height: auto;
     min-height: 100%;
-    // width: 100%;
+    min-width: 100%;
+
     // margin: 0 auto;
     // display: block;
     // margin-left: auto;
@@ -299,15 +326,21 @@ body {
     // left: 0; 
     // right: 0;
     
-    opacity: var(--imgOpacity);
-    // min-height: 100%;
-    // // height: 100%;
-    // overflow: hidden;
+    // object-fit: contain;
+    // background: no-repeat 50% 50%;
+    // background-size: cover;
+    // // animation-name: kenburns;
+    // animation-timing-function: linear;
+    // animation-iteration-count: infinite;
+    // // animation-duration: $total-time;
     
+    opacity: var(--imgOpacity);    
 
-    animation: kenburns 8s;
-    animation-fill-mode: none;
-    // animation-fill-mode: forwards;  // The element will retain the style values that is set by the last keyframe
+    // animation: kenburns 8s;
+    animation-name: var(--animationName);
+    animation-duration: 8s;
+    //animation-fill-mode: none;
+    animation-fill-mode: forwards;  // The element will retain the style values that is set by the last keyframe
 
     // // Enable the effect only
     // // on large screen devices.
@@ -318,7 +351,7 @@ body {
   }
 
   &__leaveActive, &__leaveTo {
-    transform: scale(var(--prevEndScale), var(--prevEndScale));
+    // transform: scale(var(--prevEndScale), var(--prevEndScale));
   }
 
   &__enterActive, &__leaveActive {
@@ -347,12 +380,59 @@ body {
 
   @keyframes kenburns {
     0% {
-      transform: scale(var(--startScale), var(--startScale)) translate(calc(var(--startPosX) * 1%), calc(var(--startPosY) * 1%));
+      // transform: scale(var(--startScale), var(--startScale)) translate(calc(var(--startPosX) * 1%), calc(var(--startPosY) * 1%));
+      transform: scale(var(--startScale), var(--startScale)) translate(0, 0);
       // transform: scale(1, 1) translate(-10%, -5%);
     }
     to {
-      transform: scale(var(--endScale), var(--endScale)) translate(0, 0);
+      // transform: scale(var(--endScale), var(--endScale)) translate(0, 0);
+      transform: scale(var(--endScale), var(--endScale)) translate(calc(var(--startPosX) * -1%), calc(var(--startPosY) * -1%));
       // transform: scale(1.25, 1.25) translate(0, 0);
+    }
+  }
+
+  @keyframes kenburns-1 {
+    0% {
+      transform: scale(1, 1) translate(0, 0);
+    }
+    to {
+      transform: scale(1.1, 1.1) translate(-1.5%, -1.5%);
+    }
+  }
+
+  @keyframes kenburns-2 {
+    0% {
+      transform: scale(1, 1) translate(0, 0);
+    }
+    to {
+      transform: scale(1.07, 1.07) translate(0, 0);
+    }
+  }
+
+  @keyframes kenburns-3 {
+    0% {
+      transform: scale(1, 1) translate(0, 0);
+    }
+    to {
+      transform: scale(1.06, 1.06) translate(0, -1.5%);
+    }
+  }
+
+  @keyframes kenburns-4 {
+    0% {
+      transform: scale(1.06, 1.06) translate(0, 0);
+    }
+    to {
+      transform: scale(1, 1) translate(0, 1.5%);
+    }
+  }
+
+  @keyframes kenburns-5 {
+    0% {
+      transform: scale(1, 1) translate(0, 0);
+    }
+    to {
+      transform: scale(1.07, 1.07) translate(1.5%, -1.5%);
     }
   }
 }
