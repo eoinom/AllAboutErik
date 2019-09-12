@@ -2,16 +2,6 @@
   <div class="SlideshowImages">
     
     <!-- https://vuejs.org/v2/guide/transitions.html#List-Transitions -->
-    <!-- <transition-group
-      :duration="1000"      
-      tag="div"
-      :style="slideShowPadding"
-      enter-active-class="SlideshowImages__enterActive"
-      enter-class="SlideshowImages__enter"
-      leave-active-class="SlideshowImages__leaveActive"
-      leave-to-class="SlideshowImages__leaveTo"
-      class="SlideshowImages__slides"
-    > -->
     <transition-group     
       tag="div"
       :style="slideShowPadding"
@@ -27,32 +17,10 @@
         :key="image"
         :src="image"
         class="SlideshowImages__image"
-        :style="'animation-name: kenburns-'+(index+1)+'; transform-origin: ' + panStart(index)"
+        :style="imgStyle(index)"
         alt=""
       >
-      <!-- <div
-        v-for="(image, index) in images"
-        v-show="index === activeIndex"
-        :key="image"
-        :style="'background-image: url(' + image + ')'"
-        class="SlideshowImages__image"
-      /> -->
     </transition-group>
-
-    <!-- <div class="SlideshowImages__controls">
-      <button
-        class="SlideshowImages__control"
-        @click="prev"
-      >
-        &laquo; prev
-      </button>
-      <button
-        class="SlideshowImages__control"
-        @click="next"
-      >
-        next &raquo;
-      </button>
-    </div> -->
 
   </div>
 </template>
@@ -66,13 +34,13 @@ export default {
     // height: {
     //   default: 1380
     // },
-    // // images: {
-    // //   default: () => [],
-    // //   type: Array,
-    // // },
-    // // interval: {
-    // //   default: 10000
-    // // },
+    // images: {
+    //   default: () => [],
+    //   type: Array,
+    // },
+    // interval: {
+    //   default: 10000
+    // },
     // width: {
     //   default: 2560
     // },
@@ -208,6 +176,13 @@ export default {
     //   // console.log('in applySlideStyles, setting --leftMargin to: ' + (-(img.width - this.windowWidth) / 2) + 'px') 
     //   // this.$el.style.setProperty('--imgMargin', (-(img.width - this.windowWidth) / 2) + 'px')    
     // },
+
+    imgStyle(index) {
+      let css = {}
+      css.animationName = 'kenburns-'+ (index+1)
+      css.transformOrigin = this.panStart(index)
+      return css
+    },
 
     panStart(index) {
       if (this.slides[index].hasOwnProperty('panStart')) {
