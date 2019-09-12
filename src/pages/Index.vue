@@ -33,8 +33,8 @@
         :slides="slides"
       />
     </div>
-
-    <!-- <div class="slideshow">
+<!-- 
+    <div class="slideshow">
       <div
         v-for="image in images"
         :key="image"
@@ -43,6 +43,11 @@
         class="slideshow-image"
       />
     </div> -->
+
+    <audio autoplay loop>
+      <source src="../assets/audio/wildwood_remix_website_long.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio> 
 
   </Layout>
 </template>
@@ -107,11 +112,22 @@ export default {
     }
   },
 
+  methods: {
+    playSound (sound) {
+      if(sound) {
+        var audio = new Audio(sound);
+        audio.play();
+      }
+    }
+  },
+
   components: {
     'slideshow-images':     require('../components/SlideshowImages.vue').default,
   },
 
   mounted() {
+    // this.playSound('~/assets/audio/wildwood_remix_website_long.mp3');
+
     this.$nextTick(() => {
       window.addEventListener('resize', () => {
         this.windowWidth = window.innerWidth
@@ -134,70 +150,71 @@ $scale: 10%;
 $total-time: ($animation-time * $items);
 $scale-base-1: (1 + $scale / 100%);
 
-// .slideshow {
-//   position: absolute;
-//   width: 100vw;
-//   height: 100vh;
-//   overflow: hidden;
-// }
+.slideshow {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
 
-// .slideshow-image {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   background: no-repeat 50% 50%;
-//   background-size: cover;
-//   animation-name: kenburns;
-//   animation-timing-function: linear;
-//   animation-iteration-count: infinite;
-//   animation-duration: $total-time;
-//   opacity: 1;
-//   transform: scale($scale-base-1);
+.slideshow-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: no-repeat 50% 50%;
+  background-size: cover;
+  animation-name: kenburns;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: $total-time;
+  transform-origin: top left;
+  opacity: 0.6;
+  transform: scale($scale-base-1);
 
-//   @for $i from 1 through $items {
-//     &:nth-child(#{$i}) {
-//       animation-name: kenburns-#{$i};
-//       z-index: ($items - $i);
-//     }
-//   }
-// }
+  @for $i from 1 through $items {
+    &:nth-child(#{$i}) {
+      animation-name: kenburns-#{$i};
+      z-index: ($items - $i);
+    }
+  }
+}
 
-// @for $i from 1 through $items {
-//   @keyframes kenburns-#{$i} {
-//     $animation-time-percent: percentage($animation-time / $total-time);
-//     $transition-time-percent: percentage($transition-time / $total-time);
+@for $i from 1 through $items {
+  @keyframes kenburns-#{$i} {
+    $animation-time-percent: percentage($animation-time / $total-time);
+    $transition-time-percent: percentage($transition-time / $total-time);
 
-//     $t1: ($animation-time-percent * ($i - 1) - $transition-time-percent / 2);
-//     $t2: ($animation-time-percent * ($i - 1) + $transition-time-percent / 2);
-//     @if($t1 < 0%) { $t1: 0%; }
-//     @if($t2 < 0%) { $t2: 0%; }
+    $t1: ($animation-time-percent * ($i - 1) - $transition-time-percent / 2);
+    $t2: ($animation-time-percent * ($i - 1) + $transition-time-percent / 2);
+    @if($t1 < 0%) { $t1: 0%; }
+    @if($t2 < 0%) { $t2: 0%; }
 
-//     $t3: ($animation-time-percent * ($i) - $transition-time-percent / 2);
-//     $t4: ($animation-time-percent * ($i) + $transition-time-percent / 2);
-//     @if($t3 > 100%) { $t3: 100%; }
-//     @if($t4 > 100%) { $t4: 100%; }
+    $t3: ($animation-time-percent * ($i) - $transition-time-percent / 2);
+    $t4: ($animation-time-percent * ($i) + $transition-time-percent / 2);
+    @if($t3 > 100%) { $t3: 100%; }
+    @if($t4 > 100%) { $t4: 100%; }
 
-//     $t5: (100% - $transition-time-percent / 2);
-//     $t6: (($t4 - $t1) * 100% / $t5);
+    $t5: (100% - $transition-time-percent / 2);
+    $t6: (($t4 - $t1) * 100% / $t5);
 
-//     #{$t1} { opacity: 1; transform: scale($scale-base-1); }
-//     #{$t2} { opacity: 1; }
-//     #{$t3} { opacity: 1; }
-//     #{$t4} { opacity: 0; transform: scale(1); }
+    #{$t1} { opacity: 1; transform: scale($scale-base-1); }
+    #{$t2} { opacity: 1; }
+    #{$t3} { opacity: 1; }
+    #{$t4} { opacity: 0; transform: scale(1); }
 
-//     @if($i != $items) {
-//       100% { opacity: 0; transform: scale($scale-base-1); }
-//     }
+    @if($i != $items) {
+      100% { opacity: 0; transform: scale($scale-base-1); }
+    }
 
-//     @if($i == 1) {
-//       $scale-plus: ($scale * (100% - $t5) / $t4);
-//       $scale-plus-base-1: (1 + ($scale + $scale-plus) / 100%);
+    @if($i == 1) {
+      $scale-plus: ($scale * (100% - $t5) / $t4);
+      $scale-plus-base-1: (1 + ($scale + $scale-plus) / 100%);
 
-//       #{$t5} { opacity: 0; transform: scale($scale-plus-base-1); }
-//       100% { opacity: 1; }
-//     }
-//   }
-// }
+      #{$t5} { opacity: 0; transform: scale($scale-plus-base-1); }
+      100% { opacity: 1; }
+    }
+  }
+}
 
 
 
