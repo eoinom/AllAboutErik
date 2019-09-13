@@ -6,6 +6,11 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 # media_folder: "src/assets/uploads"
 # public_folder: "/assets/static"
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: all-about-erik
+    api_key: 884234271445431
 
 collections:
   - name: "posts"
