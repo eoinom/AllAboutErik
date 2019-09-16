@@ -31,19 +31,6 @@ export default {
   name: 'SlideshowImages',
 
   props: {
-    // height: {
-    //   default: 1380
-    // },
-    // images: {
-    //   default: () => [],
-    //   type: Array,
-    // },
-    // interval: {
-    //   default: 10000
-    // },
-    // width: {
-    //   default: 2560
-    // },
     slides: {
       default: () => [],
       type: Array,
@@ -68,7 +55,9 @@ export default {
       startPosY: 0,
 
       windowWidth: 0,
-      windowHeight: 0
+      windowHeight: 0,
+
+      translateFactor: 1.5
     };
   },
 
@@ -93,89 +82,8 @@ export default {
     goToIndex(index) {
       console.log('in goToIndex, index is: ' + index)
       this.activeIndex = index
-      // this.applySlideStyles(index)
       this.time = this.interval(index)      
     },
-    // applySlideStyles(index) {
-    //   let i = parseInt(index)
-
-    //   if (i >= 0 && i < this.slides.length) {
-    //     if (this.slides[i].hasOwnProperty('scaleFrom')) {
-    //       this.startScale = this.slides[i].scaleFrom
-    //       if (i==0)
-    //         this.prevStartScale = this.slides[this.slides.length-1].scaleFrom
-    //       else
-    //         this.prevStartScale = this.slides[i-1].scaleFrom
-    //     }
-    //     if (this.slides[i].hasOwnProperty('scaleTo')) {
-    //       this.endScale = this.slides[i].scaleTo
-    //       if (i==0)
-    //         this.prevEndScale = this.slides[this.slides.length-1].scaleTo
-    //       else
-    //         this.prevEndScale = this.slides[i-1].scaleTo
-    //     }
-    //     if (this.slides[i].hasOwnProperty('opacity')) {
-    //       this.imgOpacity = this.slides[i].opacity / 100
-    //     }      
-    //     if (this.slides[i].hasOwnProperty('panStart')) {
-    //       switch(this.slides[i].panStart.toLowerCase()) {
-    //         case 'top-left':      this.startPos = [-1, -1, 0];     break;
-    //         case 'top':           this.startPos = [0, -1, 0];      break;
-    //         case 'top-right':     this.startPos = [1, -1, 0];      break;
-    //         case 'left':          this.startPos = [-1, 0, 0];      break;
-    //         case 'centre':        this.startPos = [0, 0, 0];       break;
-    //         case 'right':         this.startPos = [1, 0, 0];       break;
-    //         case 'bottom-left':   this.startPos = [-1, 1, 0];      break;
-    //         case 'bottom':        this.startPos = [0, 1, 0];       break;
-    //         case 'bottom-right':  this.startPos = [1, 1, 0];       break;
-    //         default:
-    //           console.log('Did not recognise value for slides.panStart: ' + this.slides[i].panStart)
-    //       } 
-    //     }
-    //   }
-
-    //   let slideIndex = i + 1
-    //   if (i >= 5) {
-    //     slideIndex = i - 4
-    //   }
-    //   if (i >= 10) {
-    //     slideIndex = i - 9
-    //   }
-    //   console.log('in applySlideStyles, setting --animationName to: ' + 'kenburns-'+slideIndex)
-    //   this.$el.style.setProperty('--animationName', 'kenburns-'+slideIndex)
-
-    //   console.log('in applySlideStyles, setting --startScale to: ' + this.startScale)
-    //   this.$el.style.setProperty('--startScale', this.startScale)
-      
-    //   console.log('in applySlideStyles, setting --endScale to: ' + this.endScale)
-    //   this.$el.style.setProperty('--endScale', this.endScale)
-
-    //   console.log('in applySlideStyles, setting --prevStartScale to: ' + this.prevStartScale)
-    //   this.$el.style.setProperty('--prevStartScale', this.prevStartScale)
-      
-    //   console.log('in applySlideStyles, setting --prevEndScale to: ' + this.prevEndScale)
-    //   this.$el.style.setProperty('--prevEndScale', this.prevEndScale)
-
-    //   console.log('in applySlideStyles, setting --imgOpacity to: ' + this.imgOpacity)
-    //   this.$el.style.setProperty('--imgOpacity', this.imgOpacity)
-      
-    //   console.log('in applySlideStyles, setting --startPosX: ' + this.positionFactor*this.startPos[0])
-    //   console.log('in applySlideStyles, setting --startPosY: ' + this.positionFactor*this.startPos[1])
-    //   console.log('in applySlideStyles, setting --startPosZ: ' + this.positionFactor*this.startPos[2])
-    //   this.$el.style.setProperty('--startPosX', this.positionFactor*this.startPos[0])
-    //   this.$el.style.setProperty('--startPosY', this.positionFactor*this.startPos[1])
-    //   this.$el.style.setProperty('--startPosZ', this.positionFactor*this.startPos[2])
-
-    //   // let actualImgWidth = (1920.0/1080.0) * this.windowHeight    // assumes all images are 1920 x 1080px
-    //   // console.log('in applySlideStyles, setting --imgMargin to: ' + ((this.windowWidth - actualImgWidth) / 2) + 'px') 
-    //   // this.$el.style.setProperty('--imgMargin', ((this.windowWidth - actualImgWidth) / 2) + 'px')     
-
-    //   // let imgNo = i + 1
-    //   // var img = document.querySelector("img.SlideshowImages__image:nth-child(" + imgNo + ")");
-    //   // console.log('img width x height: ' + img.width + ' x ' + img.height);
-    //   // console.log('in applySlideStyles, setting --leftMargin to: ' + (-(img.width - this.windowWidth) / 2) + 'px') 
-    //   // this.$el.style.setProperty('--imgMargin', (-(img.width - this.windowWidth) / 2) + 'px')    
-    // },
 
     imgStyle(index) {
       let css = {}
@@ -215,11 +123,13 @@ export default {
       // Clear the interval if the component is destroyed to prevent memory leaks
       this.$once('hook:destroyed', () => clearInterval(clock));
     },
+
     interval(index) {
       console.log('interval: ' + 1000*this.slides[index].duration)
       // return 1000*this.slides[index].duration
       return 5000;
     },
+
     next() {
       console.log('in next()');      
       let nextIndex = this.activeIndex + 1;
@@ -229,9 +139,53 @@ export default {
       }
       this.goToIndex(nextIndex);
     },
+
+    createKeyFrames() {
+      for (let i = 0; i < this.slides.length; i++) {        
+        let startPos = [0, 0, 0]
+        if (this.slides[i].hasOwnProperty('panStart')) {
+          switch(this.slides[i].panStart.toLowerCase()) {
+            case 'top-left':      startPos = [-1, -1, 0];     break;
+            case 'top':           startPos = [0, -1, 0];      break;
+            case 'top-right':     startPos = [1, -1, 0];      break;
+            case 'left':          startPos = [-1, 0, 0];      break;
+            case 'centre':        startPos = [0, 0, 0];       break;
+            case 'right':         startPos = [1, 0, 0];       break;
+            case 'bottom-left':   startPos = [-1, 1, 0];      break;
+            case 'bottom':        startPos = [0, 1, 0];       break;
+            case 'bottom-right':  startPos = [1, 1, 0];       break;
+            default:
+              console.log('Did not recognise value for slides.panStart: ' + this.slides[i].panStart)
+          } 
+        }
+        let num = i + 1
+        let scaleFrom = this.slides[i].scaleFrom
+        let scaleTo = this.slides[i].scaleTo
+        let Tx = this.translateFactor * startPos[0]
+        let Ty = this.translateFactor * startPos[1]
+        var style = document.createElement('style');
+        style.type = 'text/css';
+        var keyFrames = '\
+        @keyframes kenburns-' + num + ' {\
+          0% {\
+            transform: scale3d('+ scaleFrom + ', '+ scaleFrom + ', 1) translate3d('+ Tx + '%, '+ Ty + '%, 0);\
+          }\
+          100% {\
+            transform: scale3d('+ scaleTo + ', '+ scaleTo + ', 1) translate3d(0, 0, 0);\
+          }\
+        }';
+        style.innerHTML = keyFrames
+        document.head.appendChild(style)
+      };
+    }
   },
 
   mounted() {
+    this.createKeyFrames()
+    console.log('document.head:');
+    console.log(document.head);
+    
+
     this.windowWidth = window.innerWidth
     this.windowHeight = window.innerHeight
 
@@ -245,17 +199,7 @@ export default {
     this.$nextTick(() => {
       window.addEventListener('resize', () => {        
         this.windowWidth = window.innerWidth
-        this.windowHeight = window.innerHeight
-
-        // let actualImgWidth = (1920.0/1080.0) * this.windowHeight    // assumes all images are 1920 x 1080px
-        // this.$el.style.setProperty('--imgMargin', ((this.windowWidth - actualImgWidth) / 2) + 'px')
-        // console.log('in mounted, just set --imgMargin to: ' + ((this.windowWidth - actualImgWidth) / 2) + 'px')
-
-        // let imgNo = this.activeIndex + 1
-        // let img = document.querySelector("img.SlideshowImages__image:nth-child(" + imgNo + ")");
-        // console.log('img width x height: ' + img.width + ' x ' + img.height);
-        // console.log('in mounted resize listener, setting --leftMargin to: ' + (-(img.width - this.windowWidth) / 2) + 'px') 
-        // this.$el.style.setProperty('--imgMargin', (-(img.width - this.windowWidth) / 2) + 'px')    
+        this.windowHeight = window.innerHeight 
       });
     })
   },
@@ -270,17 +214,7 @@ body {
 }
 
 .SlideshowImages {
-
-  // --animationName: 'kenburns-1';
-  // --startScale: 1;
-  // --prevStartScale: 1;
-  // --endScale: 1.1;
-  // --prevEndScale: 1.1;
-  // --startPosX: 0;
-  // --startPosY: 0;
-  // --imgOpacity: 0.62;
-  --translateFactor: 1.5%;
-  
+  --translateFactor: 1.5%;  
 
   &__slides {
     position: relative;
@@ -295,8 +229,7 @@ body {
     height: auto;
     min-height: 100%;
     min-width: 100%;    
-    overflow: hidden;
-    // opacity: var(--imgOpacity);    
+    overflow: hidden;  
     opacity: 0.62;    
     animation-duration: 8s;
     animation-fill-mode: forwards;  // The element will retain the style values that is set by the last keyframe
@@ -311,11 +244,6 @@ body {
     // }
   }
 
-  &__leaveActive, &__leaveTo {
-    transform: scale(var(--prevEndScale), var(--prevEndScale)); 
-    // transform: scale3d(var(--endScale), var(--endScale), 1)   
-  }
-
   &__enterActive, &__leaveActive {
     transition: opacity 3s linear;    // // scale: var(--endScale);
     
@@ -325,131 +253,131 @@ body {
     opacity: 0;
   }
 
-  @keyframes kenburns-1 {
-    0% {
-      transform: scale3d(1, 1, 1) translate3d(calc(1*var(--translateFactor)), calc(1*var(--translateFactor)), 0)
-    }
-    to {
-      transform: scale3d(1.1, 1.1, 1) translate3d(0, 0, 0);
-    }
-  }
+  // @keyframes kenburns-1 {
+  //   0% {
+  //     transform: scale3d(1, 1, 1) translate3d(calc(1*var(--translateFactor)), calc(1*var(--translateFactor)), 0)
+  //   }
+  //   to {
+  //     transform: scale3d(1.1, 1.1, 1) translate3d(0, 0, 0);
+  //   }
+  // }
 
-  @keyframes kenburns-2 {
-    0% {
-      transform: scale3d(1, 1, 1) translate3d(0, 0, 0)
-    }
-    to {
-      transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
-    }
-  }
+  // @keyframes kenburns-2 {
+  //   0% {
+  //     transform: scale3d(1, 1, 1) translate3d(0, 0, 0)
+  //   }
+  //   to {
+  //     transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
+  //   }
+  // }
 
-  @keyframes kenburns-3 {
-    0% {
-      transform: scale3d(1, 1, 1) translate3d(0, calc(1*var(--translateFactor)), 0)
-    }
-    to {
-      transform: scale3d(1.06, 1.06, 1) translate3d(0, 0, 0);
-    }
-  }
+  // @keyframes kenburns-3 {
+  //   0% {
+  //     transform: scale3d(1, 1, 1) translate3d(0, calc(1*var(--translateFactor)), 0)
+  //   }
+  //   to {
+  //     transform: scale3d(1.06, 1.06, 1) translate3d(0, 0, 0);
+  //   }
+  // }
 
-  @keyframes kenburns-4 {
-    0% {
-      transform: scale3d(1.06, 1.06, 1) translate3d(0, calc(-1*var(--translateFactor)), 0)
-    }
-    to {
-      transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-    }
-  }
+  // @keyframes kenburns-4 {
+  //   0% {
+  //     transform: scale3d(1.06, 1.06, 1) translate3d(0, calc(-1*var(--translateFactor)), 0)
+  //   }
+  //   to {
+  //     transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  //   }
+  // }
 
-  @keyframes kenburns-5 {
-    0% {
-      transform: scale3d(1, 1, 1) translate3d(calc(-1*var(--translateFactor)), calc(1*var(--translateFactor)), 0)
-    }
-    to {
-      transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
-    }
-  }
+  // @keyframes kenburns-5 {
+  //   0% {
+  //     transform: scale3d(1, 1, 1) translate3d(calc(-1*var(--translateFactor)), calc(1*var(--translateFactor)), 0)
+  //   }
+  //   to {
+  //     transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
+  //   }
+  // }
 
-  @keyframes kenburns-6 {
-    0% {
-      transform: scale3d(1, 1, 1) translate3d(0, 0, 0)
-    }
-    to {
-      transform: scale3d(1.09, 1.09, 1) translate3d(0, 0, 0);
-    }
-  }
+  // @keyframes kenburns-6 {
+  //   0% {
+  //     transform: scale3d(1, 1, 1) translate3d(0, 0, 0)
+  //   }
+  //   to {
+  //     transform: scale3d(1.09, 1.09, 1) translate3d(0, 0, 0);
+  //   }
+  // }
 
-  @keyframes kenburns-7 {
-    0% {
-      transform: scale3d(1.06, 1.06, 1) translate3d(0, calc(1*var(--translateFactor)), 0)
-    }
-    to {
-      transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-    }
-  }
+  // @keyframes kenburns-7 {
+  //   0% {
+  //     transform: scale3d(1.06, 1.06, 1) translate3d(0, calc(1*var(--translateFactor)), 0)
+  //   }
+  //   to {
+  //     transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  //   }
+  // }
 
-  @keyframes kenburns-8 {
-    0% {
-      transform: scale3d(1, 1, 1) translate3d(0, calc(1*var(--translateFactor)), 0)
-    }
-    to {
-      transform: scale3d(1.06, 1.06, 1) translate3d(0, 0, 0);
-    }
-  }
+  // @keyframes kenburns-8 {
+  //   0% {
+  //     transform: scale3d(1, 1, 1) translate3d(0, calc(1*var(--translateFactor)), 0)
+  //   }
+  //   to {
+  //     transform: scale3d(1.06, 1.06, 1) translate3d(0, 0, 0);
+  //   }
+  // }
 
-  @keyframes kenburns-9 {
-    0% {
-      transform: scale3d(1, 1, 1) translate3d(calc(-1*var(--translateFactor)), calc(1*var(--translateFactor)), 0)
-    }
-    to {
-      transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
-    }
-  }
+  // @keyframes kenburns-9 {
+  //   0% {
+  //     transform: scale3d(1, 1, 1) translate3d(calc(-1*var(--translateFactor)), calc(1*var(--translateFactor)), 0)
+  //   }
+  //   to {
+  //     transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
+  //   }
+  // }
 
-  @keyframes kenburns-10 {
-    0% {
-      transform: scale3d(1, 1, 1) translate3d(calc(-1*var(--translateFactor)), calc(-1*var(--translateFactor)), 0)
-    }
-    to {
-      transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
-    }
-  }
+  // @keyframes kenburns-10 {
+  //   0% {
+  //     transform: scale3d(1, 1, 1) translate3d(calc(-1*var(--translateFactor)), calc(-1*var(--translateFactor)), 0)
+  //   }
+  //   to {
+  //     transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
+  //   }
+  // }
 
-  @keyframes kenburns-11 {
-    0% {
-      transform: scale3d(1, 1, 1) translate3d(0, 0, 0)
-    }
-    to {
-      transform: scale3d(1.09, 1.09, 1) translate3d(0, 0, 0);
-    }
-  }
+  // @keyframes kenburns-11 {
+  //   0% {
+  //     transform: scale3d(1, 1, 1) translate3d(0, 0, 0)
+  //   }
+  //   to {
+  //     transform: scale3d(1.09, 1.09, 1) translate3d(0, 0, 0);
+  //   }
+  // }
 
-  @keyframes kenburns-12 {
-    0% {
-      transform: scale3d(1, 1, 1) translate3d(calc(-1*var(--translateFactor)), calc(1*var(--translateFactor)), 0)
-    }
-    to {
-      transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
-    }
-  }
+  // @keyframes kenburns-12 {
+  //   0% {
+  //     transform: scale3d(1, 1, 1) translate3d(calc(-1*var(--translateFactor)), calc(1*var(--translateFactor)), 0)
+  //   }
+  //   to {
+  //     transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
+  //   }
+  // }
 
-  @keyframes kenburns-13 {
-    0% {
-      transform: scale3d(1, 1, 1) translate3d(0, 0, 0)
-    }
-    to {
-      transform: scale3d(1.09, 1.09, 1) translate3d(0, 0, 0);
-    }
-  }
+  // @keyframes kenburns-13 {
+  //   0% {
+  //     transform: scale3d(1, 1, 1) translate3d(0, 0, 0)
+  //   }
+  //   to {
+  //     transform: scale3d(1.09, 1.09, 1) translate3d(0, 0, 0);
+  //   }
+  // }
 
-  @keyframes kenburns-14 {
-    0% {
-      transform: scale3d(1, 1, 1) translate3d(0, calc(1*var(--translateFactor)), 0)
-    }
-    to {
-      transform: scale3d(1.06, 1.06, 1) translate3d(0, 0, 0);
-    }
-  }
+  // @keyframes kenburns-14 {
+  //   0% {
+  //     transform: scale3d(1, 1, 1) translate3d(0, calc(1*var(--translateFactor)), 0)
+  //   }
+  //   to {
+  //     transform: scale3d(1.06, 1.06, 1) translate3d(0, 0, 0);
+  //   }
+  // }
   
 }
 </style>
