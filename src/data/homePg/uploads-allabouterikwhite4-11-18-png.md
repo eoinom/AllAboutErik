@@ -11,7 +11,7 @@ slides:
     orderNo: 1
     panStart: bottom-right
     scaleFrom: 1
-    scaleTo: 1.1
+    scaleTo: 1.06
   - duration: 8
     img: /uploads/slide-2-fireplacewall-.jpg
     opacity: 62
