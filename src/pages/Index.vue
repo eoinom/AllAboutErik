@@ -44,8 +44,12 @@
       />
     </div> -->
 
-    <audio autoplay loop>
+    <!-- <audio autoplay loop>
       <source src="../assets/audio/wildwood_remix_website_long.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>  -->
+    <audio autoplay loop>
+      <source :src="audioFile" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio> 
 
@@ -61,6 +65,7 @@
         headingImg
         content
         creditText
+        backgroundAudio
         slides {
           orderNo
           img
@@ -109,6 +114,9 @@ export default {
     },
     creditText(){
       return this.$page.HomePage.edges[0].node.creditText
+    },
+    audioFile() {
+      return this.$page.HomePage.edges[0].node.backgroundAudio
     }
   },
 
