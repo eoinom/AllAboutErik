@@ -70,8 +70,22 @@
         
       </div>
     </div>
+
+    <!-- This transition is for all other page loads -->
+    <!-- https://github.com/gridsome/gridsome/issues/24 -->
+    <transition name="page">
+      <router-view/>
+    </transition>
+
+    <!-- Need this transition for the home page initial load -->
+    <!-- https://gridsome.org/docs/page-transitions -->
+    <transition name="page" appear>
+      <main>
+        <slot />
+      </main>
+    </transition>
      
-    <slot/>
+    <!-- <slot/> -->
   </div>
 </template>
 
@@ -453,6 +467,24 @@ body {
 .simple-scrollbar {
   height: 100%;
 }
+
+
+/* Transition styles on router-view for fading the page */
+.page-enter-active {
+  transition-duration: 5.5s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+}
+.page-leave-active {
+  transition-duration: 1.5s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0
+}
+
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {

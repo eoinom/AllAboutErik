@@ -8,21 +8,6 @@
         <span v-html="mainText" class="homePgMainText" />
       </div>
 
-      <!-- <span class="homePgMainText">
-        <p>
-          As a boy growing up in the Midwest, I never had a clear idea of what I’d end up doing in life.
-          <br>The currents just carried me along.
-        </p>
-        <p>
-          I played banjo, but quit to become a music publisher and record producer.
-          <br>I fished, traveled, scuba-dived, collected, and fell in love.
-        </p>
-        <p>
-          I took a lifelong trip into exciting and uncharted waters.
-          <br>This stuff is about what happened along the way.
-        </p>
-      </span>    -->
-
       <div class="creditContainer">
         <span v-html="creditText" class="homePgCreditText"/>
       </div>
@@ -33,21 +18,7 @@
         :slides="slides"
       />
     </div>
-<!-- 
-    <div class="slideshow">
-      <div
-        v-for="image in images"
-        :key="image"
-        :src="image"
-        :style="'background-image: url(' + image + ')'"
-        class="slideshow-image"
-      />
-    </div> -->
 
-    <!-- <audio autoplay loop>
-      <source src="../assets/audio/wildwood_remix_website_long.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>  -->
     <audio autoplay loop>
       <source :src="audioFile" type="audio/mpeg">
       Your browser does not support the audio element.
@@ -121,12 +92,6 @@ export default {
   },
 
   methods: {
-    playSound (sound) {
-      if(sound) {
-        var audio = new Audio(sound);
-        audio.play();
-      }
-    }
   },
 
   components: {
@@ -134,8 +99,6 @@ export default {
   },
 
   mounted() {
-    // this.playSound('~/assets/audio/wildwood_remix_website_long.mp3');
-
     this.$nextTick(() => {
       window.addEventListener('resize', () => {
         this.windowWidth = window.innerWidth
@@ -293,6 +256,5 @@ $scale-base-1: (1 + $scale / 100%);
     text-align: center;
   }
 }
-
 
 </style>
