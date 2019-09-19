@@ -63,17 +63,12 @@ export default {
 
   computed: {
     aspectRatio() {
-      console.log('aspectRatio is: ' + (this.windowHeight / this.windowWidth) * 100)
       return (this.windowHeight / this.windowWidth) * 100
     },
     slideShowPadding() {
-      console.log('slideShowPadding:');
-      console.log('paddingBottom: ' + this.aspectRatio + '%');
       return 'paddingBottom: ' + this.aspectRatio + '%'
     },
-    images() {
-      console.log('images');
-      console.log(this.slides.map(a => a.img));      
+    images() {    
       return this.slides.map(a => a.img)
     },
   },
@@ -181,16 +176,10 @@ export default {
   },
 
   mounted() {
-    this.createKeyFrames()
-    console.log('document.head:');
-    console.log(document.head);
-    
+    this.createKeyFrames()    
 
     this.windowWidth = window.innerWidth
     this.windowHeight = window.innerHeight
-
-    console.log('this.slides');
-    console.log(this.slides);
 
     this.goToIndex(0);
     // this.time = this.interval(0)
@@ -220,7 +209,6 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
-    // align-items: center;
   }
 
   &__image {
@@ -233,15 +221,6 @@ body {
     opacity: 0.62;    
     animation-duration: 8s;
     animation-fill-mode: forwards;  // The element will retain the style values that is set by the last keyframe
-    // animation-timing-function: linear;
-    // animation-iteration-count: infinite;
-
-    // // Enable the effect only
-    // // on large screen devices.
-    // @media (min-width: 42em) {
-    //   animation: kenburns 8s;
-    //   animation-fill-mode: forwards;
-    // }
   }
 
   &__enterActive, &__leaveActive {
@@ -251,133 +230,6 @@ body {
 
   &__enter, &__leaveTo {
     opacity: 0;
-  }
-
-  // @keyframes kenburns-1 {
-  //   0% {
-  //     transform: scale3d(1, 1, 1) translate3d(calc(1*var(--translateFactor)), calc(1*var(--translateFactor)), 0)
-  //   }
-  //   to {
-  //     transform: scale3d(1.1, 1.1, 1) translate3d(0, 0, 0);
-  //   }
-  // }
-
-  // @keyframes kenburns-2 {
-  //   0% {
-  //     transform: scale3d(1, 1, 1) translate3d(0, 0, 0)
-  //   }
-  //   to {
-  //     transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
-  //   }
-  // }
-
-  // @keyframes kenburns-3 {
-  //   0% {
-  //     transform: scale3d(1, 1, 1) translate3d(0, calc(1*var(--translateFactor)), 0)
-  //   }
-  //   to {
-  //     transform: scale3d(1.06, 1.06, 1) translate3d(0, 0, 0);
-  //   }
-  // }
-
-  // @keyframes kenburns-4 {
-  //   0% {
-  //     transform: scale3d(1.06, 1.06, 1) translate3d(0, calc(-1*var(--translateFactor)), 0)
-  //   }
-  //   to {
-  //     transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-  //   }
-  // }
-
-  // @keyframes kenburns-5 {
-  //   0% {
-  //     transform: scale3d(1, 1, 1) translate3d(calc(-1*var(--translateFactor)), calc(1*var(--translateFactor)), 0)
-  //   }
-  //   to {
-  //     transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
-  //   }
-  // }
-
-  // @keyframes kenburns-6 {
-  //   0% {
-  //     transform: scale3d(1, 1, 1) translate3d(0, 0, 0)
-  //   }
-  //   to {
-  //     transform: scale3d(1.09, 1.09, 1) translate3d(0, 0, 0);
-  //   }
-  // }
-
-  // @keyframes kenburns-7 {
-  //   0% {
-  //     transform: scale3d(1.06, 1.06, 1) translate3d(0, calc(1*var(--translateFactor)), 0)
-  //   }
-  //   to {
-  //     transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-  //   }
-  // }
-
-  // @keyframes kenburns-8 {
-  //   0% {
-  //     transform: scale3d(1, 1, 1) translate3d(0, calc(1*var(--translateFactor)), 0)
-  //   }
-  //   to {
-  //     transform: scale3d(1.06, 1.06, 1) translate3d(0, 0, 0);
-  //   }
-  // }
-
-  // @keyframes kenburns-9 {
-  //   0% {
-  //     transform: scale3d(1, 1, 1) translate3d(calc(-1*var(--translateFactor)), calc(1*var(--translateFactor)), 0)
-  //   }
-  //   to {
-  //     transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
-  //   }
-  // }
-
-  // @keyframes kenburns-10 {
-  //   0% {
-  //     transform: scale3d(1, 1, 1) translate3d(calc(-1*var(--translateFactor)), calc(-1*var(--translateFactor)), 0)
-  //   }
-  //   to {
-  //     transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
-  //   }
-  // }
-
-  // @keyframes kenburns-11 {
-  //   0% {
-  //     transform: scale3d(1, 1, 1) translate3d(0, 0, 0)
-  //   }
-  //   to {
-  //     transform: scale3d(1.09, 1.09, 1) translate3d(0, 0, 0);
-  //   }
-  // }
-
-  // @keyframes kenburns-12 {
-  //   0% {
-  //     transform: scale3d(1, 1, 1) translate3d(calc(-1*var(--translateFactor)), calc(1*var(--translateFactor)), 0)
-  //   }
-  //   to {
-  //     transform: scale3d(1.07, 1.07, 1) translate3d(0, 0, 0);
-  //   }
-  // }
-
-  // @keyframes kenburns-13 {
-  //   0% {
-  //     transform: scale3d(1, 1, 1) translate3d(0, 0, 0)
-  //   }
-  //   to {
-  //     transform: scale3d(1.09, 1.09, 1) translate3d(0, 0, 0);
-  //   }
-  // }
-
-  // @keyframes kenburns-14 {
-  //   0% {
-  //     transform: scale3d(1, 1, 1) translate3d(0, calc(1*var(--translateFactor)), 0)
-  //   }
-  //   to {
-  //     transform: scale3d(1.06, 1.06, 1) translate3d(0, 0, 0);
-  //   }
-  // }
-  
+  }  
 }
 </style>

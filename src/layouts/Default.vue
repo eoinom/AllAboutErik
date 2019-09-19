@@ -120,101 +120,15 @@
     data () {
       return {
         activeNav: {},
-        activeSubNav: {},
-        // navs: [
-        //   {
-        //     label: 'Home',
-        //     to: '/',
-        //     submenu: false
-        //   },
-        //   {
-        //     label: 'Roots & Youth',
-        //     to: '/roots-and-youth',
-        //     submenu: true,
-        //     img: "submenu-roots&youth.jpg",
-        //     verb: 'watch',
-        //     title: 'Biography Videos'
-        //   },
-        //   {
-        //     label: 'Musical Journey',
-        //     to: '/the-episodes',
-        //     submenu: true,
-        //     img: 'submenu-musical-journey.jpg',
-        //     verb: 'listen & watch',
-        //     subpages: [
-        //       {
-        //         label: 'The Episodes',
-        //         to: '/the-episodes'
-        //       },
-        //       {
-        //         label: 'Musical Friends',
-        //         to: '/musical-friends'
-        //       },
-        //       {
-        //         label: 'Early Productions',
-        //         to: '/early-productions'
-        //       },
-        //       {
-        //         label: 'Discography',
-        //         to: '/discography'
-        //       }
-        //     ]
-        //   },
-        //   {
-        //     label: 'Short Films',
-        //     to: '/short-films',
-        //     submenu: true,
-        //     img: 'submenu-short-films.jpg',
-        //     verb: 'watch',
-        //     title: 'Short Films'
-        //   },
-        //   {
-        //     label: 'Travels',
-        //     to: '/travels',
-        //     submenu: true,
-        //     img: 'submenu-travels.jpg',
-        //     verb: 'watch',
-        //     title: 'Travel Videos'
-        //   },
-        //   {
-        //     label: 'Collections',
-        //     to: '/collections',
-        //     submenu: true,
-        //     img: 'submenu-collections.jpg',
-        //     verb: 'view',
-        //     title: 'Collection Galleries'
-        //   },
-        //   {
-        //     label: 'Publications',
-        //     to: '/publications',
-        //     submenu: true,
-        //     img: 'submenu-publications.jpg',
-        //     verb: 'read',
-        //     title: 'Published Books'
-        //   },
-        //   {
-        //     label: 'Archives',
-        //     to: '/archives',
-        //     submenu: false
-        //   },
-        //   {
-        //     label: 'Contact',
-        //     to: '/contact',
-        //     submenu: false
-        //   },
-        // ]
+        activeSubNav: {}
       }
     },
     
     computed: {
       activeImg() {
-        // return '/assets/static/src/assets/images/' + this.activeNav.img
-        // return '@/assets/images/' + this.activeNav.img
         return this.activeNav.img
       },
       showSubSideNav() {
-        console.log('in showSubSideNav')
-        console.log(this.activeNav.hasOwnProperty('hasSubMenu') && this.activeNav.hasSubMenu === true)
         return this.activeNav.hasOwnProperty('hasSubMenu') && this.activeNav.hasSubMenu === true
       },
       showSubPageLinks() {
@@ -256,8 +170,6 @@
       },
       onNavLinkHover(nav) {
         this.activeNav = Object.assign({}, nav)
-        console.log('in onNavLinkHover, this.activeNav:')
-        console.log(this.activeNav)
       },
       onSubNavLinkHover(nav) {
         this.activeSubNav = Object.assign({}, nav)
