@@ -2,14 +2,23 @@
   <Layout>
 
     <div class="container">
-      <div class="mainContent">
-        <g-image alt="All About Erik logo" v-if="titleImg != null" :src="titleImg" class="titleImg"/>
+      <div class="contentContainer">
+        <div class="content">
 
-        <span v-html="mainText" class="homePgMainText" />
-      </div>
+          <div class="mainContent">
+            <g-image alt="All About Erik logo" v-if="titleImg != null" :src="titleImg" class="titleImg"/>
+            <span v-html="mainText" class="homePgMainText" />
+          </div>
 
-      <div class="creditContainer">
-        <span v-html="creditText" class="homePgCreditText"/>
+          <div class="secondaryContent">
+            <span class="icon">
+              <font-awesome :icon="audioFontAwesomeIcon" @click="clickAudioIcon()"/>
+            </span>
+            <br />
+            <span v-html="creditText" class="homePgCreditText" />
+          </div>
+
+        </div>
       </div>
     </div>
 
@@ -19,7 +28,7 @@
       />
     </div>
 
-    <audio autoplay loop>
+    <audio loop id="bgAudio">
       <source :src="audioFile" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio> 
@@ -66,7 +75,9 @@ export default {
   data() {
     return {
       windowWidth: 0,
-      windowHeight: 0
+      windowHeight: 0,
+      audioPlaying: false,
+      audioMuted: true
     }
   },
 
@@ -88,10 +99,41 @@ export default {
     },
     audioFile() {
       return this.$page.HomePage.edges[0].node.backgroundAudio
+    },
+    audioFontAwesomeIcon() {
+      if (!this.audioPlaying)
+        return ['fas', 'play']
+      else
+        return this.audioMuted ? ['fas', 'volume-mute'] : ['fas', 'volume-up']
     }
   },
 
   methods: {
+    clickAudioIcon() {
+      let audioEl = document.getElementById('bgAudio'); 
+      if (!this.audioPlaying) {
+        let promise = audioEl.play(); 
+        console.log('in clickAudioIcon, promise:');
+        console.log(promise);        
+        // audioEl.muted = true;
+        if (promise !== undefined) {
+          promise.then(_ => {
+            // Autoplay started!
+            this.audioPlaying = true;
+            this.audioMuted = false;
+          }).catch(error => {
+            // Autoplay was prevented.
+            // Show a "Play" button so that user can start playback.
+            this.audioPlaying = false;
+            this.audioMuted = false;
+          });
+        }
+      }
+      else {
+        audioEl.muted = !audioEl.muted;
+        this.audioMuted = !this.audioMuted
+      }
+    }
   },
 
   components: {
@@ -105,6 +147,30 @@ export default {
         this.windowHeight = window.innerHeight
       });
     })
+
+    // let audioEl = document.getElementById('bgAudio'); 
+    // audioEl.muted = true;
+
+    // var promise = document.querySelector('audio').pause();
+    let promise = document.getElementById('bgAudio').play(); 
+
+    console.log('promise:');
+    console.log(promise);
+    
+    // audioEl.muted = true;
+
+    if (promise !== undefined) {
+      promise.then(_ => {
+        // Autoplay started!
+        this.audioPlaying = true;
+        this.audioMuted = false;
+      }).catch(error => {
+        // Autoplay was prevented.
+        // Show a "Play" button so that user can start playback.
+        this.audioPlaying = false;
+        this.audioMuted = false;
+      });
+    }
   }
 }
 </script>
@@ -201,7 +267,7 @@ $scale-base-1: (1 + $scale / 100%);
   overflow: hidden;
 }
 
-.mainContent{
+.contentContainer {
   /* Absolute Centering in CSS: https://codepen.io/shshaw/full/gEiDt */
   position: absolute;
   width: 80%;
@@ -210,6 +276,16 @@ $scale-base-1: (1 + $scale / 100%);
   right: 0;
   top: 14%;
   z-index: 100;
+  height: 86%;
+}
+
+.content{
+  position: relative;
+  height: 100%;
+}
+
+.mainContent{
+  position: relative;
 }
 
 .titleImg {
@@ -232,15 +308,16 @@ $scale-base-1: (1 + $scale / 100%);
   position: relative;
 }
 
-.creditContainer {    
+.secondaryContent{
   position: absolute;
-  width: 93%;
-  height: 55px;
-  margin: auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: right;
+  bottom: 50px;
+  text-align: center;
+  right: -6.5%;
+}
+
+.icon {
+  font-size: 3em; 
+  color: white;
 }
 
 .homePgCreditText {
@@ -252,7 +329,11 @@ $scale-base-1: (1 + $scale / 100%);
 
 /* Centre credit text when aspect ratio <= 1.0 */
 @media (max-aspect-ratio: 1/1) {
-  .creditContainer {
+  .secondaryContent{
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    width: 100%;
     text-align: center;
   }
 }
