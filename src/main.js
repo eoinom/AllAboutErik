@@ -2,6 +2,13 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from '~/layouts/Default.vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { config, library } from '@fortawesome/fontawesome-svg-core'
+import { faVolumeUp, faVolumeMute } from '@fortawesome/free-solid-svg-icons'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+config.autoAddCss = false;
+library.add(faVolumeUp, faVolumeMute)
 
 export default function (Vue, { router, head, isClient, appOptions }) {
   // for getting page leave transitions to work (https://github.com/gridsome/gridsome/issues/24)
@@ -15,4 +22,6 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+
+  Vue.component('font-awesome', FontAwesomeIcon)
 }
