@@ -105,17 +105,18 @@ collections:
         name: "videos"
         widget: "list"
         fields: 
+          - {label: 'Title', name: 'title', widget: 'string', required: false}
+          - {label: 'Subtext', name: 'subText', widget: 'markdown', required: false}
           - {label: "Video File", name: "file", widget: "file", required: false}
           - {label: "Video Url", name: "url", widget: "string", required: false}
           - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
-          - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
-          - {label: 'Title', name: 'title', widget: 'string', required: false}
-          - {label: 'Subtext', name: 'subText', widget: 'markdown', required: false}
+          - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}          
       - label: "Full Video"
         name: "fullVideo"
         widget: "object"
         fields:
-        - {label: "Video File", name: "file", widget: "file", required: false}
-        - {label: "Video Url", name: "url", widget: "string", required: false}
+        - {label: 'Title', name: 'title', widget: 'string', required: false}
         - {label: "Text", name: "text", widget: "string"}
+        - {label: "Video File", name: "file", widget: "file", required: false}
+        - {label: "Video Url", name: "url", widget: "string", required: false}        
         - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
