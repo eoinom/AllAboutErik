@@ -83,3 +83,37 @@ collections:
             name: "panStart"
             widget: "select"
             options: ["top-left", "top", "top-right", "left", "centre", "right", "bottom-left", "bottom", "bottom-right"]
+  - name: "roots&youth"
+    label: "Roots & Youth"
+    folder: "src/data/roots&youth"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: pageTitle
+    fields:
+      - {label: "Page Title", name: "pageTitle", widget: "string"}  
+      - {label: "Heading Image", name: "headingImg", widget: "image"}  
+      - {label: 'Main text', name: 'body', widget: 'markdown', required: false} 
+      - label: "Slides"
+        name: "slides"
+        widget: "list"
+        fields: 
+          - {label: "Image", name: "img", widget: "image"} 
+          - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
+          - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+      - {label: "Slide duration (secs)", name: "slideDuration", widget: "number", valueType: "float", min: 0, max: 60, required: false}
+      - label: "Videos"
+        name: "videos"
+        widget: "list"
+        fields: 
+          - {label: "Video", name: "video", widget: "file"}
+          - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
+          - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
+          - {label: 'Title', name: 'title', widget: 'string', required: false}
+          - {label: 'Subtext', name: 'subText', widget: 'markdown', required: false}
+      - label: "Full Video"
+        name: "fullVideo"
+        widget: "object"
+        fields:
+        - {label: "Video File", name: "file", widget: "file"}
+        - {label: "Text", name: "text", widget: "string"}
+        - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
