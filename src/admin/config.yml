@@ -65,7 +65,10 @@ collections:
       - {label: "Heading Image", name: "headingImg", widget: "image"}  
       - {label: 'Main text', name: 'body', widget: 'markdown'}  
       - {label: 'Credit text', name: 'creditText', widget: 'string', required: false}
-      - {label: 'Background Audio', name: 'backgroundAudio', widget: 'file', required: false}
+      - {label: 'Background Audio', name: 'bgAudio', widget: 'file', required: false}
+      - {label: 'Background Audio Duration', name: 'bgAudioDuration', widget: 'number', valueType: "float", min: 0, required: false}
+      - {label: 'Background Audio Fade In Duration', name: 'bgAudioFadeInDuration', widget: 'number', valueType: "float", min: 0, required: false}
+      - {label: 'Background Audio Fade Out Duration', name: 'bgAudioFadeOutDuration', widget: 'number', valueType: "float", min: 0, required: false}
       - label: "Slides"
         name: "slides"
         widget: "list"

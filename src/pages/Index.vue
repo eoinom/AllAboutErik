@@ -28,7 +28,7 @@
       />
     </div>
 
-    <audio loop id="bgAudio">
+    <audio loop id="bgAudio" duration=123>
       <source :src="audioFile" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio> 
@@ -45,7 +45,10 @@
         headingImg
         content
         creditText
-        backgroundAudio
+        bgAudio
+        bgAudioDuration
+        bgAudioFadeInDuration
+        bgAudioFadeOutDuration
         slides {
           orderNo
           img
@@ -98,23 +101,42 @@ export default {
       return this.$page.HomePage.edges[0].node.creditText
     },
     audioFile() {
-      return this.$page.HomePage.edges[0].node.backgroundAudio
+      return this.$page.HomePage.edges[0].node.bgAudio
+    },
+    audioDuration() {
+      return this.$page.HomePage.edges[0].node.bgAudioDuration
+    },
+    audioFadeInDuration() {
+      return this.$page.HomePage.edges[0].node.bgAudioFadeInDuration
+    },
+    audioFadeOutDuration() {
+      return this.$page.HomePage.edges[0].node.bgAudioFadeOutDuration
     },
     audioFontAwesomeIcon() {
       if (!this.audioPlaying)
-        return ['fas', 'play']
+        return ['fas', 'fa-play']
       else
         return this.audioMuted ? ['fas', 'volume-mute'] : ['fas', 'volume-up']
-    }
+    },
+    // audioMuted: {
+    //   get: function () {
+    //     return document.getElementById('bgAudio').muted;
+    //   },
+    //   set: function (muteVal) {
+    //     console.log('muteVal = ' + muteVal);
+    //     let audioEl = document.getElementById('bgAudio');
+    //     console.log('in audioMuted setter, audioEl:');
+    //     document.getElementById('bgAudio').muted = muteVal
+    //   }
+    // }
   },
 
   methods: {
     clickAudioIcon() {
-      let audioEl = document.getElementById('bgAudio'); 
+      let audioEl = document.getElementById('bgAudio');
+  
       if (!this.audioPlaying) {
         let promise = audioEl.play(); 
-        console.log('in clickAudioIcon, promise:');
-        console.log(promise);        
         // audioEl.muted = true;
         if (promise !== undefined) {
           promise.then(_ => {
@@ -130,9 +152,41 @@ export default {
         }
       }
       else {
-        audioEl.muted = !audioEl.muted;
+        audioEl.muted = !audioEl.muted;        
         this.audioMuted = !this.audioMuted
       }
+    },
+    getSoundAndFadeAudio() {    
+      var sound = document.getElementById('bgAudio');
+      sound.volume = 0.0            
+
+      // Fade In
+      var fadeInEndPoint = this.bgAudioFadeInDuration;   //seconds
+      var fadeAudioIn = setInterval(function () {
+        console.log('sound currentTime (fadeIn): ' + sound.currentTime);
+        if ((sound.currentTime < fadeInEndPoint) && (sound.volume != 1.0)) {
+          sound.volume = (sound.currentTime / fadeInEndPoint) * 1.0;
+        }
+        if ((sound.currentTime >= fadeInEndPoint) || (sound.volume >= 1.0)) {
+          console.log('clearing fadeInt interval');
+          clearInterval(fadeAudioIn);
+          sound.volume = 1.0
+        }
+      }, 400);
+
+      // Fade Out
+      // var fadeOutPoint = sound.duration - 5; 
+      var fadeOutPoint = this.audioDuration - this.bgAudioFadeOutDuration; 
+      var fadeAudioOut = setInterval(function () {
+        console.log('sound currentTime (fadeOut): ' + sound.currentTime);
+        if ((sound.currentTime >= fadeOutPoint) && (sound.volume != 0.0)) {
+          sound.volume -= 0.1;
+        }
+        if (sound.volume === 0.0) {
+          console.log('clearing fadeOut interval');
+          clearInterval(fadeAudioOut);
+        }
+      }, 400);
     }
   },
 
@@ -151,25 +205,28 @@ export default {
     // let audioEl = document.getElementById('bgAudio'); 
     // audioEl.muted = true;
 
-    // var promise = document.querySelector('audio').pause();
     let promise = document.getElementById('bgAudio').play(); 
-
-    console.log('promise:');
-    console.log(promise);
     
     // audioEl.muted = true;
 
     if (promise !== undefined) {
       promise.then(_ => {
         // Autoplay started!
+        this.getSoundAndFadeAudio();
         this.audioPlaying = true;
         this.audioMuted = false;
       }).catch(error => {
         // Autoplay was prevented.
         // Show a "Play" button so that user can start playback.
+        console.error(error);
         this.audioPlaying = false;
         this.audioMuted = false;
+        console.log('Promise rejected in mounted');        
       });
+    }
+    else {
+      this.audioPlaying = true;
+      this.audioMuted = false;
     }
   }
 }
