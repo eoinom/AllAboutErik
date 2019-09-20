@@ -105,7 +105,8 @@ collections:
         name: "videos"
         widget: "list"
         fields: 
-          - {label: "Video", name: "video", widget: "file"}
+          - {label: "Video File", name: "file", widget: "file", required: false}
+          - {label: "Video Url", name: "url", widget: "string", required: false}
           - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
           - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
           - {label: 'Title', name: 'title', widget: 'string', required: false}
@@ -114,6 +115,7 @@ collections:
         name: "fullVideo"
         widget: "object"
         fields:
-        - {label: "Video File", name: "file", widget: "file"}
+        - {label: "Video File", name: "file", widget: "file", required: false}
+        - {label: "Video Url", name: "url", widget: "string", required: false}
         - {label: "Text", name: "text", widget: "string"}
         - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
