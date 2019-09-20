@@ -57,7 +57,7 @@ videos:
     orderNo: 1
     subText: My relatives are all from Norway
     title: Old Country
-    url: 'https://player.vimeo.com/video/320561990'
+    url: 'https://player.vimeo.com/video/276960165'
   - duration: 195
     orderNo: 2
     subText: I was just a young boy during WWII
