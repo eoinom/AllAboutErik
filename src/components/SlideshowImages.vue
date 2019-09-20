@@ -75,7 +75,6 @@ export default {
 
   methods: {
     goToIndex(index) {
-      console.log('in goToIndex, index is: ' + index)
       this.activeIndex = index
       this.time = this.interval(index)      
     },
@@ -120,13 +119,11 @@ export default {
     },
 
     interval(index) {
-      console.log('interval: ' + 1000*this.slides[index].duration)
       // return 1000*this.slides[index].duration
       return 5000;
     },
 
-    next() {
-      console.log('in next()');      
+    next() {  
       let nextIndex = this.activeIndex + 1;
       // Go to the first image if the active image ist the last one
       if (!this.images[nextIndex]) {
