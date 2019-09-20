@@ -324,11 +324,12 @@ $scale-base-1: (1 + $scale / 100%);
 }
 
 .container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  overflow: hidden;
+  // removed below after BootstrapVue installed
+  // position: absolute;
+  // width: 100%;
+  // height: 100%;
+  // z-index: 100;
+  // overflow: hidden;
 }
 
 .contentContainer {

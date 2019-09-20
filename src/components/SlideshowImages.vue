@@ -193,14 +193,11 @@ export default {
 </script>
 
 
-<style lang="scss">
-
-body {
-  background-color: black;
-}
+<style lang="scss" scoped>
 
 .SlideshowImages {
-  --translateFactor: 1.5%;  
+  --translateFactor: 1.5%;    
+  background-color: black;
 
   &__slides {
     position: relative;

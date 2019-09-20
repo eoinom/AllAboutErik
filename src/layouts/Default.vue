@@ -143,7 +143,9 @@
         let subNav = document.getElementById("sideNav-sub")
         
         mainNav.style.transition = "0.5s"   
-        mainNav.style.width = "190px"
+        // changed width below after BootstrapVue installed
+        // mainNav.style.width = "190px"
+        mainNav.style.width = "226px"
         mainNav.style.paddingLeft = "18px"
         mainNav.style.paddingRight = "18px"
 
@@ -249,7 +251,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 3px;  
-  text-decoration: none;
+  
   /* transition: 0.3s; */
 }
 
@@ -341,7 +343,6 @@ body {
   overflow-wrap: break-word;
   pointer-events: auto;
   text-align: left;
-  text-decoration: none;
   text-rendering: auto;
   text-transform: uppercase;
   transition-delay: 0s;
@@ -368,7 +369,6 @@ body {
   pointer-events: auto;
   text-align: left;
   text-rendering: auto;
-  text-decoration: none;
   text-transform: uppercase;
   transition-delay: 0s;
   transition-duration: 0.5s;
