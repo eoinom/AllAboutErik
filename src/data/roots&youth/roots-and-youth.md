@@ -76,6 +76,7 @@ videos:
 fullVideo:
   duration: 1689
   text: Watch all of the episodes together in the complete Roots & Youth film
+  title: Roots & Youth - The Complete Film
   url: 'https://player.vimeo.com/video/315526817'
 ---
 These documentary episodes track my life from my ancestry in Norway, through my boyhood, and continue to the end of my teenage years.
