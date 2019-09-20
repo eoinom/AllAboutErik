@@ -157,36 +157,43 @@ export default {
       }
     },
     getSoundAndFadeAudio() {    
-      var sound = document.getElementById('bgAudio');
+      let sound = document.getElementById('bgAudio');
       sound.volume = 0.0            
 
       // Fade In
-      var fadeInEndPoint = this.bgAudioFadeInDuration;   //seconds
-      var fadeAudioIn = setInterval(function () {
-        console.log('sound currentTime (fadeIn): ' + sound.currentTime);
+      let fadeInEndPoint = this.audioFadeInDuration;   //seconds
+      let fadeAudioIn = setInterval(function () {
         if ((sound.currentTime < fadeInEndPoint) && (sound.volume != 1.0)) {
-          sound.volume = (sound.currentTime / fadeInEndPoint) * 1.0;
+          sound.volume = Math.min((sound.currentTime / fadeInEndPoint) * 1.0, 1.0);
         }
         if ((sound.currentTime >= fadeInEndPoint) || (sound.volume >= 1.0)) {
-          console.log('clearing fadeInt interval');
           clearInterval(fadeAudioIn);
           sound.volume = 1.0
         }
-      }, 400);
+      }, 200);
 
-      // Fade Out
+      // Fade Out      
+      let audioDuration = this.audioDuration; 
+      let fadeOutDuration = this.audioFadeOutDuration; 
       // var fadeOutPoint = sound.duration - 5; 
-      var fadeOutPoint = this.audioDuration - this.bgAudioFadeOutDuration; 
-      var fadeAudioOut = setInterval(function () {
-        console.log('sound currentTime (fadeOut): ' + sound.currentTime);
-        if ((sound.currentTime >= fadeOutPoint) && (sound.volume != 0.0)) {
-          sound.volume -= 0.1;
+      let fadeOutPoint = audioDuration - fadeOutDuration; 
+      // let finished = false;
+      if (fadeOutPoint <= fadeInEndPoint) {
+        fadeOutPoint = fadeInEndPoint
+      }
+      let fadeAudioOut = setInterval(function () {
+        if ((sound.currentTime >= fadeOutPoint) && (sound.volume != 0.0)) {          
+          sound.volume = Math.max(0.0, 1.0 * ((audioDuration - sound.currentTime) / fadeOutDuration));
         }
         if (sound.volume === 0.0) {
-          console.log('clearing fadeOut interval');
           clearInterval(fadeAudioOut);
+          finished = true;
         }
-      }, 400);
+      }, 200);
+      // if (finished) {
+      //   this.getSoundAndFadeAudio()
+      //   finished = false
+      // }
     }
   },
 
