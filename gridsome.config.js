@@ -44,13 +44,6 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/data/roots&youth/**/*.md',
-        typeName: 'RootsVideo'
-      }
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
         path: 'src/data/navMenu/**/*.md',
         typeName: 'NavMenuItem'
       }
@@ -60,6 +53,13 @@ module.exports = {
       options: {
         path: 'src/data/homePg/**/*.md',
         typeName: 'HomePage'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/roots&youth/**/*.md',
+        typeName: 'RootsAndYouth'
       }
     }
   ]
