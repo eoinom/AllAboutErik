@@ -3,12 +3,9 @@
 
     <div class="container">
       <div class="soundIconContainer">
-        <span class="icon">
-          <font-awesome :icon="audioFontAwesomeIcon" @click="clickAudioIcon()"/>
+        <span class="icon" v-b-tooltip.hover="{ variant: 'light' }" :title="tooltipText">
+          <font-awesome :icon="audioFontAwesomeIcon" @click="clickAudioIcon()" />
         </span>
-        <div class="tooltip">
-          <span class="tooltiptext">{{ tooltipText }}</span>
-        </div>
       </div>
 
       <div class="contentContainer">
@@ -409,40 +406,7 @@ $scale-base-1: (1 + $scale / 100%);
   bottom: 0;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  // top: 10px;
-  // border-bottom: 1px dotted black;
-  // z-index: 1001;
-}
 
-.tooltiptext {
-  // visibility: hidden;
-  visibility: visible;
-  // width: 180px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  // border-radius: 6px;
-  padding: 55px 50px;
-  position: absolute;
-  z-index: 1001;
-  top: 100%;
-  left: 50%;
-  margin-left: -60px;
-
-  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-  // opacity: 1;
-  // opacity: 0;
-  // transition: opacity 1s;
-}
-
-.soundIconContainer:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-  z-index: 1001;
-}
 
 /* Centre credit text when aspect ratio <= 1.0 */
 @media (max-aspect-ratio: 1/1) {
