@@ -114,7 +114,7 @@ export default {
     },
     audioFontAwesomeIcon() {
       if (!this.audioPlaying)
-        return ['fas', 'fa-play']
+        return ['fas', 'play']
       else
         return this.audioMuted ? ['fas', 'volume-mute'] : ['fas', 'volume-up']
     },
