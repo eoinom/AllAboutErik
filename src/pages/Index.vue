@@ -2,6 +2,15 @@
   <Layout>
 
     <div class="container">
+      <div class="soundIconContainer">
+        <span class="icon">
+          <font-awesome :icon="audioFontAwesomeIcon" @click="clickAudioIcon()"/>
+        </span>
+        <div class="tooltip">
+          <span class="tooltiptext">{{ tooltipText }}</span>
+        </div>
+      </div>
+
       <div class="contentContainer">
         <div class="content">
 
@@ -11,9 +20,9 @@
           </div>
 
           <div class="secondaryContent">
-            <span class="icon">
+            <!-- <span class="icon">
               <font-awesome :icon="audioFontAwesomeIcon" @click="clickAudioIcon()"/>
-            </span>
+            </span> -->
             <br />
             <span v-html="creditText" class="homePgCreditText" />
           </div>
@@ -31,7 +40,7 @@
     <audio loop id="bgAudio" duration=123>
       <source :src="audioFile" type="audio/mpeg">
       Your browser does not support the audio element.
-    </audio> 
+    </audio>
 
   </Layout>
 </template>
@@ -88,7 +97,7 @@ export default {
     slides() {
       return this.$page.HomePage.edges[0].node.slides
     },
-    images() {      
+    images() {
       return this.slides.map(a => a.img)
     },
     titleImg() {
@@ -118,25 +127,23 @@ export default {
       else
         return this.audioMuted ? ['fas', 'volume-mute'] : ['fas', 'volume-up']
     },
-    // audioMuted: {
-    //   get: function () {
-    //     return document.getElementById('bgAudio').muted;
-    //   },
-    //   set: function (muteVal) {
-    //     console.log('muteVal = ' + muteVal);
-    //     let audioEl = document.getElementById('bgAudio');
-    //     console.log('in audioMuted setter, audioEl:');
-    //     document.getElementById('bgAudio').muted = muteVal
-    //   }
-    // }
+    tooltipText() {
+      if (this.audioPlaying && !this.audioMuted) {
+        return 'Mute background music'
+      }
+      else if (this.audioPlaying && this.audioMuted) {
+        return 'Unmute background music'
+      }
+      return 'Play background music'
+    }
   },
 
   methods: {
     clickAudioIcon() {
       let audioEl = document.getElementById('bgAudio');
-  
+
       if (!this.audioPlaying) {
-        let promise = audioEl.play(); 
+        let promise = audioEl.play();
         // audioEl.muted = true;
         if (promise !== undefined) {
           promise.then(_ => {
@@ -152,13 +159,13 @@ export default {
         }
       }
       else {
-        audioEl.muted = !audioEl.muted;        
+        audioEl.muted = !audioEl.muted;
         this.audioMuted = !this.audioMuted
       }
     },
-    getSoundAndFadeAudio() {    
+    getSoundAndFadeAudio() {
       let sound = document.getElementById('bgAudio');
-      sound.volume = 0.0            
+      sound.volume = 0.0
 
       // Fade In
       let fadeInEndPoint = this.audioFadeInDuration;   //seconds
@@ -172,17 +179,17 @@ export default {
         }
       }, 200);
 
-      // Fade Out      
-      let audioDuration = this.audioDuration; 
-      let fadeOutDuration = this.audioFadeOutDuration; 
-      // var fadeOutPoint = sound.duration - 5; 
-      let fadeOutPoint = audioDuration - fadeOutDuration; 
+      // Fade Out
+      let audioDuration = this.audioDuration;
+      let fadeOutDuration = this.audioFadeOutDuration;
+      // var fadeOutPoint = sound.duration - 5;
+      let fadeOutPoint = audioDuration - fadeOutDuration;
       // let finished = false;
       if (fadeOutPoint <= fadeInEndPoint) {
         fadeOutPoint = fadeInEndPoint
       }
       let fadeAudioOut = setInterval(function () {
-        if ((sound.currentTime >= fadeOutPoint) && (sound.volume != 0.0)) {          
+        if ((sound.currentTime >= fadeOutPoint) && (sound.volume != 0.0)) {
           sound.volume = Math.max(0.0, 1.0 * ((audioDuration - sound.currentTime) / fadeOutDuration));
         }
         if (sound.volume === 0.0) {
@@ -209,11 +216,11 @@ export default {
       });
     })
 
-    // let audioEl = document.getElementById('bgAudio'); 
+    // let audioEl = document.getElementById('bgAudio');
     // audioEl.muted = true;
 
-    let promise = document.getElementById('bgAudio').play(); 
-    
+    let promise = document.getElementById('bgAudio').play();
+
     // audioEl.muted = true;
 
     if (promise !== undefined) {
@@ -228,7 +235,7 @@ export default {
         console.error(error);
         this.audioPlaying = false;
         this.audioMuted = false;
-        console.log('Promise rejected in mounted');        
+        console.log('Promise rejected in mounted');
       });
     }
     else {
@@ -373,6 +380,16 @@ $scale-base-1: (1 + $scale / 100%);
   position: relative;
 }
 
+.soundIconContainer{
+  position: absolute;
+  top: 35px;
+  // text-align: center;
+  // right: 57px;
+  right: 7.3%;
+  // width: 35px;
+  z-index: 1000;
+}
+
 .secondaryContent{
   position: absolute;
   bottom: 50px;
@@ -381,7 +398,7 @@ $scale-base-1: (1 + $scale / 100%);
 }
 
 .icon {
-  font-size: 3em; 
+  font-size: 3.5em;
   color: white;
 }
 
@@ -392,6 +409,41 @@ $scale-base-1: (1 + $scale / 100%);
   bottom: 0;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  // top: 10px;
+  // border-bottom: 1px dotted black;
+  // z-index: 1001;
+}
+
+.tooltiptext {
+  // visibility: hidden;
+  visibility: visible;
+  // width: 180px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  // border-radius: 6px;
+  padding: 55px 50px;
+  position: absolute;
+  z-index: 1001;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  // opacity: 1;
+  // opacity: 0;
+  // transition: opacity 1s;
+}
+
+.soundIconContainer:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1001;
+}
+
 /* Centre credit text when aspect ratio <= 1.0 */
 @media (max-aspect-ratio: 1/1) {
   .secondaryContent{
@@ -400,6 +452,32 @@ $scale-base-1: (1 + $scale / 100%);
     right: 0;
     width: 100%;
     text-align: center;
+  }
+}
+
+@media (min-width : 768px) and (max-width : 1024px) {
+  .soundIconContainer{
+    position: absolute;
+    top: 25px;
+    right: 7.3%;
+    z-index: 1000;
+  }
+
+  .icon {
+    font-size: 3.0em;
+  }
+}
+
+@media (max-width : 767px) {
+  .soundIconContainer{
+    position: absolute;
+    top: 18px;
+    right: 7.3%;
+    z-index: 1000;
+  }
+
+  .icon {
+    font-size: 2.5em;
   }
 }
 
