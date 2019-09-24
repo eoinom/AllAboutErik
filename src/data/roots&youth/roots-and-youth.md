@@ -56,26 +56,36 @@ videos:
   - duration: 188
     orderNo: 1
     subText: My relatives are all from Norway
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1569364541/RootsAndYouth/oldcountry_jcz2o1.jpg
     title: Old Country
     url: 'https://player.vimeo.com/video/276960165'
   - duration: 195
     orderNo: 2
     subText: I was just a young boy during WWII
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1569364541/RootsAndYouth/baby_wcxag2.jpg
     title: War Baby
     url: 'https://player.vimeo.com/video/311574147'
   - duration: 638
     orderNo: 3
     subText: A typical mid-western boyhood
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1569364541/RootsAndYouth/boyhood_fejj05.jpg
     title: Boyhood
     url: 'https://player.vimeo.com/video/311575188'
   - duration: 632
+    file: ''
     orderNo: 4
     subText: 'Erik, the teenager'
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1569364541/RootsAndYouth/teenyears_um5duc.jpg
     title: Teen Years
     url: 'https://player.vimeo.com/video/314894561'
 fullVideo:
   duration: 1689
   text: Watch all of the episodes together in the complete Roots & Youth film
+  thumbnailImg: ''
   title: Roots & Youth - The Complete Film
   url: 'https://player.vimeo.com/video/315526817'
 ---
