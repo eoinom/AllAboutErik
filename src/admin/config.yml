@@ -13,26 +13,6 @@ media_library:
     api_key: 884234271445431
 
 collections:
-  - name: "posts"
-    label: "Post"
-    folder: "src/data/posts"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "date"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "roots&youth videos"
-    label: "Roots & Youth Video"
-    folder: "src/data/roots&youth"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Url", name: "url", widget: "string"}      
-      - {label: "Length", name: "length", widget: "datetime", dateFormat: false, timeFormat: "hh:mm:ss"}
-      - {label: "Caption", name: "caption", widget: "markdown"}
   - name: "nav menu items"
     label: "Nav Menu Item"
     folder: "src/data/navMenu"
@@ -109,6 +89,7 @@ collections:
           - {label: 'Subtext', name: 'subText', widget: 'markdown', required: false}
           - {label: "Video File", name: "file", widget: "file", required: false}
           - {label: "Video Url", name: "url", widget: "string", required: false}
+          - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}  
           - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
           - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}          
       - label: "Full Video"
@@ -118,5 +99,6 @@ collections:
         - {label: 'Title', name: 'title', widget: 'string', required: false}
         - {label: "Text", name: "text", widget: "string"}
         - {label: "Video File", name: "file", widget: "file", required: false}
-        - {label: "Video Url", name: "url", widget: "string", required: false}        
+        - {label: "Video Url", name: "url", widget: "string", required: false}
+        - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image", required: false}        
         - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
