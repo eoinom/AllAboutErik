@@ -29,7 +29,7 @@
     </div>
 
     <div class="slideshow">
-      <slideshow-images
+      <slideshow-kenburns
         :slides="slides"
       />
     </div>
@@ -72,7 +72,7 @@
 
 
 <script>
-import SlideshowImages from '../components/SlideshowImages.vue'
+import SlideshowKenBurns from '../components/SlideshowKenBurns.vue'
 
 export default {
   metaInfo() {    // https://github.com/gridsome/gridsome/issues/306 (How do you use the queried GraphQL data in the <script>?)
@@ -91,15 +91,15 @@ export default {
   },
 
   computed: {
+    titleImg() {
+      return this.$page.HomePage.edges[0].node.headingImg
+    },
     slides() {
       return this.$page.HomePage.edges[0].node.slides
     },
     images() {
       return this.slides.map(a => a.img)
-    },
-    titleImg() {
-      return this.$page.HomePage.edges[0].node.headingImg
-    },
+    },    
     mainText(){
       return this.$page.HomePage.edges[0].node.content
     },
@@ -202,7 +202,7 @@ export default {
   },
 
   components: {
-    'slideshow-images':     require('../components/SlideshowImages.vue').default,
+    'slideshow-kenburns':     require('../components/SlideshowKenBurns.vue').default,
   },
 
   mounted() {
