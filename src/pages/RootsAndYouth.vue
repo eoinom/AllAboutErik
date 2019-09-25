@@ -1,24 +1,30 @@
 <template>
   <Layout> 
-
     <b-container fluid class="main-col">
-      
+
       <b-row no-gutters style="max-height:1224px; width:auto;" class="mb-1 px-1">
-        <b-col style="background-color:orange; max-height:1224px; width:auto;">
+        <b-col class="slideshowCol">
           
-          <div class="slideshow">
-            <slideshow-images :slides="slides" />
-          </div>
+          <slideshow-images :slides="slides" />
           
           <b-container fluid class="slideshowOverlay">
             <b-row>
               <b-col class="mainContent">
-                <g-image alt="All About Erik logo" v-if="titleImg != null" :src="titleImg" class="titleImg"/>
-                <span v-html="mainText" class="mainText" />
-                <br />
-                <g-image alt="Scroll text" v-if="titleImg != null" src="~/assets/images/scroll.png" class=""/>
-                <br />
-                <g-image alt="All About Erik logo" v-if="titleImg != null" src="~/assets/images/arrow-full-down.png" class=""/>
+                
+                <g-image alt="All About Erik logo" v-if="titleImg != null" :src="titleImg" id="titleImg" class="mb-md-1 mb-lg-2 mb-xl-3"/>
+                
+                <span v-html="mainText" id="mainText" />    
+
+                <!-- Scroll with arrow images - hidden on xs (e.g. portrait mobile devices) -->
+                <div class="d-none d-sm-inline">
+                  <p class="mb-0 mt-md-1 mt-lg-2 mt-xl-5">
+                    <g-image alt="Scroll text" v-if="titleImg != null" src="~/assets/images/scroll.png" id="scrollImg" />
+                  </p>
+                  <p class="my-0 my-lg-1 my-xl-2">
+                    <g-image alt="Scroll arrow" v-if="titleImg != null" src="~/assets/images/arrow-full-down.png" id="scrollArrowImg" />
+                  </p>
+                </div>
+
               </b-col>
             </b-row>
           </b-container>
@@ -148,7 +154,7 @@ export default {
 
 
 
-<style scoped>
+<style lang="scss" scoped>
 @font-face {
   font-family: NeueHaasGroteskText Pro6;
   src: url('../assets/fonts/nhaasgrotesktxpro-65md.eot'); /* IE9 Compat Modes */
@@ -171,6 +177,13 @@ export default {
   
 }
 
+.slideshowCol {
+  position: relative;
+  max-height:1224px; 
+  width:auto;
+  text-align: center;
+}
+
 .slideshowOverlay {
   z-index: 100;
   height: 100%;
@@ -179,76 +192,95 @@ export default {
 }
 
 .slideshowOverlay .mainContent{
-  /* position: relative; */
-  /* position: absolute; */
-  /* top: -423px; */
-  /* top: 60%; */
-  z-index: 500;
-  /* height: 0; */
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  /* margin: 0 18%; */
-  text-align: center;
-  padding-top: 32%;
+  padding-bottom: 2%;
   padding-left: 19%;
   padding-right: 19%;
+  text-align: center;
+  z-index: 500;
 }
 
-.titleImg {
-  /* display: inline-block; */
+#titleImg {
   width: 100%;
   max-width: 1492px;
   height: auto;
-  /* position: relative; */
   margin: auto;
-
-  /* position: absolute;
-  top: 223px;
-  z-index: 500; */
 }
 
-.mainText {
+#mainText {
   color: #FFFFFF;
-  /* font-size: 30px; */
   font-size: 1.85rem;
   font-family: 'NeueHaasGroteskText Pro6';
   font-feature-settings: 'liga';
   font-weight: 500;
-  /* text-align: center; */
   text-shadow: 2px 2px 5px rgba(0,0,0,0.65);
   line-height: 43px;
   letter-spacing: 2px;    
 }
 
+#scrollImg {
+  width: 11.5%;
+  max-width: 157px;
+  min-width: 78.5px;
+}
+
+#scrollArrowImg {
+  width: 2.8%;
+  max-width: 38px;
+  min-width: 19px;
+}
+
 .thumbnailImg {
-  /* width: 1092px; */
   width: 100%;
   height: auto;
 }
 
 
-@media (min-width : 768px) and (max-width : 1024px) {
-  .slideshowOverlay .mainContent{
-    padding-top: 25%;
+// Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .slideshowOverlay .mainContent {
+    padding-bottom: 0.5%;
     padding-left: 15%;
     padding-right: 15%;
   }
-
-  .mainText {
-    font-size: 1.25rem;
-    line-height: 30px;
+  #mainText {
+    font-size: 0.9rem;
+    line-height: 14px;
+    margin-bottom: 0px;
+  }
+  #mainText > p {
+    margin-bottom: 0px !important;
   }
 }
 
-@media (max-width : 767px) {
-  .slideshowOverlay .mainContent{
-    padding-top: 20%;
-    padding-left: 10%;
-    padding-right: 10%;
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #mainText {
+    font-size: 0.9rem;
+    line-height: 14px;
   }
+  #mainText p {
+    margin-bottom: 0px !important;
+  }
+}
 
-  .mainText {
-    font-size: 1.0rem;
-    line-height: 20px;
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #mainText {
+    font-size: 1.2rem;
+    line-height: 24px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+  #mainText {
+    font-size: 1.5rem;
+    line-height: 33px;
   }
 }
 
