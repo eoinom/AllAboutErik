@@ -30,4 +30,10 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.use(BootstrapVue)
 
   Vue.component('font-awesome', FontAwesomeIcon)
+
+  // Add a meta tag
+  head.meta.push({
+    name: 'viewport',
+    content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
+  })
 }
