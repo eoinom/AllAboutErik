@@ -398,40 +398,6 @@ body {
 }
 
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-/* @media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-}
-
-@media (min-width : 768px) and (max-width : 1024px) {
-  .openbtn {
-    top: 46px;
-    left: 46px;
-  }
-
-  .openbtn img {
-    max-width: 60px;
-  }
-}
-
-@media (max-width : 767px) {
-  .openbtn {
-    top: 35px;
-    left: 35px;
-  }
-
-  .openbtn img {
-    max-width: 50px;
-  }
-} */
-
-
-
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
