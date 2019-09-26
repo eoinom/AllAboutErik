@@ -51,6 +51,13 @@
             <div class="thumbnailImgTextOverlay">
               <span class="videoTitle">{{ video.title }} </span>
               <p class="videoSubText">{{ video.subText }} </p>
+
+              <p class="mb-0 mb-lg-1 mb-xl-2">
+                <g-image alt="Play symbol" v-if="video.url != null" src="~/assets/images/playarrowcircle.png" class="thumbnailPlayVideoImg" />
+              </p>
+              <p v-if="video.duration != null" class="videoDurationText">
+                {{ durationInMinsText(video.duration) }} 
+              </p>
             </div>
 
           </div>
@@ -152,6 +159,13 @@ export default {
   },
 
   methods: {
+    durationInMinsText(secs) {
+      let mins = Math.floor(secs / 60)
+      secs = secs - (mins * 60)
+      if (secs < 10)
+        secs = '0' + secs
+      return mins + ':' + secs + ' min'
+    }
   },
 
   mounted() {
@@ -166,6 +180,7 @@ export default {
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Lora:700i&display=swap');
 
 @font-face {
   font-family: NeueHaasGroteskText Pro55;
@@ -288,7 +303,7 @@ export default {
   width: 100%;
 }
 
-.thumbnailImgTextOverlay .videoTitle {
+.videoTitle {
   font-family: 'NeueHaasGroteskText Pro55';
   font-feature-settings: 'liga';
   font-weight: 500;
@@ -297,13 +312,50 @@ export default {
   letter-spacing: 16px;
 }
 
-.thumbnailImgTextOverlay .videoSubText {
+.videoSubText {
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
   font-weight: 500;
   font-size: 1.4375rem;
   letter-spacing: 1px;
 }
+
+.thumbnailPlayVideoImg {
+  display: none;
+  width: 18%;
+  height: auto;  
+  position: relative;
+  padding-top: 12%;
+}
+
+.videoDurationText {
+  display: none;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.videoThumbnailContainer:hover .videoTitle, .videoThumbnailContainer:hover .videoSubText {
+  display: none;
+}
+.videoThumbnailContainer:hover .thumbnailPlayVideoImg, .videoThumbnailContainer:hover .videoDurationText {
+  display: inline;
+}
+.videoThumbnailContainer:hover .thumbnailImg {
+  opacity: 1;
+}
+
+/* FOR CHECKING THE HOVERED STATE */
+/* .videoTitle, .videoSubText {
+  display: none;
+}
+
+.thumbnailPlayVideoImg, .videoDurationText {
+  display: inline;
+} 
+.thumbnailImg {
+  opacity: 1;
+}*/
 
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
@@ -313,7 +365,6 @@ export default {
   .layout, .main-col {
     padding: 0 0;   
   }
-
   .slideshowOverlay .mainContent {
     /* padding-bottom: 0.5%; */
     padding-left: 15%;
@@ -327,13 +378,16 @@ export default {
   #mainText > p {
     margin-bottom: 0px !important;
   }
-  .thumbnailImgTextOverlay .videoTitle {
+  .videoTitle {
     font-size: 1.6622rem;
     letter-spacing: 8.4324px;
   }
-  .thumbnailImgTextOverlay .videoSubText {
+  .videoSubText {
     font-size: 0.756rem;
     letter-spacing: 0.5259px;
+  }
+  .videoDurationText {
+    font-size: 0.8414rem;
   }
 }
 
@@ -346,13 +400,16 @@ export default {
   #mainText p {
     margin-bottom: 0px !important;
   }
-  .thumbnailImgTextOverlay .videoTitle {
+  .videoTitle {
     font-size: 1.6622rem;
     letter-spacing: 8.4324px;
   }
-  .thumbnailImgTextOverlay .videoSubText {
+  .videoSubText {
     font-size: 0.756rem;
     letter-spacing: 0.5259px;
+  }
+  .videoDurationText {
+    font-size: 0.8414rem;
   }
 }
 
@@ -362,14 +419,17 @@ export default {
     font-size: 1.2rem;
     line-height: 24px;
   }
-  .thumbnailImgTextOverlay .videoTitle {
+  .videoTitle {
     font-size: 2.0778rem;
     letter-spacing: 13px;
   }
-  .thumbnailImgTextOverlay .videoSubText {
+  .videoSubText {
     font-size: 1.1655rem;
     letter-spacing: 0.8108px;
-  }  
+  }
+  .videoDurationText {
+    font-size: 1.2972rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -378,13 +438,16 @@ export default {
     font-size: 1.5rem;
     line-height: 33px;
   }
-  .thumbnailImgTextOverlay .videoTitle {
+  .videoTitle {
     font-size: 2.0778rem;
     letter-spacing: 13px;
   }
-  .thumbnailImgTextOverlay .videoSubText {
+  .videoSubText {
     font-size: 1.1655rem;
     letter-spacing: 0.8108px;
+  }
+  .videoDurationText {
+    font-size: 1.2972rem;
   }
 }
 
