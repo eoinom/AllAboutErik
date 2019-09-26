@@ -165,7 +165,7 @@ export default {
 
 
 
-<style lang="scss" scoped>
+<style scoped>
 
 @font-face {
   font-family: NeueHaasGroteskText Pro55;
@@ -254,15 +254,15 @@ export default {
 
 
 .videoThumbnailContainer {
-  // position: relative;
-  // box-shadow: inset 0px 0px 150px rgba(0,0,0,0.5);
-  // z-index: 1;
+  /* position: relative;
+  box-shadow: inset 0px 0px 150px rgba(0,0,0,0.5);
+  z-index: 1; */
 }
 
-// .thumbnailImgContainer::before {
-//   content: "";
-//   box-shadow: inset 0px 0px 150px rgba(0,0,0,0.5), inset 0px 0px 150px rgba(0,0,0,0.5);
-// }
+/* .thumbnailImgContainer::before {
+  content: "";
+  box-shadow: inset 0px 0px 150px rgba(0,0,0,0.5), inset 0px 0px 150px rgba(0,0,0,0.5);
+} */
 
 .thumbnailImgContainer {
   background: black;
@@ -306,16 +306,16 @@ export default {
 }
 
 
-// Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/
+/* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
-// Extra small devices (portrait phones, less than 576px)
+/* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .layout, .main-col {
     padding: 0 0;   
   }
 
   .slideshowOverlay .mainContent {
-    // padding-bottom: 0.5%;
+    /* padding-bottom: 0.5%; */
     padding-left: 15%;
     padding-right: 15%;
   }
@@ -327,15 +327,6 @@ export default {
   #mainText > p {
     margin-bottom: 0px !important;
   }
-  // .thumbnailImgTextOverlay .videoTitle {
-  //   font-size: 1.24665rem;
-  //   letter-spacing: 1.24665px;
-  // }
-  // .thumbnailImgTextOverlay .videoSubText {
-  //   font-size: 0.567rem;
-  //   letter-spacing: 0.3944px;
-  // }
-
   .thumbnailImgTextOverlay .videoTitle {
     font-size: 1.6622rem;
     letter-spacing: 8.4324px;
@@ -346,7 +337,7 @@ export default {
   }
 }
 
-// Small devices (landscape phones, 576px and up)
+/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   #mainText {
     font-size: 0.9rem;
@@ -365,7 +356,7 @@ export default {
   }
 }
 
-// Medium devices (tablets, 768px and up)
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   #mainText {
     font-size: 1.2rem;
@@ -381,7 +372,7 @@ export default {
   }  
 }
 
-// Large devices (desktops, 992px and up)
+/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
   #mainText {
     font-size: 1.5rem;
