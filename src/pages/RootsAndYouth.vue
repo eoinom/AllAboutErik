@@ -324,6 +324,15 @@ export default {
   #mainText > p {
     margin-bottom: 0px !important;
   }
+  .thumbnailImgTextOverlay .videoTitle {
+    font-size: 1.24665rem;
+    letter-spacing: 1.24665px;
+  }
+
+  .thumbnailImgTextOverlay .videoSubText {
+    font-size: 0.567rem;
+    letter-spacing: 0.3944px;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -335,6 +344,14 @@ export default {
   #mainText p {
     margin-bottom: 0px !important;
   }
+  .thumbnailImgTextOverlay .videoTitle {
+    font-size: 1.6622rem;
+    letter-spacing: 8.4324px;
+  }
+  .thumbnailImgTextOverlay .videoSubText {
+    font-size: 0.756rem;
+    letter-spacing: 0.5259px;
+  }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -343,6 +360,14 @@ export default {
     font-size: 1.2rem;
     line-height: 24px;
   }
+  .thumbnailImgTextOverlay .videoTitle {
+    font-size: 2.0778rem;
+    letter-spacing: 13px;
+  }
+  .thumbnailImgTextOverlay .videoSubText {
+    font-size: 1.1655rem;
+    letter-spacing: 0.8108px;
+  }  
 }
 
 // Large devices (desktops, 992px and up)
@@ -350,6 +375,14 @@ export default {
   #mainText {
     font-size: 1.5rem;
     line-height: 33px;
+  }
+  .thumbnailImgTextOverlay .videoTitle {
+    font-size: 2.0778rem;
+    letter-spacing: 13px;
+  }
+  .thumbnailImgTextOverlay .videoSubText {
+    font-size: 1.1655rem;
+    letter-spacing: 0.8108px;
   }
 }
 
