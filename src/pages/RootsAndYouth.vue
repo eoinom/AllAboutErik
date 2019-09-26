@@ -42,7 +42,18 @@
               webkitallowfullscreen mozallowfullscreen allowfullscreen>
             </iframe>
           </div> -->
-          <g-image :alt="video.title" v-if="video.thumbnailImg != null" :src="video.thumbnailImg" class="thumbnailImg"/>
+          <div class="videoThumbnailContainer">
+            
+            <div class="thumbnailImgContainer">
+              <g-image :alt="video.title" v-if="video.thumbnailImg != null" :src="video.thumbnailImg" class="thumbnailImg"/>
+            </div>
+
+            <div class="thumbnailImgTextOverlay">
+              <span class="videoTitle">{{ video.title }} </span>
+              <p class="videoSubText">{{ video.subText }} </p>
+            </div>
+
+          </div>
         </b-col>
       </b-row>
 
@@ -155,8 +166,18 @@ export default {
 
 
 <style lang="scss" scoped>
+
 @font-face {
-  font-family: NeueHaasGroteskText Pro6;
+  font-family: NeueHaasGroteskText Pro55;
+  src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/nhaasgrotesktxpro-55rg.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: NeueHaasGroteskText Pro65;
   src: url('../assets/fonts/nhaasgrotesktxpro-65md.eot'); /* IE9 Compat Modes */
   src: url('../assets/fonts/nhaasgrotesktxpro-65md.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../assets/fonts/nhaasgrotesktxpro-65md.woff') format('woff'), /* Pretty Modern Browsers */
@@ -210,10 +231,10 @@ export default {
 }
 
 #mainText {
-  color: #FFFFFF;
-  font-size: 1.85rem;
-  font-family: 'NeueHaasGroteskText Pro6';
+  color: #FFFFFF;  
+  font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
+  font-size: 1.85rem;
   font-weight: 500;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.65);
   line-height: 43px;
@@ -232,9 +253,57 @@ export default {
   min-width: 19px;
 }
 
+
+.videoThumbnailContainer {
+  // position: relative;
+  // box-shadow: inset 0px 0px 150px rgba(0,0,0,0.5);
+  // z-index: 1;
+}
+
+// .thumbnailImgContainer::before {
+//   content: "";
+//   box-shadow: inset 0px 0px 150px rgba(0,0,0,0.5), inset 0px 0px 150px rgba(0,0,0,0.5);
+// }
+
+.thumbnailImgContainer {
+  background: black;
+  box-shadow: inset 0px 0px 150px rgba(0,0,0,0.5), inset 0px 0px 150px rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
 .thumbnailImg {
   width: 100%;
-  height: auto;
+  height: auto;  
+  opacity: 0.84;
+  position: relative;
+  z-index: 0;
+}
+
+.thumbnailImgTextOverlay {
+  color: #FFFFFF;
+  position: absolute;
+  text-align: center;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.thumbnailImgTextOverlay .videoTitle {
+  font-family: 'NeueHaasGroteskText Pro55';
+  font-feature-settings: 'liga';
+  font-weight: 500;
+  font-size: 2.5625rem;
+  text-transform: uppercase;
+  letter-spacing: 16px;
+}
+
+.thumbnailImgTextOverlay .videoSubText {
+  font-family: 'NeueHaasGroteskText Pro65';
+  font-feature-settings: 'liga';
+  font-weight: 500;
+  font-size: 1.4375rem;
+  letter-spacing: 1px;
 }
 
 
