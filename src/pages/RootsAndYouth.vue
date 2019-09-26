@@ -16,8 +16,7 @@
                 <span v-html="mainText" id="mainText" />    
 
                 <!-- Scroll with arrow images - hidden on xs (e.g. portrait mobile devices) -->
-                <!-- <div class="d-none d-sm-inline"> -->
-                <div>
+                <div class="d-none d-sm-inline">
                   <p class="mb-0 mt-md-1 mt-lg-2 mt-xl-5">
                     <g-image alt="Scroll text" v-if="titleImg != null" src="~/assets/images/scroll.png" id="scrollImg" />
                   </p>
