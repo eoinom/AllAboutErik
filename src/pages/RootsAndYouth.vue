@@ -16,7 +16,8 @@
                 <span v-html="mainText" id="mainText" />    
 
                 <!-- Scroll with arrow images - hidden on xs (e.g. portrait mobile devices) -->
-                <div class="d-none d-sm-inline">
+                <!-- <div class="d-none d-sm-inline"> -->
+                <div>
                   <p class="mb-0 mt-md-1 mt-lg-2 mt-xl-5">
                     <g-image alt="Scroll text" v-if="titleImg != null" src="~/assets/images/scroll.png" id="scrollImg" />
                   </p>
@@ -194,8 +195,7 @@ export default {
 }
 
 .main-col {
-  padding: 0 6%; 
-  
+  padding: 0 6%;   
 }
 
 .slideshowCol {
@@ -311,8 +311,12 @@ export default {
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  .layout, .main-col {
+    padding: 0 0;   
+  }
+
   .slideshowOverlay .mainContent {
-    padding-bottom: 0.5%;
+    // padding-bottom: 0.5%;
     padding-left: 15%;
     padding-right: 15%;
   }
@@ -324,14 +328,22 @@ export default {
   #mainText > p {
     margin-bottom: 0px !important;
   }
-  .thumbnailImgTextOverlay .videoTitle {
-    font-size: 1.24665rem;
-    letter-spacing: 1.24665px;
-  }
+  // .thumbnailImgTextOverlay .videoTitle {
+  //   font-size: 1.24665rem;
+  //   letter-spacing: 1.24665px;
+  // }
+  // .thumbnailImgTextOverlay .videoSubText {
+  //   font-size: 0.567rem;
+  //   letter-spacing: 0.3944px;
+  // }
 
+  .thumbnailImgTextOverlay .videoTitle {
+    font-size: 1.6622rem;
+    letter-spacing: 8.4324px;
+  }
   .thumbnailImgTextOverlay .videoSubText {
-    font-size: 0.567rem;
-    letter-spacing: 0.3944px;
+    font-size: 0.756rem;
+    letter-spacing: 0.5259px;
   }
 }
 
