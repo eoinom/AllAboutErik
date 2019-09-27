@@ -64,9 +64,32 @@
         </b-col>
       </b-row>
 
-      <b-row no-gutters class="pb-2 px-1">
-        <b-col style="background-color:orange">
-          Some text here
+      <b-row v-if="fullVideo != null" no-gutters class="pb-2 px-1">
+        <b-col>
+          <b-container fluid id="completeFilmContainer">
+            <b-row align-v="center">
+              <b-col cols="2"></b-col>
+
+              <b-col cols="2" id="completeFilmPlayIconCol" style="text-align:right">
+                <g-image alt="Play symbol" src="~/assets/images/playarrowcircle-black.png" id="" class=""/>
+              </b-col>
+
+              <b-col cols="1.5" id="completeFilmIconTextCol" style="text-align:left">
+                <p class="playFilmText mb-0">
+                  PLAY FILM
+                </p>
+                <p v-if="fullVideo.duration != null" class="fullVideoDurationText mb-0">
+                  {{ durationInMinsText(fullVideo.duration) }} 
+                </p>
+              </b-col>
+
+              <b-col cols="5" id="completeFilmSubTextCol">
+                <p id="completeFilmSubText" class="my-4">{{ fullVideo.text }} </p>  
+              </b-col>
+
+              <b-col cols="2"></b-col>
+            </b-row>
+          </b-container>
         </b-col>
       </b-row>
 
@@ -155,6 +178,9 @@ export default {
     },
     videos() {
       return this.$page.RootsAndYouth.edges[0].node.videos
+    },
+    fullVideo() {
+      return this.$page.RootsAndYouth.edges[0].node.fullVideo
     }
   },
 
@@ -356,6 +382,39 @@ export default {
 .thumbnailImg {
   opacity: 1;
 }*/
+
+#completeFilmContainer {
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+.playFilmText {
+  font-family: 'NeueHaasGroteskText Pro55';
+  font-feature-settings: 'liga';
+  font-weight: 500;
+  /* font-size: 1.125rem; */
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.fullVideoDurationText {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  /* font-size: 1.6rem; */
+  font-size:14px
+}
+
+#completeFilmSubText {
+  font-family: 'NeueHaasGroteskText Pro55';
+  font-feature-settings: 'liga';
+  font-weight: 500;
+  /* font-size: 1.4375rem; */
+  font-size: 23px;
+  letter-spacing: 1px;
+  text-align: justify;
+  line-height: 35px;
+}
 
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
