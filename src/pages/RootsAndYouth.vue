@@ -17,7 +17,7 @@
                 <span v-html="mainText" id="mainText" />    
 
                 <!-- Scroll with arrow images - hidden on xs (e.g. portrait mobile devices) -->
-                <div class="d-none d-sm-inline">
+                <div class="d-none d-sm-inline" v-scroll-to="{ el:'#videos', duration:1500, easing:'ease' }">
                   <p class="mb-0 mt-md-1 mt-lg-2 mt-xl-5">
                     <g-image alt="Scroll text" v-if="titleImg != null" src="~/assets/images/scroll.png" id="scrollImg" />
                   </p>
@@ -34,7 +34,7 @@
       </b-row>
 
       <!-- VIDEOS -->
-      <b-row no-gutters class="mb-1">
+      <b-row no-gutters id="videos" class="mb-1">
         <b-col cols="12" lg="6" v-for="video in videos" :key="video.title" class="my-1 px-1">
           <!-- <div style="padding:56.25% 0 0 0;position:relative;z-index:900">
             <iframe 
