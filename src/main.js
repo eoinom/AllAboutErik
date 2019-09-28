@@ -31,6 +31,10 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
   Vue.component('font-awesome', FontAwesomeIcon)
 
+  // vue-scrollto: https://github.com/rigor789/vue-scrollto
+  var VueScrollTo = require('vue-scrollto')
+  Vue.use(VueScrollTo)
+
   // Add a meta tag
   head.meta.push({
     name: 'viewport',
