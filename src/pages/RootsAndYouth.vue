@@ -2,6 +2,7 @@
   <Layout> 
     <b-container fluid class="main-col">
 
+      <!-- HEADER SLIDESHOW -->
       <b-row no-gutters style="max-height:1224px; width:auto;" class="mb-1 px-1">
         <b-col class="slideshowCol">
           
@@ -32,6 +33,7 @@
         </b-col>
       </b-row>
 
+      <!-- VIDEOS -->
       <b-row no-gutters class="mb-1">
         <b-col cols="12" lg="6" v-for="video in videos" :key="video.title" class="my-1 px-1">
           <!-- <div style="padding:56.25% 0 0 0;position:relative;z-index:900">
@@ -64,32 +66,34 @@
         </b-col>
       </b-row>
 
-      <b-row v-if="fullVideo != null" no-gutters class="pb-2 px-1">
+      <!-- COMPLETE FILM -->
+      <b-row v-if="fullVideo != null" no-gutters class="mb-0 px-1">
         <b-col>
-          <b-container fluid id="completeFilmContainer">
-            <b-row align-v="center">
-              <b-col cols="2"></b-col>
+          <b-row id="completeFilmContainer" class="mx-0 mb-2">
+            <b-col class="completeFilmContent">
+              <b-row align-v="center" align-h="center" class="mb-0 py-4">
 
-              <b-col cols="2" id="completeFilmPlayIconCol" style="text-align:right">
-                <g-image alt="Play symbol" src="~/assets/images/playarrowcircle-black.png" id="" class=""/>
-              </b-col>
+                <b-col cols="auto" id="completeFilmPlayIconCol" style="text-align:right" class="pr-1">
+                  <g-image alt="Play symbol" src="~/assets/images/playarrowcircle-black.png" id="fullVideoPlayImg"/>
+                  <g-image alt="Play symbol" src="~/assets/images/playarrowcircle-hover.png" id="fullVideoPlayImg-hover"/>
+                </b-col>
 
-              <b-col cols="1.5" id="completeFilmIconTextCol" style="text-align:left">
-                <p class="playFilmText mb-0">
-                  PLAY FILM
-                </p>
-                <p v-if="fullVideo.duration != null" class="fullVideoDurationText mb-0">
-                  {{ durationInMinsText(fullVideo.duration) }} 
-                </p>
-              </b-col>
+                <b-col cols="auto" id="completeFilmIconTextCol" style="text-align:left" class="pl-1">
+                  <p class="playFilmText mb-0">
+                    PLAY FILM
+                  </p>
+                  <p v-if="fullVideo.duration != null" class="fullVideoDurationText mb-2">
+                    {{ durationInMinsText(fullVideo.duration) }} 
+                  </p>
+                </b-col>
 
-              <b-col cols="5" id="completeFilmSubTextCol">
-                <p id="completeFilmSubText" class="my-4">{{ fullVideo.text }} </p>  
-              </b-col>
+                <b-col cols="auto">
+                  <p id="completeFilmSubText" class="mb-0 mt-1">{{ fullVideo.text }} </p>  
+                </b-col>
 
-              <b-col cols="2"></b-col>
-            </b-row>
-          </b-container>
+              </b-row>
+            </b-col>
+          </b-row>
         </b-col>
       </b-row>
 
@@ -388,6 +392,21 @@ export default {
   text-align: center;
 }
 
+.completeFilmContent:hover .playFilmText,
+.completeFilmContent:hover .fullVideoDurationText,
+.completeFilmContent:hover #completeFilmSubText {
+  color:	#EED047;
+}
+.completeFilmContent #fullVideoPlayImg-hover {
+  display: none;
+}
+.completeFilmContent:hover #fullVideoPlayImg-hover {
+  display: inline;
+}
+.completeFilmContent:hover #fullVideoPlayImg {
+  display: none;
+}
+
 .playFilmText {
   font-family: 'NeueHaasGroteskText Pro55';
   font-feature-settings: 'liga';
@@ -402,18 +421,21 @@ export default {
   font-family: 'Lora', serif;
   font-weight: 700;
   /* font-size: 1.6rem; */
-  font-size:14px
+  font-size:14px;
+  margin-top: -2px;
 }
 
 #completeFilmSubText {
-  font-family: 'NeueHaasGroteskText Pro55';
+  font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
   font-weight: 500;
-  /* font-size: 1.4375rem; */
-  font-size: 23px;
+  font-size: 1.4375rem;
+  /* color:blueviolet; */
+  /* font-size: 23px; */
   letter-spacing: 1px;
   text-align: justify;
   line-height: 35px;
+  max-width: 420px;
 }
 
 
@@ -448,6 +470,10 @@ export default {
   .videoDurationText {
     font-size: 0.8414rem;
   }
+  #completeFilmSubText {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -469,6 +495,10 @@ export default {
   }
   .videoDurationText {
     font-size: 0.8414rem;
+  }
+  #completeFilmSubText {
+    font-size: 1.32rem;
+    text-align: center;
   }
 }
 
