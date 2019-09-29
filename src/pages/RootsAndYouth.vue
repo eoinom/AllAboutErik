@@ -97,6 +97,19 @@
         </b-col>
       </b-row>
 
+      <!-- TEST LIGHT GALLERY -->
+      <!-- <b-row no-gutters align-v="center" align-h="center" class="mb-0 p-1">
+        <b-col>
+          <LightGallery
+            :images="images"
+            :index="imgIndex"
+            :disable-scroll="true"
+            @close="imgIndex = null"
+          />
+          <b-button @click="imgIndex = 1">Open Lightbox</b-button>
+        </b-col>
+      </b-row> -->
+
     </b-container>   
    
     <!-- <br> -->
@@ -157,6 +170,7 @@
 
 <script scoped>
 import SlideshowImages from '../components/SlideshowImages2.vue'
+// import LightGallery from '../components/vue-light-gallery.vue'
 
 export default { 
   metaInfo() {
@@ -203,6 +217,7 @@ export default {
 
   components: {
     'slideshow-images':     require('../components/SlideshowImages2.vue').default,
+    // LightGallery,
   },
 }
 </script>
