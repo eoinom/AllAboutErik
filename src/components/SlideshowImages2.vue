@@ -70,16 +70,7 @@ export default {
 <style>
 
 @font-face {
-  font-family: NeueHaasGroteskText Pro5;
-  src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot'); /* IE9 Compat Modes */
-  src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../assets/fonts/nhaasgrotesktxpro-55rg.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: NeueHaasGroteskText Pro6;
+  font-family: NeueHaasGroteskText Pro65;
   src: url('../assets/fonts/nhaasgrotesktxpro-65md.eot'); /* IE9 Compat Modes */
   src: url('../assets/fonts/nhaasgrotesktxpro-65md.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../assets/fonts/nhaasgrotesktxpro-65md.woff') format('woff'), /* Pretty Modern Browsers */
@@ -91,7 +82,7 @@ export default {
   color: #FFFFFF;
   /* font-size: 30px; */
   font-size: 1.875rem;
-  font-family: 'NeueHaasGroteskText Pro6';
+  font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
   font-weight: 500;
   text-align: center;
