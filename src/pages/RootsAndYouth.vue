@@ -17,7 +17,7 @@
                 <span v-html="mainText" id="mainText" />    
 
                 <!-- Scroll with arrow images - hidden on xs (e.g. portrait mobile devices) -->
-                <div class="d-none d-sm-inline" v-scroll-to="{ el:'#videos', duration:1500, easing:'ease' }">
+                <div class="d-none d-sm-inline" v-scroll-to="{ el:'#videos', duration:1500, easing:'ease' }" id="scrollImgContainer">
                   <p class="mb-0 mt-md-1 mt-lg-2 mt-xl-5">
                     <g-image alt="Scroll text" v-if="titleImg != null" src="~/assets/images/scroll.png" id="scrollImg" />
                   </p>
@@ -35,7 +35,8 @@
 
       <!-- VIDEOS -->
       <b-row no-gutters id="videos" class="mb-1">
-        <b-col cols="12" lg="6" v-for="video in videos" :key="video.title" class="my-1 px-1">
+        <b-col cols="12" lg="6" v-for="(video, index) in videos" :key="video.title" @click="videoIndex = index" @mouseover="videoIndexHover = index" @mouseleave="videoIndexHover = null" class="my-1 px-1">
+
           <div class="videoThumbnailContainer">
             
             <div class="thumbnailImgContainer">
@@ -43,15 +44,23 @@
             </div>
 
             <div class="thumbnailImgTextOverlay">
-              <span class="videoTitle">{{ video.title }} </span>
-              <p class="videoSubText">{{ video.subText }} </p>
+              <transition name="fade">
+                <div v-if="index != videoIndexHover">
+                  <span class="videoTitle thumbnailImgNotHovered">{{ video.title }}</span>
+                  <p class="videoSubText thumbnailImgNotHovered">{{ video.subText }}</p>              
+                </div>
+              </transition>
 
-              <p class="mb-0 mb-lg-1 mb-xl-2">
-                <g-image alt="Play symbol" v-if="video.url != null" src="~/assets/images/playarrowcircle.png" class="thumbnailPlayVideoImg" />
-              </p>
-              <p v-if="video.duration != null" class="videoDurationText">
-                {{ durationInMinsText(video.duration) }} 
-              </p>
+              <transition name="fade">
+                <div v-if="index == videoIndexHover">
+                  <p class="mb-0 mb-lg-1 mb-xl-2">
+                    <g-image alt="Play symbol" v-if="video.url != null" src="~/assets/images/playarrowcircle.png" class="thumbnailPlayVideoImg thumbnailImgHovered" />
+                  </p>
+                  <p v-if="video.duration != null" class="videoDurationText thumbnailImgHovered">
+                    {{ durationInMinsText(video.duration) }} 
+                  </p>
+                </div>
+              </transition>
             </div>
 
           </div>
@@ -62,7 +71,7 @@
       <b-row v-if="fullVideo != null" no-gutters class="mb-0 px-1">
         <b-col>
           <b-row id="completeFilmContainer" class="mx-0 mb-2">
-            <b-col class="completeFilmContent">
+            <b-col class="completeFilmContent" @click="videoIndex = allVideos.length-1">
               <b-row align-v="center" align-h="center" class="mb-0 py-4">
 
                 <b-col cols="auto" id="completeFilmPlayIconCol" style="text-align:right" class="pr-1">
@@ -163,7 +172,10 @@ export default {
   },
 
   data() {
-    return {      
+    return {
+      // imgIndex: null,
+      videoIndex: null,
+      videoIndexHover: null
     }
   },
 
@@ -237,6 +249,13 @@ export default {
   font-weight: normal;
 }
 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
 .layout {
   background-color: #dddddd
 }
@@ -292,6 +311,10 @@ export default {
   letter-spacing: 2px;    
 }
 
+#scrollImgContainer {
+  cursor: pointer;
+}
+
 #scrollImg {
   width: 11.5%;
   max-width: 157px;
@@ -306,9 +329,7 @@ export default {
 
 
 .videoThumbnailContainer {
-  /* position: relative;
-  box-shadow: inset 0px 0px 150px rgba(0,0,0,0.5);
-  z-index: 1; */
+  cursor: pointer;
 }
 
 /* .thumbnailImgContainer::before {
@@ -328,6 +349,7 @@ export default {
   opacity: 0.84;
   position: relative;
   z-index: 0;
+  transition: opacity 0.5s ease;
 }
 
 .thumbnailImgTextOverlay {
@@ -344,7 +366,7 @@ export default {
   font-family: 'NeueHaasGroteskText Pro55';
   font-feature-settings: 'liga';
   font-weight: 500;
-  font-size: 2.5625rem;
+  font-size: 2.5625rem;  /* 41px with 16px default size */
   text-transform: uppercase;
   letter-spacing: 16px;
 }
@@ -353,7 +375,7 @@ export default {
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
   font-weight: 500;
-  font-size: 1.4375rem;
+  font-size: 1.4375rem; /* 23px with 16px default size */
   letter-spacing: 1px;
 }
 
@@ -399,16 +421,22 @@ export default {
   text-align: center;
 }
 
-.completeFilmContent:hover .playFilmText,
+/* .completeFilmContent:hover .playFilmText,
 .completeFilmContent:hover .fullVideoDurationText,
 .completeFilmContent:hover #completeFilmSubText {
   color:	#EED047;
+  cursor: pointer;
+} */
+.completeFilmContent:hover {
+  color:	#EED047;
+  cursor: pointer;
 }
 .completeFilmContent #fullVideoPlayImg-hover {
   display: none;
 }
 .completeFilmContent:hover #fullVideoPlayImg-hover {
   display: inline;
+  cursor: pointer;
 }
 .completeFilmContent:hover #fullVideoPlayImg {
   display: none;
