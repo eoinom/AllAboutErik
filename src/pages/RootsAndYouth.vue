@@ -36,14 +36,6 @@
       <!-- VIDEOS -->
       <b-row no-gutters id="videos" class="mb-1">
         <b-col cols="12" lg="6" v-for="video in videos" :key="video.title" class="my-1 px-1">
-          <!-- <div style="padding:56.25% 0 0 0;position:relative;z-index:900">
-            <iframe 
-              :src="video.url + '?autoplay=0&color=505050&title=0&byline=0&portrait=0'"
-              style="position:absolute;top:0;left:0;width:1000px;height:500px;" 
-              frameborder="0" 
-              webkitallowfullscreen mozallowfullscreen allowfullscreen>
-            </iframe>
-          </div> -->
           <div class="videoThumbnailContainer">
             
             <div class="thumbnailImgContainer">
@@ -112,23 +104,13 @@
 
     </b-container>   
    
-    <!-- <br> -->
-    <!-- <h2>Roots and Youth</h2> -->
-    <!-- <h2>{{ $page.RootsAndYouth.edges[0].node.pageTitle }}</h2> -->
-    <!-- <div v-for="edge in $page.RootsAndYouth.edges" :key="edge.node.id">
-      <h1>{{ edge.node.title }}</h1>
 
-      <div style="padding:56.25% 0 0 0;position:relative;">
-        <iframe 
-          :src="edge.node.fullVideo.url + '?autoplay=0&color=505050&title=0&byline=0&portrait=0'"
-          style="position:absolute;top:0;left:0;width:50%;height:50%;" 
-          frameborder="0" 
-          webkitallowfullscreen mozallowfullscreen allowfullscreen>
-        </iframe>
-      </div>
-      
-      <hr>
-    </div> -->
+    <VideoLightBox
+      :videos="allVideos"
+      :index="videoIndex"
+      :disable-scroll="true"
+      @close="videoIndex = null"
+    />
 
   </Layout>
 </template>
@@ -171,6 +153,7 @@
 <script scoped>
 import SlideshowImages from '../components/SlideshowImages2.vue'
 // import LightGallery from '../components/vue-light-gallery.vue'
+import VideoLightBox from '../components/VideoLightBox.vue'
 
 export default { 
   metaInfo() {
@@ -199,7 +182,15 @@ export default {
     },
     fullVideo() {
       return this.$page.RootsAndYouth.edges[0].node.fullVideo
-    }
+    },
+    allVideos() {
+      const allVids = [...this.videos];
+      allVids.push(this.fullVideo)
+      return allVids
+    },
+    images() {    
+      return this.slides.map(a => a.img)
+    },
   },
 
   methods: {
@@ -218,6 +209,7 @@ export default {
   components: {
     'slideshow-images':     require('../components/SlideshowImages2.vue').default,
     // LightGallery,
+    VideoLightBox
   },
 }
 </script>
