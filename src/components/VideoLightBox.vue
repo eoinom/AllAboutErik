@@ -46,6 +46,7 @@
                     :ref="`lg-vid-${videoIndex}`"
                     @load="videoLoaded($event, videoIndex)" 
                     class="videoFrame" >
+                    :id="'video_' + videoIndex" >
                   </iframe>
                 </div>
 
@@ -113,6 +114,8 @@
 </template>
 
 <script>
+import Player from '@vimeo/player'
+
 const keyMap = {
   LEFT: 37,
   RIGHT: 39,
@@ -233,17 +236,29 @@ export default {
     },
     prev() {
       if (this.currentIndex === 0) return;
+      this.pauseVideo(this.currentIndex)
       this.currentIndex -= 1;
       this.$emit('slide', { index: this.currentIndex });
     },
     next() {
       if (this.currentIndex === this.videos.length - 1) return;
-      this.currentIndex += 1;
+      this.pauseVideo(this.currentIndex)
+      this.currentIndex += 1
       this.$emit('slide', { index: this.currentIndex });
     },
+    pauseVideo (index) {
+      var iframe = document.getElementById('video_' + index)
+      var player = new Player(iframe)
+      player.pause();
+    },
+    stopVideo (index) {
+      var iframe = document.getElementById('video_' + index)
+      if ( iframe ) {
+        var iframeSrc = iframe.src;
+        iframe.src = iframeSrc;
+      }
+    },
     videoLoaded($event, videoIndex) {
-      console.log('in videoLoaded');
-      
       const { target } = $event;
       target.classList.add('loaded');
       if (videoIndex === this.currentIndex) {
@@ -314,7 +329,7 @@ export default {
           break;
       }
     },
-  },
+  }
 };
 </script>
 
