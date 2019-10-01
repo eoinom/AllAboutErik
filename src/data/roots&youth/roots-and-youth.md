@@ -59,14 +59,14 @@ videos:
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1569364541/RootsAndYouth/oldcountry_jcz2o1.jpg
     title: Old Country
-    url: 'https://player.vimeo.com/video/276960165'
+    url: 'https://vimeo.com/erikjacobsen/review/363423484/adbe0dde50'
   - duration: 195
     orderNo: 2
     subText: I was just a young boy during WWII
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1569364541/RootsAndYouth/baby_wcxag2.jpg
     title: War Baby
-    url: 'https://player.vimeo.com/video/311574147'
+    url: 'https://vimeo.com/erikjacobsen/review/363424208/a4f32b9c1a'
   - duration: 638
     orderNo: 3
     subText: A typical mid-western boyhood
@@ -83,10 +83,10 @@ videos:
     title: Teen Years
     url: 'https://player.vimeo.com/video/314894561'
 fullVideo:
-  duration: 1689
+  duration: 1687
   text: Watch all of the episodes together in the complete Roots & Youth film
   thumbnailImg: ''
   title: Roots & Youth - The Complete Film
-  url: 'https://player.vimeo.com/video/315526817'
+  url: 'https://vimeo.com/erikjacobsen/review/363429905/1483568818'
 ---
 These documentary episodes track my life from my ancestry in Norway, through my boyhood, and continue to the end of my teenage years.
