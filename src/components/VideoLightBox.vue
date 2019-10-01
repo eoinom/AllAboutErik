@@ -45,7 +45,7 @@
                     webkitallowfullscreen mozallowfullscreen allowfullscreen 
                     :ref="`lg-vid-${videoIndex}`"
                     @load="videoLoaded($event, videoIndex)" 
-                    class="videoFrame" >
+                    class="videoFrame"
                     :id="'video_' + videoIndex" >
                   </iframe>
                 </div>
