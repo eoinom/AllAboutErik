@@ -332,24 +332,51 @@ export default {
   cursor: pointer;
 }
 
-/* .thumbnailImgContainer::before {
-  content: "";
-  box-shadow: inset 0px 0px 150px rgba(0,0,0,0.5), inset 0px 0px 150px rgba(0,0,0,0.5);
-} */
+
+/* For vignette effect, see https://benjaminhorn.io/code/proper-lens-vignette-with-css/ & 
+https://codepen.io/beije/pen/zxjeae */
 
 .thumbnailImgContainer {
   background: black;
-  box-shadow: inset 0px 0px 150px rgba(0,0,0,0.5), inset 0px 0px 150px rgba(0,0,0,0.5);
-  z-index: 2;
+  line-height: 0;         /* ensure no space between bottom */		
+	display: inline-block;  /* don't go wider than image */
+
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  transition: box-shadow 0.5s ease;
+}
+
+.thumbnailImgContainer:after {
+  content: '';
+  position: absolute;
+  
+  /* Center element on the middle of it's parent */
+  top: 50%;
+  left: 50%;
+  
+  /* Reset back the image so it's center is locked on the center of the parent */
+  transform: translate(-50%,-50%);
+  
+  /* Only set the width of the image */
+  width: 120%;
+  
+  /* Using the padding trick, we force the elments padding bottom to push down the height */
+  /* To form a square, the padding-bottom, needs to have the same value as the width property */
+  padding-bottom: 120%;
+  
+  box-shadow: inset 0px 0px 150px 60px rgba(0,0,0,0.8), inset 0px 0px 150px 60px rgba(0,0,0,0.8);
+  border-radius: 50%;
 }
 
 .thumbnailImg {
   width: 100%;
   height: auto;  
-  opacity: 0.84;
+  opacity: 0.7;
   position: relative;
-  z-index: 0;
   transition: opacity 0.5s ease;
+  max-width: 100%;
 }
 
 .thumbnailImgTextOverlay {
@@ -392,6 +419,7 @@ export default {
   font-family: 'Lora', serif;
   font-weight: 700;
   font-size: 1.6rem;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.65);
 }
 
 .videoThumbnailContainer:hover .videoTitle, .videoThumbnailContainer:hover .videoSubText {
@@ -402,6 +430,9 @@ export default {
 }
 .videoThumbnailContainer:hover .thumbnailImg {
   opacity: 1;
+}
+.videoThumbnailContainer:hover .thumbnailImgContainer:after {
+  box-shadow: none;
 }
 
 /* FOR CHECKING THE HOVERED STATE */
@@ -446,8 +477,7 @@ export default {
   font-family: 'NeueHaasGroteskText Pro55';
   font-feature-settings: 'liga';
   font-weight: 500;
-  /* font-size: 1.125rem; */
-  font-size: 18px;
+  font-size: 1.125rem;   /* 18px at 16px default size */
   text-transform: uppercase;
   letter-spacing: 5px;
 }
@@ -455,8 +485,7 @@ export default {
 .fullVideoDurationText {
   font-family: 'Lora', serif;
   font-weight: 700;
-  /* font-size: 1.6rem; */
-  font-size:14px;
+  font-size: 0.875rem;   /* 14px at 16px default size */
   margin-top: -2px;
 }
 
@@ -464,9 +493,7 @@ export default {
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
   font-weight: 500;
-  font-size: 1.4375rem;
-  /* color:blueviolet; */
-  /* font-size: 23px; */
+  font-size: 1.4375rem;   /* 23px at 16px default size */
   letter-spacing: 1px;
   text-align: justify;
   line-height: 35px;
