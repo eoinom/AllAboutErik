@@ -1,7 +1,7 @@
 <template>
   <Layout>
 
-    <div class="container">
+    <b-container fluid>
       <div class="soundIconContainer">
         <span class="icon" v-b-tooltip.hover="{ variant: 'light' }" :title="tooltipText">
           <font-awesome :icon="audioFontAwesomeIcon" @click="clickAudioIcon()" />
@@ -17,16 +17,12 @@
           </div>
 
           <div class="secondaryContent">
-            <!-- <span class="icon">
-              <font-awesome :icon="audioFontAwesomeIcon" @click="clickAudioIcon()"/>
-            </span> -->
-            <br />
             <span v-html="creditText" class="homePgCreditText" />
           </div>
 
         </div>
       </div>
-    </div>
+    </b-container>
 
     <div class="slideshow">
       <slideshow-kenburns
@@ -327,15 +323,6 @@ $scale-base-1: (1 + $scale / 100%);
   padding: 0
 }
 
-.container {
-  // removed below after BootstrapVue installed
-  // position: absolute;
-  // width: 100%;
-  // height: 100%;
-  // z-index: 100;
-  // overflow: hidden;
-}
-
 .contentContainer {
   /* Absolute Centering in CSS: https://codepen.io/shshaw/full/gEiDt */
   position: absolute;
@@ -380,10 +367,7 @@ $scale-base-1: (1 + $scale / 100%);
 .soundIconContainer{
   position: absolute;
   top: 35px;
-  // text-align: center;
-  // right: 57px;
   right: 7.3%;
-  // width: 35px;
   z-index: 1000;
 }
 
@@ -426,7 +410,6 @@ $scale-base-1: (1 + $scale / 100%);
     right: 7.3%;
     z-index: 1000;
   }
-
   .icon {
     font-size: 3.0em;
   }
@@ -439,7 +422,6 @@ $scale-base-1: (1 + $scale / 100%);
     right: 7.3%;
     z-index: 1000;
   }
-
   .icon {
     font-size: 2.5em;
   }
