@@ -16,11 +16,6 @@
             <g-image alt="Close navigation menu" src="~/assets/images/menu-close-hover.png" style="cursor:pointer" immediate=true @click="closeNav()" class="img-hover"/>
           </div>
 
-          <!-- <nav v-for="nav in navs" :key="nav.label">
-            <router-link :to="nav.to" class="nav_item" @mouseover.native="onNavLinkHover(nav)">{{ nav.label.toUpperCase() }}</router-link>
-            <hr />
-          </nav> -->
-
           <nav v-for="edge in $static.NavItems.edges" :key="edge.node.text">
             <router-link :to="edge.node.to" class="nav_item" @mouseover.native="onNavLinkHover(edge.node)">{{ edge.node.text.toUpperCase() }}</router-link>
             <hr />
@@ -35,15 +30,12 @@
     <div v-if="showSubSideNav">
       <div id="sideNav-sub" class="sidenav-sub">
         <div class="submenu-img-container">
-          <!-- <g-image :src="activeNav.img" width="240px" /> -->
-          <!-- <g-image src="~/assets/images/submenu-musical-journey.jpg" width="240px" /> -->
           <!-- <image-component>
             <template v-slot:image>
               <g-image :src="activeNav.img" />
             </template>
           </image-component> -->
           <!-- <image-component imageFile="submenu-musical-journey.jpg" /> -->
-          <!-- <g-image src="~/assets/images/submenu-musical-journey.jpg" /> -->
           <router-link :to="activeNav.to">
             <!-- Maybe try ading a v-for loop of g-image with src to graphql nodes, add a hidden class and activate the one based on active Nav -->
             <div v-for="edge in $static.NavItems.edges" :key="edge.node.text">
@@ -69,7 +61,7 @@
         </div>
         
       </div>
-    </div>
+    <!-- </div> -->
 
     <!-- This transition is for all other page loads -->
     <!-- https://github.com/gridsome/gridsome/issues/24 -->
@@ -125,9 +117,9 @@
     },
     
     computed: {
-      activeImg() {
-        return this.activeNav.img
-      },
+      // activeImg() {
+      //   return this.activeNav.img
+      // },
       showSubSideNav() {
         return this.activeNav.hasOwnProperty('hasSubMenu') && this.activeNav.hasSubMenu === true
       },
@@ -193,7 +185,6 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   margin:0;
   padding:0;
-  /* line-height: 1.5; */
 }
 
 .layout {
@@ -219,7 +210,6 @@ body {
   padding-left: 0; /* set with JavaScript */
   padding-right: 0; /* set with JavaScript */
   position: fixed; /* Stay in place */
-  /* position:absolute; Stay in place */
   z-index: 2000; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
@@ -227,7 +217,6 @@ body {
   overflow-x: hidden; /* Disable horizontal scroll */
   overflow-y: auto; 
   padding-top: 25px; /* Offset content from the top */  
-  /* transition: 0.5s; 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
@@ -251,8 +240,6 @@ body {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 3px;  
-  
-  /* transition: 0.3s; */
 }
 
 /* The navigation (sub)menu links */
@@ -310,7 +297,6 @@ body {
 
 .sidenav-sub {
   height: 100%; /* 100% Full-height */
-  width: 240px;
   max-width: 240px;
   padding-left: 0;
   padding-right: 0;
