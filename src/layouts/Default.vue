@@ -27,8 +27,8 @@
     <!-- </simplebar> -->
 
     <!-- Sub navigation menu -->
-    <div v-if="showSubSideNav">
-      <div id="sideNav-sub" class="sidenav-sub">
+    <!-- <div v-if="showSubSideNav"> -->
+      <div id="sideNav-sub" class="sidenav-sub" :style="showSubSideNav ? 'width:240px;' : 'width:0px;'">
         <div class="submenu-img-container">
           <!-- <image-component>
             <template v-slot:image>
@@ -131,19 +131,13 @@
     methods: {    
       openNav() {
         /* Set the width of the side navigation */
-        let mainNav = document.getElementById("sideNav-main")
-        let subNav = document.getElementById("sideNav-sub")
-        
+        let mainNav = document.getElementById("sideNav-main")        
         mainNav.style.transition = "0.5s"   
         // changed width below after BootstrapVue installed
         // mainNav.style.width = "190px"
         mainNav.style.width = "226px"
         mainNav.style.paddingLeft = "18px"
         mainNav.style.paddingRight = "18px"
-
-        subNav.style.transition = "0.5s"        
-        subNav.style.transitionDelay = "0.5s"        
-        subNav.style.width = "240px"
       },    
       closeNav() {
         /* Hides the navigation menu by setting the width of it to 0 */  
@@ -307,8 +301,7 @@ body {
   background-color: #333333;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 0px;
-  /* transition: 0.5s; 0.5 second transition effect to slide in the sidenav */
-  /* transition-delay: 0.3s; */
+  transition: width 0.5s;
 }
 
 .submenu-text-container {
