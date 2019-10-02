@@ -82,7 +82,11 @@ export default {
       windowWidth: 0,
       windowHeight: 0,
       audioPlaying: false,
-      audioMuted: true
+      audioMuted: true,
+      audioFinished: false,
+      leavingPage: false,
+      pageFadeOutDuration: 1.4,       //seconds
+      audioTimeAtStartPageLeave: 0    //seconds
     }
   },
 
@@ -136,64 +140,82 @@ export default {
       let audioEl = document.getElementById('bgAudio');
 
       if (!this.audioPlaying) {
-        let promise = audioEl.play();
-        // audioEl.muted = true;
-        if (promise !== undefined) {
-          promise.then(_ => {
-            // Autoplay started!
-            this.audioPlaying = true;
-            this.audioMuted = false;
-          }).catch(error => {
-            // Autoplay was prevented.
-            // Show a "Play" button so that user can start playback.
-            this.audioPlaying = false;
-            this.audioMuted = false;
-          });
-        }
+        this.playAndFadeAudio()
       }
       else {
         audioEl.muted = !audioEl.muted;
         this.audioMuted = !this.audioMuted
       }
     },
-    getSoundAndFadeAudio() {
-      let sound = document.getElementById('bgAudio');
-      sound.volume = 0.0
-
-      // Fade In
-      let fadeInEndPoint = this.audioFadeInDuration;   //seconds
-      let fadeAudioIn = setInterval(function () {
-        if ((sound.currentTime < fadeInEndPoint) && (sound.volume != 1.0)) {
-          sound.volume = Math.min((sound.currentTime / fadeInEndPoint) * 1.0, 1.0);
-        }
-        if ((sound.currentTime >= fadeInEndPoint) || (sound.volume >= 1.0)) {
-          clearInterval(fadeAudioIn);
-          sound.volume = 1.0
-        }
-      }, 200);
-
-      // Fade Out
-      let audioDuration = this.audioDuration;
-      let fadeOutDuration = this.audioFadeOutDuration;
-      // var fadeOutPoint = sound.duration - 5;
-      let fadeOutPoint = audioDuration - fadeOutDuration;
-      // let finished = false;
-      if (fadeOutPoint <= fadeInEndPoint) {
-        fadeOutPoint = fadeInEndPoint
+    playAndFadeAudio() {
+      let promise = document.getElementById('bgAudio').play();
+      if (promise !== undefined) {
+        promise.then(_ => {          
+          this.audioPlaying = true;
+          this.audioMuted = false;
+          this.getSoundAndFadeAudio();
+        }).catch(error => {
+          console.error(error);
+          this.audioPlaying = false;
+          this.audioMuted = false;
+          console.log('Error playing background audio'); 
+        });
       }
-      let fadeAudioOut = setInterval(function () {
-        if ((sound.currentTime >= fadeOutPoint) && (sound.volume != 0.0)) {
-          sound.volume = Math.max(0.0, 1.0 * ((audioDuration - sound.currentTime) / fadeOutDuration));
+      else {
+        this.audioPlaying = false;
+        this.audioMuted = false;
+      }
+    },
+    getSoundAndFadeAudio() {
+      if (this.audioPlaying) {
+        let sound = document.getElementById('bgAudio');
+        sound.volume = 0.0
+        sound.currentTime = 0
+
+        // Fade In
+        let fadeInEndPoint = this.audioFadeInDuration;   //seconds
+        let fadeAudioIn = setInterval(function () {
+          if ((sound.currentTime < fadeInEndPoint) && (sound.volume != 1.0)) {
+            sound.volume = Math.min((sound.currentTime / fadeInEndPoint) * 1.0, 1.0);
+          }
+          if ((sound.currentTime >= fadeInEndPoint) || (sound.volume >= 1.0)) {
+            clearInterval(fadeAudioIn);
+            sound.volume = 1.0
+          }
+        }, 200);
+
+        // Fade Out
+        let audioDuration = this.audioDuration;
+        let fadeOutDuration = this.audioFadeOutDuration;
+        let fadeOutPoint = audioDuration - fadeOutDuration;
+        if (fadeOutPoint <= fadeInEndPoint) {
+          fadeOutPoint = fadeInEndPoint
         }
-        if (sound.volume === 0.0) {
-          clearInterval(fadeAudioOut);
-          finished = true;
-        }
-      }, 200);
-      // if (finished) {
-      //   this.getSoundAndFadeAudio()
-      //   finished = false
-      // }
+        let fadeAudioOut = setInterval(function() {
+          this.audioFinished = false
+          if ((sound.currentTime >= fadeOutPoint) && (sound.volume != 0.0)) {
+            sound.volume = Math.max(0.0, 1.0 * ((audioDuration - sound.currentTime) / fadeOutDuration));
+          }
+          else if (this.leavingPage) {
+            sound.volume = Math.max(0.0, 1.0 * ((this.audioTimeAtStartPageLeave + this.pageFadeOutDuration - sound.currentTime) / this.pageFadeOutDuration));
+          }
+
+          if (sound.volume === 0.0) {
+            this.audioPlaying = false
+            this.audioFinished = true             
+            clearInterval(fadeAudioOut);
+          }
+        }.bind(this), 200)
+      }
+    },
+  },
+
+  watch: {
+    audioFinished: function (val) {      
+      if (val) {
+        // play audio again with fade in/out        
+        this.playAndFadeAudio()
+      }
     }
   },
 
@@ -209,32 +231,13 @@ export default {
       });
     })
 
-    // let audioEl = document.getElementById('bgAudio');
-    // audioEl.muted = true;
-
-    let promise = document.getElementById('bgAudio').play();
-
-    // audioEl.muted = true;
-
-    if (promise !== undefined) {
-      promise.then(_ => {
-        // Autoplay started!
-        this.getSoundAndFadeAudio();
-        this.audioPlaying = true;
-        this.audioMuted = false;
-      }).catch(error => {
-        // Autoplay was prevented.
-        // Show a "Play" button so that user can start playback.
-        console.error(error);
-        this.audioPlaying = false;
-        this.audioMuted = false;
-        console.log('Promise rejected in mounted');
-      });
-    }
-    else {
-      this.audioPlaying = true;
-      this.audioMuted = false;
-    }
+    this.playAndFadeAudio()
+  },
+  beforeDestroy() {  
+    // set data for fading out audio
+    this.leavingPage = true
+    let sound = document.getElementById('bgAudio');
+    this.audioTimeAtStartPageLeave = sound.currentTime
   }
 }
 </script>
