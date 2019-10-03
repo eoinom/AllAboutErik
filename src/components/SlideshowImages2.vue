@@ -1,5 +1,5 @@
 <template>
-<div>
+  <div>
     <b-carousel
       id="carousel-roots&youth"
       v-model="slide"
@@ -8,17 +8,19 @@
       background="#ababab"
       img-width="1024"
       img-height="480"
-      style="text-shadow: 1px 1px 2px #333; "
       @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd" 
+      @sliding-end="onSlideEnd"
+      class="carousel" 
     >
       <b-carousel-slide
         v-for="(image, iImg) in images"
         :key="iImg"
         caption=""
         text=""
-        :img-src="image" >
-      </b-carousel-slide>
+        :img-src="image"
+        class="carousel-slide"
+        :style="vignetteStyles"
+      />
     </b-carousel>
 
   </div>
@@ -39,7 +41,9 @@ export default {
   data() {
     return {
       slide: 0,
-      sliding: null
+      sliding: null,
+      windowWidth: 0,
+      windowHeight: 0,
     };
   },
 
@@ -49,6 +53,12 @@ export default {
     },
     currentImg() {
       return this.images[this.slide]
+    },
+    vignetteStyles() {
+      return {
+        '--blur': (0.1*this.windowWidth) + 'px',
+        '--spread': (0.05*this.windowWidth) + 'px'
+      }
     }
   },
 
@@ -62,12 +72,22 @@ export default {
   },
 
   mounted() {
+    this.windowWidth = window.innerWidth
+    this.windowHeight = window.innerHeight
+
+    this.$nextTick(() => {
+      window.addEventListener('resize', () => {
+        this.windowWidth = window.innerWidth
+        this.windowHeight = window.innerHeight
+      });
+    })
   }
 };
 </script>
 
 
 <style>
+
 
 @font-face {
   font-family: NeueHaasGroteskText Pro65;
@@ -89,6 +109,29 @@ export default {
   text-shadow: 2px 2px 5px rgba(0,0,0,0.65);
   line-height: 43px;
   letter-spacing: 2px;    
+}
+
+.carousel {
+  text-shadow: 1px 1px 2px #333;
+}
+
+  /* For vignette effect, see https://benjaminhorn.io/code/proper-lens-vignette-with-css/ & 
+  https://codepen.io/beije/pen/zxjeae */
+.carousel-slide::after {
+  content: '';
+  position: absolute;
+  
+  /* Center element on the middle of it's parent */
+  top: 50%;
+  left: 50%;    
+  
+  transform: translate(-50%,-50%);  /* Reset back the image so it's center is locked on the center of the parent */
+  
+  width: 115%;
+  padding-bottom: 115%;
+  
+  box-shadow: inset 0px 0px var(--blur) var(--spread) rgba(0,0,0,0.8), inset 0px 0px var(--blur) var(--spread) rgba(0,0,0,0.8);
+  border-radius: 50%;
 }
 
 </style>
