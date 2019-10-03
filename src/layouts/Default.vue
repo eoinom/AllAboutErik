@@ -373,7 +373,7 @@ body {
 }
 .page-enter,
 .page-leave-active {
-  opacity: 0
+  opacity: 0;
 }
 
 
