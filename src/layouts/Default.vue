@@ -36,7 +36,7 @@
             </template>
           </image-component> -->
           <!-- <image-component imageFile="submenu-musical-journey.jpg" /> -->
-          <router-link :to="activeNav.to">
+          <g-link :to="activeNav.to">
             <!-- Maybe try ading a v-for loop of g-image with src to graphql nodes, add a hidden class and activate the one based on active Nav -->
             <div v-for="edge in $static.NavItems.edges" :key="edge.node.text">
               <g-image v-if="edge.node.img != null && edge.node.text === activeNav.text" :src="edge.node.img" />
@@ -44,18 +44,18 @@
             </div>
             <!-- <g-image :src="activeNav.img" /> -->
             <!-- <img :src="activeImg" /> -->
-          </router-link>
+          </g-link>
           <!-- <image-component :imageFile="activeNav.img" /> -->
         </div> 
 
         <div class="submenu-text-container">
-          <router-link :to="activeNav.to" class="verb-text">{{ activeNav.verb }}</router-link>
+          <g-link :to="activeNav.to" class="verb-text">{{ activeNav.verb }}</g-link>
           <br>
-          <router-link :to="activeNav.to" class="title-text">{{ activeNav.title }}</router-link>
+          <g-link :to="activeNav.to" class="title-text">{{ activeNav.title }}</g-link>
 
           <div v-if="showSubPageLinks" class="submenu-nav-container">
             <nav v-for="subPage in activeNav.subPages" :key="subPage.subPageText">
-              <router-link :to="subPage.subPageTo" class="nav_item" @mouseover.native="onSubNavLinkHover(subPage)">{{ subPage.subPageText.toUpperCase() }}</router-link>
+              <g-link :to="subPage.subPageTo" class="nav_item" @mouseover.native="onSubNavLinkHover(subPage)">{{ subPage.subPageText.toUpperCase() }}</g-link>
             </nav>
           </div>
         </div>
