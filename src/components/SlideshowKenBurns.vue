@@ -205,6 +205,25 @@ export default {
     justify-content: center;
   }
 
+  /* For vignette effect, see https://benjaminhorn.io/code/proper-lens-vignette-with-css/ & 
+  https://codepen.io/beije/pen/zxjeae */
+   &__slides:after {
+    content: '';
+    position: absolute;
+    
+    /* Center element on the middle of it's parent */
+    top: 50%;
+    left: 50%;    
+    
+    transform: translate(-50%,-50%);  /* Reset back the image so it's center is locked on the center of the parent */
+    
+    width: 110%;
+    height: 110%;
+    
+    box-shadow: inset 0px 0px 150px 60px rgba(0,0,0,0.8), inset 0px 0px 150px 60px rgba(0,0,0,0.8);
+    border-radius: 15%;
+  }
+
   &__image {
     position: absolute;
     width: auto;
@@ -225,5 +244,44 @@ export default {
   &__enter, &__leaveTo {
     opacity: 0;
   }  
+}
+
+
+/* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+.SlideshowKenBurns {
+  &__slides:after { 
+      box-shadow: inset 0px 0px 50px 20px rgba(0,0,0,0.8), inset 0px 0px 50px 20px rgba(0,0,0,0.8);
+    }
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+.SlideshowKenBurns {
+  &__slides:after {
+      box-shadow: inset 0px 0px 75px 30px rgba(0,0,0,0.8), inset 0px 0px 75px 30px rgba(0,0,0,0.8);
+    }
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+.SlideshowKenBurns {
+  &__slides:after {
+      box-shadow: inset 0px 0px 100px 40px rgba(0,0,0,0.8), inset 0px 0px 100px 40px rgba(0,0,0,0.8);
+    }
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+.SlideshowKenBurns {
+  &__slides:after {
+      box-shadow: inset 0px 0px 125px 50px rgba(0,0,0,0.8), inset 0px 0px 125px 50px rgba(0,0,0,0.8);
+    }
+  }
 }
 </style>
