@@ -39,7 +39,7 @@
 
           <div class="videoThumbnailContainer">
             
-            <div class="thumbnailImgContainer">
+            <div class="thumbnailImgContainer" :style="vignetteStyles">
               <g-image :alt="video.title" v-if="video.thumbnailImg != null" :src="video.thumbnailImg" class="thumbnailImg"/>
             </div>
 
@@ -175,7 +175,9 @@ export default {
     return {
       // imgIndex: null,
       videoIndex: null,
-      videoIndexHover: null
+      videoIndexHover: null,
+      windowWidth: 0,
+      windowHeight: 0,
     }
   },
 
@@ -203,6 +205,12 @@ export default {
     images() {    
       return this.slides.map(a => a.img)
     },
+    vignetteStyles() {
+      return {
+        '--blur': (0.0586*this.windowWidth),    // in px  (about 150px for a 2560px wide window)
+        '--spread': (0.0234*this.windowWidth)   // in px  (about 60px for a 2560px wide window)
+      }
+    }
   },
 
   methods: {
@@ -216,6 +224,15 @@ export default {
   },
 
   mounted() {
+    this.windowWidth = window.innerWidth
+    this.windowHeight = window.innerHeight
+
+    this.$nextTick(() => {
+      window.addEventListener('resize', () => {
+        this.windowWidth = window.innerWidth
+        this.windowHeight = window.innerHeight
+      });
+    })
   },
 
   components: {
@@ -366,7 +383,9 @@ https://codepen.io/beije/pen/zxjeae */
   /* To form a square, the padding-bottom, needs to have the same value as the width property */
   padding-bottom: 120%;
   
-  box-shadow: inset 0px 0px 150px 60px rgba(0,0,0,0.8), inset 0px 0px 150px 60px rgba(0,0,0,0.8);
+  --blur_px: calc(var(--blur) * 1px);
+  --spread_px: calc(var(--spread) * 1px);
+  box-shadow: inset 0px 0px var(--blur_px) var(--spread_px) rgba(0,0,0,0.8), inset 0px 0px var(--blur_px) var(--spread_px) rgba(0,0,0,0.8);
   border-radius: 50%;
 }
 
@@ -536,6 +555,10 @@ https://codepen.io/beije/pen/zxjeae */
     font-size: 1.2rem;
     text-align: center;
   }
+  .thumbnailImgContainer:after {
+    --blur_px: calc(var(--blur) * 2px);
+    --spread_px: calc(var(--spread) * 2px);
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -562,6 +585,10 @@ https://codepen.io/beije/pen/zxjeae */
     font-size: 1.32rem;
     text-align: center;
   }
+  .thumbnailImgContainer:after {
+    --blur_px: calc(var(--blur) * 2px);
+    --spread_px: calc(var(--spread) * 2px);
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -580,6 +607,10 @@ https://codepen.io/beije/pen/zxjeae */
   }
   .videoDurationText {
     font-size: 1.2972rem;
+  }
+  .thumbnailImgContainer:after {
+    --blur_px: calc(var(--blur) * 2px);
+    --spread_px: calc(var(--spread) * 2px);
   }
 }
 
