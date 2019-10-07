@@ -1,5 +1,7 @@
 ---
 pageTitle: The Episodes
+headerBgImg: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/v1570486955/Musical%20Journey/The%20Episodes/header-image_episode_7_r20bvr.png
 titleImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1570483854/Musical%20Journey/The%20Episodes/the_episodes_h486wp.png
 mainImg: >-
