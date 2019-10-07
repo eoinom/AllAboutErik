@@ -7,9 +7,7 @@
 </template>
 
 <page-query>
-{
-	
-}
+
 </page-query>
 
 
