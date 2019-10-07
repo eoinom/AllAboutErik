@@ -7,7 +7,27 @@
 </template>
 
 <page-query>
-
+{
+  TheEpisodes: allTheEpisodes {
+    edges {
+      node {
+        id
+        pageTitle
+        titleImg
+        content
+        mainImg
+        videos {
+          title
+          subText
+          url
+          thumbnailImg
+          orderNo
+          duration
+        }
+      }
+    }
+  }	
+}
 </page-query>
 
 
@@ -16,7 +36,7 @@
 export default { 
   metaInfo() {
     return {
-      //title: this.$page.RootsAndYouth.edges[0].node.pageTitle
+      title: this.$page.TheEpisodes.edges[0].node.pageTitle
     }
   },
 
@@ -27,7 +47,16 @@ export default {
 
   computed: {
     titleImg() {
-      //return this.$page.RootsAndYouth.edges[0].node.headingImg
+      return this.$page.TheEpisodes.edges[0].node.titleImg
+    },    
+    mainImg(){
+      return this.$page.RootsAndYouth.edges[0].node.mainImg
+    },
+    mainText(){
+      return this.$page.RootsAndYouth.edges[0].node.content
+    },
+    videos() {
+      return this.$page.RootsAndYouth.edges[0].node.videos
     }
   },
 

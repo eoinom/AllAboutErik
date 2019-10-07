@@ -61,6 +61,13 @@ module.exports = {
         path: 'src/data/roots&youth/**/*.md',
         typeName: 'RootsAndYouth'
       }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/musical-journey/the-episodes/**/*.md',
+        typeName: 'TheEpisodes'
+      }
     }
   ]
 }
