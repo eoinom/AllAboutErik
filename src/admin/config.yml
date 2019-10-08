@@ -108,8 +108,9 @@ collections:
     slug: "{{slug}}"
     identifier_field: pageTitle
     fields:
-      - {label: "Page Title", name: "pageTitle", widget: "string"}  
-      - {label: "Title Image", name: "titleImg", widget: "image"}  
+      - {label: "Page Title", name: "pageTitle", widget: "string"}
+      - {label: "Header Background Image", name: "headerBgImg", widget: "image"}
+      - {label: "Title Image", name: "titleImg", widget: "image"}      
       - {label: 'Main text', name: 'body', widget: 'markdown', required: false} 
       - {label: 'Main image', name: 'mainImg', widget: 'image'} 
       - label: "Videos"
