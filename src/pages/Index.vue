@@ -4,7 +4,8 @@
     <b-container fluid>
       <div class="soundIconContainer">
         <span class="icon" v-b-tooltip.hover="{ variant: 'light' }" :title="tooltipText">
-          <font-awesome :icon="audioFontAwesomeIcon" @click="clickAudioIcon()" />
+          <!-- <font-awesome :icon="audioFontAwesomeIcon" @click="clickAudioIcon()" /> -->
+          <img alt="Play / mute background music" :src="audioIcon" class="audioIcon" @click="clickAudioIcon()" />
         </span>
       </div>
 
@@ -118,11 +119,16 @@ export default {
     audioFadeOutDuration() {
       return this.$page.HomePage.edges[0].node.bgAudioFadeOutDuration
     },
-    audioFontAwesomeIcon() {
-      if (!this.audioPlaying)
-        return ['fas', 'play']
-      else
-        return this.audioMuted ? ['fas', 'volume-mute'] : ['fas', 'volume-up']
+    // audioFontAwesomeIcon() {
+    //   if (!this.audioPlaying)
+    //     return ['fas', 'play']
+    //   else
+    //     return this.audioMuted ? ['fas', 'volume-mute'] : ['fas', 'volume-up']
+    // },
+    audioIcon() {
+      let path = '/assets/static/src/assets/images/'
+      let file = this.audioMuted ? 'sound-muted.png' : 'sound-playing.png'
+      return path + file   
     },
     tooltipText() {
       if (this.audioPlaying && !this.audioMuted) {
@@ -382,8 +388,13 @@ $scale-base-1: (1 + $scale / 100%);
 }
 
 .icon {
-  font-size: 3.5em;
+  font-size: 3.0em;
   color: white;
+}
+
+.audioIcon {
+  max-width: 72px;
+  height: auto;
 }
 
 .homePgCreditText {
@@ -414,7 +425,10 @@ $scale-base-1: (1 + $scale / 100%);
     z-index: 1000;
   }
   .icon {
-    font-size: 3.0em;
+    font-size: 2.5em;
+  }
+  .audioIcon {
+    max-width: 62px;
   }
 }
 
@@ -426,7 +440,10 @@ $scale-base-1: (1 + $scale / 100%);
     z-index: 1000;
   }
   .icon {
-    font-size: 2.5em;
+    font-size: 2.0em;
+  }
+  .audioIcon {
+    max-width: 52px;
   }
 }
 
