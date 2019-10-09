@@ -5,7 +5,8 @@
       <div class="soundIconContainer">
         <span class="icon" v-b-tooltip.hover="{ variant: 'light' }" :title="tooltipText">
           <!-- <font-awesome :icon="audioFontAwesomeIcon" @click="clickAudioIcon()" /> -->
-          <img alt="Play / mute background music" :src="audioIcon" class="audioIcon" @click="clickAudioIcon()" />
+          <g-image v-if="audioPlaying && !audioMuted" alt="Mute background music" src="~/assets/images/sound-playing.png" class="audioIcon" @click="clickAudioIcon()" />
+          <g-image v-if="!audioPlaying || audioMuted" alt="Play background music" src="~/assets/images/sound-muted.png" class="audioIcon" @click="clickAudioIcon()" />          
         </span>
       </div>
 
@@ -125,11 +126,6 @@ export default {
     //   else
     //     return this.audioMuted ? ['fas', 'volume-mute'] : ['fas', 'volume-up']
     // },
-    audioIcon() {
-      let path = '/assets/static/src/assets/images/'
-      let file = this.audioMuted ? 'sound-muted.png' : 'sound-playing.png'
-      return path + file   
-    },
     tooltipText() {
       if (this.audioPlaying && !this.audioMuted) {
         return 'Mute background music'
