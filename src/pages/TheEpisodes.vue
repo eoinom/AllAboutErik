@@ -27,7 +27,7 @@
         <b-col cols="12" xl="5" class="videoContentContainer px-5">
           <b-row align-v="center" align-h="center" class="mb-0 pt-2 pt-md-3 pt-xl-4">
             <b-col cols="auto" id="videoTextContainer" class="mt-2">
-              <h2 v-if="video.title != null" class="videoTitle mb-4"> {{ video.title }} </h2>
+              <h2 v-if="video.title != null" class="videoTitle mb-4"> {{ video.shortTitle }} </h2>
               <p v-if="video.subText != null" class="videoSubText" :style="shortText(video.subText)"> {{ video.subText }} </p>
             </b-col>
           </b-row>
@@ -79,6 +79,7 @@
         mainImg
         videos {
           title
+          shortTitle
           subText
           url
           thumbnailImg
