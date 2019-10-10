@@ -1,6 +1,4 @@
 <template>
-  
-
   <Layout> 
     <header id="header" :style="headerStyle">
       <g-image :src="titleImg" id="titleImg" class="my-4" />
@@ -17,11 +15,22 @@
 
       <!-- VIDEOS -->
       <b-row no-gutters v-for="(video, index) in videos" :key="video.title" @click="videoIndex = index" @mouseover="videoIndexHover = index" @mouseleave="videoIndexHover = null" style="cursor:pointer" class="mt-3">
+        
         <b-col cols="12" xl="7" class="thumbnailImgContainer">
           <g-image :alt="video.title" v-if="video.thumbnailImg != null" :src="video.thumbnailImg" class="thumbnailImg"/>
+          
           <span v-if="index < videos.length-1" class="imgNumberText" > 
             {{ index + 1 }} 
           </span>
+
+          <div class="thumbnailImgOverlay">
+            <p class="mb-0 mb-lg-1 mb-xl-2">
+              <g-image alt="Play symbol" v-if="video.url != null" src="~/assets/images/playarrowcircle.png" class="thumbnailPlayVideoImg thumbnailImgHovered" />
+            </p>
+            <p v-if="video.duration != null" class="videoDurationText thumbnailImgHovered">
+              {{ durationInMinsText(video.duration) }} 
+            </p>
+          </div>
         </b-col>
 
         <b-col cols="12" xl="5" class="videoContentContainer px-5">
@@ -157,7 +166,8 @@ export default {
       if (text.length <= 30) {
         return {
           textAlign: "center",
-          marginTop: "32px"
+          marginTop: "32px",
+          marginBottom: "32px"
         }
       }
     }
@@ -267,6 +277,38 @@ export default {
   margin-left: 4.5%;
 }
 
+.thumbnailImgOverlay {
+  display: none;
+  color: #FFFFFF;
+  position: absolute;
+  text-align: center;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  opacity: 0.8;
+  transition: opacity 0.25s ease;
+}
+
+.thumbnailImgOverlay:hover {
+  opacity: 1;
+}
+
+.thumbnailImgOverlay .thumbnailPlayVideoImg {
+  width: 18%;
+  height: auto;  
+  position: relative;
+  padding-top: 12%;
+}
+
+.thumbnailImgOverlay .videoDurationText {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.65);
+  padding-top: 5px;
+}
+
 .videoContentContainer {
   background-color: white;
 }
@@ -332,12 +374,26 @@ export default {
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
+@media (max-width: 400px) {
+  #titleImg {
+    max-width: 60%;
+  }
+}
+@media (min-width: 400.01px) and (max-width: 575.98px) {
+  #titleImg {
+    max-width: 65%;
+  }
+}
+
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media (max-width: 575.98px) {  
   #mainImgText {
-    font-size: 1.2rem;  /* 19.2px with 16px default size */  
+    /* font-size: 1.2rem;  19.2px with 16px default size       */
+    /* line-height: 27px;   */
+    font-size: 3.33vw;
+    line-height: 4.68vw; 
+
     letter-spacing: 1px;
-    line-height: 27px;  
     bottom: 0px;
     margin-left: 6%;
     margin-right: 6%;
@@ -354,21 +410,29 @@ export default {
   .videoSubText {
     font-size: 3.5vw;
     line-height: 4.5vw;
+    margin-bottom: 24px;
   }
   .playIconRow {
-    position: relative;
-    bottom: 5px;
-    left: 0;
-    margin: 0;
+    display: none;
+  }
+  .thumbnailImgOverlay {
+    display: inline;
+  }
+  .thumbnailImgOverlay .videoDurationText {
+    /* font-size: 0.8414rem; */
+    font-size: 3.5vw;
   }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   #mainImgText {
-    font-size: 1.35rem;  /* 20.83px with 16px default size */  
+    /* font-size: 1.35rem;  20.83px with 16px default size       */
+    /* line-height: 30px;   */
+    font-size: 2.712vw;
+    line-height: 3.906vw; 
+
     letter-spacing: 1px;
-    line-height: 30px;  
     bottom: 19px;
     margin-left: 8%;
     margin-right: 8%;
@@ -385,12 +449,17 @@ export default {
   .videoSubText {
     font-size: 3vw;
     line-height: 4vw;
+    margin-bottom: 24px;
   }
   .playIconRow {
-    position: relative;
-    bottom: 5px;
-    left: 0;
-    margin: 0;
+    display: none;
+  }
+  .thumbnailImgOverlay {
+    display: inline;
+  }
+  .thumbnailImgOverlay .videoDurationText {
+    /* font-size: 0.8414rem; */
+    font-size: 3vw;
   }
 }
 
