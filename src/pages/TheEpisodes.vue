@@ -6,33 +6,33 @@
       <g-image :src="titleImg" id="titleImg" class="my-4" />
     </header>
 
-    <b-container fluid id="mainContainer" class="pb-5">
+    <b-container fluid id="mainContainer" class="pb-5 px-1">
 
       <b-row no-gutters style="" class="mt-2">
         <b-col class="">
-          <g-image :src="mainImg" id="" class="" />
+          <g-image :src="mainImg" id="mainImg" class="" />
           <span v-html="mainText" id="mainImgText" />
         </b-col>
       </b-row>
 
       <!-- VIDEOS -->
       <b-row no-gutters v-for="(video, index) in videos" :key="video.title" @click="videoIndex = index" @mouseover="videoIndexHover = index" @mouseleave="videoIndexHover = null" style="cursor:pointer" class="mt-3">
-        <b-col class="thumbnailImgContainer">
+        <b-col cols="12" xl="7" class="thumbnailImgContainer">
           <g-image :alt="video.title" v-if="video.thumbnailImg != null" :src="video.thumbnailImg" class="thumbnailImg"/>
           <span v-if="index < videos.length-1" class="imgNumberText" > 
             {{ index + 1 }} 
           </span>
         </b-col>
 
-        <b-col class="videoContentContainer px-5">
-          <b-row align-v="center" align-h="center" class="mb-0 pt-4">
+        <b-col cols="12" xl="5" class="videoContentContainer px-5">
+          <b-row align-v="center" align-h="center" class="mb-0 pt-2 pt-md-3 pt-xl-4">
             <b-col cols="auto" id="videoTextContainer" class="mt-2">
               <h2 v-if="video.title != null" class="videoTitle mb-4"> {{ video.title }} </h2>
               <p v-if="video.subText != null" class="videoSubText" :style="shortText(video.subText)"> {{ video.subText }} </p>
             </b-col>
           </b-row>
 
-          <b-row align-h="center" class="playIconRow mb-0 py-4">
+          <b-row align-h="center" class="playIconRow mb-0 py-2 py-md-3 py-xl-4">
             <b-col cols="auto" id="playIconCol" style="text-align:right" class="pr-1">
               <g-image alt="Play symbol" src="~/assets/images/playarrowcircle-black.png" class="playIconImg"/>
               <g-image alt="Play symbol" src="~/assets/images/playarrowcircle-hover.png" class="playIconImg-hover"/>
@@ -202,24 +202,28 @@ export default {
 
 #header {
   background-image: var(--headerBgImg);
+  background-position: center;
   background-color: rgba(0, 0, 0, 0.32);
-  background-color: #ADADAD;
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   padding-top: 12.5px;
   padding-bottom: 12.5px;
 }
 
-#headerImg {
-  /* opacity: 0.5; */
-  /* z-index: 200000;
-  color: white;
-  background-color: white; */
+#titleImg {
+  max-width: 70%;
 }
 
 #mainContainer {
+  width: 100%;
   max-width: 1316px;
   padding: 0;
   text-align: center;
+}
+
+#mainImg {
+  max-width: 100%;
 }
 
 #mainImgText {
@@ -227,7 +231,7 @@ export default {
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
   font-weight: 500;
-  font-size: 28px;
+  font-size: 1.75rem;  /* 28px with 16px default size */  
   letter-spacing: 1px;
   text-align: center;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.29);
@@ -241,10 +245,11 @@ export default {
 }
 
 .thumbnailImgContainer {
-  width: 100%;
+  max-width: 100%;
 }
 
 .thumbnailImg {
+  width: 100%;
 }
 
 .imgNumberText {
@@ -252,10 +257,9 @@ export default {
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
   font-weight: 500;
-  font-size: 8.125rem;  /* 130px with 16px default size */  
-  letter-spacing: 3px;
+  font-size: 8.125rem;   /* 130px with 16px default size   */
+  /* font-size: 11vw; */
   line-height: 130px;  
-
   position: absolute;
   bottom: 25px;
   left: 0;
@@ -329,22 +333,154 @@ export default {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-
+  #mainImgText {
+    font-size: 1.2rem;  /* 19.2px with 16px default size */  
+    letter-spacing: 1px;
+    line-height: 27px;  
+    bottom: 0px;
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  .imgNumberText {
+    font-size: 11vw;
+    line-height: 11vw; 
+    bottom: 3vw;
+  }
+  .videoTitle {
+    /* font-size: 2.9375rem; */
+    /* line-height: 47px;   */
+    font-size: 6vw;
+    line-height: 6vw; 
+    letter-spacing: 5px;
+  }
+  .videoSubText {
+    /* font-size: 1.4375rem; */
+    /* line-height: 35px; */
+    font-size: 3.5vw;
+    line-height: 4.5vw;
+    text-align: justify;
+    letter-spacing: 1px;  
+  }
+  .playIconRow {
+    position: relative;
+    bottom: 5px;
+    left: 0;
+    margin: 0;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-
+  #mainImgText {
+    font-size: 1.35rem;  /* 20.83px with 16px default size */  
+    letter-spacing: 1px;
+    line-height: 30px;  
+    bottom: 19px;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  .imgNumberText {
+    font-size: 11vw;
+    line-height: 11vw; 
+    bottom: 3vw;
+  }
+  .videoTitle {
+    /* font-size: 2.9375rem; */
+    /* line-height: 47px;   */
+    font-size: 6vw;
+    line-height: 6vw; 
+    letter-spacing: 5px;
+  }
+  .videoSubText {
+    /* font-size: 1.4375rem; */
+    /* line-height: 35px; */
+    font-size: 3vw;
+    line-height: 4vw;
+    text-align: justify;
+    letter-spacing: 1px;  
+  }
+  .playIconRow {
+    position: relative;
+    bottom: 5px;
+    left: 0;
+    margin: 0;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-
+  #mainImgText {
+    font-size: 1.5rem;  /* 19.2px with 16px default size */  
+    letter-spacing: 1px;
+    line-height: 34px;  
+    bottom: 21px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .imgNumberText {
+    font-size: 11vw;
+    line-height: 11vw; 
+    bottom: 3vw;
+  }
+  .videoTitle {
+    /* font-size: 2.9375rem; */
+    /* line-height: 47px;   */
+    /* font-size: 4.7vw;
+    line-height: 4.7vw;  */
+    letter-spacing: 5px;
+  }
+  .videoSubText {
+    /* font-size: 1.4375rem; */
+    /* line-height: 35px; */
+    /* font-size: 2.325vw;
+    line-height: 3.103vw; */
+    text-align: justify;
+    letter-spacing: 1px;  
+  }
+  .playIconRow {
+    position: relative;
+    bottom: 5px;
+    left: 0;
+    margin: 0;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-
+  #mainImgText {
+    font-size: 1.625rem;  /* 19.2px with 16px default size */  
+    letter-spacing: 1px;
+    line-height: 36.5px;  
+    bottom: 23px;
+    margin-left: 11%;
+    margin-right: 11%;
+  }
+  .imgNumberText {
+    font-size: 11vw;
+    line-height: 11vw; 
+    bottom: 3vw;
+  }
+  .videoTitle {
+    /* font-size: 2.9375rem; */
+    /* line-height: 47px;   */
+    /* font-size: 4vw;
+    line-height: 4vw;  */
+    letter-spacing: 5px;
+  }
+  .videoSubText {
+    /* font-size: 1.4375rem; */
+    /* line-height: 35px; */
+    /* font-size: 2vw;
+    line-height: 3vw; */
+    text-align: justify;
+    letter-spacing: 1px;  
+  }
+  .playIconRow {
+    position: relative;
+    bottom: 5px;
+    left: 0;
+    margin: 0;
+  }
 }
 
 </style>
