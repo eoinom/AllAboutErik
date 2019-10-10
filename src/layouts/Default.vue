@@ -2,8 +2,8 @@
   <div class="layout">
     <!-- <header class="header"> -->
       <div class="openbtn">
-        <g-image alt="Open navigation menu" src="~/assets/images/menu-open.png" width="135px" style="cursor:pointer" immediate=true @click="openNav()" />
-        <g-image alt="Open navigation menu" src="~/assets/images/menu-open-hover.png" width="135px" style="cursor:pointer" immediate=true @click="openNav()" class="img-hover"/>
+        <g-image alt="Open navigation menu" src="~/assets/images/menu-open.png" width="135px" style="cursor:pointer; vertical-align:baseline;" immediate=true @click="openNav()" />
+        <g-image alt="Open navigation menu" src="~/assets/images/menu-open-hover.png" width="135px" style="cursor:pointer; vertical-align:baseline;" immediate=true @click="openNav()" class="img-hover"/>
       </div>
     <!-- </header> -->
     
