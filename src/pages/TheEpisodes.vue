@@ -347,19 +347,12 @@ export default {
     bottom: 3vw;
   }
   .videoTitle {
-    /* font-size: 2.9375rem; */
-    /* line-height: 47px;   */
     font-size: 6vw;
-    line-height: 6vw; 
-    letter-spacing: 5px;
+    line-height: 6vw;
   }
   .videoSubText {
-    /* font-size: 1.4375rem; */
-    /* line-height: 35px; */
     font-size: 3.5vw;
     line-height: 4.5vw;
-    text-align: justify;
-    letter-spacing: 1px;  
   }
   .playIconRow {
     position: relative;
@@ -385,19 +378,12 @@ export default {
     bottom: 3vw;
   }
   .videoTitle {
-    /* font-size: 2.9375rem; */
-    /* line-height: 47px;   */
     font-size: 6vw;
-    line-height: 6vw; 
-    letter-spacing: 5px;
+    line-height: 6vw;
   }
   .videoSubText {
-    /* font-size: 1.4375rem; */
-    /* line-height: 35px; */
     font-size: 3vw;
     line-height: 4vw;
-    text-align: justify;
-    letter-spacing: 1px;  
   }
   .playIconRow {
     position: relative;
@@ -422,21 +408,6 @@ export default {
     line-height: 11vw; 
     bottom: 3vw;
   }
-  .videoTitle {
-    /* font-size: 2.9375rem; */
-    /* line-height: 47px;   */
-    /* font-size: 4.7vw;
-    line-height: 4.7vw;  */
-    letter-spacing: 5px;
-  }
-  .videoSubText {
-    /* font-size: 1.4375rem; */
-    /* line-height: 35px; */
-    /* font-size: 2.325vw;
-    line-height: 3.103vw; */
-    text-align: justify;
-    letter-spacing: 1px;  
-  }
   .playIconRow {
     position: relative;
     bottom: 5px;
@@ -459,21 +430,6 @@ export default {
     font-size: 11vw;
     line-height: 11vw; 
     bottom: 3vw;
-  }
-  .videoTitle {
-    /* font-size: 2.9375rem; */
-    /* line-height: 47px;   */
-    /* font-size: 4vw;
-    line-height: 4vw;  */
-    letter-spacing: 5px;
-  }
-  .videoSubText {
-    /* font-size: 1.4375rem; */
-    /* line-height: 35px; */
-    /* font-size: 2vw;
-    line-height: 3vw; */
-    text-align: justify;
-    letter-spacing: 1px;  
   }
   .playIconRow {
     position: relative;
