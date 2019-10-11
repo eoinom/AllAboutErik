@@ -4,7 +4,7 @@
       <g-image :src="titleImg" id="titleImg" class="my-4" />
     </header>
 
-    <b-container fluid id="mainContainer" class="pb-5 px-1">
+    <b-container fluid id="mainContainer" class="pb-5 pb-xl-3 px-1">
 
       <b-row no-gutters style="" class="mt-2">
         <b-col class="">
@@ -72,6 +72,11 @@
       @close="videoIndex = null"
     />
 
+    <ScrollToTop 
+      text="BACK TO THE TOP"
+      :includeArrow="true"
+    />
+
   </Layout>
 </template>
 
@@ -104,6 +109,7 @@
 
 <script scoped>
 import VideoLightBox from '../components/VideoLightBox.vue'
+import ScrollToTop from '../components/ScrollToTop.vue'
 
 export default { 
   metaInfo() {
@@ -177,7 +183,8 @@ export default {
   },
 
   components: {
-    VideoLightBox
+    VideoLightBox,
+    ScrollToTop
   },
 }
 </script>
@@ -342,6 +349,10 @@ export default {
   left: 50%;
   margin-left: -120px;
   margin-top: -30px;
+}
+
+.playIconRow:hover {
+  color: #EED047;
 }
 
 .playVideoText {
