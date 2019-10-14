@@ -123,4 +123,30 @@ collections:
           - {label: "Vimeo Url", name: "url", widget: "string"}
           - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}  
           - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
-          - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0}          
+          - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0}
+  - name: "musical-friends"
+    label: "Musical Friends"
+    folder: "src/data/musical-journey/musical-friends"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: pageTitle
+    fields:
+      - {label: "Page Title", name: "pageTitle", widget: "string"}
+      - {label: "Background Image", name: "backgroundImg", widget: "image"}
+      - {label: "Title Image", name: "titleImg", widget: "image"}      
+      - {label: 'Main text', name: 'body', widget: 'markdown', required: false}
+      - label: "Friends"
+        name: "friends"
+        widget: "list"
+        fields: 
+          - {label: 'Name / Title', name: 'name', widget: 'string'}
+          - {label: 'Text', name: 'text', widget: 'markdown'}
+          - {label: "Link (url)", name: "link", widget: "string"}
+          - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
+          - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
+          - {label: "Image Orientation", name: "imgOrientation", widget: "select", options: ["landscape", "portrait"]}
+          - label: "Image Position"
+            name: "imgPosition"
+            widget: "select"
+            options: ["top", "bottom", "left", "right"]
+          
