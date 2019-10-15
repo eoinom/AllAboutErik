@@ -1,6 +1,27 @@
 <template>
   <Layout> 
-    <b-container fluid class="main-col">
+    <!-- <b-container fluid class="main-col"> -->
+    <b-container class="main-col">
+
+      <friend-card
+        :friend="friends[0]"
+        imgContainerHeight=350
+        imgContainerWidth=690
+        imgWidth=690
+        class="mb-3"
+      />
+
+      <friend-card
+        :friend="friends[2]"
+        imgContainerHeight=500
+        class="mb-3"
+      />
+
+      <friend-card
+        :friend="friends[11]"
+        imgContainerHeight=500
+        class="mb-3"
+      />
 
     </b-container>
   </Layout>
@@ -33,6 +54,7 @@
 
 
 <script scoped>
+import FriendCard from '../../components/FriendCard.vue'
 
 export default { 
   metaInfo() {
@@ -49,6 +71,9 @@ export default {
   computed: {
     titleImg() {
       return this.$page.MusicalFriends.edges[0].node.titleImg
+    },
+    friends() {
+      return this.$page.MusicalFriends.edges[0].node.friends
     }
   },
 
@@ -59,6 +84,7 @@ export default {
   },
 
   components: {
+    FriendCard
   },
 }
 </script>
