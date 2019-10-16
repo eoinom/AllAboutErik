@@ -1,15 +1,18 @@
 <template>
 
+  <!-- <b-container id="outerContainer" class="" :style="outerContainerDims"> -->
   <b-container id="outerContainer" class="">
 
     <b-row no-gutters class="innerContainerRow">
 
-      <b-col :order="imgOrder" :cols="imgCols" class="thumbnailImgCol" :style="imgContainerDims">
+      <!-- <b-col :order="imgOrder" :cols="imgCols" class="thumbnailImgCol" :style="imgContainerDims"> -->
+      <b-col :order="imgOrder" class="thumbnailImgCol" :style="imgContainerDims">
         <g-image :src="friend.thumbnailImg" class="thumbnailImg" :style="imgDims" />
       </b-col>
 
-      <b-col order="1" :cols="textCols" class="px-3 py-2 mt-1">
-        <h3 class="textTitle"> {{ friend.name }} </h3>
+      <!-- <b-col order="1" :cols="textCols" class="px-3 py-2 mt-0"> -->
+      <b-col order="1" class="px-3 py-2 mt-0">
+        <h3 class="textTitle mb-0"> {{ friend.name }} </h3>
         <p class="text mb-2"> {{ friend.text }} </p>
         <button class="seeMoreBtn mt-0 mb-1">...see more</button>
       </b-col>
@@ -52,6 +55,14 @@ export default {
   },
 
   computed: {
+    outerContainerDims() {
+      let css = {}
+      if (this.friend.imgPosition == 'top' || this.friend.imgPosition == 'bottom')
+        css.width = this.imgContainerWidth + 'px'
+      else
+        css.height = this.imgContainerHeight + 'px'
+      return css
+    },
     imgContainerDims() {
       let css = {}
       if (this.imgContainerWidth > 0)
@@ -71,9 +82,9 @@ export default {
     imgOrder() {
       return (this.friend.imgPosition == 'top' || this.friend.imgPosition == 'left') ? 0 : 2
     },
-    imgCols() {
-      return (this.friend.imgPosition == 'top' || this.friend.imgPosition == 'bottom') ? "12" : "6"
-    },
+    // imgCols() {
+    //   return (this.friend.imgPosition == 'top' || this.friend.imgPosition == 'bottom') ? "12" : "6"
+    // },
     textCols() {
       return (this.friend.imgPosition == 'top' || this.friend.imgPosition == 'bottom') ? "12" : "6"
     }
@@ -99,6 +110,8 @@ export default {
   background-color: white;
   padding: 0;
   border-radius: 9px;
+  /* width: 375px; */
+  width: 100%;
 }
 
 .innerContainerRow {
@@ -109,43 +122,43 @@ export default {
 }
 
 .textTitle {
-  font-family: 'Lora', serif;
+  font-family: serif;
   font-feature-settings: 'liga';
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 3px;
-  text-align: left;
   line-height: 24px;
+  text-align: left;
   text-transform: uppercase;
   color: black;
 }
 
 .text {
-  font-family: 'Lora', serif;
+  font-family: serif;
   font-feature-settings: 'liga';
   font-weight: 400;
   font-size: 17px;
   letter-spacing: 1px;
-  text-align: justify;
   line-height: 21px;
+  text-align: justify;
   color: black;
 }
 
 .seeMoreBtn {
   width: 182px;
   height: 38px;
-  font-family: 'Lora', serif;
-  font-feature-settings: 'liga';
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: 1px;
-  color: white;
   background-color: #333333;
-  text-align: center;
   padding: 0px;
   border-color: transparent;
   border-radius: 9px;
+  font-family: 'Lora', serif;
+  font-feature-settings: 'liga';
+  font-weight: 400;
+  font-size: 17px;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-align: center;
+  color: white;
   opacity: 1;
 }
 
