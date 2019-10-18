@@ -26,10 +26,12 @@
         <g-image :src="friend.thumbnailImg" class="thumbnailImg" :style="imgDims" />
       </b-col>
 
-      <b-col order="1" cols="12" class="px-3 py-2 mt-0 textCol">
+      <b-col order="1" cols="12" class="px-3 my-2 mt-0 textCol">
         <h3 class="textTitle mb-0 mt-1"> {{ friend.name }} </h3>
         <p class="text mb-2"> {{ friend.text }} </p>
+        <div class="seeMoreBtnContainer">
         <button class="seeMoreBtn mt-0 mb-1">...see more</button>
+        </div>
       </b-col>
 
     </b-row>
@@ -41,10 +43,12 @@
         <g-image :src="friend.thumbnailImg" class="thumbnailImg" :style="imgDims" />
       </b-col>
       
-      <b-col order="1" class="px-3 py-2 mt-0 textCol">
+      <b-col order="1" class="px-3 my-2 mt-0 textCol">
         <h3 class="textTitle mb-0"> {{ friend.name }} </h3>
         <p class="text mb-2"> {{ friend.text }} </p>
+        <div class="seeMoreBtnContainer">
         <button class="seeMoreBtn mt-0 mb-1">...see more</button>
+        </div>
       </b-col>
 
     </b-row>
@@ -173,10 +177,13 @@ export default {
   /* height: var(--height); */
   border-radius: 9px;
   overflow: hidden;
+
+  position: relative;
 }
 
 .textCol {
   background-color: white;
+  padding-bottom: 38px;  /* for the see more button */
 }
 
 .textTitle {
@@ -200,6 +207,11 @@ export default {
   line-height: 21px;
   text-align: justify;
   color: black;
+}
+
+.seeMoreBtnContainer {
+  position: absolute;
+  bottom: 0;
 }
 
 .seeMoreBtn {
