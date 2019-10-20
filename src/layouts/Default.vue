@@ -252,7 +252,7 @@ body {
   padding-bottom: 35px;
   top: 57px;
   left: 57px;
-  position: absolute;  
+  position: fixed;  
   width: 35px;
   z-index: 1000;
 }
