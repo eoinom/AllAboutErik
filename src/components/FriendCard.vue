@@ -20,7 +20,7 @@
     </b-row> -->
 
     <!-- Top / Bottom -->
-    <b-row v-if="imgPosition == 'top' || imgPosition == 'bottom'" no-gutters class="innerContainerRow">
+    <b-row v-if="imgPosition == 'top' || imgPosition == 'bottom'" no-gutters :style="innerContainerDims" class="innerContainerRow">
 
       <b-col :order="imgOrder" cols="12" class="thumbnailImgCol" :style="imgContainerDims">
         <g-image :src="friend.thumbnailImg" class="thumbnailImg" :style="imgDims" />
@@ -88,6 +88,10 @@ export default {
     imgMoveDownPercent: {
       default: 0,
       type: Number
+    },
+    height: {
+      default: 0,
+      type: Number
     }
   },
 
@@ -108,6 +112,13 @@ export default {
         if (this.imgContainerHeight > 0) {
           css.height = this.imgContainerHeight + 'px'
         }
+      }
+      return css
+    },
+    innerContainerDims() {
+      let css = {}
+      if (this.height > 0) {
+        css.height = this.height
       }
       return css
     },

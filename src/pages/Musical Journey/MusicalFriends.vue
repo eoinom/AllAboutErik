@@ -50,6 +50,7 @@
               <friend-card
                 :friend="friends[5]"
                 :imgContainerHeight="Number(450)"
+                :height="Number(674)"
                 class="mb-3"
               />
             </b-col>
