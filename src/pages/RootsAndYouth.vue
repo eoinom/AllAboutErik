@@ -17,14 +17,9 @@
                 <span v-html="mainText" id="mainText" />    
 
                 <!-- Scroll with arrow images - hidden on xs (e.g. portrait mobile devices) -->
-                <div class="d-none d-sm-inline" v-scroll-to="{ el:'#videos', duration:1500, easing:'ease' }" id="scrollImgContainer">
-                  <p class="mb-0 mt-md-1 mt-lg-2 mt-xl-5">
-                    <g-image alt="Scroll text" v-if="titleImg != null" src="~/assets/images/scroll.png" id="scrollImg" />
-                  </p>
-                  <p class="my-0 my-lg-1 my-xl-2">
-                    <g-image alt="Scroll arrow" v-if="titleImg != null" src="~/assets/images/arrow-full-down.png" id="scrollArrowImg" />
-                  </p>
-                </div>
+                <ScrollDownArrow
+                  scrollToElement="#videos"
+                />
 
               </b-col>
             </b-row>
@@ -160,6 +155,7 @@
 
 
 <script scoped>
+import ScrollDownArrow from '../components/ScrollDownArrow.vue'
 import SlideshowImages from '../components/SlideshowImages2.vue'
 // import LightGallery from '../components/vue-light-gallery.vue'
 import VideoLightBox from '../components/VideoLightBox.vue'
@@ -236,6 +232,7 @@ export default {
   },
 
   components: {
+    ScrollDownArrow,
     'slideshow-images':     require('../components/SlideshowImages2.vue').default,
     // LightGallery,
     VideoLightBox
@@ -327,23 +324,6 @@ export default {
   line-height: 43px;
   letter-spacing: 2px;    
 }
-
-#scrollImgContainer {
-  cursor: pointer;
-}
-
-#scrollImg {
-  width: 11.5%;
-  max-width: 157px;
-  min-width: 78.5px;
-}
-
-#scrollArrowImg {
-  width: 2.8%;
-  max-width: 38px;
-  min-width: 19px;
-}
-
 
 .videoThumbnailContainer {
   cursor: pointer;
