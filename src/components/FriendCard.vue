@@ -26,11 +26,11 @@
         <g-image :src="friend.thumbnailImg" class="thumbnailImg" :style="imgDims" />
       </b-col>
 
-      <b-col order="1" cols="12" class="px-3 my-2 mt-0 textCol">
+      <b-col order="1" cols="12" class="px-3 pt-2 mb-0 textCol" :style="textColDims">
         <h3 class="textTitle mb-0 mt-1"> {{ friend.name }} </h3>
         <p class="text mb-2"> {{ friend.text }} </p>
         <div class="seeMoreBtnContainer">
-        <button class="seeMoreBtn mt-0 mb-1">...see more</button>
+          <button class="seeMoreBtn mt-0 mb-2">...see more</button>
         </div>
       </b-col>
 
@@ -43,11 +43,11 @@
         <g-image :src="friend.thumbnailImg" class="thumbnailImg" :style="imgDims" />
       </b-col>
       
-      <b-col order="1" class="px-3 my-2 mt-0 textCol">
+      <b-col order="1" class="px-3 pt-2 mb-0 textCol" :style="textColDims">
         <h3 class="textTitle mb-0"> {{ friend.name }} </h3>
         <p class="text mb-2"> {{ friend.text }} </p>
         <div class="seeMoreBtnContainer">
-        <button class="seeMoreBtn mt-0 mb-1">...see more</button>
+          <button class="seeMoreBtn mt-0 mb-2">...see more</button>
         </div>
       </b-col>
 
@@ -81,11 +81,19 @@ export default {
       default: 0,
       type: Number
     },
+    imgScaleToContainerWidth: {
+      default: false,
+      type: Boolean
+    },
     imgMoveLeftPercent: {
       default: 0,
       type: Number
     },
     imgMoveDownPercent: {
+      default: 0,
+      type: Number
+    },
+    width: {
       default: 0,
       type: Number
     },
@@ -117,9 +125,9 @@ export default {
     },
     innerContainerDims() {
       let css = {}
-      if (this.height > 0) {
-        css.height = this.height
-      }
+      // if (this.height > 0) {        
+      //   css.height = this.height + 'px'
+      // }
       return css
     },
     imgContainerDims() {
@@ -128,20 +136,26 @@ export default {
         css.width = this.imgContainerWidth + 'px'
       if (this.imgContainerHeight > 0)
         css.height = this.imgContainerHeight + 'px'
-      // if (this.imgPosition == 'top' || this.imgPosition == 'bottom')
-      //   css.overflow = 'hidden'
+      if (this.imgPosition == 'top' || this.imgPosition == 'bottom')
+        css.overflow = 'hidden'
+      if (this.imgPosition == 'bottom') {
+        // css.position = 'absolute'
+        // css.bottom = '-600px'
+      }
       return css
     },
     imgDims() {
       let css = {}
       if (this.imgWidth > 0)
         css.width = this.imgWidth + 'px'
+      if (this.imgScaleToContainerWidth)
+        css.width = '100%'
       if (this.imgHeight > 0)
         css.height = this.imgHeight + 'px'
       if (this.imgMoveLeftPercent !== 0)
         css.right = this.imgMoveLeftPercent + '%'
       if (this.imgMoveDownPercent !== 0)
-        css.top = this.imgMoveDownPercent + '%'
+        css.top = this.imgMoveDownPercent + '%'      
       return css
     },
     imgOrder() {
@@ -155,6 +169,16 @@ export default {
     // },
     textCols() {
       return (this.friend.imgPosition == 'top' || this.friend.imgPosition == 'bottom') ? "12" : "6"
+    },
+    textColDims() {
+      let css = {}
+      if (this.width > 0 && this.imgContainerWidth > 0) {        
+        css.width = (this.width - this.imgContainerWidth) + 'px'
+      }
+      if (this.height > 0 && this.imgContainerHeight > 0) {        
+        css.height = (this.height - this.imgContainerHeight - 8) + 'px'
+      }
+      return css
     }
   },
 
@@ -187,14 +211,14 @@ export default {
   /* height: 550px; */
   /* height: var(--height); */
   border-radius: 9px;
-  overflow: hidden;
-
-  position: relative;
+  overflow: hidden;  
+  /* position: relative; */
 }
 
 .textCol {
   background-color: white;
   padding-bottom: 38px;  /* for the see more button */
+  /* z-index: 2; */
 }
 
 .textTitle {
@@ -254,6 +278,7 @@ export default {
   padding-bottom: 300px;
   z-index:auto; */
   /* display:table-cell; vertical-align:middle; text-align:center; */
+  /* z-index: 1; */
  }
 
 .thumbnailImg {
@@ -264,6 +289,8 @@ export default {
   display: block; */
   position: relative; 
   /* right:-50%;  */
+  /* width: 100%; */
+  /* height: auto; */
 }
 
 </style>

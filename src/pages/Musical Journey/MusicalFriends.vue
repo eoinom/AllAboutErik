@@ -9,6 +9,7 @@
           <friend-card
             :friend="friends[0]"
             :imgContainerHeight="Number(333)"
+            :height=Number(533)
             class="mb-3"
           />
 
@@ -30,23 +31,25 @@
           <friend-card
             :friend="friends[3]"
             :imgContainerHeight="Number(622)"
-            :imgMoveDownPercent="Number(-27)"
+            :imgMoveDownPercent="Number(-27)" 
+            :imgScaleToContainerWidth=true
             class="mb-3"
           />
         </b-col>
 
-        <b-col style="max-width:862px" class="">
+        <b-col style="max-width:872px" class="">
           <b-row no-gutters class="">
-            <b-col style="max-width:415px" class="mr-3">
+            <b-col style="max-width:431px" class="mr-3">
               <friend-card
                 :friend="friends[4]"
                 :imgContainerHeight="Number(458)"
                 :imgMoveLeftPercent="Number(23)"
+                :height="Number(674)"
                 class="mb-3"
               />
             </b-col>
 
-            <b-col style="max-width:426px" class="">
+            <b-col style="max-width:425px">
               <friend-card
                 :friend="friends[5]"
                 :imgContainerHeight="Number(450)"
@@ -56,19 +59,21 @@
             </b-col>
           </b-row>
 
-          <b-row no-gutters class="">
-            <b-col style="max-width:862px" class="mr-3">
+          <b-row no-gutters>
+            <b-col>
               <friend-card
                 :friend="friends[6]"
                 :imgContainerWidth="Number(547)"
                 :imgContainerHeight="Number(441)"
-                :imgMoveLeftPercent="Number(50)"
+                :imgMoveLeftPercent="Number(26)"
                 class="mb-3"
               />
 
               <friend-card
                 :friend="friends[7]"
                 :imgContainerHeight="Number(457)"
+                :height="Number(648)"
+                :imgScaleToContainerWidth=true
                 class="mb-3"
               />
 
@@ -83,7 +88,7 @@
         </b-col>
       </b-row>
 
-      <b-row no-gutters style="" class="mt-2">
+      <b-row no-gutters style="max-width:1540px;" class="mt-0">
         <b-col class="">
           <friend-card
             :friend="friends[9]"
@@ -95,44 +100,50 @@
         </b-col>
       </b-row>
 
-      <b-row no-gutters style="" class="mt-2">
-        <b-col class="">
+      <b-row no-gutters class="mt-0">
+        <b-col style="max-width:793px" class="mr-3">
           <friend-card
             :friend="friends[10]"
             :imgContainerWidth="Number(487)"
             :imgContainerHeight="Number(503)"
+            :width="Number(793)"
             class="mb-3"
           />
         </b-col>
 
-        <b-col class="">
+        <b-col style="max-width:731px" class="">
           <friend-card
             :friend="friends[11]"
-            :imgContainerWidth="Number(723)"
+            :imgContainerWidth="Number(731)"
             :imgContainerHeight="Number(306)"
+            :height="Number(503)" 
+            :imgScaleToContainerWidth=true
             class="mb-3"
           />
         </b-col>
       </b-row>
 
       <b-row no-gutters style="" class="">
-        <b-col style="width:371px" class="mr-3">
+        <b-col style="max-width:388.5px" class="mr-3">
           <friend-card
             :friend="friends[12]"
             :imgContainerHeight="Number(538)"
+            :imgMoveLeftPercent="Number(8)"
             class="mb-3"
+            :height="Number(927.33)"
           />
         </b-col>
 
-        <b-col style="width:396px" class="mr-3">
+        <b-col style="max-width:388.5px" class="mr-3">
           <friend-card
             :friend="friends[13]"
             :imgContainerHeight="Number(581)"
             class="mb-3"
+            :height="Number(927.33)"
           />
         </b-col>
 
-        <b-col style="width:721px" class="">
+        <b-col style="width:731px" class="">
           <b-row no-gutters style="" class="">
             <b-col class="">
               <friend-card
@@ -146,7 +157,10 @@
             <b-col class="">
               <friend-card
                 :friend="friends[15]"
-                :imgContainerHeight="Number(362)"
+                :imgContainerHeight="Number(310)"
+                :imgContainerWidth="Number(731)"
+                :imgScaleToContainerWidth=true
+                :height=Number(503.305)
                 class="mb-3"
               />
             </b-col>
