@@ -7,12 +7,12 @@ img: /uploads/submenu-musical-journey.jpg
 verb: listen & watch
 subPages:
   - subPageText: The Episodes
-    subPageTo: /the-episodes
+    subPageTo: /musical-journey/the-episodes
   - subPageText: Musical Friends
-    subPageTo: /musical-friends
+    subPageTo: /musical-journey/musical-friends
   - subPageText: Early Productions
-    subPageTo: /early-productions
+    subPageTo: /musical-journey/early-productions
   - subPageText: Discography
-    subPageTo: /discography
+    subPageTo: /musical-journey/discography
 ---
 
