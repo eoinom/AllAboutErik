@@ -169,6 +169,12 @@
       </b-row>
 
     </b-container>
+
+    <ScrollToTop 
+      text="BACK TO THE TOP"
+      :includeArrow="true"
+    />
+    
   </Layout>
 </template>
 
@@ -200,6 +206,7 @@
 
 <script scoped>
 import FriendCard from '../../components/FriendCard.vue'
+import ScrollToTop from '../../components/ScrollToTop.vue'
 
 export default { 
   metaInfo() {
@@ -229,7 +236,8 @@ export default {
   },
 
   components: {
-    FriendCard
+    FriendCard,
+    ScrollToTop
   },
 }
 </script>
