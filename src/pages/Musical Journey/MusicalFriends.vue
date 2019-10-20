@@ -1,7 +1,18 @@
 <template>
-  <Layout> 
-    <!-- <b-container fluid class="main-col"> -->
-    <b-container fluid style="max-width:1540px;" class="main-col px-0">
+  <Layout class="pb-5">
+    <img :src="backgroundImgUrl" id="bgImg" :style="bgOpacity" />
+
+    <header id="header" :style="bgOpacity">
+      <g-image :src="titleImg" id="titleImg" />
+      <span v-html="titleSubText" id="titleSubText" />
+      <div id="scrollDownContainer">
+        <ScrollDownArrow
+          scrollToElement="#friends"
+        />
+      </div>
+    </header>
+
+    <b-container fluid style="max-width:1540px;" :style="friendsOpacity" id="friends" class="main-col px-0 mb-5">
 
       <b-row no-gutters class="mt-2">
         <b-col style="max-width:652px" class="mr-3">
@@ -31,7 +42,7 @@
           <friend-card
             :friend="friends[3]"
             :imgContainerHeight="Number(622)"
-            :imgMoveDownPercent="Number(-27)" 
+            :imgMoveDownPercent="Number(-27)"
             :imgScaleToContainerWidth=true
             class="mb-3"
           />
@@ -116,7 +127,7 @@
             :friend="friends[11]"
             :imgContainerWidth="Number(731)"
             :imgContainerHeight="Number(306)"
-            :height="Number(503)" 
+            :height="Number(503)"
             :imgScaleToContainerWidth=true
             class="mb-3"
           />
@@ -138,8 +149,9 @@
           <friend-card
             :friend="friends[13]"
             :imgContainerHeight="Number(581)"
-            class="mb-3"
             :height="Number(927.33)"
+            :imgMoveLeftPercent="Number(6)"
+            class="mb-3"
           />
         </b-col>
 
@@ -170,11 +182,11 @@
 
     </b-container>
 
-    <ScrollToTop 
+    <ScrollToTop
       text="BACK TO THE TOP"
       :includeArrow="true"
     />
-    
+
   </Layout>
 </template>
 
@@ -199,16 +211,17 @@
         }
       }
     }
-  }	
+  }
 }
 </page-query>
 
 
 <script scoped>
 import FriendCard from '../../components/FriendCard.vue'
+import ScrollDownArrow from '../../components/ScrollDownArrow.vue'
 import ScrollToTop from '../../components/ScrollToTop.vue'
 
-export default { 
+export default {
   metaInfo() {
     return {
       title: this.$page.MusicalFriends.edges[0].node.pageTitle
@@ -217,15 +230,32 @@ export default {
 
   data() {
     return {
+      scrollY: 0.0
     }
   },
 
   computed: {
+    backgroundImgUrl() {
+      return this.$page.MusicalFriends.edges[0].node.backgroundImg
+    },
     titleImg() {
       return this.$page.MusicalFriends.edges[0].node.titleImg
+    },    
+    titleSubText() {
+      return this.$page.MusicalFriends.edges[0].node.content
     },
     friends() {
       return this.$page.MusicalFriends.edges[0].node.friends
+    },
+    friendsOpacity() {
+      let css = {}
+      css.opacity = this.scrollY < 700 ? this.scrollY / 700 : 1.0
+      return css
+    },
+    bgOpacity() {
+      let css = {}
+      css.opacity = this.scrollY < 700 ? 1.0 - (this.scrollY / 700) : 0.0
+      return css
     }
   },
 
@@ -233,10 +263,17 @@ export default {
   },
 
   mounted() {
+    window.addEventListener('scroll', () => {
+      if (this.scrollY != window.pageYOffset) {
+        this.scrollY = window.pageYOffset 
+        console.log('scrollY = ' + this.scrollY);        
+      }
+    });
   },
 
   components: {
     FriendCard,
+    ScrollDownArrow,
     ScrollToTop
   },
 }
@@ -245,6 +282,39 @@ export default {
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900&display=swap');
+
+.layout {
+  padding-top: 8px;
+}
+
+#bgImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#header {
+  text-align: center;
+  margin-top: 480px;
+}
+
+#titleSubText {
+  color: white;
+  font-family: 'Merriweather', serif;
+  font-feature-settings: 'liga';
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 40px;
+  letter-spacing: 6px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.29);
+  transition: inherit;
+}
+
+#scrollDownContainer {
+  margin-top: 80px;
+}
 
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
@@ -265,7 +335,7 @@ export default {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media (min-width: 992px) and (max-width: 1199.98px) {
 
 }
 
