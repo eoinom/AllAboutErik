@@ -19,6 +19,7 @@
 
           <friend-card
             :friend="friends[0]"
+            :imgPosition="friends[0].imgPosition"
             :height="Number(544)"
             :imgContainerHeight="Number(333)"
             class="mb-3"
@@ -26,6 +27,7 @@
 
           <friend-card
             :friend="friends[1]"
+            :imgPosition="friends[1].imgPosition"
             :imgContainerWidth="Number(370)"
             :imgContainerHeight="Number(442)"
             :imgHeight="Number(442)"
@@ -34,6 +36,7 @@
 
           <friend-card
             :friend="friends[2]"
+            :imgPosition="friends[2].imgPosition"
             :imgContainerWidth="Number(359)"
             :imgContainerHeight="Number(384)"
             class="mb-3"
@@ -41,6 +44,7 @@
 
           <friend-card
             :friend="friends[3]"
+            :imgPosition="friends[3].imgPosition"
             :height="Number(812)"
             :imgContainerHeight="Number(622)"
             :imgMoveDownPercent="Number(-27)"
@@ -54,6 +58,7 @@
             <b-col style="max-width:431px" class="mr-3">
               <friend-card
                 :friend="friends[4]"
+                :imgPosition="friends[4].imgPosition"
                 :height="Number(688)"
                 :imgContainerHeight="Number(458)"
                 :imgMoveLeftPercent="Number(23)"
@@ -64,6 +69,7 @@
             <b-col style="max-width:425px">
               <friend-card
                 :friend="friends[5]"
+                :imgPosition="friends[5].imgPosition"
                 :height="Number(688)"
                 :imgContainerHeight="Number(450)"
                 class="mb-3"
@@ -75,6 +81,7 @@
             <b-col>
               <friend-card
                 :friend="friends[6]"
+                :imgPosition="friends[6].imgPosition"
                 :imgContainerWidth="Number(547)"
                 :imgContainerHeight="Number(441)"
                 :imgMoveLeftPercent="Number(26)"
@@ -83,6 +90,7 @@
 
               <friend-card
                 :friend="friends[7]"
+                :imgPosition="friends[7].imgPosition"
                 :height="Number(648)"
                 :imgContainerHeight="Number(457)"
                 :imgScaleToContainerWidth=true
@@ -91,6 +99,7 @@
 
               <friend-card
                 :friend="friends[8]"
+                :imgPosition="friends[8].imgPosition"
                 :height="Number(413.017)"
                 :imgContainerWidth="Number(536)"
                 :imgContainerHeight="Number(387)"
@@ -105,6 +114,7 @@
         <b-col class="">
           <friend-card
             :friend="friends[9]"
+            :imgPosition="friends[9].imgPosition"
             :imgContainerWidth="Number(1015)"
             :imgContainerHeight="Number(435)"
             :imgMoveDownPercent="Number(-24)"
@@ -117,6 +127,7 @@
         <b-col style="max-width:793px" class="mr-3">
           <friend-card
             :friend="friends[10]"
+            :imgPosition="friends[10].imgPosition"
             :width="Number(793)"
             :height="Number(503)"
             :imgContainerWidth="Number(487)"
@@ -128,6 +139,7 @@
         <b-col style="max-width:731px" class="">
           <friend-card
             :friend="friends[11]"
+            :imgPosition="friends[11].imgPosition"
             :height="Number(503)"
             :imgContainerWidth="Number(731)"
             :imgContainerHeight="Number(306)"
@@ -141,6 +153,7 @@
         <b-col style="max-width:388.5px" class="mr-3">
           <friend-card
             :friend="friends[12]"
+            :imgPosition="friends[12].imgPosition"
             :imgContainerHeight="Number(538)"
             :imgMoveLeftPercent="Number(8)"
             class="mb-3"
@@ -151,6 +164,7 @@
         <b-col style="max-width:388.5px" class="mr-3">
           <friend-card
             :friend="friends[13]"
+            :imgPosition="friends[13].imgPosition"
             :imgContainerHeight="Number(581)"
             :height="Number(927.33)"
             :imgMoveLeftPercent="Number(6)"
@@ -163,6 +177,7 @@
             <b-col class="">
               <friend-card
                 :friend="friends[14]"
+                :imgPosition="friends[14].imgPosition"
                 :imgContainerWidth="Number(400)"
                 :imgContainerHeight="Number(408)"
                 class="mb-3"
@@ -172,6 +187,7 @@
             <b-col class="">
               <friend-card
                 :friend="friends[15]"
+                :imgPosition="friends[15].imgPosition"
                 :imgContainerHeight="Number(310)"
                 :imgContainerWidth="Number(731)"
                 :imgScaleToContainerWidth=true

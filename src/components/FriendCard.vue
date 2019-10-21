@@ -30,6 +30,10 @@ export default {
     friend: {
       type: Object,
     },
+    imgPosition: {
+      default: 'top',
+      type: String
+    },
     imgContainerWidth: {
       default: 0,
       type: Number
@@ -76,7 +80,7 @@ export default {
   computed: {
     outerContainerDims() {
       let css = {}
-      if (this.friend.imgPosition == 'top' || this.friend.imgPosition == 'bottom') {
+      if (this.imgPosition == 'top' || this.imgPosition == 'bottom') {
         if (this.imgContainerWidth > 0) {
           css.width = this.imgContainerWidth + 'px'
         }
@@ -90,8 +94,9 @@ export default {
     },
     imgContainerDims() {
       let css = {}
-      if (this.imgContainerWidth > 0)
+      if (this.imgContainerWidth > 0) {
         css.width = this.imgContainerWidth + 'px'
+      }
       if (this.imgContainerHeight > 0)
         css.height = this.imgContainerHeight + 'px'
       if (this.imgPosition == 'top' || this.imgPosition == 'bottom')
@@ -113,20 +118,17 @@ export default {
       return css
     },
     imgOrder() {
-      return (this.friend.imgPosition == 'top' || this.friend.imgPosition == 'left') ? 0 : 2
-    },
-    imgPosition() {
-      return this.friend.imgPosition
+      return (this.imgPosition == 'top' || this.imgPosition == 'left') ? 0 : 2
     },
     imgCols() {
-      return (this.friend.imgPosition == 'top' || this.friend.imgPosition == 'bottom') ? "12" : ""
+      return (this.imgPosition == 'top' || this.imgPosition == 'bottom') ? "12" : ""
     },
     textCols() {
-      return (this.friend.imgPosition == 'top' || this.friend.imgPosition == 'bottom') ? "12" : "6"
+      return (this.imgPosition == 'top' || this.imgPosition == 'bottom') ? "12" : "6"
     },
     textColDims() {
       let css = {}
-      if (this.width > 0 && this.imgContainerWidth > 0) {        
+      if (this.width > 0 && this.imgContainerWidth > 0) {       
         css.width = (this.width - this.imgContainerWidth) + 'px'
       }
       if (this.imgPosition == 'top' || this.imgPosition == 'bottom') {
@@ -144,6 +146,38 @@ export default {
   },
 
   methods: {
+    // textColDims() {
+    //   setTimeout(function(){ 
+    //     let css = {}
+    //     if (this.width > 0 && this.imgContainerWidth > 0) { 
+    //       css.width = (this.width - this.imgContainerWidth) + 'px'
+    //     }
+    //     if (this.imgPosition == 'top' || this.imgPosition == 'bottom') {
+    //       if (this.height > 0 && this.imgContainerHeight > 0) {        
+    //         css.height = (this.height - this.imgContainerHeight) + 'px'
+    //       }
+    //     }
+    //     else {
+    //       if (this.height > 0) {        
+    //         css.height = (this.height - 8) + 'px'
+    //       }
+    //     }
+    //     return css
+    //   }, 1000);        
+    // },
+    // imgContainerDims() {
+    //   setTimeout(function(){ 
+    //     let css = {}
+    //     if (this.imgContainerWidth > 0) {
+    //       css.width = this.imgContainerWidth + 'px'
+    //     }
+    //     if (this.imgContainerHeight > 0)
+    //       css.height = this.imgContainerHeight + 'px'
+    //     if (this.imgPosition == 'top' || this.imgPosition == 'bottom')
+    //       css.overflow = 'hidden'
+    //     return css
+    //   }, 1000);
+    // },
   },
 
   mounted() {
