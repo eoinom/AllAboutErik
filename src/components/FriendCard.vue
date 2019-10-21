@@ -222,6 +222,7 @@ export default {
   text-rendering: auto;
   color: white;
   opacity: 1;
+  transition: opacity 0.25s ease;
 }
 
 .seeMoreBtn:hover {
