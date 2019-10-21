@@ -1,4 +1,5 @@
 <template>
+
   <div class="SlideshowImages">
     
     <!-- https://vuejs.org/v2/guide/transitions.html#List-Transitions -->
@@ -42,22 +43,22 @@ export default {
       activeIndex: 0,
       time: 0,
 
-      startScale: 1.0,
-      endScale: 1.1,
-      prevStartScale: 1.0,
-      prevEndScale: 1.1,
+      // startScale: 1.0,
+      // endScale: 1.1,
+      // prevStartScale: 1.0,
+      // prevEndScale: 1.1,
 
       imgOpacity: 0.62,
-      startPos: [0, 0, 0],  // x, y, z
-      positionFactor: 1.5,
+      // startPos: [0, 0, 0],  // x, y, z
+      // positionFactor: 1.5,
 
-      startPosX: 0,
-      startPosY: 0,
+      // startPosX: 0,
+      // startPosY: 0,
 
-      windowWidth: 0,
-      windowHeight: 0,
+      // windowWidth: 0,
+      // windowHeight: 0,
 
-      translateFactor: 1.5
+      // translateFactor: 1.5
     };
   },
 
@@ -132,48 +133,48 @@ export default {
       this.goToIndex(nextIndex);
     },
 
-    createKeyFrames() {
-      for (let i = 0; i < this.slides.length; i++) {        
-        let startPos = [0, 0, 0]
-        if (this.slides[i].hasOwnProperty('panStart')) {
-          switch(this.slides[i].panStart.toLowerCase()) {
-            case 'top-left':      startPos = [-1, -1, 0];     break;
-            case 'top':           startPos = [0, -1, 0];      break;
-            case 'top-right':     startPos = [1, -1, 0];      break;
-            case 'left':          startPos = [-1, 0, 0];      break;
-            case 'centre':        startPos = [0, 0, 0];       break;
-            case 'right':         startPos = [1, 0, 0];       break;
-            case 'bottom-left':   startPos = [-1, 1, 0];      break;
-            case 'bottom':        startPos = [0, 1, 0];       break;
-            case 'bottom-right':  startPos = [1, 1, 0];       break;
-            default:
-              console.log('Did not recognise value for slides.panStart: ' + this.slides[i].panStart)
-          } 
-        }
-        let num = i + 1
-        let scaleFrom = this.slides[i].scaleFrom
-        let scaleTo = this.slides[i].scaleTo
-        let Tx = this.translateFactor * startPos[0]
-        let Ty = this.translateFactor * startPos[1]
-        var style = document.createElement('style');
-        style.type = 'text/css';
-        var keyFrames = '\
-        @keyframes kenburns-' + num + ' {\
-          0% {\
-            transform: scale3d('+ scaleFrom + ', '+ scaleFrom + ', 1) translate3d('+ Tx + '%, '+ Ty + '%, 0);\
-          }\
-          100% {\
-            transform: scale3d('+ scaleTo + ', '+ scaleTo + ', 1) translate3d(0, 0, 0);\
-          }\
-        }';
-        style.innerHTML = keyFrames
-        document.head.appendChild(style)
-      };
-    }
+    // createKeyFrames() {
+    //   for (let i = 0; i < this.slides.length; i++) {        
+    //     let startPos = [0, 0, 0]
+    //     if (this.slides[i].hasOwnProperty('panStart')) {
+    //       switch(this.slides[i].panStart.toLowerCase()) {
+    //         case 'top-left':      startPos = [-1, -1, 0];     break;
+    //         case 'top':           startPos = [0, -1, 0];      break;
+    //         case 'top-right':     startPos = [1, -1, 0];      break;
+    //         case 'left':          startPos = [-1, 0, 0];      break;
+    //         case 'centre':        startPos = [0, 0, 0];       break;
+    //         case 'right':         startPos = [1, 0, 0];       break;
+    //         case 'bottom-left':   startPos = [-1, 1, 0];      break;
+    //         case 'bottom':        startPos = [0, 1, 0];       break;
+    //         case 'bottom-right':  startPos = [1, 1, 0];       break;
+    //         default:
+    //           console.log('Did not recognise value for slides.panStart: ' + this.slides[i].panStart)
+    //       } 
+    //     }
+    //     let num = i + 1
+    //     let scaleFrom = this.slides[i].scaleFrom
+    //     let scaleTo = this.slides[i].scaleTo
+    //     let Tx = this.translateFactor * startPos[0]
+    //     let Ty = this.translateFactor * startPos[1]
+    //     var style = document.createElement('style');
+    //     style.type = 'text/css';
+    //     var keyFrames = '\
+    //     @keyframes kenburns-' + num + ' {\
+    //       0% {\
+    //         transform: scale3d('+ scaleFrom + ', '+ scaleFrom + ', 1) translate3d('+ Tx + '%, '+ Ty + '%, 0);\
+    //       }\
+    //       100% {\
+    //         transform: scale3d('+ scaleTo + ', '+ scaleTo + ', 1) translate3d(0, 0, 0);\
+    //       }\
+    //     }';
+    //     style.innerHTML = keyFrames
+    //     document.head.appendChild(style)
+    //   };
+    // }
   },
 
   mounted() {
-    this.createKeyFrames()    
+    // this.createKeyFrames()    
 
     this.windowWidth = window.innerWidth
     this.windowHeight = window.innerHeight
@@ -196,21 +197,25 @@ export default {
 <style lang="scss" scoped>
 
 .SlideshowImages {
-  --translateFactor: 1.5%;    
+  // --translateFactor: 1.5%;    
   background-color: black;
 
   &__slides {
     position: relative;
     display: flex;
     justify-content: center;
+
+    width: 100%;
   }
 
   &__image {
-    position: absolute;
-    width: auto;
+    // position: absolute;
+    position: relative;
+    // width: auto;
+    width: 100%;
     height: auto;
-    min-height: 100%;
-    min-width: 100%;    
+    // min-height: 100%;
+    // min-width: 100%;    
     overflow: hidden;  
     opacity: 0.62;    
     animation-duration: 8s;
