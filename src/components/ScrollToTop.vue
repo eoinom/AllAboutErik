@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="scrollToTopContainer">
     <button v-scroll-to="{ el:'body', duration:1500, easing:'ease' }" id="scrollToTopBtn" class="hide">      
       {{ text }}
       <svg v-if="includeArrow" viewBox="0 0 20 20" width="20" height="20" id="arrow">
@@ -46,27 +46,35 @@ export default {
 <style scoped>
 /* @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap'); */
 
-button {
-  position: fixed;  
-  bottom: 0;
-  
-  /* To center horizontally (will not center vertically and won't work in IE6/7.) */
-  width: fit-content;
-  margin: 1.5% auto; 
-  left: 0;
+#scrollToTopContainer {
+  position: relative;
+  top: 0;
   right: 0;
+  left: 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+	text-align: center;
+}
 
-  /* font-family: 'Source Sans Pro', Arial, sans-serif; */
+#scrollToTopBtn {  
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
   font-family: Arial, sans-serif;
   font-feature-settings: 'liga';
   font-size: 14px;
   text-align: center;
   text-rendering: auto;
   
-  transform-origin: left top;
   padding: 15px;
   z-index: 999;
-  display: inline-block;
+
   background: rgba(20,20,20, 1);
   border: 0px solid rgba(56,56,56, 1);
   outline: none;
@@ -74,7 +82,6 @@ button {
   border-radius: 5px;
 
   transition: visibility 0.8s, opacity 0.8s; 
-  transition-delay: 0s;
   visibility: visible;
 }
 
