@@ -224,12 +224,21 @@ export default {
   opacity: 1;
 }
 
+.seeMoreBtn:hover {
+  opacity: 0.75;
+}
+
 .thumbnailImgCol {
   overflow: unset;
  }
 
 .thumbnailImg {
   position: relative;
+  transition: 0.5s ease;
+}
+
+.thumbnailImg:hover {
+  transform: scale(1.05, 1.05);
 }
 
 </style>
