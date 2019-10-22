@@ -12,7 +12,7 @@
             <b-row>
               <b-col class="mainContent">
                 
-                <g-image alt="All About Erik logo" v-if="titleImg != null" :src="titleImg" id="titleImg" class="mb-md-1 mb-lg-2 mb-xl-3"/>
+                <g-image alt="Roots and Youth title image" v-if="titleImg != null" :src="titleImg" id="titleImg" class="mb-md-1 mb-lg-2 mb-xl-3"/>
                 
                 <span v-html="mainText" id="mainText" />    
 
