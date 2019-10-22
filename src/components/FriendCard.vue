@@ -269,11 +269,11 @@ export default {
 
 .thumbnailImg {
   position: relative;
-  transition: 0.5s ease;
+  transition: 0.8s ease;
 }
 
-.thumbnailImg:hover {
-  transform: scale(1.05, 1.05);
+.innerContainerRow:hover .thumbnailImg{
+  transform: scale(1.03, 1.03);
 }
 
 </style>

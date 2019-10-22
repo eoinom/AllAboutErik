@@ -44,7 +44,15 @@ export default {
 
 
 <style scoped>
-/* @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap'); */
+
+@font-face {
+  font-family: NeueHaasGroteskText Pro55;
+  src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/nhaasgrotesktxpro-55rg.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+}
 
 #scrollToTopContainer {
   position: relative;
@@ -66,11 +74,13 @@ export default {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 
-  font-family: Arial, sans-serif;
+  font-family: 'NeueHaasGroteskText Pro55', Arial;
   font-feature-settings: 'liga';
+  font-weight: 400;
   font-size: 14px;
   text-align: center;
   text-rendering: auto;
+  letter-spacing: 1px;
   
   padding: 15px;
   z-index: 999;
@@ -85,11 +95,11 @@ export default {
   visibility: visible;
 }
 
-button:hover {
+#scrollToTopBtn:hover {
   background: rgb(153,153,153);
   color: white;
 }
-button:hover #arrow > line {
+#scrollToTopBtn:hover #arrow > line {
   stroke: rgb(255,255,255);
 }
 
