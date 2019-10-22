@@ -510,6 +510,9 @@ export default {
       }
     });
 
+    this.windowWidth = window.innerWidth
+    this.windowHeight = window.innerHeight
+
     this.$nextTick(() => {
       window.addEventListener('resize', () => {
         this.windowWidth = window.innerWidth
