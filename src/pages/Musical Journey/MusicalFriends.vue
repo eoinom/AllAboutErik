@@ -510,12 +510,12 @@ export default {
       }
     });
 
-    // this.$nextTick(() => {
+    this.$nextTick(() => {
       window.addEventListener('resize', () => {
         this.windowWidth = window.innerWidth
         this.windowHeight = window.innerHeight
       });
-    // })
+    })
   },
 
   components: {
