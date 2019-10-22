@@ -138,7 +138,7 @@ export default {
       }
       else {
         if (this.height > 0) {        
-          css.height = (this.height - 8) + 'px'
+          css.height = (this.height) + 'px'
         }
       }
       return css
