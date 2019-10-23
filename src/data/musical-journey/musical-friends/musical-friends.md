@@ -13,7 +13,7 @@ friends:
     text: >-
       My friendship with Henry started when we met as fellow banjo players at a
       rehearsal for a tour we were going out on called the Traveling Hootenanny.
-      His group was the Modern Folk Quartette, MFQ for short, and mine was the
+      His group was the Modern Folk Quartet, MFQ for short, and mine was the
       Knoblick Upper 10,000. It was a long and brutal 40-day bus trip.
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1571091738/Musical%20Journey/Musical%20Friends/Henry-Diltz-at-a-love-in-sm_rqno51.jpg
@@ -62,9 +62,12 @@ friends:
     name: John Sebastian
     orderNo: 5
     text: >-
-      One day I was playing the demo when a next-door neighbor from across the
-      hall on the 4th-floor walk-up apartment I had rented on Prince Street came
-      over and knocked on the door. He introduced himself as John Sebastian.
+      After I moved back to The Village to stay I started making records,
+      including a demo from a singer I brought down from Boston named Tim
+      Hardin. One day I was playing the demo when a next-door neighbor from
+      across the hall on the 4th-floor walk-up apartment I had rented on Prince
+      Street came over and knocked on the door. He introduced himself as John
+      Sebastian.
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1571091738/Musical%20Journey/Musical%20Friends/John-Sebastian_dcpu5o.jpg
   - imgOrientation: portrait
@@ -99,10 +102,10 @@ friends:
     orderNo: 8
     text: >-
       A guy walked into my office on Kearny Street, claiming to be a songwriter.
-      He had met Peter Kraemer of the Sopwith Camel, who had sent him over to
-      see me. I agreed to listen to a few of his songs, and after I did he asked
-      me what I thought. Surprisingly, he called the very next day and said he’d
-      done rewrites on the songs and would I listen again?
+      I agreed to listen to a few of his songs, and after I did he asked me what
+      I thought. He listened but seemed somewhat skeptical and left saying he
+      would think about my comments. Surprisingly, he called the very next day
+      and said he’d done rewrites on the songs and would I listen again?
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1571091738/Musical%20Journey/Musical%20Friends/Brian-Elliot_f705gw.jpg
   - imgOrientation: landscape
@@ -128,8 +131,7 @@ friends:
       attempt to start my own dance craze. A singing duo there in the village
       called Two Guys from Boston told me about a singer up there named Tim
       Hardin. I called him and agreed to send him some bucks to come down and
-      audition. We met in the Dugout, a bar on Bleecker Street next to the
-      Bitter End. We had a drink and talked. The conversation soon turned to
+      audition. We had a drink and talked. The conversation soon turned to
       drugs, and he asked me if I had any shit, or knew where to get some.
       Naively I thought he meant pot. But not so. It turned out his tastes also
       ran toward harder stuff.
@@ -143,10 +145,11 @@ friends:
     text: >-
       Jimmy was playing with Chris in the band Silvertone when I first met him.
       He previously played with the San Francisco group the Avengers. He was a
-      unique and talented guitar stylist, using sounds and techniques that
-      harkened back to the 1950s. He was a sweet and soft-spoken individual,
-      rarely bubbling over with conversation. In the course of the years of
-      recording with Chris, we became good friends.
+      unique and talented guitar stylist, experimenting with sounds, as well as
+      using effects and techniques that harkened back to the 1950s. He was a
+      sweet and soft-spoken individual, rarely bubbling over with conversation.
+      In the course of the years of recording with Chris, we became good
+      friends.
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Jim-Wilsey_evft51.jpg
   - imgOrientation: landscape
@@ -183,7 +186,7 @@ friends:
     text: >-
       Kevin was an intense little man that came by my office in the mid-70s. He
       was a songwriter and musician but had a lot of outside projects going on
-      as well.  In one of our first conversations, he offered me a little black
+      as well. In one of our first conversations, he offered me a little black
       box that would allow me to call anyone in the world and talk as long as I
       wanted. You only had to hold it next to a phone and put in certain codes
       to make it work, but it was too complicated for me.
@@ -209,8 +212,8 @@ friends:
     text: >-
       Cass was a big, beautiful gal, sunny and funny with a wonderful voice. We
       met in the village when she was singing with the Big Three and I was
-      playing banjo with my group. When I started trying to make records I
-      recorded various cuts with all three. Cass, Zal, and Denny. Cass was
+      playing banjo with my group. When I started trying to make records I had
+      recorded various cuts with Cass, Zal, and Denny Doherty. Cass was
       hilarious, with a special sense of humor.
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Cass-Elliot-bed_fnnrqd.jpg
