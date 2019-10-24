@@ -12,7 +12,7 @@
       @sliding-end="onSlideEnd"
       class="carousel" 
     >
-      <b-carousel-slide
+      <!-- <b-carousel-slide
         v-for="(image, iImg) in images"
         :key="iImg"
         caption=""
@@ -20,6 +20,14 @@
         :img-src="image"
         class="carousel-slide"
         :style="vignetteStyles"
+      /> -->
+      <b-carousel-slide
+        v-for="(image, iImg) in images"
+        :key="iImg"
+        caption=""
+        text=""
+        :img-src="image"
+        class="carousel-slide"
       />
     </b-carousel>
 
@@ -54,12 +62,12 @@ export default {
     currentImg() {
       return this.images[this.slide]
     },
-    vignetteStyles() {
-      return {
-        '--blur': (0.1*this.windowWidth) + 'px',
-        '--spread': (0.05*this.windowWidth) + 'px'
-      }
-    }
+    // vignetteStyles() {
+    //   return {
+    //     '--blur': (0.1*this.windowWidth) + 'px',
+    //     '--spread': (0.05*this.windowWidth) + 'px'
+    //   }
+    // }
   },
 
   methods: {
@@ -117,21 +125,22 @@ export default {
 
   /* For vignette effect, see https://benjaminhorn.io/code/proper-lens-vignette-with-css/ & 
   https://codepen.io/beije/pen/zxjeae */
-.carousel-slide::after {
+/* .carousel-slide::after {
   content: '';
-  position: absolute;
+  position: absolute; */
   
   /* Center element on the middle of it's parent */
-  top: 50%;
-  left: 50%;    
+  /* top: 50%;
+  left: 50%;     */
   
-  transform: translate(-50%,-50%);  /* Reset back the image so it's center is locked on the center of the parent */
+  /* Reset back the image so it's center is locked on the center of the parent */
+  /* transform: translate(-50%,-50%);
   
   width: 115%;
   padding-bottom: 115%;
   
   box-shadow: inset 0px 0px var(--blur) var(--spread) rgba(0,0,0,0.8), inset 0px 0px var(--blur) var(--spread) rgba(0,0,0,0.8);
   border-radius: 50%;
-}
+} */
 
 </style>
