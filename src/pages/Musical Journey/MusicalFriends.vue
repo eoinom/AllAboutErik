@@ -49,21 +49,21 @@
             :height="Number(812)"
             :imgContainerHeight="Number(622)"
             :imgMoveDownPercent="Number(-27)"
-            :imgScaleToContainerWidth=true
+            imgScaleToContainerWidth=true
             class="mb-3"
           />
         </b-col>
 
-        <b-col style="max-width:872px" class="">
-          <b-row no-gutters class="">
+        <b-col style="max-width:872px">
+          <b-row no-gutters class="mb-3">
             <b-col style="max-width:431px" class="mr-3">
               <friend-card
                 :friend="friends[4]"
                 :imgPosition="friends[4].imgPosition"
                 :height="Number(688)"
-                :imgContainerHeight="Number(458)"
-                :imgMoveLeftPercent="Number(23)"
-                class="mb-3"
+                :imgContainerHeight="Number(398)"
+                :imgMoveLeftPercent="Number(19)"
+                :imgHeight="Number(420)"
               />
             </b-col>
 
@@ -73,7 +73,6 @@
                 :imgPosition="friends[5].imgPosition"
                 :height="Number(688)"
                 :imgContainerHeight="Number(450)"
-                class="mb-3"
               />
             </b-col>
           </b-row>
@@ -94,7 +93,7 @@
                 :imgPosition="friends[7].imgPosition"
                 :height="Number(648)"
                 :imgContainerHeight="Number(457)"
-                :imgScaleToContainerWidth=true
+                imgScaleToContainerWidth=true
                 class="mb-3"
               />
 
@@ -112,20 +111,19 @@
       </b-row>
 
       <b-row no-gutters style="max-width:1540px;" class="mt-0">
-        <b-col class="">
+        <b-col class="mb-3">
           <friend-card
             :friend="friends[9]"
             :imgPosition="friends[9].imgPosition"
             :imgContainerWidth="Number(1015)"
             :imgContainerHeight="Number(435)"
             :imgMoveDownPercent="Number(-24)"
-            class="mb-3"
           />
         </b-col>
       </b-row>
 
       <b-row no-gutters class="mt-0">
-        <b-col style="max-width:793px" class="mr-3">
+        <b-col style="max-width:793px" class="mb-3 mr-3">
           <friend-card
             :friend="friends[10]"
             :imgPosition="friends[10].imgPosition"
@@ -133,67 +131,61 @@
             :height="Number(503)"
             :imgContainerWidth="Number(487)"
             :imgContainerHeight="Number(503)"
-            class="mb-3"
           />
         </b-col>
 
-        <b-col style="max-width:731px" class="">
+        <b-col style="max-width:731px" class="mb-3">
           <friend-card
             :friend="friends[11]"
             :imgPosition="friends[11].imgPosition"
             :height="Number(503)"
             :imgContainerWidth="Number(731)"
             :imgContainerHeight="Number(306)"
-            :imgScaleToContainerWidth=true
-            class="mb-3"
+            imgScaleToContainerWidth=true
           />
         </b-col>
       </b-row>
 
-      <b-row no-gutters style="" class="">
-        <b-col style="max-width:388.5px" class="mr-3">
+      <b-row no-gutters>
+        <b-col style="max-width:388.5px" class="mb-3 mr-3">
           <friend-card
             :friend="friends[12]"
             :imgPosition="friends[12].imgPosition"
             :imgContainerHeight="Number(538)"
             :imgMoveLeftPercent="Number(8)"
-            class="mb-3"
             :height="Number(927.33)"
           />
         </b-col>
 
-        <b-col style="max-width:388.5px" class="mr-3">
+        <b-col style="max-width:388.5px" class="mb-3 mr-3">
           <friend-card
             :friend="friends[13]"
             :imgPosition="friends[13].imgPosition"
             :imgContainerHeight="Number(581)"
             :height="Number(927.33)"
             :imgMoveLeftPercent="Number(6)"
-            class="mb-3"
           />
         </b-col>
 
-        <b-col style="width:731px" class="">
-          <b-row no-gutters style="" class="">
-            <b-col class="">
+        <b-col style="width:731px">
+          <b-row no-gutters>
+            <b-col class="mb-3">
               <friend-card
                 :friend="friends[14]"
                 :imgPosition="friends[14].imgPosition"
                 :imgContainerWidth="Number(400)"
                 :imgContainerHeight="Number(408)"
-                class="mb-3"
               />
             </b-col>
 
-            <b-col class="">
+            <b-col class="mb-3">
               <friend-card
                 :friend="friends[15]"
                 :imgPosition="friends[15].imgPosition"
                 :imgContainerHeight="Number(310)"
                 :imgContainerWidth="Number(731)"
-                :imgScaleToContainerWidth=true
+                imgScaleToContainerWidth=true
                 :height=Number(503.305)
-                class="mb-3"
               />
             </b-col>
           </b-row>
@@ -243,66 +235,55 @@
             :height="Number(812)"
             :imgContainerHeight="Number(622)"
             :imgMoveDownPercent="Number(-27)"
-            :imgScaleToContainerWidth=true
+            imgScaleToContainerWidth=true
             class="mb-3"
           />
         </b-col>
 
-        <b-col style="max-width:547px" class="">
-          <b-row no-gutters class="">
-            <b-col style="max-width:547px" class="mr-3">
-              <friend-card
-                :friend="friends[4]"
-                :imgPosition="friends[4].imgPosition"
-                :height="Number(663)"
-                :imgContainerHeight="Number(458)"
-                :imgMoveLeftPercent="Number(9)"
-                class="mb-3"
-              />
-            </b-col>
+        <b-col style="max-width:547px">
+          <friend-card
+            :friend="friends[4]"
+            :imgPosition="friends[4].imgPosition"
+            :height="Number(663)"
+            :imgContainerHeight="Number(416)"
+            :imgMoveLeftPercent="Number(10)"
+            class="mb-3"
+          />
 
-            <b-col style="max-width:547px">
-              <friend-card
-                :friend="friends[5]"
-                imgPosition="right" 
-                :imgContainerHeight="Number(442)"
-                :imgHeight="Number(442)"
-                class="mb-3"
-              />
-            </b-col>
-          </b-row>
+          <friend-card
+            :friend="friends[5]"
+            imgPosition="right" 
+            :imgContainerHeight="Number(442)"
+            :imgHeight="Number(442)"
+            class="mb-3"
+          />
 
-          <b-row no-gutters>
-            <b-col>
-              <friend-card
-                :friend="friends[6]"
-                imgPosition="top"
-                :height="640"
-                :imgContainerWidth="Number(547)"
-                :imgContainerHeight="Number(391)"
-                :imgHeight="Number(411)"
-                :imgMoveLeftPercent="Number(22)"
-                :imgMoveDownPercent="Number(-3)"
-                class="mb-3"
-              />
+          <friend-card
+            :friend="friends[6]"
+            imgPosition="top"
+            :height="640"
+            :imgContainerWidth="Number(547)"
+            :imgContainerHeight="Number(391)"
+            :imgHeight="Number(411)"
+            :imgMoveLeftPercent="Number(22)"
+            :imgMoveDownPercent="Number(-3)"
+            class="mb-3"
+          />
 
-              <friend-card
-                :friend="friends[7]"
-                imgPosition="left"
-                :imgContainerWidth="Number(270)"
-                :imgContainerHeight="Number(457)"
-                :imgHeight="Number(457)"
-                :imgMoveLeftPercent="Number(38)"
-                class="mb-3"
-              />
-            </b-col>
-          </b-row>
-
+          <friend-card
+            :friend="friends[7]"
+            imgPosition="left"
+            :imgContainerWidth="Number(270)"
+            :imgContainerHeight="Number(457)"
+            :imgHeight="Number(457)"
+            :imgMoveLeftPercent="Number(38)"
+            class="mb-3"
+          />
         </b-col>
       </b-row>
 
-      <b-row no-gutters style="max-width:1215px;" class="mt-0">
-        <b-col class="">
+      <b-row no-gutters style="max-width:1215px;" class="mb-3 mt-0">
+        <b-col>
           <friend-card
             :friend="friends[8]"
             :imgPosition="friends[8].imgPosition"
@@ -311,25 +292,23 @@
             :imgHeight="Number(850)"
             :imgMoveLeftPercent="Number(10)"
             :imgMoveDownPercent="Number(-10)"
-            class="mb-3"
           />
         </b-col>
       </b-row>
 
-      <b-row no-gutters style="max-width:1215px;" class="mt-0">
-        <b-col class="">
+      <b-row no-gutters style="max-width:1215px;" class="mb-3 mt-0">
+        <b-col>
           <friend-card
             :friend="friends[9]"
             :imgPosition="friends[9].imgPosition"
             :imgContainerWidth="Number(801)"
             :imgContainerHeight="Number(435)"
             :imgMoveDownPercent="Number(-24)"
-            class="mb-3"
           />
         </b-col>
       </b-row>
 
-      <b-row no-gutters class="mt-0">
+      <b-row no-gutters class="mb-3 mt-0">
         <b-col style="max-width:656px" class="mr-3">
           <friend-card
             :friend="friends[10]"
@@ -338,25 +317,23 @@
             :imgContainerWidth="Number(384)"
             :imgContainerHeight="Number(503)"
             :imgMoveLeftPercent="Number(12)"
-            class="mb-3"
           />
         </b-col>
 
-        <b-col style="max-width:546px" class="">
+        <b-col style="max-width:546px">
           <friend-card
             :friend="friends[11]"
             :imgPosition="friends[11].imgPosition"
             :height="Number(503)"
             :imgContainerWidth="Number(546)"
             :imgContainerHeight="Number(280)"
-            :imgScaleToContainerWidth=true
-            class="mb-3"
+            imgScaleToContainerWidth=true
           />
         </b-col>
       </b-row>
 
-      <b-row no-gutters class="mt-0">
-        <b-col style="max-width:1215px" class="">
+      <b-row no-gutters class="mb-3 mt-0">
+        <b-col style="max-width:1215px">
           <friend-card
             :friend="friends[15]"
             imgPosition="right"
@@ -364,12 +341,11 @@
             :imgContainerHeight="Number(310)"
             :imgMoveLeftPercent="Number(5)"
             :imgMoveDownPercent="Number(0)"
-            class="mb-3"
           />
         </b-col>
       </b-row>
 
-      <b-row no-gutters style="max-width:1215px" class="">
+      <b-row no-gutters style="max-width:1215px" class="mb-3">
         <b-col style="max-width:388.5px" class="mr-3">
           <friend-card
             :friend="friends[12]"
@@ -377,7 +353,6 @@
             :height="Number(927.33)"
             :imgContainerHeight="Number(538)"
             :imgMoveLeftPercent="Number(8)"
-            class="mb-3"
           />
         </b-col>
 
@@ -388,36 +363,20 @@
             :imgContainerHeight="Number(581)"
             :height="Number(927.33)"
             :imgMoveLeftPercent="Number(6)"
-            class="mb-3"
           />
         </b-col>
 
-        <b-col style="max-width:438px" class="">
+        <b-col style="max-width:438px">
           <friend-card
             :friend="friends[14]"
             imgPosition="top"
             :imgContainerHeight="Number(600)"
             :height="Number(927.33)"
             :imgMoveLeftPercent="Number(0)"
-            :imgScaleToContainerWidth=true
-            class="mb-3"
+            imgScaleToContainerWidth=true
           />
         </b-col>
       </b-row>
-
-      <!-- <b-row no-gutters class="mt-0">
-        <b-col style="max-width:1215px" class="">
-          <friend-card
-            :friend="friends[15]"
-            imgPosition="right"
-            :imgContainerWidth="Number(655)"
-            :imgContainerHeight="Number(310)"
-            :imgMoveLeftPercent="Number(5)"
-            :imgMoveDownPercent="Number(0)"
-            class="mb-3"
-          />
-        </b-col>
-      </b-row> -->
 
     </b-container>
     <!-- END OF LAYOUT FOR MEDIUM DESKTOPS -->
@@ -428,14 +387,13 @@
 
 
     <!-- LAYOUT FOR SMALL DESKTOPS -->
-    <!-- <b-container v-if="windowWidth >= 1120 && windowWidth < 1380" fluid style="max-width:832px;" :style="friendsOpacity" id="friends" class="main-col px-0 mt-4 mb-5"> -->
-    <b-container v-if="windowWidth < 1380" fluid style="max-width:832px;" :style="friendsOpacity" id="friends" class="main-col px-0 mt-4 mb-5">
+    <b-container v-if="windowWidth >= 992 && windowWidth < 1380" fluid style="max-width:832px;" :style="friendsOpacity" id="friends" class="main-col px-0 mt-4 mb-5">
 
       <b-row no-gutters style="max-width:832px" class="mb-3">
         <b-col>
           <friend-card
             :friend="friends[0]"
-            :imgPosition="friends[0].imgPosition"
+            imgPosition="top"
             :height="Number(544)"
             :imgContainerHeight="Number(355)"
             :imgScaleToContainerWidth="true"
@@ -487,8 +445,9 @@
             :friend="friends[4]"
             :imgPosition="friends[4].imgPosition"
             :height="Number(690)"
-            :imgContainerHeight="Number(458)"
+            :imgContainerHeight="Number(380)"
             :imgMoveLeftPercent="Number(20)"
+            :imgHeight="Number(420)"
           />
         </b-col>
 
@@ -498,7 +457,7 @@
             :imgPosition="friends[5].imgPosition"                 
             :height="Number(690)"
             :imgContainerHeight="Number(460)"
-            :imgScaleToContainerWidth=true
+            imgScaleToContainerWidth=true
           />
         </b-col>
       </b-row>
@@ -513,7 +472,7 @@
             :imgContainerHeight="Number(410)"
             :imgMoveLeftPercent="Number(0)"
             :imgMoveDownPercent="Number(-3)"
-            :imgScaleToContainerWidth=true
+            imgScaleToContainerWidth=true
           />
         </b-col>
       </b-row>
@@ -525,8 +484,8 @@
             imgPosition="left"
             :imgContainerWidth="Number(270)"
             :imgContainerHeight="Number(457)"
-            :imgHeight="Number(457)"
-            :imgMoveLeftPercent="Number(7)"
+            :imgHeight="Number(500)"
+            :imgMoveLeftPercent="Number(15)"
           />
         </b-col>
       </b-row>
@@ -593,7 +552,7 @@
             :imgContainerWidth="Number(832)"
             :imgContainerHeight="Number(400)"
             :imgMoveDownPercent="Number(0)"
-            :imgScaleToContainerWidth=true
+            imgScaleToContainerWidth=true
           />
         </b-col>
       </b-row>
@@ -605,7 +564,7 @@
             :imgPosition="friends[14].imgPosition"
             :imgContainerWidth="Number(406)"
             :imgContainerHeight="Number(450)"
-            :imgScaleToContainerWidth=true
+            imgScaleToContainerWidth=true
           />
         </b-col>
       </b-row>
@@ -638,6 +597,377 @@
     <!-- END OF LAYOUT FOR SMALL DESKTOPS -->
 
 
+
+
+
+    <!-- LAYOUT FOR TABLETS -->
+    <b-container v-if="windowWidth >= 768 && windowWidth < 992" fluid style="max-width:728px;" :style="friendsOpacity" id="friends" class="main-col px-0 mt-4 mb-5">
+
+      <b-row no-gutters class="mb-3">
+        <b-col>
+          <friend-card
+            :friend="friends[0]"
+            imgPosition="top"
+            :height="Number(544)"
+            :imgContainerHeight="Number(355)"
+            imgScaleToContainerWidth=true
+          />
+        </b-col>
+      </b-row>
+
+      <b-row no-gutters class="mb-3">
+        <b-col style="max-width:356px" class="mr-3">
+          <friend-card
+            :friend="friends[1]"
+            imgPosition="top"
+            :height="Number(750)"
+            :imgContainerWidth="Number(356)"
+            :imgContainerHeight="Number(376)"
+            imgScaleToContainerWidth=true
+          />
+        </b-col>
+
+        <b-col style="max-width:356px">
+          <friend-card
+            :friend="friends[2]"
+            imgPosition="bottom"
+            :height="Number(750)"
+            :imgContainerWidth="Number(356)"
+            :imgContainerHeight="Number(440)"
+            imgScaleToContainerWidth=true
+          />
+        </b-col>
+      </b-row>
+
+      <b-row no-gutters class="mb-3">
+        <b-col>
+          <friend-card
+            :friend="friends[3]"
+            imgPosition="left"
+            :height="Number(622)"
+            :imgContainerHeight="Number(622)"
+            :imgContainerWidth="Number(460)"
+            :imgWidth="Number(480)"
+          />
+        </b-col>
+      </b-row>
+
+      <b-row no-gutters class="mb-3">
+        <b-col style="max-width:356px" class="mr-3">
+          <friend-card
+            :friend="friends[4]"
+            :imgPosition="friends[4].imgPosition"
+            :height="Number(690)"
+            :imgContainerHeight="Number(340)"
+            :imgMoveLeftPercent="Number(20)"
+            :imgHeight="Number(380)"
+          />
+        </b-col>
+
+        <b-col style="max-width:356px">
+          <friend-card
+            :friend="friends[5]"
+            :imgPosition="friends[5].imgPosition"                 
+            :height="Number(690)"
+            :imgContainerHeight="Number(460)"
+            imgScaleToContainerWidth=true
+          />
+        </b-col>
+      </b-row>
+
+      <b-row no-gutters class="mb-3">
+        <b-col>
+          <friend-card
+            :friend="friends[6]"
+            imgPosition="top"
+            :height="Number(598)"
+            :imgContainerHeight="Number(392)"
+            imgScaleToContainerWidth=true
+          />
+        </b-col>
+      </b-row>
+
+      <b-row no-gutters class="mb-3">
+        <b-col>
+          <friend-card
+            :friend="friends[7]"
+            imgPosition="left"
+            :imgContainerWidth="Number(270)"
+            :imgContainerHeight="Number(457)"
+            :imgHeight="Number(500)"
+            :imgMoveLeftPercent="Number(25)"
+          />
+        </b-col>
+      </b-row>
+
+      <b-row no-gutters class="mb-3">
+        <b-col>
+          <friend-card
+            :friend="friends[8]"
+            :imgPosition="friends[8].imgPosition"
+            :imgContainerWidth="Number(432)"
+            :imgContainerHeight="Number(435)"
+            :imgHeight="Number(650)"
+            :imgMoveLeftPercent="Number(18)"
+          />
+        </b-col>
+      </b-row>
+
+      <b-row no-gutters class="mb-3">
+        <b-col>
+          <friend-card
+            :friend="friends[9]"
+            imgPosition="top"
+            :height="Number(682)"
+            :imgContainerHeight="Number(435)"
+            :imgMoveDownPercent="Number(-8)"
+            :imgWidth="Number(800)"
+          />
+        </b-col>
+      </b-row>
+
+      <b-row no-gutters class="mb-3">
+        <b-col style="max-width:356px" class="mr-3">
+          <friend-card
+            :friend="friends[10]"
+            imgPosition="bottom"
+            :height="Number(690)"
+            :imgContainerHeight="Number(316)"
+            :imgWidth="Number(420)"       
+          />
+        </b-col>
+
+        <b-col style="max-width:356px">
+          <friend-card
+            :friend="friends[11]"
+            :imgPosition="friends[11].imgPosition"
+            :height="Number(690)"
+            :imgContainerHeight="Number(398)"
+            :imgMoveLeftPercent="Number(82)"
+            :imgHeight="Number(700)"
+          />
+        </b-col>
+      </b-row>
+
+      <b-row no-gutters class="mb-3">
+        <b-col>
+          <friend-card
+            :friend="friends[15]"
+            imgPosition="bottom"
+            :height="Number(585)"
+            :imgContainerHeight="Number(380)"
+            imgScaleToContainerWidth=true
+          />
+        </b-col>
+      </b-row>
+
+      <b-row no-gutters class="mb-3">
+        <b-col>
+          <friend-card
+            :friend="friends[14]"
+            :imgPosition="friends[14].imgPosition"
+            :imgContainerHeight="Number(450)"
+            imgScaleToContainerWidth=true
+          />
+        </b-col>
+      </b-row>
+
+      <b-row no-gutters class="mb-3">
+        <b-col style="max-width:356px" class="mr-3">
+          <friend-card
+            :friend="friends[12]"
+            :imgPosition="friends[12].imgPosition"
+            :height="Number(914)"
+            :imgContainerHeight="Number(538)"
+            :imgMoveLeftPercent="Number(10)"
+          />
+        </b-col>
+
+        <b-col style="max-width:356px">
+          <friend-card
+            :friend="friends[13]"
+            :imgPosition="friends[13].imgPosition"
+            :height="Number(914)"
+            :imgContainerHeight="Number(561)"
+            :imgMoveLeftPercent="Number(10)"
+          />
+        </b-col>
+      </b-row>
+
+    </b-container>
+    <!-- END OF LAYOUT FOR TABLETS -->
+
+
+
+
+
+    <!-- LAYOUT FOR LANDSCAPE PHONES -->
+    <b-container v-if="windowWidth >= 576 && windowWidth < 768" fluid style="max-width:536px;" :style="friendsOpacity" id="friends" class="main-col px-0 mt-4 mb-5">
+
+      <b-row no-gutters>
+        <b-col style="max-width:536px;">
+          <friend-card
+            :friend="friends[0]"
+            imgPosition="top"
+            :height="Number(544)"
+            :imgContainerHeight="Number(317)"
+            imgScaleToContainerWidth=true
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[1]"
+            imgPosition="left"
+            :height="Number(436)"
+            :imgContainerWidth="Number(250)"
+            :imgHeight="Number(436)"
+            :imgMoveLeftPercent="Number(3)"
+            class="mb-3"
+          />
+          
+          <friend-card
+            :friend="friends[2]"
+            imgPosition="right"
+            :height="Number(416)"
+            :imgContainerWidth="Number(284)"
+            :imgHeight="Number(416)"
+            :imgMoveLeftPercent="Number(5)"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[3]"
+            imgPosition="left"
+            :height="Number(416)"
+            :imgContainerWidth="Number(284)"
+            :imgContainerHeight="Number(416)"
+            :imgWidth="Number(300)"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[4]"
+            :imgPosition="friends[4].imgPosition"
+            :height="Number(609)"
+            :imgContainerHeight="Number(360)"
+            imgScaleToContainerWidth=true
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[5]"
+            imgPosition="right"                 
+            :height="Number(400)"
+            :imgContainerHeight="Number(400)"
+            :imgContainerWidth="Number(276)"
+            :imgHeight="Number(400)"
+            :imgMoveLeftPercent="Number(3)"
+            class="mb-3"
+          />
+          
+          <friend-card
+            :friend="friends[6]"
+            imgPosition="top"
+            :height="Number(570)"
+            :imgContainerHeight="Number(320)"
+            :imgHeight="Number(340)"
+            :imgMoveLeftPercent="Number(9)"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[7]"
+            imgPosition="left"
+            :imgContainerWidth="Number(268)"
+            :imgContainerHeight="Number(457)"
+            :imgHeight="Number(500)"
+            :imgMoveLeftPercent="Number(46)"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[8]"
+            :imgPosition="friends[8].imgPosition"
+            :imgContainerWidth="Number(268)"
+            :imgContainerHeight="Number(457)"
+            :imgHeight="Number(530)"
+            :imgMoveLeftPercent="Number(32)"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[9]"
+            imgPosition="top"
+            :height="Number(673)"
+            :imgContainerHeight="Number(360)"
+            :imgMoveLeftPercent="Number(7)"
+            :imgWidth="Number(600)"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[10]"
+            imgPosition="bottom"
+            :height="Number(673)"
+            :imgContainerHeight="Number(381)"
+            :imgMoveDownPercent="Number(-3)"
+            imgScaleToContainerWidth=true
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[12]"
+            imgPosition="left"
+            :imgContainerWidth="Number(268)"
+            :imgContainerHeight="Number(458)"
+            :imgHeight="Number(480)"
+            :imgMoveLeftPercent="Number(20)"
+            class="mb-3"
+          />
+          
+          <friend-card
+            :friend="friends[13]"
+            imgPosition="right"
+            :imgContainerWidth="Number(268)"
+            :imgContainerHeight="Number(458)"
+            :imgHeight="Number(530)"
+            :imgMoveLeftPercent="Number(20)"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[11]"
+            :imgPosition="friends[11].imgPosition"
+            :height="Number(604)"
+            :imgContainerHeight="Number(398)"
+            :imgMoveLeftPercent="Number(25)"
+            :imgHeight="Number(700)"
+            class="mb-3"
+          />          
+          
+          <friend-card
+            :friend="friends[14]"
+            :imgPosition="friends[14].imgPosition"
+            :imgContainerWidth="Number(268)"
+            :imgContainerHeight="Number(457)"
+            :imgHeight="Number(457)"
+            :imgMoveLeftPercent="Number(5)"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[15]"
+            imgPosition="bottom"
+            :height="Number(588)"
+            :imgContainerHeight="Number(340)"
+            imgScaleToContainerWidth=true
+            class="mb-3"
+          />
+        </b-col>
+      </b-row>
+
+    </b-container>
+    <!-- END OF LAYOUT FOR LANDSCAPE PHONES -->
 
 
     <ScrollToTop
