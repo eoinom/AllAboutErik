@@ -4,8 +4,8 @@
 
     <b-row no-gutters class="innerContainerRow">
 
-      <b-col :order="imgOrder" :cols="imgCols" class="thumbnailImgCol" :style="imgContainerDims">
-        <g-image :src="friend.thumbnailImg" class="thumbnailImg" :style="imgDims" />
+      <b-col :order="imgOrder" :cols="imgCols" class="thumbnailImgCol" :style="imgContainerDims" :id="'thumbnailImgCol' + this.index" >
+        <g-image :src="friend.thumbnailImg" class="thumbnailImg" :style="imgDims" :id="'friendImg' + this.index" />
       </b-col>
       
       <b-col order="1" :cols="imgCols" class="px-3 pt-2 mb-0 textCol" :style="textColDims">
@@ -29,6 +29,9 @@ export default {
   props: {
     friend: {
       type: Object,
+    },    
+    index: {
+      type: Number,
     },
     imgPosition: {
       default: 'top',
@@ -54,6 +57,14 @@ export default {
       default: false,
       type: Boolean
     },
+    imgScaleToContainerHeight: {
+      default: false,
+      type: Boolean
+    },
+    imgScaleToFillContainer: {
+      default: false,
+      type: Boolean
+    },
     imgMoveLeftPercent: {
       default: 0,
       type: Number
@@ -74,6 +85,10 @@ export default {
 
   data() {
     return {
+      friendImgWidth: 0.0,
+      friendImgHeight: 0.0,
+      thumbnailImgColWidth: 0.0,
+      thumbnailImgColHeight: 0.0,
     }
   },
 
@@ -92,6 +107,12 @@ export default {
       }
       return css
     },
+    imgAspectRatio() {
+      return this.friendImgWidth / this.friendImgHeight
+    },
+    imgContainerAspectRatio() {
+      return this.thumbnailImgColWidth / this.thumbnailImgColHeight
+    },
     imgContainerDims() {
       let css = {}
       if (this.imgContainerWidth > 0) {
@@ -109,12 +130,27 @@ export default {
         css.width = this.imgWidth + 'px'
       if (this.imgScaleToContainerWidth)
         css.width = '100%'
+      if (this.imgScaleToContainerHeight)
+        css.height = '100%'
+      if (this.imgScaleToFillContainer) {
+        console.log('this.imgAspectRatio:' + this.imgAspectRatio);
+        console.log('this.imgContainerAspectRatio:' + this.imgContainerAspectRatio);
+        if (this.imgAspectRatio < this.imgContainerAspectRatio) {
+          css.width = '100%'
+          console.log('css:');
+          console.log(css);
+        }else {
+          css.height = '100%'
+          console.log('css:');
+          console.log(css);
+        }
+      }
       if (this.imgHeight > 0)
         css.height = this.imgHeight + 'px'
       if (this.imgMoveLeftPercent !== 0)
         css.right = this.imgMoveLeftPercent + '%'
       if (this.imgMoveDownPercent !== 0)
-        css.top = this.imgMoveDownPercent + '%'      
+        css.top = this.imgMoveDownPercent + '%'
       return css
     },
     imgOrder() {
@@ -133,12 +169,12 @@ export default {
       }
       if (this.imgPosition == 'top' || this.imgPosition == 'bottom') {
         if (this.height > 0 && this.imgContainerHeight > 0) {        
-          css.height = (this.height - this.imgContainerHeight) + 'px'
+          css.minHeight = (this.height - this.imgContainerHeight) + 'px'
         }
       }
       else {
         if (this.height > 0) {        
-          css.height = (this.height) + 'px'
+          css.minHeight = (this.height) + 'px'
         }
       }
       return css
@@ -181,6 +217,22 @@ export default {
   },
 
   mounted() {
+    let friendImg = document.getElementById('friendImg' + this.index)
+    this.friendImgWidth = friendImg.clientWidth
+    this.friendImgHeight = friendImg.clientHeight    
+
+    let imgContainer = document.getElementById('thumbnailImgCol' + this.index)
+    this.thumbnailImgColWidth = imgContainer.clientWidth
+    this.thumbnailImgColHeight = imgContainer.clientHeight    
+
+    this.$nextTick(() => {
+      window.addEventListener('resize', () => {
+        this.friendImgWidth = friendImg.clientWidth
+        this.friendImgHeight = friendImg.clientHeight  
+        this.thumbnailImgColWidth = imgContainer.clientWidth
+        this.thumbnailImgColHeight = imgContainer.clientHeight
+      });
+    })
   },
 
   components: {
@@ -274,6 +326,20 @@ export default {
 
 .innerContainerRow:hover .thumbnailImg{
   transform: scale(1.03, 1.03);
+}
+
+
+/* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .textCol {
+    padding-bottom: 0px;  /* for the see more button */
+  }
+  .seeMoreBtnContainer {
+    position: relative;
+    padding-top: 4px;
+  }
 }
 
 </style>

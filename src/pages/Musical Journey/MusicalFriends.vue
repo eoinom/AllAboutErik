@@ -49,7 +49,7 @@
             :height="Number(812)"
             :imgContainerHeight="Number(622)"
             :imgMoveDownPercent="Number(-27)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
             class="mb-3"
           />
         </b-col>
@@ -93,7 +93,7 @@
                 :imgPosition="friends[7].imgPosition"
                 :height="Number(648)"
                 :imgContainerHeight="Number(457)"
-                imgScaleToContainerWidth=true
+                :imgScaleToContainerWidth="true"
                 class="mb-3"
               />
 
@@ -141,7 +141,7 @@
             :height="Number(503)"
             :imgContainerWidth="Number(731)"
             :imgContainerHeight="Number(306)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
           />
         </b-col>
       </b-row>
@@ -184,7 +184,7 @@
                 :imgPosition="friends[15].imgPosition"
                 :imgContainerHeight="Number(310)"
                 :imgContainerWidth="Number(731)"
-                imgScaleToContainerWidth=true
+                :imgScaleToContainerWidth="true"
                 :height=Number(503.305)
               />
             </b-col>
@@ -235,7 +235,7 @@
             :height="Number(812)"
             :imgContainerHeight="Number(622)"
             :imgMoveDownPercent="Number(-27)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
             class="mb-3"
           />
         </b-col>
@@ -327,7 +327,7 @@
             :height="Number(503)"
             :imgContainerWidth="Number(546)"
             :imgContainerHeight="Number(280)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
           />
         </b-col>
       </b-row>
@@ -373,7 +373,7 @@
             :imgContainerHeight="Number(600)"
             :height="Number(927.33)"
             :imgMoveLeftPercent="Number(0)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
           />
         </b-col>
       </b-row>
@@ -457,7 +457,7 @@
             :imgPosition="friends[5].imgPosition"                 
             :height="Number(690)"
             :imgContainerHeight="Number(460)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
           />
         </b-col>
       </b-row>
@@ -472,7 +472,7 @@
             :imgContainerHeight="Number(410)"
             :imgMoveLeftPercent="Number(0)"
             :imgMoveDownPercent="Number(-3)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
           />
         </b-col>
       </b-row>
@@ -552,7 +552,7 @@
             :imgContainerWidth="Number(832)"
             :imgContainerHeight="Number(400)"
             :imgMoveDownPercent="Number(0)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
           />
         </b-col>
       </b-row>
@@ -564,7 +564,7 @@
             :imgPosition="friends[14].imgPosition"
             :imgContainerWidth="Number(406)"
             :imgContainerHeight="Number(450)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
           />
         </b-col>
       </b-row>
@@ -610,7 +610,7 @@
             imgPosition="top"
             :height="Number(544)"
             :imgContainerHeight="Number(355)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
           />
         </b-col>
       </b-row>
@@ -623,7 +623,7 @@
             :height="Number(750)"
             :imgContainerWidth="Number(356)"
             :imgContainerHeight="Number(376)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
           />
         </b-col>
 
@@ -634,7 +634,7 @@
             :height="Number(750)"
             :imgContainerWidth="Number(356)"
             :imgContainerHeight="Number(440)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
           />
         </b-col>
       </b-row>
@@ -670,7 +670,7 @@
             :imgPosition="friends[5].imgPosition"                 
             :height="Number(690)"
             :imgContainerHeight="Number(460)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
           />
         </b-col>
       </b-row>
@@ -682,7 +682,7 @@
             imgPosition="top"
             :height="Number(598)"
             :imgContainerHeight="Number(392)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
           />
         </b-col>
       </b-row>
@@ -756,7 +756,7 @@
             imgPosition="bottom"
             :height="Number(585)"
             :imgContainerHeight="Number(380)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
           />
         </b-col>
       </b-row>
@@ -767,7 +767,7 @@
             :friend="friends[14]"
             :imgPosition="friends[14].imgPosition"
             :imgContainerHeight="Number(450)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
           />
         </b-col>
       </b-row>
@@ -811,7 +811,7 @@
             imgPosition="top"
             :height="Number(544)"
             :imgContainerHeight="Number(317)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
             class="mb-3"
           />
 
@@ -850,7 +850,7 @@
             :imgPosition="friends[4].imgPosition"
             :height="Number(609)"
             :imgContainerHeight="Number(360)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
             class="mb-3"
           />
 
@@ -911,7 +911,7 @@
             :height="Number(673)"
             :imgContainerHeight="Number(381)"
             :imgMoveDownPercent="Number(-3)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
             class="mb-3"
           />
 
@@ -960,7 +960,7 @@
             imgPosition="bottom"
             :height="Number(588)"
             :imgContainerHeight="Number(340)"
-            imgScaleToContainerWidth=true
+            :imgScaleToContainerWidth="true"
             class="mb-3"
           />
         </b-col>
@@ -968,6 +968,166 @@
 
     </b-container>
     <!-- END OF LAYOUT FOR LANDSCAPE PHONES -->
+
+
+
+    
+    <!-- LAYOUT FOR PORTRAIT PHONES -->
+    <b-container v-if="windowWidth < 576" fluid style="max-width:536px;width:93%; margin:0 auto;" :style="friendsOpacity" id="friends" class="main-col px-0 mt-4 mb-5">
+
+      <b-row no-gutters>
+        <!-- <b-col style="max-width:536px;"> -->
+        <b-col style="max-width:93%; margin:0 auto;">
+
+          <friend-card
+            :friend="friends[0]"
+            :index=0
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[1]"
+            :index=1
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+          
+          <friend-card
+            :friend="friends[2]"
+            :index=2
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[3]"
+            :index=3
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[4]"
+            :index=4
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[5]"
+            :index=5
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+          
+          <friend-card
+            :friend="friends[6]"
+            :index=6
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[7]"
+            :index=7
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[8]"
+            :index=8
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[9]"
+            :index=9
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[10]"
+            :index=10
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[11]"
+            :index=11
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[12]"
+            :index=12
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+          
+          <friend-card
+            :friend="friends[13]"
+            :index=13
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />  
+          
+          <friend-card
+            :friend="friends[14]"
+            :index=14
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+
+          <friend-card
+            :friend="friends[15]"
+            :index=15
+            imgPosition="top"
+            :imgContainerHeight="Number(300)"
+            :imgScaleToFillContainer="true"
+            class="mb-3"
+          />
+        </b-col>
+      </b-row>
+
+    </b-container>
+    <!-- END OF LAYOUT FOR PORTRAIT PHONES -->
+
 
 
     <ScrollToTop
@@ -1019,6 +1179,7 @@ export default {
   data() {
     return {
       scrollY: 0.0,
+      scrollTargetPos: 0.0,
       windowWidth: 0.0,
       windowHeight: 0.0,
     }
@@ -1039,12 +1200,12 @@ export default {
     },
     friendsOpacity() {
       let css = {}
-      css.opacity = this.scrollY < 700 ? this.scrollY / 700 : 1.0
+      css.opacity = this.scrollY < this.scrollTargetPos ? this.scrollY / this.scrollTargetPos : 1.0
       return css
     },
     bgOpacity() {
       let css = {}
-      css.opacity = this.scrollY < 700 ? 1.0 - (this.scrollY / 700) : 0.0
+      css.opacity = this.scrollY < this.scrollTargetPos ? 1.0 - (this.scrollY / this.scrollTargetPos) : 0.0
       return css
     },
     headerStyles() {
@@ -1065,6 +1226,12 @@ export default {
         this.scrollY = window.pageYOffset     
       }
     });
+
+    // Ref: https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element
+    let bodyRect = document.body.getBoundingClientRect()
+    let element = document.getElementById('friends')
+    let elemRect = element.getBoundingClientRect()
+    this.scrollTargetPos = elemRect.top - bodyRect.top
 
     this.windowWidth = window.innerWidth
     this.windowHeight = window.innerHeight
