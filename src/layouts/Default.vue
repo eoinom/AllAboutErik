@@ -17,7 +17,8 @@
           </div>
 
           <nav v-for="edge in $static.NavItems.edges" :key="edge.node.text">
-            <router-link :to="edge.node.to" class="nav_item" @mouseover.native="onNavLinkHover(edge.node)">{{ edge.node.text.toUpperCase() }}</router-link>
+            <a v-if="edge.node.to == ' '" href="" class="nav_item" @mouseover="onNavLinkHover(edge.node)">{{ edge.node.text.toUpperCase() }}</a>
+            <router-link v-else :to="edge.node.to" class="nav_item" @mouseover.native="onNavLinkHover(edge.node)">{{ edge.node.text.toUpperCase() }}</router-link>
             <hr />
           </nav>
 
@@ -156,7 +157,7 @@
         mainNav.style.paddingLeft = "0"
         mainNav.style.paddingRight = "0"
       },
-      onNavLinkHover(nav) {
+      onNavLinkHover(nav) {        
         this.activeNav = Object.assign({}, nav)
       },
       onSubNavLinkHover(nav) {
