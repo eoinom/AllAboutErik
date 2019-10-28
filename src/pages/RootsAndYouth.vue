@@ -19,6 +19,7 @@
                 <!-- Scroll with arrow images - hidden on xs (e.g. portrait mobile devices) -->
                 <ScrollDownArrow
                   scrollToElement="#videos"
+                  class="d-none d-sm-inline"
                 />
 
               </b-col>

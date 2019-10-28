@@ -73,6 +73,18 @@ export default {
       default: 0,
       type: Number
     },
+    imgCenterHoriz: {
+      default: false,
+      type: Boolean
+    },
+    imgCenterVert: {
+      default: false,
+      type: Boolean
+    },
+    imgCenterCenter: {
+      default: false,
+      type: Boolean
+    },
     width: {
       default: 0,
       type: Number
@@ -126,6 +138,23 @@ export default {
     },
     imgDims() {
       let css = {}
+      if (this.imgCenterHoriz) {
+        css.left = '50%'
+        let translateX = -50 - this.imgMoveLeftPercent
+        css.transform = 'translate(' + translateX + '%, 0%)'
+      }
+      if (this.imgCenterVert) {
+        css.top = '50%'
+        let translateY = -50 + this.imgMoveDownPercent
+        css.transform = 'translate(0%, ' + translateY + '%)'
+      }
+      if (this.imgCenterCenter) {
+        css.left = '50%'
+        css.top = '50%'
+        let translateX = -50 - this.imgMoveLeftPercent
+        let translateY = -50 + this.imgMoveDownPercent
+        css.transform = 'translate(' + translateX + '%, ' + translateY + '%)'
+      }
       if (this.imgWidth > 0)
         css.width = this.imgWidth + 'px'
       if (this.imgScaleToContainerWidth)

@@ -966,7 +966,6 @@
     <b-container v-if="windowWidth < 576" fluid style="max-width:536px;width:93%; margin:0 auto;" :style="friendsOpacity" id="friends" class="main-col px-0 mt-4 mb-5">
 
       <b-row no-gutters>
-        <!-- <b-col style="max-width:536px;"> -->
         <b-col style="max-width:93%; margin:0 auto;">
 
           <friend-card
@@ -974,7 +973,8 @@
             :index=0
             imgPosition="top"
             :imgContainerHeight="Number(300)"
-            :imgScaleToFillContainer="true"
+            :imgHeight="440"
+            :imgCenterHoriz="true"
             class="mb-3"
           />
 
@@ -1002,6 +1002,7 @@
             imgPosition="top"
             :imgContainerHeight="Number(300)"
             :imgScaleToFillContainer="true"
+            :imgMoveDownPercent="-15"
             class="mb-3"
           />
 
@@ -1011,6 +1012,7 @@
             imgPosition="top"
             :imgContainerHeight="Number(300)"
             :imgScaleToFillContainer="true"
+            :imgCenterHoriz="true"
             class="mb-3"
           />
 
@@ -1029,6 +1031,7 @@
             imgPosition="top"
             :imgContainerHeight="Number(300)"
             :imgScaleToFillContainer="true"
+            :imgCenterHoriz="true"
             class="mb-3"
           />
 
@@ -1037,7 +1040,8 @@
             :index=7
             imgPosition="top"
             :imgContainerHeight="Number(300)"
-            :imgScaleToFillContainer="true"
+            :imgHeight="350"
+            :imgMoveLeftPercent="12.5"
             class="mb-3"
           />
 
@@ -1056,6 +1060,7 @@
             imgPosition="top"
             :imgContainerHeight="Number(300)"
             :imgScaleToFillContainer="true"
+            :imgCenterHoriz="true"
             class="mb-3"
           />
 
@@ -1074,6 +1079,7 @@
             imgPosition="top"
             :imgContainerHeight="Number(300)"
             :imgScaleToFillContainer="true"
+            :imgCenterHoriz="true"
             class="mb-3"
           />
 
@@ -1083,6 +1089,7 @@
             imgPosition="top"
             :imgContainerHeight="Number(300)"
             :imgScaleToFillContainer="true"
+            :imgCenterVert="true"
             class="mb-3"
           />
           
@@ -1092,6 +1099,7 @@
             imgPosition="top"
             :imgContainerHeight="Number(300)"
             :imgScaleToFillContainer="true"
+            :imgMoveDownPercent="-9"
             class="mb-3"
           />  
           
@@ -1109,7 +1117,8 @@
             :index=15
             imgPosition="top"
             :imgContainerHeight="Number(300)"
-            :imgScaleToFillContainer="true"
+            :imgHeight="400"
+            :imgCenterHoriz="true"
             class="mb-3"
           />
         </b-col>
@@ -1267,7 +1276,7 @@ export default {
   position: fixed;
   left: 50%;
   /* top: 50%;
-  transform: translate(-50%, 0%); */
+  transform: translate(-50%, -50%); */
   top: 0;
   transform: translate(-50%, 0%);
   width: auto;
