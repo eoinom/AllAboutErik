@@ -1,6 +1,6 @@
 <template>
   <Layout class="pb-5">
-    <img :src="backgroundImgUrl" id="bgImg" :style="bgOpacity" />
+    <img :src="backgroundImgUrl" id="bgImg" :style="bgStyles" />
 
     <header id="header" :style="headerStyles">
       <g-image :src="titleImg" id="titleImg" />
@@ -196,8 +196,6 @@
 
 
 
-
-
     <!-- LAYOUT FOR MEDIUM DESKTOPS -->
     <b-container v-if="windowWidth >= 1380 && windowWidth < 1830" fluid style="max-width:1215px;" :style="friendsOpacity" id="friends" class="main-col px-0 mt-4 mb-5">
 
@@ -380,9 +378,6 @@
 
     </b-container>
     <!-- END OF LAYOUT FOR MEDIUM DESKTOPS -->
-
-
-
 
 
 
@@ -598,8 +593,6 @@
 
 
 
-
-
     <!-- LAYOUT FOR TABLETS -->
     <b-container v-if="windowWidth >= 768 && windowWidth < 992" fluid style="max-width:728px;" :style="friendsOpacity" id="friends" class="main-col px-0 mt-4 mb-5">
 
@@ -799,8 +792,6 @@
 
 
 
-
-
     <!-- LAYOUT FOR LANDSCAPE PHONES -->
     <b-container v-if="windowWidth >= 576 && windowWidth < 768" fluid style="max-width:536px;" :style="friendsOpacity" id="friends" class="main-col px-0 mt-4 mb-5">
 
@@ -968,7 +959,6 @@
 
     </b-container>
     <!-- END OF LAYOUT FOR LANDSCAPE PHONES -->
-
 
 
     
@@ -1182,6 +1172,8 @@ export default {
       scrollTargetPos: 0.0,
       windowWidth: 0.0,
       windowHeight: 0.0,
+      bgImgWidth: 2560.0,
+      bgImgHeight: 1380.0
     }
   },
 
@@ -1203,14 +1195,24 @@ export default {
       css.opacity = this.scrollY < this.scrollTargetPos ? this.scrollY / this.scrollTargetPos : 1.0
       return css
     },
-    bgOpacity() {
+    bgImgAspectRatio() {      
+      return this.bgImgHeight > 0 ? this.bgImgWidth / this.bgImgHeight : 0.0
+    },
+    windowAspectRatio() {
+      return this.windowWidth / this.windowHeight
+    },
+    bgStyles() {
       let css = {}
       css.opacity = this.scrollY < this.scrollTargetPos ? 1.0 - (this.scrollY / this.scrollTargetPos) : 0.0
+      if (this.bgImgAspectRatio <= this.windowAspectRatio)
+        css.width = this.windowWidth + 'px';
+      else
+        css.height = this.windowHeight + 'px';
       return css
     },
     headerStyles() {
       let css = {}
-      css.opacity = this.bgOpacity.opacity
+      css.opacity = this.bgStyles.opacity
       css.paddingTop = ((this.windowHeight / 2) - 150) + 'px'
       return css
     }
@@ -1263,22 +1265,21 @@ export default {
 
 #bgImg {
   position: fixed;
-  min-width: 100%;
-  max-height: 100%;
-  /* top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto; */
-
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  /* top: 50%;
+  transform: translate(-50%, 0%); */
+  top: 0;
+  transform: translate(-50%, 0%);
+  width: auto;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;    
+  overflow: hidden;
   z-index: -1;
 }
 
 #header {
   text-align: center;
-  /* margin-top: 480px; */
 }
 
 #titleImg {
