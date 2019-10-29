@@ -212,13 +212,13 @@ export default {
     position: absolute;
     
     /* Center element on the middle of it's parent */
-    top: 55%;
+    top: 52.5%;
     left: 50%;    
     
     transform: translate(-50%,-50%);  /* Reset back the image so it's center is locked on the center of the parent */
     
     width: 110vw;
-    height: 120vh;
+    height: 115vh;
     
     box-shadow: inset 0px 0px 150px 60px rgba(0,0,0,0.8), inset 0px 0px 150px 60px rgba(0,0,0,0.8);
     border-radius: 15%;

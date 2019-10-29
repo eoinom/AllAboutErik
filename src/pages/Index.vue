@@ -223,11 +223,11 @@ export default {
     // fixed.addEventListener('touchmove', function(e) {
     //   e.preventDefault();
     // }, false);    
-    this.$nextTick(() => {
-      document.body.addEventListener('touchmove', function(e) {
-        e.preventDefault();
-      }, false);
-    })
+    // this.$nextTick(() => {
+    //   document.body.addEventListener('touchmove', function(e) {
+    //     e.preventDefault();
+    //   }, false);
+    // })
   },
   beforeDestroy() {  
     // set data for fading out audio
