@@ -217,8 +217,8 @@ export default {
     
     transform: translate(-50%,-50%);  /* Reset back the image so it's center is locked on the center of the parent */
     
-    width: 110%;
-    height: 110%;
+    width: 110vw;
+    height: 110vh;
     
     box-shadow: inset 0px 0px 150px 60px rgba(0,0,0,0.8), inset 0px 0px 150px 60px rgba(0,0,0,0.8);
     border-radius: 15%;
