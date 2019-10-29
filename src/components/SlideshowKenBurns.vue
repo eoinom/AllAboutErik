@@ -212,13 +212,13 @@ export default {
     position: absolute;
     
     /* Center element on the middle of it's parent */
-    top: 54%; /*52.5% for ipad portrait */
+    top: 50%;
     left: 50%;    
     
     transform: translate(-50%,-50%);  /* Reset back the image so it's center is locked on the center of the parent */
     
     width: 110vw;
-    height: 118vh; /*115vh for ipad portrait */
+    height: 110vh;
     
     box-shadow: inset 0px 0px 150px 60px rgba(0,0,0,0.8), inset 0px 0px 150px 60px rgba(0,0,0,0.8);
     border-radius: 15%;
@@ -254,6 +254,8 @@ export default {
 .SlideshowKenBurns {
   &__slides:after { 
       box-shadow: inset 0px 0px 50px 20px rgba(0,0,0,0.8), inset 0px 0px 50px 20px rgba(0,0,0,0.8);
+      top: 54%;      //adjusting vertical position & height of vignette to counteract touch scroll on mobile devices
+      height: 118vh;
     }
   }
 }
@@ -263,6 +265,8 @@ export default {
 .SlideshowKenBurns {
   &__slides:after {
       box-shadow: inset 0px 0px 75px 30px rgba(0,0,0,0.8), inset 0px 0px 75px 30px rgba(0,0,0,0.8);
+      top: 54%;      //adjusting vertical position & height of vignette to counteract touch scroll on mobile devices
+      height: 118vh;
     }
   }
 }
@@ -272,6 +276,8 @@ export default {
 .SlideshowKenBurns {
   &__slides:after {
       box-shadow: inset 0px 0px 100px 40px rgba(0,0,0,0.8), inset 0px 0px 100px 40px rgba(0,0,0,0.8);
+      top: 52.5%;      //adjusting vertical position & height of vignette to counteract touch scroll on mobile devices
+      height: 115vh;
     }
   }
 }
@@ -281,6 +287,8 @@ export default {
 .SlideshowKenBurns {
   &__slides:after {
       box-shadow: inset 0px 0px 125px 50px rgba(0,0,0,0.8), inset 0px 0px 125px 50px rgba(0,0,0,0.8);
+      top: 52.5%;      //adjusting vertical position & height of vignette to counteract touch scroll on mobile devices
+      height: 115vh;
     }
   }
 }
