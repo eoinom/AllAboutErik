@@ -162,16 +162,10 @@ export default {
       if (this.imgScaleToContainerHeight)
         css.height = '100%'
       if (this.imgScaleToFillContainer) {
-        console.log('this.imgAspectRatio:' + this.imgAspectRatio);
-        console.log('this.imgContainerAspectRatio:' + this.imgContainerAspectRatio);
         if (this.imgAspectRatio < this.imgContainerAspectRatio) {
           css.width = '100%'
-          console.log('css:');
-          console.log(css);
         }else {
           css.height = '100%'
-          console.log('css:');
-          console.log(css);
         }
       }
       if (this.imgHeight > 0)
@@ -211,38 +205,6 @@ export default {
   },
 
   methods: {
-    // textColDims() {
-    //   setTimeout(function(){ 
-    //     let css = {}
-    //     if (this.width > 0 && this.imgContainerWidth > 0) { 
-    //       css.width = (this.width - this.imgContainerWidth) + 'px'
-    //     }
-    //     if (this.imgPosition == 'top' || this.imgPosition == 'bottom') {
-    //       if (this.height > 0 && this.imgContainerHeight > 0) {        
-    //         css.height = (this.height - this.imgContainerHeight) + 'px'
-    //       }
-    //     }
-    //     else {
-    //       if (this.height > 0) {        
-    //         css.height = (this.height - 8) + 'px'
-    //       }
-    //     }
-    //     return css
-    //   }, 1000);        
-    // },
-    // imgContainerDims() {
-    //   setTimeout(function(){ 
-    //     let css = {}
-    //     if (this.imgContainerWidth > 0) {
-    //       css.width = this.imgContainerWidth + 'px'
-    //     }
-    //     if (this.imgContainerHeight > 0)
-    //       css.height = this.imgContainerHeight + 'px'
-    //     if (this.imgPosition == 'top' || this.imgPosition == 'bottom')
-    //       css.overflow = 'hidden'
-    //     return css
-    //   }, 1000);
-    // },
   },
 
   mounted() {
@@ -346,15 +308,16 @@ export default {
 
 .thumbnailImgCol {
   overflow: unset;
+  transform: scale(1.005, 1.005);
+  transition: 0.8s ease;
  }
 
 .thumbnailImg {
   position: relative;
-  transition: 0.8s ease;
 }
 
-.innerContainerRow:hover .thumbnailImg{
-  transform: scale(1.03, 1.03);
+.innerContainerRow:hover .thumbnailImgCol{
+  transform: scale(1.035, 1.035);
 }
 
 
