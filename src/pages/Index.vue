@@ -371,7 +371,7 @@ $scale-base-1: (1 + $scale / 100%);
 
 .soundIconContainer{
   position: absolute;
-  top: 35px;
+  top: 52px;
   right: 7.3%;
   z-index: 1000;
 }
@@ -381,11 +381,6 @@ $scale-base-1: (1 + $scale / 100%);
   bottom: 50px;
   text-align: center;
   right: -6.5%;
-}
-
-.icon {
-  font-size: 3.0em;
-  color: white;
 }
 
 .audioIcon {
@@ -413,33 +408,82 @@ $scale-base-1: (1 + $scale / 100%);
   }
 }
 
-@media (min-width : 768px) and (max-width : 1024px) {
+
+/* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .openbtn {
+    top: 25px;
+    left: 25px;
+  }
   .soundIconContainer{
     position: absolute;
-    top: 25px;
+    top: 17px;
     right: 7.3%;
     z-index: 1000;
   }
-  .icon {
-    font-size: 2.5em;
+  .audioIcon {
+    max-width: 52px;
+  }
+  .homePgMainText {
+    font-size: calc(0.75em + 0.75vw);
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .openbtn {
+    top: 35px;
+    left: 35px;
+  }
+  .soundIconContainer{
+    position: absolute;
+    top: 28px;
+    right: 7.3%;
+    z-index: 1000;
+  }
+  .audioIcon {
+    max-width: 57px;
+  }
+  .homePgMainText {
+    font-size: calc(0.65em + 0.65vw);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .openbtn {
+    top: 46px;
+    left: 46px;
+  }
+  .soundIconContainer{
+    position: absolute;
+    top: 40px;
+    right: 7.3%;
+    z-index: 1000;
   }
   .audioIcon {
     max-width: 62px;
   }
+  .homePgMainText {
+    font-size: calc(0.875em + 0.625vw);
+  }
 }
 
-@media (max-width : 767px) {
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
   .soundIconContainer{
     position: absolute;
-    top: 18px;
+    top: 54px;
     right: 7.3%;
     z-index: 1000;
   }
-  .icon {
-    font-size: 2.0em;
-  }
   .audioIcon {
-    max-width: 52px;
+    max-width: 67px;
+  }
+  .homePgMainText {
+    font-size: calc(0.875em + 0.625vw);
   }
 }
 
