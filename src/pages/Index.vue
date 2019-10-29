@@ -218,6 +218,10 @@ export default {
 
   mounted() {
     this.playAndFadeAudio()
+
+    document.body.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+    }, false);
   },
   beforeDestroy() {  
     // set data for fading out audio
