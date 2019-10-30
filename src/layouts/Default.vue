@@ -29,7 +29,7 @@
 
     <!-- Sub navigation menu -->
     <!-- <div v-if="showSubSideNav"> -->
-      <div id="sideNav-sub" class="sidenav-sub" :style="showSubSideNav ? 'width:240px;' : 'width:0px;'">
+      <div id="sideNav-sub" class="sidenav-sub" :style="subSideNavStyles()">
         <div class="submenu-img-container">
           <!-- <image-component>
             <template v-slot:image>
@@ -113,7 +113,9 @@
     data () {
       return {
         activeNav: {},
-        activeSubNav: {}
+        activeSubNav: {},
+        windowWidth: 0,
+        windowHeight: 0,
       }
     },
     
@@ -121,7 +123,7 @@
       // activeImg() {
       //   return this.activeNav.img
       // },
-      showSubSideNav() {
+      showSubSideNav() {        
         return this.activeNav.hasOwnProperty('hasSubMenu') && this.activeNav.hasSubMenu === true
       },
       showSubPageLinks() {
@@ -129,16 +131,34 @@
       }
     },
 
-    methods: {    
+    methods: {
+      subSideNavStyles() {
+        let subNav = document.getElementById("sideNav-sub")
+        if (subNav != null) {
+          this.showSubSideNav ? subNav.style.width = "240px" : subNav.style.width = "0" // needed to overwrite setting from closeNav()
+        }
+        return this.showSubSideNav ? 'width:240px' : 'width:0px'  // note the max-width settings in the media queries
+      }, 
       openNav() {
         /* Set the width of the side navigation */
         let mainNav = document.getElementById("sideNav-main")        
-        mainNav.style.transition = "0.5s"   
-        // changed width below after BootstrapVue installed
-        // mainNav.style.width = "190px"
-        mainNav.style.width = "226px"
-        mainNav.style.paddingLeft = "18px"
-        mainNav.style.paddingRight = "18px"
+        mainNav.style.transition = "0.5s"
+
+        if (this.windowWidth >= 768)  { // i.e. tablets & up
+          mainNav.style.width = "226px"
+          mainNav.style.paddingLeft = "18px"
+          mainNav.style.paddingRight = "18px"
+        }
+        else if (this.windowWidth >= 576)  { // i.e. landscape phones
+          mainNav.style.width = "202px"
+          mainNav.style.paddingLeft = "16px"
+          mainNav.style.paddingRight = "16px"
+        }
+        else  { // i.e. portrait phones
+          mainNav.style.width = (this.windowWidth / 2.0) + 'px'
+          mainNav.style.paddingLeft = "14px"
+          mainNav.style.paddingRight = "14px"
+        }
       },    
       closeNav() {
         /* Hides the navigation menu by setting the width of it to 0 */  
@@ -163,6 +183,18 @@
       onSubNavLinkHover(nav) {
         this.activeSubNav = Object.assign({}, nav)
       }
+    },
+
+    mounted() {
+      this.windowWidth = window.innerWidth
+      this.windowHeight = window.innerHeight
+
+      this.$nextTick(() => {
+        window.addEventListener('resize', () => {        
+          this.windowWidth = window.innerWidth
+          this.windowHeight = window.innerHeight 
+        });
+      })
     },
 
     components: {
@@ -288,6 +320,8 @@ body {
 .submenu-img-container img {
   display: block;
   margin: 0px auto;
+  width: 100%;
+  height: auto;
 }
 
 .sidenav-sub {
@@ -385,8 +419,12 @@ body {
   .sidenav {
     padding-top: 15px;
   }
-  .sidenav a {
-    font-size: 18px;
+  .sidenav-sub {
+    max-width: 50%;
+    left: 50%;
+  }
+  .nav_item {
+    font-size: 12px;
   }
   .openbtn {
     top: 25px;
@@ -399,6 +437,10 @@ body {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
+  .sidenav-sub {
+    max-width: 220px;
+    left: 202px;
+  }
   .openbtn {
     top: 35px;
     left: 35px;
