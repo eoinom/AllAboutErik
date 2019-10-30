@@ -1387,12 +1387,12 @@ export default {
 
 #titleImg {
   width: 100%;
-  max-width: 1094px;
+  max-width: 1324px;
   min-width: 350px;
   height: auto;
   margin: auto;
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 115px;
+  padding-right: 115px;
 }
 
 #titleSubText {
@@ -1455,8 +1455,10 @@ export default {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  
-
+  #titleImg {
+    padding-left: 105px;
+    padding-right: 105px;
+  }
 }
 
 </style>
