@@ -1281,7 +1281,7 @@ export default {
       return this.$page.MusicalFriends.edges[0].node.friends
     },
     scrollTargetPos() {
-      return this.paddingTop + this.targetPosY
+      return 0.72 * this.targetPosY
     },
     friendsOpacity() {
       let css = {}
@@ -1327,10 +1327,17 @@ export default {
 
   mounted() {
     this.scrollY = window.pageYOffset
+    // console.log('this.scrollY = ' + this.scrollY);   
 
     window.addEventListener('scroll', () => {
       if (this.scrollY != window.pageYOffset) {
-        this.scrollY = window.pageYOffset        
+        this.scrollY = window.pageYOffset 
+        // console.log('this.scrollY = ' + this.scrollY);   
+        
+        let bodyRect = document.body.getBoundingClientRect()
+        let element = document.getElementById('friends')
+        let elemRect = element.getBoundingClientRect()
+        this.targetPosY = elemRect.top - bodyRect.top
       }
     });
 
@@ -1339,6 +1346,8 @@ export default {
     let element = document.getElementById('friends')
     let elemRect = element.getBoundingClientRect()
     this.targetPosY = elemRect.top - bodyRect.top
+    // console.log('elemRect.top - bodyRect.top = ' + elemRect.top + ' - ' + bodyRect.top + ' = ' + this.targetPosY);
+    
 
     this.windowWidth = window.innerWidth
     this.windowHeight = window.innerHeight
@@ -1347,6 +1356,12 @@ export default {
       window.addEventListener('resize', () => {
         this.windowWidth = window.innerWidth
         this.windowHeight = window.innerHeight
+
+        let bodyRect = document.body.getBoundingClientRect()
+        let element = document.getElementById('friends')
+        let elemRect = element.getBoundingClientRect()
+        this.targetPosY = elemRect.top - bodyRect.top
+        // console.log('in resize, elemRect.top - bodyRect.top = ' + elemRect.top + ' - ' + bodyRect.top + ' = ' + this.targetPosY);
       });
     })
   },
