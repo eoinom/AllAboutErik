@@ -399,7 +399,7 @@ export default {
 @media (min-width: 992px) and (max-width: 1199.98px) { 
   .soundIconContainer{
     position: absolute;
-    top: 54px;
+    top: 52px;
     right: 7.3%;
     z-index: 1000;
   }

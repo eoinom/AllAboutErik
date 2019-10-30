@@ -280,8 +280,9 @@ body {
   color: #68c4eb;
 }
 
+
 .openbtn {
-  display: block;
+  display: inline-block;
   padding-bottom: 35px;
   top: 57px;
   left: 57px;
@@ -289,22 +290,45 @@ body {
   width: 35px;
   z-index: 1000;
 }
-
-.sidenav .closebtn {
+.closebtn {
   display: inline-block;
   padding-bottom: 35px;
   position: relative;  
   width: 35px;
 }
-.sidenav .closebtn .img-hover, .openbtn .img-hover {
+.closebtn .img-hover, .openbtn .img-hover {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 3;
 }
-.sidenav .closebtn:hover .img-hover, .openbtn:hover .img-hover {
-  display: inline;
+@media (hover) {
+  .openbtn {
+    display: inline-block;
+    padding-bottom: 35px;
+    top: 57px;
+    left: 57px;
+    position: fixed;  
+    width: 35px;
+    z-index: 1000;
+  }
+  .closebtn {
+    display: inline-block;
+    padding-bottom: 35px;
+    position: relative;  
+    width: 35px;
+  }
+  .closebtn .img-hover, .openbtn .img-hover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+  .closebtn:hover .img-hover, .openbtn:hover .img-hover {
+    display: inline;
+  }
 }
 
 .sidenav hr {
@@ -433,6 +457,12 @@ body {
   .openbtn img {
     max-width: 40px;
   }
+  .closebtn {
+    padding-bottom: 20px;
+  }
+  .closebtn img {
+    max-width: 30px;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -448,6 +478,12 @@ body {
   .openbtn img {
     max-width: 50px;
   }
+  .closebtn {
+    padding-bottom: 20px;
+  }
+  .closebtn img {
+    max-width: 32px;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -459,10 +495,15 @@ body {
   .openbtn img {
     max-width: 60px;
   }
+  .closebtn {
+    padding-bottom: 30px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-
+  .openbtn img {
+    max-width: 69px;
+  }
 }
 </style>
