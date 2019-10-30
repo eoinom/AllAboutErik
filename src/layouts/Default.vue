@@ -134,9 +134,10 @@
 
     methods: {
       subSideNavStyles() {
-        if (this.documentLoaded && subNav != null) {
+        if (this.documentLoaded) {
           let subNav = document.getElementById("sideNav-sub")
-          this.showSubSideNav ? subNav.style.width = "240px" : subNav.style.width = "0" // needed to overwrite setting from closeNav()
+          if (subNav != null)
+            this.showSubSideNav ? subNav.style.width = "240px" : subNav.style.width = "0" // needed to overwrite setting from closeNav()
         }
         return this.showSubSideNav ? 'width:240px' : 'width:0px'  // note the max-width settings in the media queries
       }, 
