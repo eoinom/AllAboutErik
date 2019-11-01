@@ -44,35 +44,35 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/data/navMenu/**/*.md',
+        path: 'src/data/navMenuItems/**/*.md',
         typeName: 'NavMenuItem'
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/data/homePg/**/*.md',
+        path: 'src/data/navMenuPages/homePg.md',
         typeName: 'HomePage'
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/data/roots&youth/**/*.md',
+        path: 'src/data/navMenuPages/roots-and-youth.md',
         typeName: 'RootsAndYouth'
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/data/musical-journey/the-episodes.md',
+        path: 'src/data/navMenuPages/musical-journey/the-episodes.md',
         typeName: 'TheEpisodes'
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/data/musical-journey/musical-friends.md',
+        path: 'src/data/navMenuPages/musical-journey/musical-friends.md',
         typeName: 'MusicalFriends'
       }
     }
