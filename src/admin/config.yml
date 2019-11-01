@@ -103,7 +103,7 @@ collections:
         - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
   - name: "the-episodes"
     label: "The Episodes"
-    folder: "src/data/musical-journey/the-episodes"
+    folder: "src/data/musical-journey"
     create: true
     slug: "{{slug}}"
     identifier_field: pageTitle
@@ -125,8 +125,8 @@ collections:
           - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
           - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0}
   - name: "musical-friends"
-    label: "Musical Friends"
-    folder: "src/data/musical-journey/musical-friends"
+    label: "Musical Friends Index"
+    folder: "src/data/musical-journey"
     create: true
     slug: "{{slug}}"
     identifier_field: pageTitle
