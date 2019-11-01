@@ -13,9 +13,9 @@ media_library:
     api_key: 884234271445431
 
 collections:
-  - name: "nav menu items"
-    label: "Nav Menu Item"
-    folder: "src/data/navMenu"
+  - label: "Nav Menu Item"
+    name: "nav menu items"
+    folder: "src/data/navMenuItems"
     create: true
     slug: "{{slug}}"
     identifier_field: text
@@ -34,119 +34,115 @@ collections:
         fields: 
           - {label: "Subpage Text", name: "subPageText", widget: "string"}  
           - {label: "Subpage url targt", name: "subPageTo", widget: "string"}
-  - name: "homePg" 
-    label: "Home Page"
-    folder: "src/data/homePg"
-    create: true
-    slug: "{{slug}}"
-    identifier_field: pageTitle
-    fields:
-      - {label: "Page Title", name: "pageTitle", widget: "string"}  
-      - {label: "Heading Image", name: "headingImg", widget: "image"}  
-      - {label: 'Main text', name: 'body', widget: 'markdown'}  
-      - {label: 'Credit text', name: 'creditText', widget: 'string', required: false}
-      - {label: 'Background Audio', name: 'bgAudio', widget: 'file', required: false}
-      - {label: 'Background Audio Duration', name: 'bgAudioDuration', widget: 'number', valueType: "float", min: 0, required: false}
-      - {label: 'Background Audio Fade In Duration', name: 'bgAudioFadeInDuration', widget: 'number', valueType: "float", min: 0, required: false}
-      - {label: 'Background Audio Fade Out Duration', name: 'bgAudioFadeOutDuration', widget: 'number', valueType: "float", min: 0, required: false}
-      - label: "Slides"
-        name: "slides"
-        widget: "list"
-        fields: 
-          - {label: "Image", name: "img", widget: "image"} 
-          - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
-          - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100}
-          - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, max: 60}
-          - {label: "Scale from", name: "scaleFrom", widget: "number", valueType: "float", min: 1, max: 2}
-          - {label: "Scale to", name: "scaleTo", widget: "number", valueType: "float", min: 1, max: 2}
-          - label: "Pan start from"
-            name: "panStart"
-            widget: "select"
-            options: ["top-left", "top", "top-right", "left", "centre", "right", "bottom-left", "bottom", "bottom-right"]
-  - name: "roots&youth"
-    label: "Roots & Youth"
-    folder: "src/data/roots&youth"
-    create: true
-    slug: "{{slug}}"
-    identifier_field: pageTitle
-    fields:
-      - {label: "Page Title", name: "pageTitle", widget: "string"}  
-      - {label: "Heading Image", name: "headingImg", widget: "image"}  
-      - {label: 'Main text', name: 'body', widget: 'markdown', required: false} 
-      - label: "Slides"
-        name: "slides"
-        widget: "list"
-        fields: 
-          - {label: "Image", name: "img", widget: "image"} 
-          - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
-          - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
-      - {label: "Slide duration (secs)", name: "slideDuration", widget: "number", valueType: "float", min: 0, max: 60, required: false}
-      - label: "Videos"
-        name: "videos"
-        widget: "list"
-        fields: 
-          - {label: 'Title', name: 'title', widget: 'string', required: false}
-          - {label: 'Subtext', name: 'subText', widget: 'markdown', required: false}
-          - {label: "Vimeo Url", name: "url", widget: "string"}
-          - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}  
-          - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
-          - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}          
-      - label: "Full Video"
-        name: "fullVideo"
-        widget: "object"
+
+
+  - label: "Nav Menu Pages"
+    name: "pages"
+    files:
+      - label: "Home Page"
+        name: "homePg" 
+        file: "src/data/navMenuPages/homePg.md"
         fields:
-        - {label: 'Title', name: 'title', widget: 'string', required: false}
-        - {label: "Text", name: "text", widget: "string"}
-        - {label: "Video File", name: "file", widget: "file", required: false}
-        - {label: "Video Url", name: "url", widget: "string", required: false}
-        - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image", required: false}        
-        - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
-  - name: "the-episodes"
-    label: "The Episodes"
-    folder: "src/data/musical-journey"
-    create: true
-    slug: "{{slug}}"
-    identifier_field: pageTitle
-    fields:
-      - {label: "Page Title", name: "pageTitle", widget: "string"}
-      - {label: "Header Background Image", name: "headerBgImg", widget: "image"}
-      - {label: "Title Image", name: "titleImg", widget: "image"}      
-      - {label: 'Main text', name: 'body', widget: 'markdown', required: false} 
-      - {label: 'Main image', name: 'mainImg', widget: 'image'} 
-      - label: "Videos"
-        name: "videos"
-        widget: "list"
-        fields: 
-          - {label: 'Title', name: 'title', widget: 'string'}
-          - {label: 'Short Title', name: 'shortTitle', widget: 'string'}
-          - {label: 'Subtext', name: 'subText', widget: 'markdown'}
-          - {label: "Vimeo Url", name: "url", widget: "string"}
-          - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}  
-          - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
-          - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0}
-  - name: "musical-friends"
-    label: "Musical Friends Index"
-    folder: "src/data/musical-journey"
-    create: true
-    slug: "{{slug}}"
-    identifier_field: pageTitle
-    fields:
-      - {label: "Page Title", name: "pageTitle", widget: "string"}
-      - {label: "Background Image", name: "backgroundImg", widget: "image"}
-      - {label: "Title Image", name: "titleImg", widget: "image"}      
-      - {label: 'Main text', name: 'body', widget: 'markdown', required: false}
-      - label: "Friends"
-        name: "friends"
-        widget: "list"
-        fields: 
-          - {label: 'Name / Title', name: 'name', widget: 'string'}
-          - {label: 'Text', name: 'text', widget: 'markdown'}
-          - {label: "Link (url)", name: "link", widget: "string"}
-          - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
-          - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
-          - {label: "Image Orientation", name: "imgOrientation", widget: "select", options: ["landscape", "portrait"]}
-          - label: "Image Position"
-            name: "imgPosition"
-            widget: "select"
-            options: ["top", "bottom", "left", "right"]
+          - {label: "Page Title", name: "pageTitle", widget: "string"}  
+          - {label: "Heading Image", name: "headingImg", widget: "image"}  
+          - {label: 'Main text', name: 'body', widget: 'markdown'}  
+          - {label: 'Credit text', name: 'creditText', widget: 'string', required: false}
+          - {label: 'Background Audio', name: 'bgAudio', widget: 'file', required: false}
+          - {label: 'Background Audio Duration', name: 'bgAudioDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - {label: 'Background Audio Fade In Duration', name: 'bgAudioFadeInDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - {label: 'Background Audio Fade Out Duration', name: 'bgAudioFadeOutDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - label: "Slides"
+            name: "slides"
+            widget: "list"
+            fields: 
+              - {label: "Image", name: "img", widget: "image"} 
+              - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
+              - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100}
+              - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, max: 60}
+              - {label: "Scale from", name: "scaleFrom", widget: "number", valueType: "float", min: 1, max: 2}
+              - {label: "Scale to", name: "scaleTo", widget: "number", valueType: "float", min: 1, max: 2}
+              - label: "Pan start from"
+                name: "panStart"
+                widget: "select"
+                options: ["top-left", "top", "top-right", "left", "centre", "right", "bottom-left", "bottom", "bottom-right"]
+                
+      - label: "Roots & Youth"
+        name: "roots&youth"
+        file: "src/data/navMenuPages/roots-and-youth.md"
+        fields:
+          - {label: "Page Title", name: "pageTitle", widget: "string"}  
+          - {label: "Heading Image", name: "headingImg", widget: "image"}  
+          - {label: 'Main text', name: 'body', widget: 'markdown', required: false} 
+          - label: "Slides"
+            name: "slides"
+            widget: "list"
+            fields: 
+              - {label: "Image", name: "img", widget: "image"} 
+              - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
+              - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+          - {label: "Slide duration (secs)", name: "slideDuration", widget: "number", valueType: "float", min: 0, max: 60, required: false}
+          - label: "Videos"
+            name: "videos"
+            widget: "list"
+            fields: 
+              - {label: 'Title', name: 'title', widget: 'string', required: false}
+              - {label: 'Subtext', name: 'subText', widget: 'markdown', required: false}
+              - {label: "Vimeo Url", name: "url", widget: "string"}
+              - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}  
+              - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
+              - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}          
+          - label: "Full Video"
+            name: "fullVideo"
+            widget: "object"
+            fields:
+            - {label: 'Title', name: 'title', widget: 'string', required: false}
+            - {label: "Text", name: "text", widget: "string"}
+            - {label: "Video File", name: "file", widget: "file", required: false}
+            - {label: "Video Url", name: "url", widget: "string", required: false}
+            - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image", required: false}        
+            - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
+            
+      - label: "The Episodes"
+        name: "the-episodes"
+        file: "src/data/navMenuPages/musical-journey.md"
+        fields:
+          - {label: "Page Title", name: "pageTitle", widget: "string"}
+          - {label: "Header Background Image", name: "headerBgImg", widget: "image"}
+          - {label: "Title Image", name: "titleImg", widget: "image"}      
+          - {label: 'Main text', name: 'body', widget: 'markdown', required: false} 
+          - {label: 'Main image', name: 'mainImg', widget: 'image'} 
+          - label: "Videos"
+            name: "videos"
+            widget: "list"
+            fields: 
+              - {label: 'Title', name: 'title', widget: 'string'}
+              - {label: 'Short Title', name: 'shortTitle', widget: 'string'}
+              - {label: 'Subtext', name: 'subText', widget: 'markdown'}
+              - {label: "Vimeo Url", name: "url", widget: "string"}
+              - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}  
+              - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
+              - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0}
+
+      - label: "Musical Friends"
+        name: "musical-friends"
+        file: "src/data/navMenuPages/musical-journey.md"
+        fields:
+          - {label: "Page Title", name: "pageTitle", widget: "string"}
+          - {label: "Background Image", name: "backgroundImg", widget: "image"}
+          - {label: "Title Image", name: "titleImg", widget: "image"}      
+          - {label: 'Main text', name: 'body', widget: 'markdown', required: false}
+          - label: "Friends"
+            name: "friends"
+            widget: "list"
+            fields: 
+              - {label: 'Name / Title', name: 'name', widget: 'string'}
+              - {label: 'Text', name: 'text', widget: 'markdown'}
+              - {label: "Link (url)", name: "link", widget: "string"}
+              - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
+              - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
+              - {label: "Image Orientation", name: "imgOrientation", widget: "select", options: ["landscape", "portrait"]}
+              - label: "Image Position"
+                name: "imgPosition"
+                widget: "select"
+                options: ["top", "bottom", "left", "right"]
           
