@@ -13,7 +13,7 @@ media_library:
     api_key: 884234271445431
 
 collections:
-  - label: "Nav Menu Item"
+  - label: "Nav Menu Items"
     name: "nav menu items"
     folder: "src/data/navMenuItems"
     create: true
@@ -37,7 +37,7 @@ collections:
 
 
   - label: "Nav Menu Pages"
-    name: "pages"
+    name: "navMenuPages"
     files:
       - label: "Home Page"
         name: "homePg" 
@@ -104,7 +104,7 @@ collections:
             
       - label: "The Episodes"
         name: "the-episodes"
-        file: "src/data/navMenuPages/musical-journey.md"
+        file: "src/data/navMenuPages/musical-journey/the-episodes.md"
         fields:
           - {label: "Page Title", name: "pageTitle", widget: "string"}
           - {label: "Header Background Image", name: "headerBgImg", widget: "image"}
@@ -125,7 +125,7 @@ collections:
 
       - label: "Musical Friends"
         name: "musical-friends"
-        file: "src/data/navMenuPages/musical-journey.md"
+        file: "src/data/navMenuPages/musical-journey/musical-friends.md"
         fields:
           - {label: "Page Title", name: "pageTitle", widget: "string"}
           - {label: "Background Image", name: "backgroundImg", widget: "image"}
