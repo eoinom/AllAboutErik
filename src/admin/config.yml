@@ -36,12 +36,12 @@ collections:
           - {label: "Subpage url targt", name: "subPageTo", widget: "string"}
 
 
-  - label: "Nav Menu Pages"
-    name: "navMenuPages"
+  - label: "Pages"
+    name: "pages"
     files:
       - label: "Home Page"
         name: "homePg" 
-        file: "src/data/navMenuPages/homePg.md"
+        file: "src/data/pages/homePg.md"
         fields:
           - {label: "Page Title", name: "pageTitle", widget: "string"}  
           - {label: "Heading Image", name: "headingImg", widget: "image"}  
@@ -68,7 +68,7 @@ collections:
                 
       - label: "Roots & Youth"
         name: "roots&youth"
-        file: "src/data/navMenuPages/roots-and-youth.md"
+        file: "src/data/pages/roots-and-youth.md"
         fields:
           - {label: "Page Title", name: "pageTitle", widget: "string"}  
           - {label: "Heading Image", name: "headingImg", widget: "image"}  
@@ -104,7 +104,7 @@ collections:
             
       - label: "Musical Journey - The Episodes"
         name: "the-episodes"
-        file: "src/data/navMenuPages/musical-journey/the-episodes.md"
+        file: "src/data/pages/musical-journey/the-episodes.md"
         fields:
           - {label: "Page Title", name: "pageTitle", widget: "string"}
           - {label: "Header Background Image", name: "headerBgImg", widget: "image"}
@@ -125,7 +125,7 @@ collections:
 
       - label: "Musical Journey - Musical Friends"
         name: "musical-friends"
-        file: "src/data/navMenuPages/musical-journey/musical-friends.md"
+        file: "src/data/pages/musical-journey/musical-friends.md"
         fields:
           - {label: "Page Title", name: "pageTitle", widget: "string"}
           - {label: "Background Image", name: "backgroundImg", widget: "image"}

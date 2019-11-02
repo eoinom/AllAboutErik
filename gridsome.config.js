@@ -39,7 +39,9 @@ module.exports = {
     },
     {
       use: 'gridsome-plugin-netlify-cms-paths',
-      options: { contentTypes: ['NavMenuItem'] }
+      options: { 
+        contentTypes: ['NavMenuItem'] 
+      }
     },
     {
       use: '@gridsome/source-filesystem',
@@ -51,28 +53,28 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/data/navMenuPages/homePg.md',
+        path: 'src/data/pages/homePg.md',
         typeName: 'HomePage'
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/data/navMenuPages/roots-and-youth.md',
+        path: 'src/data/pages/roots-and-youth.md',
         typeName: 'RootsAndYouth'
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/data/navMenuPages/musical-journey/the-episodes.md',
+        path: 'src/data/pages/musical-journey/the-episodes.md',
         typeName: 'TheEpisodes'
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/data/navMenuPages/musical-journey/musical-friends.md',
+        path: 'src/data/pages/musical-journey/musical-friends.md',
         typeName: 'MusicalFriends'
       }
     }
