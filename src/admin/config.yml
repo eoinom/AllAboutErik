@@ -145,4 +145,59 @@ collections:
                 name: "imgPosition"
                 widget: "select"
                 options: ["top", "bottom", "left", "right"]
+
+
+  - label: "Friends"
+    name: "friends"
+    folder: "src/data/pages/musical-journey/friends"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: text
+    fields:
+      - {label: "Name", name: "name", widget: "string"}  
+      - {label: "Background Image", name: "backgroundImg", widget: "image"}  
+      - {label: 'Main text', name: 'body', widget: 'markdown'}
+      - label: "Media Items"
+        name: "mediaItems"
+        widget: "list"
+        fields: 
+          - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
+          - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
+          - {label: "Label", name: "label", widget: "string"}
+          - label: "Galleries"
+            name: "galleries"
+            widget: "list"
+            fields: 
+              - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
+              - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
+              - {label: "Label", name: "label", widget: "string", required: false}
+              - label: "Media type"
+                name: "mediaType"
+                widget: "select"
+                options: ["images", "videos", "audio"]
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                required: false
+                fields: 
+                  - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
+                  - {label: "Image", name: "img", widget: "image"} 
+                  - {label: "Caption", name: "caption", widget: "string"}
+              - label: "Videos"
+                name: "videos"
+                widget: "list"
+                required: false
+                fields: 
+                  - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
+                  - {label: "Vimeo Url", name: "url", widget: "string"}
+                  - {label: "Caption", name: "caption", widget: "string"}
+              - label: "Audio"
+                name: "audio"
+                widget: "list"
+                required: false
+                fields: 
+                  - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
+                  - {label: "Audio file", name: "audioFile", widget: "image"} 
+                  - {label: "Caption", name: "caption", widget: "string"}
+                
           
