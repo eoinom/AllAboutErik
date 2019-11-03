@@ -152,14 +152,16 @@ collections:
     folder: "src/data/pages/musical-journey/friends"
     create: true
     slug: "{{slug}}"
-    identifier_field: text
+    identifier_field: name
     fields:
       - {label: "Name", name: "name", widget: "string"}  
-      - {label: "Background Image", name: "backgroundImg", widget: "image"}  
+      - {label: "Heading override", name: "heading", widget: "string", required: false}  
+      - {label: "Background Image", name: "backgroundImg", widget: "image", required: false}  
       - {label: 'Main text', name: 'body', widget: 'markdown'}
       - label: "Media Items"
         name: "mediaItems"
         widget: "list"
+        required: false
         fields: 
           - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
           - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}

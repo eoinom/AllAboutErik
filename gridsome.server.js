@@ -10,7 +10,33 @@ module.exports = function (api) {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api
   })
 
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api
+  // api.createPages(({ createPage }) => {
+  //   // Use the Pages API here: https://gridsome.org/docs/pages-api
+  // })
+
+  api.createPages(async ({ graphql, createPage }) => {
+    const { data } = await graphql(`{
+      allFriends {
+        edges {
+          node {
+            id
+            name
+          }
+        }
+      }
+    }`)
+
+    const slugify = require('@sindresorhus/slugify')
+
+    data.allFriends.edges.forEach(({ node }) => {
+      pageSlug = slugify(node.name)
+      createPage({
+        path: `/musical-journey/musical-friends/${pageSlug}`,
+        component: './src/templates/Friend.vue',
+        context: {
+          id: node.id
+        }
+      })
+    })
   })
 }
