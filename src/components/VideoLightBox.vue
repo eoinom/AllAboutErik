@@ -410,7 +410,7 @@ export default {
     box-sizing: border-box;
 
     color: #FFFFFF;    
-    font-family: 'NeueHaasGroteskText Pro55';
+    font-family: 'NeueHaasGroteskText Pro55', sans-serif;
     font-feature-settings: 'liga';
     font-size: 1.3125rem; /* 21px with 16px default size */
     font-weight: 400;
