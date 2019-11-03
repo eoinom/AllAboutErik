@@ -154,7 +154,7 @@ friends:
       https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Jim-Wilsey_evft51.jpg
   - imgOrientation: landscape
     imgPosition: top
-    link: nick-urbanik
+    link: eduardo-unz
     name: Nick Urbanik aka Eduardo Unz
     orderNo: 12
     text: >-
