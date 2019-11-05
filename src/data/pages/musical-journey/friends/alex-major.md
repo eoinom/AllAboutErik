@@ -33,6 +33,23 @@ mediaItems:
     orderNo: 1
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572904807/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/Background_Thumbnails/Thumbnail_1_AlexMajor_Icon-sh_egfi6h.jpg
+  - galleries:
+      - images:
+          - caption: ' '
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572899775/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/3_dsmb5u.jpg
+            orderNo: 1
+          - caption: ' '
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/4_zruin0.jpg
+            orderNo: 2
+        label: ''
+        orderNo: 1
+    label: Letters from Alex
+    mediaType: images
+    orderNo: 1
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1572904807/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/Background_Thumbnails/Thumbnail_2_1994_rc8ueq.jpg
 ---
 A guy called me from Mississippi and asked if I’d listen to his group. They called themselves the Wallabies. I said, sure, send me a tape of your three best songs. The tape was ok, but he had his heart set on the band coming out to California to play live for me. I couldn’t dissuade him, and three days later he and the group showed up. They auditioned for me at our Sausalito heliport rehearsal hall. I didn’t think the band was very good in person either, not the guitar, the singers, or the songs. When I related my opinion to Alex, he said, okay then, I’m going to tell the guys we’re disbanding. And they broke up on the spot.
 
