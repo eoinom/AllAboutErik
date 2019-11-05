@@ -1,5 +1,5 @@
 <template>
-  <Layout> 
+  <Layout :style="layoutStyle"> 
     <b-container fluid class="main-col">
       
       <h1 id="heading"> {{ heading }} </h1>
@@ -14,6 +14,8 @@ query ($id: ID!) {
   friend: friends(id: $id) {
     name
     heading
+    backgroundImg
+    backgroundOpacity
     content
   }
 }
@@ -40,7 +42,12 @@ export default {
     },
     heading() {
       return this.$page.friend.heading ? this.$page.friend.heading : this.name
-    }
+    },
+    layoutStyle() {
+      return {
+        '--backgroundImg': 'url(' + this.$page.friend.backgroundImg + ')'
+      }
+    },
   },
 
   methods: {
@@ -66,6 +73,21 @@ export default {
        url('../assets/fonts/nhaasgrotesktxpro-55rg.woff') format('woff'), /* Pretty Modern Browsers */
        url('../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
   font-weight: normal;
+}
+
+.layout {
+  padding: 0;
+  background-image: var(--backgroundImg);
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.32);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.main-col {
+  padding: 50px 0%;
+  max-width: 855px;
 }
 
 #heading {
