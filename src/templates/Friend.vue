@@ -77,12 +77,24 @@ export default {
 
 .layout {
   padding: 0;
-  background-image: var(--backgroundImg);
-  background-position: center;
-  background-color: rgba(0, 0, 0, 0.32);
-  background-repeat: no-repeat;
+  overflow: hidden; /* added for pseudo-element */
+  position: relative; /* added for pseudo-element */
+}
+
+/* To fix poor scroll speed using "background-size: cover" and "background-attachment: fixed"
+Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-will-change-property/ */
+.layout::before {
+  content: ' ';
+  position: fixed;  /* instead of background-attachment */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background: var(--backgroundImg) no-repeat center center;
   background-size: cover;
-  background-attachment: fixed;
+  will-change: transform; /* creates a new paint layer */
+  z-index: -1;
 }
 
 .main-col {
