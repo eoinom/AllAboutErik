@@ -184,7 +184,7 @@ collections:
                 fields: 
                   - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
                   - {label: "Image", name: "img", widget: "image"} 
-                  - {label: "Caption", name: "caption", widget: "string"}
+                  - {label: "Caption", name: "caption", widget: "string", required: false}
               - label: "Videos"
                 name: "videos"
                 widget: "list"
@@ -192,7 +192,7 @@ collections:
                 fields: 
                   - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
                   - {label: "Vimeo Url", name: "url", widget: "string"}
-                  - {label: "Caption", name: "caption", widget: "string"}
+                  - {label: "Caption", name: "caption", widget: "string", required: false}
               - label: "Audio"
                 name: "audio"
                 widget: "list"
@@ -200,6 +200,6 @@ collections:
                 fields: 
                   - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
                   - {label: "Audio file", name: "audioFile", widget: "image"} 
-                  - {label: "Caption", name: "caption", widget: "string"}
+                  - {label: "Caption", name: "caption", widget: "string", required: false}
                 
           
