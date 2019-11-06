@@ -1,7 +1,10 @@
 <template>
   <Layout :style="layoutStyle"> 
-    <b-container fluid class="main-col">
-      
+
+    <span class="nav" id="nav_prev">PREVIOUS</span>
+    <span class="nav" id="nav_next">NEXT</span>
+
+    <b-container fluid class="main-col">      
       <h1 id="heading"> {{ heading }} </h1>
   	  <div v-html="$page.friend.content" id="mainContent" />
 
@@ -95,6 +98,38 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   background-size: cover;
   will-change: transform; /* creates a new paint layer */
   z-index: -1;
+}
+
+.nav {
+  color: white; 
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-feature-settings: 'liga';
+  font-weight: 400;
+  font-style: italic;
+  font-size: 39px;
+  letter-spacing: 1px;
+  line-height: 59px;
+  text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
+  margin: 0px;
+  padding: 0px;
+}
+.nav:hover,
+.galleries:hover,
+.galleries:hover .galleriesLabel {
+  color:	#EED047;
+  cursor: pointer;
+}
+#nav_prev {
+  position: fixed;
+  top: 44%;
+  left: 5%;
+  text-align: left;
+}
+#nav_next {
+  position: fixed;
+  top: 44%;
+  right: 5%;
+  text-align: right;
 }
 
 .main-col {
