@@ -48,7 +48,8 @@ export default {
     },
     layoutStyle() {
       return {
-        '--backgroundImg': 'url(' + this.$page.friend.backgroundImg + ')'
+        '--backgroundImg': 'url(' + this.$page.friend.backgroundImg + ')',
+        '--backgroundOpacity': this.$page.friend.backgroundOpacity / 100
       }
     },
   },
@@ -98,6 +99,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   background-size: cover;
   will-change: transform; /* creates a new paint layer */
   z-index: -1;
+  opacity: var(--backgroundOpacity);
 }
 
 .nav {
