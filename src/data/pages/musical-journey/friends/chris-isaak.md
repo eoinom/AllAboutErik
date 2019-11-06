@@ -7,7 +7,7 @@ mediaItems:
   - galleries:
       - type: imageGallery
         images:
-        - caption: ' '
+          - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572904556/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/img604-2_jpccss.jpg
             orderNo: 1
@@ -54,6 +54,7 @@ mediaItems:
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572904553/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/DSCN0779_d1m6rl.jpg
+            orderNo: 12
         label: Photos
         orderNo: 1
     label: Photos
