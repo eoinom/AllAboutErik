@@ -5,7 +5,8 @@ backgroundImg: >-
 backgroundOpacity: 100
 mediaItems:
   - galleries:
-      - images:
+      - type: imageGallery
+        images:
           - caption: Fishing with Alex
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572899775/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/1_Photos/FishingWithAlex-3000_eqm8jc.jpg
@@ -34,7 +35,8 @@ mediaItems:
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572904807/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/Background_Thumbnails/Thumbnail_1_AlexMajor_Icon-sh_egfi6h.jpg
   - galleries:
-      - images:
+      - type: imageGallery
+        images:
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572899775/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/3_dsmb5u.jpg
@@ -155,7 +157,7 @@ mediaItems:
         orderNo: 1
     label: Letters from Alex
     mediaType: images
-    orderNo: 1
+    orderNo: 2
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572904807/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/Background_Thumbnails/Thumbnail_2_1994_rc8ueq.jpg
 ---

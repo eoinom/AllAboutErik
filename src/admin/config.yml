@@ -164,10 +164,10 @@ collections:
         name: "mediaItems"
         widget: "list"
         required: false
-        fields: 
+        fields:
+          - {label: "Label", name: "label", widget: "string"}
           - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
           - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
-          - {label: "Label", name: "label", widget: "string"}
           - label: "Media type"
             name: "mediaType"
             widget: "select"
@@ -219,7 +219,7 @@ collections:
                     required: false
                     fields: 
                       - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
-                      - {label: "Image", name: "img", widget: "image"} 
+                      - {label: "Image", name: "img", widget: "image", valueType: "int"} 
                       - {label: "Caption", name: "caption", widget: "string", required: false}
               - label: "Video Gallery"
                 name: "videoGallery"

@@ -5,7 +5,8 @@ backgroundImg: >-
 backgroundOpacity: 100
 mediaItems:
   - galleries:
-      - images:
+      - type: imageGallery
+        images:
           - caption: Brian and Erik
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901742/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/Brian_Erik_ufsjsq.jpg
