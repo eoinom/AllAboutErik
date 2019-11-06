@@ -171,36 +171,85 @@ collections:
           - label: "Media type"
             name: "mediaType"
             widget: "select"
-            options: ["images", "videos", "audio"]
+            options: ["images", "videos", "audio", "mix"]
+          # - label: "Galleries"
+          #   name: "galleries"
+          #   widget: "list"
+          #   fields: 
+          #     - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
+          #     - {label: "Label", name: "label", widget: "string", required: false}              
+          #     - label: "Images"
+          #       name: "images"
+          #       widget: "list"
+          #       required: false
+          #       fields: 
+          #         - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
+          #         - {label: "Image", name: "img", widget: "image"} 
+          #         - {label: "Caption", name: "caption", widget: "string", required: false}
+          #     - label: "Videos"
+          #       name: "videos"
+          #       widget: "list"
+          #       required: false
+          #       fields: 
+          #         - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
+          #         - {label: "Vimeo Url", name: "url", widget: "string"}
+          #         - {label: "Caption", name: "caption", widget: "string", required: false}
+          #     - label: "Audio"
+          #       name: "audio"
+          #       widget: "list"
+          #       required: false
+          #       fields: 
+          #         - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
+          #         - {label: "Audio file", name: "audioFile", widget: "image"} 
+          #         - {label: "Caption", name: "caption", widget: "string", required: false}
           - label: "Galleries"
             name: "galleries"
             widget: "list"
-            fields: 
-              - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
-              - {label: "Label", name: "label", widget: "string", required: false}              
-              - label: "Images"
-                name: "images"
-                widget: "list"
+            types:    
+              - label: "Image Gallery"
+                name: "imageGallery"
+                widget: "object"
                 required: false
-                fields: 
-                  - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
-                  - {label: "Image", name: "img", widget: "image"} 
-                  - {label: "Caption", name: "caption", widget: "string", required: false}
-              - label: "Videos"
-                name: "videos"
-                widget: "list"
-                required: false
-                fields: 
+                fields:
                   - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
-                  - {label: "Vimeo Url", name: "url", widget: "string"}
-                  - {label: "Caption", name: "caption", widget: "string", required: false}
-              - label: "Audio"
-                name: "audio"
-                widget: "list"
+                  - {label: "Label", name: "label", widget: "string", required: false}    
+                  - label: "Images"
+                    name: "images"
+                    widget: "list"
+                    required: false
+                    fields: 
+                      - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
+                      - {label: "Image", name: "img", widget: "image"} 
+                      - {label: "Caption", name: "caption", widget: "string", required: false}
+              - label: "Video Gallery"
+                name: "videoGallery"
+                widget: "object"
                 required: false
-                fields: 
-                  - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
-                  - {label: "Audio file", name: "audioFile", widget: "image"} 
-                  - {label: "Caption", name: "caption", widget: "string", required: false}
+                fields:
+                  - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
+                  - {label: "Label", name: "label", widget: "string", required: false}    
+                  - label: "Videos"
+                    name: "videos"
+                    widget: "list"
+                    required: false
+                    fields: 
+                      - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
+                      - {label: "Vimeo Url", name: "url", widget: "string"}
+                      - {label: "Caption", name: "caption", widget: "string", required: false}
+              - label: "Audio Gallery"
+                name: "audioGallery"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
+                  - {label: "Label", name: "label", widget: "string", required: false}    
+                  - label: "Audio"
+                    name: "audio"
+                    widget: "list"
+                    required: false
+                    fields: 
+                      - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
+                      - {label: "Audio file", name: "audioFile", widget: "image"} 
+                      - {label: "Caption", name: "caption", widget: "string", required: false}
                 
           

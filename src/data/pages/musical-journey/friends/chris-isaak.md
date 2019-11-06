@@ -5,7 +5,8 @@ backgroundImg: >-
 backgroundOpacity: 88
 mediaItems:
   - galleries:
-      - images:
+      - type: imageGallery
+        images:
           - caption: ' '
             img:
               - >-
