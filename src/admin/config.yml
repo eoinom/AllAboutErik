@@ -11,6 +11,7 @@ media_library:
   config:
     cloud_name: all-about-erik
     api_key: 884234271445431
+    multiple: true
 
 collections:
   - label: "Nav Menu Items"
