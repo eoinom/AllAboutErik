@@ -7,6 +7,16 @@
     <b-container fluid class="main-col">      
       <h1 id="heading"> {{ heading }} </h1>
   	  <div v-html="$page.friend.content" id="mainContent" />
+    </b-container>
+
+    <b-container fluid class="galleriesContainer">
+      <b-row align-h="center" id="galleriesRow">
+        <b-col cols="2" v-for="(item,index) in $page.friend.mediaItems" :key="index" class="galleries p-2">
+          <g-image :src="item.thumbnailImg" class="galleriesImg" />
+          <br />
+          <span class="galleriesLabel">{{ item.label }}</span>
+        </b-col>
+      </b-row>
 
     </b-container>
   </Layout>
@@ -20,6 +30,21 @@ query ($id: ID!) {
     backgroundImg
     backgroundOpacity
     content
+    mediaItems {
+      orderNo
+      label
+      mediaType
+      thumbnailImg
+      galleries {
+        orderNo
+        label
+        images {
+          orderNo
+          img
+          caption
+        }
+      }
+    }
   }
 }
 </page-query>
@@ -135,8 +160,8 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 
 .main-col {
-  padding: 50px 0%;
   max-width: 855px;
+  padding: 50px 0 10px 0;
 }
 
 #heading {
@@ -165,6 +190,29 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   line-height: 32px;
   text-align: justify;
   text-shadow: 0px 0px 250px #1C0F07,0px 0px 250px #1C0F07/* glow */,1px 1px 2px rgba(28,16,23,0.89)/* drop shadow*/;
+}
+
+.galleriesContainer {
+  max-width: 1746px;
+  padding: 4px 0 20px 0;
+}
+
+.galleriesImg {
+  max-width: 275px;
+  height: 193px;
+}
+.galleriesLabel {
+  color: white; 
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-feature-settings: 'liga';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.16);
+  margin: 0px;
+  padding: 0px;
 }
 
 
