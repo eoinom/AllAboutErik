@@ -11,7 +11,7 @@
 
     <b-container fluid class="galleriesContainer">
       <b-row align-h="center" id="galleriesRow">
-        <b-col cols="2" v-for="(item,index) in $page.friend.mediaItems" :key="index" class="galleries p-2">
+        <b-col cols="2" v-for="(item,index) in $page.friend.mediaItems" :key="index" class="galleries p-2" @click="mediaItemClick(item, index)">
           <g-image :src="item.thumbnailImg" class="galleriesImg" />
           <br />
           <span class="galleriesLabel">{{ item.label }}</span>
@@ -19,6 +19,37 @@
       </b-row>
 
     </b-container>
+
+    <!-- <div v-for="mediaItem in mediaItems" :key="mediaItem.label">
+      <ImageLightBox
+        v-if="mediaItem.mediaType == 'images'"
+        :images="mediaItem.galleries[0].images"
+        :index="0"
+        :disable-scroll="true"
+        @close="imageIndex = null"
+      />
+      <VideoLightBox
+        v-else-if="mediaItem.mediaType == 'videos'"
+        :videos="mediaItem.galleries[0].videos"
+        :index="0"
+        :disable-scroll="true"
+        @close="videoIndex = null"
+      />
+    </div> -->
+
+    <ImageLightBox
+      :images="images"
+      :index="imageIndex"
+      :disable-scroll="true"
+      @close="imageIndex = null"
+    />
+    <VideoLightBox
+      :videos="videos"
+      :index="videoIndex"
+      :disable-scroll="true"
+      @close="videoIndex = null"
+    />
+
   </Layout>
 </template>
 
@@ -51,6 +82,8 @@ query ($id: ID!) {
 
 
 <script scoped>
+import ImageLightBox from '../components/ImageLightBox.vue'
+import VideoLightBox from '../components/VideoLightBox.vue'
 
 export default { 
   metaInfo() {
@@ -61,6 +94,9 @@ export default {
 
   data() {
     return {
+      mediaItemIndex: null,
+      imageIndex: null,
+      videoIndex: null
     }
   },
 
@@ -71,6 +107,15 @@ export default {
     heading() {
       return this.$page.friend.heading ? this.$page.friend.heading : this.name
     },
+    mediaItems() {
+      return this.$page.friend.mediaItems
+    },
+    images() {
+      return this.mediaItemIndex != null ? this.mediaItems[this.mediaItemIndex].galleries[0].images : []
+    },
+    videos() {
+      return this.mediaItemIndex != null ? this.mediaItems[this.mediaItemIndex].galleries[0].videos : []
+    },
     layoutStyle() {
       return {
         '--backgroundImg': 'url(' + this.$page.friend.backgroundImg + ')',
@@ -80,12 +125,29 @@ export default {
   },
 
   methods: {
+    mediaItemClick(mediaItem, index) {
+      console.log('in mediaItemClick');
+      console.log('mediaItem:');
+      console.log(mediaItem);
+      console.log('index: ' + index);
+      
+      if (mediaItem.mediaType == 'images') {
+        this.mediaItemIndex = index
+        this.imageIndex = 0
+      }
+      if (mediaItem.mediaType == 'videos') {
+        this.mediaItemIndex = index
+        this.videoIndex = 0
+      }
+    }
   },
 
   mounted() {
   },
 
   components: {
+    ImageLightBox,
+    VideoLightBox
   },
 }
 </script>
