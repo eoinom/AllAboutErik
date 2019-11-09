@@ -39,6 +39,12 @@ mediaItems:
             orderNo: 10
         orderNo: 1
         type: imageGallery
+    label: Photos
+    mediaType: images
+    orderNo: 1
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_1_PicturesOfDan-2_vzltlr.jpg
+  - galleries:
       - images:
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905363/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/2_Band%20Posters/charlatans_poster_tgsprn.jpg
@@ -55,19 +61,6 @@ mediaItems:
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905364/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/2_Band%20Posters/charlatans4_qtrg8v.jpg
             orderNo: 5
-        label: Band Posters
-        orderNo: 2
-        type: imageGallery
-    label: Photos
-    mediaType: images
-    orderNo: 1
-    thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_1_PicturesOfDan-2_vzltlr.jpg
-  - galleries:
-      - images:
-          - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572905363/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/2_Band%20Posters/charlatans_poster_tgsprn.jpg
-            orderNo: 1
         orderNo: 1
         type: imageGallery
     label: Band Posters
@@ -89,48 +82,66 @@ mediaItems:
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1573319327/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img355-2_mvp4d1.jpg
             orderNo: 4
-          - img:
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319325/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/scans10-14_-62-1_r0n0mc.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319325/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/scans10-14_-61-1_diahvd.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319325/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/scans10-14_-60-1_acsli3.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319325/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/scans10-14_-46-1_qs8rlj.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/scans10-14_-43-4_mhuamt.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/scans10-14_-29-1_heruyf.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319325/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/scans10-14_-28-2_i0ksqv.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img900_h3hcfh.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img453-68_kp7fug.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img452-67_ihhmn7.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319323/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img412_vnhm6l.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319323/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img365-4_xisevw.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319323/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img365-2-2_ewhrhe.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319323/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img363-2_xjbsce.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319323/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img362-3_u1lpi5.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319322/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img361-3_sqp2nt.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319322/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img360-2_vim3an.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319322/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img359-2_bdkdtg.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319322/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img357-2_opcgjl.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/Picture1_io0kvo.jpg
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319325/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/scans10-14_-62-1_r0n0mc.jpg
+            orderNo: 5
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319325/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/scans10-14_-61-1_diahvd.jpg
             orderNo: 6
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319325/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/scans10-14_-60-1_acsli3.jpg
+            orderNo: 7
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319325/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/scans10-14_-46-1_qs8rlj.jpg
+            orderNo: 8
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/scans10-14_-43-4_mhuamt.jpg
+            orderNo: 9
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/scans10-14_-29-1_heruyf.jpg
+            orderNo: 10
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319325/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/scans10-14_-28-2_i0ksqv.jpg
+            orderNo: 11
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img900_h3hcfh.jpg
+            orderNo: 12
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img453-68_kp7fug.jpg
+            orderNo: 13
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img452-67_ihhmn7.jpg
+            orderNo: 14
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319323/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img412_vnhm6l.jpg
+            orderNo: 15
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319323/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img365-4_xisevw.jpg
+            orderNo: 16
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319323/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img365-2-2_ewhrhe.jpg
+            orderNo: 17
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319323/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img363-2_xjbsce.jpg
+            orderNo: 18
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319323/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img362-3_u1lpi5.jpg
+            orderNo: 19
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319322/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img361-3_sqp2nt.jpg
+            orderNo: 20
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319322/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img360-2_vim3an.jpg
+            orderNo: 21
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319322/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img359-2_bdkdtg.jpg
+            orderNo: 22
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319322/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img357-2_opcgjl.jpg
+            orderNo: 23
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/Picture1_io0kvo.jpg
+            orderNo: 24
         orderNo: 1
         type: imageGallery
     label: Postcards & Letters
@@ -141,25 +152,33 @@ mediaItems:
   - galleries:
       - images:
           - img:
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1572905372/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img292-266_f1jcry.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1572905369/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/scans10-14_-44-1_o6iobf.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1572905370/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/scans10-14_-21_cygikr.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1572905368/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/jakobdec96-2_kn7qvr.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1572905370/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img531_t5wumu.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img411_midx4p.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1572905369/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img411-lg_wkaivf.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img363-3-2_rbt8h0.jpg
-              - >-
-                https://res.cloudinary.com/all-about-erik/image/upload/v1572905370/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img361-2-2_vtukrm.jpg
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572905372/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img292-266_f1jcry.jpg
             orderNo: 1
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572905369/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/scans10-14_-44-1_o6iobf.jpg
+            orderNo: 2
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572905370/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/scans10-14_-21_cygikr.jpg
+            orderNo: 3
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572905368/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/jakobdec96-2_kn7qvr.jpg
+            orderNo: 4
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572905370/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img531_t5wumu.jpg
+            orderNo: 5
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img411_midx4p.jpg
+            orderNo: 6
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572905369/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img411-lg_wkaivf.jpg
+            orderNo: 7
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img363-3-2_rbt8h0.jpg
+            orderNo: 8
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572905370/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img361-2-2_vtukrm.jpg
+            orderNo: 9
         orderNo: 1
         type: imageGallery
     label: Gig Announcements
