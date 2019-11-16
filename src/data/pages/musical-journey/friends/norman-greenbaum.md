@@ -68,7 +68,53 @@ mediaItems:
     orderNo: 1
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572907511/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/Background_Thumbnails/Thumbnail_1_Norman3_bhhwai.jpg
-  - label: Albums & Artwork
+  - galleries:
+      - images:
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907509/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/2_s58hcr.jpg
+            orderNo: 1
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907509/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/1_rdnvun.jpg
+            orderNo: 2
+        label: Spirit in the Sky
+        orderNo: 1
+        type: imageGallery
+      - images:
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907510/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/petaluma_dyouc9.jpg
+            orderNo: 1
+          - caption: Petaluma Booklet
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907509/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/PetalumaBooket_xj7s0u.jpg
+            orderNo: 2
+          - caption: Petaluma Booklet
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/PetalumaBooket2_ezmhw2.jpg
+            orderNo: 3
+          - caption: Petaluma Booklet
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/PetalumaBooket3_j8vqhn.jpg
+            orderNo: 4
+          - caption: Petaluma Booklet
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/petalumaBooket4_vl4ne9.jpg
+            orderNo: 5
+          - caption: Petaluma Booklet
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907511/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/PetalumaBooklet5_heol2b.jpg
+            orderNo: 6
+        label: Petaluma
+        orderNo: 2
+        type: imageGallery
+      - images:
+          - caption: Back Home Again
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907509/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/3replprs6422_gsos3k.jpg
+            orderNo: 1
+        label: Back Home Again
+        orderNo: 3
+        type: imageGallery
+    label: Albums & Artwork
     mediaType: images
     orderNo: 2
     thumbnailImg: >-
@@ -78,12 +124,55 @@ mediaItems:
     orderNo: 3
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572907512/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/Background_Thumbnails/Thumbnail_3_norman_videos_icon_bdcas0.jpg
-  - label: Memorabilia
+  - galleries:
+      - images:
+          - caption: Norman's 70th Birthday Invite
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907510/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/4_Norman%20Memorabila/Normans70thBirthdayInvite_rakknv.jpg
+            orderNo: 1
+          - caption: Norman's Annual Horse Race
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907510/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/4_Norman%20Memorabila/NormansAnnualHorseRace_caea08.jpg
+            orderNo: 2
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907509/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/4_Norman%20Memorabila/Scan_4_p7rckk.jpg
+            orderNo: 3
+          - caption: Spirit Mouse Pad
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907510/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/4_Norman%20Memorabila/SpiritMousePad_le4j8b.jpg
+            orderNo: 4
+        orderNo: 1
+        type: imageGallery
+    label: Memorabilia
     mediaType: images
     orderNo: 4
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572907512/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/Background_Thumbnails/Thumbnail_4_Normans70thBirthdayInvite_opaihu.jpg
-  - label: Awards & Press
+  - galleries:
+      - images:
+          - caption: Gold Record for Spirit in the Sky
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907510/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/5_Awards%20Press%20Usage/GoldRecord_shzh61.jpg
+            orderNo: 1
+          - caption: Platinum Record for Guardians of the Galaxy
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907511/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/5_Awards%20Press%20Usage/PlatiumRecordForGuardiansOfGalaxy_dzkheh.jpg
+            orderNo: 2
+          - caption: Press
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907512/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/5_Awards%20Press%20Usage/Press_wg20fe.jpg
+            orderNo: 3
+          - caption: Press
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907512/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/5_Awards%20Press%20Usage/Press2_yiujbu.jpg
+            orderNo: 4
+          - caption: Press
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907512/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/5_Awards%20Press%20Usage/Press3_kwnco8.jpg
+            orderNo: 5
+        orderNo: 1
+        type: imageGallery
+    label: Awards & Press
     mediaType: images
     orderNo: 5
     thumbnailImg: >-
