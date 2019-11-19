@@ -11,12 +11,23 @@
   	  <div v-html="$page.friend.content" id="mainContent" />
     </b-container>
 
-    <b-container fluid class="galleriesContainer">
-      <b-row align-h="center" id="galleriesRow">
-        <b-col cols="2" v-for="(item,index) in $page.friend.mediaItems" :key="index" class="galleries p-2" @click="mediaItemClick(item, index)">
-          <g-image :src="item.thumbnailImg" class="galleriesImg" />
+    <b-container fluid class="mediaItemsContainer">
+      <b-row align-h="center" id="mediaItemsRow">
+        <b-col cols="2" v-for="(item,index) in $page.friend.mediaItems" :key="index" class="mediaItems p-2" v-b-toggle="String(index+1)" @click="mediaItemClick(item, index)">
+          <g-image :src="item.thumbnailImg" class="mediaItemsImg" :id="'mediaItemImg'+index" />
           <br />
-          <span class="galleriesLabel">{{ item.label }}</span>
+          <span class="mediaItemsText mediaItemsLabel">{{ item.label }}</span>
+          <b-collapse :id="String(index+1)" accordion="mediaItems-accordion">
+            <div v-for="(gallery,galIndex) in item.galleries" :key="galIndex">
+              <br />
+              <span
+                @click="galleryIndex = galIndex; setMediaIndexToZero(item.mediaType)"
+                class="mediaItemsText galleriesLabel py-2 pr-2"
+              >
+                {{ gallery.label }}
+              </span>
+            </div>
+          </b-collapse>
         </b-col>
       </b-row>
 
@@ -26,13 +37,13 @@
       :images="images"
       :index="imageIndex"
       :disable-scroll="true"
-      @close="imageIndex = null"
+      @close="imageIndex = null; galleryIndex = null"
     />
     <VideoLightBox
       :videos="videos"
       :index="videoIndex"
       :disable-scroll="true"
-      @close="videoIndex = null"
+      @close="videoIndex = null; galleryIndex = null"
     />
 
   </Layout>
@@ -70,7 +81,9 @@ query ($id: ID!) {
 import ImageLightBox from '../components/ImageLightBox.vue'
 import VideoLightBox from '../components/VideoLightBox.vue'
 
-export default { 
+var VueScrollTo = require('vue-scrollto');
+
+export default {
   metaInfo() {
     return {
       title: this.name
@@ -80,6 +93,7 @@ export default {
   data() {
     return {
       mediaItemIndex: null,
+      galleryIndex: null,
       imageIndex: null,
       videoIndex: null
     }
@@ -96,10 +110,12 @@ export default {
       return this.$page.friend.mediaItems
     },
     images() {
-      return this.mediaItemIndex != null ? this.mediaItems[this.mediaItemIndex].galleries[0].images : []
+      return this.mediaItemIndex != null && this.galleryIndex != null ?
+                this.mediaItems[this.mediaItemIndex].galleries[this.galleryIndex].images : []
     },
     videos() {
-      return this.mediaItemIndex != null ? this.mediaItems[this.mediaItemIndex].galleries[0].videos : []
+      return this.mediaItemIndex != null && this.galleryIndex != null ?
+                this.mediaItems[this.mediaItemIndex].galleries[this.galleryIndex].videos : []
     },
     layoutStyle() {
       return {
@@ -126,12 +142,22 @@ export default {
 
   methods: {
     mediaItemClick(mediaItem, index) {
-      if (mediaItem.mediaType == 'images') {
+      if (mediaItem.mediaType == 'images' || mediaItem.mediaType == 'videos') {
         this.mediaItemIndex = index
+        if (mediaItem.galleries.length == 1) {
+          this.galleryIndex = 0
+          this.setMediaIndexToZero(mediaItem.mediaType)
+        }
+        else {
+          this.$scrollTo('#mediaItemImg' + index, 500)
+        }
+      }
+    },
+    setMediaIndexToZero(mediaType) {
+      if (mediaType == 'images') {
         this.imageIndex = 0
       }
-      if (mediaItem.mediaType == 'videos') {
-        this.mediaItemIndex = index
+      if (mediaType == 'videos') {
         this.videoIndex = 0
       }
     }
@@ -204,8 +230,8 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   padding: 0px;
 }
 .nav:hover,
-.galleries:hover,
-.galleries:hover .galleriesLabel {
+.mediaItems:hover,
+.mediaItems:hover .mediaItemsLabel {
   color:	#EED047;
   cursor: pointer;
 }
@@ -255,27 +281,38 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   text-shadow: 0px 0px 250px #1C0F07,0px 0px 250px #1C0F07/* glow */,1px 1px 2px rgba(28,16,23,0.89)/* drop shadow*/;
 }
 
-.galleriesContainer {
+.mediaItemsContainer {
   max-width: 1746px;
   padding: 4px 0 20px 0;
 }
 
-.galleriesImg {
+.mediaItemsImg {
   max-width: 275px;
   height: 193px;
 }
-.galleriesLabel {
-  color: white; 
+.mediaItemsText {
   font-family: 'Ubuntu Condensed', sans-serif;
   font-feature-settings: 'liga';
   font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
   text-align: left;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.16);
   margin: 0px;
   padding: 0px;
+}
+.mediaItemsLabel {
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+}
+.galleriesLabel {
+  color: #ECECEC;
+  font-size: 17px;
+  line-height: 30px;
+}
+.galleriesLabel:hover {
+  color: #2CACE4;
+  cursor: pointer;
 }
 
 
