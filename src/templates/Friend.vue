@@ -1,8 +1,10 @@
 <template>
   <Layout :style="layoutStyle"> 
 
-    <span class="nav" id="nav_prev">PREVIOUS</span>
-    <span class="nav" id="nav_next">NEXT</span>
+    <div :style="navLinksVisibility" id="navLinks">
+      <span class="nav" id="nav_prev">PREVIOUS</span>
+      <span class="nav" id="nav_next">NEXT</span>
+    </div>
 
     <b-container fluid class="main-col">      
       <h1 id="heading"> {{ heading }} </h1>
@@ -122,6 +124,21 @@ export default {
         '--backgroundOpacity': this.$page.friend.backgroundOpacity / 100
       }
     },
+    showNavLinks() {
+      return this.imageIndex == null & this.videoIndex == null
+    },
+    navLinksVisibility() {
+      let css = {}
+      if (this.showNavLinks) {
+        css.visibility = 'visible'
+        css.opacity = 1
+      }
+      else {
+        css.visibility = 'hidden'
+        css.opacity = 0
+      }
+      return css
+    }
   },
 
   methods: {
@@ -189,8 +206,14 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   opacity: var(--backgroundOpacity);
 }
 
+#navLinks {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.5s linear 1s, opacity 0.5s linear 1s;
+}
 .nav {
   color: white; 
+  display: block;
   font-family: 'Ubuntu Condensed', sans-serif;
   font-feature-settings: 'liga';
   font-weight: 400;
