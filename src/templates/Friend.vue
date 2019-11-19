@@ -22,23 +22,6 @@
 
     </b-container>
 
-    <!-- <div v-for="mediaItem in mediaItems" :key="mediaItem.label">
-      <ImageLightBox
-        v-if="mediaItem.mediaType == 'images'"
-        :images="mediaItem.galleries[0].images"
-        :index="0"
-        :disable-scroll="true"
-        @close="imageIndex = null"
-      />
-      <VideoLightBox
-        v-else-if="mediaItem.mediaType == 'videos'"
-        :videos="mediaItem.galleries[0].videos"
-        :index="0"
-        :disable-scroll="true"
-        @close="videoIndex = null"
-      />
-    </div> -->
-
     <ImageLightBox
       :images="images"
       :index="imageIndex"
@@ -143,11 +126,6 @@ export default {
 
   methods: {
     mediaItemClick(mediaItem, index) {
-      console.log('in mediaItemClick');
-      console.log('mediaItem:');
-      console.log(mediaItem);
-      console.log('index: ' + index);
-      
       if (mediaItem.mediaType == 'images') {
         this.mediaItemIndex = index
         this.imageIndex = 0
