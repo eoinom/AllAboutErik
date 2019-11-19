@@ -37,18 +37,6 @@
             >
               <div class="image-lightbox__image" :style="imageContainerCss">
 
-                <!-- <div style="width:100%;height:100%;position:relative;">
-                  <iframe 
-                    :src="images[imageIndex].url + '?autoplay=0&color=505050&title=0&byline=0&portrait=0'"
-                    style="width:100%;height:100%;" 
-                    frameborder="0" 
-                    webkitallowfullscreen mozallowfullscreen allowfullscreen 
-                    :ref="`lg-img-${imageIndex}`"
-                    @load="imageLoaded($event, imageIndex)" 
-                    class="imageFrame"
-                    :id="'image_' + imageIndex" >
-                  </iframe>
-                </div> -->
                 <img
                   :ref="`lg-img-${imageIndex}`"
                   :src="shouldPreload(imageIndex) ? image.img : false"
@@ -56,11 +44,11 @@
                 >
 
                 <div
-                  v-show="image.title && isImageLoaded"
+                  v-show="(image.caption || image.title) && isImageLoaded"
                   class="image-lightbox__text"
                   :style="imageTitleCss"
                 >
-                  {{ image.title }}
+                  {{ image.caption || image.title }}
                 </div>
 
               </div>
@@ -146,6 +134,10 @@ export default {
       type: String,
       default: 'rgba(255, 255, 255, 0.8)',
     },
+    centreTitle: {
+      type: Boolean,
+      default: true,
+    }
   },
   data() {
     return {
@@ -177,23 +169,29 @@ export default {
     },
     imageTitleCss() {
       let css = {}
-      let containerWidth = 0.8 * this.windowWidth
-      let containerHeight = 0.8 * this.windowHeight      
-      const containerAspectRatio = containerWidth / containerHeight
-      const imageAspectRatio = 1502.22 / 845.0
-      const heightGoverns = containerAspectRatio >= imageAspectRatio
-      if (heightGoverns) {
-        var actualImgHeight = containerHeight
-        var actualImgWidth = actualImgHeight * imageAspectRatio
+      if (this.centreTitle) {
+        css.textAlign = 'center'
+        css.marginTop = '20px'
       }
       else {
-        var actualImgWidth = containerWidth
-        var actualImgHeight = actualImgWidth / imageAspectRatio
+        let containerWidth = 0.8 * this.windowWidth
+        let containerHeight = 0.8 * this.windowHeight      
+        const containerAspectRatio = containerWidth / containerHeight
+        const imageAspectRatio = 1502.22 / 845.0
+        const heightGoverns = containerAspectRatio >= imageAspectRatio
+        if (heightGoverns) {
+          var actualImgHeight = containerHeight
+          var actualImgWidth = actualImgHeight * imageAspectRatio
+        }
+        else {
+          var actualImgWidth = containerWidth
+          var actualImgHeight = actualImgWidth / imageAspectRatio
+        }
+        css.position = 'absolute'
+        css.padding = 0
+        css.bottom = ((containerHeight - actualImgHeight) / 2 - 40) + 'px'
+        css.left = ((containerWidth - actualImgWidth) / 2) + 'px'
       }
-      css.padding = 0
-      css.bottom = ((containerHeight - actualImgHeight) / 2 - 40) + 'px';
-      css.left = ((containerWidth - actualImgWidth) / 2) + 'px';
-      css.textAlign = 'left'
       return css
     }
   },
@@ -376,13 +374,15 @@ export default {
       position: relative;
       margin: 0 auto;
       max-width: 100%;
-      max-height: 100vh;
+      // max-height: 100vh;
+      max-height: 100%;
       // opacity: 0;
     }
     & img {
       & {
         max-width: 100%;
-        max-height: 100vh;
+        // max-height: 100vh;
+        max-height: 100%;
         opacity: 0;
         transition: opacity .2s;
       }
@@ -392,7 +392,7 @@ export default {
     }
   }
   &__text {
-    position: absolute;
+    // position: absolute;
     z-index: 1000;
     display: block;
     margin: 0 auto;
