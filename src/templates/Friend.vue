@@ -2,9 +2,9 @@
   <Layout :style="layoutStyle"> 
 
     <div :style="navLinksVisibility" class="navLinksContainer">
-      <span class="nav_link" id="nav_prev">PREV</span>
-      <span class="nav_link" id="nav_previous">PREVIOUS</span>
-      <span class="nav_link" id="nav_next">NEXT</span>
+      <g-link :to="'/musical-journey/musical-friends/' + prev_link" class="nav_link" id="nav_prev">PREV</g-link>
+      <g-link :to="'/musical-journey/musical-friends/' + prev_link" class="nav_link" id="nav_previous">PREVIOUS</g-link>
+      <g-link :to="'/musical-journey/musical-friends/' + next_link" class="nav_link" id="nav_next">NEXT</g-link>
     </div>
 
     <b-container fluid class="main-col">      
@@ -85,6 +85,23 @@ query ($id: ID!) {
 }
 </page-query>
 
+<static-query>
+{
+  MusicalFriends: allMusicalFriends {
+    edges {
+      node {
+        friends {
+          name
+          text
+          link
+          orderNo
+        }
+      }
+    }
+  }
+}
+</static-query>
+
 
 <script scoped>
 import ImageLightBox from '../components/ImageLightBox.vue'
@@ -125,6 +142,28 @@ export default {
     videos() {
       return this.mediaItemIndex != null && this.galleryIndex != null ?
                 this.mediaItems[this.mediaItemIndex].galleries[this.galleryIndex].videos : []
+    },    
+    friends() {
+      return this.$static.MusicalFriends.edges[0].node.friends
+    },    
+    friends_names() {
+      return this.friends.map(x => x.name);
+    },
+    prev_link() {
+      let i = this.friends_names.indexOf(this.heading)
+      if (i === 0)
+        var prev_i = this.friends_names.length - 1
+      else
+        prev_i = i - 1
+      return this.friends[prev_i].link
+    },
+    next_link() {
+      let i = this.friends_names.indexOf(this.heading)      
+      if (i === this.friends_names.length - 1)
+        var next_i = 0
+      else
+        next_i = i + 1
+      return this.friends[next_i].link
     },
     layoutStyle() {
       return {
