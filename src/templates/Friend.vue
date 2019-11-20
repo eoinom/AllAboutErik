@@ -2,9 +2,9 @@
   <Layout :style="layoutStyle"> 
 
     <div :style="navLinksVisibility" class="navLinksContainer">
-      <g-link :to="'/musical-journey/musical-friends/' + prev_link" class="nav_link" id="nav_prev">PREV</g-link>
-      <g-link :to="'/musical-journey/musical-friends/' + prev_link" class="nav_link" id="nav_previous">PREVIOUS</g-link>
-      <g-link :to="'/musical-journey/musical-friends/' + next_link" class="nav_link" id="nav_next">NEXT</g-link>
+      <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_prev">PREV</g-link>
+      <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_previous">PREVIOUS</g-link>
+      <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.name" class="nav_link" id="nav_next">NEXT</g-link>
     </div>
 
     <b-container fluid class="main-col">      
@@ -149,21 +149,21 @@ export default {
     friends_names() {
       return this.friends.map(x => x.name);
     },
-    prev_link() {
+    prev_friend() {
       let i = this.friends_names.indexOf(this.heading)
       if (i === 0)
         var prev_i = this.friends_names.length - 1
       else
         prev_i = i - 1
-      return this.friends[prev_i].link
+      return this.friends[prev_i]
     },
-    next_link() {
+    next_friend() {
       let i = this.friends_names.indexOf(this.heading)      
       if (i === this.friends_names.length - 1)
         var next_i = 0
       else
         next_i = i + 1
-      return this.friends[next_i].link
+      return this.friends[next_i]
     },
     layoutStyle() {
       return {
