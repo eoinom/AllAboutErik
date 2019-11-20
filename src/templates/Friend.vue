@@ -2,8 +2,9 @@
   <Layout :style="layoutStyle"> 
 
     <div :style="navLinksVisibility" id="navLinks">
-      <span class="nav" id="nav_prev">PREVIOUS</span>
-      <span class="nav" id="nav_next">NEXT</span>
+      <span class="nav_link" id="nav_prev">PREV</span>
+      <span class="nav_link" id="nav_previous">PREVIOUS</span>
+      <span class="nav_link" id="nav_next">NEXT</span>
     </div>
 
     <b-container fluid class="main-col">      
@@ -13,7 +14,7 @@
 
     <b-container fluid class="mediaItemsContainer">
       <b-row align-h="center" id="mediaItemsRow">
-        <b-col cols="2" v-for="(item,index) in $page.friend.mediaItems" :key="index" class="mediaItems p-2" v-b-toggle="String(index+1)" @click="mediaItemClick(item, index)">
+        <b-col v-for="(item,index) in $page.friend.mediaItems" :key="index" class="mediaItems p-2" v-b-toggle="String(index+1)" @click="mediaItemClick(item, index)">
           <g-image :src="item.thumbnailImg" class="mediaItemsImg" :id="'mediaItemImg'+index" />
           <br />
           <span class="mediaItemsText mediaItemsLabel">{{ item.label }}</span>
@@ -28,6 +29,13 @@
               </span>
             </div>
           </b-collapse>
+        </b-col>
+      </b-row>
+
+      <b-row align-h="center" class="text-center">
+        <b-col>
+          <!-- <span class="nav_link" id="nav_back">BACK TO MUSICAL FRIENDS MENU</span> -->
+          <g-link to="/musical-journey/musical-friends/" class="nav_link" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
         </b-col>
       </b-row>
 
@@ -215,7 +223,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   opacity: 1;
   transition: visibility 0.5s linear 1s, opacity 0.5s linear 1s;
 }
-.nav {
+.nav_link {
   color: white; 
   display: block;
   font-family: 'Ubuntu Condensed', sans-serif;
@@ -229,23 +237,29 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   margin: 0px;
   padding: 0px;
 }
-.nav:hover,
+.nav_link:hover,
 .mediaItems:hover,
 .mediaItems:hover .mediaItemsLabel {
   color:	#EED047;
   cursor: pointer;
 }
-#nav_prev {
+#nav_prev, #nav_previous {
   position: fixed;
   top: 44%;
   left: 5%;
   text-align: left;
+}
+#nav_prev {
+  display: none;
 }
 #nav_next {
   position: fixed;
   top: 44%;
   right: 5%;
   text-align: right;
+}
+#nav_back {
+  text-align: center;
 }
 
 .main-col {
@@ -282,10 +296,12 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 
 .mediaItemsContainer {
-  max-width: 1746px;
-  padding: 4px 0 20px 0;
+  width: 100%;
+  padding: 4px 20% 20px 20%;
 }
-
+.mediaItems {
+  max-width: 295px;
+}
 .mediaItemsImg {
   max-width: 275px;
   height: 193px;
@@ -320,22 +336,130 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-
+  .nav_link {
+    font-size: 5vw;
+  }
+  #nav_previous {
+    display: none;
+  }
+  #nav_prev {
+    display: block;
+    left: 4%;
+  }
+  #nav_next {
+    right: 4%;
+  }
+  .main-col, .galleriesContainer {
+    max-width: 61.46%;
+  }
+  #heading {
+    font-size: 31.5px;
+  }
+  #mainContent {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .galleriesContainer {
+    padding: 4px 0 20px 0;
+  }
+  .galleries {
+    min-width: 100%;
+  }
+  .galleriesImg {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-
+  .nav_link {
+    font-size: 30px;
+  }
+  #nav_previous {
+    display: none;
+  }
+  #nav_prev {
+    display: block;
+  }
+  .main-col, .galleriesContainer {
+    max-width: 61.46%;
+  }
+  #heading {
+    font-size: 36.75px;
+  }
+  #mainContent {
+    font-size: 17.5px;
+    line-height: 28px;
+  }
+  .galleriesContainer {
+    padding: 4px 0 20px 0;
+  }
+  .galleries {
+    min-width: 50%;
+    width: auto;
+  }
+  .galleriesImg {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-
+  #nav_previous {
+    display: none;
+  }
+  #nav_prev {
+    display: block;
+  }
+  .main-col, .galleriesContainer {
+    max-width: 61.46%;
+  }
+  #heading {
+    font-size: 36.75px;
+  }
+  #mainContent {
+    font-size: 17.5px;
+    line-height: 28px;
+  }
+  .galleriesContainer {
+    padding: 4px 0 20px 0;
+  }
+  .galleries {
+    min-width: 50%;
+    width: auto;
+  }
+  .galleriesImg {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
+  #nav_previous {
+    display: none;
+  }
+  #nav_prev {
+    display: block;
+  }
+  .main-col, .galleriesContainer {
+    max-width: 61.46%;
+  }
+  .galleriesContainer {
+    padding: 4px 0 20px 0;
+  }
+}
 
+/* Special - Larger devices (desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1390.98px) { 
+  .main-col, .galleriesContainer {
+    max-width: 61.46%;
+  }
+  .galleriesContainer {
+    padding: 4px 0 20px 0;
+  }
 }
 
 </style>
