@@ -35,7 +35,7 @@
       <b-row align-h="center" class="text-center">
         <b-col>
           <div :style="navLinksVisibility" class="navLinksContainer">
-            <g-link to="/musical-journey/musical-friends/" class="nav_link" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
+            <g-link to="/musical-journey/musical-friends/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
           </div>
         </b-col>
       </b-row>
@@ -272,7 +272,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   font-style: italic;
   font-size: 39px;
   letter-spacing: 1px;
-  line-height: 59px;
   text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
   margin: 0px;
   padding: 0px;
