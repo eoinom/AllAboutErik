@@ -1,7 +1,7 @@
 <template>
   <Layout :style="layoutStyle"> 
 
-    <div :style="navLinksVisibility" id="navLinks">
+    <div :style="navLinksVisibility" class="navLinksContainer">
       <span class="nav_link" id="nav_prev">PREV</span>
       <span class="nav_link" id="nav_previous">PREVIOUS</span>
       <span class="nav_link" id="nav_next">NEXT</span>
@@ -34,8 +34,9 @@
 
       <b-row align-h="center" class="text-center">
         <b-col>
-          <!-- <span class="nav_link" id="nav_back">BACK TO MUSICAL FRIENDS MENU</span> -->
-          <g-link to="/musical-journey/musical-friends/" class="nav_link" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
+          <div :style="navLinksVisibility" class="navLinksContainer">
+            <g-link to="/musical-journey/musical-friends/" class="nav_link" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
+          </div>
         </b-col>
       </b-row>
 
@@ -218,7 +219,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   opacity: var(--backgroundOpacity);
 }
 
-#navLinks {
+.navLinksContainer {
   visibility: visible;
   opacity: 1;
   transition: visibility 0.5s linear 1s, opacity 0.5s linear 1s;
