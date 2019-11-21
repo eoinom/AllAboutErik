@@ -87,6 +87,28 @@ mediaItems:
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572905465/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/Thumbnails_%20Background/Thumbnail_2_Postcard_qwb4kd.jpg
   - galleries:
+      - label: ''
+        orderNo: 1
+        type: videoGallery
+        videos:
+          - caption: Fishing Film
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/322611459'
+          - caption: House Boat Building
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/322611849'
+          - caption: Mud Wedding
+            orderNo: 3
+            url: 'https://player.vimeo.com/video/322612046'
+          - caption: Water Movement
+            orderNo: 4
+            url: 'https://player.vimeo.com/video/322612231'
+    label: Home Movies Shot by Henry
+    mediaType: videos
+    orderNo: 3
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1572905465/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/Thumbnails_%20Background/Thumbnail_3_fishing-sf_ygbagb.jpg
+  - galleries:
       - images:
           - caption: Co-Write from the Early Days
             img: >-
