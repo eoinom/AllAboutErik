@@ -104,7 +104,17 @@ mediaItems:
     orderNo: 2
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572908840/Musical%20Journey/Musical%20Friends/Friends/Rita%20Abrams/Background_Thumbnails/Thumbnail_2_img698_f1iyvc.jpg
-  - label: Music Videos
+  - galleries:
+      - orderNo: 1
+        type: videoGallery
+        videos:
+          - caption: Mill Valley
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/374619935'
+          - caption: Floating Away and I Wonder Why
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/374619909'
+    label: Music Videos
     mediaType: videos
     orderNo: 3
     thumbnailImg: >-
@@ -134,7 +144,14 @@ mediaItems:
     orderNo: 4
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572908841/Musical%20Journey/Musical%20Friends/Friends/Rita%20Abrams/Background_Thumbnails/Thumbnail_4_millvalleyAlbumCover_ztbgq1.jpg
-  - label: Mill Valley Anniversary DVD
+  - galleries:
+      - orderNo: 1
+        type: videoGallery
+        videos:
+          - caption: Mill Valley Anniversary DVD
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/374619949'
+    label: Mill Valley Anniversary DVD
     mediaType: videos
     orderNo: 5
     thumbnailImg: >-
