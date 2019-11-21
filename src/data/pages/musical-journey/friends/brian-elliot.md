@@ -5,8 +5,7 @@ backgroundImg: >-
 backgroundOpacity: 100
 mediaItems:
   - galleries:
-      - type: imageGallery
-        images:
+      - images:
           - caption: Brian and Erik
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901742/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/Brian_Erik_ufsjsq.jpg
@@ -52,11 +51,57 @@ mediaItems:
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/10Brian_fq67ew.jpg
             orderNo: 11
         orderNo: 1
+        type: imageGallery
     label: Photos
     mediaType: images
     orderNo: 1
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572904890/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Thumbnail_1_3Brian_faqyu6.jpg
+  - galleries:
+      - images:
+          - caption: Brian's 1st Album
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572901746/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/BrianAlbums/Brians_1stalbum_nwwgit.jpg
+            orderNo: 1
+          - caption: Full Mental Nudity
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/BrianAlbums/FullMentalNudity_knw7sd.jpg
+            orderNo: 2
+        label: Brian's Albums
+        orderNo: 1
+        type: imageGallery
+      - images:
+          - caption: Papa Don't Preach
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/PapaDontPreachAwards/PapaDontPreach_ccauta.jpg
+            orderNo: 1
+          - caption: Ascap Award
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/PapaDontPreachAwards/BrianAscap_nu3f16.jpg
+            orderNo: 2
+        label: Papa Don't Preach Awards
+        orderNo: 2
+        type: imageGallery
+    label: Albums and Awards
+    mediaType: images
+    orderNo: 2
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1572904890/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Thumbnail_2_PapaDontPreach_he1yqu.jpg
+  - galleries:
+      - orderNo: 1
+        type: videoGallery
+        videos:
+          - caption: Good Cowgirls
+            orderNo: 1
+            url: 'https://vimeo.com/318229998'
+          - caption: Over My Head
+            orderNo: 2
+            url: 'https://vimeo.com/318230197'
+    label: Music Videos
+    mediaType: videos
+    orderNo: 3
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1572904891/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Thumbnail_3_FullMentalNudity-thumb_aew3ri.jpg
 ---
 A guy walked into my office on Kearny Street, claiming to be a songwriter. He had met Peter Kraemer of the Sopwith Camel, who had sent him over to see me. I agreed to listen to a few of his songs, and after I did he asked me what I thought. I said “good parts, maybe the melody doesn’t open quite right in this chorus, maybe the idea behind these lyrics can take the narrative a little further, and how about a bridge for this one”? He listened but seemed somewhat skeptical and left saying he would think about my comments. Surprisingly, he called the very next day and said he’d done rewrites on the songs and would I listen again? I never had that happen before or since. I listened and was impressed by the changes he’d made. He played a few more songs and we began almost daily conversations about his work. Some of the songs were very funny.
 
