@@ -39,7 +39,13 @@ mediaItems:
     orderNo: 2
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572906818/Musical%20Journey/Musical%20Friends/Friends/Nadia/Background_Thumbnails/Thumbnail_2_Nadia6_xxxiuy.jpg
-  - label: Music Videos
+  - galleries:
+      - orderNo: 1
+        type: videoGallery
+        videos:
+          - orderNo: 1
+            url: 'https://player.vimeo.com/video/374661155'
+    label: Music Videos
     mediaType: videos
     orderNo: 3
     thumbnailImg: >-
