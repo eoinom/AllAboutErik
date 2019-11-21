@@ -93,10 +93,10 @@ mediaItems:
         videos:
           - caption: Good Cowgirls
             orderNo: 1
-            url: 'https://vimeo.com/318229998'
+            url: 'https://player.vimeo.com/video/318229998'
           - caption: Over My Head
             orderNo: 2
-            url: 'https://vimeo.com/318230197'
+            url: 'https://player.vimeo.com/video/318230197'
     label: Music Videos
     mediaType: videos
     orderNo: 3
