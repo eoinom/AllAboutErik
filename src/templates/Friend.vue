@@ -79,6 +79,11 @@ query ($id: ID!) {
           img
           caption
         }
+        videos {
+          orderNo
+          url
+          caption
+        }
       }
     }
   }
