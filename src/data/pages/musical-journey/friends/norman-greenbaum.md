@@ -119,7 +119,17 @@ mediaItems:
     orderNo: 2
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572907512/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/Background_Thumbnails/Thumbnail_2_Norman-Greenbaum-SitS_dpvqxe.jpg
-  - label: Videos
+  - galleries:
+      - orderNo: 1
+        type: videoGallery
+        videos:
+          - caption: Spirit in the Sky
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/374621975'
+          - caption: Kennedy Space Center Advert
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/374619876'
+    label: Videos
     mediaType: videos
     orderNo: 3
     thumbnailImg: >-
