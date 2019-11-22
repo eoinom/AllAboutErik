@@ -342,7 +342,35 @@ mediaItems:
     orderNo: 6
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572904578/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_6_img646_fgmhh4.jpg
-  - label: Videos from European Tour '89
+  - galleries:
+      - label: Sept 24-28
+        orderNo: 1
+        type: videoGallery
+      - label: Oct 02
+        orderNo: 2
+        type: videoGallery
+      - label: Oct 03
+        orderNo: 3
+        type: videoGallery
+      - label: Oct 04
+        orderNo: 4
+        type: videoGallery
+      - label: Oct 17
+        orderNo: 5
+        type: videoGallery
+      - label: Oct 23
+        orderNo: 6
+        type: videoGallery
+      - label: Oct 28
+        orderNo: 7
+        type: videoGallery
+      - label: Oct 30
+        orderNo: 8
+        type: videoGallery
+      - label: Paris
+        orderNo: 9
+        type: videoGallery
+    label: Videos from European Tour '89
     mediaType: videos
     orderNo: 1
     thumbnailImg: >-
