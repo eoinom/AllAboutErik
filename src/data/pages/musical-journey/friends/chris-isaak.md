@@ -342,6 +342,11 @@ mediaItems:
     orderNo: 6
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572904578/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_6_img646_fgmhh4.jpg
+  - label: Videos from European Tour '89
+    mediaType: videos
+    orderNo: 1
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1572904577/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_63_chris-videos_icon_etbb2e.jpg
 ---
 Finding Chris was a lucky break for me. I was looking for someone with real star potential, and when I first went to see his band I was impressed. I was surprised to hear them playing rockabilly sounding material. They had some originals and did some covers. Chris looked great, and he was giving the performance his all. He hadn’t been singing that long, and was obviously doing some of the songs in the wrong key, and trying for some notes that he just couldn’t hit. But his voice sounded great. Jimmy Wilsey, the guitarist, was a unique and talented stylist, and his playing worked perfectly with what Chris was doing. The whole group was sporting 50s style garb. When Chris and I talked after the show I was very impressed with the guy. He was bright, funny, and well-spoken, and came across as a determined, centered, and decisive guy.
 
