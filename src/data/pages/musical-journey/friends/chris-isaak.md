@@ -350,33 +350,176 @@ mediaItems:
           - caption: Leaving for European Tour 1989
             orderNo: 1
             url: 'https://player.vimeo.com/video/371156905'
-          - caption: 'European Tour, September 24-28 1989, Part 1 '
+          - caption: 'European Tour, September 24-28 1989, Part 1'
             orderNo: 2
             url: 'https://player.vimeo.com/video/371131855'
+          - caption: 'European Tour, September 24-28 1989, Part 2'
+            orderNo: 3
+            url: 'https://player.vimeo.com/video/371142154'
+          - caption: 'European Tour, September 24-28 1989, Part 3'
+            orderNo: 4
+            url: 'https://player.vimeo.com/video/371156742'
       - label: Oct 02
         orderNo: 2
         type: videoGallery
+        videos:
+          - caption: 'European Tour, October 02 1989, Part 1'
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/371208364'
+          - caption: 'European Tour, October 02 1989, Part 2'
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/371209460'
+          - caption: 'European Tour, October 02 1989, Part 3'
+            orderNo: 3
+            url: 'https://player.vimeo.com/video/371210086'
+          - caption: 'European Tour, October 02 1989, Part 4'
+            orderNo: 4
+            url: 'https://player.vimeo.com/video/371210729'
+          - caption: 'European Tour, October 02 1989, Part 5'
+            orderNo: 5
+            url: 'https://player.vimeo.com/video/371410473'
+          - caption: 'European Tour, October 02 1989, Part 6'
+            orderNo: 6
+            url: 'https://player.vimeo.com/video/371411696'
       - label: Oct 03
         orderNo: 3
         type: videoGallery
+        videos:
+          - caption: 'European Tour, October 03 1989, Part 1'
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/371438059'
+          - caption: 'European Tour, October 03 1989, Part 2'
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/371439277'
+          - caption: 'European Tour, October 03 1989, Part 3'
+            orderNo: 3
+            url: 'https://player.vimeo.com/video/371439975'
+          - caption: 'European Tour, October 03 1989, Part 4'
+            orderNo: 4
+            url: 'https://player.vimeo.com/video/371441163'
+          - caption: 'European Tour, October 03 1989, Part 5'
+            orderNo: 5
+            url: 'https://player.vimeo.com/video/371442429'
       - label: Oct 04
         orderNo: 4
         type: videoGallery
+        videos:
+          - caption: 'European Tour, October 04 1989, Part 1'
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/371632288'
+          - caption: 'European Tour, October 04 1989, Part 2'
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/371494886'
+          - caption: 'European Tour, October 04 1989, Part 3'
+            orderNo: 3
+            url: 'https://player.vimeo.com/video/371495916'
+          - caption: 'European Tour, October 04 1989, Part 4'
+            orderNo: 4
+            url: 'https://player.vimeo.com/video/371496563'
+          - caption: 'European Tour, October 04 1989, Part 5'
+            orderNo: 5
+            url: 'https://player.vimeo.com/video/371640161'
+          - caption: 'European Tour, October 04 1989, Part 6'
+            orderNo: 6
+            url: 'https://player.vimeo.com/video/371498149'
       - label: Oct 17
         orderNo: 5
         type: videoGallery
+        videos:
+          - caption: 'European Tour, October 17 1989, Part 1'
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/374371465'
+          - caption: 'European Tour, October 17 1989, Part 2'
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/371671856'
+          - caption: 'European Tour, October 17 1989, Part 3'
+            orderNo: 3
+            url: 'https://player.vimeo.com/video/371699069'
+          - caption: 'European Tour, October 17 1989, Part 4'
+            orderNo: 4
+            url: 'https://player.vimeo.com/video/371699628'
       - label: Oct 23
         orderNo: 6
         type: videoGallery
+        videos:
+          - caption: 'European Tour, October 23 1989, Part 1'
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/374376913'
+          - caption: 'European Tour, October 23 1989, Part 2'
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/374377890'
+          - caption: 'European Tour, October 23 1989, Part 3'
+            orderNo: 3
+            url: 'https://player.vimeo.com/video/374399355'
+          - caption: 'European Tour, October 23 1989, Part 4'
+            orderNo: 4
+            url: 'https://player.vimeo.com/video/374398399'
       - label: Oct 28
         orderNo: 7
         type: videoGallery
+        videos:
+          - caption: 'European Tour, October 28 1989, Part 1'
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/374407485'
+          - caption: 'European Tour, October 28 1989, Part 2'
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/374408776'
+          - caption: 'European Tour, October 28 1989, Part 3'
+            orderNo: 3
+            url: 'https://player.vimeo.com/video/374410157'
+          - caption: 'European Tour, October 28 1989, Part 4'
+            orderNo: 4
+            url: 'https://player.vimeo.com/video/374659597'
+          - caption: 'European Tour, October 28 1989, Part 5'
+            orderNo: 5
+            url: 'https://player.vimeo.com/video/374660735'
+          - caption: 'European Tour, October 28 1989, Part 6'
+            orderNo: 6
+            url: 'https://player.vimeo.com/video/374787960'
+          - caption: 'European Tour, October 28 1989, Part 7'
+            orderNo: 7
+            url: 'https://player.vimeo.com/video/374660842'
       - label: Oct 30
         orderNo: 8
         type: videoGallery
+        videos:
+          - caption: 'European Tour, October 30 1989, Part 1'
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/374437253'
+          - caption: 'European Tour, October 30 1989, Part 2'
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/374438132'
+          - caption: 'European Tour, October 30 1989, Part 3'
+            orderNo: 3
+            url: 'https://player.vimeo.com/video/374438888'
+          - caption: 'European Tour, October 30 1989, Part 4'
+            orderNo: 4
+            url: 'https://player.vimeo.com/video/374439644'
       - label: Paris
         orderNo: 9
         type: videoGallery
+        videos:
+          - caption: 'European Tour 1989, Paris, Part 1'
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/374617802'
+          - caption: 'European Tour 1989, Paris, Part 2'
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/374618403'
+          - caption: 'European Tour 1989, Paris, Part 3'
+            orderNo: 3
+            url: 'https://player.vimeo.com/video/374619110'
+          - caption: 'European Tour 1989, Paris, Part 4'
+            orderNo: 4
+            url: 'https://player.vimeo.com/video/374619747'
+          - caption: 'European Tour 1989, Paris, Part 5'
+            orderNo: 5
+            url: 'https://player.vimeo.com/video/374623295'
+          - caption: 'European Tour 1989, Paris, Part 6'
+            orderNo: 6
+            url: 'https://player.vimeo.com/video/374623794'
+          - caption: 'European Tour 1989, Paris, Part 7'
+            orderNo: 7
+            url: 'https://player.vimeo.com/video/374624260'
     label: Videos from European Tour '89
     mediaType: videos
     orderNo: 1
