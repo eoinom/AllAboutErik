@@ -346,6 +346,13 @@ mediaItems:
       - label: Sept 24-28
         orderNo: 1
         type: videoGallery
+        videos:
+          - caption: Leaving for European Tour 1989
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/371156905'
+          - caption: 'European Tour, September 24-28 1989, Part 1 '
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/371131855'
       - label: Oct 02
         orderNo: 2
         type: videoGallery
