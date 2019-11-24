@@ -55,10 +55,10 @@
       @close="videoIndex = null; galleryIndex = null"
     />
     <AudioLightBox
-      :audios="audios"
-      :index="videoIndex"
+      :audios="audio"
+      :index="audioIndex"
       :disable-scroll="true"
-      @close="videoIndex = null; galleryIndex = null"
+      @close="audioIndex = null; galleryIndex = null"
     />
 
   </Layout>
@@ -86,6 +86,11 @@ query ($id: ID!) {
           caption
         }
         videos {
+          orderNo
+          url
+          caption
+        }
+        audio {
           orderNo
           url
           caption
@@ -156,9 +161,9 @@ export default {
       return this.mediaItemIndex != null && this.galleryIndex != null ?
                 this.mediaItems[this.mediaItemIndex].galleries[this.galleryIndex].videos : []
     },
-    audios() {
+    audio() {
       return this.mediaItemIndex != null && this.galleryIndex != null ?
-                this.mediaItems[this.mediaItemIndex].galleries[this.galleryIndex].audios : []
+                this.mediaItems[this.mediaItemIndex].galleries[this.galleryIndex].audio : []
     },  
     friends() {
       return this.$static.MusicalFriends.edges[0].node.friends
@@ -207,7 +212,7 @@ export default {
 
   methods: {
     mediaItemClick(mediaItem, index) {
-      if (mediaItem.mediaType == 'images' || mediaItem.mediaType == 'videos') {
+      if (mediaItem.mediaType == 'images' || mediaItem.mediaType == 'videos' || mediaItem.mediaType == 'audio') {
         this.mediaItemIndex = index
         if (mediaItem.galleries.length == 1) {
           this.galleryIndex = 0
@@ -224,6 +229,9 @@ export default {
       }
       if (mediaType == 'videos') {
         this.videoIndex = 0
+      }
+      if (mediaType == 'audio') {
+        this.audioIndex = 0
       }
     }
   },

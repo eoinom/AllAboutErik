@@ -37,28 +37,18 @@
             >
               <div class="audio-lightbox__audio" :style="audioContainerCss">
 
-                <div style="width:100%;height:100%;position:relative;">
-                  <!-- <iframe 
-                    :src="audios[audioIndex].url + '?autoplay=0&color=505050&title=0&byline=0&portrait=0'"
-                    style="width:100%;height:100%;" 
-                    frameborder="0" 
-                    webkitallowfullscreen mozallowfullscreen allowfullscreen 
-                    :ref="`lg-vid-${audioIndex}`"
-                    @load="audioLoaded($event, audioIndex)" 
-                    class="audioFrame"
-                    :id="'audio_' + audioIndex" >
-                  </iframe> -->
-
+                <div style="width:100%;height:100%;position:relative;">                  
                   <iframe 
                     width="100%" 
                     height="300" 
                     scrolling="no" 
                     frameborder="no" 
                     allow="autoplay"
+                    :ref="`lg-audio-${audioIndex}`"
                     @load="audioLoaded($event, audioIndex)" 
                     class="audioFrame"
                     :id="'audio_' + audioIndex" 
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377102%3Fsecret_token%3Ds-kh8hI&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                    :src="audios[audioIndex].url" >
                   </iframe>
                 </div>
 
@@ -126,7 +116,7 @@
 </template>
 
 <script>
-import Player from '@vimeo/player'
+// import Player from '@vimeo/player'
 
 const keyMap = {
   LEFT: 37,
@@ -180,28 +170,16 @@ export default {
     },
     audioContainerCss() {
       let css = {}
-      css.width = (0.8 * this.windowWidth) + 'px'
-      css.height = (0.8 * this.windowHeight) + 'px'
+      css.width = ((0.8 * this.windowWidth) - 80) + 'px'
+      css.height = '300px'
       return css
     },
     audioTitleCss() {
       let css = {}
-      let containerWidth = 0.8 * this.windowWidth
-      let containerHeight = 0.8 * this.windowHeight      
-      const containerAspectRatio = containerWidth / containerHeight
-      const audioAspectRatio = 1502.22 / 845.0
-      const heightGoverns = containerAspectRatio >= audioAspectRatio
-      if (heightGoverns) {
-        var actualVidHeight = containerHeight
-        var actualVidWidth = actualVidHeight * audioAspectRatio
-      }
-      else {
-        var actualVidWidth = containerWidth
-        var actualVidHeight = actualVidWidth / audioAspectRatio
-      }
+      let containerHeight = 300  
       css.padding = 0
-      css.bottom = ((containerHeight - actualVidHeight) / 2 - 40) + 'px';
-      css.left = ((containerWidth - actualVidWidth) / 2) + 'px';
+      css.top = (containerHeight + 40) + 'px'
+      css.left = '0px'
       css.textAlign = 'left'
       return css
     }
@@ -248,21 +226,21 @@ export default {
     },
     prev() {
       if (this.currentIndex === 0) return;
-      this.pauseAudio(this.currentIndex)
+      // this.pauseAudio(this.currentIndex)
       this.currentIndex -= 1;
       this.$emit('slide', { index: this.currentIndex });
     },
     next() {
       if (this.currentIndex === this.audios.length - 1) return;
-      this.pauseAudio(this.currentIndex)
+      // this.pauseAudio(this.currentIndex)
       this.currentIndex += 1
       this.$emit('slide', { index: this.currentIndex });
     },
-    pauseAudio (index) {
-      var iframe = document.getElementById('audio_' + index)
-      var player = new Player(iframe)
-      player.pause();
-    },
+    // pauseAudio (index) {
+    //   var iframe = document.getElementById('audio_' + index)
+    //   var player = new Player(iframe)
+    //   player.pause();
+    // },
     stopAudio (index) {
       var iframe = document.getElementById('audio_' + index)
       if ( iframe ) {
@@ -278,7 +256,7 @@ export default {
       }
     },
     getAudioElByIndex(index) {
-      const elements = this.$refs[`lg-vid-${index}`] || [];
+      const elements = this.$refs[`lg-audio-${index}`] || [];
       return elements[0];
     },
     setAudioLoaded(index) {
