@@ -249,7 +249,7 @@ collections:
                     required: false
                     fields: 
                       - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
-                      - {label: "Audio file", name: "audioFile", widget: "image"} 
+                      - {label: "Audio Url (Soundcloud)", name: "url", widget: "string"}
                       - {label: "Caption", name: "caption", widget: "string", required: false}
                 
           

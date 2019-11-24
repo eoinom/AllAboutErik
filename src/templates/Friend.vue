@@ -54,6 +54,12 @@
       :disable-scroll="true"
       @close="videoIndex = null; galleryIndex = null"
     />
+    <AudioLightBox
+      :audios="audios"
+      :index="videoIndex"
+      :disable-scroll="true"
+      @close="videoIndex = null; galleryIndex = null"
+    />
 
   </Layout>
 </template>
@@ -111,6 +117,7 @@ query ($id: ID!) {
 <script scoped>
 import ImageLightBox from '../components/ImageLightBox.vue'
 import VideoLightBox from '../components/VideoLightBox.vue'
+import AudioLightBox from '../components/AudioLightBox.vue'
 
 var VueScrollTo = require('vue-scrollto');
 
@@ -126,7 +133,8 @@ export default {
       mediaItemIndex: null,
       galleryIndex: null,
       imageIndex: null,
-      videoIndex: null
+      videoIndex: null,
+      audioIndex: null
     }
   },
 
@@ -147,7 +155,11 @@ export default {
     videos() {
       return this.mediaItemIndex != null && this.galleryIndex != null ?
                 this.mediaItems[this.mediaItemIndex].galleries[this.galleryIndex].videos : []
-    },    
+    },
+    audios() {
+      return this.mediaItemIndex != null && this.galleryIndex != null ?
+                this.mediaItems[this.mediaItemIndex].galleries[this.galleryIndex].audios : []
+    },  
     friends() {
       return this.$static.MusicalFriends.edges[0].node.friends
     },    
@@ -221,7 +233,8 @@ export default {
 
   components: {
     ImageLightBox,
-    VideoLightBox
+    VideoLightBox,
+    AudioLightBox
   },
 }
 </script>
