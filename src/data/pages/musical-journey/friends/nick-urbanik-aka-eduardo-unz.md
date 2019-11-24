@@ -56,25 +56,54 @@ mediaItems:
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/Thumbnail_2_CallingCard_aymbqe.jpg
   - galleries:
-      - audio:
+      - label: Eduardo Songs
+        orderNo: 1
+        type: audioGallery
+        audio:
           - caption: 01 Lets Have Lunch
             orderNo: 1
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377102%3Fsecret_token%3Ds-kh8hI&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377102%3Fsecret_token%3Ds-kh8hI&&visual=false
           - caption: 02 Dicky
             orderNo: 2
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377096%3Fsecret_token%3Ds-8IcZb&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377096%3Fsecret_token%3Ds-8IcZb&&visual=true
           - caption: 03 Last Kiss
             orderNo: 3
             url: >-
-              "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377087%3Fsecret_token%3Ds-SWaF5&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-        label: Eduardo Songs
-        orderNo: 1
-        type: audioGallery
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377087%3Fsecret_token%3Ds-SWaF5&visual=true
+          - caption: 04 Rock Steady
+            orderNo: 4
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377081%3Fsecret_token%3Ds-wgxJC&visual=true
+          - caption: 05 The Spell
+            orderNo: 5
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377072%3Fsecret_token%3Ds-SB34L&visual=true
+          - caption: 06 Eduardo Songs
+            orderNo: 6
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377066%3Fsecret_token%3Ds-xI1gc&visual=false
+          - caption: 07 Eduardo Songs
+            orderNo: 7
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377063%3Fsecret_token%3Ds-0IC9k&visual=true
       - label: Film Soundtrack Music
         orderNo: 2
         type: audioGallery
+        audio:
+          - caption: 01 Urbanik 1990 Soundtrack Music
+            orderNo: 1
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716841232%3Fsecret_token%3Ds-3F3HA&&visual=true
+          - caption: 02 Urbanik 1990 Soundtrack Music
+            orderNo: 2
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716841229%3Fsecret_token%3Ds-kvW2m&&visual=true
+          - caption: 03 Urbanik 1990 Soundtrack Music
+            orderNo: 3
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716841226%3Fsecret_token%3Ds-d2iry&visual=true
     label: Music
     mediaType: audio
     orderNo: 3
