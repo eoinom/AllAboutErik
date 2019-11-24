@@ -51,11 +51,11 @@
                 </div>
 
                 <div
-                  v-show="video.title && isVideoLoaded"
+                  v-show="(video.caption || video.title) && isVideoLoaded"
                   class="video-lightbox__text"
                   :style="videoTitleCss"
                 >
-                  {{ video.title }}
+                  {{ video.caption || video.title }}
                 </div>
 
               </div>
