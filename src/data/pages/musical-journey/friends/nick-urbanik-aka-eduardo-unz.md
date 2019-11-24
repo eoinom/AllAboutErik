@@ -56,7 +56,19 @@ mediaItems:
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/Thumbnail_2_CallingCard_aymbqe.jpg
   - galleries:
-      - audio: []
+      - audio:
+          - caption: 01 Lets Have Lunch
+            orderNo: 1
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377102%3Fsecret_token%3Ds-kh8hI&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          - caption: 02 Dicky
+            orderNo: 2
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377096%3Fsecret_token%3Ds-8IcZb&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          - caption: 03 Last Kiss
+            orderNo: 3
+            url: >-
+              "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377087%3Fsecret_token%3Ds-SWaF5&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
         label: Eduardo Songs
         orderNo: 1
         type: audioGallery
