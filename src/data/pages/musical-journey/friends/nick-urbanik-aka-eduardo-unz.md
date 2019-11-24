@@ -55,8 +55,16 @@ mediaItems:
     orderNo: 2
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/Thumbnail_2_CallingCard_aymbqe.jpg
-  - label: Music
-    mediaType: images
+  - galleries:
+      - audio: []
+        label: Eduardo Songs
+        orderNo: 1
+        type: audioGallery
+      - label: Film Soundtrack Music
+        orderNo: 2
+        type: audioGallery
+    label: Music
+    mediaType: audio
     orderNo: 3
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/Thumbnail_3_img440_ere8cj.jpg
