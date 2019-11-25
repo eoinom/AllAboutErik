@@ -4,7 +4,12 @@ backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1572905805/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/Background_thumbnails/background-james-wilsey-chris-isaak-_zkwzxw.jpg
 backgroundOpacity: 88
 mediaItems:
-  - galleries:
+  - label: Photos
+    mediaType: images
+    orderNo: 1
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1572905800/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/Background_thumbnails/Thumbnail_1_jim_wilsey_chris_eypxx9.jpg
+    galleries:
       - images:
           - caption: Jimmy and Chris
             img: >-
@@ -30,12 +35,22 @@ mediaItems:
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905799/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/1_Photos/AtTomMallons_d9jspr.jpg
             orderNo: 6
         orderNo: 1
-        type: imageGallery
-    label: Photos
-    mediaType: images
-    orderNo: 1
+        type: imageGallery    
+  - label: Live Videos at the Sweetwater
+    orderNo: 2
+    mediaType: videos
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572905800/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/Background_thumbnails/Thumbnail_1_jim_wilsey_chris_eypxx9.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/v1572905800/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/Background_thumbnails/Thumbnail_2_James-Calvin-Wilsey_v8hlit.jpg
+    galleries:
+      - orderNo: 1
+        type: videoGallery
+        videos:
+          - caption: Jimmy's Finger Trick
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/375515992'
+          - caption: Jimmy Hey Hey hey
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/375516023'
 ---
 Jimmy was playing with Chris in the band Silvertone when I first met him. He previously played with the San Francisco group the Avengers. He was a unique and talented guitar stylist, experimenting with sounds, as well as using effects and techniques that harkened back to the 1950s. He was a sweet and soft-spoken individual, rarely bubbling over with conversation. In the course of the years of recording with Chris, we became good friends. He had a wonderful talent of choosing just the right notes, chords, and lines to complement and amplify the sound and feeling of Chris’s work. He brought a lot of good ideas to the songs. He and Chris contemplated working together as a songwriting team. Jimmy was lending his inspiration to Isaak’s creative writing efforts. Chris offered him 5% of what they came up with. The offer left Jimmy cold. 
 
