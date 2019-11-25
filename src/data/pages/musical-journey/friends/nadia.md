@@ -39,6 +39,42 @@ mediaItems:
     orderNo: 2
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572906818/Musical%20Journey/Musical%20Friends/Friends/Nadia/Background_Thumbnails/Thumbnail_2_Nadia6_xxxiuy.jpg
+    galleries:
+      - orderNo: 1
+        type: audioGallery
+        audio:
+          - caption: Track 1
+            orderNo: 1
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716351578%3Fsecret_token%3Ds-NdsWX&&visual=false
+          - caption: Track 2
+            orderNo: 2
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716351572%3Fsecret_token%3Ds-Bx9Xp&&visual=true
+          - caption: Track 3
+            orderNo: 3
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716351569%3Fsecret_token%3Ds-KlBuW&visual=true
+          - caption: Track 4
+            orderNo: 4
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716351566%3Fsecret_token%3Ds-o8SIN&visual=true
+          - caption: Track 5
+            orderNo: 5
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716351563%3Fsecret_token%3Ds-hVvdV&visual=true
+          - caption: Track 6
+            orderNo: 6
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716351560%3Fsecret_token%3Ds-UM1y1&visual=false
+          - caption: Track 7
+            orderNo: 7
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716351551%3Fsecret_token%3Ds-aC4xQ&visual=true
+          - caption: Track 8
+            orderNo: 8
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716351548%3Fsecret_token%3Ds-ou9cF&visual=true
   - galleries:
       - orderNo: 1
         type: videoGallery
