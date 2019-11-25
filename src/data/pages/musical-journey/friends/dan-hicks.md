@@ -186,6 +186,44 @@ mediaItems:
     orderNo: 4
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572905372/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_4_scans10-14_-44-1_ay5zdk.jpg
+  - label: Live Videos at the Sweetwater
+    orderNo: 5
+    mediaType: videos
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_5_dan_video_icon_fcvufw.jpg
+    galleries:
+      - orderNo: 1
+        type: videoGallery
+        videos:
+          - caption: Videos at the Sweetwater - Part 1
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/375508417'
+          - caption: Videos at the Sweetwater - Part 2
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/375508593'
+          - caption: Videos at the Sweetwater - Part 3
+            orderNo: 3
+            url: 'https://player.vimeo.com/video/375508769'
+          - caption: Videos at the Sweetwater - Part 4
+            orderNo: 4
+  - label: Dan's Leonard Schaeffer Promo
+    orderNo: 6
+    mediaType: audio
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1572905372/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_6_hicks-icon_sn1mlz.jpg
+    galleries:
+      - orderNo: 1
+        type: audioGallery
+        audio:
+          - caption: Leonard Schaeffer Warners Ad 2
+            orderNo: 1
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716272918%3Fsecret_token%3Ds-gwZjm&&visual=false
+          - caption: Leonard Schaeffer Warners Ad 5
+            orderNo: 2
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716273923%3Fsecret_token%3Ds-LHami&&visual=true
+
 ---
 I first met Dan when I got involved with the Charlatans back in 1965. As a vocalist, he sang kind of flat in those days but was writing some great songs. His singing kept improving, and when the Charlatans split up, Dan started up with his own group, Dan Hicks and the Hot Licks. We were friends, and I was a fan and enjoyed watching the group perform. From the initial incarnation of the group, they were great! I saw them play in LA at the Troubadour, where they did a wonderful show. The audience loved them. It was hard to see how they could help but make it big right then!
 
