@@ -46,7 +46,7 @@ mediaItems:
           - caption: Track 1
             orderNo: 1
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716351578%3Fsecret_token%3Ds-NdsWX&&visual=false
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716351578%3Fsecret_token%3Ds-NdsWX&&visual=true
           - caption: Track 2
             orderNo: 2
             url: >-
@@ -66,7 +66,7 @@ mediaItems:
           - caption: Track 6
             orderNo: 6
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716351560%3Fsecret_token%3Ds-UM1y1&visual=false
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716351560%3Fsecret_token%3Ds-UM1y1&visual=true
           - caption: Track 7
             orderNo: 7
             url: >-
