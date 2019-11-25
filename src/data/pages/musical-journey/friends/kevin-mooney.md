@@ -4,27 +4,36 @@ backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1572906559/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/Background_Thumbnails/KevinMooneyAndMe-background2_rgwd7q.jpg
 backgroundOpacity: 100
 mediaItems:
-  - galleries:
-      - images:
-          - caption: Kevin Mooney and Me
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906559/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/1_Fishing%20Photos/KevinMooneyAndMe_luhykv.jpg
-            orderNo: 1
-        orderNo: 1
-        type: imageGallery
-    label: Fishing Photo with Kevin
+  - label: Fishing Photo with Kevin
     mediaType: images
     orderNo: 1
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572906559/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/Background_Thumbnails/Thumbnail_1_KevinMooney_icon_cscrom.jpg
-  - galleries:
+    galleries:
       - orderNo: 1
-        type: audioGallery
-    label: Kevin's Demo
+        type: imageGallery  
+        images:
+          - caption: Kevin Mooney and Me
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572906559/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/1_Fishing%20Photos/KevinMooneyAndMe_luhykv.jpg
+            orderNo: 1  
+  - label: Kevin's Demo
     mediaType: audio
     orderNo: 2
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572906559/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/Background_Thumbnails/Thumbnail_2_sf_icon_sgsgny.jpg
+    galleries:
+      - orderNo: 1
+        type: audioGallery
+        audio:
+          - caption: Lover's Roulette
+            orderNo: 1
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716273452%3Fsecret_token%3Ds-wp2Fm&&visual=false
+          - caption: Heavy Weather
+            orderNo: 2
+            url: >-
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716273581%3Fsecret_token%3Ds-hzQzY&&visual=true
 ---
 Kevin was an intense little man that came by my office in the mid-70s. He was a songwriter and musician but had a lot of outside projects going on as well. In one of our first conversations, he offered me a little black box that would allow me to call anyone in the world and talk as long as I wanted. You only had to hold it next to a phone and put in certain codes to make it work, but it was too complicated for me. And this was in the early '70s. 
 
