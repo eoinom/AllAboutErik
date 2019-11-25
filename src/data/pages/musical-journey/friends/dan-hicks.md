@@ -206,6 +206,7 @@ mediaItems:
             url: 'https://player.vimeo.com/video/375508769'
           - caption: Videos at the Sweetwater - Part 4
             orderNo: 4
+            url: 'https://player.vimeo.com/video/375508800'
   - label: Dan's Leonard Schaeffer Promo
     orderNo: 6
     mediaType: audio
@@ -218,7 +219,7 @@ mediaItems:
           - caption: Leonard Schaeffer Warners Ad 2
             orderNo: 1
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716272918%3Fsecret_token%3Ds-gwZjm&&visual=false
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716272918%3Fsecret_token%3Ds-gwZjm&&visual=true
           - caption: Leonard Schaeffer Warners Ad 5
             orderNo: 2
             url: >-
