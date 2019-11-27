@@ -12,6 +12,8 @@
       </div>
       <p id="targetForOpacity"></p>
     </header>
+    
+    <div id="topOfFriends"></div>
 
     <!-- LAYOUT FOR LARGE DESKTOPS -->
     <b-container v-if="windowWidth >= 1830" fluid style="max-width:1540px;" :style="friendsOpacity" id="friends" class="main-col px-0 mt-4 mb-5">
@@ -657,7 +659,7 @@
           />
         </b-col>
       </b-row>
-
+      
       <b-row no-gutters class="mb-3">
         <b-col style="max-width:356px" class="mr-3">
           <friend-card
@@ -1281,7 +1283,8 @@ export default {
       return this.$page.MusicalFriends.edges[0].node.friends
     },
     scrollTargetPos() {
-      return 0.72 * this.targetPosY
+      // return 0.72 * this.targetPosY
+      return this.targetPosY
     },
     friendsOpacity() {
       let css = {}
@@ -1315,50 +1318,50 @@ export default {
   },
 
   methods: {
-    getElementOffsetTop(element) {
-      let offsetTop = 0;
-      while(element) {
-        offsetTop += element.offsetTop;
-        element = element.offsetParent;
+    scrollFunction() {
+      // console.log('in scroll EventListener');      
+      if (this.scrollY != window.pageYOffset) {
+        this.scrollY = window.pageYOffset 
+        // console.log('this.scrollY = ' + this.scrollY);
+        let bodyRect = document.body.getBoundingClientRect()
+        let element = document.getElementById('topOfFriends')
+        let elemRect = element.getBoundingClientRect()
+        this.targetPosY = elemRect.top - bodyRect.top
+        // console.log('in scrollFunction, elemRect.top - bodyRect.top = ' + elemRect.top + ' - ' + bodyRect.top + ' = ' + this.targetPosY);
       }
-      return offsetTop;
+    },
+    addScrollListener() {
+      // console.log('in addScrollListener');      
+      window.addEventListener('scroll', this.scrollFunction);
     }
   },
 
   mounted() {
-    this.scrollY = window.pageYOffset
-    // console.log('this.scrollY = ' + this.scrollY);   
-
-    window.addEventListener('scroll', () => {
-      if (this.scrollY != window.pageYOffset) {
-        this.scrollY = window.pageYOffset 
-        // console.log('this.scrollY = ' + this.scrollY);   
-        
-        let bodyRect = document.body.getBoundingClientRect()
-        let element = document.getElementById('friends')
-        let elemRect = element.getBoundingClientRect()
-        this.targetPosY = elemRect.top - bodyRect.top
-      }
-    });
-
-    // Ref: https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element
-    let bodyRect = document.body.getBoundingClientRect()
-    let element = document.getElementById('friends')
-    let elemRect = element.getBoundingClientRect()
-    this.targetPosY = elemRect.top - bodyRect.top
-    // console.log('elemRect.top - bodyRect.top = ' + elemRect.top + ' - ' + bodyRect.top + ' = ' + this.targetPosY);
+    this.addScrollListener()
     
+    setTimeout(function(){
+      if (window.pageYOffset != 0) {
+        window.scrollTo(0, 0); // scroll to top of page (avoid inconsistent behaviour of using browser back button)
+        this.scrollY = window.pageYOffset
+      }
+      let bodyRect = document.body.getBoundingClientRect()
+      let element = document.getElementById('topOfFriends')      
+      let elemRect = element.getBoundingClientRect()
+      this.targetPosY = elemRect.top - bodyRect.top
+      // console.log('in mounted setTimeout, elemRect.top - bodyRect.top = ' + elemRect.top + ' - ' + bodyRect.top + ' = ' + this.targetPosY);
+    }.bind(this), 500);
 
     this.windowWidth = window.innerWidth
     this.windowHeight = window.innerHeight
 
     this.$nextTick(() => {
       window.addEventListener('resize', () => {
+      // console.log('in resize EventListener');      
         this.windowWidth = window.innerWidth
         this.windowHeight = window.innerHeight
 
         let bodyRect = document.body.getBoundingClientRect()
-        let element = document.getElementById('friends')
+        let element = document.getElementById('topOfFriends')
         let elemRect = element.getBoundingClientRect()
         this.targetPosY = elemRect.top - bodyRect.top
         // console.log('in resize, elemRect.top - bodyRect.top = ' + elemRect.top + ' - ' + bodyRect.top + ' = ' + this.targetPosY);
