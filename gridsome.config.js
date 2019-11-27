@@ -84,6 +84,13 @@ module.exports = {
         path: 'src/data/pages/musical-journey/friends/*.md',
         typeName: 'Friends'
       }
-    }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/pages/musical-journey/discography.md',
+        typeName: 'Discography'
+      }
+    },
   ]
 }

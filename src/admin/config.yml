@@ -147,6 +147,37 @@ collections:
                 widget: "select"
                 options: ["top", "bottom", "left", "right"]
 
+      - label: "Musical Journey - Discography"
+        name: "discography"
+        file: "src/data/pages/musical-journey/discography.md"
+        fields:
+          - {label: "Page Title", name: "pageTitle", widget: "string"}
+          - {label: "Title Image", name: "titleImg", widget: "image"}      
+          - {label: 'Main Text', name: 'body', widget: 'markdown', required: false}
+          - label: "Background Images"
+            name: "backgroundImages"
+            widget: "list"
+            fields:
+              # - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
+              - {label: "Image", name: "img", widget: "image"}
+              - {label: "Opacity Colour", name: "opacityColor", widget: "string"}          
+          - {label: 'Body text', name: 'body', widget: 'markdown'}  
+          - label: "Albums"
+            name: "albums"
+            widget: "list"
+            fields: 
+              - {label: 'Title', name: 'title', widget: 'string'}
+              - {label: 'Artist', name: 'artist', widget: 'string'}
+              # - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
+              - {label: 'Text', name: 'text', widget: 'markdown'}
+              - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
+              - {label: 'Track Listing', name: 'trackListing', widget: 'markdown'}
+              - {label: "Label", name: "label", widget: "string", required: false}
+              - {label: "Format", name: "format", widget: "string", required: false}
+              - {label: "Country", name: "country", widget: "string", required: false}
+              - {label: "Released", name: "released", widget: "string", required: false}
+              - {label: "Style", name: "style", widget: "string", required: false}
+              - {label: 'Credits', name: 'credits', widget: 'markdown'}
 
   - label: "Friends"
     name: "friends"
@@ -172,36 +203,6 @@ collections:
             name: "mediaType"
             widget: "select"
             options: ["images", "videos", "audio", "mix"]
-          # - label: "Galleries"
-          #   name: "galleries"
-          #   widget: "list"
-          #   fields: 
-          #     - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
-          #     - {label: "Label", name: "label", widget: "string", required: false}              
-          #     - label: "Images"
-          #       name: "images"
-          #       widget: "list"
-          #       required: false
-          #       fields: 
-          #         - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
-          #         - {label: "Image", name: "img", widget: "image"} 
-          #         - {label: "Caption", name: "caption", widget: "string", required: false}
-          #     - label: "Videos"
-          #       name: "videos"
-          #       widget: "list"
-          #       required: false
-          #       fields: 
-          #         - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1}
-          #         - {label: "Vimeo Url", name: "url", widget: "string"}
-          #         - {label: "Caption", name: "caption", widget: "string", required: false}
-          #     - label: "Audio"
-          #       name: "audio"
-          #       widget: "list"
-          #       required: false
-          #       fields: 
-          #         - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
-          #         - {label: "Audio file", name: "audioFile", widget: "image"} 
-          #         - {label: "Caption", name: "caption", widget: "string", required: false}
           - label: "Galleries"
             name: "galleries"
             widget: "list"
