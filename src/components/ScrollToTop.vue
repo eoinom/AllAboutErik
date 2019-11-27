@@ -1,5 +1,5 @@
 <template>
-  <div id="scrollToTopContainer">
+  <div v-if="addBtnToDOM" id="scrollToTopContainer">
     <button v-scroll-to="{ el:'body', duration:1500, easing:'ease' }" id="scrollToTopBtn" class="hide">      
       {{ text }}
       <svg v-if="includeArrow" viewBox="0 0 20 20" width="20" height="20" id="arrow">
@@ -26,17 +26,31 @@ export default {
     },
   },
 
-  mounted() {
-    var myID = document.getElementById("scrollToTopBtn");
+  data() {
+    return {
+      scrollPosY: 0.0
+    }
+  },
 
-    var myScrollFunc = function() {
-      var y = window.scrollY;
-      if (y >= 800) {
-        myID.className = "show"
-      } else {
-        myID.className = "hide"
+  computed: {
+    addBtnToDOM() {  
+      return this.scrollPosY >= 799
+    }
+  },
+
+  mounted() {
+    var myScrollFunc = function() {      
+      this.scrollPosY = window.scrollY
+      var btnElement = document.getElementById("scrollToTopBtn");
+      if (btnElement !== null) {
+        if (this.scrollPosY >= 800) {        
+          btnElement.className = "show"
+        } 
+        else {
+          btnElement.className = "hide"
+        }
       }
-    };
+    }.bind(this);
     window.addEventListener("scroll", myScrollFunc);
   }
 }
