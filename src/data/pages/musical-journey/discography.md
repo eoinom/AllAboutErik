@@ -61,9 +61,11 @@ albums:
   - artist: 'Knob Lick Upper 10,000'
     country: US
     credits: |-
-      * Banjo, Vocals: Erik Jacobsen
-      * Guitar, Lead Vocals: Dwain Story
-      * Guitar, Vocals: Peter Childs
+      Banjo, Vocals: Erik Jacobsen
+
+      Guitar, Lead Vocals: Dwain Story
+
+      Guitar, Vocals: Peter Childs
     format: 'Vinyl, LP'
     label: Mercury ‎– SR 60780
     released: '1963'
@@ -88,6 +90,121 @@ albums:
       10. Wild Bill Jones   2:50
       11. Foggy Mountain Breakdown 1:23
       12. Sing A Song Of Peace  1:45
+  - artist: 'Knob Lick Upper 10,000'
+    country: US
+    credits: "Banjo– Erik Jacobsen\r\n\n\r\n\nGuitar – Dwain Story\r\n\n\r\n\nGuitar– Peter Childs"
+    format: 'Vinyl, LP'
+    label: Mercury ‎– SR 60852
+    released: '1963'
+    style: 'Bluegrass, Folk'
+    text: >-
+      Workout!!! is the second album by this early 1960‘s folk/ bluegrass band,
+      Knob Lick Upper 10,000.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/02_knoblick10k_workout-thumb_p8ptjz.jpg
+    title: Workout!!!
+    trackListing: |-
+      1. Wabash Cannonball     2:28
+      2. Jack Dringo      3:48
+      3. Hard Luck Man      3:25
+      4. Gold Rings On Her Fingers    4:03
+      5. Medley: Maggie, Back-Eyed Susie, Susannah 3:08
+      6. Ashville Junction       2:56
+      7. Two Little Boys      3:10
+      8. Rocky Mountain Water     2:45
+      9. Days Of '49      3:45
+      10. Wayfaring Stranger     3:41
+      11. Stand By Me Stranger     1:51
+  - artist: The Lovin' Spoonful
+    country: US
+    credits: |-
+      John Sebastian – vocals, guitar,  autoharp, harmonica, organ
+
+      Steve Boone – bass, vocals
+
+      Joe Butler – drums, percussion, vocals
+
+      Zal Yanovsky – electric and acoustic guitar, vocals
+    format: 'Vinyl, LP'
+    label: Kama Sutra
+    released: November 1965
+    style: Folk Rock
+    text: >-
+      Do You Believe in Magic is the debut album by the folk rock group The
+      Lovin' Spoonful. It was released in November 1965, on the Kama Sutra
+      label. The album features the hits "Do You Believe in Magic" (USA #9) and
+      "Did You Ever Have to Make Up Your Mind?"
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/03_ls-magic-thumb_jlyw5h.jpg
+    title: Do You Believe in Magic
+    trackListing: |-
+
+
+      1. Do You Believe in Magic   2:07
+      2. Blues in the Bottle    2:12
+      3. Sportin Life     4:04
+      4. My Gal      2:38
+      5. You Baby      2:56
+      6. Fishin Blues     2:02
+      7. Did You Ever Have to Make Up Your Mind 1:59
+      8. Wild About My Lovin    2:36
+      9. Other Side of This Life    2:30
+      10. Younger Girl     2:20
+      11. On the Road Again    1:51
+      12. Night Owl Blues     3:05
+  - artist: The Lovin' Spoonful
+    country: US
+    credits: "John Sebastian – vocals, electric and acoustic guitars, autoharp, harmonica, keyboards\r\n\n\r\n\nSteve Boone – bass, vocals\r\n\n\r\n\nJoe Butler – drums, percussion, vocals\r\n\n\r\n\nZal Yanovsky – electric and acoustic guitars, vocals"
+    format: 'Vinyl, LP'
+    label: Kama Sutra
+    released: March 1966
+    style: 'Folk Rock, Pop'
+    text: >-
+      Daydream is the second album by The Lovin' Spoonful, released in 1966. It
+      features two hits, the title track, which reached No. 2 in the U.S.
+      Billboard Top 40 charts, and "You Didn't Have to Be So Nice"
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/04_ls-daydream-thumb_e1d0ij.jpg
+    title: Daydream
+    trackListing: |-
+      1. Daydream     2:21
+      2. There She Is    1:58
+      3. It’s Not Time Now   2:49
+      4. Warm Baby    2:03
+      5. Day Blues     3:15
+      6. Let the Boy Rock and Roll  2:34
+      7. Jug Band Music    2:53
+      8. Didn’t Want to Have to Do It  2:06
+      9. You Didn’t Have to Be So Nice  2:29
+      10. Bald Headed Lena   2:25
+      11. Butchie’s Tune    2:37
+      12. Big Noise from Speonk   2:21
+  - artist: The Lovin' Spoonful
+    country: US
+    credits: "John Sebastian – lead and backing vocals, guitar, twelve-string guitar, autoharp, piano, organ, harmonium, ocarina, pedal steel guitar, Irish harp\r\n\n\r\n\nZal Yanovsky – electric and acoustic guitars, backing and lead (3) vocals, banjo, slide whistle\r\n\n\r\n\nSteve Boone – electric and double basses, piano, organ, percussion\r\n\n\r\n\nJoe Butler – drums, backing and lead (6) vocals, percussion\r\n\n\r\n\nHenry Diltz – clarinet\r\n\n\r\n\nArtie Schroeck – electric piano (11)\r\n\n\r\n\nLarry Hankin – Jew's harp"
+    format: 'Vinyl, LP'
+    label: Kama Sutra
+    released: November 1966
+    style: 'Folk Rock, Pop'
+    text: >-
+      Hums of the Lovin' Spoonful is the third album (excluding one soundtrack
+      album) by the folk rock band The Lovin' Spoonful, released in 1966. It
+      peaked at No. 14 on the Billboard Pop Albums chart.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/05_ls-hums-thumb_lsd29j.jpg
+    title: Hums of the Lovin' Spoonful
+    trackListing: |-
+      1. Lovin You    2:29
+      2. Bes’ Friends   1:54
+      3. Voodoo in My Basement 2:29
+      4. Darlin’ Companion  2:22
+      5. Henry Thomas   1:43
+      6. Full Measure   2:42
+      7. Rain on the Roof   2:13
+      8. Coconut Grove   2:43
+      9. Nashville Cats   2:35
+      10. 4 Eyes    2:53
+      11. Summer in the City   2:45
 ---
 ## MUSICIAN
 
