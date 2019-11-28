@@ -787,6 +787,314 @@ albums:
       8. You Are My Sunshine  2:24
       9. I Never Asked   2:48
       10. Sweet Summertime   3:15
+  - artist: Sopwith Camel
+    credits: >-
+      Martin Beard – Bass
+
+
+      Erik Jacobsen – Producer
+
+
+      Peter Kraemer – ARP Synthesizer, Flute, Keyboards, Saxophone, Synthesizer,
+      Vocals, Wind
+
+
+      Terry MacNeil – Guitar, Keyboards, Piano
+
+
+      Norman Mayell – Drums, Harmonica, Marimba, Percussion, Sitar
+    format: Vinyl
+    label: Reprise Records ‎– MS 2108
+    released: '1973'
+    style: Psychedelic Rock
+    text: >-
+      In 1973, a reformed Sopwith Camel recorded The Miraculous Hump Returns
+      from the Moon on Warner Bros. Records' Reprise label. In a somewhat
+      different style from their first release, this album has become a critics
+      favourite for its complex instrumentation and extraordinary song writing.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/21_sopwith-hump-thumb_sg0di5.jpg
+    title: The Miraculous Hump Returns from the Moon
+    trackListing: |-
+      1. Fazon      5:15
+      2. Coke, Suede, And Waterbeds 3:30
+      3. Dancin' Wizard   3:01
+      4. Sleazy Street    5:26
+      5. Orange Peel    5:32
+      6. Oriental Fantasy   4:53
+      7. Sneaky Smith    5:33
+      8. Monkeys On The Moon  3:12
+      9. Astronaut Food   3:07
+      10. Brief Synthophonia   1:00
+  - artist: John Sebastian
+    credits: "John Sebastian – vocals, guitar, harmonica, autoharp, banjo, marimba, dulcimer\r\n\n\r\n\nLowell George – slide guitar, guitar,vocals\r\n\n\r\n\nJim Gordon – drums\r\n\n\r\n\nKenny Altman – bass\r\n\n\r\n\nMilt Holland – drums\r\n\n\r\n\nAmos Garrett – guitar\r\n\n\r\n\nRussell DaShiell – guitar\r\n\n\r\n\nRichie Olson – clarinet\r\n\n\r\n\nThe Pointer Sisters – background vocals\r\n\n\r\n\nBobbye Hall – congas\r\n\n\r\n\nJerry McKuen – guitar\r\n\n\r\n\nBuddy Emmons – pedal steel guitar\r\n\n\r\n\nEmmylou Harris – background vocals\r\n\n\r\n\nKelly Shanahan – drums\r\n\n\r\n\nDavid Lindley – fiddle\r\n\n\r\n\nDavid Grisman – mandolin\r\n\n\r\n\nRy Cooder – mandolin, slide guitar\r\n\n\r\n\nPhil Everly – background vocals\r\n\n\r\n\nRon Koss – guitar\r\n\n\r\n\nErik Jacobsen – producer\r\n\n\r\n\nJohn Sebastian – producer\r\n\n\r\n\nDavid Paich – string arrangement"
+    format: Vinyl
+    label: Reprise Records ‎– MS 2108
+    released: 'September 9, 1974'
+    style: 'Pop, Rock'
+    text: >-
+      Tarzana Kid is an album by American singer-songwriter John Sebastian,
+      released in 1974. The album was a commercial failure and did not chart.
+      His next album which featured "Welcome Back" was his last for the Reprise
+      label.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/22_js-tarzana-thumb_bvjuod.jpg
+    title: Tarzana Kid
+    trackListing: |-
+      1. Sitting In Limbo 0:29
+      2. Friends Again 2:28
+      3. Dixie Chicken 3:49
+      4. Stories We Could Tell 3:09
+      5. Face of Appalachia 4:20
+      6. Wildwood Flower 1:43
+      7. Wild About My Lovin' 3:05
+      8. Singing the Blues 2:22
+      9. Sportin' Life 3:09
+      10. Harpoon 2:25
+  - artist: Indigo
+    country: US
+    credits: "Bass – Ken Melville, Kenny Edwards\r\n\n\r\n\nDrums – Jeff Porcaro\r\n\n\r\n\nGuitar – Rex Larsen (2), Waddy*\r\n\n\r\n\nKeyboards – Howard Wales, Michael Omartian\r\n\n\r\n\nPercussion – King Errisson\r\n\n\r\n\nPiano – Sherry Fox, Sue Richman\r\n\n\r\n\nProducer – Erik Jacobsen, Indigo (26)\r\n\n\r\n\nSynthesizer – Michael Bottiker"
+    format: 'Vinyl, LP, Album'
+    label: Warner Bros. Records ‎– BS 2991
+    released: '1977'
+    style: 'Rock, Pop'
+    text: >-
+      Indigo, released by Warner Bro. Records in 1977 featured the trio of
+      singer/songwriters Rex Larsen, Sherry Fox and Sue Richman.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/23_indigo_dbjutz.jpg
+    title: Indigo
+    trackListing: |-
+      1. Feels Right    3:20
+      2. L.A Lady     3:07
+      3. Prisoner of the Spirit World  3:34
+      4. In Front of You    3:31
+      5. Step By Step    3:11
+      6. What’s It Matter    3:10
+      7. Come To the Lady That Loves You 2:49
+      8. Wonderin’ Why    3:38
+      9. The Nomad    3:25
+      10. Carl’s Song    3:18
+  - artist: Brian Elliot
+    credits: |-
+      Michael Baird – Drums
+
+      Steve Beckmeier – Guitar
+
+      Larry Carlton – Guitar
+
+      Valerie Carter – Vocals (Background)
+
+      Dyanne Chandler – Vocals (Background)
+
+      Brian Elliot – Composer, Keyboards, Primary Artist, Producer
+
+      Wilton Felder – Bass
+
+      Victor Feldman – Vibraphone
+
+      Gary Ferguson – Drums
+
+      Sherry Fox – Vocals (Background)
+
+      James Gadson – Drums
+
+      Bob Glaub – Bass
+
+      Jay Graydon – Guitar
+
+      David Hungate – Bass
+
+      Erik Jacobsen – Producer
+
+      The Jones Sisters – Background Vocals
+
+      Steve Madaio – Horn
+
+      Lew McCreary – Horn
+
+      Pinetop Perkins – Horn
+
+      William Peterson – Horn
+
+      Jeff Porcaro – Drums
+
+      John Rhyss – Percussion
+
+      Sue Richman – Vocals (Background)
+
+      Lee Ritenour – Guitar
+
+      Seawind Horns – Horn
+
+      Reed Stanley – Engineer
+
+      Fred Tackett – Guitar
+
+      Tony Terran – Horn
+
+      The Waters – Vocals (Background)
+
+      Julius Wechter – Horn, Marimba
+
+      Dave Wells – Horn
+    format: 'Vinyl, LP, Album'
+    label: Warner Bros. Records ‎– BSK 3148
+    released: '1978'
+    style: Classic Pop
+    text: >-
+      Brian Elliot was released in 1978 on Warner Bros. Records. The album
+      featured singer songwriter and pianist Brian Elliot, produced by Erik
+      Jacobsen.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/24_brian_elliot-thumb_gu9agg.jpg
+    title: Brian Elliot
+    trackListing: |-
+      1. Let's Just Live Together   3:47
+      2. Summer Nights In Hollywood  3:10
+      3. Queen Of Clowns 3:59
+      4. Room To Grow    3:28
+      5. Tickets To Rio    2:47
+      6. The First Time    2:56
+      7. 17 Goin' On 21     2:36
+      8. Old Nueva Laredo   3:49
+      9. Last Vegas Wedding   3:03
+      10. One Last Night Together  3:45
+  - artist: Tazmanian Devils
+    credits: "Bass, Vocals – Duane Van Deman\r\n\n\r\n\nDrums – Barry Lowenthal\r\n\n\r\n\nKeyboards, Lead Vocals – Pat Craig\r\n\n\r\n\nLead Guitar – David Carlson*\r\n\n\r\n\nProducer – Erik Jacobsen, The Tazmanian Devils\r\n\n\r\n\nRhythm Guitar, Lead Vocals – Dennis Hogan"
+    format: 'Vinyl, LP, Album'
+    label: Warner Bros. Records W56812
+    released: '1980'
+    style: 'New Wave, Rock-Ska'
+    text: >-
+      The Tazmanian Devils (aka Taz) played their first gig in 1976 at the
+      Sleeping Lady Cafe in Fairfax. Their new wave/reggae rhythms created a
+      strong following and after a few years on the club circuit the band got
+      the chance to record two albums for Warner Brothers  in 1980 and 1981,
+      this self-titled album being the first of the two.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/25_taz_devils-thumb_ksul8u.jpg
+    title: Tazmanian Devils
+    trackListing: |-
+      1. Feel Alright  2:44
+      2. Window Into Heaven  3:12
+      3. Spy in the House of Love  4:32
+      4. Don’t Slip  3:06
+      5. West Coast  2:57
+      6. Laura  2:58
+      7. Sender to Me  3:30
+      8. My Obsession  3:35
+      9. Pressure  2:44
+      10. Music  3:45
+  - artist: Tazmanian Devils
+    credits: "Bass, Vocals – Duane Van Deman\r\n\n\r\n\nDrums – Barry Lowenthal\r\n\n\r\n\nKeyboards, Lead Vocals – Pat Craig\r\n\n\r\n\nLead Guitar – David Carlson*\r\n\n\r\n\nRhythm Guitar, Lead Vocals – Dennis Hogan\r\n\n\r\n\nProducer – Erik Jacobsen, The Tazmanian Devils"
+    format: 'Vinyl, LP, Album'
+    label: Warner Bros. Records ‎BSK 3543
+    released: '1981'
+    style: 'New Wave, Rock-Ska'
+    text: >-
+      The second album of the Tazmanian Devils released by Warner Bros. Records
+      in 1981.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/26_taz-hilife-u543459-fr_o1abrf.jpg
+    title: Broadway Hi-Life
+    trackListing: |-
+      1. Dirty Bop Party
+      2. She’s A Rocker
+      3. Little Sister
+      4. Kids
+      5. Rockers Die Young
+      6. Lords Of Frisco
+      7. Giveaway
+      8. Don’t Hold Back
+      9. Dub-ble Up
+      10. Breakdown
+  - artist: Chris Isaak
+    credits: "Chris Isaak – vocals, guitar\r\n\n\r\n\nJames Calvin Wilsey – lead guitar, lap steel guitar\r\n\n\r\n\nPrairie Prince – drums\r\n\n\r\n\nChris Solberg – bass\r\n\n\r\n\nPee Wee Ellis – saxophone\r\n\n\r\n\nJim Keltner – drums\r\n\n\r\n\nPat Craig – organ\r\n\n\r\n\nErik Jacobsen - Producer, Management"
+    format: 'Vinyl, LP, Album'
+    label: Warner Bros. Records- 925 156-1
+    released: '1985'
+    style: 'Rock & Roll, Rockabilly'
+    text: >-
+      Silvertone is the debut album by American musician Chris Isaak, released
+      in 1985, and named after his three-piece backup band. The album peaked at
+      #77 in Australia in June 1986.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/27_chris-silvertone-thumb_adziml.jpg
+    title: Silvertone
+    trackListing: |-
+      1. Dancin'                           3:44
+      2. Talk to Me                     3:04
+      3. Livin’ for Your Lover      2:56
+      4. Back on Your Side        3:14
+      5. Voodoo                          2:44
+      6. Funeral in the Rain        3:18
+      7. The Lonely Ones           3:12
+      8. Unhappiness                  3:10
+      9. Tears                              2:44
+      10. Gone Ridin'                   2:36
+      11. Pretty Girls Don’t Cry   2:24
+      12. Western Stars              3:12
+      13. Another Idea                2:35
+  - artist: Chris Isaak
+    credits: |-
+      Chris Isaak – guitar, vocals
+
+      James Calvin Wilsey – lead guitar
+
+      Chris Solberg – bass
+
+      Prairie Prince – drums
+
+      Rowland Salley – bass
+
+      Kenney Dale Johnson – drums, vocals
+
+      John "J.R." Robinson – drums
+
+      Erik Jacobsen – Producer, Management
+    label: Warner Bros. Records
+    released: December 1986
+    style: 'Blues Rock, Rockabilly'
+    text: >-
+      Chris Isaak is the eponymous second album by Chris Isaak, released in
+      1986. The song "Blue Hotel" was a hit in France.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/28_chris-isaak-chris-thumb_vaoais.jpg
+    title: Chris Isaak
+    trackListing: |-
+      1. You Owe Me Some Kind of Love  3:51
+      2. Heart Full of Soul  3:20
+      3. Blue Hotel  3:10
+      4. Lie to Me  4:12
+      5. Fade Away  4:17
+      6. Wild Love  2:57
+      7. This Love Will Last  2:45
+      8. You Took My Heart  2:31
+      9. Cryin  2:30
+      10. Lovers Game  2:55
+      11. Waiting for the Rain to Fall  3:39
+  - artist: Christina Viera
+    credits: "Backing Vocals – Donna de Lory, Mona Lisa Young, Rick Palumbi*\r\n\n\r\n\nExecutive Producer – Erik Jacobsen\r\n\n\r\n\nGuitar – Tony Sena\r\n\n\r\n\nKeyboards \\[Additional] – Starr Parodi (tracks: 3, 5)\r\n\n\r\n\nKeyboards, Programmed By, Engineer – Brian Elliot\r\n\n\r\n\nProducer – Brian Elliot\r\n\n\r\n\nSaxophone – Bob Milletello* (tracks: 1, 3)"
+    format: 'CD, Album'
+    label: Warner Bros. Records
+    released: '1988'
+    style: 'Synth-pop, Funk/soul'
+    text: 'It was released in 1988, but had poor commercial success.'
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/29_christina_vierra_yzc4hv.jpg
+    title: Christina Viera
+    trackListing: |-
+      1. You Can Float In My Boat  3:59
+      2. I Can't Hold Out Anymore  3:26
+      3. Your Personal Possession  2:51
+      4. Jamie  3:45
+      5. The "L" Word  3:36
+      6. Those Eyes  3:57
+      7. Break These Chains  4:22
+      8. Doctor, Could You Please?  3:42
+      9. Slip Through Your Fingers  3:45
+      10. (You'll Never) Use Up All Of My Love  4:51
 ---
 ## MUSICIAN
 
