@@ -57,6 +57,39 @@ backgroundImages:
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/22_brianelliot-studio_j9iqpp.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902710/Musical%20Journey/Discography/background%20images/23_erik-madonna-gold_usq9pm.jpg
+albums:
+  - artist: 'Knob Lick Upper 10,000'
+    country: US
+    credits: |-
+      Banjo, Vocals: Erik Jacobsen
+
+      Guitar, Lead Vocals: Dwain Story
+
+      Guitar, Vocals: Peter Childs
+    format: 'Vinyl, LP'
+    label: Mercury ‎– SR 60780
+    released: '1963'
+    style: 'Bluegrass, Folk'
+    text: >-
+      Knob Lick Upper 10,000 is the first album by this early 1960‘s folk/
+      bluegrass band, composed of Dwain Story on lead vocal and guitar, Erik
+      Jacobsen on Banjo, and Peter Childs on dobro.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/01_knoblickupper-knoblick-thumb_hcwm2h.jpg
+    title: 'The Introduction of Knob Lick Upper 10,000'
+    trackListing: |-
+      1. The Cuckoo    2:46
+      2. Train 45     2:10
+      3. Little Willie     2:47
+      4. Bowling Green    2:07
+      5. Corey    3:20
+      6. Kickin' Mule   1:47
+      7. Battleship Of Maine   1:49
+      8. Knob Lick Shuffle    2:18
+      9. Kathy Kline   2:13
+      10. Wild Bill Jones   2:50
+      11. Foggy Mountain Breakdown 1:23
+      12. Sing A Song Of Peace  1:45
 ---
 ## MUSICIAN
 
