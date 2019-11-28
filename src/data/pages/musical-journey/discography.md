@@ -352,6 +352,441 @@ albums:
       10. The Great Morpheum 2:56
       11. Postcard from Jamaica  2:31
       12. Treadin' 2:16
+  - artist: Leonard Schaeffer
+    country: US
+    credits: |-
+      Erik Jacobsen – Co-Producer
+
+      Robert Rafkin – Co-Producer, Co-Writer
+
+      Martin Beard – Bass
+
+      Terry Clements – Saxophone
+
+      Bill Douglass – Bass
+
+      Mitzi Douglass – Vocals
+
+      Ale Eckstrom – Concertina
+
+      Richard Greene – Mandolin, Violin
+
+      Dan Hicks – Harmonica
+
+      Becky Kapsis – Vocals
+
+      Terry MacNeil – Piano
+
+      Norman Mayell – Drums
+
+      Mark Naftalin – Piano
+
+      Francisco Obligacion – Congas
+
+      Richard Olsen – Flute
+
+      Dan Patiris – Horn, Oboe
+
+      Walt Payne – Engineer
+
+      Robert Rafkin – Banjo, Guitar, Organ
+
+      David Schaeffer – Vocals
+
+      Leonard Schaeffer – Guitar, Primary Artist
+
+      William Truckaway – Brass
+
+      Patti Urban – Vocals
+    format: 'Vinyl, LP, Album'
+    label: Warner Bros. Records WB 1756
+    released: '1968'
+    style: Folk
+    text: >-
+      A Boy and His Dog is the album released by Chicago singer songwriter,
+      Leonard Shaeffer, produced by Erik Jacobsen and released in 1968 on Warner
+      Brothers Records.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/11_leonard-boy_dog-thumb_csttny.jpg
+    title: A Boy and His Dog
+    trackListing: |-
+      1. Dreamin'    2:15
+      2. Someone In Mind   2:44
+      3. State Fair    2:52
+      4. The Artist    3:02
+      5. The Meeting   2:12
+      6. Lodenspear   3:37
+      7. Smile On The Outside   2:54
+      8. Love, Love, Love   2:41
+      9. Little Time Out   2:20
+      10. Make Up A Story        2:13
+      11. Phone Call Blues  3:28
+      12. When I Get To See The Day  2:47
+  - artist: Tim Hardin
+    country: US
+    credits: "Erik Jacobsen – Producer\r\n\n\r\n\nTim Hardin – vocals, guitar\r\n\n\r\n\nJohn Sebastian - harmonica\r\n\n\r\n\nBob Bushnell - bass\r\n\n\r\n\nSticks Evans - drums"
+    format: 'Vinyl, LP'
+    label: Kama Sutra
+    released: March 1967
+    style: Folk Rock
+    text: >-
+      Erik Jacobsen recorded these Blues songs as a demo with Tim, John
+      Sebastian, Sticks Evans, and Bob Bushnell in 1964. They were not issued
+      until 1969. The songs are in a straight blues style. A similar release was
+      done by Atco on This is Tim Hardin.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/12_tim-4-thumb_bgfvzm.jpg
+    title: Tim Hardin 4
+    trackListing: |-
+      1. Airmobile     2:19
+
+      2. Whiskey, Whiskey    5:39
+
+      3. Seventh Son    2:05
+
+      4. How Long     4:30
+
+      5. Danville Dame    2:45
+
+      6. Ain’t Gonna Do Without (P1)  2:08
+
+      7. Ain’t Gonna Do Without (P2)  1:30
+
+      8. House of the Rising Sun (Traditional) 3:35
+
+      9. Bo Diddley (Bo Diddley)   2:45
+
+      10. I Can’t Slow Down   2:27
+
+      11. Hello Baby    5:23
+  - artist: Norman Greenbaum
+    country: US
+    credits: "Erik Jacobsen – producer\r\n\n\r\n\nNorman Greenbaum – guitar, piano\r\n\n\r\n\nNorman Mayell – drums, percussion\r\n\n\r\n\nDoug Killmer – bass\r\n\n\r\n\nRussell DaShiell – lead guitar\r\n\n\r\n\nStoval Sisters – chorus/background vocals"
+    format: 'Vinyl, LP'
+    label: Kama Sutra
+    released: March 1967
+    style: Folk Rock
+    text: >-
+      "Spirit in the Sky" is a song written and originally recorded by Norman
+      Greenbaum and released in late 1969. The single became a gold record,
+      selling two million copies from 1969 to 1970 and reached number three on
+      the US Billboard Hot 100 chart (April 18, 1970), where it lasted for 15
+      weeks in the Top 100. Billboard ranked the record the #22 song of 1970. 
+      It also climbed to #1 on the UK, Australian and Canadian charts in 1970.
+      Rolling Stone ranked "Spirit in the Sky" #333 on its list of the 500
+      Greatest Songs of All Time. The song was featured on the 1969 album of the
+      same name. Cover versions by Doctor and the Medics and Gareth Gates have
+      also made the #1 spot in the UK.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/13_norman_vinyl-thumb_p5vlys.jpg
+    title: Spirit in the Sky
+    trackListing: |-
+      Side 1
+
+      1. Junior Cadillac  3:38
+      2. Spirit in the Sky  4:03
+      3. Skyline   3:14
+      4. Jubilee   3:01
+      5. Alice Bodine  3:42
+
+      Side 2
+
+      6. Tars of India  3:05
+      7. The Power   2:38
+      8. Good Lookin’ Woman 4:17
+      9. Milk Cow   3:04
+      10. Marcy    3:17
+  - artist: Blue Velvet Band
+    country: US
+    credits: "Gary Chester – Drums\r\n\n\r\n\nRichard Greene – Violin\r\n\n\r\n\nJohn Hammond, Jr. – Harmonica\r\n\n\r\n\nErik Jacobsen – Producer\r\n\n\r\n\nBill Keith – Banjo, Guitar (Steel)\r\n\n\r\n\nAndy Kulberg – Bass\r\n\n\r\n\nPat Rebillo – Piano\r\n\n\r\n\nJim Rooney – Guitar, Vocals\r\n\n\r\n\nBuddy Salzman – Drums\r\n\n\r\n\nEric Weissberg – Guitar, Violin, Vocals"
+    format: 'Vinyl, LP, Album'
+    label: Warner Bros. - Seven Arts Records ‎– WS 1802
+    released: '1969'
+    style: 'Rock, Folk, World & Country'
+    text: >-
+      The Blue Velvet Band was a group of super-pickers who came from bluegrass,
+      rock, country and folk backgrounds. Lead singer, Jim Rooney was a mainstay
+      of the Boston folk revival scene. Violinist, Richard Greene had left L.A.
+      for the East to join the bluegrass Greenbriar Boys, then joined Bill
+      Monroe's Bluegrass Boys in Nashville.  Steel guitar and banjo player, Bill
+      Keith was another Monroe alumnus, and had played pedal steel and tenor
+      banjo with Kweskin's Jug Band. Eric Weissberg, banjo player,  was the
+      senior member having started with the Greenbriar Boys, then going on to
+      the Tarriers as well as countless recording sessions in New York. The Blue
+      Velvet Band's solo album remains a collector's item.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/14_bluevelvet-thumb_gme188.jpg
+    title: Sweet Moments
+    trackListing: >-
+      1. Ramblin' Man  2:48
+
+      2. You'll Find Her Name Written There   2:43
+
+      3. The Knight Upon The Road   3:38
+
+      4. Weary Blues From Waitin'   3:02
+
+      5. Little Sadie  2:01
+
+      6. Hitch-Hiker  2:52
+
+      7. Sweet Moments  2:28
+
+      8. Somebody Else You've Known 2:25
+
+      9. Fond Affection  2:41
+
+      10. My Sweet Love Ain't Around 2:45
+
+      11. The Nobody Knows About My Cares And Nobody Cares About My Nose Rag 
+      2:03
+
+      12. Sittin' On Top Of The World  3:21
+  - artist: Norman Greenbaum
+    country: ''
+    credits: |-
+      Erik Jacobsen – producer
+
+      Norman Greenbaum – writer, vocals, rhythm guitar, piano
+
+      Bill Meeker – drums, percussion
+
+      Doug Killmer – electric bass
+
+      Russell DaShiell – guitar
+
+      Stoval Sisters – background vocals
+
+      Jerry Yester – keyboards
+
+      Dan Hicks – washboard
+
+      William Truckaway – Moog synthesizer
+
+      Dan Paik – mandolin
+    format: 'Vinyl, LP, Album'
+    label: Reprise Records ‎– RS 6422
+    released: '1970'
+    style: Classic Rock
+    text: >-
+      Norman Greenbaum's second album released in 1970, which unfortunately
+      failed to reach the same popularity as "Spirit in the Sky".
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/15_norman-back_home-thumb_yaf5ko.jpg
+    title: Back Home Again
+    trackListing: |-
+      1. Back Home Again 2:42
+      2. Rhode Island Red 2:45
+      3. Canned Ham 2:51
+      4. Titfield Thunder 4:04
+      5. Miss Fancy 3:15
+      6. Lucille Got Stealed 3:54
+      7. Circulate 3:09
+      8. Hook & Ladder 2:42
+      9. Damper 2:56
+      10. I. J. Foxx 4:19
+  - artist: The Stovall Sisters
+    credits: "Bass – Dough Killmer\r\n\n\r\n\nDrums – Bill Meeker, Norman Mayell\r\n\n\r\n\nEngineer – Russ Gary\r\n\n\r\n\nGuitar – Dennis Geyer, Russel Dashiell\r\n\n\r\n\nHorns – Hart McNee, John Wilmeth, David Ginsburg, Neil Kantor, Ron Stallings\r\n\n\r\n\nLead Vocals – Joyce Stovall, Netta Stovall\r\n\n\r\n\nProducer – Erik Jacobsen, William Truckaway\r\n\n\r\n\nStrings – Ed Bogas"
+    format: 'Vinyl, LP, Album'
+    label: Reprise Records ‎– RS 6442
+    released: '1971'
+    style: R&B/Soul
+    text: >-
+      In the 1970s, the Stovall Sisters were a gospel trio of recording artists
+      consisting of Lillian, Netta, and Joyce Stovall. Definitive works include
+      the album The Stovall Sisters (Reprise Records 1970, Warner Music Group)
+      which included the now funk/soul classic “Hang on in There.” They are also
+      the featured background vocalists on the rock classic “Spirit In The Sky”
+      (recorded by Norman Greenbaum, producer, Erik Jacobsen).
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/16_stovall_sisters-thumb_qtwtvx.jpg
+    title: The Stovall Sisters
+    trackListing: |-
+      1. Hang on in There   3:36
+      2. Yes to The Lord   2:17
+      3. Sweepin’ Through the City 3:13
+      4. The World is in a Change 3:13
+      5. Rapture    4:55
+      6. Spirit in the Sky   3:00
+      7. So Good    2:33
+      8. The Love of God   3:31
+      9. I Come to Praise Him  3:01
+      10. I’m Ready to Serve the Lord 3:43
+  - artist: Miss Abrams and the Strawberry Point 3rd Grade Class
+    credits: "Producer – Erik Jacobsen, Rita Abrams\r\n\n\r\n\nWritten-By – Rita Abrams"
+    format: 'Vinyl, 7", 45 RPM'
+    label: Reprise Records ‎– RS 0928
+    released: '1970'
+    style: Pop
+    text: >-
+      The single, Mill Valley by Rita Abrams with producer Erik Jacobsen, became
+      a number  one Billboard adult contemporary hit in 1970.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/17_missabrams-single-thumb_w2wgwj.jpg
+    title: Mill Valley/The Happiest Day of my Life (single)
+    trackListing: |-
+      Side A
+
+      1. Wonder  3:02
+      2. Floating Away  2:08
+      3. Building' A Heaven On Earth - written by Norman Greenbaum  2:30
+      4. Running In The Green Grass  2:43
+      5. Mill Valley  2:58
+
+      Side B
+
+      1. I Wonder Why  2:52
+      2. This Time Of Life  2:22
+      3. You Are My Sunshine - written by Charles Mitchell & Jimmie Davis  2:47
+      4. I Never Asked  3:12
+      5. Sweet Summertime  2:37
+  - artist: William Truckaway
+    credits: >-
+      Arranged By \[string arr.] – Ed Bogas
+
+
+      Autoharp, Percussion – Dallas Williams
+
+
+      Banjo, Fiddle – Walt Koken (track: 9)
+
+
+      Bass \[string] – Bill Douglass (tracks: 3, 7, 9)
+
+
+      Choir \[subaudible cossack choir] – Dallas Williams (track: 8), Doc
+      Storch, Frank Maestropasqua, John Nonziato (track: 8), Norm Mayell*
+      (track: 8), William Truckaway (track: 8)
+
+
+      Congas – Bobby Castro (3) (track: 4), John Nonziato (tracks: 1, 7)
+
+
+      Drums, Percussion – Norm Mayell*
+
+
+      Electric Bass – David Hayes (tracks: 1, 2), Doug Killmer
+
+
+      Electric Guitar – Russell Dashiell* (track: 8)
+
+
+      Flute – Charles Lloyd
+
+
+      Jew's Harp – Larry Hanks
+
+
+      Pedal Steel Guitar – Buddy Emmons
+
+
+      Producer – Erik Jacobsen
+
+
+      Producer, Guitar, Piano, Synthesizer \[moog], Harp, Instruments \[misc.],
+      Vocals \[singer] – William Truckaway
+
+
+      Sitar, Tambora – Norm Mayell* (track: 7)
+
+
+      Twelve-String Guitar – Terry Dolan (track: 7)
+
+
+      Vibraphone \[vibes] – Ed Bogas (track: 4)
+
+
+      Violin, Mandolin – Ed Bogas (track: 8)
+
+
+      Violin, Viola – Richard Green*
+
+
+      Vocals \[singers] – The Stovall Sisters (tracks: 4, 6, 10, 11)
+
+
+      Vocals \[soul brothers] – Arcelio Garcia (track: 1), John Rodriguez (7),
+      John Watson (5), Victor Quinones (2) (track: 1)
+    format: 'Vinyl, LP, Album'
+    label: Reprise Records ‎– RS 6469
+    released: '1971'
+    style: 'Country Rock, Folk'
+    text: >-
+      Breakaway was released in 1971 by Reprise Records and features the work of
+      William Sievers, aka William Truckaway,  former member of group Sopwith
+      Camel. This album is reviewed by a contemporary critic as “a wonderfully
+      sweet and mellow album from a guy who sings like he could charm the leaves
+      off the trees in the summertime.“ You could compare Truckaway  to John
+      Sebastian, since the Sopwith Camel and the Lovin' Spoonful shared a sound
+      and producer Erik Jacobsen.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/18_williamtruckaway_cakqhv.jpg
+    title: Breakaway
+    trackListing: |-
+      1. Breakaway  3:32
+      2. Hard, Cold, City Life  3:07
+      3. Way To My Heart 2:18
+      4. Send Me Some  2:27
+      5. Jaded Lace 6:14
+      6. Be the One 2:34
+      7. I Go Slow 2:38
+      8. Where's My Baby 2:42
+      9. Soundaround 2:17
+      10. Bluegreens 2:42
+      11. Leave It There 3:55
+  - artist: Norman Greenbaum
+    credits: "Producer – Erik Jacobsen\r\n\n\r\n\nVocals \\[Uncredited] – Norman Greenbaum\r\n\n\r\n\nWritten-By – Norman Greenbaum Bass – Bill Douglas*\r\n\n\r\n\nGlockenspiel – Henry Diltz\r\n\n\r\n\nPercussion \\[Bonks] – Norman Mayell\r\n\n\r\n\nPiano – Norman Greenbaum\r\n\n\r\n\nVocals \\[La's] – Rita Abrams\r\n\n\r\n\nSlide Guitar, mandolin – Ry Cooder\r\n\n\r\n\nBanjo – Kenny Burt\r\n\n\r\n\nDouble Bass \\[Upright Bass] – Bill Douglas*\r\n\n\r\n\nLead Guitar – Russell Dashiell\r\n\n\r\n\nBass \\[Washtub] – Fritz Richmond\r\n\n\r\n\nClarinet – Rich Olsen"
+    format: 'Vinyl, LP, Album'
+    label: Reprise Records ‎– MS 2084
+    released: '1972'
+    style: 'Classic Rock, Folk'
+    text: >-
+      With the procedes from his world-wide hit, “Spirit  in the Sky,”  Norman
+      Greenbaum bought a farm and moved to Petaluma, California, to raise goats
+      and sell milk and cheese throughout the Bay Area.  He then released his
+      fourth Album entitled Petaluma with producer Erik Jacobsen.  The album, in
+      jug band style, featured Ry Cooder on mandolin and Fritz Richmond, jug
+      player extraordinaire.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/19_norman-petaluma_m6k40f.jpg
+    title: Petaluma
+    trackListing: |-
+      1. Grade A Barn   2:37
+      2. 5 Pennies    2:45
+      3. Dairy Queen   2:30
+      4. Campin    2:02
+      5. Petaluma    2:42
+      6. Country Lad   2:21
+      7. The Day The Well Went Dry   2:35
+      8. New Dead Shrimp Blues   3:22
+      9. Crazy Over You   2:38
+      10. Japanese Silky   1:41
+  - artist: Miss Abrams and the Strawberry Point 4th Grade Class
+    credits: "Rita Abrams Composer, Producer\r\n\n\r\n\nJimmie Davis Composer\r\n\n\r\n\nNorman Greenbaum Composer\r\n\n\r\n\nErik Jacobsen Producer\r\n\n\r\n\nMiss Abrams and the Strawberry Point 4th Grade Class Primary Artist\r\n\n\r\n\nCharles Mitchell Composer\r\n\n\r\n\nBill Pitzonka Art Direction"
+    format: Vinyl
+    label: Reprise Records ‎– MS 2098
+    released: '1972'
+    style: Classic Pop Rock
+    text: >-
+      The album Miss Abrams And The Strawberry Point 4th Grade Class featuring
+      “Mill Valley was  recorded by producer Erik Jacobsen, who recorded Adams
+      and the children from the third grade class at the the school where Rita
+      Abrams taught kindergarten. Released on the Reprise label, the record
+      reached #90 on the Billboard pop chart.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/20_miss_abrams-millvalley-thumb_artl4f.jpg
+    title: Miss Abrams and the Strawberry Point 4th Grade Class
+    trackListing: |-
+      1. Wonder    3:04
+      2. Floating Away   2:11
+      3. Building' A Heaven On Earth 2:31
+      4. Running In The Green Grass 2:44
+      5. Mill Valley    2:41
+      6. I Wonder Why   3:02
+      7. This Time Of Life   1:54
+      8. You Are My Sunshine  2:24
+      9. I Never Asked   2:48
+      10. Sweet Summertime   3:15
 ---
 ## MUSICIAN
 
