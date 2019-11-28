@@ -205,6 +205,153 @@ albums:
       9. Nashville Cats   2:35
       10. 4 Eyes    2:53
       11. Summer in the City   2:45
+  - artist: Tim Hardin
+    country: US
+    credits: "Tim Hardin – vocals, guitar, keyboards\r\n\n\r\n\nGary Burton – vibraphone\r\n\n\r\n\nBob Bushnell – bass\r\n\n\r\n\nEarl Palmer – drums\r\n\n\r\n\nBuddy Saltzman – drums\r\n\n\r\n\nJon Wilcox – drums\r\n\n\r\n\nJohn Sebastian – harmonica\r\n\n\r\n\nPhil Kraus – background vocals\r\n\n\r\n\nWalter Yost – bass\r\n\n\r\n\nArtie Butler – string arrangements"
+    format: 'Vinyl, LP'
+    label: Verve Forecast
+    released: July 1966
+    style: Folk
+    text: >-
+      Tim Hardin 1 is the debut album by folk artist Tim Hardin, released in
+      1966 on Verve Records.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/06_timhardin-thumb_hla7j7.jpg
+    title: Tim Hardin 1
+    trackListing: |-
+      Side One
+
+      1. Don’t Make Promises   2:26
+      2. Green Rocky Road    2:18
+      3. Smugglin’ Man    1:57
+      4. How Long     2:54
+      5. While You’re On Your Way   2:17
+      6. It’ll Never Happen Again   2:37
+
+      Side Two
+
+      1. Reason to Believe    2:00
+      2. Never Too Far    2:16
+      3. Part of the Wind    2:19
+      4. Ain’t Gonna Do Without   2:13
+      5. Misty Roses    2:00
+      6. How Can We Hang On to a Dream 2:04
+  - artist: The Lovin' Spoonful
+    country: US
+    credits: "Erik Jacobsen – Co Producer\r\n\n\r\n\nJack Lewis – Co Producer\r\n\n\r\n\nSkip Boone – Composer\r\n\n\r\n\nSteve Boone – Composer\r\n\n\r\n\nJohn Sebastian – Composer\r\n\n\r\n\nZal Yanovsky – Composer\r\n\n\r\n\nWoody Allen – Composer\r\n\n\r\n\nBen Shapiro – Production Concept\r\n\n\r\n\nVal Valentin – Director of Engineering"
+    format: 'Vinyl, LP'
+    label: Karma Surta
+    released: '1966'
+    style: Folk Rock
+    text: >-
+      The soundtrack album to What's Up Tiger Lily? was released in 1966. It
+      contains music by The Lovin' Spoonful. The audio engineer at National
+      Recording Studios was Fred Weinberg, who went on to produce and engineer
+      many other films and albums. It was re-released on CD along with You're a
+      Big Boy Now, the Spoonful's soundtrack for the 1966 film by Francis Ford
+      Coppola.\[5] It reached No. 126 on the Billboard Pop Albums charts.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/07_ls-tiger-thumb_p03r7d.jpg
+    title: What's Up Tiger Lily?
+    trackListing: |-
+      1. Introduction to Flick  2:14
+      2. Pow     2:26
+      3. Gray Prison Blues   2:04
+      4. Pow Revisited   2:26
+      5. Unconscious Minuet  2:05
+      6. Fishin Blues   1:59
+      7. Respoken    1:48
+      8. Cool Million   2:02
+      9. Speakin’ of Spoken   2:41
+      10. Lookin’ to Spy   2:29
+      11. Phil’s Love Theme  2:23
+      12. End Title    4:06
+  - artist: The Charlatans
+    country: US
+    credits: |-
+      Richard Olsen – bass, composer, percussion, vocals, woodwind
+
+      Mike Wilhelm – guitar, multi Instruments, percussion, vocals
+
+      George Hunter – autoharp
+
+      Mike Ferguson – drums
+
+      Dan Hicks – vocals, guitar and drums
+    format: 'Vinyl, LP'
+    label: Kapp Records
+    released: '1966'
+    style: Psychedelic rock
+    text: >-
+      The Charlatans were the first influential psychedelic rock band that
+      played a seminal role in the development of the San Francisco music scene
+      in the 1960s. "The Shadow Knows" and "32-20", were released by Kapp
+      Records in 1966 as the band's first single.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/08_charlatans-shadow-thumb_te3xo6.jpg
+    title: The Shadow Knows
+    trackListing: |-
+      1. The Shadow Knows
+      2. 32-20
+  - artist: The Lovin' Spoonful
+    country: US
+    credits: "Erik Jacobsen – Co Producer\r\n\n\r\n\nJack Lewis – Co Producer\r\n\n\r\n\nSkip Boone – Composer\r\n\n\r\n\nSteve Boone – Composer\r\n\n\r\n\nJohn Sebastian – Composer\r\n\n\r\n\nZal Yanovsky – Composer\r\n\n\r\n\nWoody Allen – Composer\r\n\n\r\n\nBen Shapiro – Production Concept\r\n\n\r\n\nVal Valentin – Director of Engineering"
+    format: 'Vinyl, LP'
+    label: Kama Sutra
+    released: March 1967
+    style: Folk Rock
+    text: "You're a Big Boy Now is a soundtrack album by The Lovin' Spoonful, released in 1967, containing music from the Francis Ford Coppola film of the same name. Composed entirely by Spoonful member John Sebastian, it contains several songs performed by the band, as well as instrumental music from the film score.\r\n\nThe album was re-released on CD along with What's Up, Tiger Lily?, the Spoonful's soundtrack for the 1967 Woody Allen film."
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/09_ls-bigboy-thumb_qqv6ke.jpg
+    title: You're a Big Boy Now
+    trackListing: |-
+      1. You’re a Big Boy Now    2:34
+      2. Lonely (Amy’s Theme)    3:22
+      3. Wash Her Away (From the Discotheque) 2:33
+      4. Kite Chase     1:23
+      5. Try and Be Happy     1:06
+      6. Peep Show Percussion    1:21
+      7. Girl, Beautiful Girl (Barbara’s Theme)  2:25
+      8. Darling Be Home Soon    3:36
+      9. Dixieland Big Boy     1:16
+      10. Letter to Barbara    1:01
+      11. Barbara’s Theme \[From the Discotheque] 1:29
+      12. Miss Things Thang    1:39
+      13. March      2:30
+      14. Finale      2:32
+  - artist: Sopwith Camel
+    country: US
+    credits: "Erik Jacobsen – Producer\r\n\n\r\n\nPeter Kraemer – Composer, Keyboards, Vocals, Wind\r\n\n\r\n\nMartin Beard – Bass\r\n\n\r\n\nTerry MacNeil – Composer, Guitar, Keyboards\r\n\n\r\n\nNorman Mayell – Drums, Harmonica, Sitar\r\n\n\r\n\nWilliam Sievers – Guitar"
+    format: 'Vinyl, LP'
+    label: Kama Sutra
+    released: March 1967
+    style: Folk Rock
+    text: >-
+      Sopwith Camel released their first, self-titled album (and only album
+      recorded during the 1960s), Sopwith Camel, in 1967 on Kama Sutra Records.
+      The band's hit single, "Hello, Hello", became the first hit to emerge from
+      the San Francisco rock scene and reached No. 26 on the U.S. pop music
+      charts in January 1967 and No. 9 on the Canadian RPM Magazine charts. The
+      band's first album, and "Hello, Hello" in particular, had more in common
+      with earlier songs by The Lovin' Spoonful, than typical 1960s psychedelic
+      rock, making it no coincidence that  Erik Jacobsen produced for both
+      Sopwith Camel and The Lovin' Spoonful.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/10_sopwith-thumb_f96dg8.jpg
+    title: Sopwith Camel
+    trackListing: |-
+      1. Hello, Hello 2:27
+      2. Frantic Desolation 2:17
+      3. Saga of the Low Down Let Down 1:52
+      4. Little Orphan Annie 2:55
+      5. You Always Tell Me Baby 1:49
+      6. Maybe in a Dream 2:06
+      7. Cellophane Woman 2:30
+      8. The Things That I Could Do With You 2:15
+      9. Walk in the Park  2:30
+      10. The Great Morpheum 2:56
+      11. Postcard from Jamaica  2:31
+      12. Treadin' 2:16
 ---
 ## MUSICIAN
 
