@@ -61,11 +61,9 @@ albums:
   - artist: 'Knob Lick Upper 10,000'
     country: US
     credits: |-
-      Banjo, Vocals: Erik Jacobsen
-
-      Guitar, Lead Vocals: Dwain Story
-
-      Guitar, Vocals: Peter Childs
+      * Banjo, Vocals: Erik Jacobsen
+      * Guitar, Lead Vocals: Dwain Story
+      * Guitar, Vocals: Peter Childs
     format: 'Vinyl, LP'
     label: Mercury ‎– SR 60780
     released: '1963'
