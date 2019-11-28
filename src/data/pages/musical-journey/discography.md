@@ -10,6 +10,53 @@ titleText: >-
   country. He is best known for his work in the 1960s with Tim Hardin, The
   Lovin' Spoonful, The Charlatans, Sopwith Camel, and later with Norman
   Greenbaum and Chris Isaak.
+backgroundImages:
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/01_erik-john-zal-header_camvu7.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/02_knoblick-performing-crop_rawerj.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/03_norman-studio-crop_j6ldkd.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902706/Musical%20Journey/Discography/background%20images/04_tim-and-erik-studio-1hardin-crop_uvkutx.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902706/Musical%20Journey/Discography/background%20images/05_sp16-crop_hxyntw.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/06_meandnormie_oy7agi.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/07_erik-studio-spoonful-crop2_rkilno.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/08_taz-studio-crop_mgiqg7.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/09_norman-studio3-crop_x1mo99.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/10_groupshot-crop_zlfibm.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/11_dan-and-i_vuzc9i.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/12_sp-_zal-joe-crop_uokhil.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/13_chris-erik-goldrecords-crop_dft0kl.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/14_rita-sm-crop_sazv5o.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/15_urbanik-crop_pl7fgc.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/16_chris2-crop_pne2xn.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/17_sp13-crop_gopikt.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/18_norman2-crop_ts4iiq.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902710/Musical%20Journey/Discography/background%20images/19_rita-class-split_qc4itm.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/20_fuc-crop_lwu2kc.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/21_taz-show_jhijmg.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/22_brianelliot-studio_j9iqpp.jpg
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574902710/Musical%20Journey/Discography/background%20images/23_erik-madonna-gold_usq9pm.jpg
 ---
 ## MUSICIAN
 
