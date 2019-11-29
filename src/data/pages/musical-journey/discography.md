@@ -1095,6 +1095,328 @@ albums:
       8. Doctor, Could You Please?  3:42
       9. Slip Through Your Fingers  3:45
       10. (You'll Never) Use Up All Of My Love  4:51
+  - artist: Chris Isaak
+    credits: "Chris Isaak – vocals, guitar\r\n\n\r\n\nJames Calvin Wilsey – lead guitar\r\n\n\r\n\nRowland Salley – bass guitar, vocals\r\n\n\r\n\nKenney Dale Johnson – drums, vocals\r\n\n\r\n\nPrairie Prince - drums, percussion\r\n\n\r\n\nFrank Martin - keyboards, piano\r\n\n\r\n\nPete Scaturro - keyboards\r\n\n\r\n\nChristine Wall - vocals\r\n\n\r\n\nCynthia Lloyd - vocals\r\n\n\r\n\nChris Solberg - guitars\r\n\n\r\n\nJoni Haastrup - keyboards\r\n\n\r\n\nErik Jacobsen – production"
+    format: 'CD, Album'
+    label: Reprise Records
+    released: Jun 1989
+    style: 'Rock & Roll, Rockabilly'
+    text: >-
+      Heart Shaped World is the third album by Chris Isaak. Released in 1989, it
+      became his breakthrough album and featured the Top 10 hit "Wicked Game".
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/30_chris-heartshaped-thumb_nilval.jpg
+    title: Heart Shaped World
+    trackListing: |-
+      1. Heart Shaped World  3:30
+      2. I’m Not Waiting  3:16
+      3. Don’t Make Me Dream About You  3:33
+      4. Kings of the Highway  4:47
+      5. Wicked Game  4:49
+      6. Blue Spanish Sky  3:58
+      7. Wrong to Love You  4:20
+      8. Forever Young  3:23
+      9. Nothing’s Changed  4:08
+      10. In the Heat of the Jungle  6:20
+      11. Diddley Daddy  4:01
+  - artist: Chris Isaak
+    credits: "Bass, Vocals – Rowland Salley\r\n\n\r\n\nDrums, Vocals – Kenney Dale Johnson\r\n\n\r\n\nGuitar, Vocals – Chris Isaak\r\n\n\r\n\nLead Guitar – James Calvin Wilsey\r\n\n\r\n\nMusician \\[Additional Musicians] –Chris Solberg, Christine Wall, Cynthia Lloyd, Pat Craig, Prairie Prince\r\n\n\r\n\nProducer – Erik Jacobsen\r\n\n\r\n\nWritten-By – Chris Isaak"
+    format: 'CD, Compilation'
+    label: Reprise Records
+    released: Jan. 1991
+    style: 'Blues rock, Pop rock'
+    text: >-
+      Wicked Game is a compilation album by American singer and songwriter Chris
+      Isaak, released in 1991 by WEA on the Reprise Records label in the UK,
+      Europe and Australia. The record contains 11 songs from his first three
+      albums. In early 1991, after the song "Wicked Game" went top 10 in the UK
+      and top 15 in Australia, a division of Warner Music Group, WEA released
+      the album Wicked Game. Compiled by Phil Knox-Roberts of WEA UK, it was
+      highlights of Isaak's recording career to that point.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/31_chris-wickedgame-thumb_prkaps.jpg
+    title: Wicked Game
+    trackListing: |-
+      1. Wicked Game  4:46
+      2. You Owe Me Some Kind Of Love  3:51
+      3. Blue Spanish Sky  3:57
+      4. Heart Shaped World  3:26
+      5. Heart Full of Soul  3:20
+      6. Funeral in the Rain  3:18
+      7. Blue Hotel  3:10
+      8. Dancin’  3:44
+      9. Nothing’s Changed  4:05
+      10. Voodoo  2:44
+      11. Lie to Me  4:12
+      12. Wicked Game (Instrumental)  4:48
+  - artist: Chris Isaak
+    credits: >-
+      Guitar – James Calvin Wilsey
+
+
+      Musician – Christine Wall, Cynthia Lloyd, Danny Gatton, Frank Martin, Jeff
+      Watson (2), Jim Keltner,Johnny Reno, Joni Haastrup, Kenny Aronoff, Mia
+      Rose Antonelli, Poplar Haines, Prairie Prince, Rick Knoch, Ron Thompson,
+      Tom Brumley
+
+
+      Organ \[Hammond B3] – Jimmy Pugh
+
+
+      Producer – Erik Jacobsen
+
+
+      Vocals, Bass – Rowland Salley
+
+
+      Vocals, Drums – Kenney Dale Johnson
+
+
+      Vocals, Guitar – Chris Isaak
+
+
+      Written-By – Brian Elliot & Isaak (track: 5), Chris Isaak (tracks: 1 to
+      11), Neil Diamond (track: 12)
+    format: 'CD, Album'
+    label: Reprise Records
+    released: '1993'
+    style: 'Blues Rock, Rock & Roll'
+    text: >-
+      San Francisco Days is the fourth album by Chris Isaak, released in 1993.
+      The album was dedicated to the memory of Louie Beeson, who was the sound
+      consultant.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974949/Musical%20Journey/Discography/album%20covers/32_chris-sf_days-thumb_mtiog0.jpg
+    title: San Francisco Days
+    trackListing: |-
+      1. San Francisco Days  2:58
+      2. Beautiful Homes  3:49
+      3. Round ‘N’ Round  4:27
+      4. Two Hearts  3:33
+      5. Can’t Do A Thing  3:38
+      6. Except The New Girl  3:20
+      7. Waiting  3:41
+      8. Move Along  4:01
+      9. I Want Your Love  3:09
+      10. 5:15   3:09
+      11. Lonely With A Broken Heart  3:08
+      12. Solitary Man  2:37
+  - artist: Chris Isaak
+    credits: |-
+      Chris Isaak – vocals, guitar
+
+      Rowland Salley – bass, vocals
+
+      Kenney Dale Johnson – drums, vocals
+
+      Bruce Kaphan – pedal steel guitar
+
+      Jimmy Pugh – Hammond B3 organ
+
+      Johnny Reno – saxophone, vocals
+
+      Jeff Watson – lead guitar
+
+      Producer: Erik Jacobsen
+
+      Written by: Chris Isaak
+    format: 'CD, Album'
+    label: Reprise Records
+    released: '1995'
+    style: 'Blues Rock, Pop Rock'
+    text: >-
+      Forever Blue is the fifth album by American rock and roll musician Chris
+      Isaak, released in 1995. The album included three singles: the
+      Grammy-nominated "Somebody's Crying"; "Baby Did a Bad Bad Thing," which
+      was featured in Stanley Kubrick's final film, Eyes Wide Shut; and
+      "Graduation Day," featured in the 1996 film Beautiful Girls. In 1996,
+      Forever Blue was also nominated for a Grammy for Best Rock Album, though
+      it lost to Alanis Morissette's Jagged Little Pill
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/33_chris-forever_blue-thumb_zvorg3.jpg
+    title: Forever Blue
+    trackListing: |-
+      1. Baby Did a Bad Bad Thing  2:54
+      2. Somebody’s Crying  2:46
+      3. Graduation Day  3:11
+      4. Go Walking Down There  2:49
+      5. Don’t Leave Me on My Own  2:14
+      6. Things Go Wrong  3:00
+      7. Forever Blue  2:42
+      8. There She Goes  3:14
+      9. Goin’ Nowhere  2:52
+      10. Changed Your Mind  3:51
+      11. Shadows in a Mirror  3:59
+      12. I Believe  3:09
+      13. The End of Everything  3:05
+  - artist: Chris Isaak
+    country: US
+    credits: |-
+      Chris Isaak – vocals, guitar
+
+      Hershel Yatovitz – lead guitar
+
+      Rowland Salley – bass, vocals
+
+      Kenney Dale Johnson – drums
+
+      Producer: Erik Jacobsen
+    format: 'CD, HDCD, Album'
+    label: Reprise Records ‎– 9 46325-2
+    released: 08 Oct 1996
+    style: 'Rock & Roll, Rockabilly'
+    text: >-
+      Baja Sessions is the sixth studio album by Chris Isaak, released in 1996,
+      featuring largely acoustic arrangements. The album contains a large number
+      of covers, many of which are classic songs (such as the Hawaiian-tinged
+      "Sweet Leilani" and "South of the Border (Down Mexico Way)") which refer
+      to, or are styled to suggest, tropical, laid-back settings. Though its
+      title refers to Baja California, the album was recorded at San Francisco's
+      Coast Recorders.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974949/Musical%20Journey/Discography/album%20covers/34_chris-isaak-baja-session-thumb_tmi3bb.jpg
+    title: Baja Sessions
+    trackListing: |-
+      1. Pretty Girls Don't Cry  3:09
+      2. Back On Your Side  3:04
+      3. Only The Lonely  2:53
+      4. South Of The Border (Down Mexico Way)  3:10
+      5. I Wonder  2:56
+      6. Wrong To Love You  3:55
+      7. Waiting For My Lucky Day  2:38
+      8. Yellow Bird  2:29
+      9. Two Hearts  3:19
+      10. Return To Me  2:17
+      11. Dancin'  3:57
+      12. Sweet Leilani  2:17
+      13. Think Of Tomorrow  2:58
+  - artist: Chris Isaak
+    credits: |-
+      Chris Isaak – vocals, guitar
+
+      Hershel Yatovitz – lead guitar
+
+      Rowland Salley – bass, vocals
+
+      Kenney Dale Johnson – drums
+
+      Producers: Erik Jacobsen & Chris Isaak
+    format: 'CD, Album'
+    label: 'Gallo Record Company, Reprise Records'
+    released: '1998'
+    style: 'Blues rock, Pop Rock, Rockabilly'
+    text: >-
+      Speak of the Devil is the seventh studio album by the American rock
+      musician Chris Isaak, released in 1998.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974949/Musical%20Journey/Discography/album%20covers/35_chris-speakof-thumb_yigxfq.jpg
+    title: Speak of the Devil
+    trackListing: |-
+      1. Please  3:34
+      2. Flying  3:08
+      3. Walk Slow  3:01
+      4. Breaking Apart  3:45
+      5. This Time  3:13
+      6. Speak of the Devil  3:31
+      7. Like the Way She Moves  2:50
+      8. Wanderin  2:42
+      9. Don’t Get So Down on Yourself  3:11
+      10. Black Flowers  2:44
+      11. I’m Not Sleepy  2:37
+      12. 7 Lonely Nights  2:10
+      13. Talkin ‘bout a Home  4:45
+      14. Super Magic 2000  3:45
+  - artist: Chris Isaak
+    credits: >-
+      Producers: Chris Isaak (tracks: 9, 18), Eric Rosse (tracks: 7, 13, 17),
+      Erik Jacobsen (tracks: 1 to 4, 6, 8, 10 to 12, 14 to 16), John Shanks
+      (track: 5)
+
+
+      Written by: Brian Elliot (track: 12), Chris Isaak (tracks: 1 to 7, 9 to
+      16, 18), Joe Melson (track: 8), Rick Nielsen (track: 17), Roy Orbison
+      (track: 8)
+    format: CD
+    label: Reprise Records 49418-2
+    released: '2006'
+    style: Pop Rock
+    text: >-
+      Best of Chris Isaak is a greatest hits album by Chris Isaak released on
+      May 9, 2006 on the Reprise/Warner Bros. Records label.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974949/Musical%20Journey/Discography/album%20covers/36_chris-best-thumb_a65kci.jpg
+    title: Best of Chris Isaak
+    trackListing: |-
+      1. San Francisco Days  2:59
+
+      2. Somebody’s Crying  2:47
+
+      3. Wicked Game  4:46
+
+      4. Baby Did A Bad Bad Thing  2:56
+
+      5. Let Me Down Easy  4:05
+
+      6. Two Hearts  3:34
+
+      7. King Without A Castle  3:06
+
+      8. Only The Lonely  2:53
+
+      9. Speak Of The Devil  3:30
+
+      10. Blue Spanish Sky  3:57
+
+      11. You Owe Me Some Kind Of Love  3:47
+
+      12. Can’t Do A Thing  3:37
+
+      13. Let’s Have A Party  3:27
+
+      14. Dancin’  3:45
+
+      15. Blue Hotel  3:12
+
+      16. Please  3:36
+
+      17. I Want You To Want Me  3:21
+
+      18. Forever Blue (Acoustic Version)  2:38
+  - artist: Brian Elliot
+    credits: |-
+      Brian Elliot – Keyboards, lead vocals
+
+      Gigi Worth – Backup vocalist
+
+      Mona Lisa Young – Backup vocalist
+
+      Dave Pearlman – Musician
+
+      Greg Leisz – Musician
+
+      Producers: Brian Elliot / Erik Jacobsen
+    format: 'CD, Album'
+    label: Elliot/Jacobsen Publishing
+    released: '2014'
+    style: Pop Rock
+    text: Self released album in 2014.
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1574974949/Musical%20Journey/Discography/album%20covers/37_brian-fullmentalnudity-thumb_gcu1kq.jpg
+    title: Mr. Brian Elliot Full Mental Nudity
+    trackListing: |-
+      1. Grampa's Hot Young Wife
+      2. The Little Jack-Off
+      3. She Thinks She Can Change Him
+      4. Super Lotto
+      5. Good Cowgirls
+      6. Greenland
+      7. The Cause of Global Warming
+      8. The Lowdown Swami
+      9. The End Times
+      10. The Single Life
+      11. You Can Be Healthy Too
+      12. Chicago
+      13. Over My Head
 ---
 ## MUSICIAN
 
