@@ -15,8 +15,44 @@
 
     <div id="topOfMainBody"></div>
 
-    <b-container fluid class="main-col">
-      <span v-html="content" id="content" />
+    <b-container fluid class="py-3 main-col">
+      <div class="p-4">
+        <span v-html="content" id="content" />
+      </div>
+      
+      <div class="px-4">
+        <h2 id="albumReleasesHeading">ALBUM RELEASES</h2>
+        <div v-for="(album, index) in albums" :key="index" class="mt-4 mb-5 albumText">
+          <b-row>
+            <b-col>
+              <div class="mb-3">
+                <span class="albumTitle">{{ album.artist + ' - ' + album.title }}</span>
+              </div>
+              <p class="albumIntroText">{{ album.text }}</p>
+            </b-col>
+          </b-row>
+
+          <b-row>
+            <b-col>
+              <g-image :src="album.thumbnailImg" class="" />
+            </b-col>
+
+            <b-col>
+              <div v-html="album.trackListing" class="albumTrackListing" />
+            </b-col>
+
+            <b-col class="albumDetailsText">
+              <span>Label: {{ album.label }}</span>
+              <br><span>Format: {{ album.format }}</span>
+              <br><span>Country: {{ album.country }}</span>
+              <br><span>Released: {{ album.released }}</span>
+              <br><span>Style: {{ album.style }}</span>
+              <br><br>
+              <p v-html="album.credits" class="albumCredits" />
+            </b-col>
+          </b-row>
+        </div>
+      </div>
     </b-container>
 
     <ScrollToTop
@@ -42,6 +78,7 @@
         albums {          
           artist
           title
+          text
           thumbnailImg
           trackListing
           label
@@ -90,6 +127,9 @@ export default {
     content() {
       return this.$page.Discography.edges[0].node.content
     },
+    albums() {
+      return this.$page.Discography.edges[0].node.albums
+    },
     backgroundImgUrl() {
       return this.$page.Discography.edges[0].node.backgroundImages[0].img
     },
@@ -120,7 +160,7 @@ export default {
       return css
     },
     paddingTop() {
-      return (this.windowHeight / 2) - 150
+      return (this.windowHeight / 2) - 200
     },    
   },
 
@@ -186,6 +226,7 @@ export default {
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 
 @font-face {
   font-family: NeueHaasGroteskText Pro55;
@@ -193,6 +234,15 @@ export default {
   src: url('../../assets/fonts/nhaasgrotesktxpro-55rg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../../assets/fonts/nhaasgrotesktxpro-55rg.woff') format('woff'), /* Pretty Modern Browsers */
        url('../../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: NeueHaasGroteskText Pro65;
+  src: url('../../assets/fonts/nhaasgrotesktxpro-65md.eot'); /* IE9 Compat Modes */
+  src: url('../../assets/fonts/nhaasgrotesktxpro-65md.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../assets/fonts/nhaasgrotesktxpro-65md.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../../assets/fonts/nhaasgrotesktxpro-65md.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
   font-weight: normal;
 }
 
@@ -214,14 +264,11 @@ export default {
 }
 
 #header {
-  /* position: absolute;
-  bottom: 0; */
   width: 100%;
   padding-bottom: 2%;
   padding-left: 19%;
   padding-right: 19%;
   text-align: center;
-  /* z-index: 500; */
 }
 
 #titleImg {
@@ -230,8 +277,6 @@ export default {
   min-width: 350px;
   height: auto;
   margin: auto;
-  /* padding-left: 115px;
-  padding-right: 115px; */
 }
 
 #titleSubText {
@@ -244,7 +289,6 @@ export default {
   letter-spacing: 2px;
   text-align: justify;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.29);
-  transition: inherit;
 }
 
 #scrollDownContainer {
@@ -254,39 +298,73 @@ export default {
 .main-col {
   background-color: rgba(255, 255, 255, 0.75);
   width: 1200px;
-
-  /* font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-  text-align: left;
-  font-size: 14px;
-  line-height: 17px;
-  font-feature-settings: 'liga';
-  text-rendering: auto;
-  margin: 0px;
-  padding: 0px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: transparent;
-  transform-origin: left top;
-  background-repeat: no-repeat;
-  display: inline;
-  float: left;
-  z-index: 94;
-  height: 29278px;
-  background-color: rgba(255,255,255,0.75);
-  position: relative;
-  margin-right: -10000px;
-  opacity: 0.91889; */
 }
+
+#albumReleasesHeading {
+  color: #000000;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-feature-settings: 'liga';
+  font-weight: 400;
+  font-size: 47px;
+  letter-spacing: 5px;
+  line-height: 47px;
+  text-align: left;
+  text-rendering: auto;
+  text-transform: uppercase;
+}
+
+.albumTitle {
+  color: #000000;
+  font-family: 'NeueHaasGroteskText Pro65';
+  font-feature-settings: 'liga';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 4px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.albumText {
+  color: #000000;
+  font-family: 'NeueHaasGroteskText Pro55';
+  font-feature-settings: 'liga';
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.albumIntroText {
+  font-size: 21px;
+  line-height: 26px;  
+  text-align: justify;
+}
+
+.albumTrackListing {
+  font-size: 16px;
+  line-height: 25px;
+  text-align: left;
+}
+
+.albumDetailsText {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.albumCredits {
+  font-size: 17px;
+  line-height: 26px;  
+  text-align: justify;
+}
+
 
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  /* #titleImg {
-    padding-left: 50px;
-    padding-right: 50px;
-  } */
   #titleSubText {
     font-size: 16px;
     line-height: 22.85px;
@@ -299,10 +377,6 @@ export default {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  /* #titleImg {
-    padding-left: 75px;
-    padding-right: 75px;
-  } */
   #titleSubText {
     font-size: 20px;
     line-height: 28.5px;
@@ -315,10 +389,6 @@ export default {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* #titleImg {
-    padding-left: 100px;
-    padding-right: 100px;
-  } */
   /* #titleSubText {
     font-size: 24px;
     line-height: 34px;
@@ -331,10 +401,6 @@ export default {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  /* #titleImg {
-    padding-left: 105px;
-    padding-right: 105px;
-  } */
   .main-col {
     width: 80%;
   }
