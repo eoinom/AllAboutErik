@@ -153,14 +153,14 @@ collections:
         fields:
           - {label: "Page Title", name: "pageTitle", widget: "string"}
           - {label: "Title Image", name: "titleImg", widget: "image"}      
-          - {label: 'Main Text', name: 'body', widget: 'markdown', required: false}
+          - {label: 'Main Text', name: 'titleText', widget: 'markdown', required: false}
           - label: "Background Images"
             name: "backgroundImages"
             widget: "list"
             fields:
               # - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
               - {label: "Image", name: "img", widget: "image"}
-              - {label: "Opacity Colour", name: "opacityColor", widget: "string"}          
+              - {label: "Opacity Colour", name: "opacityColor", widget: "string", required: false}          
           - {label: 'Body text', name: 'body', widget: 'markdown'}  
           - label: "Albums"
             name: "albums"
