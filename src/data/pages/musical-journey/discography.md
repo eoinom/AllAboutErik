@@ -57,6 +57,145 @@ backgroundImages:
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/22_brianelliot-studio_j9iqpp.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902710/Musical%20Journey/Discography/background%20images/23_erik-madonna-gold_usq9pm.jpg
+creditsSummary: >-
+  ## SONG PUBLISHER
+
+
+  Jacobsen's song publishing credits include, among others:
+
+
+  – The Lovin' Spoonful and Tim Hardin published by Faithful Virtue Music
+  Company
+
+
+  – Sopwith Camel and Norman Greenbaum published by Great Honesty Music
+
+
+  – Chris Isaak published by C. Isaak Music Publishing Co.
+
+
+  – Brian Elliot (including Madonna's hit "Papa Don't Preach") through
+  Elliot/Jacobsen Music
+
+     Publishing Co.
+
+  – Dan Hicks and Rita Abrams, Published by Oh Boy Music Publishing Company
+creditsList: >-
+  ## SONG PUBLISHER
+
+
+  1963: “The Introduction Of Knob Lick Upper 10,000” – Knob Lick Upper 10,000
+  (Banjo)
+
+
+  1963: “Workout!!!” – Knob Lick Upper 10,000 (Banjo)
+
+
+  1965: “Do You Believe in Magic” – Lovin’ Spoonful (Producer)
+
+
+  1966: “Daydream” – Lovin’ Spoonful (Producer)
+
+
+  1966: “Hums of the Lovin’ Spoonful” – Lovin’ Spoonful (Producer)
+
+
+  1966: “Tim Hardin 1” – Tim Hardin (Producer)
+
+
+  1966: “What’s Up Tiger Lily?” – Lovin Spoonful (Co-Producer)
+
+
+  1966: “The Shadow Knows" – The Charlatans (Producer)
+
+
+  1967: “You’re A Big Boy Now” – Lovin’ Spoonful (Producer)
+
+
+  1967: “Sopwith Camel” – Sopwith Camel (Producer)
+
+
+  1968: “A Boy & His Dog” – Leonard Schaeffer (Producer)
+
+
+  1969: “Tim Hardin 4” – Tim Hardin (Producer)
+
+
+  1969: “Spirit in the Sky” – Norman Greenbaum (Producer)
+
+
+  1969: “Sweet Moments” – Blue Velvet Band (Producer)
+
+
+  1970: “Back Home Again” – Norman Greenbaum (Producer)
+
+
+  1970: “The Stovall Sisters” – The Stovall Sisters (Producer)
+
+
+  1970: "Mill Valley" – Miss Abrams and the Strawberry Point 3rd Grade Class
+  (Producer)
+
+
+  1971: “Breakaway” – William Truckaway (Producer)
+
+
+  1972: “Petaluma” – Norman Greenbaum (Producer)
+
+
+  1972: "Miss Abrams and the Strawberry Point 4th Grade Class" – Miss Abrams and
+  the  Strawberry Point 4th Grade Class (Producer)
+
+
+  1973: “The Miraculous Hump Returns from the Moon” – Sopwith Camel (Producer)
+
+
+  1974: “Tarzana Kid” – John Sebastian (Producer)
+
+
+  1977: “Indigo” – Indigo (Producer)
+
+
+  1978: “Brian Elliot” – Brian Elliot (Producer)
+
+
+  1980: “The Tazmanian Devils” – The Tazmanian Devils (Producer)
+
+
+  1981: “Broadway High Life” – The Tazmanian Devils (Producer)
+
+
+  1985: “Silvertone” – Chris Isaak (Producer)
+
+
+  1986: “Chris Isaak” – Chris Isaak (Producer)
+
+
+  1988:”Christina Vierra” – Christina Vierra (Co-Producer)
+
+
+  1989: “Heart Shaped World” – Chris Isaak (Producer)
+
+
+  1991: “Wicked Game” – Chris Isaak (Producer)
+
+
+  1993: “San Francisco Days” – Chris Isaak (Producer)
+
+
+  1995: “Forever Blue” – Chris Isaak (Producer)
+
+
+  1996: “Baja Sessions” – Chris Isaak (Producer)
+
+
+  1998: “Speak of the Devil” – Chris Isaak (Producer)
+
+
+  2006: “Best Of Chris Isaak” – Chris Isaak (Producer)
+
+
+  2014: “Mr. Brian Elliot” – Brian Elliot (Co-Producer)
 albums:
   - artist: 'Knob Lick Upper 10,000'
     country: US
@@ -1424,7 +1563,7 @@ In high school he played the tuba and sousaphone.  Later, at Oberlin College he 
 
 In 1964, after hearing The Beatles, Jacobsen quit The Knob Lick Upper 10,000, intending to produce records combining folk music instruments with electric instruments and drums.
 
-Returning to New York, he soon met John Sebastian, who had similar ideas, and they began working with other musicians, including Jerry Yester, Zal Yanovsky, Jesse Colin Young, Cass Elliott and Denny Doherty. Jacobsen produced various demos for different combinations of these musicians, prototypes of the folk rock style, some of which were issued on the 1966 Elektra album _**What's Shakin'**_, and others on a 1999 compilation The Magic Circle.
+Returning to New York, he soon met John Sebastian, who had similar ideas, and they began working with other musicians, including Jerry Yester, Zal Yanovsky, Jesse Colin Young, Cass Elliott and Denny Doherty. Jacobsen produced various demos for different combinations of these musicians, prototypes of the folk rock style, some of which were issued on the 1966 Elektra album **_What's Shakin'_**, and others on a 1999 compilation The Magic Circle.
 
 ## THE LOVIN' SPOONFUL
 
@@ -1449,95 +1588,3 @@ In 1980-1984 he produced two albums with the San Francisco ska and reggae orient
 In 1981 he teamed up with Chris Isaak, as producer, publisher and manager. They worked and toured together through 1998, making five albums, including the double Platinum album Heart Shaped World. The break through single, “Wicked Game,” was eventually made into a music video, which has been voted one of MTV’s sexiest male video of all time. Isaak’s music has also been featured in numerous movies, TV shows and advertisements.
 
 Though semi-retired, Jacobsen continues to manage many of his published songs and masters for various uses.
-
-## SONG PUBLISHER
-
-Jacobsen's song publishing credits include, among others:
-
-– The Lovin' Spoonful and Tim Hardin published by Faithful Virtue Music Company
-
-– Sopwith Camel and Norman Greenbaum published by Great Honesty Music
-
-– Chris Isaak published by C. Isaak Music Publishing Co.
-
-– Brian Elliot (including Madonna's hit "Papa Don't Preach") through Elliot/Jacobsen Music
-
-   Publishing Co.
-
-– Dan Hicks and Rita Abrams, Published by Oh Boy Music Publishing Company
-
-## SONG PUBLISHER
-
-1963: “The Introduction Of Knob Lick Upper 10,000” – Knob Lick Upper 10,000 (Banjo)
-
-1963: “Workout!!!” – Knob Lick Upper 10,000 (Banjo)
-
-1965: “Do You Believe in Magic” – Lovin’ Spoonful (Producer)
-
-1966: “Daydream” – Lovin’ Spoonful (Producer)
-
-1966: “Hums of the Lovin’ Spoonful” – Lovin’ Spoonful (Producer)
-
-1966: “Tim Hardin 1” – Tim Hardin (Producer)
-
-1966: “What’s Up Tiger Lily?” – Lovin Spoonful (Co-Producer)
-
-1966: “The Shadow Knows" – The Charlatans (Producer)
-
-1967: “You’re A Big Boy Now” – Lovin’ Spoonful (Producer)
-
-1967: “Sopwith Camel” – Sopwith Camel (Producer)
-
-1968: “A Boy & His Dog” – Leonard Schaeffer (Producer)
-
-1969: “Tim Hardin 4” – Tim Hardin (Producer)
-
-1969: “Spirit in the Sky” – Norman Greenbaum (Producer)
-
-1969: “Sweet Moments” – Blue Velvet Band (Producer)
-
-1970: “Back Home Again” – Norman Greenbaum (Producer)
-
-1970: “The Stovall Sisters” – The Stovall Sisters (Producer)
-
-1970: "Mill Valley" – Miss Abrams and the Strawberry Point 3rd Grade Class (Producer)
-
-1971: “Breakaway” – William Truckaway (Producer)
-
-1972: “Petaluma” – Norman Greenbaum (Producer)
-
-1972: "Miss Abrams and the Strawberry Point 4th Grade Class" – Miss Abrams and the  Strawberry Point 4th Grade Class (Producer)
-
-1973: “The Miraculous Hump Returns from the Moon” – Sopwith Camel (Producer)
-
-1974: “Tarzana Kid” – John Sebastian (Producer)
-
-1977: “Indigo” – Indigo (Producer)
-
-1978: “Brian Elliot” – Brian Elliot (Producer)
-
-1980: “The Tazmanian Devils” – The Tazmanian Devils (Producer)
-
-1981: “Broadway High Life” – The Tazmanian Devils (Producer)
-
-1985: “Silvertone” – Chris Isaak (Producer)
-
-1986: “Chris Isaak” – Chris Isaak (Producer)
-
-1988:”Christina Vierra” – Christina Vierra (Co-Producer)
-
-1989: “Heart Shaped World” – Chris Isaak (Producer)
-
-1991: “Wicked Game” – Chris Isaak (Producer)
-
-1993: “San Francisco Days” – Chris Isaak (Producer)
-
-1995: “Forever Blue” – Chris Isaak (Producer)
-
-1996: “Baja Sessions” – Chris Isaak (Producer)
-
-1998: “Speak of the Devil” – Chris Isaak (Producer)
-
-2006: “Best Of Chris Isaak” – Chris Isaak (Producer)
-
-2014: “Mr. Brian Elliot” – Brian Elliot (Co-Producer)
