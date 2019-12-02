@@ -1563,7 +1563,7 @@ In high school he played the tuba and sousaphone.  Later, at Oberlin College he 
 
 In 1964, after hearing The Beatles, Jacobsen quit The Knob Lick Upper 10,000, intending to produce records combining folk music instruments with electric instruments and drums.
 
-Returning to New York, he soon met John Sebastian, who had similar ideas, and they began working with other musicians, including Jerry Yester, Zal Yanovsky, Jesse Colin Young, Cass Elliott and Denny Doherty. Jacobsen produced various demos for different combinations of these musicians, prototypes of the folk rock style, some of which were issued on the 1966 Elektra album **_What's Shakin'_**, and others on a 1999 compilation The Magic Circle.
+Returning to New York, he soon met John Sebastian, who had similar ideas, and they began working with other musicians, including Jerry Yester, Zal Yanovsky, Jesse Colin Young, Cass Elliott and Denny Doherty. Jacobsen produced various demos for different combinations of these musicians, prototypes of the folk rock style, some of which were issued on the 1966 Elektra album _**What's Shakin'**_, and others on a 1999 compilation The Magic Circle.
 
 ## THE LOVIN' SPOONFUL
 
@@ -1588,3 +1588,19 @@ In 1980-1984 he produced two albums with the San Francisco ska and reggae orient
 In 1981 he teamed up with Chris Isaak, as producer, publisher and manager. They worked and toured together through 1998, making five albums, including the double Platinum album Heart Shaped World. The break through single, “Wicked Game,” was eventually made into a music video, which has been voted one of MTV’s sexiest male video of all time. Isaak’s music has also been featured in numerous movies, TV shows and advertisements.
 
 Though semi-retired, Jacobsen continues to manage many of his published songs and masters for various uses.
+
+## SONG PUBLISHER
+
+Jacobsen's song publishing credits include, among others:
+
+– The Lovin' Spoonful and Tim Hardin published by Faithful Virtue Music Company
+
+– Sopwith Camel and Norman Greenbaum published by Great Honesty Music
+
+– Chris Isaak published by C. Isaak Music Publishing Co.
+
+– Brian Elliot (including Madonna's hit "Papa Don't Preach") through Elliot/Jacobsen Music
+
+   Publishing Co.
+
+– Dan Hicks and Rita Abrams, Published by Oh Boy Music Publishing Company
