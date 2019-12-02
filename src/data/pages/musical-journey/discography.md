@@ -1424,7 +1424,7 @@ In high school he played the tuba and sousaphone.  Later, at Oberlin College he 
 
 In 1964, after hearing The Beatles, Jacobsen quit The Knob Lick Upper 10,000, intending to produce records combining folk music instruments with electric instruments and drums.
 
-Returning to New York, he soon met John Sebastian, who had similar ideas, and they began working with other musicians, including Jerry Yester, Zal Yanovsky, Jesse Colin Young, Cass Elliott and Denny Doherty. Jacobsen produced various demos for different combinations of these musicians, prototypes of the folk rock style, some of which were issued on the 1966 Elektra album What's Shakin', and others on a 1999 compilation The Magic Circle.
+Returning to New York, he soon met John Sebastian, who had similar ideas, and they began working with other musicians, including Jerry Yester, Zal Yanovsky, Jesse Colin Young, Cass Elliott and Denny Doherty. Jacobsen produced various demos for different combinations of these musicians, prototypes of the folk rock style, some of which were issued on the 1966 Elektra album _**What's Shakin'**_, and others on a 1999 compilation The Magic Circle.
 
 ## THE LOVIN' SPOONFUL
 
@@ -1465,8 +1465,6 @@ Jacobsen's song publishing credits include, among others:
    Publishing Co.
 
 – Dan Hicks and Rita Abrams, Published by Oh Boy Music Publishing Company
-
-
 
 ## SONG PUBLISHER
 
