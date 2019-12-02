@@ -39,3 +39,6 @@ body {
   list-style-type: none;
   padding-left: 20px;
 }
+.discography_content p em {
+  letter-spacing: 2px;
+}
