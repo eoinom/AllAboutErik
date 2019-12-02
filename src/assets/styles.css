@@ -5,3 +5,37 @@ a, a:hover {
 body {
     background-color: black;
 }
+
+.discography_content h2 {
+  font-family: 'NeueHaasGroteskText Pro55';
+  font-feature-settings: 'liga';
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: 7px;
+  line-height: 34px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  padding-top: 16px;
+}
+.discography_content p,
+.discography_content li,
+.discography_content ol {
+  font-family: 'NeueHaasGroteskText Pro65';
+  font-feature-settings: 'liga';
+  font-weight: 500;
+  font-size: 23px;
+  letter-spacing: 1px;
+  line-height: 35px;
+}
+.discography_content p {
+  text-align: justify;
+}
+.discography_content li,
+.discography_content ol {
+  text-align: left;
+}
+.discography_content ol {
+  list-style-type: none;
+  padding-left: 20px;
+}

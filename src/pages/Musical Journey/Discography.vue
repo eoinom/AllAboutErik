@@ -16,8 +16,8 @@
     <div id="topOfMainBody"></div>
 
     <b-container fluid class="py-3 main-col">
-      <div class="p-4">
-        <span v-html="content" id="content" />
+      <div class="px-4 py-3">
+        <span v-html="content" class="discography_content" />
       </div>
       
       <div class="px-4">
@@ -226,6 +226,8 @@ export default {
 
 
 <style scoped>
+/* Note: additional styles for injected html added to global styles.css */
+
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 
 @font-face {
