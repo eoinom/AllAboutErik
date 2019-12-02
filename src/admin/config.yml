@@ -158,17 +158,17 @@ collections:
             name: "backgroundImages"
             widget: "list"
             fields:
-              # - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
               - {label: "Image", name: "img", widget: "image"}
               - {label: "Opacity Colour", name: "opacityColor", widget: "string", required: false}          
-          - {label: 'Body text', name: 'body', widget: 'markdown'}  
+          - {label: 'Body text', name: 'body', widget: 'markdown'}
+          - {label: 'Song Publisher Credits Summary', name: 'creditsSummary', widget: 'markdown'}
+          - {label: 'Song Publisher Credits List', name: 'creditsList', widget: 'markdown'}
           - label: "Albums"
             name: "albums"
             widget: "list"
             fields: 
               - {label: 'Title', name: 'title', widget: 'string'}
               - {label: 'Artist', name: 'artist', widget: 'string'}
-              # - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
               - {label: 'Text', name: 'text', widget: 'markdown'}
               - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
               - {label: 'Track Listing', name: 'trackListing', widget: 'markdown'}
