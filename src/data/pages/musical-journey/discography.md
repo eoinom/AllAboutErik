@@ -80,6 +80,88 @@ creditsSummary: >-
      Publishing Co.
 
   – Dan Hicks and Rita Abrams, Published by Oh Boy Music Publishing Company
+
+
+  ## SONG PUBLISHER
+
+
+  1. 1963: “The Introduction Of Knob Lick Upper 10,000” – Knob Lick Upper 10,000
+  (Banjo)
+
+  2. 1963: “Workout!!!” – Knob Lick Upper 10,000 (Banjo)
+
+  3. 1965: “Do You Believe in Magic” – Lovin’ Spoonful (Producer)
+
+  4. 1966: “Daydream” – Lovin’ Spoonful (Producer)
+
+  5. 1966: “Hums of the Lovin’ Spoonful” – Lovin’ Spoonful (Producer)
+
+  6. 1966: “Tim Hardin 1” – Tim Hardin (Producer)
+
+  7. 1966: “What’s Up Tiger Lily?” – Lovin Spoonful (Co-Producer)
+
+  8. 1966: “The Shadow Knows" – The Charlatans (Producer)
+
+  9. 1967: “You’re A Big Boy Now” – Lovin’ Spoonful (Producer)
+
+  10. 1967: “Sopwith Camel” – Sopwith Camel (Producer)
+
+  11. 1968: “A Boy & His Dog” – Leonard Schaeffer (Producer)
+
+  12. 1969: “Tim Hardin 4” – Tim Hardin (Producer)
+
+  13. 1969: “Spirit in the Sky” – Norman Greenbaum (Producer)
+
+  14. 1969: “Sweet Moments” – Blue Velvet Band (Producer)
+
+  15. 1970: “Back Home Again” – Norman Greenbaum (Producer)
+
+  16. 1970: “The Stovall Sisters” – The Stovall Sisters (Producer)
+
+  17. 1970: "Mill Valley" – Miss Abrams and the Strawberry Point 3rd Grade Class
+  (Producer)
+
+  18. 1971: “Breakaway” – William Truckaway (Producer)
+
+  19. 1972: “Petaluma” – Norman Greenbaum (Producer)
+
+  20. 1972: "Miss Abrams and the Strawberry Point 4th Grade Class" – Miss Abrams
+  and the  Strawberry Point 4th Grade Class (Producer)
+
+  21. 1973: “The Miraculous Hump Returns from the Moon” – Sopwith Camel
+  (Producer)
+
+  22. 1974: “Tarzana Kid” – John Sebastian (Producer)
+
+  23. 1977: “Indigo” – Indigo (Producer)
+
+  24. 1978: “Brian Elliot” – Brian Elliot (Producer)
+
+  25. 1980: “The Tazmanian Devils” – The Tazmanian Devils (Producer)
+
+  26. 1981: “Broadway High Life” – The Tazmanian Devils (Producer)
+
+  27. 1985: “Silvertone” – Chris Isaak (Producer)
+
+  28. 1986: “Chris Isaak” – Chris Isaak (Producer)
+
+  29. 1988:”Christina Vierra” – Christina Vierra (Co-Producer)
+
+  30. 1989: “Heart Shaped World” – Chris Isaak (Producer)
+
+  31. 1991: “Wicked Game” – Chris Isaak (Producer)
+
+  32. 1993: “San Francisco Days” – Chris Isaak (Producer)
+
+  33. 1995: “Forever Blue” – Chris Isaak (Producer)
+
+  34. 1996: “Baja Sessions” – Chris Isaak (Producer)
+
+  35. 1998: “Speak of the Devil” – Chris Isaak (Producer)
+
+  36. 2006: “Best Of Chris Isaak” – Chris Isaak (Producer)
+
+  37. 2014: “Mr. Brian Elliot” – Brian Elliot (Co-Producer)
 creditsList: >-
   ## SONG PUBLISHER
 
@@ -1593,14 +1675,8 @@ Though semi-retired, Jacobsen continues to manage many of his published songs an
 
 Jacobsen's song publishing credits include, among others:
 
-– The Lovin' Spoonful and Tim Hardin published by Faithful Virtue Music Company
-
-– Sopwith Camel and Norman Greenbaum published by Great Honesty Music
-
-– Chris Isaak published by C. Isaak Music Publishing Co.
-
-– Brian Elliot (including Madonna's hit "Papa Don't Preach") through Elliot/Jacobsen Music
-
-   Publishing Co.
-
-– Dan Hicks and Rita Abrams, Published by Oh Boy Music Publishing Company
+* The Lovin' Spoonful and Tim Hardin published by Faithful Virtue Music Company
+* Sopwith Camel and Norman Greenbaum published by Great Honesty Music
+* Chris Isaak published by C. Isaak Music Publishing Co.
+* Brian Elliot (including Madonna's hit "Papa Don't Preach") through Elliot/Jacobsen Music Publishing Co.
+* Dan Hicks and Rita Abrams, Published by Oh Boy Music Publishing Company
