@@ -42,3 +42,7 @@ body {
 .discography_content p em {
   letter-spacing: 2px;
 }
+.discography_albumCredits ul {
+  list-style-type: none;
+  padding-left: 0px;
+}

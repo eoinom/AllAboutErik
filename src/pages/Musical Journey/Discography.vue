@@ -38,7 +38,7 @@
             </b-col>
 
             <b-col>
-              <div v-html="album.trackListing" class="albumTrackListing" />
+              <div v-html="convertTrackListingToHtml(album.trackListing)" class="albumTrackListing" />
             </b-col>
 
             <b-col class="albumDetailsText">
@@ -48,7 +48,7 @@
               <br><span>Released: {{ album.released }}</span>
               <br><span>Style: {{ album.style }}</span>
               <br><br>
-              <p v-html="album.credits" class="albumCredits" />
+              <div v-html="convertCreditsToHtml(album.credits)" class="discography_albumCredits" />
             </b-col>
           </b-row>
         </div>
@@ -180,6 +180,59 @@ export default {
     addScrollListener() {
       // console.log('in addScrollListener');      
       window.addEventListener('scroll', this.scrollFunction);
+    },
+    convertTrackListingToHtml(input) {
+      let output = ''
+      const lines = input.split('\n');
+      let inList = false
+      for(let i = 0; i < lines.length; i++){
+        let line = lines[i]
+        if (line.substring(0,2) === '* ')
+          line = line.substring(2)
+        
+        if (!line)
+          continue
+          
+        if (line.toLowerCase().substring(0,4) === 'side') {
+          if (inList) {
+            output += '</ol>'
+            inList = false
+          }
+          output += '<p>' + line + '</p>'
+        }
+        else {
+          if (output === '' || output.substring(output.length - 4, output.length) === '</p>') {
+            output += '<ol>'
+            inList = true
+          }
+          output += '<li>' + line + '</li>'
+        }
+        
+      }
+      output += '</ol>'
+      return output
+    },
+    convertCreditsToHtml(input) {
+      let output = ''
+      const lines = input.split('\n');
+      let inList = false
+      for(let i = 0; i < lines.length; i++){
+        let line = lines[i]
+        if (line.substring(0,2) === '* ')
+          line = line.substring(2)
+        
+        if (!line)
+          continue
+          
+        if (output === '') {
+          output += '<ul>'
+          inList = true
+        }
+        output += '<li>' + line + '</li>'
+        
+      }
+      output += '</ul>'
+      return output
     }
   },
 
@@ -355,10 +408,10 @@ export default {
   text-align: left;
 }
 
-.albumCredits {
+.discography_albumCredits {
   font-size: 17px;
   line-height: 26px;  
-  text-align: justify;
+  text-align: left;
 }
 
 
