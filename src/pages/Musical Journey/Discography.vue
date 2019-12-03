@@ -1,6 +1,9 @@
 <template>
   <Layout class="pb-5">
-    <img :src="backgroundImgUrl" id="bgImg" :style="bgStyles" />
+
+    <div v-for="(img,index) in backgroundImages" :key="index" >
+      <g-image :src="backgroundImages[index].img" id="" class="bgImages" :class="hideBgImg(index)" :style="bgStyles" />
+    </div>
     
     <header id="header" :style="headerStyles">
       <g-image :src="titleImg" id="titleImg" class="mb-4" />
@@ -113,7 +116,9 @@ export default {
       windowWidth: 0.0,
       windowHeight: 0.0,
       bgImgWidth: 2560.0,
-      bgImgHeight: 1380.0
+      bgImgHeight: 1380.0,
+      documentHeight: null,
+      scrollGap: null
     }
   },
 
@@ -130,8 +135,24 @@ export default {
     albums() {
       return this.$page.Discography.edges[0].node.albums
     },
-    backgroundImgUrl() {
-      return this.$page.Discography.edges[0].node.backgroundImages[0].img
+    backgroundImages() {
+      return this.$page.Discography.edges[0].node.backgroundImages
+    },
+    bgImgIndex() {
+      if (this.documentHeight != null) {
+        this.scrollGap = (this.documentHeight - this.windowHeight) / (this.backgroundImages.length)
+        return Math.min(Math.floor(this.scrollY / this.scrollGap), this.backgroundImages.length - 1)
+      }
+      else
+        return 0
+    },
+    bgStyles() {
+      let css = {}
+      if (this.bgImgAspectRatio <= this.windowAspectRatio)
+        css.width = this.windowWidth + 'px';
+      else
+        css.height = this.windowHeight + 'px';
+      return css
     },
     bodyOpacity() {
       let css = {}
@@ -150,23 +171,20 @@ export default {
     windowAspectRatio() {
       return this.windowWidth / this.windowHeight
     },
-    bgStyles() {
-      let css = {}
-      css.opacity = this.scrollY < this.targetPosY ? 1.0 - (this.scrollY / this.targetPosY) : 0.0
-      if (this.bgImgAspectRatio <= this.windowAspectRatio)
-        css.width = this.windowWidth + 'px';
-      else
-        css.height = this.windowHeight + 'px';
-      return css
-    },
     paddingTop() {
       return (this.windowHeight / 2) - 200
-    },    
+    }
   },
 
   methods: {
+    hideBgImg(index) {
+      return index === this.bgImgIndex ? 'show' : 'hidden'
+    },
     scrollFunction() {
       // console.log('in scroll EventListener');      
+      
+      this.getDocumentHeight();
+
       if (this.scrollY != window.pageYOffset) {
         this.scrollY = window.pageYOffset 
         // console.log('this.scrollY = ' + this.scrollY);
@@ -233,6 +251,12 @@ export default {
       }
       output += '</ul>'
       return output
+    },
+    getDocumentHeight() {
+      // ref: https://stackoverflow.com/a/1147768
+      const body = document.body
+      const html = document.documentElement  
+      this.documentHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight )
     }
   },
 
@@ -253,12 +277,14 @@ export default {
 
     this.windowWidth = window.innerWidth
     this.windowHeight = window.innerHeight
+    this.getDocumentHeight();
 
     this.$nextTick(() => {
       window.addEventListener('resize', () => {
       // console.log('in resize EventListener');      
         this.windowWidth = window.innerWidth
         this.windowHeight = window.innerHeight
+        this.getDocumentHeight();
 
         let bodyRect = document.body.getBoundingClientRect()
         let element = document.getElementById('topOfMainBody')
@@ -305,7 +331,14 @@ export default {
   padding-top: 8px;
 }
 
-#bgImg {
+.hidden {
+  opacity: 0;
+}
+.show {
+  opacity: 1;
+}
+
+.bgImages {
   position: fixed;
   left: 50%;
   top: 0;
@@ -316,7 +349,9 @@ export default {
   min-width: 100%;    
   overflow: hidden;
   z-index: -1;
+  transition: opacity 0.5s linear;
 }
+
 
 #header {
   width: 100%;
