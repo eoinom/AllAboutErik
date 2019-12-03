@@ -78,18 +78,29 @@ albums:
       https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/01_knoblickupper-knoblick-thumb_hcwm2h.jpg
     title: 'The Introduction of Knob Lick Upper 10,000'
     trackListing: |-
-      1. The Cuckoo    2:46
-      2. Train 45     2:10
-      3. Little Willie     2:47
-      4. Bowling Green    2:07
-      5. Corey    3:20
-      6. Kickin' Mule   1:47
-      7. Battleship Of Maine   1:49
-      8. Knob Lick Shuffle    2:18
-      9. Kathy Kline   2:13
-      10. Wild Bill Jones   2:50
-      11. Foggy Mountain Breakdown 1:23
-      12. Sing A Song Of Peace  1:45
+      The Cuckoo    2:46
+
+      Train 45     2:10
+
+      Little Willie     2:47
+
+      Bowling Green    2:07
+
+      Corey    3:20
+
+      Kickin' Mule   1:47
+
+      Battleship Of Maine   1:49
+
+      Knob Lick Shuffle    2:18
+
+      Kathy Kline   2:13
+
+      Wild Bill Jones   2:50
+
+      Foggy Mountain Breakdown 1:23
+
+      Sing A Song Of Peace  1:45
   - artist: 'Knob Lick Upper 10,000'
     country: US
     credits: "Banjo– Erik Jacobsen\r\n\n\r\n\nGuitar – Dwain Story\r\n\n\r\n\nGuitar– Peter Childs"
@@ -104,17 +115,17 @@ albums:
       https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/02_knoblick10k_workout-thumb_p8ptjz.jpg
     title: Workout!!!
     trackListing: |-
-      1. Wabash Cannonball     2:28
-      2. Jack Dringo      3:48
-      3. Hard Luck Man      3:25
-      4. Gold Rings On Her Fingers    4:03
-      5. Medley: Maggie, Back-Eyed Susie, Susannah 3:08
-      6. Ashville Junction       2:56
-      7. Two Little Boys      3:10
-      8. Rocky Mountain Water     2:45
-      9. Days Of '49      3:45
-      10. Wayfaring Stranger     3:41
-      11. Stand By Me Stranger     1:51
+      * Wabash Cannonball     2:28
+      * Jack Dringo      3:48
+      * Hard Luck Man      3:25
+      * Gold Rings On Her Fingers    4:03
+      * Medley: Maggie, Back-Eyed Susie, Susannah 3:08
+      * Ashville Junction       2:56
+      * Two Little Boys      3:10
+      * Rocky Mountain Water     2:45
+      * Days Of '49      3:45
+      * Wayfaring Stranger     3:41
+      * Stand By Me Stranger     1:51
   - artist: The Lovin' Spoonful
     country: US
     credits: |-
