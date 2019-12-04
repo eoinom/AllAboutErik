@@ -159,7 +159,7 @@ collections:
             widget: "list"
             fields:
               - {label: "Image", name: "img", widget: "image"}
-              - {label: "Opacity Colour", name: "opacityColor", widget: "string", required: false}          
+              - {label: "Overlay Image", name: "imgOverlay", widget: "image", required: false}          
           - {label: 'Body text', name: 'body', widget: 'markdown'}
           - label: "Albums"
             name: "albums"
