@@ -13,50 +13,96 @@ titleText: >-
 backgroundImages:
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/01_erik-john-zal-header_camvu7.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/sage_iyaqfl.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/02_knoblick-performing-crop_rawerj.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/dr-blue_fcxieg.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/03_norman-studio-crop_j6ldkd.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/dr-sage_ls74x0.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902706/Musical%20Journey/Discography/background%20images/04_tim-and-erik-studio-1hardin-crop_uvkutx.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/blue_wqfgjw.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902706/Musical%20Journey/Discography/background%20images/05_sp16-crop_hxyntw.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/orange_guniz7.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/06_meandnormie_oy7agi.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/yellow_qvm8sb.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/07_erik-studio-spoonful-crop2_rkilno.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/violet_cjpmeh.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/08_taz-studio-crop_mgiqg7.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/br-blue_pyxqvq.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/09_norman-studio3-crop_x1mo99.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/dr-blue_fcxieg.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/10_groupshot-crop_zlfibm.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/orange_guniz7.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/11_dan-and-i_vuzc9i.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/red_ztln0i.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/12_sp-_zal-joe-crop_uokhil.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/yellow_qvm8sb.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/13_chris-erik-goldrecords-crop_dft0kl.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/sage_iyaqfl.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/14_rita-sm-crop_sazv5o.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/dr-sage_ls74x0.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/15_urbanik-crop_pl7fgc.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/blue_wqfgjw.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/16_chris2-crop_pne2xn.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/orange_guniz7.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/17_sp13-crop_gopikt.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/sage_iyaqfl.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/18_norman2-crop_ts4iiq.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/yellow_qvm8sb.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902710/Musical%20Journey/Discography/background%20images/19_rita-class-split_qc4itm.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/violet_cjpmeh.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/20_fuc-crop_lwu2kc.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/br-blue_pyxqvq.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/21_taz-show_jhijmg.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/dr-blue_fcxieg.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/22_brianelliot-studio_j9iqpp.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/dr-sage_ls74x0.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902710/Musical%20Journey/Discography/background%20images/23_erik-madonna-gold_usq9pm.jpg
+    imgOverlay: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/red_ztln0i.jpg
 albums:
   - artist: 'Knob Lick Upper 10,000'
     country: US
