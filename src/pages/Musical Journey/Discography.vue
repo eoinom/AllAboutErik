@@ -2,7 +2,8 @@
   <Layout class="pb-5">
 
     <div v-for="(img,index) in backgroundImages" :key="index" >
-      <g-image :src="backgroundImages[index].img" id="" class="bgImages" :class="hideBgImg(index)" :style="bgStyles" />
+      <g-image :src="backgroundImages[index].img" class="bgImg bgImgBack" :class="hideBgImg(index)" :style="bgStyles" />
+      <g-image :src="backgroundImages[index].imgOverlay" class="bgImg bgImgOverlay" :class="hideBgImgOverlay(index)" :style="bgStyles" />
     </div>
     
     <header id="header" :style="headerStyles">
@@ -74,6 +75,7 @@
         pageTitle
         backgroundImages {
           img
+          imgOverlay
         }
         titleImg
         titleText
@@ -146,6 +148,16 @@ export default {
       else
         return 0
     },
+    bgImgOverlayIndex() {
+      if (this.scrollGap != null) {
+        if (this.scrollY >= this.scrollGap / 2)
+          return Math.min(Math.floor( (this.scrollY - (this.scrollGap / 2) )/ this.scrollGap), this.backgroundImages.length - 1)
+        else
+          return null
+      }
+      else
+        return null
+    },
     bgStyles() {
       let css = {}
       if (this.bgImgAspectRatio <= this.windowAspectRatio)
@@ -179,6 +191,9 @@ export default {
   methods: {
     hideBgImg(index) {
       return index === this.bgImgIndex ? 'show' : 'hidden'
+    },
+    hideBgImgOverlay(index) {
+      return index === this.bgImgOverlayIndex ? 'showOverlay' : 'hidden'
     },
     scrollFunction() {
       // console.log('in scroll EventListener');      
@@ -337,8 +352,11 @@ export default {
 .show {
   opacity: 1;
 }
+.showOverlay {
+  opacity: 0.51;
+}
 
-.bgImages {
+.bgImg {
   position: fixed;
   left: 50%;
   top: 0;
@@ -348,8 +366,13 @@ export default {
   min-height: 100%;
   min-width: 100%;    
   overflow: hidden;
+  transition: opacity 0.5s ease;
+}
+.bgImgBack {
+  z-index: -2;
+}
+.bgImgOverlay {
   z-index: -1;
-  transition: opacity 0.5s linear;
 }
 
 
