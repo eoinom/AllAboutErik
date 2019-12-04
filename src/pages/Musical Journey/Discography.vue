@@ -19,7 +19,7 @@
 
     <div id="topOfMainBody"></div>
 
-    <b-container fluid class="py-3 main-col">
+    <b-container fluid :style="bodyOpacity" class="py-3 main-col">
       <div class="px-4 py-3">
         <span v-html="content" class="discography_content" />
       </div>
