@@ -3,9 +3,10 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap/dist/css/bootstrap.css'  (import happens in custom.scss now instead)
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import '~/assets/styles.css'
+import '~/assets/custom.scss'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faVolumeUp, faVolumeMute, faPlay } from '@fortawesome/free-solid-svg-icons'
@@ -27,7 +28,10 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
-  Vue.use(BootstrapVue)
+  // Vue.use(BootstrapVue)
+  Vue.use(BootstrapVue, {
+    breakpoints: [`xs`, 'sm', 'md', 'lg', 'xl', 'xxl']
+  })
 
   Vue.component('font-awesome', FontAwesomeIcon)
 
