@@ -115,7 +115,7 @@ albums:
     released: '1963'
     style: 'Bluegrass, Folk'
     text: >-
-      Knob Lick Upper 10,000 is the first album by this early 1960‘s folk/
+      Knob Lick Upper 10,000 is the first album by this early 1960‘s folk /
       bluegrass band, composed of Dwain Story on lead vocal and guitar, Erik
       Jacobsen on Banjo, and Peter Childs on dobro.
     thumbnailImg: >-
@@ -137,9 +137,9 @@ albums:
   - artist: 'Knob Lick Upper 10,000'
     country: US
     credits: |-
-      * Banjo– Erik Jacobsen
+      * Banjo – Erik Jacobsen
       * Guitar – Dwain Story
-      * Guitar– Peter Childs
+      * Guitar – Peter Childs
     format: 'Vinyl, LP'
     label: Mercury ‎– SR 60852
     released: '1963'
@@ -1525,7 +1525,7 @@ In high school he played the tuba and sousaphone.  Later, at Oberlin College he 
 
 In 1964, after hearing The Beatles, Jacobsen quit The Knob Lick Upper 10,000, intending to produce records combining folk music instruments with electric instruments and drums.
 
-Returning to New York, he soon met John Sebastian, who had similar ideas, and they began working with other musicians, including Jerry Yester, Zal Yanovsky, Jesse Colin Young, Cass Elliott and Denny Doherty. Jacobsen produced various demos for different combinations of these musicians, prototypes of the folk rock style, some of which were issued on the 1966 Elektra album _**What's Shakin'**_, and others on a 1999 compilation The Magic Circle.
+Returning to New York, he soon met John Sebastian, who had similar ideas, and they began working with other musicians, including Jerry Yester, Zal Yanovsky, Jesse Colin Young, Cass Elliott and Denny Doherty. Jacobsen produced various demos for different combinations of these musicians, prototypes of the folk rock style, some of which were issued on the 1966 Elektra album **_What's Shakin'_**, and others on a 1999 compilation The Magic Circle.
 
 ## THE LOVIN' SPOONFUL
 
@@ -1539,13 +1539,13 @@ Jacobsen discovered singer-songwriter Tim Hardin in 1964, began working as his m
 
 Jacobsen expanded his search for talent to California and worked there with the first of the newly emerging San Francisco rock bands, The Charlatans. While having little recording success, the band served as a launching pad for the extraordinary songwriter and singer, Dan Hicks, composer of the iconic song “I Scare Myself,” among many others.  In 1966 Jacobsen recorded the group Sopwith Camel, their song “Hello Hello” was the first pop hit to come out of San Francisco’s psychedelic era.
 
-In 1968 Jacobsen began working with singer songwriter, Brian Elliot. One album was released by Warner Brothers Records. In the late 1970’s the Elliot/Jacobsen Publishing Company had their song “Papa Don’t Preach” covered by Madonna. Her record went on to become an international number one hit, selling over one hundred million copies. Elliot and Jacobsen have continued to work together recently, in 2014, releasing an album, Mr. Brian Elliot, which can be heard on his [website](http://www.mrbrianelliot.com/).
-
-In 1969 Jacobsen produced and published the song “Mill Valley”, a number one Adult Contemporary hit for Rita Abrams, a kindergarten school teacher, singing with the Strawberry Point School Third Grade Class. They were featured on the cover of Life Magazine and were guests on the Smother’s Brothers TV show. For more information about Abrams and to watch the video of the song, made by Francis Ford Coppola visit  [www.ritaabrams.com](www.ritaabrams.com).
+In 1968, Jacobsen began working with singer songwriter, Brian Elliot. One album was released by Warner Brothers Records. In the late 1970’s the Elliot/Jacobsen Publishing Company had their song “Papa Don’t Preach” covered by Madonna. Her record went on to become an international number one hit, selling over one hundred million copies. Elliot and Jacobsen have continued to work together recently, in 2014, releasing an album, Mr. Brian Elliot, which can be heard on his [website](http://www.mrbrianelliot.com/).
 
 In 1968, Jacobsen began working with Norman Greenbaum. They made three albums together. "Spirit in the Sky"  became a #1 worldwide hit that went on to be one of the most licensed recordings of all time, in over 30 films, and many TV shows and commercials.
 
-In 1980-1984 he produced two albums with the San Francisco ska and reggae oriented band, The Tazmanian Devils (Warner Brothers records).
+In 1969, Jacobsen produced and published the song “Mill Valley”, a number one Adult Contemporary hit for Rita Abrams, a kindergarten school teacher, singing with the Strawberry Point School Third Grade Class. They were featured on the cover of Life Magazine and were guests on the Smother’s Brothers TV show. For more information about Abrams and to watch the video of the song, made by Francis Ford Coppola visit  [www.ritaabrams.com](www.ritaabrams.com).
+
+Between 1980 - 1984 he produced two albums with the San Francisco ska and reggae oriented band, The Tazmanian Devils (Warner Brothers records).
 
 In 1981 he teamed up with Chris Isaak, as producer, publisher and manager. They worked and toured together through 1998, making five albums, including the double Platinum album Heart Shaped World. The break through single, “Wicked Game,” was eventually made into a music video, which has been voted one of MTV’s sexiest male video of all time. Isaak’s music has also been featured in numerous movies, TV shows and advertisements.
 
@@ -1591,7 +1591,7 @@ Jacobsen's song publishing credits include, among others:
 26. 1981: “Broadway High Life” – The Tazmanian Devils (Producer)
 27. 1985: “Silvertone” – Chris Isaak (Producer)
 28. 1986: “Chris Isaak” – Chris Isaak (Producer)
-29. 1988:”Christina Vierra” – Christina Vierra (Co-Producer)
+29. 1988: ”Christina Vierra” – Christina Vierra (Co-Producer)
 30. 1989: “Heart Shaped World” – Chris Isaak (Producer)
 31. 1991: “Wicked Game” – Chris Isaak (Producer)
 32. 1993: “San Francisco Days” – Chris Isaak (Producer)
