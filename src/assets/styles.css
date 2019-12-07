@@ -39,10 +39,43 @@ body {
   list-style-type: none;
   padding-left: 20px;
 }
+.discography_albumTrackListing ol {
+  padding-left: 28px;
+}
 .discography_content p em {
   letter-spacing: 2px;
 }
-.discography_albumCredits ul {
+.discography_albumCredits_sm ul,
+.discography_albumCredits_md ul,
+.discography_albumCredits_lg ul {
   list-style-type: none;
   padding-left: 0px;
+  column-gap: 20px;
+  columns: 1;
+  /* column-fill: auto; */
+}
+.discography_albumCredits ul li {
+  /* max-width: 390px; */
+}
+
+
+
+/* X-large devices (large desktops, 1200 - 1500px) */
+@media (min-width: 1200px) and (max-width: 1499.98px) {
+  .discography_albumCredits_lg ul,
+  .discography_albumCredits_md ul {
+    columns: 2;
+    /* column-width: 450px; */
+  }
+}
+
+/* XX-large devices (x-large desktops, 1500px and up) */
+@media (min-width: 1500px) {
+  .discography_albumCredits_md ul {
+    columns: 2;
+    /* column-width: 450px; */
+  }
+  .discography_albumCredits_lg ul {
+    columns: 3;
+  }
 }

@@ -36,24 +36,35 @@
             </b-col>
           </b-row>
 
-          <b-row>
-            <b-col>
-              <g-image :src="album.thumbnailImg" class="" />
+          <b-row align-content="center">
+
+            <b-col cols="12" xl="6" xxl="5">
+              <div style="text-align: center" class="mb-3">
+                <g-image :src="album.thumbnailImg" style="max-width: 100%" class="" />
+              </div>
             </b-col>
 
-            <b-col>
-              <div v-html="convertTrackListingToHtml(album.trackListing)" class="albumTrackListing" />
+            <b-col cols="12" xl="6" xxl="4">
+              <span style="text-decoration-line: underline">Tracks:</span>
+              <div v-html="convertTrackListingToHtml(album.trackListing)" class="discography_albumTrackListing" />
             </b-col>
 
-            <b-col class="albumDetailsText">
-              <span>Label: {{ album.label }}</span>
+            <b-col cols="12" xl="12" xxl="3" class="albumDetailsText my-2">
+              <span style="text-decoration-line: underline">Details:</span>
+              <br><span>Label: {{ album.label }}</span>
               <br><span>Format: {{ album.format }}</span>
               <br><span>Country: {{ album.country }}</span>
               <br><span>Released: {{ album.released }}</span>
               <br><span>Style: {{ album.style }}</span>
-              <br><br>
-              <div v-html="convertCreditsToHtml(album.credits)" class="discography_albumCredits" />
             </b-col>
+
+            <b-col cols="12" class="albumDetailsText my-2">
+              <span style="text-decoration-line: underline">Credits:</span>
+              <div v-if="numListItems(album.credits) <= 4" v-html="convertCreditsToHtml(album.credits)" class="discography_albumCredits_sm" />
+              <div v-else-if="numListItems(album.credits) <= 8" v-html="convertCreditsToHtml(album.credits)" class="discography_albumCredits_md" />
+              <div v-else v-html="convertCreditsToHtml(album.credits)" class="discography_albumCredits_lg" />
+            </b-col>
+
           </b-row>
         </div>
       </div>
@@ -261,11 +272,14 @@ export default {
           output += '<ul>'
           inList = true
         }
-        output += '<li>' + line + '</li>'
-        
+        output += '<li>' + line + '</li>'        
       }
       output += '</ul>'
       return output
+    },
+    numListItems(inputText) {
+      const htmlText = this.convertCreditsToHtml(inputText)
+      return (htmlText.match(/<li>/g) || []).length
     },
     getDocumentHeight() {
       // ref: https://stackoverflow.com/a/1147768
@@ -396,7 +410,7 @@ export default {
   color: white;
   font-family: 'NeueHaasGroteskText Pro55';
   font-feature-settings: 'liga';
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px at 16px default size */
   font-weight: 500;
   line-height: 34px;
   letter-spacing: 2px;
@@ -418,7 +432,7 @@ export default {
   font-family: 'Ubuntu Condensed', sans-serif;
   font-feature-settings: 'liga';
   font-weight: 400;
-  font-size: 47px;
+  font-size: 2.9375rem; /* 47px at 16px default size */
   letter-spacing: 5px;
   line-height: 47px;
   text-align: left;
@@ -430,7 +444,7 @@ export default {
   color: #000000;
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px at 16px default size */
   font-weight: 500;
   line-height: 26px;
   letter-spacing: 4px;
@@ -447,19 +461,19 @@ export default {
 }
 
 .albumIntroText {
-  font-size: 21px;
+  font-size: 1.3125rem; /* 21px at 16px default size */
   line-height: 26px;  
   text-align: justify;
 }
 
-.albumTrackListing {
-  font-size: 16px;
+.discography_albumTrackListing {
+  font-size: 1.0625rem; /* 17px at 16px default size */
   line-height: 25px;
   text-align: left;
 }
 
 .albumDetailsText {
-  font-size: 18px;
+  font-size: 1.0625rem; /* 17px at 16px default size */
   font-weight: 400;
   line-height: 27px;
   letter-spacing: 1px;
@@ -467,19 +481,18 @@ export default {
 }
 
 .discography_albumCredits {
-  font-size: 17px;
+  font-size: 1.0625rem; /* 17px at 16px default size */
   line-height: 26px;  
   text-align: left;
 }
 
 
-
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
-/* Extra small devices (portrait phones, less than 576px) */
+/* Extra small devices (portrait phones, < 576px) */
 @media (max-width: 575.98px) {
   #titleSubText {
-    font-size: 16px;
+    font-size: 1.0rem; /* 16px at 16px default size */
     line-height: 22.85px;
     /* letter-spacing: 3.4px; */
   }
@@ -488,19 +501,24 @@ export default {
   }
 }
 
-/* Small devices (landscape phones, 576px and up) */
+/* Small devices (landscape phones, 576 - 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   #titleSubText {
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px at 16px default size */
     line-height: 28.5px;
     /* letter-spacing: 4.3px; */
   }
   .main-col {
     width: 80%;
   }
+  .albumIntroText {
+    font-size: 1.0625rem; /* 17px at 16px default size */
+    line-height: 21px;  
+    text-align: justify;
+  }
 }
 
-/* Medium devices (tablets, 768px and up) */
+/* Medium devices (tablets, 768 - 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   /* #titleSubText {
     font-size: 24px;
@@ -512,14 +530,22 @@ export default {
   }
 }
 
-/* Large devices (desktops, 992px and up) */
+/* Large devices (desktops, 992 - 1200px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .main-col {
     width: 80%;
   }
 }
 
+/* X-large devices (large desktops, 1200 - 1500px) */
 @media (min-width: 1200px) and (max-width: 1499.98px) {
+  .main-col {
+    width: 80%;
+  }
+}
+
+/* XX-large devices (x-large desktops, 1500px and up) */
+@media (min-width: 1500px) {
   .main-col {
     width: 80%;
   }
