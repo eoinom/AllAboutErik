@@ -9,13 +9,19 @@
     <header id="header" :style="headerStyles">
       <g-image :src="titleImg" id="titleImg" class="mb-4" />
       <p v-html="titleSubText" id="titleSubText" />
-      <div id="scrollDownContainer">
+      <!-- <div id="scrollDownContainer">
         <ScrollDownArrow
           scrollToElement="#topOfMainBody"
         />
-      </div>
+      </div> -->
       <p id="targetForOpacity"></p>
     </header>
+
+    <div id="scrollDownContainer" style="text-align: center" class="pb-5">
+      <ScrollDownArrow
+        scrollToElement="#topOfMainBody"
+      />
+    </div>
 
     <div id="topOfMainBody"></div>
 
@@ -26,7 +32,7 @@
       
       <div class="px-4">
         <h2 id="albumReleasesHeading">ALBUM RELEASES</h2>
-        <div v-for="(album, index) in albums" :key="index" class="mt-4 mb-5 albumText">
+        <div v-for="(album, index) in albums" :key="index" class="mt-4 mb-2 mb-md-3 mb-lg-4 albumText">
           <b-row>
             <b-col>
               <div class="mb-3">
@@ -45,24 +51,37 @@
             </b-col>
 
             <b-col cols="12" xl="6" xxl="4">
-              <span style="text-decoration-line: underline">Tracks:</span>
+              <span class="underline">Tracks</span>
               <div v-html="convertTrackListingToHtml(album.trackListing)" class="discography_albumTrackListing" />
             </b-col>
 
             <b-col cols="12" xl="12" xxl="3" class="albumDetailsText my-2">
-              <span style="text-decoration-line: underline">Details:</span>
-              <br><span>Label: {{ album.label }}</span>
-              <br><span>Format: {{ album.format }}</span>
-              <br><span>Country: {{ album.country }}</span>
-              <br><span>Released: {{ album.released }}</span>
-              <br><span>Style: {{ album.style }}</span>
+              <span class="underline">Details</span>
+              <b-row>
+                <b-col cols="4" md="3" lg="2" xxl="4">Label: </b-col>
+                <b-col>{{ album.label }}</b-col>
+              </b-row>
+              <b-row>
+                <b-col cols="4" md="3" lg="2" xxl="4">Format: </b-col>
+                <b-col>{{ album.format }}</b-col>
+              </b-row>
+              <b-row>
+                <b-col cols="4" md="3" lg="2" xxl="4">Country: </b-col>
+                <b-col>{{ album.country }}</b-col>
+              </b-row>
+              <b-row>
+                <b-col cols="4" md="3" lg="2" xxl="4">Released: </b-col>
+                <b-col>{{ album.released }}</b-col>
+              </b-row>
+              <b-row>
+                <b-col cols="4" md="3" lg="2" xxl="4">Style: </b-col>
+                <b-col>{{ album.style }}</b-col>
+              </b-row>              
             </b-col>
 
             <b-col cols="12" class="albumDetailsText my-2">
-              <span style="text-decoration-line: underline">Credits:</span>
-              <div v-if="numListItems(album.credits) <= 4" v-html="convertCreditsToHtml(album.credits)" class="discography_albumCredits_sm" />
-              <div v-else-if="numListItems(album.credits) <= 8" v-html="convertCreditsToHtml(album.credits)" class="discography_albumCredits_md" />
-              <div v-else v-html="convertCreditsToHtml(album.credits)" class="discography_albumCredits_lg" />
+              <span class="underline">Credits</span>
+              <div v-html="convertCreditsToHtml(album.credits)" :class="albumCreditsClass(album.credits)" class="discography_albumCredits" />
             </b-col>
 
           </b-row>
@@ -195,7 +214,12 @@ export default {
       return this.windowWidth / this.windowHeight
     },
     paddingTop() {
-      return (this.windowHeight / 2) - 200
+      if (this.windowWidth < 400)
+        return Math.max(45, this.windowHeight / 2 - 270)
+      else if (this.windowWidth < 576)
+        return (this.windowHeight / 2) - 300
+      else
+        return (this.windowHeight / 2) - 200
     }
   },
 
@@ -280,6 +304,15 @@ export default {
     numListItems(inputText) {
       const htmlText = this.convertCreditsToHtml(inputText)
       return (htmlText.match(/<li>/g) || []).length
+    },
+    albumCreditsClass(creditsText) {
+      let numItems = this.numListItems(creditsText)
+      if (numItems <= 4)
+        return 'discography_albumCredits_sm'
+      else if (numItems <= 8)
+        return 'discography_albumCredits_md'
+      else
+        return 'discography_albumCredits_lg'
     },
     getDocumentHeight() {
       // ref: https://stackoverflow.com/a/1147768
@@ -440,18 +473,6 @@ export default {
   text-transform: uppercase;
 }
 
-.albumTitle {
-  color: #000000;
-  font-family: 'NeueHaasGroteskText Pro65';
-  font-feature-settings: 'liga';
-  font-size: 1.25rem; /* 20px at 16px default size */
-  font-weight: 500;
-  line-height: 26px;
-  letter-spacing: 4px;
-  text-align: left;
-  text-transform: uppercase;
-}
-
 .albumText {
   color: #000000;
   font-family: 'NeueHaasGroteskText Pro55';
@@ -459,19 +480,25 @@ export default {
   font-weight: 400;
   letter-spacing: 1px;
 }
-
+.albumTitle {
+  font-family: 'NeueHaasGroteskText Pro65';
+  font-size: 1.25rem; /* 20px at 16px default size */
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 4px;
+  text-align: left;
+  text-transform: uppercase;
+}
 .albumIntroText {
   font-size: 1.3125rem; /* 21px at 16px default size */
   line-height: 26px;  
   text-align: justify;
 }
-
 .discography_albumTrackListing {
   font-size: 1.0625rem; /* 17px at 16px default size */
   line-height: 25px;
   text-align: left;
 }
-
 .albumDetailsText {
   font-size: 1.0625rem; /* 17px at 16px default size */
   font-weight: 400;
@@ -479,25 +506,70 @@ export default {
   letter-spacing: 1px;
   text-align: left;
 }
-
 .discography_albumCredits {
   font-size: 1.0625rem; /* 17px at 16px default size */
   line-height: 26px;  
   text-align: left;
 }
+.underline {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5px;
+}
 
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
-/* Extra small devices (portrait phones, < 576px) */
-@media (max-width: 575.98px) {
+/* Extra extra small devices (portrait phones, < 400px) */
+@media (max-width: 398.98px) {
+  #titleSubText {
+    font-size: 0.9375rem; /* 15px at 16px default size */
+    line-height: 1.33887rem; /* 21.42px at 16px default size */
+  }
+}
+/* Extra extra small devices (portrait phones, 400 - 576px) */
+@media (min-width: 400px) and (max-width: 575.98px) {
   #titleSubText {
     font-size: 1.0rem; /* 16px at 16px default size */
-    line-height: 22.85px;
-    /* letter-spacing: 3.4px; */
+    line-height: 1.428125rem; /* 22.85px at 16px default size */
+  }
+}
+
+/* Extra small devices (portrait phones, < 576px) */
+@media (max-width: 575.98px) {
+/* @media (min-width: 400px) and (max-width: 575.98px) { */
+  #header {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  #titleImg {
+    width: 100%;
+    min-width: 100%;
   }
   .main-col {
-    width: 80%;
+    width: 100%;
+  }
+  #scrollDownContainer {
+    margin-top: 40px;
+  }
+  #albumReleasesHeading {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .albumTitle {
+    font-size: 1rem;
+    line-height: 1rem;
+    letter-spacing: 2px;
+  }
+  .albumIntroText,
+  .discography_albumTrackListing {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+  .albumText,
+  .albumDetailsText,
+  .discography_albumCredits {
+    font-size: 0.9rem;
+    line-height: 1.35rem;
   }
 }
 
@@ -505,8 +577,7 @@ export default {
 @media (min-width: 576px) and (max-width: 767.98px) {
   #titleSubText {
     font-size: 1.25rem; /* 20px at 16px default size */
-    line-height: 28.5px;
-    /* letter-spacing: 4.3px; */
+    line-height: 1.78125rem; /* 28.5px at 16px default size */
   }
   .main-col {
     width: 80%;
@@ -516,17 +587,30 @@ export default {
     line-height: 21px;  
     text-align: justify;
   }
+  #scrollDownContainer {
+    margin-top: 40px;
+  }
+  #albumReleasesHeading {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
 }
 
 /* Medium devices (tablets, 768 - 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* #titleSubText {
-    font-size: 24px;
-    line-height: 34px;
-    letter-spacing: 5.1px;
-  } */
+  #titleSubText {
+    font-size: 22px;
+    line-height: 31px;
+  }
   .main-col {
     width: 80%;
+  }
+  #scrollDownContainer {
+    margin-top: 40px;
+  }
+  #albumReleasesHeading {
+    font-size: 2.5625rem;
+    line-height: 2.5625rem;
   }
 }
 

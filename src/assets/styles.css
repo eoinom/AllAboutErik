@@ -37,7 +37,8 @@ body {
 }
 .discography_content ol {
   list-style-type: none;
-  padding-left: 20px;
+  padding-left: 69px;
+  text-indent: -69px;
 }
 .discography_albumTrackListing ol {
   padding-left: 28px;
@@ -52,20 +53,69 @@ body {
   padding-left: 0px;
   column-gap: 20px;
   columns: 1;
-  /* column-fill: auto; */
-}
-.discography_albumCredits ul li {
-  /* max-width: 390px; */
 }
 
 
+/* Extra small devices (portrait phones, < 576px) */
+@media (max-width: 575.98px) {
+  .discography_content h2 {
+    font-size: 1.4125rem; /* 22.6px at 16px default size */
+    line-height: 30px;
+  }
+  .discography_content ul {
+    padding-left: 20px;
+  }
+  .discography_content p,
+  .discography_content li,
+  .discography_content ol {
+    font-size: 1.0rem; /* 16px at 16px default size */
+    line-height: 1.428125rem; /* 22.85px at 16px default size */
+    padding-left: 0px;
+  }
+  .discography_content ol {
+    padding-left: 0px;
+    text-indent: 0px;
+  }
+}
+
+/* Small devices (landscape phones, 576 - 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .discography_content h2 {
+    font-size: 1.4125rem; /* 22.6px at 16px default size */
+    line-height: 1.875rem;
+  }
+  .discography_content p,
+  .discography_content li,
+  .discography_content ol {
+    font-size: 1.25rem; /* 20px at 16px default size */
+    line-height: 1.78125rem; /* 28.5px at 16px default size */
+  }
+}
+
+/* Medium devices (tablets, 768 - 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .discography_content h2 {
+    font-size: 1.52rem; /* 24.32px at 16px default size */
+    line-height: 2rem;
+  }
+  .discography_content p,
+  .discography_content li,
+  .discography_content ol {
+    font-size: 1.3125rem; /* 21px at 16px default size */
+    line-height: 1.87rem;
+  }
+}
+
+/* Large devices (desktops, 992 - 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
 
 /* X-large devices (large desktops, 1200 - 1500px) */
 @media (min-width: 1200px) and (max-width: 1499.98px) {
   .discography_albumCredits_lg ul,
   .discography_albumCredits_md ul {
     columns: 2;
-    /* column-width: 450px; */
   }
 }
 
@@ -73,7 +123,6 @@ body {
 @media (min-width: 1500px) {
   .discography_albumCredits_md ul {
     columns: 2;
-    /* column-width: 450px; */
   }
   .discography_albumCredits_lg ul {
     columns: 3;
