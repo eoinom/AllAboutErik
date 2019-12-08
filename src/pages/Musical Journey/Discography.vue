@@ -628,11 +628,4 @@ export default {
   }
 }
 
-/* XX-large devices (x-large desktops, 1500px and up) */
-@media (min-width: 1500px) {
-  .main-col {
-    width: 80%;
-  }
-}
-
 </style>
