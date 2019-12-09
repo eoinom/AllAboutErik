@@ -3,7 +3,7 @@ a, a:hover {
 }
 
 body {
-  background-color: black;
+  background-color: black !important;
 }
 
 .discography_content h2 {
