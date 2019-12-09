@@ -109,7 +109,7 @@ collections:
         fields:
           - {label: "Page Title", name: "pageTitle", widget: "string"}
           - {label: "Header Background Image", name: "headerBgImg", widget: "image"}
-          - {label: "Title Image", name: "titleImg", widget: "image"}      
+          - {label: "Title Image", name: "titleImg", widget: "image"}
           - {label: 'Main text', name: 'body', widget: 'markdown', required: false} 
           - {label: 'Main image', name: 'mainImg', widget: 'image'} 
           - label: "Videos"
@@ -146,6 +146,49 @@ collections:
                 name: "imgPosition"
                 widget: "select"
                 options: ["top", "bottom", "left", "right"]
+
+      - label: "Musical Journey - Early Productions"
+        name: "early-productions"
+        file: "src/data/pages/musical-journey/early-productions.md"
+        fields:
+          - {label: "Page Title", name: "pageTitle", widget: "string"}
+          - {label: "Header Background Image", name: "headerBgImg", widget: "image"}
+          - {label: "Title Image", name: "titleImg", widget: "image"}
+          - {label: 'Main Text', name: 'body', widget: 'markdown', required: false} 
+          - {label: 'Main image', name: 'mainImg', widget: 'image'} 
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            fields: 
+              - label: "Text Boxes"
+                name: "textBoxes"
+                widget: "list"
+                fields:
+                  - {label: "Heading", name: "heading", widget: "string"}
+                  - {label: "Text", name: "text", widget: "markdown"}
+              - label: "Productions"
+                name: "productions"
+                widget: "list"
+                fields:
+                  - {label: "Writer", name: "writer", widget: "string", required: false}
+                  - {label: "Artist", name: "artist", widget: "string", required: false}
+                  - {label: "Image", name: "image", widget: "image"}
+                  - {label: "Background Image", name: "backgroundImg", widget: "image", required: false}
+                  - label: "Tracks"
+                    name: "tracks"
+                    widget: "list"
+                    fields:
+                      - {label: "Title", name: "title", widget: "string"}
+                      - {label: "Track Url", name: "trackUrl", widget: "string"}
+                      - {label: "Text", name: "text", widget: "markdown"}
+              - label: "Image Lightboxes"
+                name: "imageLightboxes"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Button Text", name: "buttonText", widget: "string"}
+                  - {label: "Image", name: "image", widget: "image"}
+                  - {label: "Caption", name: "caption", widget: "string", required: false}
 
       - label: "Musical Journey - Discography"
         name: "discography"

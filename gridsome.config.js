@@ -88,6 +88,13 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        path: 'src/data/pages/musical-journey/early-productions.md',
+        typeName: 'EarlyProductions'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         path: 'src/data/pages/musical-journey/discography.md',
         typeName: 'Discography'
       }
