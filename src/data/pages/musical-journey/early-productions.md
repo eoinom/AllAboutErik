@@ -23,8 +23,7 @@ sections:
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/cheerleaders_nubryt.jpg
         tracks:
-          - text: ' ghng'
-            title: Bobo the Cheerleader's Song
+          - title: Bobo the Cheerleader's Song
             track: >-
               https://res.cloudinary.com/all-about-erik/video/upload/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/Little_Peetie_Love_-_Bobo_the_Cheerleaders_Song_dzi3qq.mp3
         writer: Erik Jacobsen
