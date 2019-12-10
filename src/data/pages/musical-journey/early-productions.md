@@ -77,6 +77,44 @@ sections:
           My old partner Dwain Story sang on a song I wrote called "A Little
           Lovin". I'm pretty sure some guys from The Spoonful backed him up on
           this one.
-  - {}
+  - imageLightboxes:
+      - buttonText: Tony Studd Contract
+        caption: Tony Studd Contract
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576022132/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/tony_studd_contract_uv14dw.jpg
+      - buttonText: Slurp Sound
+        caption: Slurp Sound
+        image: >-
+          https://res.cloudinary.com/all-about-erik/video/upload/v1576022134/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/slurp-sound_a8jyww.mp3
+    productions:
+      - artist: Dee & Zee
+        backgroundImg: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/img402-sm_background_jdy7ll.png
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/img402-sm_w4brnr.jpg
+        tracks:
+          - title: The Slurp - I Got the Word
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018291/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/Dee_and_Zee_-_I_got_the_word_mixdown_dm3zgn.mp3
+          - title: The Slurp
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018277/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/Dee_and_Zee_-_The_slurp_mf2bsu.mp3
+        writer: Erik Jacobsen
+      - artist: Dwain Story
+        backgroundImg: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018279/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/dwainstory_background_n084xq.png
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018277/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/dwainstory_uwnvl1.jpg
+        tracks:
+          - title: The Slurp - Slurpin to the East and West
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018277/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/Dwain_Story_-_The_slurp_-_slurpin_to_the_east_and_west_suhyro.mp3
+          - title: 'The Slurp - #3'
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/Dwain_Story_-_The_slurp_3_hwhnvl.mp3
+        writer: Erik Jacobsen
+    textBoxes:
+      - heading: The Slurp
+        text: "After I resigned from the banjo business I stayed in Greenwich village, trying to write songs and make some recordings, including the pathetically naive concept of starting my own dance craze, which I called The Slurp.\r\n\nI recorded several different songs and artists, including my old partner Dwain Story, as well as Dee & Z, Denny Doherty and Zal Yanovsky. Understandably none ever got released. A totally cringe worthy concept from the start."
 ---
 When I came off the road with the Knoblick Upper 10,000, I settled down in Greenwich Village in 1964 to write songs, look for artists, and make records
