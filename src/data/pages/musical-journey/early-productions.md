@@ -206,5 +206,39 @@ sections:
             track: >-
               https://res.cloudinary.com/all-about-erik/video/upload/v1576018290/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/A_Surfin_Crew_-_Tweedlede_Dums_Drive-In_lmnn4a.mp3
         writer: Erik Jacobsen & HenryDiltz
+  - imageLightboxes:
+      - buttonText: Original Vinyl
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576103147/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/thestrangersvinyl_xxipbo.jpg
+    productions:
+      - artist: The Strangers
+        backgroundImg: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/strangers_grouppic_background_up74tg.png
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018288/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/strangers_grouppic_dmtoac.jpg
+        tracks:
+          - title: Twelve Day Lover
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018295/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_1._Twelve_day_lover_pwjvrb.mp3
+          - title: Just Friends
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018297/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_2._Just_friends_zevp67.mp3
+          - title: Don't Lead Me
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018302/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_3._Dont_lead_me_ozshkt.mp3
+          - title: Tell Her For Me
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018295/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_4._Tell_her_for_me_wtqmpi.mp3
+          - title: Land of Music
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018297/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_5._Land_of_music_jknjcs.mp3
+          - title: I Need Your Love Inside Me
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018300/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_6._I_need_your_love_inside_me_pjmyyg.mp3
+    textBoxes:
+      - heading: The Strangers
+        text: >-
+          Talented group of guys from New York City with a sweet and singular
+          take on Motown and R&B classics as well as some great original songs.
 ---
 When I came off the road with the Knoblick Upper 10,000, I settled down in Greenwich Village in 1964 to write songs, look for artists, and make records
