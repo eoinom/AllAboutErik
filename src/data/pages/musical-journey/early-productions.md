@@ -191,5 +191,20 @@ sections:
           Erik goes surfin! Arrangement help from Felix Pappalardi, with John
           Sebastian and Jerry Yester singing lead. Henry Diltz and others in the
           backup vocal group.
+  - imageLightboxes:
+      - buttonText: Original Lyrics
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576102709/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/tweedle-lyrics_zqldri.jpg
+    productions:
+      - artist: A Surfin' Crew
+        backgroundImg: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018288/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/drive-thru_background_kzg6ca.jpg
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/drive-thru_ecrrox.jpg
+        tracks:
+          - title: Tweedlede Dum's Drive-In
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018290/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/A_Surfin_Crew_-_Tweedlede_Dums_Drive-In_lmnn4a.mp3
+        writer: Erik Jacobsen & HenryDiltz
 ---
 When I came off the road with the Knoblick Upper 10,000, I settled down in Greenwich Village in 1964 to write songs, look for artists, and make records
