@@ -240,5 +240,166 @@ sections:
         text: >-
           Talented group of guys from New York City with a sweet and singular
           take on Motown and R&B classics as well as some great original songs.
+  - imageLightboxes:
+      - buttonText: Original Lyrics
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576104090/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/ill_tell_you_lyrics_njlq8w.jpg
+      - buttonText: Original Lyrics
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576104090/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/let_it_show_lyrics_bbpr4n.jpg
+    productions:
+      - artist: The Sellouts
+        backgroundImg: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018297/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/img021-eyesopen_background_bmjlgh.png
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018298/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/img021-eyesopen_azs3uh.jpg
+        tracks:
+          - title: I'll Tell You
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/The_Sellouts_-_1._I_ll_tell_you_ignxi5.mp3
+          - title: Bleecker & Macdougal (Written by Fred Neil)
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018304/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/The_Sellouts_-_2._I_want_to_go_home_q6yk3t.mp3
+          - title: Let It Show
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018307/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/The_Sellouts_-_3._Let_it_show_y0vune.mp3
+        writer: Erik Jacobsen
+    textBoxes:
+      - heading: The Sellouts
+        text: >-
+          The group, from Long Island, was the first rock band to show up in The
+          Village, Joe Butler sang lead. I signed them and we cut these 3 sides.
+          Before we could get going, I was distracted trying to get a rhythm
+          section together for the Spoonful. The Sellout’s guitar player, Skip
+          Boone, suggested his younger brother Steve for bass. Shortly
+          thereafter, the Sellouts drummer, Joe Butler took over as the
+          Spoonful’s drummer.
+  - productions:
+      - artist: Ken & Bobby Fischler
+        backgroundImg: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/11%20-%20Ken%20and%20Bobby%20Fischler/e4f19a583d_b_background_ph2z7o.png
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018298/Musical%20Journey/Early%20Productions/Production%20Sections/11%20-%20Ken%20and%20Bobby%20Fischler/e4f19a583d_b_clsq2g.jpg
+        tracks:
+          - title: Down on the River Road
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018310/Musical%20Journey/Early%20Productions/Production%20Sections/11%20-%20Ken%20and%20Bobby%20Fischler/Ken_and_Bobby_Fischler_-_Down_on_the_river_road_yswwkr.mp3
+        writer: Ken Fischler
+    textBoxes:
+      - heading: Ken & Bobby Fischler
+        text: A one shot attempt on a nice song that didn’t make.
+  - productions:
+      - artist: Ray Roe
+        backgroundImg: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/cowboy-playing-guitar_background_baeo3j.png
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/cowboy-playing-guitar_fzhdoi.jpg
+        tracks:
+          - title: Dyin' a Dime at a Time
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018317/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/Ray_Roe_-_Dyin_a_dime_at_a_time_b0b1hb.mp3
+          - title: Think Success
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018307/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/Ray_Roe_-_Think_success_qgnqlg.mp3
+        writer: Ray Roe
+    textBoxes:
+      - heading: Ray Roe
+        text: I liked the songs but really couldn’t find anybody to play them for.
+  - productions:
+      - artist: Ken Melville
+        backgroundImg: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018304/Musical%20Journey/Early%20Productions/Production%20Sections/13%20-%20Ken%20Melville/acoustic-guitar-photography-reflection_background_ztfutk.png
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018304/Musical%20Journey/Early%20Productions/Production%20Sections/13%20-%20Ken%20Melville/acoustic-guitar-photography-reflection_bp89rs.jpg
+        tracks:
+          - title: Bill
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018313/Musical%20Journey/Early%20Productions/Production%20Sections/13%20-%20Ken%20Melville/Ken_Melville_-_Bill_weg5sc.mp3
+        writer: Ken Melville
+    textBoxes:
+      - heading: Ken Melville
+        text: >-
+          A sad tale of an aspiring musician who tried too hard to escape his
+          frustration and pain.
+  - productions:
+      - artist: Tim Hardin
+        backgroundImg: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018318/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/tim-hardin-img316_background_zwr8z1.png
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018319/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/tim-hardin-img316-cropped_nqc6pu.jpg
+        tracks:
+          - title: See Where You Are and Get Out
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018311/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_1._See_where_you_are_and_get_out_de0xz7.mp3
+          - title: He Could be a Hollywood Star
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018318/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_2._He_could_be_a_star_in_hollywood_zxxyik.mp3
+          - title: Child of Sunshine
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018318/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_3._Child_of_sunshine_ejsxlj.mp3
+          - title: It's Hard to Believe in Love for Long
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018320/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_4._Its_hard_to_believe_in_love_for_long_cugymd.mp3
+          - title: Love Without Pain
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018323/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_5._Love_without_pain_fwreg5.mp3
+          - title: Look at me Running
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018322/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_6._Look_at_me_running_dwxcse.mp3
+        writer: Tim Hardin
+    textBoxes:
+      - heading: Tim Hardin
+        text: >-
+          I made this demo with Timmy, in Gold Star Studios in 1966, I think.
+          The drummer sounded like the guy we worked up "If I Were a Carpenter"
+          with.  It's raggedy and loose-for interest value only.
+  - productions:
+      - artist: Plumb Creek Boys
+        backgroundImg: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/ep4_background_nhospf.png
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/ep4_yhbn4t.jpg
+        tracks:
+          - title: Track One
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018323/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/1-audio-track_uzfiyq.mp3
+          - title: Track Two
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018325/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/2-audio-track_opzrt8.mp3
+          - title: Track Three
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018326/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/3-audio-track_c1x2fq.mp3
+          - title: Track Four
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018329/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/4-audio-track_ghsx1m.mp3
+          - title: Track Five
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018326/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/5-audio-track_d9ny9x.mp3
+          - title: Track Six
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018327/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/6-audio-track_fx5rhf.mp3
+          - title: Track Seven
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018328/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/7-audio-track_pmtazo.mp3
+          - title: Track Eight
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018329/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/8-audio-track_paypgg.mp3
+          - title: Track Nine
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018328/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/9-audio-track_k60lv5.mp3
+          - title: Track Ten
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018323/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/10-audio-track_asg1ay.mp3
+          - title: Track Eleven
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018323/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/11-audio-track_lee7gs.mp3
+    textBoxes:
+      - heading: Plum Creek Boys - at Oberlin College
+        text: >-
+          Someone sent me this tape of my Bluegrass group at college recorded a
+          year or two before I went professional. I don’t know who all was
+          playing or singing. We never knew who would show up to play at any
+          given performance. Sloppy as could be, but we were going for it! You
+          gotta start somewhere.
 ---
 When I came off the road with the Knoblick Upper 10,000, I settled down in Greenwich Village in 1964 to write songs, look for artists, and make records
