@@ -9,11 +9,11 @@ mainImg: >-
 sections:
   - imageLightboxes:
       - buttonText: Original Lyrics
-        caption: Original Lyrics
+        caption: ''
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576020062/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/Original_Lyrics_-_bobowritten-clean_vblkwi.jpg
       - buttonText: Rejection Letter
-        caption: Rejection Letter
+        caption: ''
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576020062/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/Bobo_rejection_letter_ezsqjm.jpg
     productions:
@@ -35,7 +35,7 @@ sections:
           but look at the letter of rejection he sent me.
   - imageLightboxes:
       - buttonText: Original Vinyl
-        caption: Original Vinyl
+        caption: ''
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576021095/Musical%20Journey/Early%20Productions/Production%20Sections/02%20-%20Sound%20of%20Summer%20Showers/summershowers_vinyl_pyfkou.jpg
     productions:
@@ -57,7 +57,7 @@ sections:
           backup.
   - imageLightboxes:
       - buttonText: Original Vinyl
-        caption: Original Vinyl
+        caption: ''
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576021528/Musical%20Journey/Early%20Productions/Production%20Sections/03%20-%20A%20Little%20Lovin%27/dwain-little_lovin-vinyl-lg_cnow1m.jpg
     productions:
@@ -79,11 +79,11 @@ sections:
           this one.
   - imageLightboxes:
       - buttonText: Tony Studd Contract
-        caption: Tony Studd Contract
+        caption: ''
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576022132/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/tony_studd_contract_uv14dw.jpg
       - buttonText: Slurp Sound
-        caption: Slurp Sound
+        caption: ''
         image: >-
           https://res.cloudinary.com/all-about-erik/video/upload/v1576022134/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/slurp-sound_a8jyww.mp3
     productions:
@@ -116,5 +116,80 @@ sections:
     textBoxes:
       - heading: The Slurp
         text: "After I resigned from the banjo business I stayed in Greenwich village, trying to write songs and make some recordings, including the pathetically naive concept of starting my own dance craze, which I called The Slurp.\r\n\nI recorded several different songs and artists, including my old partner Dwain Story, as well as Dee & Z, Denny Doherty and Zal Yanovsky. Understandably none ever got released. A totally cringe worthy concept from the start."
+  - imageLightboxes:
+      - buttonText: Recording Receipt
+        caption: ''
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576101583/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/warm_baby_recording_receipt_y827ja.jpg
+      - buttonText: Original Vinyl
+        caption: ''
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576101583/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/warm_baby_vinyl_bil9bj.jpg
+    productions:
+      - artist: John Sebastian
+        backgroundImg: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018282/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/rooty_toot_record_-_img_2323-sm_background_atba9y.png
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018281/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/movietrivia_3540_en7guo.jpg
+        tracks:
+          - title: Rooty Toot
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018282/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/John_Sebastian_-_Rooty_Toot_yikxfq.mp3
+          - title: Warm Baby
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018286/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/John_Sebastian_-_Warm_Baby_rsfft9.mp3
+        writer: John Sebastian
+    textBoxes:
+      - heading: Rooty Toot
+        text: >-
+          The first of John’s songs we recorded together was called Rooty Toot,
+          a song he had written as a teenager with his cousin. The two of us
+          went into the studio. John played guitar, harp, and sang lead vocal.
+          We had some vocal backup singers and we put on chimes and clapped.
+      - heading: Warm Baby
+        text: >-
+          This was the demo version we recorded of John’s first composition,
+          written shortly before we got the spoonful going.
+  - productions:
+      - artist: 'Cass Elliot, Denny Doherty, Jerry Yester, Zal Yanovsky'
+        backgroundImg: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018281/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/cass_copyfill_background_ophctd.png
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018282/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/cass_zxohow.jpg
+        tracks:
+          - title: Oh Suzanna
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018284/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/Oh_suzanna_hczxfw.mp3
+          - title: Tom Dooley
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/Tom_dooley_siffrk.mp3
+          - title: Fun Fun - Zal & Cass
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018289/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/Zal_Cass_-_Fun_fun_pdc9uv.mp3
+          - title: Hold Still - Zal & Cass
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018286/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/Zal_Cass_-_Hold_still_ypi8dz.mp3
+    textBoxes:
+      - heading: 'Cass, Denny Doherty, Jerry Yester, Zal'
+        text: >-
+          I recorded several tunes with this cast of characters, Cass, Denny
+          Doherty, Jerry Yester, Zal and possibly others.
+  - productions:
+      - artist: 'John Sebastian, Jerry Yester'
+        backgroundImg: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/godivacar_background_uugujn.png
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1576018284/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/godivacar_pheu65.jpg
+        tracks:
+          - title: Lady Godiva
+            track: >-
+              https://res.cloudinary.com/all-about-erik/video/upload/v1576018297/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/Lady_Godiva_ainpla.mp3
+        writer: Erik Jacobsen
+    textBoxes:
+      - heading: Lady Godiva
+        text: >-
+          Erik goes surfin! Arrangement help from Felix Pappalardi, with John
+          Sebastian and Jerry Yester singing lead. Henry Diltz and others in the
+          backup vocal group.
 ---
 When I came off the road with the Knoblick Upper 10,000, I settled down in Greenwich Village in 1964 to write songs, look for artists, and make records
