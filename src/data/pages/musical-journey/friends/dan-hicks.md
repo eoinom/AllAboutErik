@@ -107,10 +107,10 @@ mediaItems:
               https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img900_h3hcfh.jpg
             orderNo: 12
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img453-68_kp7fug.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img452-67_ihhmn7.jpg
             orderNo: 13
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img452-67_ihhmn7.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/v1573319324/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img453-68_kp7fug.jpg
             orderNo: 14
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1573319323/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/3_Postcards%20and%20Letters/img412_vnhm6l.jpg
@@ -151,7 +151,6 @@ mediaItems:
       https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_3_scans10-14_-60_pih2x1.jpg
   - galleries:
       - images:
-          - img:
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905372/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img292-266_f1jcry.jpg
             orderNo: 1
@@ -171,14 +170,11 @@ mediaItems:
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img411_midx4p.jpg
             orderNo: 6
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572905369/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img411-lg_wkaivf.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img363-3-2_rbt8h0.jpg
             orderNo: 7
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img363-3-2_rbt8h0.jpg
-            orderNo: 8
-          - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905370/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/4_Gig%20Announcements/img361-2-2_vtukrm.jpg
-            orderNo: 9
+            orderNo: 8
         orderNo: 1
         type: imageGallery
     label: Gig Announcements
@@ -186,12 +182,7 @@ mediaItems:
     orderNo: 4
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572905372/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_4_scans10-14_-44-1_ay5zdk.jpg
-  - label: Live Videos at the Sweetwater
-    orderNo: 5
-    mediaType: videos
-    thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_5_dan_video_icon_fcvufw.jpg
-    galleries:
+  - galleries:
       - orderNo: 1
         type: videoGallery
         videos:
@@ -203,19 +194,20 @@ mediaItems:
             url: 'https://player.vimeo.com/video/375508593'
           - caption: Videos at the Sweetwater - Part 3
             orderNo: 3
-            url: 'https://player.vimeo.com/video/375508769'
+            url: 'https://player.vimeo.com/video/375508800'
           - caption: Videos at the Sweetwater - Part 4
             orderNo: 4
-            url: 'https://player.vimeo.com/video/375508800'
-  - label: Dan's Leonard Schaeffer Promo
-    orderNo: 6
-    mediaType: audio
+            url: 'https://player.vimeo.com/video/375508769'
+          - caption: Charlatans at Red Dog 50 Year Anniversary
+            orderNo: 5
+            url: 'https://player.vimeo.com/video/375509027'
+    label: Live Videos at the Sweetwater
+    mediaType: videos
+    orderNo: 5
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572905372/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_6_hicks-icon_sn1mlz.jpg
-    galleries:
-      - orderNo: 1
-        type: audioGallery
-        audio:
+      https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_5_dan_video_icon_fcvufw.jpg
+  - galleries:
+      - audio:
           - caption: Leonard Schaeffer Warners Ad 2
             orderNo: 1
             url: >-
@@ -224,7 +216,13 @@ mediaItems:
             orderNo: 2
             url: >-
               https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716273923%3Fsecret_token%3Ds-LHami&&visual=true
-
+        orderNo: 1
+        type: audioGallery
+    label: Dan's Leonard Schaeffer Promo
+    mediaType: audio
+    orderNo: 6
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1572905372/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_6_hicks-icon_sn1mlz.jpg
 ---
 I first met Dan when I got involved with the Charlatans back in 1965. As a vocalist, he sang kind of flat in those days but was writing some great songs. His singing kept improving, and when the Charlatans split up, Dan started up with his own group, Dan Hicks and the Hot Licks. We were friends, and I was a fan and enjoyed watching the group perform. From the initial incarnation of the group, they were great! I saw them play in LA at the Troubadour, where they did a wonderful show. The audience loved them. It was hard to see how they could help but make it big right then!
 
