@@ -22,15 +22,15 @@ mediaItems:
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905464/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/1_Photos/HenryAndMe2-sm_asjkeq.jpg
             orderNo: 4
-          - caption: 'Henry, Mike and Me, Sausalito'
+          - caption: With Mike in Sausalito
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905460/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/1_Photos/HenryAndMe4-sm-cropped_b4xnab.jpg
             orderNo: 5
-          - caption: The "Mature" MFQ and Me
+          - caption: The "Mature" MFQ
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905464/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/1_Photos/ErikWithTheMatureMFQ-sm_c700c5.jpg
             orderNo: 6
-          - caption: Henry and Me
+          - caption: ''
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905459/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/1_Photos/HenryAndMe5-sm_ltf6oa.jpg
             orderNo: 7
