@@ -6,26 +6,22 @@ backgroundOpacity: 83
 mediaItems:
   - galleries:
       - images:
-          - caption: 'John Sebastian, Me and Zal Yanovsky'
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906383/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/2-JohnSebastianErikJacobsenZalYanovsky-Feb1974_4x6_300dpi_ameqds.jpg
-            orderNo: 1
-          - caption: Friends
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/Friends_16_t3trjf.jpg
-            orderNo: 2
-          - caption: John and I at my Place
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906383/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/img546-290_rksmxh.jpg
-            orderNo: 3
           - caption: John and Me in the Studio
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572906382/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/john-ej-studio_tuygvm.jpg
-            orderNo: 4
-          - caption: John Sebastian
+            orderNo: 1
+          - caption: 'John Sebastian, Me and Zal Yanovsky'
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906382/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/john-sebastian_jhdesh.jpg
-            orderNo: 5
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572906383/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/2-JohnSebastianErikJacobsenZalYanovsky-Feb1974_4x6_300dpi_ameqds.jpg
+            orderNo: 2
+          - caption: Friends
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/Friends_16_t3trjf.jpg
+            orderNo: 3
+          - caption: John and Me at my Place
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572906383/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/img546-290_rksmxh.jpg
+            orderNo: 4
         orderNo: 1
         type: imageGallery
     label: Photos
@@ -68,9 +64,6 @@ mediaItems:
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572906386/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/3_John%20Memorabilia/GetOutOfMilitaryServiceFreeTicket/img420_kuwvad.jpg
             orderNo: 1
-          - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906386/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/3_John%20Memorabilia/GetOutOfMilitaryServiceFreeTicket/img421_uvezsr.jpg
-            orderNo: 2
         orderNo: 1
         type: imageGallery
     label: Memorabilia
