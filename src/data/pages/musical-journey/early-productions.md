@@ -5,7 +5,7 @@ headerBgImg: >-
 titleImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1575928542/Musical%20Journey/Early%20Productions/early_productions-white_e6xoiq.png
 mainImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1575928543/Musical%20Journey/Early%20Productions/img312-2_swa7gl.png
+  https://res.cloudinary.com/all-about-erik/image/upload/v1576111097/Musical%20Journey/Early%20Productions/img312-2_-_Cropped_ji3ife.png
 sections:
   - imageLightboxes:
       - buttonText: Original Lyrics
