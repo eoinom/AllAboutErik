@@ -334,10 +334,6 @@ mediaItems:
             orderNo: 2
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/_img649_jilcrd.jpg
-            orderNo: 3
-          - caption: ' '
-            img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/MTV_Award_nzexgo.jpg
             orderNo: 4
           - caption: ' '
@@ -348,6 +344,10 @@ mediaItems:
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572904572/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/_img648_ehxrsu.jpg
             orderNo: 6
+          - caption: ' '
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/_img649_jilcrd.jpg
+            orderNo: 3
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572904572/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1721_wu1pbv.jpg
