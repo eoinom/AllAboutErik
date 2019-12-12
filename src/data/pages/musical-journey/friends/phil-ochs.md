@@ -58,7 +58,7 @@ mediaItems:
             orderNo: 5
         orderNo: 1
         type: imageGallery
-    label: Memorabilia
+    label: John Train's Big Plan
     mediaType: images
     orderNo: 2
     thumbnailImg: >-
