@@ -208,11 +208,11 @@ mediaItems:
       https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_5_dan_video_icon_fcvufw.jpg
   - galleries:
       - audio:
-          - caption: Leonard Schaeffer Warners Ad 2
+          - caption: Ad 1
             orderNo: 1
             url: >-
               https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716272918%3Fsecret_token%3Ds-gwZjm&&visual=true
-          - caption: Leonard Schaeffer Warners Ad 5
+          - caption: Ad 2
             orderNo: 2
             url: >-
               https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716273923%3Fsecret_token%3Ds-LHami&&visual=true
