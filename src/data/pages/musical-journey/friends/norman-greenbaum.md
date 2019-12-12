@@ -168,15 +168,15 @@ mediaItems:
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907511/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/5_Awards%20Press%20Usage/PlatiumRecordForGuardiansOfGalaxy_dzkheh.jpg
             orderNo: 2
-          - caption: Press
+          - caption: ''
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907512/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/5_Awards%20Press%20Usage/Press_wg20fe.jpg
             orderNo: 3
-          - caption: Press
+          - caption: ''
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907512/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/5_Awards%20Press%20Usage/Press2_yiujbu.jpg
             orderNo: 4
-          - caption: Press
+          - caption: ''
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907512/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/5_Awards%20Press%20Usage/Press3_kwnco8.jpg
             orderNo: 5
