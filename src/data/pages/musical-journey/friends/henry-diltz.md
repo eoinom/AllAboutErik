@@ -47,35 +47,35 @@ mediaItems:
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905462/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/2_Postcards%20from%20Henry/img099-2m_aptnv4.jpg
             orderNo: 1
-          - caption: Postcard from Henry
+          - caption: ''
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905462/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/2_Postcards%20from%20Henry/img099-31sm_x34d6n.jpg
             orderNo: 2
-          - caption: Postcard from Henry
+          - caption: ''
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905461/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/2_Postcards%20from%20Henry/img099-4sm_f8gear.jpg
             orderNo: 3
-          - caption: Postcard from Henry
+          - caption: ''
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905461/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/2_Postcards%20from%20Henry/img099sm_xvykio.jpg
             orderNo: 4
-          - caption: Postcard from Henry
+          - caption: ''
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905463/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/2_Postcards%20from%20Henry/img299-271-sm-use_knsnth.jpg
             orderNo: 5
-          - caption: Postcard from Henry
+          - caption: ''
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905461/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/2_Postcards%20from%20Henry/img488-122sm_nyhbjb.jpg
             orderNo: 6
-          - caption: Postcard from Henry
+          - caption: ''
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905470/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/2_Postcards%20from%20Henry/img488-123sm_us4ftw.jpg
             orderNo: 7
-          - caption: Postcard from Henry
+          - caption: ''
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905461/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/2_Postcards%20from%20Henry/img488-124sm_fzg8zp.jpg
             orderNo: 8
-          - caption: Postcard from Henry
+          - caption: ''
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905463/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/2_Postcards%20from%20Henry/img489-125_sem7nb.jpg
             orderNo: 9
@@ -91,16 +91,16 @@ mediaItems:
         orderNo: 1
         type: videoGallery
         videos:
-          - caption: Fishing Film
+          - caption: Fishing Film from Sausalito '71
             orderNo: 1
             url: 'https://player.vimeo.com/video/322611459'
-          - caption: House Boat Building
+          - caption: House Boat Building Sausalito '71
             orderNo: 2
             url: 'https://player.vimeo.com/video/322611849'
-          - caption: Mud Wedding
+          - caption: Mud Wedding Sausalito '71
             orderNo: 3
             url: 'https://player.vimeo.com/video/322612046'
-          - caption: Water Movement
+          - caption: ''
             orderNo: 4
             url: 'https://player.vimeo.com/video/322612231'
     label: Home Movies Shot by Henry
