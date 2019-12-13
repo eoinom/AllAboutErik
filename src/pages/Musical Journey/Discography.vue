@@ -339,14 +339,14 @@ export default {
 
     this.windowWidth = window.innerWidth
     this.windowHeight = window.innerHeight
-    this.getDocumentHeight();
+    this.getDocumentHeight()
 
     this.$nextTick(() => {
       window.addEventListener('resize', () => {
       // console.log('in resize EventListener');      
         this.windowWidth = window.innerWidth
         this.windowHeight = window.innerHeight
-        this.getDocumentHeight();
+        this.getDocumentHeight()
 
         let bodyRect = document.body.getBoundingClientRect()
         let element = document.getElementById('topOfMainBody')

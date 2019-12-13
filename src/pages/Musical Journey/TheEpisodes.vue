@@ -6,9 +6,9 @@
 
     <b-container fluid id="mainContainer" class="pb-5 pb-xl-3 px-1">
 
-      <b-row no-gutters style="" class="mt-2">
-        <b-col class="">
-          <g-image :src="mainImg" id="mainImg" class="" />
+      <b-row no-gutters class="mt-2">
+        <b-col>
+          <g-image :src="mainImg" id="mainImg" />
           <span v-html="mainText" id="mainImgText" />
         </b-col>
       </b-row>
