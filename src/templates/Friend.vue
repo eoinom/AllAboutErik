@@ -32,7 +32,7 @@
         </b-col>
       </b-row>
 
-      <b-row align-h="center" class="text-center">
+      <b-row v-if="documentHeight - windowHeight < 800" align-h="center" class="text-center">
         <b-col>
           <div :style="navLinksVisibility" class="navLinksContainer">
             <g-link to="/musical-journey/musical-friends/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
@@ -40,7 +40,17 @@
         </b-col>
       </b-row>
 
+      <div v-else>
+        <br><br><br>
+        <BackToMenu
+          text="BACK TO MUSICAL FRIENDS MENU"
+          link="/musical-journey/musical-friends/"
+          :showAtPosY="Number(800)"
+        />        
+      </div>
+
     </b-container>
+
 
     <ImageLightBox
       :images="images"
@@ -120,6 +130,7 @@ query ($id: ID!) {
 
 
 <script scoped>
+import BackToMenu from '../components/BackToMenu.vue'
 import ImageLightBox from '../components/ImageLightBox.vue'
 import VideoLightBox from '../components/VideoLightBox.vue'
 import AudioLightBox from '../components/AudioLightBox.vue'
@@ -139,7 +150,9 @@ export default {
       galleryIndex: null,
       imageIndex: null,
       videoIndex: null,
-      audioIndex: null
+      audioIndex: null,
+      windowHeight: 0,      
+      documentHeight: 0,
     }
   },
 
@@ -233,13 +246,32 @@ export default {
       if (mediaType == 'audio') {
         this.audioIndex = 0
       }
+    },
+    getDocumentHeight() {
+      // ref: https://stackoverflow.com/a/1147768
+      const body = document.body
+      const html = document.documentElement  
+      this.documentHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight )
     }
   },
 
-  mounted() {
+  mounted() {    
+    this.windowHeight = window.innerHeight
+    this.getDocumentHeight()
+
+    this.$nextTick(() => {
+
+      window.addEventListener('scroll', this.getDocumentHeight);
+      
+      window.addEventListener('resize', () => {
+        this.windowHeight = window.innerHeight 
+        this.getDocumentHeight()
+      });
+    })
   },
 
   components: {
+    BackToMenu,
     ImageLightBox,
     VideoLightBox,
     AudioLightBox
