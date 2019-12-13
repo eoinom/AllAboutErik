@@ -6,10 +6,6 @@ backgroundOpacity: 100
 mediaItems:
   - galleries:
       - images:
-          - caption: Brian and Erik
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901742/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/Brian_Erik_ufsjsq.jpg
-            orderNo: 1
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901742/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/1Brian_movvwd.jpg
@@ -50,6 +46,14 @@ mediaItems:
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/10Brian_fq67ew.jpg
             orderNo: 11
+          - caption: Brian and Erik
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572901742/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/Brian_Erik_ufsjsq.jpg
+            orderNo: 11
+          - caption: In Cabo San Lucas
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572901750/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/4_Memorabilia/InCaboSanLucas_zfl2dh.jpg
+            orderNo: 12
         label: Brian
         orderNo: 1
         type: imageGallery
@@ -119,19 +123,6 @@ mediaItems:
     orderNo: 3
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572904891/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Thumbnail_3_FullMentalNudity-thumb_aew3ri.jpg
-  - galleries:
-      - images:
-          - caption: In Cabo San Lucas
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901750/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/4_Memorabilia/InCaboSanLucas_zfl2dh.jpg
-            orderNo: 1
-        orderNo: 1
-        type: imageGallery
-    label: Memorabilia
-    mediaType: images
-    orderNo: 1
-    thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572904891/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Thumbnail_4_InCaboSanLucas_nw59db.jpg
 ---
 A guy walked into my office on Kearny Street, claiming to be a songwriter. He had met Peter Kraemer of the Sopwith Camel, who had sent him over to see me. I agreed to listen to a few of his songs, and after I did he asked me what I thought. I said “good parts, maybe the melody doesn’t open quite right in this chorus, maybe the idea behind these lyrics can take the narrative a little further, and how about a bridge for this one”? He listened but seemed somewhat skeptical and left saying he would think about my comments. Surprisingly, he called the very next day and said he’d done rewrites on the songs and would I listen again? I never had that happen before or since. I listened and was impressed by the changes he’d made. He played a few more songs and we began almost daily conversations about his work. Some of the songs were very funny.
 
