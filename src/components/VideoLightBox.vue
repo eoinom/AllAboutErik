@@ -157,7 +157,8 @@ export default {
         flag: false,
       },
       windowWidth: 0,
-      windowHeight: 0
+      windowHeight: 0,
+      videoAspectRatio: 1502.22 / 845.0
     };
   },
   computed: {
@@ -177,15 +178,15 @@ export default {
       let containerWidth = 0.8 * this.windowWidth
       let containerHeight = 0.8 * this.windowHeight      
       const containerAspectRatio = containerWidth / containerHeight
-      const videoAspectRatio = 1502.22 / 845.0
-      const heightGoverns = containerAspectRatio >= videoAspectRatio
+      // const videoAspectRatio = 1502.22 / 845.0
+      const heightGoverns = containerAspectRatio >= this.videoAspectRatio
       if (heightGoverns) {
         var actualVidHeight = containerHeight
-        var actualVidWidth = actualVidHeight * videoAspectRatio
+        var actualVidWidth = actualVidHeight * this.videoAspectRatio
       }
       else {
         var actualVidWidth = containerWidth
-        var actualVidHeight = actualVidWidth / videoAspectRatio
+        var actualVidHeight = actualVidWidth / this.videoAspectRatio
       }
       css.padding = 0
       css.bottom = ((containerHeight - actualVidHeight) / 2 - 40) + 'px';
@@ -262,7 +263,8 @@ export default {
       const { target } = $event;
       target.classList.add('loaded');
       if (videoIndex === this.currentIndex) {
-        this.setVideoLoaded(videoIndex);
+        this.setVideoLoaded(videoIndex)
+        this.storeVideoAspectRatio()
       }
     },
     getVideoElByIndex(index) {
@@ -273,6 +275,14 @@ export default {
       console.log('in setVideoLoaded, index = ' + index);
       const el = this.getVideoElByIndex(index);
       this.isVideoLoaded = !el ? false : el.classList.contains('loaded');
+    },
+    storeVideoAspectRatio() {
+      if (this.isVideoLoaded === true) {
+        let iframe = document.getElementById('video_' + this.currentIndex)
+        let innerDoc = iframe.contentDocument || iframe.contentWindow.document
+        let vid = innerDoc.getElementsByTagName("video")[0].Element.getBoundingClientRect() 
+        this.videoAspectRatio = vid.width / vid.height
+      }
     },
     shouldPreload(index) {
       const el = this.getVideoElByIndex(index) || {};
