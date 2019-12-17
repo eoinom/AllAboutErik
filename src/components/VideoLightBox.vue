@@ -144,6 +144,7 @@ export default {
       default: 'rgba(255, 255, 255, 0.8)',
     },
   },
+
   data() {
     return {
       currentIndex: this.index,
@@ -161,6 +162,7 @@ export default {
       videoAspectRatio: 1502.22 / 845.0
     };
   },
+
   computed: {
     formattedVideos() {
       return this.videos.map(video => (typeof video === 'string'
@@ -178,7 +180,6 @@ export default {
       let containerWidth = 0.8 * this.windowWidth
       let containerHeight = 0.8 * this.windowHeight      
       const containerAspectRatio = containerWidth / containerHeight
-      // const videoAspectRatio = 1502.22 / 845.0
       const heightGoverns = containerAspectRatio >= this.videoAspectRatio
       if (heightGoverns) {
         var actualVidHeight = containerHeight
@@ -195,6 +196,7 @@ export default {
       return css
     }
   },
+
   watch: {
     index(val) {
       if (!document) return;
@@ -209,6 +211,7 @@ export default {
       this.setVideoLoaded(val);
     },
   },
+
   mounted() {
     this.windowWidth = window.innerWidth
     this.windowHeight = window.innerHeight
@@ -218,12 +221,13 @@ export default {
         this.windowWidth = window.innerWidth
         this.windowHeight = window.innerHeight 
       });
-    })
+    })    
 
     if (!document) return;
     this.bodyOverflowStyle = document.body.style.overflow;
-    this.bindEvents();
+    this.bindEvents();    
   },
+
   beforeDestroy() {
     if (!document) return;
     if (this.disableScroll) {
@@ -231,6 +235,7 @@ export default {
     }
     this.unbindEvents();
   },
+
   methods: {
     close() {
       this.$emit('close');
@@ -278,10 +283,9 @@ export default {
     },
     storeVideoAspectRatio() {
       if (this.isVideoLoaded === true) {
-        let iframe = document.getElementById('video_' + this.currentIndex)
-        let innerDoc = iframe.contentDocument || iframe.contentWindow.document
-        let vid = innerDoc.getElementsByTagName("video")[0].Element.getBoundingClientRect() 
-        this.videoAspectRatio = vid.width / vid.height
+        let video = this.videos[this.currentIndex]
+        if (video.hasOwnProperty('width') && video.hasOwnProperty('height'))
+          this.videoAspectRatio = video.width / video.height
       }
     },
     shouldPreload(index) {

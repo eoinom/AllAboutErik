@@ -171,8 +171,24 @@ export default {
                 this.mediaItems[this.mediaItemIndex].galleries[this.galleryIndex].images : []
     },
     videos() {
-      return this.mediaItemIndex != null && this.galleryIndex != null ?
+      let videos = this.mediaItemIndex != null && this.galleryIndex != null ?
                 this.mediaItems[this.mediaItemIndex].galleries[this.galleryIndex].videos : []
+      
+      // Get video dimensions so video component can position the captions correctly
+      if (videos != []) {
+        videos.forEach(video => {
+          const vimeoVidId = video.url.substring(video.url.lastIndexOf('/') + 1)
+          const fetchPromise = fetch("https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/" + vimeoVidId);
+          fetchPromise.then(response => {
+            return response.json();
+          }).then(details => {
+            video.width = details.width
+            video.height = details.height
+          });      
+        });
+      }
+      
+      return videos
     },
     audio() {
       return this.mediaItemIndex != null && this.galleryIndex != null ?
