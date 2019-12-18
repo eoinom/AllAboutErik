@@ -9,43 +9,43 @@ mediaItems:
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901742/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/1Brian_movvwd.jpg
-            orderNo: 2
+            orderNo: 1
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901743/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/2Brain_tfuzs3.jpg
-            orderNo: 3
+            orderNo: 2
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901744/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/3Brian_eimcow.jpg
-            orderNo: 4
+            orderNo: 3
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901743/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/4Brian_lfiae9.jpg
-            orderNo: 5
+            orderNo: 4
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901743/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/5Brian_c7pdsd.jpg
-            orderNo: 6
+            orderNo: 5
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901742/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/6Brain_yyevle.jpg
-            orderNo: 7
+            orderNo: 6
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901741/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/7Brian_nbyvxg.jpg
-            orderNo: 8
+            orderNo: 7
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901744/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/8Brian_a99ubd.jpg
-            orderNo: 9
+            orderNo: 8
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901744/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/9Brian_sf55zy.jpg
-            orderNo: 10
+            orderNo: 9
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/10Brian_fq67ew.jpg
-            orderNo: 11
+            orderNo: 10
           - caption: Brian and Erik
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901742/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/Brian_Erik_ufsjsq.jpg
@@ -54,24 +54,19 @@ mediaItems:
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901750/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/4_Memorabilia/InCaboSanLucas_zfl2dh.jpg
             orderNo: 12
-        label: Brian
-        orderNo: 1
-        type: imageGallery
-      - images:
           - caption: 'Brian, Me, Brooke and Kaianne'
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901748/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/4_Memorabilia/BriansChildren/Brian_Erik_Kaianne_Brooke_w61evx.jpg
-            orderNo: 1
+            orderNo: 13
           - caption: Brooke and Kaianne
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901749/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/4_Memorabilia/BriansChildren/Brooke_Kaianne_wxg7rc.jpg
-            orderNo: 2
+            orderNo: 14
           - caption: Kaianne
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901749/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/4_Memorabilia/BriansChildren/Kaianne_tnknfv.jpg
-            orderNo: 3
-        label: Brian's Children
-        orderNo: 2
+            orderNo: 15
+        orderNo: 1
         type: imageGallery
     label: Photos
     mediaType: images
@@ -80,19 +75,7 @@ mediaItems:
       https://res.cloudinary.com/all-about-erik/image/upload/v1572904890/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Thumbnail_1_3Brian_faqyu6.jpg
   - galleries:
       - images:
-          - caption: Brian's 1st Album
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901746/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/BrianAlbums/Brians_1stalbum_nwwgit.jpg
-            orderNo: 1
-          - caption: Full Mental Nudity
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/BrianAlbums/FullMentalNudity_knw7sd.jpg
-            orderNo: 2
-        label: Brian's Albums
-        orderNo: 1
-        type: imageGallery
-      - images:
-          - caption: Papa Don't Preach
+          - caption: Papa Don't Preach Award
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/PapaDontPreachAwards/PapaDontPreach_ccauta.jpg
             orderNo: 1
@@ -100,8 +83,15 @@ mediaItems:
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/PapaDontPreachAwards/BrianAscap_nu3f16.jpg
             orderNo: 2
-        label: Papa Don't Preach Awards
-        orderNo: 2
+          - caption: Brian's 1st Album
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572901746/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/BrianAlbums/Brians_1stalbum_nwwgit.jpg
+            orderNo: 3
+          - caption: Full Mental Nudity
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/BrianAlbums/FullMentalNudity_knw7sd.jpg
+            orderNo: 4
+        orderNo: 1
         type: imageGallery
     label: Albums and Awards
     mediaType: images
