@@ -156,166 +156,134 @@ mediaItems:
           - caption: 'European Tour, September 24-28 1989, Part 3'
             orderNo: 4
             url: 'https://player.vimeo.com/video/371156742'
-      - label: Oct 02
-        orderNo: 2
-        type: videoGallery
-        videos:
           - caption: 'European Tour, October 02 1989, Part 1'
-            orderNo: 1
+            orderNo: 5
             url: 'https://player.vimeo.com/video/371208364'
           - caption: 'European Tour, October 02 1989, Part 2'
-            orderNo: 2
+            orderNo: 6
             url: 'https://player.vimeo.com/video/371209460'
           - caption: 'European Tour, October 02 1989, Part 3'
-            orderNo: 3
+            orderNo: 7
             url: 'https://player.vimeo.com/video/371210086'
           - caption: 'European Tour, October 02 1989, Part 4'
-            orderNo: 4
+            orderNo: 8
             url: 'https://player.vimeo.com/video/371210729'
           - caption: 'European Tour, October 02 1989, Part 5'
-            orderNo: 5
+            orderNo: 9
             url: 'https://player.vimeo.com/video/371410473'
           - caption: 'European Tour, October 02 1989, Part 6'
-            orderNo: 6
+            orderNo: 10
             url: 'https://player.vimeo.com/video/371411696'
-      - label: Oct 03
-        orderNo: 3
-        type: videoGallery
-        videos:
           - caption: 'European Tour, October 03 1989, Part 1'
-            orderNo: 1
+            orderNo: 11
             url: 'https://player.vimeo.com/video/371438059'
           - caption: 'European Tour, October 03 1989, Part 2'
-            orderNo: 2
+            orderNo: 12
             url: 'https://player.vimeo.com/video/371439277'
           - caption: 'European Tour, October 03 1989, Part 3'
-            orderNo: 3
+            orderNo: 13
             url: 'https://player.vimeo.com/video/371439975'
           - caption: 'European Tour, October 03 1989, Part 4'
-            orderNo: 4
+            orderNo: 14
             url: 'https://player.vimeo.com/video/371441163'
           - caption: 'European Tour, October 03 1989, Part 5'
-            orderNo: 5
+            orderNo: 15
             url: 'https://player.vimeo.com/video/371442429'
-      - label: Oct 04
-        orderNo: 4
-        type: videoGallery
-        videos:
           - caption: 'European Tour, October 04 1989, Part 1'
-            orderNo: 1
+            orderNo: 16
             url: 'https://player.vimeo.com/video/371632288'
           - caption: 'European Tour, October 04 1989, Part 2'
-            orderNo: 2
+            orderNo: 17
             url: 'https://player.vimeo.com/video/371494886'
           - caption: 'European Tour, October 04 1989, Part 3'
-            orderNo: 3
+            orderNo: 18
             url: 'https://player.vimeo.com/video/371495916'
           - caption: 'European Tour, October 04 1989, Part 4'
-            orderNo: 4
+            orderNo: 19
             url: 'https://player.vimeo.com/video/371496563'
           - caption: 'European Tour, October 04 1989, Part 5'
-            orderNo: 5
+            orderNo: 20
             url: 'https://player.vimeo.com/video/371640161'
           - caption: 'European Tour, October 04 1989, Part 6'
-            orderNo: 6
+            orderNo: 21
             url: 'https://player.vimeo.com/video/371498149'
-      - label: Oct 17
-        orderNo: 5
-        type: videoGallery
-        videos:
           - caption: 'European Tour, October 17 1989, Part 1'
-            orderNo: 1
+            orderNo: 22
             url: 'https://player.vimeo.com/video/374371465'
           - caption: 'European Tour, October 17 1989, Part 2'
-            orderNo: 2
+            orderNo: 23
             url: 'https://player.vimeo.com/video/371671856'
           - caption: 'European Tour, October 17 1989, Part 3'
-            orderNo: 3
+            orderNo: 24
             url: 'https://player.vimeo.com/video/371699069'
           - caption: 'European Tour, October 17 1989, Part 4'
-            orderNo: 4
+            orderNo: 25
             url: 'https://player.vimeo.com/video/371699628'
-      - label: Oct 23
-        orderNo: 6
-        type: videoGallery
-        videos:
           - caption: 'European Tour, October 23 1989, Part 1'
-            orderNo: 1
+            orderNo: 26
             url: 'https://player.vimeo.com/video/374376913'
           - caption: 'European Tour, October 23 1989, Part 2'
-            orderNo: 2
+            orderNo: 27
             url: 'https://player.vimeo.com/video/374377890'
           - caption: 'European Tour, October 23 1989, Part 3'
-            orderNo: 3
+            orderNo: 28
             url: 'https://player.vimeo.com/video/374399355'
           - caption: 'European Tour, October 23 1989, Part 4'
-            orderNo: 4
+            orderNo: 29
             url: 'https://player.vimeo.com/video/374398399'
-      - label: Oct 28
-        orderNo: 7
-        type: videoGallery
-        videos:
           - caption: 'European Tour, October 28 1989, Part 1'
-            orderNo: 1
+            orderNo: 30
             url: 'https://player.vimeo.com/video/374407485'
           - caption: 'European Tour, October 28 1989, Part 2'
-            orderNo: 2
+            orderNo: 31
             url: 'https://player.vimeo.com/video/374408776'
           - caption: 'European Tour, October 28 1989, Part 3'
-            orderNo: 3
+            orderNo: 32
             url: 'https://player.vimeo.com/video/374410157'
           - caption: 'European Tour, October 28 1989, Part 4'
-            orderNo: 4
+            orderNo: 33
             url: 'https://player.vimeo.com/video/374659597'
           - caption: 'European Tour, October 28 1989, Part 5'
-            orderNo: 5
+            orderNo: 34
             url: 'https://player.vimeo.com/video/374660735'
           - caption: 'European Tour, October 28 1989, Part 6'
-            orderNo: 6
+            orderNo: 35
             url: 'https://player.vimeo.com/video/374787960'
           - caption: 'European Tour, October 28 1989, Part 7'
-            orderNo: 7
+            orderNo: 36
             url: 'https://player.vimeo.com/video/374660842'
-      - label: Oct 30
-        orderNo: 8
-        type: videoGallery
-        videos:
           - caption: 'European Tour, October 30 1989, Part 1'
-            orderNo: 1
+            orderNo: 37
             url: 'https://player.vimeo.com/video/374437253'
           - caption: 'European Tour, October 30 1989, Part 2'
-            orderNo: 2
+            orderNo: 38
             url: 'https://player.vimeo.com/video/374438132'
           - caption: 'European Tour, October 30 1989, Part 3'
-            orderNo: 3
+            orderNo: 39
             url: 'https://player.vimeo.com/video/374438888'
           - caption: 'European Tour, October 30 1989, Part 4'
-            orderNo: 4
+            orderNo: 40
             url: 'https://player.vimeo.com/video/374439644'
-      - label: Paris
-        orderNo: 9
-        type: videoGallery
-        videos:
           - caption: 'European Tour 1989, Paris, Part 1'
-            orderNo: 1
+            orderNo: 41
             url: 'https://player.vimeo.com/video/374617802'
           - caption: 'European Tour 1989, Paris, Part 2'
-            orderNo: 2
+            orderNo: 42
             url: 'https://player.vimeo.com/video/374618403'
           - caption: 'European Tour 1989, Paris, Part 3'
-            orderNo: 3
+            orderNo: 43
             url: 'https://player.vimeo.com/video/374619110'
           - caption: 'European Tour 1989, Paris, Part 4'
-            orderNo: 4
+            orderNo: 44
             url: 'https://player.vimeo.com/video/374619747'
           - caption: 'European Tour 1989, Paris, Part 5'
-            orderNo: 5
+            orderNo: 45
             url: 'https://player.vimeo.com/video/374623295'
           - caption: 'European Tour 1989, Paris, Part 6'
-            orderNo: 6
+            orderNo: 46
             url: 'https://player.vimeo.com/video/374623794'
           - caption: 'European Tour 1989, Paris, Part 7'
-            orderNo: 7
+            orderNo: 47
             url: 'https://player.vimeo.com/video/374624260'
     label: Videos from European Tour '89
     mediaType: videos
@@ -336,14 +304,6 @@ mediaItems:
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/MTV_Award_nzexgo.jpg
             orderNo: 4
-          - caption: ' '
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904572/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1675_j9b9gd.jpg
-            orderNo: 5
-          - caption: ' '
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904572/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/_img648_ehxrsu.jpg
-            orderNo: 6
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/_img649_jilcrd.jpg
@@ -368,6 +328,14 @@ mediaItems:
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572904568/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1680_plmx9y.jpg
             orderNo: 11
+          - caption: ' '
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572904572/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1675_j9b9gd.jpg
+            orderNo: 5
+          - caption: ' '
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572904572/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/_img648_ehxrsu.jpg
+            orderNo: 6
           - caption: ' '
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572904568/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/erik_chris_award_lvvwes.jpg
