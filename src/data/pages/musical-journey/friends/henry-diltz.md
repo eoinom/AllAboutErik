@@ -34,6 +34,12 @@ mediaItems:
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572905459/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/1_Photos/HenryAndMe5-sm_ltf6oa.jpg
             orderNo: 7
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1576883507/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/1_Photos/henry-with-camera_bmiikj.jpg
+            orderNo: 8
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1576883507/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/1_Photos/henry-with-lovin-spoonful-record_tcq2pr.jpg
+            orderNo: 9
         orderNo: 1
         type: imageGallery
     label: Photos
