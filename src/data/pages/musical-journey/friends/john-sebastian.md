@@ -60,10 +60,22 @@ mediaItems:
       https://res.cloudinary.com/all-about-erik/image/upload/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/Background_Thumbnails/Thumbnail_2_spoon1_rx0skp.jpg
   - galleries:
       - images:
+          - caption: Warm Baby Studio Bill
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/3_John%20Memorabilia/WarmBabyStudioBill_uwmqnh.jpg
+            orderNo: 1
+          - caption: John's Notes in Studio - 1 / 2
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572906386/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/3_John%20Memorabilia/JonnysNotesInStudio_glelf6.jpg
+            orderNo: 2
+          - caption: John's Notes in Studio - 2 / 2
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/3_John%20Memorabilia/JohnnysNotesInStudio2_ladrno.jpg
+            orderNo: 3
           - caption: ''
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572906386/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/3_John%20Memorabilia/GetOutOfMilitaryServiceFreeTicket/img420_kuwvad.jpg
-            orderNo: 1
+            orderNo: 4
         orderNo: 1
         type: imageGallery
     label: Memorabilia
