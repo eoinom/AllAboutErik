@@ -34,15 +34,8 @@ mediaItems:
     orderNo: 1
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572906819/Musical%20Journey/Musical%20Friends/Friends/Nadia/Background_Thumbnails/Thumbnail_1_Nadia3_a810zz.jpg
-  - label: Music
-    mediaType: audio
-    orderNo: 2
-    thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572906818/Musical%20Journey/Musical%20Friends/Friends/Nadia/Background_Thumbnails/Thumbnail_2_Nadia6_xxxiuy.jpg
-    galleries:
-      - orderNo: 1
-        type: audioGallery
-        audio:
+  - galleries:
+      - audio:
           - caption: Track 1
             orderNo: 1
             url: >-
@@ -75,12 +68,23 @@ mediaItems:
             orderNo: 8
             url: >-
               https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716351548%3Fsecret_token%3Ds-ou9cF&visual=true
+        orderNo: 1
+        type: audioGallery
+    label: Music
+    mediaType: audio
+    orderNo: 2
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1572906818/Musical%20Journey/Musical%20Friends/Friends/Nadia/Background_Thumbnails/Thumbnail_2_Nadia6_xxxiuy.jpg
   - galleries:
       - orderNo: 1
         type: videoGallery
         videos:
-          - orderNo: 1
+          - caption: Too Right
+            orderNo: 1
             url: 'https://player.vimeo.com/video/374661155'
+          - caption: One Heart Divided By Two
+            orderNo: 2
+            url: 'https://player.vimeo.com/video/379013065'
     label: Music Videos
     mediaType: videos
     orderNo: 3
