@@ -6,62 +6,57 @@ backgroundOpacity: 100
 mediaItems:
   - galleries:
       - images:
-          - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907506/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/MeAndNormie2_xbbrsh.jpg
+          - caption: Me and Norm
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907506/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/img020-2_kuxbwf.jpg
             orderNo: 1
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907506/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/img020-2_kuxbwf.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907505/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/Norman_duxcma.jpg
             orderNo: 2
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907505/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/Norman_duxcma.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/Norman2_azwina.jpg
             orderNo: 3
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/Norman2_azwina.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/Norman3_cdwmie.jpg
             orderNo: 4
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/Norman3_cdwmie.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907506/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/MeAndNormie2_xbbrsh.jpg
             orderNo: 5
           - caption: Norman's Wedding Picture
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907507/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/NormansWeddingPicture_clm2yt.jpg
             orderNo: 6
-        label: General
-        orderNo: 1
-        type: imageGallery
-      - images:
-          - img: >-
+          - caption: Norman's Farm
+            img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/Normans%20Farm/NormansGarden_w13hbr.jpg
-            orderNo: 1
+            orderNo: 7
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907504/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/Normans%20Farm/NormansFarm_quvoqz.jpg
-            orderNo: 2
+            orderNo: 8
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907504/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/Normans%20Farm/NormansFarm2_gxrgxj.jpg
-            orderNo: 3
+            orderNo: 9
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/Normans%20Farm/NormansFarm3_dt4sax.jpg
-            orderNo: 4
+            orderNo: 10
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907504/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/Normans%20Farm/NormansFarm4_ormne1.jpg
-            orderNo: 5
+            orderNo: 11
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907504/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/Normans%20Farm/NormansFarm5_n22vsd.jpg
-            orderNo: 6
+            orderNo: 12
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907504/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/Normans%20Farm/NormansFarm6_gdcus5.jpg
-            orderNo: 7
-        label: Norman's Farm
-        orderNo: 2
-        type: imageGallery
-      - images:
-          - img: >-
+            orderNo: 13
+          - caption: Norman's Family
+            img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907506/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/NormansFamily/NormansFamily_n4ddhk.jpg
-            orderNo: 1
+            orderNo: 14
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907507/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/1_Photos/NormansFamily/NormanAndFamily2_p54xc9.jpg
-            orderNo: 2
-        label: Norman's Family
-        orderNo: 3
+            orderNo: 15
+        label: ''
+        orderNo: 1
         type: imageGallery
     label: Photos
     mediaType: images
@@ -76,43 +71,29 @@ mediaItems:
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907509/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/1_rdnvun.jpg
             orderNo: 2
-        label: Spirit in the Sky
-        orderNo: 1
-        type: imageGallery
-      - images:
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907510/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/petaluma_dyouc9.jpg
-            orderNo: 1
-          - caption: Petaluma Booklet
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907509/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/PetalumaBooket_xj7s0u.jpg
-            orderNo: 2
-          - caption: Petaluma Booklet
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/PetalumaBooket2_ezmhw2.jpg
             orderNo: 3
-          - caption: Petaluma Booklet
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/PetalumaBooket3_j8vqhn.jpg
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907509/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/PetalumaBooket_xj7s0u.jpg
             orderNo: 4
-          - caption: Petaluma Booklet
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/petalumaBooket4_vl4ne9.jpg
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/PetalumaBooket2_ezmhw2.jpg
             orderNo: 5
-          - caption: Petaluma Booklet
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907511/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/PetalumaBooklet5_heol2b.jpg
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/PetalumaBooket3_j8vqhn.jpg
             orderNo: 6
-        label: Petaluma
-        orderNo: 2
-        type: imageGallery
-      - images:
-          - caption: Back Home Again
-            img: >-
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907508/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/petalumaBooket4_vl4ne9.jpg
+            orderNo: 7
+          - img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907511/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/PetalumaAlbum/PetalumaBooklet5_heol2b.jpg
+            orderNo: 8
+          - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907509/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/2_Albums%20and%20Artwork/3replprs6422_gsos3k.jpg
-            orderNo: 1
-        label: Back Home Again
-        orderNo: 3
+            orderNo: 9
+        label: ''
+        orderNo: 1
         type: imageGallery
     label: Albums & Artwork
     mediaType: images
