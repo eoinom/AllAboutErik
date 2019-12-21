@@ -141,27 +141,23 @@ mediaItems:
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572910018/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/Verve%20article/Hardin-5_phvshr.jpg
             orderNo: 6
-        label: Verve Article
-        orderNo: 1
-        type: imageGallery
-      - images:
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572910017/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img593-pic_w_Guitar-Article_frl3ra.jpg
-            orderNo: 1
+            orderNo: 7
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572910016/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img594_v5y87q.jpg
-            orderNo: 2
+            orderNo: 8
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572910015/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img595_xfsd4l.jpg
-            orderNo: 3
+            orderNo: 9
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572910016/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img600_dfmned.jpg
-            orderNo: 4
+            orderNo: 10
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572910023/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img602_lgsudc.jpg
-            orderNo: 5
-        label: Others
-        orderNo: 2
+            orderNo: 11
+        label: ''
+        orderNo: 1
         type: imageGallery
     label: Press and Editorial
     mediaType: images
