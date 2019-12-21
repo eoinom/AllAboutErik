@@ -374,15 +374,15 @@ export default {
       position: relative;
       margin: 0 auto;
       max-width: 100%;
-      // max-height: 100vh;
       max-height: 100%;
-      // opacity: 0;
     }
     & img {
       & {
         max-width: 100%;
-        // max-height: 100vh;
         max-height: 100%;
+        height: 100%;
+        width: auto;
+        object-fit: contain;
         opacity: 0;
         transition: opacity .2s;
       }
