@@ -24,27 +24,23 @@ mediaItems:
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572908841/Musical%20Journey/Musical%20Friends/Friends/Rita%20Abrams/1_Photos/Rita_dxxosb.jpg
             orderNo: 6
-        label: General
-        orderNo: 1
-        type: imageGallery
-      - images:
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572908839/Musical%20Journey/Musical%20Friends/Friends/Rita%20Abrams/1_Photos/ErikWorkingWithTheKids/2erikclassroom_lnkpvu.jpg
-            orderNo: 1
+            orderNo: 7
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572908842/Musical%20Journey/Musical%20Friends/Friends/Rita%20Abrams/1_Photos/ErikWorkingWithTheKids/Music_5_fpujtd.jpg
-            orderNo: 2
+            orderNo: 8
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572908839/Musical%20Journey/Musical%20Friends/Friends/Rita%20Abrams/1_Photos/ErikWorkingWithTheKids/img040_j0spib.jpg
-            orderNo: 3
+            orderNo: 9
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572908840/Musical%20Journey/Musical%20Friends/Friends/Rita%20Abrams/1_Photos/ErikWorkingWithTheKids/img446_wxtvih.jpg
-            orderNo: 4
+            orderNo: 10
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572908841/Musical%20Journey/Musical%20Friends/Friends/Rita%20Abrams/1_Photos/ErikWorkingWithTheKids/img447_ivuaoq.jpg
-            orderNo: 5
-        label: Erik Working with the Kids
-        orderNo: 2
+            orderNo: 11
+        label: ''
+        orderNo: 1
         type: imageGallery
     label: Photos
     mediaType: images
