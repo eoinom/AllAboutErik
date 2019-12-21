@@ -56,7 +56,7 @@ mediaItems:
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/Thumbnail_2_CallingCard_aymbqe.jpg
   - galleries:
-      - label: Eduardo Songs
+      - label: ''
         orderNo: 1
         type: audioGallery
         audio:
@@ -88,20 +88,16 @@ mediaItems:
             orderNo: 7
             url: >-
               https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377063%3Fsecret_token%3Ds-0IC9k&visual=true
-      - label: Film Soundtrack Music
-        orderNo: 2
-        type: audioGallery
-        audio:
           - caption: 01 Urbanik 1990 Soundtrack Music
-            orderNo: 1
+            orderNo: 8
             url: >-
               https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716841232%3Fsecret_token%3Ds-3F3HA&&visual=true
           - caption: 02 Urbanik 1990 Soundtrack Music
-            orderNo: 2
+            orderNo: 9
             url: >-
               https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716841229%3Fsecret_token%3Ds-kvW2m&&visual=true
           - caption: 03 Urbanik 1990 Soundtrack Music
-            orderNo: 3
+            orderNo: 10
             url: >-
               https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716841226%3Fsecret_token%3Ds-d2iry&visual=true
     label: Music
