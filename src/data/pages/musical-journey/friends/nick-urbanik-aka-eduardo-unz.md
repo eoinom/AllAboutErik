@@ -63,43 +63,43 @@ mediaItems:
           - caption: 01 Lets Have Lunch
             orderNo: 1
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377102%3Fsecret_token%3Ds-kh8hI&&visual=false
-          - caption: 02 Dicky
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726699235%3Fsecret_token%3Ds-Fi3HB&visual=true
+          - caption: 02 Talk Talk
             orderNo: 2
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377096%3Fsecret_token%3Ds-8IcZb&&visual=true
-          - caption: 03 Last Kiss
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726699232%3Fsecret_token%3Ds-2r17W&visual=true
+          - caption: 03 Last Kiss Edited
             orderNo: 3
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377087%3Fsecret_token%3Ds-SWaF5&visual=true
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726699229%3Fsecret_token%3Ds-b87Ji&visual=true
           - caption: 04 Rock Steady
             orderNo: 4
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377081%3Fsecret_token%3Ds-wgxJC&visual=true
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726699226%3Fsecret_token%3Ds-n94pS&visual=true
           - caption: 05 The Spell
             orderNo: 5
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377072%3Fsecret_token%3Ds-SB34L&visual=true
-          - caption: 06 Eduardo Songs
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726699220%3Fsecret_token%3Ds-PSNJE&visual=true
+          - caption: 06 Ecstasy
             orderNo: 6
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377066%3Fsecret_token%3Ds-xI1gc&visual=false
-          - caption: 07 Eduardo Songs
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726699205%3Fsecret_token%3Ds-l7Gp5&visual=true
+          - caption: 07 Sleep Walker
             orderNo: 7
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716377063%3Fsecret_token%3Ds-0IC9k&visual=true
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726699202%3Fsecret_token%3Ds-fqDOT&visual=true
           - caption: 01 Urbanik 1990 Soundtrack Music
             orderNo: 8
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716841232%3Fsecret_token%3Ds-3F3HA&&visual=true
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726697510%3Fsecret_token%3Ds-73sXU&visual=true
           - caption: 02 Urbanik 1990 Soundtrack Music
             orderNo: 9
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716841229%3Fsecret_token%3Ds-kvW2m&&visual=true
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726697507%3Fsecret_token%3Ds-aijvp&visual=true
           - caption: 03 Urbanik 1990 Soundtrack Music
             orderNo: 10
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/716841226%3Fsecret_token%3Ds-d2iry&visual=true
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726697504%3Fsecret_token%3Ds-4YNhw&visual=true
     label: Music
     mediaType: audio
     orderNo: 3
