@@ -27,6 +27,18 @@ mediaItems:
           - img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907990/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/Phil_morsbh.jpg
             orderNo: 7
+          - caption: Alice
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907988/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/Alice_cwku6s.jpg
+            orderNo: 8
+          - caption: Alice and Meghan
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907990/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/Alice_Meghan_yarrkm.jpg
+            orderNo: 9
+          - caption: Meghan
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907990/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/Meghan2_emolzv.jpg
+            orderNo: 10
         orderNo: 1
         type: imageGallery
     label: Photos
@@ -36,26 +48,14 @@ mediaItems:
       https://res.cloudinary.com/all-about-erik/image/upload/v1572907985/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/Background_Thumbnails/Thumbnail_1_phil_s6ukka.jpg
   - galleries:
       - images:
-          - caption: Alice
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907988/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/Alice_cwku6s.jpg
-            orderNo: 1
-          - caption: Alice and Meghan
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907990/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/Alice_Meghan_yarrkm.jpg
-            orderNo: 2
-          - caption: Meghan
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907990/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/Meghan2_emolzv.jpg
-            orderNo: 3
-          - caption: John Train's Big Plan
-            img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907988/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/JohnTrainsBigPlan_gr0sr8.jpg
-            orderNo: 4
-          - caption: John Train's Big Plan
+          - caption: John Train's Big Plan (1 / 2)
             img: >-
               https://res.cloudinary.com/all-about-erik/image/upload/v1572907988/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/JohnTrainsBigPlan_2_eu2fhe.jpg
-            orderNo: 5
+            orderNo: 1
+          - caption: John Train's Big Plan (2 / 2)
+            img: >-
+              https://res.cloudinary.com/all-about-erik/image/upload/v1572907988/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/JohnTrainsBigPlan_gr0sr8.jpg
+            orderNo: 2
         orderNo: 1
         type: imageGallery
     label: John Train's Big Plan
