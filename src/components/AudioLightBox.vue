@@ -27,6 +27,7 @@
             :style="`border-color: ${interfaceColor}`"
           />
         </div>
+
         <div class="audio-lightbox__container">
           <ul class="audio-lightbox__content">
             <li
@@ -53,7 +54,7 @@
                 </div>
 
                 <div
-                  v-show="(audio.caption || audio.title) && isAudioLoaded"
+                  v-if="showCaption && (audio.caption || audio.title) && isAudioLoaded"
                   class="audio-lightbox__text"
                   :style="audioTitleCss"
                 >
@@ -116,7 +117,6 @@
 </template>
 
 <script>
-// import Player from '@vimeo/player'
 
 const keyMap = {
   LEFT: 37,
@@ -144,6 +144,10 @@ export default {
     interfaceColor: {
       type: String,
       default: 'rgba(255, 255, 255, 0.8)',
+    },
+    showCaption: {
+      type: Boolean,
+      default: true,
     },
   },
   data() {
@@ -378,7 +382,6 @@ export default {
       margin: 0 auto;
       max-width: 100%;
       max-height: 100vh;
-      // opacity: 0;
     }
     & .audioFrame {
       & {

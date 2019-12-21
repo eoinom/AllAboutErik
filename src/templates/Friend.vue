@@ -68,6 +68,7 @@
       :audios="audio"
       :index="audioIndex"
       :disable-scroll="true"
+      :show-caption="false"
       @close="audioIndex = null; galleryIndex = null"
     />
 
