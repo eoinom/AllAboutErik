@@ -147,6 +147,24 @@ collections:
                 widget: "select"
                 options: ["top", "bottom", "left", "right"]
 
+      - label: "Musical Journey - Musical Friends - Nadia Music"
+        name: "nadia-music"
+        file: "src/data/pages/musical-journey/nadia-music.md"
+        fields:
+          - {label: "Page Title", name: "pageTitle", widget: "string"}
+          - {label: "Title Text", name: "titleText", widget: "string"}
+          - label: "Tracks"
+            name: "tracks"
+            widget: "list"
+            fields: 
+              - {label: 'Title', name: 'title', widget: 'string'}
+              - {label: "Track Url", name: "url", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+              - label: "Image Position"
+                name: "imgPosition"
+                widget: "select"
+                options: ["left", "right"]
+
       - label: "Musical Journey - Early Productions"
         name: "early-productions"
         file: "src/data/pages/musical-journey/early-productions.md"
@@ -242,7 +260,7 @@ collections:
           - label: "Media type"
             name: "mediaType"
             widget: "select"
-            options: ["images", "videos", "audio", "mix"]
+            options: ["images", "videos", "audio", "link"]
           - label: "Galleries"
             name: "galleries"
             widget: "list"
@@ -292,5 +310,9 @@ collections:
                       - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
                       - {label: "Audio Url (Soundcloud)", name: "url", widget: "string"}
                       - {label: "Caption", name: "caption", widget: "string", required: false}
+              - label: "Link"
+                name: "link"
+                widget: "string"
+                required: false
                 
           
