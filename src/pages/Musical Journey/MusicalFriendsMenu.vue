@@ -1,7 +1,7 @@
 <template>
   <Layout>   
     <MusicalFriendsComponent
-      :menuOnly="false"
+      :menuOnly="true"
     />
   </Layout>
 </template>

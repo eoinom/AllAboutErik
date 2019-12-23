@@ -35,7 +35,7 @@
       <b-row v-if="documentHeight - windowHeight < 800" align-h="center" class="text-center">
         <b-col>
           <div :style="navLinksVisibility" class="navLinksContainer">
-            <g-link to="/musical-journey/musical-friends/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
+            <g-link to="/musical-journey/musical-friends-menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
           </div>
         </b-col>
       </b-row>
@@ -44,7 +44,7 @@
         <br><br><br>
         <BackToMenu
           text="BACK TO MUSICAL FRIENDS MENU"
-          link="/musical-journey/musical-friends/"
+          link="/musical-journey/musical-friends-menu/"
           :showAtPosY="Number(800)"
         />        
       </div>
