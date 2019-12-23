@@ -198,14 +198,23 @@ mediaItems:
           - caption: Videos at the Sweetwater - Part 4
             orderNo: 4
             url: 'https://player.vimeo.com/video/375508769'
-          - caption: Charlatans at Red Dog 50 Year Anniversary
-            orderNo: 5
-            url: 'https://player.vimeo.com/video/375509027'
     label: Live Videos at the Sweetwater
     mediaType: videos
     orderNo: 5
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_5_dan_video_icon_fcvufw.jpg
+  - galleries:
+      - orderNo: 1
+        type: videoGallery
+        videos:
+          - caption: Charlatans at Red Dog 50 Year Anniversary
+            orderNo: 1
+            url: 'https://player.vimeo.com/video/375509027'
+    label: Red Dog's 50 Year Anniversary
+    mediaType: videos
+    orderNo: 6
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1577139561/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Red-Dog-50-Year_Annivesary_tnc4qe.jpg
   - galleries:
       - audio:
           - caption: Ad 1
@@ -220,7 +229,7 @@ mediaItems:
         type: audioGallery
     label: Dan's Leonard Schaeffer Promo
     mediaType: audio
-    orderNo: 6
+    orderNo: 7
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1572905372/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_6_hicks-icon_sn1mlz.jpg
 ---
