@@ -24,9 +24,11 @@
     "gridsome": "^0.7.7",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-plugin-netlify-cms-paths": "^0.3.0",
+    "mediaelement": "^4.2.14",
     "netlify-cms": "^2.9.7",
     "simplebar-vue": "^1.2.0",
     "vue": "^2.6.10",
+    "vue-mediaelement": "^1.0.0",
     "vue-scrollto": "^2.17.1"
   },
   "devDependencies": {

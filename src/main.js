@@ -12,6 +12,12 @@ import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faVolumeUp, faVolumeMute, faPlay } from '@fortawesome/free-solid-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
+require('vue-mediaelement/dist/vue-mediaelement.css');
+// import Mediaelement from 'vue-mediaelement';
+const { Mediaelement } = require('vue-mediaelement');
+// const { Mediaelement } = VueMediaelement;
+
+
 config.autoAddCss = false;
 library.add(faVolumeUp, faVolumeMute, faPlay)
 
@@ -34,6 +40,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   })
 
   Vue.component('font-awesome', FontAwesomeIcon)
+
+  Vue.component('mediaelement', Mediaelement)
 
   // vue-scrollto: https://github.com/rigor789/vue-scrollto
   var VueScrollTo = require('vue-scrollto')

@@ -7,9 +7,13 @@
       <br><br>
       <div v-for="(track, index) in tracks" :key="index">
         <g-image :src="track.image" :class="track.imgPosition" class="trackImg my-3" />
+        <mediaelement class="" :source="track.url"></mediaelement>
       </div>
 
     </b-container>
+
+    
+
   </Layout>
 </template>
 
@@ -35,6 +39,7 @@
 
 
 <script scoped>
+import mediaelement from 'vue-mediaelement';
 
 export default { 
   metaInfo() {
@@ -64,6 +69,8 @@ export default {
   },
 
   components: {
+    // 'mediaelement': vueMediaelement
+    // mediaelement
   },
 }
 </script>
