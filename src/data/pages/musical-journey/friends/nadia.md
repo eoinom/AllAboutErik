@@ -36,7 +36,7 @@ mediaItems:
       https://res.cloudinary.com/all-about-erik/image/upload/v1572906819/Musical%20Journey/Musical%20Friends/Friends/Nadia/Background_Thumbnails/Thumbnail_1_Nadia3_a810zz.jpg
   - galleries:
       - type: link
-        url: /musical-journey/musical-friends/music
+        url: /musical-journey/musical-friends/nadia/music
     label: Music
     mediaType: link
     orderNo: 2
