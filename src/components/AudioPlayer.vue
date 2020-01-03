@@ -1,13 +1,17 @@
 <template>
-  <vue-plyr :style="dynamicStyles">
-    <audio>
-      <source :src="src" type="audio/mp3"/>
-    </audio>
-  </vue-plyr>
+  <div v-if="mounted">
+    <vue-plyr :style="dynamicStyles">
+      <audio>
+        <source :src="src" type="audio/mp3"/>
+      </audio>
+    </vue-plyr>
+  </div>
 </template>
 
 
 <script scoped>
+import VuePlyr from 'vue-plyr'
+
 export default { 
   name: 'AudioPlayer',
 
@@ -40,6 +44,12 @@ export default {
       default: '5px',
     }, 
   },
+
+  data() {
+    return {
+      mounted: false
+    };
+  },
   
   computed: {
     dynamicStyles() {
@@ -52,6 +62,14 @@ export default {
         '--padding': this.padding
       }
     },
+  },
+
+  mounted() {
+    this.mounted = true
+  },
+
+  components: {
+    VuePlyr
   }
 }
 </script>

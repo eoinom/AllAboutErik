@@ -11,7 +11,6 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faVolumeUp, faVolumeMute, faPlay } from '@fortawesome/free-solid-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import VuePlyr from 'vue-plyr'
 
 config.autoAddCss = false;
 library.add(faVolumeUp, faVolumeMute, faPlay)
@@ -39,15 +38,6 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   // vue-scrollto: https://github.com/rigor789/vue-scrollto
   var VueScrollTo = require('vue-scrollto')
   Vue.use(VueScrollTo)
-
-  // vue-plyr
-  // The second argument is optional and sets the default config values for every player.
-  Vue.use(VuePlyr, {
-    plyr: {
-      fullscreen: { enabled: false }
-    },
-    emit: ['ended']
-  })
 
   // Add a meta tag
   head.meta.push({
