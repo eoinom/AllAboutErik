@@ -18,7 +18,7 @@
           <g-image :src="item.thumbnailImg" class="mediaItemsImg" :id="'mediaItemImg'+index" />
           <br />
           <span class="mediaItemsText mediaItemsLabel">{{ item.label }}</span>
-          <b-collapse :id="String(index+1)" accordion="mediaItems-accordion">
+          <b-collapse v-if="item.galleries[0].label" :id="String(index+1)" accordion="mediaItems-accordion">
             <div v-for="(gallery,galIndex) in item.galleries" :key="galIndex">
               <br />
               <span

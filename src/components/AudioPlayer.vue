@@ -61,7 +61,7 @@ export default {
         '--secondaryColor': this.secondaryColor,
         '--padding': this.padding
       }
-    },
+    }
   },
 
   mounted() {
