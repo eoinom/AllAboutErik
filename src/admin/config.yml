@@ -312,7 +312,9 @@ collections:
                       - {label: "Caption", name: "caption", widget: "string", required: false}
               - label: "Link"
                 name: "link"
-                widget: "string"
+                widget: "object"
                 required: false
+                fields:
+                  - {label: "link (url)", name: "url", widget: "string"}
                 
           
