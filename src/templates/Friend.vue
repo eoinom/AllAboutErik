@@ -106,6 +106,7 @@ query ($id: ID!) {
           url
           caption
         }
+        url
       }
     }
   }
@@ -251,6 +252,9 @@ export default {
         else {
           this.$scrollTo('#mediaItemImg' + index, 500)
         }
+      }
+      else if (mediaItem.mediaType == 'link') {
+        this.$router.push(mediaItem.galleries[0].url)
       }
     },
     setMediaIndexToZero(mediaType) {
