@@ -2,7 +2,7 @@
   <Layout> 
     <b-container class="main-col pt-5">
       <div style="text-align: center">
-        <h1 class="text caps">{{ title }}</h1>
+        <h1 class="heading">{{ title }}</h1>
       </div>
       <br><br>
       <div v-for="(track, index) in tracks" :key="index">
@@ -64,33 +64,22 @@ export default {
 
 <style scoped>
 
-@font-face {
-  font-family: NeueHaasGroteskText Pro65;
-  src: url('../../../../assets/fonts/nhaasgrotesktxpro-65md.eot'); /* IE9 Compat Modes */
-  src: url('../../../../assets/fonts/nhaasgrotesktxpro-65md.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../../../../assets/fonts/nhaasgrotesktxpro-65md.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../../../../assets/fonts/nhaasgrotesktxpro-65md.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
-  font-weight: normal;
-}
-
 .main-col {
   /* padding: 0 6%; */
   padding: 0 0;
   max-width: 915px;
 }
 
-.text {
+.heading {
   color: white; 
-  font-family: 'NeueHaasGroteskText Pro65';
+  font-family: 'Ubuntu Condensed', sans-serif;
   font-feature-settings: 'liga';
-  font-size: 2.5rem;
-  font-weight: 500;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.65);
-  letter-spacing: 2px;  
-}
-
-.caps {
+  font-size: 2.625rem;
+  font-weight: 400;
+  /* text-shadow: 2px 2px 5px rgba(0,0,0,0.65); */
+  text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .trackImg {
