@@ -7,6 +7,7 @@
       <br><br>
       <div v-for="(track, index) in tracks" :key="index">
         <g-image :src="track.image" :class="track.imgPosition" class="trackImg my-3" />
+        <audio-player :src="track.url" secondaryColor="#E7413F" padding="5px 0px" />
       </div>
 
     </b-container>
@@ -35,16 +36,12 @@
 
 
 <script scoped>
+import AudioPlayer from '../../../../components/AudioPlayer'
 
 export default { 
   metaInfo() {
     return {
       title: this.$page.NadiaMusic.edges[0].node.pageTitle
-    }
-  },
-
-  data() {
-    return {
     }
   },
 
@@ -57,13 +54,8 @@ export default {
     }
   },
 
-  methods: {
-  },
-
-  mounted() {
-  },
-
   components: {
+    AudioPlayer
   },
 }
 </script>
@@ -115,7 +107,6 @@ export default {
   margin-left: auto;
   margin-right: 0;
 }
-
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
