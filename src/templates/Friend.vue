@@ -7,48 +7,51 @@
       <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.name" class="nav_link" id="nav_next">NEXT</g-link>
     </div>
 
-    <b-container fluid class="main-col">      
-      <h1 id="heading"> {{ heading }} </h1>
-  	  <div v-html="$page.friend.content" id="mainContent" />
-    </b-container>
 
-    <b-container fluid class="mediaItemsContainer">
-      <b-row align-h="center" id="mediaItemsRow">
-        <b-col v-for="(item,index) in $page.friend.mediaItems" :key="index" class="mediaItems p-2" v-b-toggle="String(index+1)" @click="mediaItemClick(item, index)">
-          <g-image :src="item.thumbnailImg" class="mediaItemsImg" :id="'mediaItemImg'+index" />
-          <br />
-          <span class="mediaItemsText mediaItemsLabel">{{ item.label }}</span>
-          <b-collapse v-if="item.galleries[0].label" :id="String(index+1)" accordion="mediaItems-accordion">
-            <div v-for="(gallery,galIndex) in item.galleries" :key="galIndex">
-              <br />
-              <span
-                @click="galleryIndex = galIndex; setMediaIndexToZero(item.mediaType)"
-                class="mediaItemsText galleriesLabel py-2 pr-2"
-              >
-                {{ gallery.label }}
-              </span>
+    <b-container fluid class="wrapper">
+      <b-container fluid class="main-col"> 
+        <h1 id="heading"> {{ heading }} </h1>
+        <div v-html="$page.friend.content" id="mainContent" />
+      </b-container>
+
+      <b-container fluid class="mediaItemsContainer">
+        <b-row align-h="center" align-v="end" id="mediaItemsRow">
+          <b-col v-for="(item,index) in $page.friend.mediaItems" :key="index" class="mediaItems p-2" v-b-toggle="String(index+1)" @click="mediaItemClick(item, index)">
+            <g-image :src="item.thumbnailImg" class="mediaItemsImg" :id="'mediaItemImg'+index" />
+            <br />
+            <span class="mediaItemsText mediaItemsLabel">{{ item.label }}</span>
+            <b-collapse v-if="item.galleries[0].label" :id="String(index+1)" accordion="mediaItems-accordion">
+              <div v-for="(gallery,galIndex) in item.galleries" :key="galIndex">
+                <br />
+                <span
+                  @click="galleryIndex = galIndex; setMediaIndexToZero(item.mediaType)"
+                  class="mediaItemsText galleriesLabel py-2 pr-2"
+                >
+                  {{ gallery.label }}
+                </span>
+              </div>
+            </b-collapse>
+          </b-col>
+        </b-row>
+
+        <b-row v-if="documentHeight - windowHeight < 800" align-h="center" align-v="end" class="text-center">
+          <b-col>
+            <div :style="navLinksVisibility" class="navLinksContainer">
+              <g-link to="/musical-journey/musical-friends-menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
             </div>
-          </b-collapse>
-        </b-col>
-      </b-row>
+          </b-col>
+        </b-row>
 
-      <b-row v-if="documentHeight - windowHeight < 800" align-h="center" class="text-center">
-        <b-col>
-          <div :style="navLinksVisibility" class="navLinksContainer">
-            <g-link to="/musical-journey/musical-friends-menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
-          </div>
-        </b-col>
-      </b-row>
-
-      <div v-else>
-        <br><br><br>
-        <BackToMenu
-          text="BACK TO MUSICAL FRIENDS MENU"
-          link="/musical-journey/musical-friends-menu/"
-          :showAtPosY="Number(800)"
-        />        
-      </div>
-
+        <div v-else>
+          <br><br><br>
+          <BackToMenu
+            text="BACK TO MUSICAL FRIENDS MENU"
+            link="/musical-journey/musical-friends-menu/"
+            :showAtPosY="Number(800)"
+          />        
+        </div>
+        
+      </b-container>
     </b-container>
 
 
@@ -378,6 +381,13 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 #nav_back {
   text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 .main-col {
