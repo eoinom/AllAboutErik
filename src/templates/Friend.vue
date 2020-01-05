@@ -15,7 +15,7 @@
       </b-container>
 
       <b-container fluid class="mediaItemsContainer">
-        <b-row align-h="center" align-v="end" id="mediaItemsRow">
+        <b-row align-h="center" id="mediaItemsRow">
           <b-col v-for="(item,index) in $page.friend.mediaItems" :key="index" class="mediaItems p-2" v-b-toggle="String(index+1)" @click="mediaItemClick(item, index)">
             <g-image :src="item.thumbnailImg" class="mediaItemsImg" :id="'mediaItemImg'+index" />
             <br />
@@ -34,7 +34,7 @@
           </b-col>
         </b-row>
 
-        <b-row v-if="documentHeight - windowHeight < 800" align-h="center" align-v="end" class="text-center">
+        <b-row v-if="documentHeight - windowHeight < 800" align-h="center" class="text-center">
           <b-col>
             <div :style="navLinksVisibility" class="navLinksContainer">
               <g-link to="/musical-journey/musical-friends-menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
@@ -65,6 +65,7 @@
       :videos="videos"
       :index="videoIndex"
       :disable-scroll="true"
+      titlePosition="center"
       @close="videoIndex = null; galleryIndex = null"
     />
     <AudioLightBox

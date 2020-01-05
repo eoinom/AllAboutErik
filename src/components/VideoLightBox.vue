@@ -143,6 +143,10 @@ export default {
       type: String,
       default: 'rgba(255, 255, 255, 0.8)',
     },
+    titlePosition: {
+      type: String,
+      default: 'left'
+    }
   },
 
   data() {
@@ -191,8 +195,9 @@ export default {
       }
       css.padding = 0
       css.bottom = ((containerHeight - actualVidHeight) / 2 - 40) + 'px';
-      css.left = ((containerWidth - actualVidWidth) / 2) + 'px';
-      css.textAlign = 'left'
+      // css.left = ((containerWidth - actualVidWidth) / 2) + 'px';
+      css.width = '100%';
+      css.textAlign = this.titlePosition
       return css
     }
   },
