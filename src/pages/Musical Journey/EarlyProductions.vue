@@ -13,16 +13,30 @@
         </b-col>
       </b-row>
 
+      <div v-for="(section, iSect) in sections" :key="iSect">
+        <b-row no-gutters v-for="(production, iProd) in section.productions" :key="iProd" style="" class="my-4">
+          <b-col>
+            <music-production 
+              :writer="production.writer"
+              :artist="production.artist"
+              :image="production.image"
+              :backgroundImg="production.backgroundImg"
+              :tracks="production.tracks" 
+            />
+          </b-col>
+        </b-row>
+      </div>
+
       
     </b-container>
 
 
-    <VideoLightBox
-      :videos="videos"
-      :index="videoIndex"
+    <!-- <ImageLightBox
+      :images="images"
+      :index="imageIndex"
       :disable-scroll="true"
-      @close="videoIndex = null"
-    />
+      @close="imageIndex = null; galleryIndex = null"
+    /> -->
 
     <ScrollToTop 
       text="BACK TO THE TOP"
@@ -72,6 +86,7 @@
 
 <script scoped>
 import ImageLightBox from '../../components/ImageLightBox.vue'
+import MusicProduction from '../../components/MusicProduction.vue'
 import ScrollToTop from '../../components/ScrollToTop.vue'
 
 export default { 
@@ -117,6 +132,7 @@ export default {
 
   components: {
     ImageLightBox,
+    MusicProduction,
     ScrollToTop
   },
 }
