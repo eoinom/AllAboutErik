@@ -21,7 +21,7 @@ sections:
         bgColor: '#000000'
         bgImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/cheerleaders_background_rbueyt.jpg
-        bgImgPos: centre
+        bgImgPos: center
         bgOpacity: 0.25
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/cheerleaders_nubryt.jpg
@@ -71,7 +71,7 @@ sections:
         bgColor: '#000000'
         bgImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018274/Musical%20Journey/Early%20Productions/Production%20Sections/03%20-%20A%20Little%20Lovin%27/dwain_story_pic_background_vcxrtn.jpg
-        bgImgPos: centre
+        bgImgPos: center
         bgOpacity: 0.25
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018274/Musical%20Journey/Early%20Productions/Production%20Sections/03%20-%20A%20Little%20Lovin%27/dwain_story_pic_t7xa9d.jpg
@@ -100,7 +100,7 @@ sections:
         bgColor: 'rgba(221,221,221,0.35)'
         bgImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/img402-sm_background_jdy7ll.png
-        bgImgPos: centre
+        bgImgPos: center
         bgOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/img402-sm_w4brnr.jpg
@@ -116,7 +116,7 @@ sections:
         bgColor: 'rgba(221,221,221,0.23)'
         bgImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018279/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/dwainstory_background_n084xq.png
-        bgImgPos: centre
+        bgImgPos: center
         bgOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018277/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/dwainstory_uwnvl1.jpg
@@ -145,7 +145,7 @@ sections:
         bgColor: transparent
         bgImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018282/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/rooty_toot_record_-_img_2323-sm_background_atba9y.png
-        bgImgPos: centre
+        bgImgPos: center
         bgOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018281/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/movietrivia_3540_en7guo.jpg
@@ -173,7 +173,7 @@ sections:
         bgColor: 'rgba(221,221,221,0.32)'
         bgImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018281/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/cass_copyfill_background_ophctd.png
-        bgImgPos: centre
+        bgImgPos: center
         bgOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018282/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/cass_zxohow.jpg
@@ -200,7 +200,7 @@ sections:
         bgColor: transparent
         bgImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/godivacar_background_uugujn.png
-        bgImgPos: centre
+        bgImgPos: center
         bgOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018284/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/godivacar_pheu65.jpg
@@ -224,7 +224,7 @@ sections:
         bgColor: '#DDDDDD'
         bgImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018288/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/drive-thru_background_kzg6ca.jpg
-        bgImgPos: centre
+        bgImgPos: center
         bgOpacity: 0.49
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/drive-thru_ecrrox.jpg
@@ -242,7 +242,7 @@ sections:
         bgColor: 'rgba(0,0,0,0.22)'
         bgImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/strangers_grouppic_background_up74tg.png
-        bgImgPos: centre
+        bgImgPos: center
         bgOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018288/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/strangers_grouppic_dmtoac.jpg
@@ -329,7 +329,7 @@ sections:
         bgColor: 'rgba(221,221,221,0.35)'
         bgImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/cowboy-playing-guitar_background_baeo3j.png
-        bgImgPos: centre
+        bgImgPos: center
         bgOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/cowboy-playing-guitar_fzhdoi.jpg
@@ -368,7 +368,7 @@ sections:
         bgColor: 'rgba(221,221,221,0.32)'
         bgImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018318/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/tim-hardin-img316_background_zwr8z1.png
-        bgImgPos: centre
+        bgImgPos: center
         bgOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018319/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/tim-hardin-img316-cropped_nqc6pu.jpg
@@ -403,7 +403,7 @@ sections:
         bgColor: 'rgba(0,0,0,0.22)'
         bgImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/ep4_background_nhospf.png
-        bgImgPos: centre
+        bgImgPos: center
         bgOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/ep4_yhbn4t.jpg
