@@ -37,8 +37,20 @@ export default {
     image: {
       type: String
     },
-    backgroundImg: {
+    bgImg: {
       type: String
+    },
+    bgImgPos: {
+      type: String,
+      default: 'center center'
+    },
+    bgColor: {
+      type: String,
+      default: '#000'
+    },
+    bgOpacity: {
+      type: Number,
+      default: 0.5
     },
     tracks: {
       type: Array
@@ -61,7 +73,10 @@ export default {
     },
     tracksDivStyles() {
       return {
-        '--bgImg': 'url("' + this.backgroundImg + '")'
+        '--bgImg': 'url("' + this.bgImg + '")',
+        '--bgImgPos': this.bgImgPos,
+        '--bgColor': this.bgColor,
+        '--bgOpacity': this.bgOpacity
       }
     }
   },
@@ -84,12 +99,26 @@ export default {
 }
   
 #tracksDiv {
-  background: #F3F3F3 var(--bgImg) no-repeat center center;
-  background-color: rgba(221,221,221,0.35);
-  background-size: cover;
   display: inline-block; 
   vertical-align: top; 
   flex-grow: 1;
+  position: relative;
+}
+
+#tracksDiv:after {
+  content : "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* background: var(--bgColor) var(--bgImg) no-repeat center center; */
+  background: var(--bgImg) no-repeat var(--bgImgPos);
+  background-color: var(--bgColor);
+  background-size: cover;
+  opacity : var(--bgOpacity);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .titleText {

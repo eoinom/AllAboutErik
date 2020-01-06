@@ -20,7 +20,10 @@
               :writer="production.writer"
               :artist="production.artist"
               :image="production.image"
-              :backgroundImg="production.backgroundImg"
+              :bgImg="production.bgImg"
+              :bgImgPos="production.bgImgPos"
+              :bgColor="production.bgColor"
+              :bgOpacity="production.bgOpacity"
               :tracks="production.tracks" 
             />
           </b-col>
@@ -65,7 +68,10 @@
             writer
             artist
             image
-            backgroundImg
+            bgImg
+            bgImgPos
+            bgColor
+            bgOpacity
             tracks {
               title
               track
