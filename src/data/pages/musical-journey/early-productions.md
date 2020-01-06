@@ -18,8 +18,10 @@ sections:
           https://res.cloudinary.com/all-about-erik/image/upload/v1576020062/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/Bobo_rejection_letter_ezsqjm.jpg
     productions:
       - artist: Little Peetie Love
+        backgroundColor: '#000000'
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/cheerleaders_background_rbueyt.jpg
+        backgroundOpacity: 0.25
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/cheerleaders_nubryt.jpg
         tracks:
@@ -40,8 +42,10 @@ sections:
           https://res.cloudinary.com/all-about-erik/image/upload/v1576021095/Musical%20Journey/Early%20Productions/Production%20Sections/02%20-%20Sound%20of%20Summer%20Showers/summershowers_vinyl_pyfkou.jpg
     productions:
       - artist: Jerry Yester
+        backgroundColor: '#DDDDDD'
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/02%20-%20Sound%20of%20Summer%20Showers/sound_of_summer_showers_record_-_img_3140_background_lwv64i.jpg
+        backgroundOpacity: 0.35
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/02%20-%20Sound%20of%20Summer%20Showers/jerryyester2_rptp7v.jpg
         tracks:
@@ -62,8 +66,10 @@ sections:
           https://res.cloudinary.com/all-about-erik/image/upload/v1576021528/Musical%20Journey/Early%20Productions/Production%20Sections/03%20-%20A%20Little%20Lovin%27/dwain-little_lovin-vinyl-lg_cnow1m.jpg
     productions:
       - artist: Dwain Story
+        backgroundColor: '#000000'
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018274/Musical%20Journey/Early%20Productions/Production%20Sections/03%20-%20A%20Little%20Lovin%27/dwain_story_pic_background_vcxrtn.jpg
+        backgroundOpacity: 0.25
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018274/Musical%20Journey/Early%20Productions/Production%20Sections/03%20-%20A%20Little%20Lovin%27/dwain_story_pic_t7xa9d.jpg
         tracks:
@@ -88,8 +94,10 @@ sections:
           https://res.cloudinary.com/all-about-erik/video/upload/v1576022134/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/slurp-sound_a8jyww.mp3
     productions:
       - artist: Dee & Zee
+        backgroundColor: 'rgba(221,221,221,0.35)'
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/img402-sm_background_jdy7ll.png
+        backgroundOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/img402-sm_w4brnr.jpg
         tracks:
@@ -101,8 +109,10 @@ sections:
               https://res.cloudinary.com/all-about-erik/video/upload/v1576018277/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/Dee_and_Zee_-_The_slurp_mf2bsu.mp3
         writer: Erik Jacobsen
       - artist: Dwain Story
+        backgroundColor: 'rgba(221,221,221,0.23)'
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018279/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/dwainstory_background_n084xq.png
+        backgroundOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018277/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/dwainstory_uwnvl1.jpg
         tracks:
@@ -127,8 +137,10 @@ sections:
           https://res.cloudinary.com/all-about-erik/image/upload/v1576101583/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/warm_baby_vinyl_bil9bj.jpg
     productions:
       - artist: John Sebastian
+        backgroundColor: transparent
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018282/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/rooty_toot_record_-_img_2323-sm_background_atba9y.png
+        backgroundOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018281/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/movietrivia_3540_en7guo.jpg
         tracks:
@@ -152,8 +164,10 @@ sections:
           written shortly before we got the spoonful going.
   - productions:
       - artist: 'Cass Elliot, Denny Doherty, Jerry Yester, Zal Yanovsky'
+        backgroundColor: 'rgba(221,221,221,0.32)'
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018281/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/cass_copyfill_background_ophctd.png
+        backgroundOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018282/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/cass_zxohow.jpg
         tracks:
@@ -176,8 +190,10 @@ sections:
           Doherty, Jerry Yester, Zal and possibly others.
   - productions:
       - artist: 'John Sebastian, Jerry Yester'
+        backgroundColor: transparent
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/godivacar_background_uugujn.png
+        backgroundOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018284/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/godivacar_pheu65.jpg
         tracks:
@@ -197,8 +213,10 @@ sections:
           https://res.cloudinary.com/all-about-erik/image/upload/v1576102709/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/tweedle-lyrics_zqldri.jpg
     productions:
       - artist: A Surfin' Crew
+        backgroundColor: '#DDDDDD'
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018288/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/drive-thru_background_kzg6ca.jpg
+        backgroundOpacity: 0.49
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/drive-thru_ecrrox.jpg
         tracks:
@@ -212,8 +230,10 @@ sections:
           https://res.cloudinary.com/all-about-erik/image/upload/v1576103147/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/thestrangersvinyl_xxipbo.jpg
     productions:
       - artist: The Strangers
+        backgroundColor: 'rgba(0,0,0,0.22)'
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/strangers_grouppic_background_up74tg.png
+        backgroundOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018288/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/strangers_grouppic_dmtoac.jpg
         tracks:
@@ -249,8 +269,10 @@ sections:
           https://res.cloudinary.com/all-about-erik/image/upload/v1576104090/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/let_it_show_lyrics_bbpr4n.jpg
     productions:
       - artist: The Sellouts
+        backgroundColor: 'rgba(221,221,221,0.32)'
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018297/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/img021-eyesopen_background_bmjlgh.png
+        backgroundOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018298/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/img021-eyesopen_azs3uh.jpg
         tracks:
@@ -276,8 +298,10 @@ sections:
           Spoonful’s drummer.
   - productions:
       - artist: Ken & Bobby Fischler
+        backgroundColor: transparent
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/11%20-%20Ken%20and%20Bobby%20Fischler/e4f19a583d_b_background_ph2z7o.png
+        backgroundOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018298/Musical%20Journey/Early%20Productions/Production%20Sections/11%20-%20Ken%20and%20Bobby%20Fischler/e4f19a583d_b_clsq2g.jpg
         tracks:
@@ -290,8 +314,10 @@ sections:
         text: A one shot attempt on a nice song that didn’t make.
   - productions:
       - artist: Ray Roe
+        backgroundColor: 'rgba(221,221,221,0.35)'
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/cowboy-playing-guitar_background_baeo3j.png
+        backgroundOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/cowboy-playing-guitar_fzhdoi.jpg
         tracks:
@@ -307,8 +333,10 @@ sections:
         text: I liked the songs but really couldn’t find anybody to play them for.
   - productions:
       - artist: Ken Melville
+        backgroundColor: transparent
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018304/Musical%20Journey/Early%20Productions/Production%20Sections/13%20-%20Ken%20Melville/acoustic-guitar-photography-reflection_background_ztfutk.png
+        backgroundOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018304/Musical%20Journey/Early%20Productions/Production%20Sections/13%20-%20Ken%20Melville/acoustic-guitar-photography-reflection_bp89rs.jpg
         tracks:
@@ -323,8 +351,10 @@ sections:
           frustration and pain.
   - productions:
       - artist: Tim Hardin
+        backgroundColor: 'rgba(221,221,221,0.32)'
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018318/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/tim-hardin-img316_background_zwr8z1.png
+        backgroundOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018319/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/tim-hardin-img316-cropped_nqc6pu.jpg
         tracks:
@@ -355,8 +385,10 @@ sections:
           with.  It's raggedy and loose-for interest value only.
   - productions:
       - artist: Plumb Creek Boys
+        backgroundColor: 'rgba(0,0,0,0.22)'
         backgroundImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/ep4_background_nhospf.png
+        backgroundOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/ep4_yhbn4t.jpg
         tracks:
