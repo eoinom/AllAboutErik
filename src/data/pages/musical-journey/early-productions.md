@@ -245,7 +245,7 @@ sections:
         bgImgPos: center
         bgOpacity: 1
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353264/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/strangers_group_pic_-_Cropped_nbdkdi.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/v1578354425/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/strangers_group_pic_-_Cropped_nbdkdi.jpg
         tracks:
           - title: Twelve Day Lover
             track: >-
@@ -406,7 +406,7 @@ sections:
         bgImgPos: center
         bgOpacity: 1
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353362/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/ep4_-_Cropped_krzj04.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/v1578354263/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/ep4_-_Cropped_krzj04.jpg
         tracks:
           - title: Track One
             track: >-
