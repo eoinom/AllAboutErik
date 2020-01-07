@@ -192,7 +192,7 @@ collections:
                   - {label: "Artist", name: "artist", widget: "string", required: false}
                   - {label: "Image", name: "image", widget: "image"}
                   - {label: "Background Image", name: "bgImg", widget: "image", required: false}
-                  - {label: "Background Image Position", name: "bgImgPos", widget: "select", options: ["top-left", "top", "top-right", "left", "center", "right", "bottom-left", "bottom", "bottom-right"], required: false}
+                  - {label: "Background Image Position", name: "bgImgPos", widget: "select", options: ["top left", "top", "top right", "left", "center", "right", "bottom left", "bottom", "bottom right"], required: false}
                   - {label: "Background Color", name: "bgColor", widget: "string", required: false}
                   - {label: "Background Opacity", name: "bgOpacity", widget: "number", valueType: "float", min: 0, max: 1, required: false}
                   - label: "Tracks"
