@@ -195,7 +195,11 @@ sections:
         text: >-
           I recorded several tunes with this cast of characters, Cass, Denny
           Doherty, Jerry Yester, Zal and possibly others.
-  - productions:
+  - imageLightboxes:
+      - buttonText: Original Vinyl
+        image: >-
+          https://res.cloudinary.com/all-about-erik/image/upload/v1578527571/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/godiva-vinyl_y95sxc.jpg
+    productions:
       - artist: 'John Sebastian, Jerry Yester'
         bgColor: transparent
         bgImg: >-
@@ -282,7 +286,7 @@ sections:
         bgColor: 'rgba(221,221,221,0.32)'
         bgImg: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1576018297/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/img021-eyesopen_background_bmjlgh.png
-        bgImgPos: bottom right
+        bgImgPos: bottom-right
         bgOpacity: 1
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/v1578353284/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/img021-eyesopen_-_Cropped_y9trmn.jpg
