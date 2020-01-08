@@ -14,9 +14,11 @@
       </b-row>
 
       <div v-for="(section, iSect) in sections" :key="iSect">
-        <b-row no-gutters v-for="(production, iProd) in section.productions" :key="iProd" style="" class="my-4">
-          <b-col>
+        <b-row no-gutters class="my-5">
+          <b-col cols="6">
             <music-production 
+              v-for="(production, iProd) in section.productions"
+              :key="iProd"
               :writer="production.writer"
               :artist="production.artist"
               :image="production.image"
@@ -27,19 +29,40 @@
               :tracks="production.tracks" 
             />
           </b-col>
-        </b-row>
-      </div>
 
+          <b-col cols="6" v-if="section.textBoxes.length > 0">            
+            <music-production-text
+              v-for="(textBox, iText) in section.textBoxes"
+              :key="iText"
+              :title="textBox.heading"
+              :body="textBox.text"
+            />
+          </b-col>
+        </b-row>
+
+        <b-row no-gutters v-if="section.imageLightboxes.length > 0" class="mt-2">
+          <b-col >
+            <button 
+              v-for="(lightBox, iLightBox) in section.imageLightboxes" 
+              :key="iLightBox" 
+              class="lightBoxBtn"
+              @click="lightBoxBtnClick(lightBox)">
+                {{ lightBox.buttonText }}
+            </button>
+          </b-col>
+        </b-row>
+
+      </div>
       
     </b-container>
 
 
-    <!-- <ImageLightBox
-      :images="images"
+    <ImageLightBox
+      :images="image"
       :index="imageIndex"
       :disable-scroll="true"
-      @close="imageIndex = null; galleryIndex = null"
-    /> -->
+      @close="imageIndex = null; image = null"
+    />
 
     <ScrollToTop 
       text="BACK TO THE TOP"
@@ -93,6 +116,7 @@
 <script scoped>
 import ImageLightBox from '../../components/ImageLightBox.vue'
 import MusicProduction from '../../components/MusicProduction.vue'
+import MusicProductionText from '../../components/MusicProductionText.vue'
 import ScrollToTop from '../../components/ScrollToTop.vue'
 
 export default { 
@@ -104,6 +128,8 @@ export default {
 
   data() {
     return {
+      imageIndex: null,
+      image: null
     }
   },
 
@@ -131,6 +157,13 @@ export default {
   },
 
   methods: {
+    lightBoxBtnClick(lightBox) {
+      this.image = [{
+          'img': lightBox.image, 
+          'caption': lightBox.caption
+        }]
+      this.imageIndex = 0
+    }
   },
 
   mounted() {
@@ -139,6 +172,7 @@ export default {
   components: {
     ImageLightBox,
     MusicProduction,
+    MusicProductionText,
     ScrollToTop
   },
 }
@@ -147,6 +181,7 @@ export default {
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Lato:700i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lora:700i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 
@@ -223,6 +258,42 @@ export default {
 
 .thumbnailImg {
   width: 100%;
+}
+
+.lightBoxBtn {
+  position: relative;
+  float: left;
+  cursor: pointer;
+  pointer-events: auto;
+
+  min-width: 240px;
+  height: 35px;
+  margin: 0px;
+  margin-right: 20px;
+  padding: 0px 20px;
+
+  background-color: #406689;
+  border-width: 0px;
+  border-radius: 9px;
+
+  color: #DDCD95;
+  font-family: 'Lato', sans-serif;
+  font-feature-settings: 'liga';
+  font-weight: 700;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+
+  transition-delay: 0.1s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-property: background-color;
+}
+.lightBoxBtn:hover {
+  background-color: #4B5B45;
 }
 
 
