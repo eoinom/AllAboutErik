@@ -1,14 +1,6 @@
 <template>
   <Layout>
-
     <b-container fluid>
-      <div class="soundIconContainer">
-        <span v-b-tooltip.hover="{ variant: 'light' }" :title="tooltipText">
-          <g-image v-if="audioPlaying && !audioMuted" alt="Mute background music" src="~/assets/images/sound-playing.png" class="audioIcon" @click="clickAudioIcon()" />
-          <g-image v-if="!audioPlaying || audioMuted" alt="Play background music" src="~/assets/images/sound-muted.png" class="audioIcon" @click="clickAudioIcon()" />          
-        </span>
-      </div>
-
       <div class="contentContainer">
         <div class="content">
 
@@ -31,11 +23,12 @@
       />
     </div>
 
-    <audio loop id="bgAudio" duration=123>
-      <source :src="audioFile" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-
+    <background-music
+      :audioFile="audioFile"
+      :audioDuration="audioDuration"
+      :audioFadeInDuration="audioFadeInDuration"
+      :audioFadeOutDuration="audioFadeOutDuration"
+    />
   </Layout>
 </template>
 
@@ -69,6 +62,7 @@
 
 
 <script>
+import BackgroundMusic from '../components/BackgroundMusic.vue'
 import SlideshowKenBurns from '../components/SlideshowKenBurns.vue'
 
 export default {
@@ -80,12 +74,6 @@ export default {
 
   data() {
     return {
-      audioPlaying: false,
-      audioMuted: true,
-      audioFinished: false,
-      leavingPage: false,
-      pageFadeOutDuration: 1.4,       //seconds
-      audioTimeAtStartPageLeave: 0    //seconds
     }
   },
 
@@ -116,124 +104,15 @@ export default {
     },
     audioFadeOutDuration() {
       return this.$page.HomePage.edges[0].node.bgAudioFadeOutDuration
-    },
-    tooltipText() {
-      if (this.audioPlaying && !this.audioMuted) {
-        return 'Mute background music'
-      }
-      else if (this.audioPlaying && this.audioMuted) {
-        return 'Unmute background music'
-      }
-      return 'Play background music'
     }
   },
 
-  methods: {
-    clickAudioIcon() {
-      let audioEl = document.getElementById('bgAudio');
-
-      if (!this.audioPlaying) {
-        this.playAndFadeAudio()
-      }
-      else {
-        audioEl.muted = !audioEl.muted;
-        this.audioMuted = !this.audioMuted
-      }
-    },
-    playAndFadeAudio() {
-      let promise = document.getElementById('bgAudio').play();
-      if (promise !== undefined) {
-        promise.then(_ => {          
-          this.audioPlaying = true;
-          this.audioMuted = false;
-          this.getSoundAndFadeAudio();
-        }).catch(error => {
-          console.error(error);
-          this.audioPlaying = false;
-          this.audioMuted = false;
-          console.log('Error playing background audio'); 
-        });
-      }
-      else {
-        this.audioPlaying = false;
-        this.audioMuted = false;
-      }
-    },
-    getSoundAndFadeAudio() {
-      if (this.audioPlaying) {
-        let sound = document.getElementById('bgAudio');
-        sound.volume = 0.0
-        sound.currentTime = 0
-
-        // Fade In
-        let fadeInEndPoint = this.audioFadeInDuration;   //seconds
-        let fadeAudioIn = setInterval(function () {
-          if ((sound.currentTime < fadeInEndPoint) && (sound.volume != 1.0)) {
-            sound.volume = Math.min((sound.currentTime / fadeInEndPoint) * 1.0, 1.0);
-          }
-          if ((sound.currentTime >= fadeInEndPoint) || (sound.volume >= 1.0)) {
-            clearInterval(fadeAudioIn);
-            sound.volume = 1.0
-          }
-        }, 200);
-
-        // Fade Out
-        let audioDuration = this.audioDuration;
-        let fadeOutDuration = this.audioFadeOutDuration;
-        let fadeOutPoint = audioDuration - fadeOutDuration;
-        if (fadeOutPoint <= fadeInEndPoint) {
-          fadeOutPoint = fadeInEndPoint
-        }
-        let fadeAudioOut = setInterval(function() {
-          this.audioFinished = false
-          if ((sound.currentTime >= fadeOutPoint) && (sound.volume != 0.0)) {
-            sound.volume = Math.max(0.0, 1.0 * ((audioDuration - sound.currentTime) / fadeOutDuration));
-          }
-          else if (this.leavingPage) {
-            sound.volume = Math.max(0.0, 1.0 * ((this.audioTimeAtStartPageLeave + this.pageFadeOutDuration - sound.currentTime) / this.pageFadeOutDuration));
-          }
-
-          if (sound.volume === 0.0) {
-            this.audioPlaying = false
-            this.audioFinished = true             
-            clearInterval(fadeAudioOut);
-          }
-        }.bind(this), 200)
-      }
-    },
-  },
-
-  watch: {
-    audioFinished: function (val) {      
-      if (val) {
-        // play audio again with fade in/out        
-        this.playAndFadeAudio()
-      }
-    }
+  methods: {    
   },
 
   components: {
     'slideshow-kenburns':     require('../components/SlideshowKenBurns.vue').default,
-  },
-
-  mounted() {
-    this.playAndFadeAudio()
-
-    // var fixed = document.getElementById('fixed');
-    // fixed.addEventListener('touchmove', function(e) {
-    //   e.preventDefault();
-    // }, false);    
-    // this.$nextTick(() => {
-    //   document.body.addEventListener('touchmove', function(e) {
-    //     e.preventDefault();
-    //   }, false);
-    // })
-  },
-  beforeDestroy() {  
-    // set data for fading out audio
-    this.leavingPage = true
-    let sound = document.getElementById('bgAudio');
-    this.audioTimeAtStartPageLeave = sound.currentTime
+    BackgroundMusic
   }
 }
 </script>
@@ -293,23 +172,11 @@ export default {
   position: relative;
 }
 
-.soundIconContainer{
-  position: absolute;
-  top: 52px;
-  right: 7.3%;
-  z-index: 1000;
-}
-
 .secondaryContent{
   position: absolute;
   bottom: 50px;
   text-align: center;
   right: -6.5%;
-}
-
-.audioIcon {
-  max-width: 72px;
-  height: auto;
 }
 
 .homePgCreditText {
@@ -341,15 +208,6 @@ export default {
     top: 25px;
     left: 25px;
   }
-  .soundIconContainer{
-    position: absolute;
-    top: 17px;
-    right: 7.3%;
-    z-index: 1000;
-  }
-  .audioIcon {
-    max-width: 52px;
-  }
   .homePgMainText {
     font-size: calc(0.75em + 0.75vw);
   }
@@ -360,15 +218,6 @@ export default {
   .openbtn {
     top: 35px;
     left: 35px;
-  }
-  .soundIconContainer{
-    position: absolute;
-    top: 28px;
-    right: 7.3%;
-    z-index: 1000;
-  }
-  .audioIcon {
-    max-width: 57px;
   }
   .homePgMainText {
     font-size: calc(0.65em + 0.65vw);
@@ -381,15 +230,6 @@ export default {
     top: 46px;
     left: 46px;
   }
-  .soundIconContainer{
-    position: absolute;
-    top: 40px;
-    right: 7.3%;
-    z-index: 1000;
-  }
-  .audioIcon {
-    max-width: 62px;
-  }
   .homePgMainText {
     font-size: calc(0.875em + 0.625vw);
   }
@@ -397,15 +237,6 @@ export default {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-  .soundIconContainer{
-    position: absolute;
-    top: 52px;
-    right: 7.3%;
-    z-index: 1000;
-  }
-  .audioIcon {
-    max-width: 67px;
-  }
   .homePgMainText {
     font-size: calc(0.875em + 0.625vw);
   }
