@@ -28,32 +28,21 @@ export default {
   name: 'MusicProduction',
 
   props: {
-    writer: {
-      type: String
-    },
-    artist: {
-      type: String
-    },
-    image: {
-      type: String
-    },
-    bgImg: {
-      type: String
-    },
-    bgImgPos: {
-      type: String,
-      default: 'center center'
-    },
-    bgColor: {
-      type: String,
-      default: '#000'
-    },
-    bgOpacity: {
-      type: Number,
-      default: 0.5
-    },
-    tracks: {
-      type: Array
+    production: {
+      type: Object
+    }
+  },
+
+  data() {
+    return {
+      writer: this.production.hasOwnProperty('writer') ? this.production.writer : '',
+      artist: this.production.hasOwnProperty('artist') ? this.production.artist : '',
+      image: this.production.hasOwnProperty('image') ? this.production.image : '',
+      bgImg: this.production.hasOwnProperty('bgImg') ? this.production.bgImg : '',
+      bgImgPos: this.production.hasOwnProperty('bgImgPos') ? this.production.bgImgPos : 'center center',
+      bgColor: this.production.hasOwnProperty('bgColor') ? this.production.bgColor : '#000',
+      bgOpacity: this.production.hasOwnProperty('bgOpacity') ? this.production.bgOpacity : 0.5,
+      tracks: this.production.hasOwnProperty('tracks') ? this.production.tracks : []
     }
   },
   
@@ -92,10 +81,16 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Lato:700,900&display=swap');
 
+#productionContainer {
+  padding: 0px;
+  margin: 0px;
+}
+  
 #imgAndTracksDiv {
   display: flex;
   width: 100%; 
   text-align: left;
+  /* margin-bottom: 5px; */
 }
   
 #tracksDiv {
@@ -132,7 +127,7 @@ export default {
   text-align: left;
   text-transform: uppercase;
   margin: 0px;
-  padding: 5px 0px;
+  padding: 0px 0px 5px 0px;
 }
 
 .trackTitleText {

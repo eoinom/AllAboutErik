@@ -29,6 +29,7 @@ export default {
 
 .productionTextDiv {
   width: 100%;
+  height: 100%;
   border-style: solid;
   border-width: 1px;
   border-color: #FCFEF4;
