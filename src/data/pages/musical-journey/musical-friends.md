@@ -4,6 +4,11 @@ backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Musical-Friends-groupshot_w8inss.jpg
 titleImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1571091738/Musical%20Journey/Musical%20Friends/musical-friends_p2af5b.png
+bgAudio: >-
+  https://res.cloudinary.com/all-about-erik/video/upload/v1578611847/Musical%20Journey/Musical%20Friends/Japanese_Silky_ixn8ot.mp3
+bgAudioDuration: 296
+bgAudioFadeInDuration: 3.5
+bgAudioFadeOutDuration: 3.5
 friends:
   - imgOrientation: landscape
     imgPosition: bottom
