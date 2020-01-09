@@ -3,7 +3,7 @@ pageTitle: Home
 headingImg: /uploads/allabouterikwhite4-11-18.png
 creditText: Guitar by John Sebastian
 bgAudio: >-
-  https://res.cloudinary.com/all-about-erik/video/upload/v1568419182/Audio/wildwood_remix_website_long_asxcon.mp3
+  https://res.cloudinary.com/all-about-erik/video/upload/v1578612736/Home%20Page/Wildwood_remix_website_long_jxbwkr.mp3
 bgAudioDuration: 123
 bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5
