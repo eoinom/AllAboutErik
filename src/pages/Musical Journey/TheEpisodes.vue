@@ -65,6 +65,13 @@
     </b-container>
 
 
+    <BackgroundMusic
+      :audioFile="$page.TheEpisodes.edges[0].node.bgAudio"
+      :audioDuration="$page.TheEpisodes.edges[0].node.bgAudioDuration"
+      :audioFadeInDuration="$page.TheEpisodes.edges[0].node.bgAudioFadeInDuration"
+      :audioFadeOutDuration="$page.TheEpisodes.edges[0].node.bgAudioFadeOutDuration"
+    />
+    
     <VideoLightBox
       :videos="videos"
       :index="videoIndex"
@@ -91,6 +98,10 @@
         titleImg
         content
         mainImg
+        bgAudio
+        bgAudioDuration
+        bgAudioFadeInDuration
+        bgAudioFadeOutDuration
         videos {
           title
           shortTitle
@@ -108,6 +119,7 @@
 
 
 <script scoped>
+import BackgroundMusic from '../../components/BackgroundMusic.vue'
 import VideoLightBox from '../../components/VideoLightBox.vue'
 import ScrollToTop from '../../components/ScrollToTop.vue'
 
@@ -183,6 +195,7 @@ export default {
   },
 
   components: {
+    BackgroundMusic,
     VideoLightBox,
     ScrollToTop
   },

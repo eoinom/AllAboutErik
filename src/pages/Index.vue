@@ -23,7 +23,7 @@
       />
     </div>
 
-    <background-music
+    <BackgroundMusic
       :audioFile="audioFile"
       :audioDuration="audioDuration"
       :audioFadeInDuration="audioFadeInDuration"
@@ -111,7 +111,7 @@ export default {
   },
 
   components: {
-    'slideshow-kenburns':     require('../components/SlideshowKenBurns.vue').default,
+    'slideshow-kenburns': require('../components/SlideshowKenBurns.vue').default,
     BackgroundMusic
   }
 }

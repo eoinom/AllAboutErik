@@ -93,23 +93,16 @@
           </b-row>
         </b-col>
       </b-row>
-
-      <!-- TEST LIGHT GALLERY -->
-      <!-- <b-row no-gutters align-v="center" align-h="center" class="mb-0 p-1">
-        <b-col>
-          <LightGallery
-            :images="images"
-            :index="imgIndex"
-            :disable-scroll="true"
-            @close="imgIndex = null"
-          />
-          <b-button @click="imgIndex = 1">Open Lightbox</b-button>
-        </b-col>
-      </b-row> -->
-
     </b-container>   
    
 
+    <BackgroundMusic
+      :audioFile="$page.RootsAndYouth.edges[0].node.bgAudio"
+      :audioDuration="$page.RootsAndYouth.edges[0].node.bgAudioDuration"
+      :audioFadeInDuration="$page.RootsAndYouth.edges[0].node.bgAudioFadeInDuration"
+      :audioFadeOutDuration="$page.RootsAndYouth.edges[0].node.bgAudioFadeOutDuration"
+    />
+    
     <VideoLightBox
       :videos="allVideos"
       :index="videoIndex"
@@ -129,6 +122,10 @@
         pageTitle
         headingImg
         content
+        bgAudio
+        bgAudioDuration
+        bgAudioFadeInDuration
+        bgAudioFadeOutDuration
         slides {
           orderNo
           img
@@ -156,9 +153,9 @@
 
 
 <script scoped>
+import BackgroundMusic from '../components/BackgroundMusic.vue'
 import ScrollDownArrow from '../components/ScrollDownArrow.vue'
 import SlideshowImages from '../components/SlideshowImages2.vue'
-// import LightGallery from '../components/vue-light-gallery.vue'
 import VideoLightBox from '../components/VideoLightBox.vue'
 
 export default { 
@@ -170,7 +167,6 @@ export default {
 
   data() {
     return {
-      // imgIndex: null,
       videoIndex: null,
       videoIndexHover: null,
       windowWidth: 0,
@@ -233,9 +229,9 @@ export default {
   },
 
   components: {
+    'slideshow-images': require('../components/SlideshowImages2.vue').default,
     ScrollDownArrow,
-    'slideshow-images':     require('../components/SlideshowImages2.vue').default,
-    // LightGallery,
+    BackgroundMusic,
     VideoLightBox
   },
 }

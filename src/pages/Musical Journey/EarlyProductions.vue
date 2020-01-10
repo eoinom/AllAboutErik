@@ -424,6 +424,13 @@
     </b-container>
 
 
+    <BackgroundMusic
+      :audioFile="$page.EarlyProductions.edges[0].node.bgAudio"
+      :audioDuration="$page.EarlyProductions.edges[0].node.bgAudioDuration"
+      :audioFadeInDuration="$page.EarlyProductions.edges[0].node.bgAudioFadeInDuration"
+      :audioFadeOutDuration="$page.EarlyProductions.edges[0].node.bgAudioFadeOutDuration"
+    />
+    
     <ImageLightBox
       :images="image"
       :index="imageIndex"
@@ -449,6 +456,10 @@
         titleImg
         mainImg
         content
+        bgAudio
+        bgAudioDuration
+        bgAudioFadeInDuration
+        bgAudioFadeOutDuration
         sections {
           textBoxes {
             heading
@@ -481,6 +492,7 @@
 
 
 <script scoped>
+import BackgroundMusic from '../../components/BackgroundMusic.vue'
 import ImageLightBox from '../../components/ImageLightBox.vue'
 import MusicProduction from '../../components/MusicProduction.vue'
 import MusicProductionText from '../../components/MusicProductionText.vue'
@@ -537,6 +549,7 @@ export default {
   },
 
   components: {
+    BackgroundMusic,
     ImageLightBox,
     MusicProduction,
     MusicProductionText,
@@ -632,9 +645,7 @@ export default {
   float: left;
   cursor: pointer;
   pointer-events: auto;
-  /* display:flex; */
-
-  /* min-width: 240px; */
+  
   min-height: 35px;
   margin: 10px 20px 0px 0px;
   padding: 5px 20px;

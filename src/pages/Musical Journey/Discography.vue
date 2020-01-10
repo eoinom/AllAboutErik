@@ -89,6 +89,13 @@
       </div>
     </b-container>
 
+    <BackgroundMusic
+      :audioFile="$page.Discography.edges[0].node.bgAudio"
+      :audioDuration="$page.Discography.edges[0].node.bgAudioDuration"
+      :audioFadeInDuration="$page.Discography.edges[0].node.bgAudioFadeInDuration"
+      :audioFadeOutDuration="$page.Discography.edges[0].node.bgAudioFadeOutDuration"
+    />
+    
     <ScrollToTop
       text="BACK TO THE TOP"
       :includeArrow="true"
@@ -103,6 +110,10 @@
     edges {
       node {
         pageTitle
+        bgAudio
+        bgAudioDuration
+        bgAudioFadeInDuration
+        bgAudioFadeOutDuration
         backgroundImages {
           img
           imgOverlay
@@ -131,6 +142,7 @@
 
 
 <script scoped>
+import BackgroundMusic from '../../components/BackgroundMusic.vue'
 import ScrollDownArrow from '../../components/ScrollDownArrow.vue'
 import ScrollToTop from '../../components/ScrollToTop.vue'
 
@@ -358,6 +370,7 @@ export default {
   },
 
   components: {
+    BackgroundMusic,
     ScrollDownArrow,
     ScrollToTop
   },
