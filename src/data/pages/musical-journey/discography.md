@@ -10,6 +10,11 @@ titleText: >-
   country. He is best known for his work in the 1960s with Tim Hardin, The
   Lovin' Spoonful, The Charlatans, Sopwith Camel, and later with Norman
   Greenbaum and Chris Isaak.
+bgAudio: >-
+  https://res.cloudinary.com/all-about-erik/video/upload/v1578611704/Musical%20Journey/Discography/Brief_Synthophonia_-_Sopwith_Camel_qr7ilf.mp3
+bgAudioDuration: 54
+bgAudioFadeInDuration: 3.5
+bgAudioFadeOutDuration: 3.5
 backgroundImages:
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/01_erik-john-zal-header_camvu7.jpg

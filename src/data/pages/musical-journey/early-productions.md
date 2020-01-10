@@ -6,6 +6,11 @@ titleImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1575928542/Musical%20Journey/Early%20Productions/early_productions-white_e6xoiq.png
 mainImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1576111097/Musical%20Journey/Early%20Productions/img312-2_-_Cropped_ji3ife.png
+bgAudio: >-
+  https://res.cloudinary.com/all-about-erik/video/upload/v1578611792/Musical%20Journey/Early%20Productions/Green_Rocky_Road_-_Tim_Hardin_zujehc.mp3
+bgAudioDuration: 138
+bgAudioFadeInDuration: 3.5
+bgAudioFadeOutDuration: 3.5
 sections:
   - imageLightboxes:
       - buttonText: Original Lyrics

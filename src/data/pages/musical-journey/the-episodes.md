@@ -6,6 +6,11 @@ titleImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1570483854/Musical%20Journey/The%20Episodes/the_episodes_h486wp.png
 mainImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1570483855/Musical%20Journey/The%20Episodes/tim-1-episodes-sm_xt7swp.jpg
+bgAudio: >-
+  https://res.cloudinary.com/all-about-erik/video/upload/v1578612279/Musical%20Journey/The%20Episodes/Harpoon_-_John_Sebastian_rxmqfy.mp3
+bgAudioDuration: 142
+bgAudioFadeInDuration: 3.5
+bgAudioFadeOutDuration: 3.5
 videos:
   - duration: 285
     orderNo: 1
