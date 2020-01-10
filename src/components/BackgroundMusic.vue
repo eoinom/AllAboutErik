@@ -5,7 +5,7 @@
       <img v-if="!audioPlaying || audioMuted" alt="Play background music" src="../assets/images/sound-muted.png" class="audioIcon" @click="clickAudioIcon()" />          
     </span>
 
-    <audio loop id="bgAudio" duration=123>
+    <audio loop id="bgAudio" :duration="audioDuration">
       <source :src="audioFile" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
@@ -15,7 +15,7 @@
 
 <script scoped>
 export default { 
-  name: '',
+  name: 'BackgroundMusic',
 
   props: {
     audioFile: {
@@ -150,10 +150,7 @@ export default {
     this.leavingPage = true
     let sound = document.getElementById('bgAudio');
     this.audioTimeAtStartPageLeave = sound.currentTime
-  },
-
-  components: {
-  },
+  }
 }
 </script>
 
