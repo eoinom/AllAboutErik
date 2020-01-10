@@ -1,19 +1,17 @@
 <template>
   <div class="layout">
-    <!-- <header class="header"> -->
       <div class="openbtn">
-        <g-image alt="Open navigation menu" src="~/assets/images/menu-open.png" width="135px" style="cursor:pointer; vertical-align:baseline;" immediate=true @click="openNav()" />
-        <g-image alt="Open navigation menu" src="~/assets/images/menu-open-hover.png" width="135px" style="cursor:pointer; vertical-align:baseline;" immediate=true @click="openNav()" class="img-hover"/>
+        <img alt="Open navigation menu" src="../assets/images/menu-open.png" style="cursor:pointer; vertical-align:baseline;" immediate=true @click="openNav()" />
+        <img alt="Open navigation menu" src="../assets/images/menu-open-hover.png" style="cursor:pointer; vertical-align:baseline;" immediate=true @click="openNav()" class="img-hover"/>
       </div>
-    <!-- </header> -->
     
     <!-- Main navigation menu -->
     <div id="sideNav-main" class="sidenav">
       <simplebar class="simple-scrollbar" data-simplebar-auto-hide="true">
         <div>
           <div class="closebtn">
-            <g-image alt="Close navigation menu" src="~/assets/images/menu-close.png" style="cursor:pointer" immediate=true @click="closeNav()"/>
-            <g-image alt="Close navigation menu" src="~/assets/images/menu-close-hover.png" style="cursor:pointer" immediate=true @click="closeNav()" class="img-hover"/>
+            <img alt="Close navigation menu" src="../assets/images/menu-close.png" style="cursor:pointer" immediate=true @click="closeNav()"/>
+            <img alt="Close navigation menu" src="../assets/images/menu-close-hover.png" style="cursor:pointer" immediate=true @click="closeNav()" class="img-hover"/>
           </div>
 
           <nav v-for="edge in $static.NavItems.edges" :key="edge.node.text">
@@ -28,25 +26,13 @@
     <!-- </simplebar> -->
 
     <!-- Sub navigation menu -->
-    <!-- <div v-if="showSubSideNav"> -->
       <div id="sideNav-sub" class="sidenav-sub" :style="subSideNavStyles()">
         <div class="submenu-img-container">
-          <!-- <image-component>
-            <template v-slot:image>
-              <g-image :src="activeNav.img" />
-            </template>
-          </image-component> -->
-          <!-- <image-component imageFile="submenu-musical-journey.jpg" /> -->
           <g-link :to="activeNav.to">
-            <!-- Maybe try ading a v-for loop of g-image with src to graphql nodes, add a hidden class and activate the one based on active Nav -->
             <div v-for="edge in $static.NavItems.edges" :key="edge.node.text">
               <g-image v-if="edge.node.img != null && edge.node.text === activeNav.text" :src="edge.node.img" />
-              <!-- <g-image v-if="edge.node.img != null && edge.node.text === activeNav.text" :src="require(`!!assets-loader?@${edge.node.img}`)" /> -->
             </div>
-            <!-- <g-image :src="activeNav.img" /> -->
-            <!-- <img :src="activeImg" /> -->
           </g-link>
-          <!-- <image-component :imageFile="activeNav.img" /> -->
         </div> 
 
         <div class="submenu-text-container">
@@ -121,9 +107,6 @@
     },
     
     computed: {
-      // activeImg() {
-      //   return this.activeNav.img
-      // },
       showSubSideNav() {        
         return this.activeNav.hasOwnProperty('hasSubMenu') && this.activeNav.hasSubMenu === true
       },
@@ -202,7 +185,6 @@
     },
 
     components: {
-      'image-component':     require('~/components/ImageComponent.vue').default,
       simplebar
     } 
   }
@@ -224,15 +206,6 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
-
-/* .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-} */
-
 
 /* The side navigation menu */
 .sidenav {

@@ -57,45 +57,45 @@
         </div>
 
         <div id="leftArrowContainer" v-if="currentIndex > 0" @click="prev()">
-          <g-image 
+          <img
             alt="Left arrow, click for previous image" 
-            src="~/assets/images/arrow-left.png" 
+            src="../assets/images/arrow-left.png" 
             id="prevImageImg"
             class="image-lightbox__prev arrowImg" 
           />
-          <g-image 
+          <img
             alt="Left arrow, click for previous image" 
-            src="~/assets/images/arrow-left-hover.png" 
+            src="../assets/images/arrow-left-hover.png" 
             id="prevImageImg-hover"
             class="image-lightbox__prev arrowImg" 
           />
         </div>
 
         <div id="rightArrowContainer" v-if="currentIndex + 1 < images.length" @click="next()">
-          <g-image 
+          <img
             alt="Right arrow, click for next image" 
-            src="~/assets/images/arrow-right.png" 
+            src="../assets/images/arrow-right.png" 
             id="nextImageImg"
             class="image-lightbox__next arrowImg"
           />
-          <g-image 
+          <img
             alt="Right arrow, click for next image" 
-            src="~/assets/images/arrow-right-hover.png" 
+            src="../assets/images/arrow-right-hover.png" 
             id="nextImageImg-hover"
             class="image-lightbox__next arrowImg" 
           />
         </div>
 
         <div id="closeImgContainer" @click="close()">
-          <g-image 
+          <img
             alt="Right arrow, click for next image" 
-            src="~/assets/images/lightbox-close.png" 
+            src="../assets/images/lightbox-close.png" 
             id="closeImg"
             class="image-lightbox__close" 
           />
-          <g-image 
+          <img
             alt="Right arrow, click for next image" 
-            src="~/assets/images/lightbox-close-hover.png" 
+            src="../assets/images/lightbox-close-hover.png" 
             id="closeImg-hover"
             class="image-lightbox__close" 
           />

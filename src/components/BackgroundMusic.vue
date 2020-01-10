@@ -1,8 +1,8 @@
 <template>
   <div class="soundIconContainer">
     <span v-b-tooltip.hover="{ variant: 'light' }" :title="tooltipText">
-      <g-image v-if="audioPlaying && !audioMuted" alt="Mute background music" src="~/assets/images/sound-playing.png" class="audioIcon" @click="clickAudioIcon()" />
-      <g-image v-if="!audioPlaying || audioMuted" alt="Play background music" src="~/assets/images/sound-muted.png" class="audioIcon" @click="clickAudioIcon()" />          
+      <img v-if="audioPlaying && !audioMuted" alt="Mute background music" src="../assets/images/sound-playing.png" class="audioIcon" @click="clickAudioIcon()" />
+      <img v-if="!audioPlaying || audioMuted" alt="Play background music" src="../assets/images/sound-muted.png" class="audioIcon" @click="clickAudioIcon()" />          
     </span>
 
     <audio loop id="bgAudio" duration=123>
