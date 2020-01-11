@@ -159,7 +159,7 @@ export default {
 <style scoped>
 
 .soundIconContainer{
-  position: absolute;
+  position: fixed;
   top: 52px;
   right: 7.3%;
   z-index: 1000;
