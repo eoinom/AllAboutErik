@@ -113,7 +113,7 @@ export default {
   color: white; 
   font-family: 'Ubuntu Condensed', sans-serif;
   font-feature-settings: 'liga';
-  font-size: 2.625rem;
+  font-size: 3.125rem;
   font-weight: 400;
   text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
   text-transform: uppercase;
