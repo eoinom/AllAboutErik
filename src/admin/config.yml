@@ -170,12 +170,9 @@ collections:
             widget: "list"
             fields: 
               - {label: 'Title', name: 'title', widget: 'string'}
+              - {label: 'Caption', name: 'caption', widget: 'string'}
               - {label: "Track Url", name: "url", widget: "string"}
               - {label: "Image", name: "image", widget: "image"}
-              - label: "Image Position"
-                name: "imgPosition"
-                widget: "select"
-                options: ["left", "right"]
 
       - label: "Musical Journey - Early Productions"
         name: "early-productions"
