@@ -80,19 +80,19 @@ tracks:
     title: Next
     url: >-
       https://res.cloudinary.com/all-about-erik/video/upload/v1579210999/Musical%20Journey/Musical%20Friends/Friends/Nadia/Music/12-Next_kbbzr8.mp3
-  - caption: An inexhaustible supply of the real thing.
+  - caption: An inexhaustible supply of the real thing
     image: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1579207185/Musical%20Journey/Musical%20Friends/Friends/Nadia/Music/13_Icon-youllnever_vgctgr.png
     title: You'll Never Use Up All Of My Love
     url: >-
       https://res.cloudinary.com/all-about-erik/video/upload/v1579210998/Musical%20Journey/Musical%20Friends/Friends/Nadia/Music/13-Youll_Never_Use_Up_All_Of_My_Love_gojvmr.mp3
-  - caption: She can see it in his eyes.
+  - caption: She can see it in his eyes
     image: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1579207186/Musical%20Journey/Musical%20Friends/Friends/Nadia/Music/14_Icon-Goodbye_in_Eyes_uurt1z.jpg
     title: The Goodbye In Your Eyes
     url: >-
       https://res.cloudinary.com/all-about-erik/video/upload/v1579211001/Musical%20Journey/Musical%20Friends/Friends/Nadia/Music/14-The_Goodbye_In_Your_Eyes_usbboj.mp3
-  - caption: A breaking heart needs protection.
+  - caption: A breaking heart needs protection
     image: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1579207186/Musical%20Journey/Musical%20Friends/Friends/Nadia/Music/15_Icon-Wall_of_China_ez6zqv.png
     title: The Wall of China
