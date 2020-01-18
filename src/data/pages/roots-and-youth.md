@@ -3,7 +3,7 @@ pageTitle: Roots and Youth
 headingImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1569014664/RootsAndYouth/rootsandyouth-u1271_rvbm7p.png
 bgAudio: >-
-  https://res.cloudinary.com/all-about-erik/video/upload/v1578613385/RootsAndYouth/In_The_Mood_-_Glenn_Miller_jmb8fj.mp3
+  https://res.cloudinary.com/all-about-erik/video/upload/v1579384935/RootsAndYouth/Body_And_Soul_-_Coleman_Hawkins_uax5kc.mp3
 bgAudioDuration: 215
 bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5
