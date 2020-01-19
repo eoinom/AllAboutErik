@@ -1,6 +1,6 @@
 <template>
   <div v-if="mounted">
-    <vue-plyr :style="dynamicStyles">
+    <vue-plyr ref="plyr" :emit="['playing']" @playing="emitGlobalPlayingEvent" :style="dynamicStyles">
       <audio>
         <source :src="src" type="audio/mp3"/>
       </audio>
@@ -11,6 +11,7 @@
 
 <script scoped>
 import VuePlyr from 'vue-plyr'
+import { EventBus } from '../event-bus'
 
 export default { 
   name: 'AudioPlayer',
@@ -64,8 +65,20 @@ export default {
     }
   },
 
+  methods: {
+    emitGlobalPlayingEvent() {
+      EventBus.$emit('audioPlaying')
+    }
+  },
+
   mounted() {
     this.mounted = true
+
+    EventBus.$on('backgroundMusicPlaying', () => {
+      if (this.$refs.plyr.player.playing) {
+        this.$refs.plyr.player.pause()
+      }
+    })
   },
 
   components: {

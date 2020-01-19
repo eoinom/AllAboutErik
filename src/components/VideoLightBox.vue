@@ -115,6 +115,7 @@
 
 <script>
 import Player from '@vimeo/player'
+import { EventBus } from '../event-bus'
 
 const keyMap = {
   LEFT: 37,
@@ -230,7 +231,7 @@ export default {
 
     if (!document) return;
     this.bodyOverflowStyle = document.body.style.overflow;
-    this.bindEvents();    
+    this.bindEvents();
   },
 
   beforeDestroy() {
@@ -270,6 +271,7 @@ export default {
       }
     },
     videoLoaded($event, videoIndex) {
+      EventBus.$emit('lightboxMediaLoaded');    // used to mute page background music      
       const { target } = $event;
       target.classList.add('loaded');
       if (videoIndex === this.currentIndex) {

@@ -9,6 +9,8 @@
 
 
 <script scoped>
+import { EventBus } from '../event-bus'
+
 export default { 
   name: 'BackgroundMusic',
 
@@ -126,10 +128,20 @@ export default {
   },
 
   watch: {
-    audioFinished: function (val) {      
+    audioFinished(val) {      
       if (val) {
         // play audio again with fade in/out            
         this.playAndFadeAudio()
+      }
+    },
+    audioMuted(val) {      
+      if (!val && this.audioPlaying) {
+        EventBus.$emit('backgroundMusicPlaying')
+      }
+    },
+    audioPlaying(val) {      
+      if (val && !this.audioMuted) {
+        EventBus.$emit('backgroundMusicPlaying')
       }
     }
   },
@@ -137,6 +149,19 @@ export default {
   mounted() {
     this.audio = new Audio(this.audioFile)
     this.playAndFadeAudio()
+
+    EventBus.$on('audioPlaying', () => {
+      if (this.audio != null && this.audioPlaying && !this.audioMuted) {
+        this.audio.muted = true;
+        this.audioMuted = true
+      }
+    })
+    EventBus.$on('lightboxMediaLoaded', () => {
+      if (this.audio != null && this.audioPlaying && !this.audioMuted) {
+        this.audio.muted = true;
+        this.audioMuted = true
+      }
+    })
   },
 
   beforeDestroy() {  

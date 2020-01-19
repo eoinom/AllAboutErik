@@ -117,6 +117,7 @@
 </template>
 
 <script>
+import { EventBus } from '../event-bus'
 
 const keyMap = {
   LEFT: 37,
@@ -253,6 +254,7 @@ export default {
       }
     },
     audioLoaded($event, audioIndex) {
+      EventBus.$emit('lightboxMediaLoaded');    // used to mute page background music   
       const { target } = $event;
       target.classList.add('loaded');
       if (audioIndex === this.currentIndex) {
