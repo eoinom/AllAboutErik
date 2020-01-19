@@ -750,6 +750,14 @@ export default {
     margin-left: 11%;
     margin-right: 11%;
   }
+  #rootyTootTextBox {
+    width: 31%;
+    max-width: 422px;
+  }
+  #warmBabyTextBox {
+    width: 70%;
+    min-width: 440px;
+  }
 }
 
 </style>
