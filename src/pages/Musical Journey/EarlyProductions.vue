@@ -4,7 +4,7 @@
       <g-image :src="titleImg" id="titleImg" class="my-4" />
     </header>
 
-    <b-container fluid id="mainContainer" class="pb-5 px-1">
+    <b-container fluid id="mainContainer" class="pb-5 px-2 px-md-3 px-lg-4 px-xl-5">
 
       <b-row no-gutters style="" class="mt-2">
         <b-col>
@@ -124,7 +124,7 @@
 
       <!-- SECTIONS[4] - ROOTY TOOT & WARM BABY -->
       <b-row no-gutters class="py-4">
-        <div style="width:38.5%; max-width:422px" v-if="sections[4].textBoxes.length > 0">            
+        <div id="rootyTootTextBox" v-if="sections[4].textBoxes.length > 0">
           <music-production-text
             :title="sections[4].textBoxes[0].heading"
             :body="sections[4].textBoxes[0].text"
@@ -149,7 +149,7 @@
               </button>
             </div>
 
-            <div style="width:75.5%; min-width:458px; margin-top:10px" v-if="sections[4].textBoxes.length > 0">            
+            <div id="warmBabyTextBox" v-if="sections[4].textBoxes.length > 0">
               <music-production-text
                 :title="sections[4].textBoxes[1].heading"
                 :body="sections[4].textBoxes[1].text"
@@ -604,8 +604,8 @@ export default {
 
 #mainContainer {
   width: 100%;
-  max-width: 1316px;
-  padding: 0;
+  max-width: 1412px;
+  padding-top: 0;
   text-align: center;
 }
 
@@ -672,6 +672,16 @@ export default {
 }
 .lightBoxBtn:hover {
   background-color: #4B5B45;
+}
+
+#rootyTootTextBox {
+  width: 38.5%;
+  max-width: 422px;
+}
+#warmBabyTextBox {
+  width: 75.5%;
+  min-width: 458px;
+  margin-top: 10px;
 }
 
 
