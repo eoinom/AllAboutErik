@@ -241,7 +241,7 @@ sections:
           - title: Tweedlede Dum's Drive-In
             track: >-
               https://res.cloudinary.com/all-about-erik/video/upload/v1576018290/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/A_Surfin_Crew_-_Tweedlede_Dums_Drive-In_lmnn4a.mp3
-        writer: Erik Jacobsen & HenryDiltz
+        writer: Erik Jacobsen & Henry Diltz
   - imageLightboxes:
       - buttonText: Original Vinyl
         image: >-
