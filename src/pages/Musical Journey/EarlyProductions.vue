@@ -105,7 +105,6 @@
               v-for="(production, iProd) in sections[0].productions"
               :key="iProd"
               :production="production"
-              :showImage="false"
             />
             <button 
               v-for="(lightBox, iLightBox) in sections[0].imageLightboxes" 
