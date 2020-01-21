@@ -14,8 +14,8 @@
       </b-row>
       
 
-      <!-- LAYOUT FOR PHONES -->
-      <div v-if="windowWidth < 768">
+      <!-- LAYOUT FOR PHONES & TABLETS -->
+      <div v-if="windowWidth < 992">
         <b-row v-for="(section, iSec) in sections" :key="iSec" no-gutters class="pt-3 pb-2">
 
           <div v-if="section.textBoxes.length > 1 || section.productions.length > 1" class="sectionContainerPhones">
@@ -95,7 +95,7 @@
       </div>
 
 
-      <!-- LAYOUT FOR TABLETS & DESKTOPS -->
+      <!-- LAYOUT FOR DESKTOPS -->
       <div v-else>
 
         <!-- SECTIONS[0] - BOBO THE CHEERLEADER -->
@@ -781,6 +781,7 @@ export default {
 }
 
 .sectionContainerPhones {
+  flex: 1;
   padding: 15px 20px;
   border-style: solid;
   border-width: 1px;
