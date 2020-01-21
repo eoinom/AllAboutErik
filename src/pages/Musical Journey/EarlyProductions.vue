@@ -663,6 +663,11 @@ export default {
     window.addEventListener('touchmove', function (event) {
       event.preventDefault()
     }, {passive: false})
+
+    // Allows content to move on touch.
+    document.querySelector("body").addEventListener('touchmove', function (event) {
+      event.stopPropagation()
+    }, false)
   },
 
   components: {
