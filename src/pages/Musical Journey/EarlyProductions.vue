@@ -653,6 +653,16 @@ export default {
         this.windowWidth = window.innerWidth
       });
     })
+
+    // Prevents window from moving on touch on older browsers.
+    window.addEventListener('touchmove', function (event) {
+      event.preventDefault()
+    }, false)
+
+    // Prevents window from moving on touch on newer browsers.
+    window.addEventListener('touchmove', function (event) {
+      event.preventDefault()
+    }, {passive: false})
   },
 
   components: {
