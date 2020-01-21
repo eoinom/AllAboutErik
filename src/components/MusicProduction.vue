@@ -2,12 +2,12 @@
   <b-container fluid id="productionContainer">
     <b-row no-gutters>
       <b-col>
-        <p class="titleText">{{ titleText }}</p>
+        <p v-if="showTitleCredits" class="titleText">{{ titleText }}</p>
         
         <div id="imgAndTracksDiv">
-          <img :src="image" />
+          <img v-if="showImage" :src="image" />
           
-          <div :style="tracksDivStyles" id="tracksDiv">
+          <div v-if="showTracks" :style="tracksDivStyles" id="tracksDiv">
             <div v-for="(track, iTrack) in tracks" :key="iTrack">
               <p class="trackTitleText">{{ track.title }}</p>
               <audio-player :src="track.track" secondaryColor="#E30829" padding="0px 0px" />
@@ -30,6 +30,18 @@ export default {
   props: {
     production: {
       type: Object
+    },
+    showImage: {
+      type: Boolean,
+      default: true
+    },
+    showTitleCredits: {
+      type: Boolean,
+      default: true
+    },
+    showTracks: {
+      type: Boolean,
+      default: true
     }
   },
 
@@ -50,13 +62,21 @@ export default {
     titleText() {
       let titleText = ''
       if (this.writer != '') {
-        titleText = 'WRITER: ' + this.writer
+         if (this.writer.includes(',') || this.writer.includes('&')) {
+          titleText += 'WRITERS: ' + this.writer
+        } else {
+          titleText += 'WRITER: ' + this.writer
+        }
       }
       if (this.artist != '') {
         if (this.writer != '') {
           titleText += ' // '
         }
-        titleText += 'ARTIST: ' + this.artist
+        if (this.artist.includes(',') || this.artist.includes('&')) {
+          titleText += 'ARTISTS: ' + this.artist
+        } else {
+          titleText += 'ARTIST: ' + this.artist
+        }
       }
       return titleText
     },

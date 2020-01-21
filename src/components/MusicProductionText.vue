@@ -1,7 +1,7 @@
 <template>
-  <div class="productionTextDiv">
-    <p class="title">{{ title }}</p>
-    <p class="body">{{ body }}</p>
+  <div class="productionTextDiv" :class="dynamicClass" :style="dynamicStyles">
+    <p v-if="title != null && title != ''" class="title">{{ title }}</p>
+    <p v-if="body != null && body != ''" class="body">{{ body }}</p>
   </div>
 
 </template>
@@ -17,7 +17,31 @@ export default {
     },
     body: {
       type: String
-    }    
+    },
+    includeBorder: {
+      type: Boolean,
+      default: true
+    },
+    divHeight: {
+      type: String,
+      default: '100%'
+    },
+    divPadding: {
+      type: String,
+      default: '15px 20px'
+    } 
+  },
+
+  computed: {
+    dynamicClass() {
+      return this.includeBorder ? 'border' : ''
+    },
+    dynamicStyles() {
+      return {
+        '--divHeight' : this.divHeight,
+        '--divPadding' : this.divPadding
+      }
+    }
   }
 }
 </script>
@@ -29,16 +53,19 @@ export default {
 
 .productionTextDiv {
   width: 100%;
-  height: 100%;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #FCFEF4;
-  border-radius: 9px;
-  padding: 15px 20px;
+  height: var(--divHeight);
+  padding: var(--divPadding);
 
   color: white;
   font-family: 'Lora', serif;
   font-feature-settings: 'liga';
+}
+
+.border {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FCFEF4;
+  border-radius: 9px;
 }
 
 .title {
