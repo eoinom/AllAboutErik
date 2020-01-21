@@ -691,7 +691,7 @@ export default {
 }
 
 body {
-  overscroll-behavior: none;
+  overscroll-behavior: contain;
 }
 
 .layout {
