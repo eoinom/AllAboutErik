@@ -1,8 +1,8 @@
 <template>
   <div class="layout">
       <div class="openbtn">
-        <img alt="Open navigation menu" src="../assets/images/menu-open.png" style="cursor:pointer; vertical-align:baseline;" immediate=true @click="openNav()" />
-        <img alt="Open navigation menu" src="../assets/images/menu-open-hover.png" style="cursor:pointer; vertical-align:baseline;" immediate=true @click="openNav()" class="img-hover"/>
+        <img alt="Open navigation menu" src="../assets/images/menu-open.png" immediate=true @click="openNav()" />
+        <img alt="Open navigation menu" src="../assets/images/menu-open-hover.png" immediate=true @click="openNav()" class="img-hover"/>
       </div>
     
     <!-- Main navigation menu -->
@@ -10,8 +10,8 @@
       <simplebar class="simple-scrollbar" data-simplebar-auto-hide="true">
         <div>
           <div class="closebtn">
-            <img alt="Close navigation menu" src="../assets/images/menu-close.png" style="cursor:pointer" immediate=true @click="closeNav()"/>
-            <img alt="Close navigation menu" src="../assets/images/menu-close-hover.png" style="cursor:pointer" immediate=true @click="closeNav()" class="img-hover"/>
+            <img alt="Close navigation menu" src="../assets/images/menu-close.png" immediate=true @click="closeNav()"/>
+            <img alt="Close navigation menu" src="../assets/images/menu-close-hover.png" immediate=true @click="closeNav()" class="img-hover"/>
           </div>
 
           <nav v-for="edge in $static.NavItems.edges" :key="edge.node.text">
@@ -259,6 +259,7 @@ body {
 
 
 .openbtn {
+  cursor: pointer;
   display: inline-block;
   padding-bottom: 35px;
   top: 57px;
@@ -267,7 +268,11 @@ body {
   width: 35px;
   z-index: 1000;
 }
+.openbtn img {
+  vertical-align: baseline;
+}
 .closebtn {
+  cursor: pointer;
   display: inline-block;
   padding-bottom: 35px;
   position: relative;  
