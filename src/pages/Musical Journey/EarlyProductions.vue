@@ -690,6 +690,10 @@ export default {
   font-weight: normal;
 }
 
+body {
+  overscroll-behavior: none;
+}
+
 .layout {
   padding: 0;
 }
