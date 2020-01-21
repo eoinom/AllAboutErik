@@ -1,14 +1,14 @@
 <template>
   <Layout> 
-    <header id="header" :style="headerStyle">
+    <header id="header" :style="headerStyles">
       <g-image :src="titleImg" id="titleImg" class="my-4" />
     </header>
 
     <b-container fluid id="mainContainer" class="pb-5 px-2 px-md-3 px-lg-4 px-xl-5">
 
-      <b-row no-gutters style="" class="mt-2">
+      <b-row no-gutters>
         <b-col>
-          <g-image :src="mainImg" id="mainImg" class="" />
+          <g-image :src="mainImg" id="mainImg" />
           <span v-html="mainText" id="mainImgText" />
         </b-col>
       </b-row>
@@ -627,10 +627,12 @@ export default {
     sections() {
       return this.$page.EarlyProductions.edges[0].node.sections
     },
-    headerStyle() {
-      return {
+    headerStyles() {
+      let css = {
         '--headerBgImg': 'url(' + this.headerBgImg + ')'
       }
+      css.position = this.windowWidth < 992 ? 'sticky' : 'static'
+      return css
     },
   },
 
@@ -696,12 +698,17 @@ export default {
 #header {
   background-image: var(--headerBgImg);
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.32);
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   padding-top: 12.5px;
   padding-bottom: 12.5px;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  border: 0px solid black;
+  border-bottom-width: 8px;
 }
 
 #titleImg {

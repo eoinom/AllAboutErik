@@ -180,6 +180,7 @@ export default {
   position: fixed;
   top: 52px;
   right: 7.3%;
+  z-index: 1000;
 }
 
 .audioIcon {
