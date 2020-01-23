@@ -649,26 +649,29 @@ export default {
   mounted() {
     this.windowWidth = window.innerWidth
 
-    this.$nextTick(() => {
+    // this.$nextTick(() => {
       window.addEventListener('resize', () => {  
         this.windowWidth = window.innerWidth
       });
-    })
+    // })
+    window.addEventListener('orientationchange', () => {  
+      this.windowWidth = window.innerWidth
+    });
 
-    // Prevents window from moving on touch on older browsers.
-    window.addEventListener('touchmove', function (event) {
-      event.preventDefault()
-    }, false)
+    // // Prevents window from moving on touch on older browsers.
+    // window.addEventListener('touchmove', function (event) {
+    //   event.preventDefault()
+    // }, false)
 
-    // Prevents window from moving on touch on newer browsers.
-    window.addEventListener('touchmove', function (event) {
-      event.preventDefault()
-    }, {passive: false})
+    // // Prevents window from moving on touch on newer browsers.
+    // window.addEventListener('touchmove', function (event) {
+    //   event.preventDefault()
+    // }, {passive: false})
 
-    // Allows content to move on touch.
-    document.querySelector("body").addEventListener('touchmove', function (event) {
-      event.stopPropagation()
-    }, false)
+    // // Allows content to move on touch.
+    // document.querySelector("body").addEventListener('touchmove', function (event) {
+    //   event.stopPropagation()
+    // }, false)
   },
 
   components: {
