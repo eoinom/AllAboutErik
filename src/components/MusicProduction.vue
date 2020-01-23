@@ -141,8 +141,8 @@ export default {
   font-family: 'Lato', sans-serif;
   font-feature-settings: 'liga';
   letter-spacing: 4px;
-  line-height: 18px;
-  font-size: 15px;
+  line-height: 1.125rem;
+  font-size: 0.9375rem;
   font-weight: 700;
   text-align: left;
   text-transform: uppercase;
@@ -155,8 +155,8 @@ export default {
   font-family: 'Lato', sans-serif;
   font-feature-settings: 'liga';
   letter-spacing: 5px;
-  line-height: 18px;
-  font-size: 15px;
+  line-height: 1.125rem;
+  font-size: 0.9375rem;
   font-weight: 900;
   text-align: left;
   text-transform: uppercase;
@@ -164,4 +164,44 @@ export default {
   padding: 7px 18px;
 }
 
+
+/* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {  
+  .titleText {
+    line-height: 1rem;
+    font-size: 0.875rem;
+  }
+  .trackTitleText {
+    letter-spacing: 4px;
+    line-height: 1rem;
+    font-size: 0.875rem;
+    padding: 7px 10px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .titleText {
+    line-height: 1rem;
+    font-size: 0.875rem;
+  }
+  .trackTitleText {
+    letter-spacing: 4px;
+    line-height: 1rem;
+    font-size: 0.875rem;
+    padding: 7px 10px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+}
 </style>

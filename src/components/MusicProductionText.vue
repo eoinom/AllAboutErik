@@ -69,24 +69,64 @@ export default {
 }
 
 .title {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   text-align: left;
   letter-spacing: 3px;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: uppercase;
   margin: 0px;
   padding-bottom: 10px;
 }
 
 .body {
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 400;
   text-align: justify;
   letter-spacing: 2px;
-  line-height: 20px;
+  line-height: 1.25rem;
   margin: 0px;
   padding: 0px;
+}
+
+
+
+/* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {  
+  .title {
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    padding-bottom: 6px;
+  }
+  .body {
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .title {
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    padding-bottom: 6px;
+  }
+  .body {
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
 }
 
 </style>

@@ -16,22 +16,22 @@
 
       <!-- LAYOUT FOR PHONES & TABLETS -->
       <div v-if="windowWidth < 992">
-        <b-row v-for="(section, iSec) in sections" :key="iSec" no-gutters class="pt-3 pb-2">
+        <b-row v-for="(section, iSec) in sections" :key="'S'+iSec+1" no-gutters class="pt-3 pb-2">
 
           <div v-if="section.textBoxes.length > 1 || section.productions.length > 1" class="sectionContainerPhones">
             <music-production-text
               v-for="(textBox, iText) in section.textBoxes"
-              :key="iText"
+              :key="'S'+(iSec+1) + 'T'+(iText+1)"
               :title="textBox.heading"
               :body="textBox.text"
               :includeBorder="false"
               :divHeight="'fit-content'"
-              :divPadding="iText === 0 ? '0' : '15px 0 0 0'"
+              :divPadding="iText === 0 ? '0' : '12px 0 0 0'"
             />
-            <div style="display:flex; margin-bottom:10px">
+            <div class="responsiveBtnDiv">
               <button 
                 v-for="(lightBox, iLightBox) in section.imageLightboxes" 
-                :key="iLightBox + 1" 
+                :key="'S'+(iSec+1) + 'L'+(iLightBox + 1)" 
                 class="lightBoxBtn"
                 @click="lightBoxBtnClick(lightBox)">
                   {{ lightBox.buttonText }}
@@ -39,7 +39,7 @@
             </div>
             <music-production 
               v-for="(production, iProd) in section.productions"
-              :key="iProd"
+              :key="'S'+(iSec+1) + 'P'+(iProd + 1)"
               :production="production"
               :showImage="false"
               :showTitleCredits="true"
@@ -51,15 +51,15 @@
           <div v-else class="sectionContainerPhones">
             <music-production-text
               v-for="(textBox, iText) in section.textBoxes"
-              :key="iText"
+              :key="'S'+(iSec+1) + 'T'+(iText+1) + 'h'"
               :title="textBox.heading"
               :includeBorder="false"
-              :divHeight="fit-content"
-              :divPadding="0"
+              :divHeight="'fit-content'"
+              divPadding='0'
             />
             <music-production 
               v-for="(production, iProd) in section.productions"
-              :key="iProd"
+              :key="'S'+(iSec+1) + 'P'+(iProd + 1) + 'c'"
               :production="production"
               :showImage="false"
               :showTitleCredits="true"
@@ -67,13 +67,13 @@
             />
             <music-production-text
               v-for="(textBox, iText) in section.textBoxes"
-              :key="iText"
+              :key="'S'+(iSec+1) + 'T'+(iText+1)+ 'b'"
               :body="textBox.text"
               :includeBorder="false"
               :divHeight="'fit-content'"
-              :divPadding="0"
+              divPadding='0'
             />
-            <div style="display:flex; margin-bottom:10px">
+            <div class="responsiveBtnDiv">
               <button 
                 v-for="(lightBox, iLightBox) in section.imageLightboxes" 
                 :key="iLightBox + 1" 
@@ -84,7 +84,7 @@
             </div>
             <music-production 
               v-for="(production, iProd) in section.productions"
-              :key="iProd"
+              :key="'S'+(iSec+1) + 'P'+(iProd + 1) + 't'"
               :production="production"
               :showImage="false"
               :showTitleCredits="false"
@@ -630,7 +630,8 @@ export default {
       let css = {
         '--headerBgImg': 'url(' + this.headerBgImg + ')'
       }
-      css.position = this.windowWidth < 992 ? 'sticky' : 'static'
+      // css.position = this.windowWidth < 992 ? 'sticky' : 'static'  // to make header sticky for mobiles + tablets
+      // css.position = this.windowWidth < 768 ? 'sticky' : 'static'  // to make header sticky for mobiles only
       return css
     },
   },
@@ -812,6 +813,12 @@ body {
   border-width: 1px;
   border-color: #FCFEF4;
   border-radius: 9px;
+  text-align: left;
+}
+.responsiveBtnDiv {
+  display: grid;
+  grid-gap: 10px;
+  margin: 10px 0px 5px 0px;
 }
 
 #rootyTootTextBox {
@@ -840,12 +847,12 @@ body {
 
 @media (max-width: 400px) {
   #titleImg {
-    max-width: 60%;
+    max-width: 55%;
   }
 }
 @media (min-width: 400.01px) and (max-width: 575.98px) {
   #titleImg {
-    max-width: 65%;
+    max-width: 58%;
   }
 }
 
@@ -862,10 +869,16 @@ body {
     margin-left: 6%;
     margin-right: 6%;
   }
+  .lightBoxBtn {
+    margin: 0;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
+  #titleImg {
+    max-width: 63%;
+  }
   #mainImgText {
     /* font-size: 1.35rem;  20.83px with 16px default size       */
     /* line-height: 30px;   */
@@ -877,10 +890,19 @@ body {
     margin-left: 8%;
     margin-right: 8%;
   }
+  .responsiveBtnDiv {
+    display: inline-block;
+  }
+  .lightBoxBtn {
+    margin: 0px 10px 0 0;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  #titleImg {
+    max-width: 65%;
+  }
   #mainImgText {
     font-size: 1.5rem;  /* 19.2px with 16px default size */  
     letter-spacing: 1px;
@@ -888,6 +910,12 @@ body {
     bottom: 21px;
     margin-left: 10%;
     margin-right: 10%;
+  }
+  .responsiveBtnDiv {
+    display: inline-block;
+  }
+  .lightBoxBtn {
+    margin: 0px 10px 0 0;
   }
   #rootyTootTextBox {
     width: 31%;
