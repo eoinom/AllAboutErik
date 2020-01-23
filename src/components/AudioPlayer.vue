@@ -75,7 +75,7 @@ export default {
     this.mounted = true
 
     EventBus.$on('backgroundMusicPlaying', () => {
-      if (this.$refs.plyr.player.playing) {
+      if (this.$refs.hasOwnProperty('plyr') && this.$refs.plyr.player.playing) {
         this.$refs.plyr.player.pause()
       }
     })
