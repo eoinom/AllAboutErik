@@ -193,8 +193,8 @@ export default {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .soundIconContainer{
-    top: 17px;
-    right: 7.3%;
+    top: 25px;
+    right: 22px;
   }
   .audioIcon {
     max-width: 52px;
@@ -204,8 +204,8 @@ export default {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .soundIconContainer{
-    top: 28px;
-    right: 7.3%;
+    top: 32px;
+    right: 35px;
   }
   .audioIcon {
     max-width: 57px;
@@ -215,8 +215,8 @@ export default {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .soundIconContainer{
-    top: 40px;
-    right: 7.3%;
+    top: 35px;
+    right: 46px;
   }
   .audioIcon {
     max-width: 62px;
@@ -226,8 +226,8 @@ export default {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
   .soundIconContainer{
-    top: 52px;
-    right: 7.3%;
+    top: 39px;
+    right: 44px;
   }
   .audioIcon {
     max-width: 67px;

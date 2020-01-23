@@ -433,7 +433,7 @@ body {
     font-size: 12px;
   }
   .openbtn {
-    top: 25px;
+    top: 33px;
     left: 25px;
   }
   .openbtn img {
@@ -454,7 +454,7 @@ body {
     left: 202px;
   }
   .openbtn {
-    top: 35px;
+    top: 39px;
     left: 35px;
   }
   .openbtn img {
@@ -471,7 +471,7 @@ body {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .openbtn {
-    top: 46px;
+    top: 41px;
     left: 46px;
   }
   .openbtn img {
@@ -484,6 +484,10 @@ body {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
+  .openbtn {
+    top: 44px;
+    left: 44px;
+  }
   .openbtn img {
     max-width: 69px;
   }
