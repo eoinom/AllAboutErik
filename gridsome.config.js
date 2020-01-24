@@ -106,5 +106,12 @@ module.exports = {
         typeName: 'Discography'
       }
     },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/pages/short-films.md',
+        typeName: 'ShortFilms'
+      }
+    },
   ]
 }
