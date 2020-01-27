@@ -6,55 +6,39 @@
 
     <b-container fluid id="mainContainer" class="pb-5 pb-xl-3 px-1">
 
-      <!-- <b-row no-gutters class="mt-2">
-        <b-col>
-          <g-image :src="mainImg" id="mainImg" />
-          <span v-html="mainText" id="mainImgText" />
-        </b-col>
-      </b-row> -->
-
       <!-- VIDEOS -->
-      <b-row no-gutters v-for="(video, index) in videos" :key="video.title" @click="videoIndex = index" @mouseover="videoIndexHover = index" @mouseleave="videoIndexHover = null" style="cursor:pointer" class="mt-3">
-        
-        <b-col cols="12" xl="7" class="thumbnailImgContainer">
-          <g-image :alt="video.title" v-if="video.thumbnailImg != null" :src="video.thumbnailImg" class="thumbnailImg"/>
+      <b-row no-gutters align-h="center" id="videos" class="mt-2 mt-sm-3">
+        <b-col cols="6" sm="4" xl="3" align-self="center" v-for="(video, index) in videos" :key="video.title" @click="videoIndex = index" @mouseover="videoIndexHover = index" @mouseleave="videoIndexHover = null" class="mb-2 px-2 mb-sm-3 px-sm-3">
 
-          <div class="thumbnailImgOverlay">
-            <p class="mb-0 mb-lg-1 mb-xl-2">
-              <g-image alt="Play symbol" v-if="video.url != null" src="~/assets/images/playarrowcircle.png" class="thumbnailPlayVideoImg thumbnailImgHovered" />
-            </p>
-            <p v-if="video.duration != null" class="videoDurationText thumbnailImgHovered">
-              {{ durationInMinsText(video.duration) }} 
-            </p>
-          </div>
-        </b-col>
+          <div class="videoThumbnailContainer">
+            
+            <div class="thumbnailImgContainer" :style="vignetteStyles">
+              <g-image :alt="video.title" v-if="video.thumbnailImg != null" :src="video.thumbnailImg" class="thumbnailImg"/>
+            </div>
 
-        <b-col cols="12" xl="5" class="videoContentContainer px-5">
-          <b-row align-v="center" align-h="center" class="mb-0 pt-2 pt-md-3 pt-xl-4">
-            <b-col cols="auto" id="videoTextContainer" class="mt-2">
-              <h2 v-if="video.title != null" class="videoTitle mb-4"> {{ video.shortTitle }} </h2>
-              <p v-if="video.subText != null" class="videoSubText" :style="shortText(video.subText)"> {{ video.subText }} </p>
-            </b-col>
-          </b-row>
+            <div class="thumbnailImgTextOverlay">
+              <transition name="fade">
+                <div v-if="index == videoIndexHover">
+                  <h4 class="videoTitle showOnHover">{{ video.title }}</h4>
+                  <br>
+                  <!-- <br><br> -->
+                  <p class="videoSubText showOnHover">{{ video.subText }}</p>
+                </div>
+              </transition>
+            </div>
 
-          <b-row align-h="center" class="playIconRow mb-0 py-2 py-md-3 py-xl-4">
-            <b-col cols="auto" id="playIconCol" style="text-align:right" class="pr-1">
-              <g-image alt="Play symbol" src="~/assets/images/playarrowcircle-black.png" class="playIconImg"/>
-              <g-image alt="Play symbol" src="~/assets/images/playarrowcircle-hover.png" class="playIconImg-hover"/>
-            </b-col>
-
-            <b-col cols="auto" style="text-align:left" class="playIconTextCol pl-1">
-              <p class="playVideoText mb-0">
-                PLAY FILM
-              </p>
-              <p v-if="video.duration != null" class="videoDurationText mb-2">
+            <div v-if="index == videoIndexHover" class="durationBanner">
+              <p v-if="video.duration != null" class="videoDurationText showOnHover">
                 {{ durationInMinsText(video.duration) }} 
               </p>
-            </b-col>
-          </b-row>
+              <br>
+              <g-image alt="Play symbol" src="~/assets/images/playarrowcircle-black.png" class="thumbnailPlayVideoImg" />
+            </div>
 
+          </div>
         </b-col>
       </b-row>
+
     </b-container>
 
 
@@ -191,6 +175,8 @@ export default {
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
 @import url('https://fonts.googleapis.com/css?family=Lora:700i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 
@@ -214,7 +200,6 @@ export default {
 
 .layout {
   padding: 0;
-  /* background-color: #dddddd; */
 }
 
 #header {
@@ -234,7 +219,7 @@ export default {
 
 #mainContainer {
   width: 100%;
-  max-width: 1316px;
+  max-width: 1396px;
   padding: 0;
   text-align: center;
 }
@@ -261,110 +246,102 @@ export default {
   margin-right: 12%;
 }
 
-.thumbnailImgContainer {
-  max-width: 100%;
+.videoThumbnailContainer {
+  position: relative;
+  cursor: pointer;
 }
+
 
 .thumbnailImg {
   width: 100%;
+  max-width: 100%;
+  height: auto;  
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
-.thumbnailImgOverlay {
-  display: none;
+.thumbnailImgTextOverlay {
   color: #FFFFFF;
   position: absolute;
   text-align: center;
-  top: 43%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  opacity: 0.8;
-  transition: opacity 0.25s ease;
-}
+  width: 85%;
 
-.thumbnailImgOverlay:hover {
-  opacity: 1;
-}
-
-.thumbnailImgOverlay .thumbnailPlayVideoImg {
-  width: 18%;
-  height: auto;  
-  position: relative;
-  padding-top: 12%;
-}
-
-.thumbnailImgOverlay .videoDurationText {
-  font-family: 'Lora', serif;
-  font-weight: 700;
-  font-size: 1.6rem;
-  text-shadow: 2px 2px 2px rgba(0,0,0,0.65);
-  padding-top: 5px;
-}
-
-.videoContentContainer {
-  background-color: white;
+  /* transition: all  1.3s ease-in 1.2s; */
 }
 
 .videoTitle {
-  font-family: 'Ubuntu Condensed', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-feature-settings: 'liga';
-  font-weight: 400;
-  font-size: 2.9375rem;  /* 47px with 16px default size */
-  line-height: 47px;  
-  text-align: center;
+  font-weight: 300;
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  letter-spacing: 9px;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  color: #000000; 
+
+  /* transition: all  5.3s ease-in 5.2s; */
 }
 
 .videoSubText {
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
   font-weight: 500;
-  font-size: 1.4375rem;  /* 23px with 16px default size */
-  line-height: 35px;
-  text-align: justify;
-  letter-spacing: 1px;  
-  color: #000000;  
-}
-
-.playIconRow {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  margin-left: -120px;
-  margin-top: -30px;
-}
-
-.playIconRow:hover {
-  color: #EED047;
-}
-
-.playVideoText {
-  font-family: 'NeueHaasGroteskText Pro55';
-  font-feature-settings: 'liga';
-  font-weight: 500;
-  font-size: 1.125rem;   /* 18px at 16px default size */
-  text-transform: uppercase;
-  letter-spacing: 5px;
+  font-size: 0.9375rem;
+  line-height: 1.4375rem;
+  letter-spacing: 1px;
 }
 
 .videoDurationText {
+  display: none;
   font-family: 'Lora', serif;
   font-weight: 700;
-  font-size: 0.875rem;   /* 14px at 16px default size */
-  margin-top: -2px;
+  /* font-size: 1.6rem; */
+  font-size: 16px;
+  /* text-shadow: 2px 2px 2px rgba(0,0,0,0.65); */
 }
 
-.playIconImg-hover {
-  display: none;
+.thumbnailPlayVideoImg {
+  width: 12.7%;
+  min-width: 25px;
+  max-width: 40px;
+  height: auto;  
+  position: relative;
 }
-.playIconImg-hover {
+
+.durationBanner {
+  color: black; 
+  background-color: white;
+  width: 100%; 
+  height: 0;
+  position: absolute; 
+  bottom: 0; 
+  font-size: 14px; 
+  transition: all 0.3s ease-in 0.2s;
+}
+
+.showOnHover {
+  display: none;
+  /* transition: all  .3s ease-in .2s; */
+}
+.videoThumbnailContainer:hover .showOnHover {
   display: inline;
-  cursor: pointer;
 }
-.playIconImg {
+
+/* .videoThumbnailContainer:hover .videoTitle, .videoThumbnailContainer:hover .videoSubText {
   display: none;
+} */
+/* .videoThumbnailContainer:hover .thumbnailPlayVideoImg{
+  display: inline;
+} */
+.videoThumbnailContainer:hover .thumbnailImg {
+  opacity: 0.5;
+}
+.videoThumbnailContainer:hover .durationBanner {
+  height: 25%;
+  padding: 8px 0px;
 }
 
 
@@ -395,8 +372,8 @@ export default {
     margin-right: 6%;
   }
   .videoTitle {
-    font-size: 6vw;
-    line-height: 6vw;
+    font-size: 5vw;
+    line-height: 5vw;
   }
   .videoSubText {
     font-size: 3.5vw;
@@ -412,6 +389,10 @@ export default {
   .thumbnailImgOverlay .videoDurationText {
     /* font-size: 0.8414rem; */
     font-size: 3.5vw;
+  }
+  .videoThumbnailContainer:hover .durationBanner {
+    height: 30%;
+    padding: 4px 0px;
   }
 }
 
