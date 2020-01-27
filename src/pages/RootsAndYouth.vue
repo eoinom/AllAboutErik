@@ -42,17 +42,17 @@
             <div class="thumbnailImgTextOverlay">
               <transition name="fade">
                 <div v-if="index != videoIndexHover">
-                  <span class="videoTitle thumbnailImgNotHovered">{{ video.title }}</span>
-                  <p class="videoSubText thumbnailImgNotHovered">{{ video.subText }}</p>              
+                  <span class="videoTitle">{{ video.title }}</span>
+                  <p class="videoSubText">{{ video.subText }}</p>              
                 </div>
               </transition>
 
               <transition name="fade">
                 <div v-if="index == videoIndexHover">
                   <p class="mb-0 mb-lg-1 mb-xl-2">
-                    <g-image alt="Play symbol" v-if="video.url != null" src="~/assets/images/playarrowcircle.png" class="thumbnailPlayVideoImg thumbnailImgHovered" />
+                    <g-image alt="Play symbol" v-if="video.url != null" src="~/assets/images/playarrowcircle.png" class="thumbnailPlayVideoImg" />
                   </p>
-                  <p v-if="video.duration != null" class="videoDurationText thumbnailImgHovered">
+                  <p v-if="video.duration != null" class="videoDurationText">
                     {{ durationInMinsText(video.duration) }} 
                   </p>
                 </div>
