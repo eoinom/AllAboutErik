@@ -18,17 +18,19 @@
 
             <div class="thumbnailImgTextOverlay">
               <transition name="fade">
-                <div v-if="index == videoIndexHover">
-                  <h4 class="videoTitle showOnHover">{{ video.title }}</h4>
-                  <br>
-                  <!-- <br><br> -->
-                  <p class="videoSubText showOnHover">{{ video.subText }}</p>
+                <div class="showOnHover">
+                  <h4 class="videoTitle mb-1 mb-sm-2 mb-lg-4">{{ video.title }}</h4>
+                  <span 
+                    class="videoSubText" 
+                    :class="index === 6 ? 'hideText' : ''">
+                    {{ video.subText }}
+                  </span>
                 </div>
               </transition>
             </div>
 
-            <div v-if="index == videoIndexHover" class="durationBanner">
-              <p v-if="video.duration != null" class="videoDurationText showOnHover">
+            <div class="durationBanner">
+              <p v-if="video.duration != null" class="videoDurationText ">
                 {{ durationInMinsText(video.duration) }} 
               </p>
               <br>
@@ -176,18 +178,7 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
-
 @import url('https://fonts.googleapis.com/css?family=Lora:700i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
-
-@font-face {
-  font-family: NeueHaasGroteskText Pro55;
-  src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot'); /* IE9 Compat Modes */
-  src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../assets/fonts/nhaasgrotesktxpro-55rg.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
-  font-weight: normal;
-}
 
 @font-face {
   font-family: NeueHaasGroteskText Pro65;
@@ -269,8 +260,6 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 85%;
-
-  /* transition: all  1.3s ease-in 1.2s; */
 }
 
 .videoTitle {
@@ -281,11 +270,10 @@ export default {
   line-height: 1.875rem;
   letter-spacing: 9px;
   text-transform: uppercase;
-
-  /* transition: all  5.3s ease-in 5.2s; */
 }
 
 .videoSubText {
+  display: inline-block;
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
   font-weight: 500;
@@ -295,12 +283,10 @@ export default {
 }
 
 .videoDurationText {
-  display: none;
+  display: inline;
   font-family: 'Lora', serif;
   font-weight: 700;
-  /* font-size: 1.6rem; */
-  font-size: 16px;
-  /* text-shadow: 2px 2px 2px rgba(0,0,0,0.65); */
+  font-size: 1rem;
 }
 
 .thumbnailPlayVideoImg {
@@ -318,24 +304,17 @@ export default {
   height: 0;
   position: absolute; 
   bottom: 0; 
-  font-size: 14px; 
+  font-size: 14px;
   transition: all 0.3s ease-in 0.2s;
 }
 
 .showOnHover {
-  display: none;
-  /* transition: all  .3s ease-in .2s; */
+  opacity: 0;
+  transition: all 0.3s ease-in 0.2s;
 }
 .videoThumbnailContainer:hover .showOnHover {
-  display: inline;
+  opacity: 1;
 }
-
-/* .videoThumbnailContainer:hover .videoTitle, .videoThumbnailContainer:hover .videoSubText {
-  display: none;
-} */
-/* .videoThumbnailContainer:hover .thumbnailPlayVideoImg{
-  display: inline;
-} */
 .videoThumbnailContainer:hover .thumbnailImg {
   opacity: 0.5;
 }
@@ -374,11 +353,12 @@ export default {
   .videoTitle {
     font-size: 5vw;
     line-height: 5vw;
+    letter-spacing: 7px;
   }
   .videoSubText {
     font-size: 3.5vw;
     line-height: 4.5vw;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
   }
   .playIconRow {
     display: none;
@@ -387,20 +367,38 @@ export default {
     display: inline;
   }
   .thumbnailImgOverlay .videoDurationText {
-    /* font-size: 0.8414rem; */
     font-size: 3.5vw;
   }
-  .videoThumbnailContainer:hover .durationBanner {
-    height: 30%;
-    padding: 4px 0px;
+  .showOnHover {
+    opacity: 1;
+  }
+  .thumbnailImg {
+    opacity: 0.5;
+  }
+  .durationBanner {
+    height: 30% !important;
+    padding: 4px 0px !important;
+  }
+  .hideText {
+    display: none;
   }
 }
+@media (max-width: 370px) {
+  .durationBanner {
+    padding: 1px 0px !important;
+  }
+}
+@media (max-width: 350px) {
+  .durationBanner {
+    height: 32% !important;
+    padding: 0px 0px !important;
+  }
+}
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   #mainImgText {
-    /* font-size: 1.35rem;  20.83px with 16px default size       */
-    /* line-height: 30px;   */
     font-size: 2.712vw;
     line-height: 3.906vw; 
 
@@ -410,12 +408,13 @@ export default {
     margin-right: 8%;
   }
   .videoTitle {
-    font-size: 6vw;
-    line-height: 6vw;
+    font-size: 4vw;
+    line-height: 4vw;
+    letter-spacing: 7px;
   }
   .videoSubText {
-    font-size: 3vw;
-    line-height: 4vw;
+    font-size: 2vw;
+    line-height: 2vw;
     margin-bottom: 24px;
   }
   .playIconRow {
@@ -425,8 +424,20 @@ export default {
     display: inline;
   }
   .thumbnailImgOverlay .videoDurationText {
-    /* font-size: 0.8414rem; */
     font-size: 3vw;
+  }
+  .showOnHover {
+    opacity: 1;
+  }
+  .thumbnailImg {
+    opacity: 0.5;
+  }
+  .durationBanner {
+    height: 28% !important;
+    padding: 6px 0px !important;
+  }
+  .hideText {
+    display: none;
   }
 }
 
@@ -445,6 +456,19 @@ export default {
     bottom: 5px;
     left: 0;
     margin: 0;
+  }
+  .showOnHover {
+    opacity: 1;
+  }
+  .thumbnailImg {
+    opacity: 0.5;
+  }
+  .durationBanner {
+    height: 25% !important;
+    padding: 4px 0px !important;
+  }
+  .hideText {
+    display: none;
   }
 }
 
