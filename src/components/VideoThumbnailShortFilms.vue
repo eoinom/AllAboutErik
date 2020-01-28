@@ -5,16 +5,14 @@
     </div>
 
     <div class="thumbnailImgTextOverlay">
-      <transition name="fade">
-        <div class="showOnHover">
-          <h4 class="videoTitle mb-1 mb-sm-2 mb-lg-4">{{ video.title }}</h4>
-          <span 
-            class="videoSubText" 
-            :class="video.subText.length > 60 ? 'hideText' : ''">
-            {{ video.subText }}
-          </span>
-        </div>
-      </transition>
+      <div class="showOnHover">
+        <h4 class="videoTitle mb-1 mb-sm-2 mb-lg-4">{{ video.title }}</h4>
+        <span 
+          class="videoSubText" 
+          :class="video.subText.length > 60 ? 'hideText' : ''">
+          {{ video.subText }}
+        </span>
+      </div>
     </div>
 
     <div class="durationBanner">
