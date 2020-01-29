@@ -7,7 +7,6 @@
       <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.name" class="nav_link" id="nav_next">NEXT</g-link>
     </div>
 
-
     <b-container fluid class="wrapper">
       <b-container fluid class="main-col"> 
         <h1 id="heading"> {{ heading }} </h1>
@@ -34,22 +33,13 @@
           </b-col>
         </b-row>
 
-        <b-row v-if="documentHeight - windowHeight < 800" align-h="center" class="text-center">
+        <b-row align-h="center" class="text-center">
           <b-col>
             <div :style="navLinksVisibility" class="navLinksContainer">
               <g-link to="/musical-journey/musical-friends-menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
             </div>
           </b-col>
         </b-row>
-
-        <div v-else>
-          <br><br><br>
-          <BackToMenu
-            text="BACK TO MUSICAL FRIENDS MENU"
-            link="/musical-journey/musical-friends-menu/"
-            :showAtPosY="Number(800)"
-          />        
-        </div>
         
       </b-container>
     </b-container>
@@ -136,7 +126,6 @@ query ($id: ID!) {
 
 
 <script scoped>
-import BackToMenu from '../components/BackToMenu.vue'
 import ImageLightBox from '../components/ImageLightBox.vue'
 import VideoLightBox from '../components/VideoLightBox.vue'
 import AudioLightBox from '../components/AudioLightBox.vue'
@@ -158,7 +147,7 @@ export default {
       videoIndex: null,
       audioIndex: null,
       windowHeight: 0,      
-      documentHeight: 0,
+      documentHeight: 0
     }
   },
 
@@ -228,12 +217,9 @@ export default {
         '--backgroundOpacity': this.$page.friend.backgroundOpacity / 100
       }
     },
-    showNavLinks() {
-      return this.imageIndex == null & this.videoIndex == null
-    },
     navLinksVisibility() {
       let css = {}
-      if (this.showNavLinks) {
+      if (this.imageIndex == null & this.videoIndex == null) {
         css.visibility = 'visible'
         css.opacity = 1
       }
@@ -296,7 +282,6 @@ export default {
   },
 
   components: {
-    BackToMenu,
     ImageLightBox,
     VideoLightBox,
     AudioLightBox
