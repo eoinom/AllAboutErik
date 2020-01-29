@@ -13,7 +13,7 @@
           
           <div>
             <iframe 
-              :src="mainVideoUrl + '?color=505050'" 
+              :src="mainVideoUrl + '?autoplay=1&loop=1&color=505050'" 
               width="960" height="540" 
               frameborder="0"
               id="mainVideo" />
