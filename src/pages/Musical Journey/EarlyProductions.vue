@@ -18,7 +18,7 @@
       <div v-if="windowWidth < 992">
         <b-row v-for="(section, iSec) in sections" :key="'S'+iSec+1" no-gutters class="pt-3 pb-2">
 
-          <div v-if="section.textBoxes.length > 1 || section.productions.length > 1" class="sectionContainerPhones">
+          <div v-if="section.textBoxes.length > 1 || section.productions.length > 1" class="sectionContainerPhones" :style="sectionContainerPhonesStyles(section.productions[0])">
             <music-production-text
               v-for="(textBox, iText) in section.textBoxes"
               :key="'S'+(iSec+1) + 'T'+(iText+1)"
@@ -42,13 +42,14 @@
               :key="'S'+(iSec+1) + 'P'+(iProd + 1)"
               :production="production"
               :showImage="false"
+              :showBgImage="false"
               :showTitleCredits="true"
               :showTracks="true"
             />
           </div>
 
 
-          <div v-else class="sectionContainerPhones">
+          <div v-else class="sectionContainerPhones" :style="sectionContainerPhonesStyles(section.productions[0])">
             <music-production-text
               v-for="(textBox, iText) in section.textBoxes"
               :key="'S'+(iSec+1) + 'T'+(iText+1) + 'h'"
@@ -62,6 +63,7 @@
               :key="'S'+(iSec+1) + 'P'+(iProd + 1) + 'c'"
               :production="production"
               :showImage="false"
+              :showBgImage="false"
               :showTitleCredits="true"
               :showTracks="false"
             />
@@ -87,6 +89,7 @@
               :key="'S'+(iSec+1) + 'P'+(iProd + 1) + 't'"
               :production="production"
               :showImage="false"
+              :showBgImage="false"
               :showTitleCredits="false"
               :showTracks="true"
             />
@@ -643,6 +646,14 @@ export default {
           'caption': lightBox.caption
         }]
       this.imageIndex = 0
+    },
+    sectionContainerPhonesStyles(production) {
+      return {
+        '--bgImg': production.bgImg ? 'url("' + production.bgImg + '")' : '',
+        '--bgImgPos': production.bgImgPos ? production.bgImgPos : 'center center',
+        '--bgColor': production.bgColor ? production.bgColor : '#000',
+        '--bgOpacity': production.bgOpacity ? production.bgOpacity : 0.5
+      }
     }
   },
 
@@ -811,12 +822,27 @@ body {
 
 .sectionContainerPhones {
   flex: 1;
+  position: relative;
   padding: 15px 20px;
   border-style: solid;
   border-width: 1px;
   border-color: #FCFEF4;
   border-radius: 9px;
   text-align: left;
+}
+.sectionContainerPhones:after {
+  content : "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--bgImg) no-repeat var(--bgImgPos);
+  background-color: var(--bgColor);
+  background-size: cover;
+  opacity : var(--bgOpacity);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 .responsiveBtnDiv {
   display: grid;

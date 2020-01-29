@@ -35,6 +35,10 @@ export default {
       type: Boolean,
       default: true
     },
+    showBgImage: {
+      type: Boolean,
+      default: true
+    },
     showTitleCredits: {
       type: Boolean,
       default: true
@@ -82,10 +86,10 @@ export default {
     },
     tracksDivStyles() {
       return {
-        '--bgImg': 'url("' + this.bgImg + '")',
+        '--bgImg': this.showBgImage ? 'url("' + this.bgImg + '")' : '',
         '--bgImgPos': this.bgImgPos,
-        '--bgColor': this.bgColor,
-        '--bgOpacity': this.bgOpacity
+        '--bgColor': this.showBgImage ? this.bgColor : 'transparent',
+        '--bgOpacity': this.showBgImage ? this.bgOpacity : 0
       }
     }
   },
