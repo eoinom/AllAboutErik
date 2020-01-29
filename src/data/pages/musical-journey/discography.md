@@ -338,7 +338,7 @@ albums:
       Recording Studios was Fred Weinberg, who went on to produce and engineer
       many other films and albums. It was re-released on CD along with You're a
       Big Boy Now, the Spoonful's soundtrack for the 1966 film by Francis Ford
-      Coppola.\[5] It reached No. 126 on the Billboard Pop Albums charts.
+      Coppola. It reached No. 126 on the Billboard Pop Albums charts.
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/07_ls-tiger-thumb_p03r7d.jpg
     title: What's Up Tiger Lily?
