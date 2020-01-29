@@ -6,14 +6,30 @@
 
     <b-container fluid id="mainContainer" class="pb-5 pb-xl-3 px-1">
 
+      <!-- MAIN VIDEO -->
+      <b-row no-gutters align-h="center" align-v="center" id="mainVideoContainer" class="my-2 my-sm-3 px-2 px-sm-3">
+        <b-col cols="12" 
+          align-self="center" >
+          
+          <div>
+            <iframe 
+              :src="mainVideoUrl + '?color=505050'" 
+              width="960" height="540" 
+              frameborder="0"
+              id="mainVideo" />
+          </div>
+
+        </b-col>
+      </b-row>
+
       <!-- VIDEOS -->
-      <b-row no-gutters align-h="center" id="videos" class="mt-2 mt-sm-3">
+      <b-row no-gutters align-h="center" id="videos">
         <b-col cols="6" sm="4" xl="3" 
           align-self="center" 
           v-for="(video, index) in videos" 
           :key="video.title" 
           @click="videoIndex = index" 
-          class="mb-2 px-2 mb-sm-3 px-sm-3" >
+          class="mb-2 mb-sm-3 px-2 px-sm-3" >
           
           <video-thumbnail-short-films :video="video" />
 
@@ -95,9 +111,9 @@ export default {
     titleImg() {
       return this.$page.ShortFilms.edges[0].node.titleImg
     },    
-    // mainVideo(){
-    //   return this.$page.ShortFilms.edges[0].node.mainVideoUrl
-    // },
+    mainVideoUrl(){
+      return this.$page.ShortFilms.edges[0].node.mainVideoUrl
+    },
     videos() {
       return this.$page.ShortFilms.edges[0].node.videos
     },
@@ -153,9 +169,11 @@ export default {
   text-align: center;
 }
 
-/* #mainVideo {
+#mainVideo {
   max-width: 100%;
-} */
+  --containerWidth: calc(100vw - 32px);
+  max-height: calc(0.5625*var(--containerWidth));
+}
 
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
@@ -173,6 +191,9 @@ export default {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {    
+  #mainVideo {
+    --containerWidth: calc(100vw - 16px);
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -185,6 +206,12 @@ export default {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
+}
+
+@media (min-width: 977px) { 
+  #mainVideoContainer {
+    margin: 8px 0;
+  }
 }
 
 </style>
