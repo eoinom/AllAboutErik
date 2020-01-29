@@ -888,15 +888,12 @@ body {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {  
   #mainImgText {
-    /* font-size: 1.2rem;  19.2px with 16px default size       */
-    /* line-height: 27px;   */
-    font-size: 3.33vw;
-    line-height: 4.68vw; 
-
+    font-size: calc(0.8rem + 5.2 * (100vw - 320px) / (576 - 320) ); /* varies between 12.8px (0.8em) at 320px viewport width (iPhone 5) and 18px at 576px vw width */
+    line-height: calc(1rem + 8 * (100vw - 320px) / (576 - 320) ); /* varies between 16px (1em) and 24px */
     letter-spacing: 1px;
     bottom: 0px;
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: 3%;
+    margin-right: 3%;
   }
   .lightBoxBtn {
     margin: 0;
@@ -909,15 +906,12 @@ body {
     max-width: 63%;
   }
   #mainImgText {
-    /* font-size: 1.35rem;  20.83px with 16px default size       */
-    /* line-height: 30px;   */
-    font-size: 2.712vw;
-    line-height: 3.906vw; 
-
+    font-size: calc(1.125rem + 3 * (100vw - 576px) / (768 - 576) ); /* varies between 18px (1.125rem) and 21px */
+    line-height: calc(1.6rem + 4.4 * (100vw - 576px) / (768 - 576) ); /* varies between 25.6px (1.6rem) and 30px */
     letter-spacing: 1px;
     bottom: 19px;
-    margin-left: 8%;
-    margin-right: 8%;
+    margin-left: 6%;
+    margin-right: 6%;
   }
   .responsiveBtnDiv {
     display: inline-block;
@@ -937,8 +931,8 @@ body {
     letter-spacing: 1px;
     line-height: 34px;  
     bottom: 21px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   .responsiveBtnDiv {
     display: inline-block;
@@ -969,12 +963,12 @@ body {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
   #mainImgText {
-    font-size: 1.625rem;  /* 19.2px with 16px default size */  
+    font-size: 1.625rem;  /* 26px with 16px default size */  
     letter-spacing: 1px;
     line-height: 36.5px;  
     bottom: 23px;
-    margin-left: 11%;
-    margin-right: 11%;
+    margin-left: 6%;
+    margin-right: 6%;
   }
   #rootyTootTextBox {
     width: 31%;
