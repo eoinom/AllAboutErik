@@ -1,6 +1,6 @@
 <template>
   <div class="videoThumbnailContainer">              
-    <div :style="vignetteStyles">
+    <div>
       <g-image :alt="video.title" v-if="video.thumbnailImg != null" :src="video.thumbnailImg" class="thumbnailImg"/>
     </div>
 
