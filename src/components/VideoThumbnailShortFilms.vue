@@ -15,14 +15,22 @@
       </div>
     </div>
 
-    <div class="durationBanner">
-      <p v-if="video.duration != null" class="videoDurationText ">
-        {{ durationInMinsText(video.duration) }} 
-      </p>
-      <br>
-      <g-image alt="Play symbol" src="~/assets/images/playarrowcircle-black.png" class="thumbnailPlayVideoImg" />
-    </div>
+    <b-container fluid class="durationBanner">
+      <b-row align-h="center" align-v="center" style="height:100%">
+        <b-col align-self="center">
+          <span v-if="video.duration != null" class="videoDurationText ">
+            {{ durationInMinsText(video.duration) }} 
+          </span>
+          <br>
+          <g-image alt="Play symbol" src="~/assets/images/playarrowcircle-black.png" class="thumbnailPlayVideoImg" />
+        </b-col>
+      </b-row>
+
+    </b-container>
+
   </div>
+
+  
 </template>
 
 
@@ -138,11 +146,12 @@ export default {
 }
 
 .thumbnailPlayVideoImg {
-  width: 12.7%;
+  width: 14.14%;
   min-width: 25px;
   max-width: 40px;
   height: auto;  
   position: relative;
+  padding-bottom: 6px;
 }
 
 .showOnHover {
@@ -157,7 +166,6 @@ export default {
 }
 .videoThumbnailContainer:hover .durationBanner {
   height: 25%;
-  padding: 8px 0px;
 }
 
 
@@ -184,8 +192,8 @@ export default {
     letter-spacing: 7px;
   }
   .videoSubText {
-    font-size: 3.5vw;
-    line-height: 4.5vw;
+    font-size: 13px;
+    line-height: 13px;
     margin-bottom: 8px;
   }
   .thumbnailImgOverlay {
@@ -202,7 +210,6 @@ export default {
   }
   .durationBanner {
     height: 30% !important;
-    padding: 4px 0px !important;
   }
   .hideText {
     display: none;
@@ -216,7 +223,6 @@ export default {
 @media (max-width: 350px) {
   .durationBanner {
     height: 32% !important;
-    padding: 0px 0px !important;
   }
 }
 
@@ -247,7 +253,6 @@ export default {
   }
   .durationBanner {
     height: 28% !important;
-    padding: 6px 0px !important;
   }
   .hideText {
     display: none;
@@ -264,7 +269,6 @@ export default {
   }
   .durationBanner {
     height: 25% !important;
-    padding: 4px 0px !important;
   }
   .hideText {
     display: none;
