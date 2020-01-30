@@ -888,8 +888,8 @@ body {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {  
   #mainImgText {
-    font-size: calc(0.8rem + 5.2 * (100vw - 320px) / (576 - 320) ); /* varies between 12.8px (0.8em) at 320px viewport width (iPhone 5) and 18px at 576px vw width */
-    line-height: calc(1rem + 8 * (100vw - 320px) / (576 - 320) ); /* varies between 16px (1em) and 24px */
+    font-size: calc(0.9375rem + 3 * (100vw - 375px) / (576 - 375) ); /* varies between 15px (0.9375rem) at 375px viewport width (iPhone 6) and 18px at 576px vw width */
+    line-height: calc(1.1875rem + 6.6 * (100vw - 375px) / (576 - 375) ); /* varies between 19px (1rem) and 25.6px */
     letter-spacing: 1px;
     bottom: 0px;
     margin-left: 3%;
