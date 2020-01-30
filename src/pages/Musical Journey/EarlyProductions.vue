@@ -845,8 +845,7 @@ body {
   z-index: -1;
 }
 .responsiveBtnDiv {
-  display: grid;
-  grid-gap: 10px;
+  display: flex;
   margin: 10px 0px 5px 0px;
 }
 
@@ -897,6 +896,19 @@ body {
   }
   .lightBoxBtn {
     margin: 0;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+  }
+  .lightBoxBtn:first-child {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 355px) { /* e.g. for iPhone 5 etc. */
+  .lightBoxBtn {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+    padding: 5px 10px;
   }
 }
 
