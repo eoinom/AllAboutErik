@@ -34,5 +34,100 @@ videos:
       https://res.cloudinary.com/all-about-erik/image/upload/v1580642923/Travels/mumbai_malabar_gwxbtk.jpg
     title: India - Mumbai to the Malibar Coast
     url: 'https://player.vimeo.com/video/269707078'
+  - duration: 717
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642923/Travels/singapore_vrzl3t.jpg
+    title: Singapore
+    url: 'https://player.vimeo.com/video/281884450'
+  - duration: 466
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642923/Travels/seychelles_xa3hds.jpg
+    title: The Seychelles
+    url: 'https://player.vimeo.com/video/272460323'
+  - duration: 403
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642924/Travels/capetown_njc5zv.jpg
+    title: Capetown
+    url: 'https://player.vimeo.com/video/342796945'
+  - duration: 1013
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642924/Travels/bali_si2btf.jpg
+    title: Bali
+    url: 'https://player.vimeo.com/video/212333307'
+  - duration: 1082
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642924/Travels/cuba_fgmvfk.jpg
+    title: Cuba
+    url: 'https://player.vimeo.com/video/140978809'
+  - duration: 1159
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642923/Travels/papua_viclph.jpg
+    title: Papua New Guinea
+    url: 'https://player.vimeo.com/video/211560875'
+  - duration: 670
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642924/Travels/venicel_qcsupd.jpg
+    title: Venice
+    url: 'https://player.vimeo.com/video/352366193'
+  - duration: 996
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642924/Travels/bhutan_wzklvo.jpg
+    title: Bhutan
+    url: 'https://player.vimeo.com/video/272732141'
+  - duration: 901
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642923/Travels/sulawesi_ddeel8.jpg
+    title: Sulawesi Road Trip
+    url: 'https://player.vimeo.com/video/211544218'
+  - duration: 265
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642924/Travels/holland_woygop.jpg
+    title: Holland - Amsterdam
+    url: 'https://player.vimeo.com/video/171630592'
+  - duration: 487
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642923/Travels/tsukijistill_ygyyv8.jpg
+    title: Tsukiji Fish Market - Seafood Lovers Paradise
+    url: 'https://player.vimeo.com/video/281891606'
+  - duration: 1129
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642924/Travels/diningwithchunky_pvl2mo.jpg
+    title: Dining with Chunky
+    url: 'https://player.vimeo.com/video/111801736'
+  - duration: 654
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642924/Travels/baltic_mvyknf.jpg
+    title: The Baltic Cruise
+    url: 'https://player.vimeo.com/video/213149248'
+  - duration: 581
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642923/Travels/rajaampat_vbaqi6.jpg
+    title: Raja Ampat
+    url: 'https://player.vimeo.com/video/281896954'
+  - duration: 768
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642924/Travels/burj_kalifa_wbcmha.jpg
+    title: Dubai
+    url: 'https://player.vimeo.com/video/169764004'
+  - duration: 588
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642923/Travels/mumbai_kmen3j.jpg
+    title: India - Mumbai
+    url: 'https://player.vimeo.com/video/269702189'
+  - duration: 484
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642923/Travels/mangalore_oxmfsl.jpg
+    title: India - Mangalore
+    url: 'https://player.vimeo.com/video/269710035'
+  - duration: 486
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642923/Travels/mumbai_malabar_gwxbtk.jpg
+    title: India - Kochi
+    url: 'https://player.vimeo.com/video/269707078'
+  - duration: 851
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580642923/Travels/tanatoraja_z0jqx4.jpg
+    title: Tana Toraja
+    url: 'https://player.vimeo.com/video/211557056'
 ---
 
