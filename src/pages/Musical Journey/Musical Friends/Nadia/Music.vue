@@ -5,28 +5,32 @@
       <div style="text-align: center">
         <h1 class="heading">{{ title }}</h1>
       </div>
-
-      <br><br>
       
       <div v-for="(track, index) in tracks" :key="index" class="mb-3">
 
         <b-row v-if="index % 2 === 0" align-h="end" align-v="center">
-          <b-col cols="auto" class="pr-2">
+          <b-col class="pr-2">
             <p class="trackTitle textAlignEnd">{{ track.title }}</p>
-            <p class="trackCaption textAlignEnd">{{ track.caption }}</p>
+            <p class="trackCaption textAlignEnd hideOnMobile">{{ track.caption }}</p>
           </b-col>
           <b-col cols="auto" class="pl-2">
             <g-image :src="track.image" class="trackImg my-3" />
+          </b-col>          
+          <b-col cols="12" class="pr-4">
+            <p class="trackCaption textAlignEnd showOnMobile">{{ track.caption }}</p>
           </b-col>
         </b-row>
 
-        <b-row v-else align-h="left" align-v="center">
+        <b-row v-else align-h="start" align-v="center">
           <b-col cols="auto" class="pr-2">
             <g-image :src="track.image" class="trackImg my-3" />
           </b-col>
-          <b-col cols="auto" class="pl-2">
+          <b-col class="pl-2">
             <p class="trackTitle">{{ track.title }}</p>
-            <p class="trackCaption">{{ track.caption }}</p>
+            <p class="trackCaption hideOnMobile">{{ track.caption }}</p>
+          </b-col>
+          <b-col cols="12" class="pl-4">
+            <p class="trackCaption showOnMobile">{{ track.caption }}</p>
           </b-col>
         </b-row>
 
@@ -104,7 +108,6 @@ export default {
 }
 
 .main-col {
-  /* padding: 0 6%; */
   padding: 0 0;
   max-width: 915px;
 }
@@ -117,7 +120,8 @@ export default {
   font-weight: 400;
   text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 2px;  
+  margin: 0 0 20px 0;
 }
 
 .trackTitle {
@@ -139,8 +143,9 @@ export default {
 }
 
 .trackImg {
-  height: 86px;
+  max-height: 86px;
   display: block;
+  /* max-width: 30%; */
 }
 
 .textAlignEnd {
@@ -154,11 +159,48 @@ hr.style-two {
   background-image: linear-gradient(to right, rgba(231, 65, 63, 0.1), rgba(231, 65, 63, 0.75), rgba(231, 65, 63, 0.1));
 }
 
+.hideOnMobile {
+    display: block;
+  }
+.showOnMobile {
+  display: none;
+}
+
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+  .heading {
+    font-size: 2.8rem;
+    letter-spacing: 1.8px;
+    margin-bottom: 0 0 15px 0;
+  }
+  .trackTitle {
+    font-size: 2rem;
+  }
+  .trackCaption {
+    font-size: 0.9rem;
+  }
+  .hideOnMobile {
+    display: none;
+  }
+  .showOnMobile {
+    display: block;
+  }
+}
 
+@media (max-width: 340Px) {  /* for iPhone 5 etc. */
+  .heading {
+    font-size: 2.5rem;
+    letter-spacing: 1.6px;
+    margin-bottom: 0 0 10px 0;
+  }
+  .trackTitle {
+    font-size: 1.5rem;
+  }
+  .trackCaption {
+    font-size: 0.8rem;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
