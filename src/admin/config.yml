@@ -275,6 +275,25 @@ collections:
               - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
               - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
 
+      - label: "Travels"
+        name: "travels"
+        file: "src/data/pages/travels.md"
+        fields:
+          - {label: "Page Title", name: "pageTitle", widget: "string"}
+          - {label: "Header Background Image", name: "headerBgImg", widget: "image"}
+          - {label: "Title Image", name: "titleImg", widget: "image"}
+          - {label: "Main video (Vimeo Url)", name: "mainVideoUrl", widget: "string"}
+          - {label: "Main video overlay text", name: "mainVideoText", widget: "string"}
+          - label: "Videos"
+            name: "videos"
+            widget: "list"
+            fields: 
+              - {label: 'Title', name: 'title', widget: 'string', required: false}
+              # - {label: 'Subtext', name: 'subText', widget: 'markdown', required: false}
+              - {label: "Vimeo Url", name: "url", widget: "string"}
+              - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
+              - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
+
   - label: "Friends"
     name: "friends"
     folder: "src/data/pages/musical-journey/friends"
