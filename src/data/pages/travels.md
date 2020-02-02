@@ -149,5 +149,15 @@ videos:
       https://res.cloudinary.com/all-about-erik/image/upload/v1580646848/Travels/taipei_bz5taf.jpg
     title: Taipei
     url: 'https://player.vimeo.com/video/369947222'
+  - duration: 468
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580647403/Travels/vietnam_ywkufd.jpg
+    title: Vietnam
+    url: 'https://player.vimeo.com/video/354052154'
+  - duration: 2027
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580647803/Travels/japan_hno20g.jpg
+    title: Japan
+    url: 'https://player.vimeo.com/video/386613137'
 ---
 
