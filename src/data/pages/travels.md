@@ -66,7 +66,7 @@ videos:
     url: 'https://player.vimeo.com/video/211560875'
   - duration: 670
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1580642924/Travels/venicel_qcsupd.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580647124/Travels/venice_cemorb.jpg
     title: Venice
     url: 'https://player.vimeo.com/video/352366193'
   - duration: 996
@@ -129,5 +129,25 @@ videos:
       https://res.cloudinary.com/all-about-erik/image/upload/v1580642923/Travels/tanatoraja_z0jqx4.jpg
     title: Tana Toraja
     url: 'https://player.vimeo.com/video/211557056'
+  - duration: 1078
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580645879/Travels/fiji_x2e1ro.jpg
+    title: Fiji
+    url: 'https://player.vimeo.com/video/372450494'
+  - duration: 353
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580646274/Travels/jagalchi-fish-market-south-korea_vhkmuw.jpg
+    title: 'Jagalchi Fish Market - Busan, South Korea'
+    url: 'https://player.vimeo.com/video/356978104'
+  - duration: 1265
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580646524/Travels/malaysian-borneo_gmgghz.jpg
+    title: Malaysian Borneo
+    url: 'https://player.vimeo.com/video/363913467'
+  - duration: 462
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1580646848/Travels/taipei_bz5taf.jpg
+    title: Taipei
+    url: 'https://player.vimeo.com/video/369947222'
 ---
 
