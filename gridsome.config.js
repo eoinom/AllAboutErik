@@ -113,5 +113,12 @@ module.exports = {
         typeName: 'ShortFilms'
       }
     },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/pages/travels.md',
+        typeName: 'Travels'
+      }
+    },
   ]
 }
