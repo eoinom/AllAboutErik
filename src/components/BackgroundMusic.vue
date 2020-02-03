@@ -66,13 +66,17 @@ export default {
       }
     },
     playAndFadeAudio() {
+      // console.log('in playAndFadeAudio');
       let promise = this.audio.play()
       if (promise !== undefined) {
-        promise.then(_ => {          
+        // console.log('promise !== undefined');
+        promise.then(_ => { 
+          // console.log('promise.then');         
           this.audioPlaying = true;
           this.audioMuted = false;
           this.getSoundAndFadeAudio();
         }).catch(error => {
+          // console.log('promise.catch');       
           console.error(error);
           this.audioPlaying = false;
           this.audioMuted = false;
@@ -80,18 +84,23 @@ export default {
         });
       }
       else {
-        console.log('promise undefined'); 
+        // console.log('promise undefined'); 
         this.audioPlaying = false;
         this.audioMuted = false;
       }
     },
     getSoundAndFadeAudio() {      
-      if (this.audioPlaying) {        
+      // console.log('in getSoundAndFadeAudio');
+      if (this.audioPlaying) { 
+        // console.log('in getSoundAndFadeAudio, this.audioPlaying = ' + this.audioPlaying);
+        // console.log('in getSoundAndFadeAudio, this.audio.volume = ' + this.audio.volume + ' & this.audio.currentTime = ' + this.audio.currentTime);
         this.audio.volume = 0.0
         this.audio.currentTime = 0
+        // console.log('now, this.audio.volume = ' + this.audio.volume + ' & this.audio.currentTime = ' + this.audio.currentTime);
 
         // Fade In
         let fadeAudioIn = setInterval(function () {
+          // console.log('fadeAudioIn, this.audio.currentTime = ' + this.audio.currentTime + ', this.audio.volume = ' + this.audio.volume);
           if ((this.audio.currentTime < this.audioFadeInDuration) && (this.audio.volume != 1.0)) {
             this.audio.volume = Math.min((this.audio.currentTime / this.audioFadeInDuration) * 1.0, 1.0);
           }
@@ -104,6 +113,7 @@ export default {
         // Fade Out
         let fadeOutPoint = this.audioDuration - this.audioFadeOutDuration;
         let fadeAudioOut = setInterval(function() {
+          // console.log('fadeAudioOut, this.audio.currentTime = ' + this.audio.currentTime + ', this.audio.volume = ' + this.audio.volume);
           this.audioFinished = false
           if ((this.audio.currentTime >= fadeOutPoint) && (this.audio.volume != 0.0)) {
             this.audio.volume = Math.max(0.0, (this.audioDuration - this.audio.currentTime) / this.audioFadeOutDuration);
@@ -112,15 +122,17 @@ export default {
             this.audio.volume = Math.max(0.0, (this.audioTimeAtStartPageLeave + this.pageFadeOutDuration - this.audio.currentTime) / this.pageFadeOutDuration);
           }
 
-          if (this.audio.volume === 0.0 && !this.audioMuted && !this.leavingPage) {
-            this.audioPlaying = false
-            this.audioFinished = true             
-            clearInterval(fadeAudioOut);
-          }
-          if (this.audio.volume === 0.0 && this.leavingPage) {
-            this.audioPlaying = false
-            this.audioFinished = false             
-            clearInterval(fadeAudioOut);
+          if (this.audio.volume < 0.05 && this.audio.currentTime > 1) {
+            if (!this.audioMuted && !this.leavingPage) {
+              this.audioPlaying = false
+              this.audioFinished = true             
+              clearInterval(fadeAudioOut);
+            }
+            else if (this.leavingPage) {
+              this.audioPlaying = false
+              this.audioFinished = false             
+              clearInterval(fadeAudioOut);
+            }
           }
         }.bind(this), 200)
       }
@@ -129,17 +141,20 @@ export default {
 
   watch: {
     audioFinished(val) {      
+      // console.log('in audioFinished watcher, val = ' + val);
       if (val) {
         // play audio again with fade in/out            
         this.playAndFadeAudio()
       }
     },
-    audioMuted(val) {      
+    audioMuted(val) {
+      // console.log('in audioMuted watcher, val = ' + val + ', this.audioPlaying = ' + this.audioPlaying);
       if (!val && this.audioPlaying) {
         EventBus.$emit('backgroundMusicPlaying')
       }
     },
-    audioPlaying(val) {      
+    audioPlaying(val) {
+      // console.log('in audioPlaying watcher, val = ' + val + ', this.audioMuted = ' + this.audioMuted);
       if (val && !this.audioMuted) {
         EventBus.$emit('backgroundMusicPlaying')
       }
