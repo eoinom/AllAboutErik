@@ -1,3 +1,7 @@
+html {
+  font-size: 16px; /* this is the root font-size which all rem units will be based on */
+}
+
 a, a:hover {
   text-decoration: none !important;
 }
