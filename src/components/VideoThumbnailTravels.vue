@@ -16,15 +16,14 @@
     <b-container fluid class="captionBanner p-2">
       <b-row align-h="center" align-v="center" style="height:100%">
         <b-col align-self="center">
-          <h4 class="videoTitle mb-1 mb-sm-2 mb-lg-4">{{ video.title }}</h4>
+          <!-- <h4 class="videoTitle mb-1 mb-sm-2 mb-lg-4">{{ video.title }}</h4> -->
+          <!-- <h4 class="videoTitle m-1 m-sm-2 m-lg-2">{{ video.title }}</h4> -->
+          <!-- <h4 class="videoTitle p-1 p-sm-2 p-lg-2">{{ video.title }}</h4> -->
+          <h4 class="videoTitle">{{ video.title }}</h4>
         </b-col>
       </b-row>
-
     </b-container>
-
   </div>
-
-  
 </template>
 
 
@@ -105,17 +104,27 @@ export default {
   font-family: 'Open Sans Condensed', sans-serif;
   font-feature-settings: 'liga';
   font-weight: 300;
-  font-size: 1.875rem;
-  line-height: 1.875rem;
+  font-size: 2.3125rem;
+  line-height: 2.3125rem;
   letter-spacing: 9px;
   text-transform: uppercase;
+}
+
+.videoDurationText {
+  display: inline;
+  font-family: 'Lora', serif;
+  font-feature-settings: 'liga';
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 2.125rem;
+  letter-spacing: 2px;
 }
 
 .captionBanner {
   color: white; 
   background-color: black;
   width: 100%; 
-  height: 100px;
+  height: 115px;
   position: block; 
   bottom: 0; 
   font-size: 14px;
@@ -130,13 +139,6 @@ export default {
   line-height: 1.375rem;
   letter-spacing: 7px;
   text-transform: uppercase;
-}
-
-.videoDurationText {
-  display: inline;
-  font-family: 'Lora', serif;
-  font-weight: 700;
-  font-size: 1rem;
 }
 
 /* .thumbnailPlayVideoImg {
@@ -199,7 +201,7 @@ export default {
     opacity: 0.5;
   }
   .captionBanner {
-    height: 30% !important;
+    /* height: 30% !important; */
   }
   .hideText {
     display: none;
@@ -207,12 +209,12 @@ export default {
 }
 @media (max-width: 370px) {
   .captionBanner {
-    padding: 1px 0px !important;
+    /* padding: 1px 0px !important; */
   }
 }
 @media (max-width: 350px) {
   .captionBanner {
-    height: 32% !important;
+    /* height: 32% !important; */
   }
 }
 
@@ -237,7 +239,7 @@ export default {
     opacity: 0.5;
   }
   .captionBanner {
-    height: 28% !important;
+    /* height: 28% !important; */
   }
   .hideText {
     display: none;
@@ -253,7 +255,7 @@ export default {
     opacity: 0.5;
   }
   .captionBanner {
-    height: 25% !important;
+    /* height: 25% !important; */
   }
   .hideText {
     display: none;
