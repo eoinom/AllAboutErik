@@ -149,7 +149,7 @@ export default {
     }
   },
 
-  created() {
+  beforeMount() {
     this.createKeyFrames()
     this.goToIndex(0);
     this.startInterval();
