@@ -127,14 +127,14 @@ export default {
               console.log('Did not recognise value for slides.panStart: ' + this.slides[i].panStart)
           } 
         }
-        let num = i + 1
-        let scaleFrom = this.slides[i].scaleFrom
-        let scaleTo = this.slides[i].scaleTo
-        let Tx = this.translateFactor * startPos[0]
-        let Ty = this.translateFactor * startPos[1]
+        const num = i + 1
+        const scaleFrom = this.slides[i].scaleFrom
+        const scaleTo = this.slides[i].scaleTo
+        const Tx = this.translateFactor * startPos[0]
+        const Ty = this.translateFactor * startPos[1]
         var style = document.createElement('style');
         style.type = 'text/css';
-        var keyFrames = '\
+        var keyFrame = '\
         @keyframes kenburns-' + num + ' {\
           0% {\
             transform: scale3d('+ scaleFrom + ', '+ scaleFrom + ', 1) translate3d('+ Tx + '%, '+ Ty + '%, 0);\
@@ -143,18 +143,16 @@ export default {
             transform: scale3d('+ scaleTo + ', '+ scaleTo + ', 1) translate3d(0, 0, 0);\
           }\
         }';
-        style.innerHTML = keyFrames
+        style.innerHTML = keyFrame
         document.head.appendChild(style)
-      };
+      }
     }
   },
 
-  mounted() {
-    this.createKeyFrames()    
-
+  created() {
+    this.createKeyFrames()
     this.goToIndex(0);
     this.startInterval();
-
   },
 };
 </script>
