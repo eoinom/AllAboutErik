@@ -1,5 +1,12 @@
 <template>
   <Layout> 
+    <BackgroundMusic
+      :audioFile="$page.EarlyProductions.edges[0].node.bgAudio"
+      :audioDuration="$page.EarlyProductions.edges[0].node.bgAudioDuration"
+      :audioFadeInDuration="$page.EarlyProductions.edges[0].node.bgAudioFadeInDuration"
+      :audioFadeOutDuration="$page.EarlyProductions.edges[0].node.bgAudioFadeOutDuration"
+    />
+    
     <header id="header" :style="headerStyles">
       <g-image :src="titleImg" id="titleImg" class="my-4" />
     </header>
@@ -524,12 +531,12 @@
     </b-container>
 
 
-    <BackgroundMusic
+    <!-- <BackgroundMusic
       :audioFile="$page.EarlyProductions.edges[0].node.bgAudio"
       :audioDuration="$page.EarlyProductions.edges[0].node.bgAudioDuration"
       :audioFadeInDuration="$page.EarlyProductions.edges[0].node.bgAudioFadeInDuration"
       :audioFadeOutDuration="$page.EarlyProductions.edges[0].node.bgAudioFadeOutDuration"
-    />
+    /> -->
     
     <ImageLightBox
       :images="image"
