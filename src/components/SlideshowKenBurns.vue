@@ -4,7 +4,6 @@
     <!-- https://vuejs.org/v2/guide/transitions.html#List-Transitions -->
     <transition-group     
       tag="div"
-      :style="slideShowPadding"
       enter-active-class="SlideshowKenBurns__enterActive"
       enter-class="SlideshowKenBurns__enter"
       leave-active-class="SlideshowKenBurns__leaveActive"
@@ -41,33 +40,11 @@ export default {
     return {
       activeIndex: 0,
       time: 0,
-
-      startScale: 1.0,
-      endScale: 1.1,
-      prevStartScale: 1.0,
-      prevEndScale: 1.1,
-
-      imgOpacity: 0.62,
-      startPos: [0, 0, 0],  // x, y, z
-      positionFactor: 1.5,
-
-      startPosX: 0,
-      startPosY: 0,
-
-      windowWidth: 0,
-      windowHeight: 0,
-
       translateFactor: 1.5
     };
   },
 
   computed: {
-    aspectRatio() {
-      return (this.windowHeight / this.windowWidth) * 100
-    },
-    slideShowPadding() {
-      return 'paddingBottom: ' + this.aspectRatio + '%'
-    },
     images() {    
       return this.slides.map(a => a.img)
     },
@@ -89,15 +66,15 @@ export default {
     panStart(index) {
       if (this.slides[index].hasOwnProperty('panStart')) {
         switch(this.slides[index].panStart.toLowerCase()) {
-          case 'top-left':      return 'top left';
-          case 'top':           return 'top';
-          case 'top-right':     return 'top right';
-          case 'left':          return 'left';
-          case 'centre':        return 'center';
-          case 'right':         return 'right';
           case 'bottom-left':   return 'bottom left';
           case 'bottom':        return 'bottom';
           case 'bottom-right':  return 'bottom right';
+          case 'left':          return 'left';
+          case 'centre':        return 'center';
+          case 'right':         return 'right';
+          case 'top-left':      return 'top left';
+          case 'top':           return 'top';
+          case 'top-right':     return 'top right';
           default:
             console.log('Did not recognise value for slides.panStart: ' + this.slides[i].panStart)
         } 
@@ -134,18 +111,18 @@ export default {
 
     createKeyFrames() {
       for (let i = 0; i < this.slides.length; i++) {        
-        let startPos = [0, 0, 0]
+        let startPos = [0, 0, 0]  // x, y, z
         if (this.slides[i].hasOwnProperty('panStart')) {
           switch(this.slides[i].panStart.toLowerCase()) {
-            case 'top-left':      startPos = [-1, -1, 0];     break;
-            case 'top':           startPos = [0, -1, 0];      break;
-            case 'top-right':     startPos = [1, -1, 0];      break;
-            case 'left':          startPos = [-1, 0, 0];      break;
-            case 'centre':        startPos = [0, 0, 0];       break;
-            case 'right':         startPos = [1, 0, 0];       break;
             case 'bottom-left':   startPos = [-1, 1, 0];      break;
             case 'bottom':        startPos = [0, 1, 0];       break;
             case 'bottom-right':  startPos = [1, 1, 0];       break;
+            case 'left':          startPos = [-1, 0, 0];      break;
+            case 'centre':        startPos = [0, 0, 0];       break;
+            case 'right':         startPos = [1, 0, 0];       break;
+            case 'top-left':      startPos = [-1, -1, 0];     break;
+            case 'top':           startPos = [0, -1, 0];      break;
+            case 'top-right':     startPos = [1, -1, 0];      break;
             default:
               console.log('Did not recognise value for slides.panStart: ' + this.slides[i].panStart)
           } 
@@ -175,19 +152,9 @@ export default {
   mounted() {
     this.createKeyFrames()    
 
-    this.windowWidth = window.innerWidth
-    this.windowHeight = window.innerHeight
-
     this.goToIndex(0);
-    // this.time = this.interval(0)
     this.startInterval();
 
-    this.$nextTick(() => {
-      window.addEventListener('resize', () => {        
-        this.windowWidth = window.innerWidth
-        this.windowHeight = window.innerHeight 
-      });
-    })
   },
 };
 </script>
@@ -203,6 +170,8 @@ export default {
     position: relative;
     display: flex;
     justify-content: center;
+
+    padding-bottom: 100vh;
   }
 
   /* For vignette effect, see https://benjaminhorn.io/code/proper-lens-vignette-with-css/ & 
@@ -237,8 +206,7 @@ export default {
   }
 
   &__enterActive, &__leaveActive {
-    transition: opacity 3s linear;    // // scale: var(--endScale);
-    
+    transition: opacity 3s linear;
   }
 
   &__enter, &__leaveTo {
