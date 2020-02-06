@@ -114,7 +114,6 @@ export default {
   display: flex;
   width: 100%; 
   text-align: left;
-  /* margin-bottom: 5px; */
 }
   
 #tracksDiv {
@@ -130,7 +129,6 @@ export default {
   position: absolute;
   bottom: 0;
   left: 0;
-  /* background: var(--bgColor) var(--bgImg) no-repeat center center; */
   background: var(--bgImg) no-repeat var(--bgImgPos);
   background-color: var(--bgColor);
   background-size: cover;
@@ -176,6 +174,8 @@ export default {
   .titleText {
     line-height: 1rem;
     font-size: 0.875rem;
+    font-weight: 900;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
   }
   .trackTitleText {
     letter-spacing: 4px;
@@ -190,6 +190,8 @@ export default {
   .titleText {
     line-height: 1rem;
     font-size: 0.875rem;
+    font-weight: 900;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
   }
   .trackTitleText {
     letter-spacing: 4px;
@@ -201,7 +203,10 @@ export default {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-
+  .titleText {
+    font-weight: 900;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
