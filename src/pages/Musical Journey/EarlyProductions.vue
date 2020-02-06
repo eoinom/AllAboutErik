@@ -6,7 +6,7 @@
       :audioFadeInDuration="$page.EarlyProductions.edges[0].node.bgAudioFadeInDuration"
       :audioFadeOutDuration="$page.EarlyProductions.edges[0].node.bgAudioFadeOutDuration"
     />
-    
+
     <header id="header" :style="headerStyles">
       <g-image :src="titleImg" id="titleImg" class="my-4" />
     </header>
@@ -25,7 +25,7 @@
       <div v-if="windowWidth < 992">
         <b-row v-for="(section, iSec) in sections" :key="'S'+iSec+1" no-gutters class="pt-3 pb-2">
 
-          <div v-if="section.textBoxes.length > 1 || section.productions.length > 1" class="sectionContainerPhones" :style="sectionContainerPhonesStyles(section.productions[0])">
+          <div v-if="section.textBoxes.length > 1 || section.productions.length > 1" class="sectionContainerDevices" :style="sectionContainerDevicesStyles(section.productions[0])">
             <music-production-text
               v-for="(textBox, iText) in section.textBoxes"
               :key="'S'+(iSec+1) + 'T'+(iText+1)"
@@ -52,11 +52,12 @@
               :showBgImage="false"
               :showTitleCredits="true"
               :showTracks="true"
+              :style="iProd > 0 ? 'padding-top: 8px' : ''"
             />
           </div>
 
 
-          <div v-else class="sectionContainerPhones" :style="sectionContainerPhonesStyles(section.productions[0])">
+          <div v-else class="sectionContainerDevices" :style="sectionContainerDevicesStyles(section.productions[0])">
             <music-production-text
               v-for="(textBox, iText) in section.textBoxes"
               :key="'S'+(iSec+1) + 'T'+(iText+1) + 'h'"
@@ -81,8 +82,9 @@
               :includeBorder="false"
               :divHeight="'fit-content'"
               divPadding='0'
+              :style="section.imageLightboxes.length == 0 ? 'padding-bottom: 8px' : ''"
             />
-            <div class="responsiveBtnDiv">
+            <div v-if="section.imageLightboxes.length > 0" class="responsiveBtnDiv">
               <button 
                 v-for="(lightBox, iLightBox) in section.imageLightboxes" 
                 :key="iLightBox + 1" 
@@ -654,7 +656,7 @@ export default {
         }]
       this.imageIndex = 0
     },
-    sectionContainerPhonesStyles(production) {
+    sectionContainerDevicesStyles(production) {
       return {
         '--bgImg': production.bgImg ? 'url("' + production.bgImg + '")' : '',
         '--bgImgPos': production.bgImgPos ? production.bgImgPos : 'center center',
@@ -827,7 +829,7 @@ body {
   background-color: #4B5B45;
 }
 
-.sectionContainerPhones {
+.sectionContainerDevices {
   flex: 1;
   position: relative;
   padding: 15px 20px;
@@ -837,7 +839,7 @@ body {
   border-radius: 9px;
   text-align: left;
 }
-.sectionContainerPhones:after {
+.sectionContainerDevices:after {
   content : "";
   display: inline-block;
   position: absolute;
