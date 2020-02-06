@@ -1,12 +1,12 @@
 <template>
   <div class="layout">
       <div class="openbtn">
-        <img alt="Open navigation menu" src="../assets/images/menu-open.png" immediate=true @click="openNav()" />
-        <img alt="Open navigation menu" src="../assets/images/menu-open-hover.png" immediate=true @click="openNav()" class="img-hover"/>
+        <img alt="Open navigation menu" src="../assets/images/menu-open.png" immediate=true @click="mainNavIsOpen = true" />
+        <img alt="Open navigation menu" src="../assets/images/menu-open-hover.png" immediate=true @click="mainNavIsOpen = true" class="img-hover"/>
       </div>
     
     <!-- Main navigation menu -->
-    <div id="sideNav-main" class="sidenav">
+    <div id="sideNav-main" :class="{sideNavOpen: mainNavIsOpen}">
       <simplebar class="simple-scrollbar" data-simplebar-auto-hide="true">
         <div>
           <div class="closebtn">
@@ -26,7 +26,7 @@
     <!-- </simplebar> -->
 
     <!-- Sub navigation menu -->
-      <div id="sideNav-sub" class="sidenav-sub" :style="subSideNavStyles()">
+      <div id="sideNav-sub" :style="subSideNavStyles()">
         <div class="submenu-img-container">
           <g-link :to="activeNav.to">
             <div v-for="edge in $static.NavItems.edges" :key="edge.node.text">
@@ -63,6 +63,11 @@
         <slot />
       </main>
     </transition>
+
+    <!-- <router-view/>
+    <main>
+      <slot />
+    </main> -->
      
     <!-- <slot/> -->
   </div>
@@ -100,18 +105,17 @@
       return {
         activeNav: {},
         activeSubNav: {},
-        windowWidth: 0,
-        windowHeight: 0,
-        documentLoaded: false
+        documentLoaded: false,
+        mainNavIsOpen: false
       }
     },
     
     computed: {
       showSubSideNav() {        
-        return this.activeNav.hasOwnProperty('hasSubMenu') && this.activeNav.hasSubMenu === true
+        return this.activeNav.hasOwnProperty('hasSubMenu') && this.activeNav.hasSubMenu === true && this.mainNavIsOpen
       },
       showSubPageLinks() {
-        return this.activeNav.hasOwnProperty('subPages') && this.activeNav.subPages.length > 0
+        return this.activeNav.hasOwnProperty('subPages') && this.activeNav.subPages.length > 0 && this.mainNavIsOpen
       }
     },
 
@@ -123,64 +127,32 @@
             this.showSubSideNav ? subNav.style.width = "240px" : subNav.style.width = "0" // needed to overwrite setting from closeNav()
         }
         return this.showSubSideNav ? 'width:240px' : 'width:0px'  // note the max-width settings in the media queries
-      }, 
-      openNav() {
-        /* Set the width of the side navigation */
-        let mainNav = document.getElementById("sideNav-main")        
-        mainNav.style.transition = "0.5s"
-
-        if (this.windowWidth >= 768)  { // i.e. tablets & up
-          mainNav.style.width = "226px"
-          mainNav.style.paddingLeft = "18px"
-          mainNav.style.paddingRight = "18px"
-        }
-        else if (this.windowWidth >= 576)  { // i.e. landscape phones
-          mainNav.style.width = "202px"
-          mainNav.style.paddingLeft = "16px"
-          mainNav.style.paddingRight = "16px"
-        }
-        else  { // i.e. portrait phones
-          mainNav.style.width = (this.windowWidth / 2.0) + 'px'
-          mainNav.style.paddingLeft = "14px"
-          mainNav.style.paddingRight = "14px"
-        }
-      },    
+      },   
       closeNav() {
-        /* Hides the navigation menu by setting the width of it to 0 */  
         let mainNav = document.getElementById("sideNav-main")
         let subNav = document.getElementById("sideNav-sub")
-        if (subNav === null || subNav.style.width == "0") {
-          mainNav.style.transition = "0.5s"
+
+        if (subNav && subNav.style.width !== "0px") {
+          subNav.style.transition = "0.3s"
+          mainNav.style.transition = "0.3s"
+          mainNav.style.transitionDelay = "0.3s"           
         }
         else {
-          subNav.style.transition = "0.3s"
-          subNav.style.width = "0"
-          mainNav.style.transition = "0.3s"
-          mainNav.style.transitionDelay = "0.3s"          
-        }
-        mainNav.style.width = "0"
-        mainNav.style.paddingLeft = "0"
-        mainNav.style.paddingRight = "0"
+          mainNav.style.transition = "0.5s"
+          mainNav.style.transitionDelay = "0s" 
+        }        
+        this.activeNav = {}
+        this.mainNavIsOpen = false
       },
-      onNavLinkHover(nav) {        
-        this.activeNav = Object.assign({}, nav)
+      onNavLinkHover(nav) { 
+        this.activeNav = this.mainNavIsOpen ? Object.assign({}, nav) : {}
       },
-      onSubNavLinkHover(nav) {
-        this.activeSubNav = Object.assign({}, nav)
+      onSubNavLinkHover(subNav) {
+        this.activeSubNav = this.mainNavIsOpen ? Object.assign({}, subNav) : {}
       }
     },
 
     mounted() {
-      this.windowWidth = window.innerWidth
-      this.windowHeight = window.innerHeight
-
-      this.$nextTick(() => {
-        window.addEventListener('resize', () => {        
-          this.windowWidth = window.innerWidth
-          this.windowHeight = window.innerHeight 
-        });
-      })
-
       this.documentLoaded = true
     },
 
@@ -208,32 +180,42 @@ body {
 }
 
 /* The side navigation menu */
-.sidenav {
-  height: 100%; /* 100% Full-height
-  width: 0; /* set with JavaScript */
-  padding-left: 0; /* set with JavaScript */
-  padding-right: 0; /* set with JavaScript */
+#sideNav-main {
+  height: 100%; /* 100% Full-height */
   position: fixed; /* Stay in place */
-  z-index: 2000; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   background-color: #222222;
   overflow-x: hidden; /* Disable horizontal scroll */
-  overflow-y: auto; 
-  padding-top: 25px; /* Offset content from the top */  
+  overflow-y: auto;  
+  z-index: 2000; /* Stay on top */
+  width: 0; /* set with JavaScript */
+  padding: 25px 0;
+  transition: all 0.5s ease 0s;
+}
+
+.sideNavOpen {
+  width: 226px !important;
+  padding: 25px 18px !important;
 }
 
 /* The navigation menu links */
-.sidenav a {
+#sideNav-main a {
   padding-top: 28px;
   padding-bottom: 28px;
   padding-left: 10px;
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover,
-.sidenav a.router-link-exact-active {   /* https://stackoverflow.com/questions/46083220/how-to-vuejs-router-link-active-style */
+#sideNav-main a:hover,
+#sideNav-main a.router-link-exact-active {   /* https://stackoverflow.com/questions/46083220/how-to-vuejs-router-link-active-style */
   color: #E30829;
+}
+
+#sideNav-main hr {
+  border-top: 0.5px solid white;
+  border-bottom: 0.5px solid white;
+  margin: 0;
 }
 
 .nav_item {
@@ -313,12 +295,6 @@ body {
   }
 }
 
-.sidenav hr {
-  border-top: 0.5px solid white;
-  border-bottom: 0.5px solid white;
-  margin: 0;
-}
-
 .submenu-img-container {
   background: black;
 }
@@ -330,7 +306,7 @@ body {
   height: auto;
 }
 
-.sidenav-sub {
+#sideNav-sub {
   height: 100%; /* 100% Full-height */
   max-width: 240px;
   padding-left: 0;
@@ -342,7 +318,7 @@ body {
   background-color: #333333;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 0px;
-  transition: width 0.5s;
+  transition: width 0.5s ease 0s;
 }
 
 .submenu-text-container {
@@ -422,10 +398,14 @@ body {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .sidenav {
-    padding-top: 15px;
+  #sideNav-main {
+    padding: 15px 0;
   }
-  .sidenav-sub {
+  .sideNavOpen {
+    width: 50% !important;
+    padding: 15px 14px !important;
+  }
+  #sideNav-sub {
     max-width: 50%;
     left: 50%;
   }
@@ -449,7 +429,14 @@ body {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .sidenav-sub {
+  #sideNav-main {
+    padding: 20px 0;
+  }
+  .sideNavOpen {
+    width: 202px !important;
+    padding: 20px 16px !important;
+  }
+  #sideNav-sub {
     max-width: 220px;
     left: 202px;
   }
