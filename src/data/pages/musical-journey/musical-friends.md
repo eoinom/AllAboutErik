@@ -1,9 +1,9 @@
 ---
 pageTitle: Musical Friends
 backgroundImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Musical-Friends-groupshot_w8inss.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091737/Musical%20Journey/Musical%20Friends/Musical-Friends-groupshot_w8inss.jpg
 titleImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1571091738/Musical%20Journey/Musical%20Friends/musical-friends_p2af5b.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091738/Musical%20Journey/Musical%20Friends/musical-friends_p2af5b.png
 bgAudio: >-
   https://res.cloudinary.com/all-about-erik/video/upload/v1578611847/Musical%20Journey/Musical%20Friends/Japanese_Silky_ixn8ot.mp3
 bgAudioDuration: 296
@@ -21,7 +21,7 @@ friends:
       His group was the Modern Folk Quartet, MFQ for short, and mine was the
       Knoblick Upper 10,000. It was a long and brutal 40-day bus trip.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091738/Musical%20Journey/Musical%20Friends/Henry-Diltz-at-a-love-in-sm_rqno51.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091738/Musical%20Journey/Musical%20Friends/Henry-Diltz-at-a-love-in-sm_rqno51.jpg
   - imgOrientation: portrait
     imgPosition: right
     link: dan-hicks
@@ -35,7 +35,7 @@ friends:
       friends, and I was a fan and enjoyed watching the group perform. From the
       initial incarnation of the group, they were great!
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091738/Musical%20Journey/Musical%20Friends/Dan-Hicks_pdk5cq.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091738/Musical%20Journey/Musical%20Friends/Dan-Hicks_pdk5cq.jpg
   - imgOrientation: portrait
     imgPosition: left
     link: chris-isaak
@@ -48,7 +48,7 @@ friends:
       material. They had some originals and did some covers. Chris looked great,
       and he was giving the performance his all.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Chris-Isaak_fu6jdr.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091737/Musical%20Journey/Musical%20Friends/Chris-Isaak_fu6jdr.jpg
   - imgOrientation: portrait
     imgPosition: bottom
     link: zal-yanovsky
@@ -60,7 +60,7 @@ friends:
       group. You had the love the guy right away. He was zany, smart, fast, and
       funny.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Zal-Yanovsky_mv5am4.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091737/Musical%20Journey/Musical%20Friends/Zal-Yanovsky_mv5am4.jpg
   - imgOrientation: portrait
     imgPosition: top
     link: john-sebastian
@@ -74,7 +74,7 @@ friends:
       Street came over and knocked on the door. He introduced himself as John
       Sebastian.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091738/Musical%20Journey/Musical%20Friends/John-Sebastian_dcpu5o.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091738/Musical%20Journey/Musical%20Friends/John-Sebastian_dcpu5o.jpg
   - imgOrientation: portrait
     imgPosition: bottom
     link: norman-greenbaum
@@ -85,7 +85,7 @@ friends:
       song called “School for Sweet Talk.” Nice melody and cute words. We talked
       backstage and he said he had a lot more songs.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091738/Musical%20Journey/Musical%20Friends/Norman-Greenbaum_phdhkw.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091738/Musical%20Journey/Musical%20Friends/Norman-Greenbaum_phdhkw.jpg
   - imgOrientation: landscape
     imgPosition: left
     link: rita-abrams
@@ -99,7 +99,7 @@ friends:
       Knoblick Upper 10,000, the Lovin Spoonful, and Tim Hardin. She obviously
       had very good taste.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091738/Musical%20Journey/Musical%20Friends/Rita-Abrams-piano_wwiysk.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091738/Musical%20Journey/Musical%20Friends/Rita-Abrams-piano_wwiysk.jpg
   - imgOrientation: landscape
     imgPosition: top
     link: brian-elliot
@@ -112,7 +112,7 @@ friends:
       would think about my comments. Surprisingly, he called the very next day
       and said he’d done rewrites on the songs and would I listen again?
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091738/Musical%20Journey/Musical%20Friends/Brian-Elliot_f705gw.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091738/Musical%20Journey/Musical%20Friends/Brian-Elliot_f705gw.jpg
   - imgOrientation: landscape
     imgPosition: right
     link: phil-ochs
@@ -125,7 +125,7 @@ friends:
       of his songs were of a political protest bent. I liked him and proposed a
       drink after the show.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Phil-Ochs_sp4w75.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091737/Musical%20Journey/Musical%20Friends/Phil-Ochs_sp4w75.jpg
   - imgOrientation: landscape
     imgPosition: left
     link: tim-hardin
@@ -141,7 +141,7 @@ friends:
       Naively I thought he meant pot. But not so. It turned out his tastes also
       ran toward harder stuff.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Tim-Hardin_mdxu9o.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091737/Musical%20Journey/Musical%20Friends/Tim-Hardin_mdxu9o.jpg
   - imgOrientation: portrait
     imgPosition: right
     link: jim-wilsey
@@ -156,7 +156,7 @@ friends:
       In the course of the years of recording with Chris, we became good
       friends.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Jim-Wilsey_evft51.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091737/Musical%20Journey/Musical%20Friends/Jim-Wilsey_evft51.jpg
   - imgOrientation: landscape
     imgPosition: top
     link: eduardo-unz
@@ -168,7 +168,7 @@ friends:
       Phillips, who took me to see a group called “Rhythm and Noise,” and quite
       possibly I first met Nick there in that context.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Nick-Urbanik_dl0uas.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091737/Musical%20Journey/Musical%20Friends/Nick-Urbanik_dl0uas.jpg
   - imgOrientation: portrait
     imgPosition: top
     link: alex-major
@@ -182,7 +182,7 @@ friends:
       three days later he and the group showed up. They auditioned for me at our
       Sausalito heliport rehearsal hall.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Alex-Major_ftv9vb.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091737/Musical%20Journey/Musical%20Friends/Alex-Major_ftv9vb.jpg
   - imgOrientation: portrait
     imgPosition: bottom
     link: kevin-mooney
@@ -196,7 +196,7 @@ friends:
       wanted. You only had to hold it next to a phone and put in certain codes
       to make it work, but it was too complicated for me.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Kevin-Mooney_driip9.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091737/Musical%20Journey/Musical%20Friends/Kevin-Mooney_driip9.jpg
   - imgOrientation: portrait
     imgPosition: left
     link: nadia
@@ -208,7 +208,7 @@ friends:
       voice and her personality. Very smart, pretty, and a good sense of humor.
       We cut quite a few sides together that we thought came out well.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Nadia_ahc98p.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091737/Musical%20Journey/Musical%20Friends/Nadia_ahc98p.jpg
   - imgOrientation: landscape
     imgPosition: top
     link: cass-elliot
@@ -221,6 +221,6 @@ friends:
       recorded various cuts with Cass, Zal, and Denny Doherty. Cass was
       hilarious, with a special sense of humor.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1571091737/Musical%20Journey/Musical%20Friends/Cass-Elliot-bed_fnnrqd.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091737/Musical%20Journey/Musical%20Friends/Cass-Elliot-bed_fnnrqd.jpg
 ---
 ...A FEW ANECDOTES

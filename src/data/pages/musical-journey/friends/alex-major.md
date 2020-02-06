@@ -1,30 +1,30 @@
 ---
 name: Alex Major
 backgroundImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/Background_Thumbnails/background_FishingWithAlex-_wxmvfy.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/Background_Thumbnails/background_FishingWithAlex-_wxmvfy.jpg
 backgroundOpacity: 100
 mediaItems:
   - galleries:
       - images:
           - caption: Fishing with Alex
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899775/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/1_Photos/FishingWithAlex-3000_eqm8jc.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899775/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/1_Photos/FishingWithAlex-3000_eqm8jc.jpg
             orderNo: 1
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899774/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/1_Photos/AlexMajor_Icon-sh_r3xfrp.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899774/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/1_Photos/AlexMajor_Icon-sh_r3xfrp.jpg
             orderNo: 2
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899774/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/1_Photos/AlexMajor_Photo_f3gihd.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899774/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/1_Photos/AlexMajor_Photo_f3gihd.jpg
             orderNo: 3
           - caption: Front of card
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899774/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/1_Photos/FrontOfCard_t7qgiz.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899774/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/1_Photos/FrontOfCard_t7qgiz.jpg
             orderNo: 4
           - caption: Inside of card
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899774/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/1_Photos/InsideOfCard_iey8yb.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899774/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/1_Photos/InsideOfCard_iey8yb.jpg
             orderNo: 5
         label: ''
         orderNo: 1
@@ -33,120 +33,120 @@ mediaItems:
     mediaType: images
     orderNo: 1
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572904807/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/Background_Thumbnails/Thumbnail_1_AlexMajor_Icon-sh_egfi6h.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904807/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/Background_Thumbnails/Thumbnail_1_AlexMajor_Icon-sh_egfi6h.jpg
   - galleries:
       - images:
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899775/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/3_dsmb5u.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899775/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/3_dsmb5u.jpg
             orderNo: 1
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/4_zruin0.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/4_zruin0.jpg
             orderNo: 2
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/5_xa0mhq.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/5_xa0mhq.jpg
             orderNo: 3
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/6_wxjkaj.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/6_wxjkaj.jpg
             orderNo: 4
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/7_zlyc90.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/7_zlyc90.jpg
             orderNo: 5
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/8_aipdvi.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/8_aipdvi.jpg
             orderNo: 6
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/9_bamrtk.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/9_bamrtk.jpg
             orderNo: 7
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/10_FirstLetterFromPrison_quld7i.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/10_FirstLetterFromPrison_quld7i.jpg
             orderNo: 8
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/11_cosuxw.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/11_cosuxw.jpg
             orderNo: 9
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/12_LastLetterFromPrison_1996_vkuf28.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/12_LastLetterFromPrison_1996_vkuf28.jpg
             orderNo: 10
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/13_cot035.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/13_cot035.jpg
             orderNo: 11
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/15_gxycfu.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/15_gxycfu.jpg
             orderNo: 12
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/16_agxzqm.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/16_agxzqm.jpg
             orderNo: 13
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/17_ekgbs1.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/17_ekgbs1.jpg
             orderNo: 14
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/18_tzfmc1.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/18_tzfmc1.jpg
             orderNo: 15
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/19_jya2rt.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/19_jya2rt.jpg
             orderNo: 16
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/20_d5blfj.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/20_d5blfj.jpg
             orderNo: 17
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/21_fd1dml.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/21_fd1dml.jpg
             orderNo: 18
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/22_rpgmtg.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/22_rpgmtg.jpg
             orderNo: 19
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/23_nkhrzo.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/23_nkhrzo.jpg
             orderNo: 20
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/24_kxmeuc.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/24_kxmeuc.jpg
             orderNo: 21
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/25_p086nt.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/25_p086nt.jpg
             orderNo: 22
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/26_wmx4tu.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/26_wmx4tu.jpg
             orderNo: 23
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/27_zpsrfm.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/27_zpsrfm.jpg
             orderNo: 24
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/28_fdf5id.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/28_fdf5id.jpg
             orderNo: 25
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/29_gvfaco.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/29_gvfaco.jpg
             orderNo: 26
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/30_raycxa.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/30_raycxa.jpg
             orderNo: 27
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/31_acqfhm.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/2_Letters%20From%20Alex%20Slideshow/31_acqfhm.jpg
             orderNo: 28
         label: ''
         orderNo: 1
@@ -155,7 +155,7 @@ mediaItems:
     mediaType: images
     orderNo: 2
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572904807/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/Background_Thumbnails/Thumbnail_2_1994_rc8ueq.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904807/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/Background_Thumbnails/Thumbnail_2_1994_rc8ueq.jpg
 ---
 A guy called me from Mississippi and asked if I’d listen to his group. They called themselves the Wallabies. I said, sure, send me a tape of your three best songs. The tape was ok, but he had his heart set on the band coming out to California to play live for me. I couldn’t dissuade him, and three days later he and the group showed up. They auditioned for me at our Sausalito heliport rehearsal hall. I didn’t think the band was very good in person either, not the guitar, the singers, or the songs. When I related my opinion to Alex, he said, okay then, I’m going to tell the guys we’re disbanding. And they broke up on the spot.
 

@@ -2,34 +2,34 @@
 name: Eduardo Unz
 heading: Nick Urbanik aka Eduardo Unz
 backgroundImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/background-img442-2_zqukkx.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/background-img442-2_zqukkx.jpg
 backgroundOpacity: 88
 mediaItems:
   - galleries:
       - images:
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910962/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/UNZIcon_j0vh8m.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910962/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/UNZIcon_j0vh8m.jpg
             orderNo: 1
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910959/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/img298_td9fxt.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910959/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/img298_td9fxt.jpg
             orderNo: 2
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910958/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/img300-2_slq4ef.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910958/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/img300-2_slq4ef.jpg
             orderNo: 3
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910963/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/img300_wwc8rl.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910963/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/img300_wwc8rl.jpg
             orderNo: 4
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910961/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/img303_j845pu.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910961/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/img303_j845pu.jpg
             orderNo: 5
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910959/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/img440_rdbkr5.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910959/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/img440_rdbkr5.jpg
             orderNo: 6
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910958/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/img441_c1ud3f.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910958/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/img441_c1ud3f.jpg
             orderNo: 7
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910959/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/img442_g1a6qg.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910959/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/1_Photos/img442_g1a6qg.jpg
             orderNo: 8
         orderNo: 1
         type: imageGallery
@@ -37,16 +37,16 @@ mediaItems:
     mediaType: images
     orderNo: 1
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/Thumbnail_1_img300-2_sutert.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/Thumbnail_1_img300-2_sutert.jpg
   - galleries:
       - images:
           - caption: Calling Card
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910961/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/2_Unz%20Memorabilia/CallingCard_i7bofq.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910961/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/2_Unz%20Memorabilia/CallingCard_i7bofq.jpg
             orderNo: 1
           - caption: Postcard from Nick
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/2_Unz%20Memorabilia/PostcardFroomNick_sj7zji.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/2_Unz%20Memorabilia/PostcardFroomNick_sj7zji.jpg
             orderNo: 2
         orderNo: 1
         type: imageGallery
@@ -54,7 +54,7 @@ mediaItems:
     mediaType: images
     orderNo: 2
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/Thumbnail_2_CallingCard_aymbqe.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/Thumbnail_2_CallingCard_aymbqe.jpg
   - galleries:
       - label: ''
         orderNo: 1
@@ -104,7 +104,7 @@ mediaItems:
     mediaType: audio
     orderNo: 3
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/Thumbnail_3_img440_ere8cj.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/Thumbnail_3_img440_ere8cj.jpg
 ---
 I’m not sure how I first met Nick Urbanik, who later took the stage name of Eduardo Unz, but I had a rug collecting buddy at the time, John Phillips, who took me to see a group called “Rhythm and Noise,” and quite possibly I first met Nick there in that context. As it happened, my amigo John disappeared soon thereafter, and his car was found several years later left in the San Francisco Airport parking lot. He was eventually presumed murdered and his body disposed of by a local serial killer. But this crazy band, with its three players, Naut Humon, Nik Fault, and Rex Probe, was an all-electronic avant-garde experimental musical group that was pioneering synth and midi performances in San Francisco. Nick was inspired by the possibilities of using these devices, and when we met he convinced me he could do some great stuff along these lines production wise and persuaded me to help him realize his ambitions in recording in this gene. He was a stylish guy and in the colder weather, he wore oversized flasher style overcoats. He had a nice gal friend, and it was only later I learned he had maintained his relationship with her and a second woman at the same time. Neither knew about the other. 
 

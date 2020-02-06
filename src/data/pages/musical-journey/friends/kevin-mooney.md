@@ -1,27 +1,27 @@
 ---
 name: Kevin Mooney
 backgroundImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1572906559/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/Background_Thumbnails/KevinMooneyAndMe-background2_rgwd7q.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906559/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/Background_Thumbnails/KevinMooneyAndMe-background2_rgwd7q.jpg
 backgroundOpacity: 100
 mediaItems:
   - label: Fishing Photo with Kevin
     mediaType: images
     orderNo: 1
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572906559/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/Background_Thumbnails/Thumbnail_1_KevinMooney_icon_cscrom.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906559/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/Background_Thumbnails/Thumbnail_1_KevinMooney_icon_cscrom.jpg
     galleries:
       - orderNo: 1
         type: imageGallery  
         images:
           - caption: Kevin Mooney and Me
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906559/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/1_Fishing%20Photos/KevinMooneyAndMe_luhykv.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906559/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/1_Fishing%20Photos/KevinMooneyAndMe_luhykv.jpg
             orderNo: 1  
   - label: Kevin's Demo
     mediaType: audio
     orderNo: 2
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572906559/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/Background_Thumbnails/Thumbnail_2_sf_icon_sgsgny.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906559/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/Background_Thumbnails/Thumbnail_2_sf_icon_sgsgny.jpg
     galleries:
       - orderNo: 1
         type: audioGallery

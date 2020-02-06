@@ -1,11 +1,11 @@
 ---
 pageTitle: Early Productions
 headerBgImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1575928542/Musical%20Journey/Early%20Productions/title-background_skaye9.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575928542/Musical%20Journey/Early%20Productions/title-background_skaye9.png
 titleImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1575928542/Musical%20Journey/Early%20Productions/early_productions-white_e6xoiq.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575928542/Musical%20Journey/Early%20Productions/early_productions-white_e6xoiq.png
 mainImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1576111097/Musical%20Journey/Early%20Productions/img312-2_-_Cropped_ji3ife.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576111097/Musical%20Journey/Early%20Productions/img312-2_-_Cropped_ji3ife.png
 bgAudio: >-
   https://res.cloudinary.com/all-about-erik/video/upload/v1578611792/Musical%20Journey/Early%20Productions/Green_Rocky_Road_-_Tim_Hardin_zujehc.mp3
 bgAudioDuration: 138
@@ -16,20 +16,20 @@ sections:
       - buttonText: Original Lyrics
         caption: ''
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576020062/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/Original_Lyrics_-_bobowritten-clean_vblkwi.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576020062/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/Original_Lyrics_-_bobowritten-clean_vblkwi.jpg
       - buttonText: Rejection Letter
         caption: ''
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576020062/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/Bobo_rejection_letter_ezsqjm.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576020062/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/Bobo_rejection_letter_ezsqjm.jpg
     productions:
       - artist: Little Peetie Love
         bgColor: '#000000'
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/cheerleaders_background_rbueyt.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/cheerleaders_background_rbueyt.jpg
         bgImgPos: center
         bgOpacity: 0.25
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353156/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/cheerleaders_-_Cropped_dkkrul.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578353156/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/cheerleaders_-_Cropped_dkkrul.jpg
         tracks:
           - title: Bobo the Cheerleader's Song
             track: >-
@@ -45,16 +45,16 @@ sections:
       - buttonText: Original Vinyl
         caption: ''
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576021095/Musical%20Journey/Early%20Productions/Production%20Sections/02%20-%20Sound%20of%20Summer%20Showers/summershowers_vinyl_pyfkou.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576021095/Musical%20Journey/Early%20Productions/Production%20Sections/02%20-%20Sound%20of%20Summer%20Showers/summershowers_vinyl_pyfkou.jpg
     productions:
       - artist: Jerry Yester
         bgColor: '#DDDDDD'
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/02%20-%20Sound%20of%20Summer%20Showers/sound_of_summer_showers_record_-_img_3140_background_lwv64i.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/02%20-%20Sound%20of%20Summer%20Showers/sound_of_summer_showers_record_-_img_3140_background_lwv64i.jpg
         bgImgPos: bottom
         bgOpacity: 0.35
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353171/Musical%20Journey/Early%20Productions/Production%20Sections/02%20-%20Sound%20of%20Summer%20Showers/jerryyester2_-_Cropped_knf3n2.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578353171/Musical%20Journey/Early%20Productions/Production%20Sections/02%20-%20Sound%20of%20Summer%20Showers/jerryyester2_-_Cropped_knf3n2.jpg
         tracks:
           - title: Sound of Summer Showers
             track: >-
@@ -70,16 +70,16 @@ sections:
       - buttonText: Original Vinyl
         caption: ''
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576021528/Musical%20Journey/Early%20Productions/Production%20Sections/03%20-%20A%20Little%20Lovin%27/dwain-little_lovin-vinyl-lg_cnow1m.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576021528/Musical%20Journey/Early%20Productions/Production%20Sections/03%20-%20A%20Little%20Lovin%27/dwain-little_lovin-vinyl-lg_cnow1m.jpg
     productions:
       - artist: Dwain Story
         bgColor: '#000000'
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018274/Musical%20Journey/Early%20Productions/Production%20Sections/03%20-%20A%20Little%20Lovin%27/dwain_story_pic_background_vcxrtn.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018274/Musical%20Journey/Early%20Productions/Production%20Sections/03%20-%20A%20Little%20Lovin%27/dwain_story_pic_background_vcxrtn.jpg
         bgImgPos: center
         bgOpacity: 0.25
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353183/Musical%20Journey/Early%20Productions/Production%20Sections/03%20-%20A%20Little%20Lovin%27/dwain_story_pic_-_Cropped_qixlbt.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578353183/Musical%20Journey/Early%20Productions/Production%20Sections/03%20-%20A%20Little%20Lovin%27/dwain_story_pic_-_Cropped_qixlbt.jpg
         tracks:
           - title: A Little Lovin'
             track: >-
@@ -95,7 +95,7 @@ sections:
       - buttonText: Tony Studd Contract
         caption: ''
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576022132/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/tony_studd_contract_uv14dw.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576022132/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/tony_studd_contract_uv14dw.jpg
       - buttonText: Slurp Sound
         caption: ''
         image: >-
@@ -104,11 +104,11 @@ sections:
       - artist: Dee & Zee
         bgColor: 'rgba(221,221,221,0.35)'
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/img402-sm_background_jdy7ll.png
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/img402-sm_background_jdy7ll.png
         bgImgPos: center
         bgOpacity: 1
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353202/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/img402-sm_-_Cropped_pfkxxf.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578353202/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/img402-sm_-_Cropped_pfkxxf.jpg
         tracks:
           - title: The Slurp - I Got the Word
             track: >-
@@ -120,11 +120,11 @@ sections:
       - artist: Dwain Story
         bgColor: 'rgba(221,221,221,0.23)'
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018279/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/dwainstory_background_n084xq.png
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018279/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/dwainstory_background_n084xq.png
         bgImgPos: center
         bgOpacity: 1
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353202/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/dwainstory_-_Cropped_rbxsta.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578353202/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/dwainstory_-_Cropped_rbxsta.jpg
         tracks:
           - title: The Slurp - Slurpin to the East and West
             track: >-
@@ -140,20 +140,20 @@ sections:
       - buttonText: Recording Receipt
         caption: ''
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576101583/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/warm_baby_recording_receipt_y827ja.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576101583/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/warm_baby_recording_receipt_y827ja.jpg
       - buttonText: Original Vinyl
         caption: ''
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576101583/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/warm_baby_vinyl_bil9bj.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576101583/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/warm_baby_vinyl_bil9bj.jpg
     productions:
       - artist: John Sebastian
         bgColor: transparent
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018282/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/rooty_toot_record_-_img_2323-sm_background_atba9y.png
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018282/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/rooty_toot_record_-_img_2323-sm_background_atba9y.png
         bgImgPos: center
         bgOpacity: 1
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353212/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/movietrivia_3540_-_Cropped_jvudcl.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578353212/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/movietrivia_3540_-_Cropped_jvudcl.jpg
         tracks:
           - title: Rooty Toot
             track: >-
@@ -177,11 +177,11 @@ sections:
       - artist: 'Cass Elliot, Denny Doherty, Jerry Yester, Zal Yanovsky'
         bgColor: 'rgba(221,221,221,0.32)'
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018281/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/cass_copyfill_background_ophctd.png
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018281/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/cass_copyfill_background_ophctd.png
         bgImgPos: center
         bgOpacity: 1
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353230/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/cass_-_Cropped_wamkgm.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578353230/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/cass_-_Cropped_wamkgm.jpg
         tracks:
           - title: Oh Suzanna
             track: >-
@@ -203,16 +203,16 @@ sections:
   - imageLightboxes:
       - buttonText: Original Vinyl
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578527571/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/godiva-vinyl_y95sxc.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578527571/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/godiva-vinyl_y95sxc.jpg
     productions:
       - artist: 'John Sebastian, Jerry Yester'
         bgColor: transparent
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/godivacar_background_uugujn.png
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/godivacar_background_uugujn.png
         bgImgPos: center
         bgOpacity: 1
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353240/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/godivacar_-_Cropped_gguudn.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578353240/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/godivacar_-_Cropped_gguudn.jpg
         tracks:
           - title: Lady Godiva
             track: >-
@@ -227,16 +227,16 @@ sections:
   - imageLightboxes:
       - buttonText: Original Lyrics
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576102709/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/tweedle-lyrics_zqldri.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576102709/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/tweedle-lyrics_zqldri.jpg
     productions:
       - artist: A Surfin' Crew
         bgColor: '#DDDDDD'
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018288/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/drive-thru_background_kzg6ca.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018288/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/drive-thru_background_kzg6ca.jpg
         bgImgPos: center
         bgOpacity: 0.49
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353250/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/drive-thru_-_Cropped_g8tfrg.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578353250/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/drive-thru_-_Cropped_g8tfrg.jpg
         tracks:
           - title: Tweedlede Dum's Drive-In
             track: >-
@@ -245,16 +245,16 @@ sections:
   - imageLightboxes:
       - buttonText: Original Vinyl
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576103147/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/thestrangersvinyl_xxipbo.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576103147/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/thestrangersvinyl_xxipbo.jpg
     productions:
       - artist: The Strangers
         bgColor: 'rgba(0,0,0,0.22)'
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/strangers_grouppic_background_up74tg.png
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/strangers_grouppic_background_up74tg.png
         bgImgPos: center
         bgOpacity: 1
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578354425/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/strangers_group_pic_-_Cropped_nbdkdi.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578354425/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/strangers_group_pic_-_Cropped_nbdkdi.jpg
         tracks:
           - title: Twelve Day Lover
             track: >-
@@ -282,19 +282,19 @@ sections:
   - imageLightboxes:
       - buttonText: Original Lyrics
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576104090/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/ill_tell_you_lyrics_njlq8w.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576104090/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/ill_tell_you_lyrics_njlq8w.jpg
       - buttonText: Original Lyrics
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576104090/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/let_it_show_lyrics_bbpr4n.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576104090/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/let_it_show_lyrics_bbpr4n.jpg
     productions:
       - artist: The Sellouts
         bgColor: 'rgba(221,221,221,0.32)'
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018297/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/img021-eyesopen_background_bmjlgh.png
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018297/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/img021-eyesopen_background_bmjlgh.png
         bgImgPos: bottom-right
         bgOpacity: 1
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353284/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/img021-eyesopen_-_Cropped_y9trmn.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578353284/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/img021-eyesopen_-_Cropped_y9trmn.jpg
         tracks:
           - title: I'll Tell You
             track: >-
@@ -320,11 +320,11 @@ sections:
       - artist: Ken & Bobby Fischler
         bgColor: transparent
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/11%20-%20Ken%20and%20Bobby%20Fischler/e4f19a583d_b_background_ph2z7o.png
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/11%20-%20Ken%20and%20Bobby%20Fischler/e4f19a583d_b_background_ph2z7o.png
         bgImgPos: top
         bgOpacity: 1
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353297/Musical%20Journey/Early%20Productions/Production%20Sections/11%20-%20Ken%20and%20Bobby%20Fischler/e4f19a583d_b_-_Cropped_kpqkcx.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578353297/Musical%20Journey/Early%20Productions/Production%20Sections/11%20-%20Ken%20and%20Bobby%20Fischler/e4f19a583d_b_-_Cropped_kpqkcx.jpg
         tracks:
           - title: Down on the River Road
             track: >-
@@ -337,11 +337,11 @@ sections:
       - artist: Ray Roe
         bgColor: 'rgba(221,221,221,0.35)'
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/cowboy-playing-guitar_background_baeo3j.png
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/cowboy-playing-guitar_background_baeo3j.png
         bgImgPos: center
         bgOpacity: 1
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353308/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/cowboy-playing-guitar_-_Cropped_sbvid7.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578353308/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/cowboy-playing-guitar_-_Cropped_sbvid7.jpg
         tracks:
           - title: Dyin' a Dime at a Time
             track: >-
@@ -357,11 +357,11 @@ sections:
       - artist: Ken Melville
         bgColor: transparent
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018304/Musical%20Journey/Early%20Productions/Production%20Sections/13%20-%20Ken%20Melville/acoustic-guitar-photography-reflection_background_ztfutk.png
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018304/Musical%20Journey/Early%20Productions/Production%20Sections/13%20-%20Ken%20Melville/acoustic-guitar-photography-reflection_background_ztfutk.png
         bgImgPos: top
         bgOpacity: 1
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353321/Musical%20Journey/Early%20Productions/Production%20Sections/13%20-%20Ken%20Melville/acoustic-guitar-photography-reflection_-_Cropped_elatqx.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578353321/Musical%20Journey/Early%20Productions/Production%20Sections/13%20-%20Ken%20Melville/acoustic-guitar-photography-reflection_-_Cropped_elatqx.jpg
         tracks:
           - title: Bill
             track: >-
@@ -376,11 +376,11 @@ sections:
       - artist: Tim Hardin
         bgColor: 'rgba(221,221,221,0.32)'
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018318/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/tim-hardin-img316_background_zwr8z1.png
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018318/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/tim-hardin-img316_background_zwr8z1.png
         bgImgPos: center
         bgOpacity: 1
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578353343/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/tim-hardin-img316-cropped_yw8ck3.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578353343/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/tim-hardin-img316-cropped_yw8ck3.jpg
         tracks:
           - title: See Where You Are and Get Out
             track: >-
@@ -411,11 +411,11 @@ sections:
       - artist: Plumb Creek Boys
         bgColor: 'rgba(0,0,0,0.22)'
         bgImg: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/ep4_background_nhospf.png
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576018273/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/ep4_background_nhospf.png
         bgImgPos: top
         bgOpacity: 1
         image: >-
-          https://res.cloudinary.com/all-about-erik/image/upload/v1578354263/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/ep4_-_Cropped_krzj04.jpg
+          https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578354263/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/ep4_-_Cropped_krzj04.jpg
         tracks:
           - title: Track One
             track: >-

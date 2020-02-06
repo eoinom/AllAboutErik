@@ -1,28 +1,28 @@
 ---
 name: Zal Yanovsky
 backgroundImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1572910269/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Background_Thumbnails/Background_img388-zal-_dvr0u8.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910269/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Background_Thumbnails/Background_img388-zal-_dvr0u8.jpg
 backgroundOpacity: 88
 mediaItems:
   - galleries:
       - images:
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910271/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Photos/img333_u1m13n.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910271/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Photos/img333_u1m13n.jpg
             orderNo: 1
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910273/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Photos/img388_phixps.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910273/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Photos/img388_phixps.jpg
             orderNo: 2
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910268/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Photos/img389_wafxm2.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910268/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Photos/img389_wafxm2.jpg
             orderNo: 3
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910268/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Photos/img391_cmflgi.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910268/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Photos/img391_cmflgi.jpg
             orderNo: 4
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910270/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Photos/img425_jnyyym.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910270/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Photos/img425_jnyyym.jpg
             orderNo: 5
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910268/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Photos/img427_ro9wma.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910268/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Photos/img427_ro9wma.jpg
             orderNo: 6
         orderNo: 1
         type: imageGallery
@@ -30,7 +30,7 @@ mediaItems:
     mediaType: images
     orderNo: 1
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572910267/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Background_Thumbnails/Thumbnail_img391_r4vhfq.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910267/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Background_Thumbnails/Thumbnail_img391_r4vhfq.jpg
 ---
 I first met Zally on the road when the Knoblick Upper 10,000 played on the same bill as the Halifax 3. Zal was working as an accompanist for their group. You had the love the guy right away. He was zany, smart, fast, and funny. A year or so later back in New York City I teamed up with Zal, Denny Doherty, and later with Cass and we cut some sides together. John Sebastian and Zal met and hit it off big time. Along with Bob Cavallo, the four of us agreed to try and put a group together. 
 

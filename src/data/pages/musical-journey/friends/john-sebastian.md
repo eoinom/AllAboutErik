@@ -1,26 +1,26 @@
 ---
 name: John Sebastian
 backgroundImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/Background_Thumbnails/Background_JohnSebastianErikJacobsen-background3_iqozdf.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/Background_Thumbnails/Background_JohnSebastianErikJacobsen-background3_iqozdf.jpg
 backgroundOpacity: 83
 mediaItems:
   - galleries:
       - images:
           - caption: John and Me in the Studio
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906382/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/john-ej-studio_tuygvm.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906382/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/john-ej-studio_tuygvm.jpg
             orderNo: 1
           - caption: 'John Sebastian, Me and Zal Yanovsky'
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906383/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/2-JohnSebastianErikJacobsenZalYanovsky-Feb1974_4x6_300dpi_ameqds.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906383/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/2-JohnSebastianErikJacobsenZalYanovsky-Feb1974_4x6_300dpi_ameqds.jpg
             orderNo: 2
           - caption: Friends
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/Friends_16_t3trjf.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/Friends_16_t3trjf.jpg
             orderNo: 3
           - caption: John and Me at my Place
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906383/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/img546-290_rksmxh.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906383/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/1_Photos%20of%20John/img546-290_rksmxh.jpg
             orderNo: 4
         orderNo: 1
         type: imageGallery
@@ -28,28 +28,28 @@ mediaItems:
     mediaType: images
     orderNo: 1
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572906386/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/Background_Thumbnails/Thumbnail_1_john-sebastian_xncokn.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906386/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/Background_Thumbnails/Thumbnail_1_john-sebastian_xncokn.jpg
   - galleries:
       - images:
           - caption: First Photos of the Lovin' Spoonful
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906384/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/2_Lovin%27%20Spoonful/FirstPicturesEverTakenOfTheSpoonful/spoon1_zkdkvn.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906384/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/2_Lovin%27%20Spoonful/FirstPicturesEverTakenOfTheSpoonful/spoon1_zkdkvn.jpg
             orderNo: 1
           - caption: First Photos of the Lovin' Spoonful
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906384/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/2_Lovin%27%20Spoonful/FirstPicturesEverTakenOfTheSpoonful/spoon2_o160h1.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906384/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/2_Lovin%27%20Spoonful/FirstPicturesEverTakenOfTheSpoonful/spoon2_o160h1.jpg
             orderNo: 2
           - caption: First Photos of the Lovin' Spoonful
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906384/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/2_Lovin%27%20Spoonful/FirstPicturesEverTakenOfTheSpoonful/spoon3_rpmioz.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906384/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/2_Lovin%27%20Spoonful/FirstPicturesEverTakenOfTheSpoonful/spoon3_rpmioz.jpg
             orderNo: 3
           - caption: First Photos of the Lovin' Spoonful
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906383/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/2_Lovin%27%20Spoonful/FirstPicturesEverTakenOfTheSpoonful/spoon4_axayeb.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906383/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/2_Lovin%27%20Spoonful/FirstPicturesEverTakenOfTheSpoonful/spoon4_axayeb.jpg
             orderNo: 4
           - caption: First Photos of the Lovin' Spoonful
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906384/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/2_Lovin%27%20Spoonful/FirstPicturesEverTakenOfTheSpoonful/spoon5_dyreaa.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906384/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/2_Lovin%27%20Spoonful/FirstPicturesEverTakenOfTheSpoonful/spoon5_dyreaa.jpg
             orderNo: 5
         orderNo: 1
         type: imageGallery
@@ -57,24 +57,24 @@ mediaItems:
     mediaType: images
     orderNo: 2
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/Background_Thumbnails/Thumbnail_2_spoon1_rx0skp.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/Background_Thumbnails/Thumbnail_2_spoon1_rx0skp.jpg
   - galleries:
       - images:
           - caption: Warm Baby Studio Bill
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/3_John%20Memorabilia/WarmBabyStudioBill_uwmqnh.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/3_John%20Memorabilia/WarmBabyStudioBill_uwmqnh.jpg
             orderNo: 1
           - caption: John's Notes in Studio - 1 / 2
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906386/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/3_John%20Memorabilia/JonnysNotesInStudio_glelf6.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906386/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/3_John%20Memorabilia/JonnysNotesInStudio_glelf6.jpg
             orderNo: 2
           - caption: John's Notes in Studio - 2 / 2
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/3_John%20Memorabilia/JohnnysNotesInStudio2_ladrno.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/3_John%20Memorabilia/JohnnysNotesInStudio2_ladrno.jpg
             orderNo: 3
           - caption: ''
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572906386/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/3_John%20Memorabilia/GetOutOfMilitaryServiceFreeTicket/img420_kuwvad.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906386/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/3_John%20Memorabilia/GetOutOfMilitaryServiceFreeTicket/img420_kuwvad.jpg
             orderNo: 4
         orderNo: 1
         type: imageGallery
@@ -82,7 +82,7 @@ mediaItems:
     mediaType: images
     orderNo: 3
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/Background_Thumbnails/Thumbnail_3_WarmBabyStudioBill_gevsgp.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/Background_Thumbnails/Thumbnail_3_WarmBabyStudioBill_gevsgp.jpg
 ---
 After I moved back to The Village to stay I started making records, including a demo from a singer I brought down from Boston named Tim Hardin. One day I was playing the demo when a next-door neighbor from across the hall on the 4th-floor walk-up apartment I had rented on Prince Street came over and knocked on the door. He introduced himself as John Sebastian and wanted to know who was singing on the music I was playing. He loved Tim’s voice. I didn’t know John and he played a little guitar and harmonica for me. I was impressed. He said he would love to help record Tim, so along with Felix Pappalardi, Sticks Evans, and Bob Bushnel, we did a long recording session of Tim singing the blues. That recording was released some years later as Tim Hardin 4. 
 

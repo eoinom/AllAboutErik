@@ -1,58 +1,58 @@
 ---
 name: Chris Isaak
 backgroundImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1572904578/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Background_ChrisIsaak-2_lsyafq.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904578/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Background_ChrisIsaak-2_lsyafq.jpg
 backgroundOpacity: 88
 mediaItems:
   - galleries:
       - images:
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904556/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/img604-2_jpccss.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904556/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/img604-2_jpccss.jpg
             orderNo: 1
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904555/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/img455-2_bdtsz7.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904555/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/img455-2_bdtsz7.jpg
             orderNo: 2
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904554/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/img031-32_tr96c4.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904554/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/img031-32_tr96c4.jpg
             orderNo: 3
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904553/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/erik_and_chris_car_q2khq2.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904553/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/erik_and_chris_car_q2khq2.jpg
             orderNo: 4
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904556/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/chris_and_jimmy_p340om.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904556/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/chris_and_jimmy_p340om.jpg
             orderNo: 5
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904560/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/_img676_sx9jbf.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904560/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/_img676_sx9jbf.jpg
             orderNo: 6
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904556/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/_img676-2_mo3ehf.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904556/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/_img676-2_mo3ehf.jpg
             orderNo: 7
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904555/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/_img675-3_m3ocjn.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904555/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/_img675-3_m3ocjn.jpg
             orderNo: 8
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904575/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/_img665_fwtdqz.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904575/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/_img665_fwtdqz.jpg
             orderNo: 9
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904568/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/_img640_rwfvsf.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904568/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/_img640_rwfvsf.jpg
             orderNo: 10
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904555/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/Screen_Shot_2019-05-30_at_3.15.04_PM_a5vgeo.png
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904555/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/Screen_Shot_2019-05-30_at_3.15.04_PM_a5vgeo.png
             orderNo: 11
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904553/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/DSCN0779_d1m6rl.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904553/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/1_Photos/DSCN0779_d1m6rl.jpg
             orderNo: 12
         label: ''
         orderNo: 1
@@ -61,76 +61,76 @@ mediaItems:
     mediaType: images
     orderNo: 1
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572904577/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_1_erik_and_chris_car_wkv5vb.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904577/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_1_erik_and_chris_car_wkv5vb.jpg
   - galleries:
       - images:
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904565/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/_img658-3_dwlusk.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904565/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/_img658-3_dwlusk.jpg
             orderNo: 1
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904563/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_8136_ddny2l.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904563/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_8136_ddny2l.jpg
             orderNo: 2
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904562/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1589_nmixkq.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904562/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1589_nmixkq.jpg
             orderNo: 3
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904562/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1649_misbte.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904562/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1649_misbte.jpg
             orderNo: 4
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904562/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1670_qt9oby.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904562/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1670_qt9oby.jpg
             orderNo: 5
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904561/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1577_aqyp1q.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904561/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1577_aqyp1q.jpg
             orderNo: 6
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904561/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1629_r3fnrf.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904561/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1629_r3fnrf.jpg
             orderNo: 7
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904560/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1615_rh8hx4.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904560/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1615_rh8hx4.jpg
             orderNo: 8
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904560/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1574_bdypo5.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904560/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1574_bdypo5.jpg
             orderNo: 9
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904559/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1594_nkqm3a.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904559/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1594_nkqm3a.jpg
             orderNo: 10
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904559/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1635_as6pwl.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904559/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1635_as6pwl.jpg
             orderNo: 11
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904559/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1624_xi2xag.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904559/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1624_xi2xag.jpg
             orderNo: 12
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904558/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/_img654-4_alsv0p.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904558/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/_img654-4_alsv0p.jpg
             orderNo: 13
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904558/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_8127-photoshop_burzqo.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904558/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_8127-photoshop_burzqo.jpg
             orderNo: 14
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904558/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1643_fjvhta.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904558/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/IMG_1643_fjvhta.jpg
             orderNo: 15
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904557/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/_img654_tccl57.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904557/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/_img654_tccl57.jpg
             orderNo: 16
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904557/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/_img653_luiob1.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904557/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/2_Posters/_img653_luiob1.jpg
             orderNo: 17
         orderNo: 1
         type: imageGallery
@@ -138,7 +138,7 @@ mediaItems:
     mediaType: images
     orderNo: 2
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572904578/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_2_IMG_1624-sm_clr1l0.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904578/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_2_IMG_1624-sm_clr1l0.jpg
   - galleries:
       - label: Sept 24-28
         orderNo: 1
@@ -289,80 +289,80 @@ mediaItems:
     mediaType: videos
     orderNo: 3
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572904577/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_63_chris-videos_icon_etbb2e.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904577/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_63_chris-videos_icon_etbb2e.jpg
   - galleries:
       - images:
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904575/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1714_mfpizj.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904575/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1714_mfpizj.jpg
             orderNo: 1
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1677_pwlh2v.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1677_pwlh2v.jpg
             orderNo: 2
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/MTV_Award_nzexgo.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/MTV_Award_nzexgo.jpg
             orderNo: 3
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904572/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1721_wu1pbv.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904572/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1721_wu1pbv.jpg
             orderNo: 4
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904571/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1699_vgkoa6.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904571/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1699_vgkoa6.jpg
             orderNo: 5
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904570/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1740_rlsy2r.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904570/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1740_rlsy2r.jpg
             orderNo: 6
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904570/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/GrammyNomination_gmndki.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904570/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/GrammyNomination_gmndki.jpg
             orderNo: 7
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904568/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1680_plmx9y.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904568/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1680_plmx9y.jpg
             orderNo: 8
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904572/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1675_j9b9gd.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904572/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1675_j9b9gd.jpg
             orderNo: 9
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904566/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1708_faujlw.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904566/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1708_faujlw.jpg
             orderNo: 10
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904565/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1719_zwels7.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904565/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1719_zwels7.jpg
             orderNo: 11
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904564/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1653_mfdl0q.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904564/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1653_mfdl0q.jpg
             orderNo: 12
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904564/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1685_rev7aj.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904564/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/IMG_1685_rev7aj.jpg
             orderNo: 13
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904568/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/erik_chris_award_lvvwes.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904568/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/erik_chris_award_lvvwes.jpg
             orderNo: 14
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904572/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/_img648_ehxrsu.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904572/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/_img648_ehxrsu.jpg
             orderNo: 15
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/_img649_jilcrd.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/_img649_jilcrd.jpg
             orderNo: 16
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904567/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/_img655_tj18uk.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904567/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/_img655_tj18uk.jpg
             orderNo: 17
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904567/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/_img647_vn8azg.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904567/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/4_Press%20and%20Awards/_img647_vn8azg.jpg
             orderNo: 18
         orderNo: 1
         type: imageGallery
@@ -370,84 +370,84 @@ mediaItems:
     mediaType: images
     orderNo: 4
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572904577/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_4_MTV_Award_fpisd7.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904577/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_4_MTV_Award_fpisd7.jpg
   - galleries:
       - images:
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904576/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/scans10-14_-28-3_ucectw.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904576/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/scans10-14_-28-3_ucectw.jpg
             orderNo: 1
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904575/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_41_1_pfspgx.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904575/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_41_1_pfspgx.jpg
             orderNo: 2
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904575/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_9_qgfrp1.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904575/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_9_qgfrp1.jpg
             orderNo: 3
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904575/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_16_inuy42.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904575/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_16_inuy42.jpg
             orderNo: 4
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904575/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_13_bamzkc.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904575/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_13_bamzkc.jpg
             orderNo: 5
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904575/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_17_cu8llm.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904575/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_17_cu8llm.jpg
             orderNo: 6
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_2_a_qralk1.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_2_a_qralk1.jpg
             orderNo: 7
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_39_tzqe4j.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_39_tzqe4j.jpg
             orderNo: 8
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_12_hwm4gp.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_12_hwm4gp.jpg
             orderNo: 9
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_10_ylrfrf.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_10_ylrfrf.jpg
             orderNo: 10
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_3_ytttu1.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_3_ytttu1.jpg
             orderNo: 11
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_21_peex1h.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_21_peex1h.jpg
             orderNo: 12
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_2_oaukyf.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_2_oaukyf.jpg
             orderNo: 13
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_36_ersxai.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_36_ersxai.jpg
             orderNo: 14
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_5_ma3n3o.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904574/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_5_ma3n3o.jpg
             orderNo: 15
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_10_1_cb6xrv.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_10_1_cb6xrv.jpg
             orderNo: 16
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_40_mg7rr9.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_40_mg7rr9.jpg
             orderNo: 17
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_41_xzsrwp.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_41_xzsrwp.jpg
             orderNo: 18
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_45_yxu8ag.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904573/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/5_Promo%20PostCards/Scan_45_yxu8ag.jpg
             orderNo: 19
         orderNo: 1
         type: imageGallery
@@ -455,36 +455,36 @@ mediaItems:
     mediaType: images
     orderNo: 5
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572904578/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_5_scans10-14_-28-3_vmrzzx.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904578/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_5_scans10-14_-28-3_vmrzzx.jpg
   - galleries:
       - images:
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904576/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/6_Sketches%20by%20Chris/_img643_xda5w4.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904576/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/6_Sketches%20by%20Chris/_img643_xda5w4.jpg
             orderNo: 1
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904576/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/6_Sketches%20by%20Chris/_img644_lqcyma.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904576/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/6_Sketches%20by%20Chris/_img644_lqcyma.jpg
             orderNo: 2
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904579/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/6_Sketches%20by%20Chris/_img645_e2qkl0.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904579/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/6_Sketches%20by%20Chris/_img645_e2qkl0.jpg
             orderNo: 3
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904576/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/6_Sketches%20by%20Chris/_img646_wh9eyw.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904576/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/6_Sketches%20by%20Chris/_img646_wh9eyw.jpg
             orderNo: 4
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904577/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/6_Sketches%20by%20Chris/_img658_tzk5ov.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904577/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/6_Sketches%20by%20Chris/_img658_tzk5ov.jpg
             orderNo: 5
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904577/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/6_Sketches%20by%20Chris/_img672_uzepuu.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904577/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/6_Sketches%20by%20Chris/_img672_uzepuu.jpg
             orderNo: 6
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572904576/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/6_Sketches%20by%20Chris/_img678_g31sqq.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904576/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/6_Sketches%20by%20Chris/_img678_g31sqq.jpg
             orderNo: 7
         orderNo: 1
         type: imageGallery
@@ -492,7 +492,7 @@ mediaItems:
     mediaType: images
     orderNo: 6
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572904578/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_6_img646_fgmhh4.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904578/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Thumbnail_6_img646_fgmhh4.jpg
 ---
 Finding Chris was a lucky break for me. I was looking for someone with real star potential, and when I first went to see his band I was impressed. I was surprised to hear them playing rockabilly sounding material. They had some originals and did some covers. Chris looked great, and he was giving the performance his all. He hadn’t been singing that long, and was obviously doing some of the songs in the wrong key, and trying for some notes that he just couldn’t hit. But his voice sounded great. Jimmy Wilsey, the guitarist, was a unique and talented stylist, and his playing worked perfectly with what Chris was doing. The whole group was sporting 50s style garb. When Chris and I talked after the show I was very impressed with the guy. He was bright, funny, and well-spoken, and came across as a determined, centered, and decisive guy.
 

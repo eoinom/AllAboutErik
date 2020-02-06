@@ -1,7 +1,7 @@
 ---
 pageTitle: Discography
 titleImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1574900462/Musical%20Journey/Discography/discography-white_cuz903.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574900462/Musical%20Journey/Discography/discography-white_cuz903.png
 titleText: >-
   Erik Jacobsen is an American record producer, song publisher, and artists
   manager, born May 19, 1940 in Oak Park Illinois on the west side of Chicago.
@@ -17,97 +17,97 @@ bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5
 backgroundImages:
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/01_erik-john-zal-header_camvu7.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902707/Musical%20Journey/Discography/background%20images/01_erik-john-zal-header_camvu7.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/sage_iyaqfl.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/sage_iyaqfl.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/02_knoblick-performing-crop_rawerj.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902708/Musical%20Journey/Discography/background%20images/02_knoblick-performing-crop_rawerj.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/dr-blue_fcxieg.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/dr-blue_fcxieg.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/03_norman-studio-crop_j6ldkd.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902707/Musical%20Journey/Discography/background%20images/03_norman-studio-crop_j6ldkd.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/dr-sage_ls74x0.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/dr-sage_ls74x0.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902706/Musical%20Journey/Discography/background%20images/04_tim-and-erik-studio-1hardin-crop_uvkutx.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902706/Musical%20Journey/Discography/background%20images/04_tim-and-erik-studio-1hardin-crop_uvkutx.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/blue_wqfgjw.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/blue_wqfgjw.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902706/Musical%20Journey/Discography/background%20images/05_sp16-crop_hxyntw.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902706/Musical%20Journey/Discography/background%20images/05_sp16-crop_hxyntw.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/orange_guniz7.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/orange_guniz7.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/06_meandnormie_oy7agi.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902707/Musical%20Journey/Discography/background%20images/06_meandnormie_oy7agi.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/yellow_qvm8sb.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/yellow_qvm8sb.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/07_erik-studio-spoonful-crop2_rkilno.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902707/Musical%20Journey/Discography/background%20images/07_erik-studio-spoonful-crop2_rkilno.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/violet_cjpmeh.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/violet_cjpmeh.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/08_taz-studio-crop_mgiqg7.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902707/Musical%20Journey/Discography/background%20images/08_taz-studio-crop_mgiqg7.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/br-blue_pyxqvq.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/br-blue_pyxqvq.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/09_norman-studio3-crop_x1mo99.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902707/Musical%20Journey/Discography/background%20images/09_norman-studio3-crop_x1mo99.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/dr-blue_fcxieg.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/dr-blue_fcxieg.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902707/Musical%20Journey/Discography/background%20images/10_groupshot-crop_zlfibm.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902707/Musical%20Journey/Discography/background%20images/10_groupshot-crop_zlfibm.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/orange_guniz7.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/orange_guniz7.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/11_dan-and-i_vuzc9i.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902708/Musical%20Journey/Discography/background%20images/11_dan-and-i_vuzc9i.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/red_ztln0i.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/red_ztln0i.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/12_sp-_zal-joe-crop_uokhil.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902709/Musical%20Journey/Discography/background%20images/12_sp-_zal-joe-crop_uokhil.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/yellow_qvm8sb.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/yellow_qvm8sb.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/13_chris-erik-goldrecords-crop_dft0kl.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902708/Musical%20Journey/Discography/background%20images/13_chris-erik-goldrecords-crop_dft0kl.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/sage_iyaqfl.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/sage_iyaqfl.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/14_rita-sm-crop_sazv5o.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902708/Musical%20Journey/Discography/background%20images/14_rita-sm-crop_sazv5o.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/dr-sage_ls74x0.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/dr-sage_ls74x0.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/15_urbanik-crop_pl7fgc.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902708/Musical%20Journey/Discography/background%20images/15_urbanik-crop_pl7fgc.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/blue_wqfgjw.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/blue_wqfgjw.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902708/Musical%20Journey/Discography/background%20images/16_chris2-crop_pne2xn.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902708/Musical%20Journey/Discography/background%20images/16_chris2-crop_pne2xn.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/orange_guniz7.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/orange_guniz7.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/17_sp13-crop_gopikt.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902709/Musical%20Journey/Discography/background%20images/17_sp13-crop_gopikt.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/sage_iyaqfl.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/sage_iyaqfl.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/18_norman2-crop_ts4iiq.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902709/Musical%20Journey/Discography/background%20images/18_norman2-crop_ts4iiq.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/yellow_qvm8sb.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/yellow_qvm8sb.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902710/Musical%20Journey/Discography/background%20images/19_rita-class-split_qc4itm.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902710/Musical%20Journey/Discography/background%20images/19_rita-class-split_qc4itm.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/violet_cjpmeh.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/violet_cjpmeh.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/20_fuc-crop_lwu2kc.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902709/Musical%20Journey/Discography/background%20images/20_fuc-crop_lwu2kc.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/br-blue_pyxqvq.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/br-blue_pyxqvq.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/21_taz-show_jhijmg.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902709/Musical%20Journey/Discography/background%20images/21_taz-show_jhijmg.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/dr-blue_fcxieg.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/dr-blue_fcxieg.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902709/Musical%20Journey/Discography/background%20images/22_brianelliot-studio_j9iqpp.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902709/Musical%20Journey/Discography/background%20images/22_brianelliot-studio_j9iqpp.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/dr-sage_ls74x0.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/dr-sage_ls74x0.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574902710/Musical%20Journey/Discography/background%20images/23_erik-madonna-gold_usq9pm.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574902710/Musical%20Journey/Discography/background%20images/23_erik-madonna-gold_usq9pm.jpg
     imgOverlay: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1575496051/General/Background%20Overlays/red_ztln0i.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1575496051/General/Background%20Overlays/red_ztln0i.jpg
 albums:
   - artist: 'Knob Lick Upper 10,000'
     country: US
@@ -124,7 +124,7 @@ albums:
       bluegrass band, composed of Dwain Story on lead vocal and guitar, Erik
       Jacobsen on Banjo, and Peter Childs on dobro.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/01_knoblickupper-knoblick-thumb_hcwm2h.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974946/Musical%20Journey/Discography/album%20covers/01_knoblickupper-knoblick-thumb_hcwm2h.jpg
     title: 'The Introduction of Knob Lick Upper 10,000'
     trackListing: |-
       * The Cuckoo    2:46
@@ -153,7 +153,7 @@ albums:
       Workout!!! is the second album by this early 1960‘s folk/ bluegrass band,
       Knob Lick Upper 10,000.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/02_knoblick10k_workout-thumb_p8ptjz.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974946/Musical%20Journey/Discography/album%20covers/02_knoblick10k_workout-thumb_p8ptjz.jpg
     title: Workout!!!
     trackListing: |-
       * Wabash Cannonball     2:28
@@ -184,7 +184,7 @@ albums:
       label. The album features the hits "Do You Believe in Magic" (USA #9) and
       "Did You Ever Have to Make Up Your Mind?"
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/03_ls-magic-thumb_jlyw5h.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974946/Musical%20Journey/Discography/album%20covers/03_ls-magic-thumb_jlyw5h.jpg
     title: Do You Believe in Magic
     trackListing: |-
       * Do You Believe in Magic   2:07
@@ -219,7 +219,7 @@ albums:
       features two hits, the title track, which reached No. 2 in the U.S.
       Billboard Top 40 charts, and "You Didn't Have to Be So Nice"
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/04_ls-daydream-thumb_e1d0ij.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974946/Musical%20Journey/Discography/album%20covers/04_ls-daydream-thumb_e1d0ij.jpg
     title: Daydream
     trackListing: |-
       * Daydream     2:21
@@ -261,7 +261,7 @@ albums:
       album) by the folk rock band The Lovin' Spoonful, released in 1966. It
       peaked at No. 14 on the Billboard Pop Albums chart.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/05_ls-hums-thumb_lsd29j.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974946/Musical%20Journey/Discography/album%20covers/05_ls-hums-thumb_lsd29j.jpg
     title: Hums of the Lovin' Spoonful
     trackListing: |-
       * Lovin You    2:29
@@ -296,7 +296,7 @@ albums:
       Tim Hardin 1 is the debut album by folk artist Tim Hardin, released in
       1966 on Verve Records.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/06_timhardin-thumb_hla7j7.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974946/Musical%20Journey/Discography/album%20covers/06_timhardin-thumb_hla7j7.jpg
     title: Tim Hardin 1
     trackListing: |-
       Side One
@@ -340,7 +340,7 @@ albums:
       Big Boy Now, the Spoonful's soundtrack for the 1966 film by Francis Ford
       Coppola. It reached No. 126 on the Billboard Pop Albums charts.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/07_ls-tiger-thumb_p03r7d.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974946/Musical%20Journey/Discography/album%20covers/07_ls-tiger-thumb_p03r7d.jpg
     title: What's Up Tiger Lily?
     trackListing: |-
       * Introduction to Flick  2:14
@@ -373,7 +373,7 @@ albums:
       in the 1960s. "The Shadow Knows" and "32-20", were released by Kapp
       Records in 1966 as the band's first single.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974946/Musical%20Journey/Discography/album%20covers/08_charlatans-shadow-thumb_te3xo6.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974946/Musical%20Journey/Discography/album%20covers/08_charlatans-shadow-thumb_te3xo6.jpg
     title: The Shadow Knows
     trackListing: |-
       * The Shadow Knows
@@ -396,7 +396,7 @@ albums:
     style: Folk Rock
     text: "You're a Big Boy Now is a soundtrack album by The Lovin' Spoonful, released in 1967, containing music from the Francis Ford Coppola film of the same name. Composed entirely by Spoonful member John Sebastian, it contains several songs performed by the band, as well as instrumental music from the film score.\r\n\nThe album was re-released on CD along with What's Up, Tiger Lily?, the Spoonful's soundtrack for the 1967 Woody Allen film."
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/09_ls-bigboy-thumb_qqv6ke.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974947/Musical%20Journey/Discography/album%20covers/09_ls-bigboy-thumb_qqv6ke.jpg
     title: You're a Big Boy Now
     trackListing: |-
       * You’re a Big Boy Now    2:34
@@ -437,7 +437,7 @@ albums:
       rock, making it no coincidence that  Erik Jacobsen produced for both
       Sopwith Camel and The Lovin' Spoonful.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/10_sopwith-thumb_f96dg8.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974947/Musical%20Journey/Discography/album%20covers/10_sopwith-thumb_f96dg8.jpg
     title: Sopwith Camel
     trackListing: |-
       * Hello, Hello  2:27
@@ -487,7 +487,7 @@ albums:
       Leonard Shaeffer, produced by Erik Jacobsen and released in 1968 on Warner
       Brothers Records.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/11_leonard-boy_dog-thumb_csttny.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974947/Musical%20Journey/Discography/album%20covers/11_leonard-boy_dog-thumb_csttny.jpg
     title: A Boy and His Dog
     trackListing: |-
       * Dreamin'    2:15
@@ -520,7 +520,7 @@ albums:
       until 1969. The songs are in a straight blues style. A similar release was
       done by Atco on This is Tim Hardin.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/12_tim-4-thumb_bgfvzm.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974947/Musical%20Journey/Discography/album%20covers/12_tim-4-thumb_bgfvzm.jpg
     title: Tim Hardin 4
     trackListing: |-
       * Airmobile     2:19
@@ -559,7 +559,7 @@ albums:
       same name. Cover versions by Doctor and the Medics and Gareth Gates have
       also made the #1 spot in the UK.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/13_norman_vinyl-thumb_p5vlys.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974947/Musical%20Journey/Discography/album%20covers/13_norman_vinyl-thumb_p5vlys.jpg
     title: Spirit in the Sky
     trackListing: |-
       Side 1
@@ -606,7 +606,7 @@ albums:
       the Tarriers as well as countless recording sessions in New York. The Blue
       Velvet Band's solo album remains a collector's item.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/14_bluevelvet-thumb_gme188.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974947/Musical%20Journey/Discography/album%20covers/14_bluevelvet-thumb_gme188.jpg
     title: Sweet Moments
     trackListing: |-
       * Ramblin' Man  2:48
@@ -642,7 +642,7 @@ albums:
       Norman Greenbaum's second album released in 1970, which unfortunately
       failed to reach the same popularity as "Spirit in the Sky".
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/15_norman-back_home-thumb_yaf5ko.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974947/Musical%20Journey/Discography/album%20covers/15_norman-back_home-thumb_yaf5ko.jpg
     title: Back Home Again
     trackListing: |-
       * Back Home Again  2:42
@@ -685,7 +685,7 @@ albums:
       the featured background vocalists on the rock classic “Spirit In The Sky”
       (recorded by Norman Greenbaum, producer, Erik Jacobsen).
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/16_stovall_sisters-thumb_qtwtvx.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974947/Musical%20Journey/Discography/album%20covers/16_stovall_sisters-thumb_qtwtvx.jpg
     title: The Stovall Sisters
     trackListing: |-
       * Hang on in There   3:36
@@ -710,7 +710,7 @@ albums:
       The single, Mill Valley by Rita Abrams with producer Erik Jacobsen, became
       a number  one Billboard adult contemporary hit in 1970.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/17_missabrams-single-thumb_w2wgwj.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974947/Musical%20Journey/Discography/album%20covers/17_missabrams-single-thumb_w2wgwj.jpg
     title: Mill Valley/The Happiest Day of my Life (single)
     trackListing: |-
       Side A
@@ -788,7 +788,7 @@ albums:
       Sebastian, since the Sopwith Camel and the Lovin' Spoonful shared a sound
       and producer Erik Jacobsen.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/18_williamtruckaway_cakqhv.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974947/Musical%20Journey/Discography/album%20covers/18_williamtruckaway_cakqhv.jpg
     title: Breakaway
     trackListing: |-
       * Breakaway  3:32
@@ -829,7 +829,7 @@ albums:
       jug band style, featured Ry Cooder on mandolin and Fritz Richmond, jug
       player extraordinaire.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/19_norman-petaluma_m6k40f.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974947/Musical%20Journey/Discography/album%20covers/19_norman-petaluma_m6k40f.jpg
     title: Petaluma
     trackListing: |-
       * Grade A Barn   2:37
@@ -862,7 +862,7 @@ albums:
       Abrams taught kindergarten. Released on the Reprise label, the record
       reached #90 on the Billboard pop chart.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974947/Musical%20Journey/Discography/album%20covers/20_miss_abrams-millvalley-thumb_artl4f.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974947/Musical%20Journey/Discography/album%20covers/20_miss_abrams-millvalley-thumb_artl4f.jpg
     title: Miss Abrams and the Strawberry Point 4th Grade Class
     trackListing: |-
       * Wonder    3:04
@@ -897,7 +897,7 @@ albums:
       different style from their first release, this album has become a critics
       favourite for its complex instrumentation and extraordinary song writing.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/21_sopwith-hump-thumb_sg0di5.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974948/Musical%20Journey/Discography/album%20covers/21_sopwith-hump-thumb_sg0di5.jpg
     title: The Miraculous Hump Returns from the Moon
     trackListing: |-
       * Fazon      5:15
@@ -966,7 +966,7 @@ albums:
       His next album which featured "Welcome Back" was his last for the Reprise
       label.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/22_js-tarzana-thumb_bvjuod.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974948/Musical%20Journey/Discography/album%20covers/22_js-tarzana-thumb_bvjuod.jpg
     title: Tarzana Kid
     trackListing: |-
       * Sitting In Limbo  0:29
@@ -998,7 +998,7 @@ albums:
       Indigo, released by Warner Bro. Records in 1977 featured the trio of
       singer/songwriters Rex Larsen, Sherry Fox and Sue Richman.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/23_indigo_dbjutz.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974948/Musical%20Journey/Discography/album%20covers/23_indigo_dbjutz.jpg
     title: Indigo
     trackListing: |-
       * Feels Right    3:20
@@ -1053,7 +1053,7 @@ albums:
       featured singer songwriter and pianist Brian Elliot, produced by Erik
       Jacobsen.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/24_brian_elliot-thumb_gu9agg.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974948/Musical%20Journey/Discography/album%20covers/24_brian_elliot-thumb_gu9agg.jpg
     title: Brian Elliot
     trackListing: |-
       * Let's Just Live Together   3:47
@@ -1085,7 +1085,7 @@ albums:
       the chance to record two albums for Warner Brothers  in 1980 and 1981,
       this self-titled album being the first of the two.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/25_taz_devils-thumb_ksul8u.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974948/Musical%20Journey/Discography/album%20covers/25_taz_devils-thumb_ksul8u.jpg
     title: Tazmanian Devils
     trackListing: |-
       * Feel Alright  2:44
@@ -1114,7 +1114,7 @@ albums:
       The second album of the Tazmanian Devils released by Warner Bros. Records
       in 1981.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/26_taz-hilife-u543459-fr_o1abrf.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974948/Musical%20Journey/Discography/album%20covers/26_taz-hilife-u543459-fr_o1abrf.jpg
     title: Broadway Hi-Life
     trackListing: |-
       * Dirty Bop Party
@@ -1146,7 +1146,7 @@ albums:
       in 1985, and named after his three-piece backup band. The album peaked at
       #77 in Australia in June 1986.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/27_chris-silvertone-thumb_adziml.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974948/Musical%20Journey/Discography/album%20covers/27_chris-silvertone-thumb_adziml.jpg
     title: Silvertone
     trackListing: |-
       * Dancin'                           3:44
@@ -1179,7 +1179,7 @@ albums:
       Chris Isaak is the eponymous second album by Chris Isaak, released in
       1986. The song "Blue Hotel" was a hit in France.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/28_chris-isaak-chris-thumb_vaoais.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974948/Musical%20Journey/Discography/album%20covers/28_chris-isaak-chris-thumb_vaoais.jpg
     title: Chris Isaak
     trackListing: |-
       * You Owe Me Some Kind of Love  3:51
@@ -1208,7 +1208,7 @@ albums:
     style: 'Synth-pop, Funk/soul'
     text: 'It was released in 1988, but had poor commercial success.'
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/29_christina_vierra_yzc4hv.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974948/Musical%20Journey/Discography/album%20covers/29_christina_vierra_yzc4hv.jpg
     title: Christina Viera
     trackListing: |-
       * You Can Float In My Boat  3:59
@@ -1243,7 +1243,7 @@ albums:
       Heart Shaped World is the third album by Chris Isaak. Released in 1989, it
       became his breakthrough album and featured the Top 10 hit "Wicked Game".
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/30_chris-heartshaped-thumb_nilval.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974948/Musical%20Journey/Discography/album%20covers/30_chris-heartshaped-thumb_nilval.jpg
     title: Heart Shaped World
     trackListing: |-
       * Heart Shaped World  3:30
@@ -1286,7 +1286,7 @@ albums:
       the album Wicked Game. Compiled by Phil Knox-Roberts of WEA UK, it was
       highlights of Isaak's recording career to that point.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/31_chris-wickedgame-thumb_prkaps.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974948/Musical%20Journey/Discography/album%20covers/31_chris-wickedgame-thumb_prkaps.jpg
     title: Wicked Game
     trackListing: |-
       * Wicked Game  4:46
@@ -1331,7 +1331,7 @@ albums:
       The album was dedicated to the memory of Louie Beeson, who was the sound
       consultant.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974949/Musical%20Journey/Discography/album%20covers/32_chris-sf_days-thumb_mtiog0.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974949/Musical%20Journey/Discography/album%20covers/32_chris-sf_days-thumb_mtiog0.jpg
     title: San Francisco Days
     trackListing: |-
       * San Francisco Days  2:58
@@ -1370,7 +1370,7 @@ albums:
       Forever Blue was also nominated for a Grammy for Best Rock Album, though
       it lost to Alanis Morissette's Jagged Little Pill
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974948/Musical%20Journey/Discography/album%20covers/33_chris-forever_blue-thumb_zvorg3.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974948/Musical%20Journey/Discography/album%20covers/33_chris-forever_blue-thumb_zvorg3.jpg
     title: Forever Blue
     trackListing: |-
       * Baby Did a Bad Bad Thing  2:54
@@ -1407,7 +1407,7 @@ albums:
       title refers to Baja California, the album was recorded at San Francisco's
       Coast Recorders.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974949/Musical%20Journey/Discography/album%20covers/34_chris-isaak-baja-session-thumb_tmi3bb.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974949/Musical%20Journey/Discography/album%20covers/34_chris-isaak-baja-session-thumb_tmi3bb.jpg
     title: Baja Sessions
     trackListing: |-
       * Pretty Girls Don't Cry  3:09
@@ -1438,7 +1438,7 @@ albums:
       Speak of the Devil is the seventh studio album by the American rock
       musician Chris Isaak, released in 1998.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974949/Musical%20Journey/Discography/album%20covers/35_chris-speakof-thumb_yigxfq.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974949/Musical%20Journey/Discography/album%20covers/35_chris-speakof-thumb_yigxfq.jpg
     title: Speak of the Devil
     trackListing: |-
       * Please  3:34
@@ -1472,7 +1472,7 @@ albums:
       Best of Chris Isaak is a greatest hits album by Chris Isaak released on
       May 9, 2006 on the Reprise/Warner Bros. Records label.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974949/Musical%20Journey/Discography/album%20covers/36_chris-best-thumb_a65kci.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974949/Musical%20Journey/Discography/album%20covers/36_chris-best-thumb_a65kci.jpg
     title: Best of Chris Isaak
     trackListing: |-
       * San Francisco Days  2:59
@@ -1507,7 +1507,7 @@ albums:
     style: Pop Rock
     text: Self released album in 2014.
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1574974949/Musical%20Journey/Discography/album%20covers/37_brian-fullmentalnudity-thumb_gcu1kq.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974949/Musical%20Journey/Discography/album%20covers/37_brian-fullmentalnudity-thumb_gcu1kq.jpg
     title: Mr. Brian Elliot Full Mental Nudity
     trackListing: |-
       * Grampa's Hot Young Wife

@@ -1,38 +1,38 @@
 ---
 name: Jim Wilsey
 backgroundImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1572905805/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/Background_thumbnails/background-james-wilsey-chris-isaak-_zkwzxw.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905805/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/Background_thumbnails/background-james-wilsey-chris-isaak-_zkwzxw.jpg
 backgroundOpacity: 88
 mediaItems:
   - label: Photos
     mediaType: images
     orderNo: 1
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572905800/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/Background_thumbnails/Thumbnail_1_jim_wilsey_chris_eypxx9.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905800/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/Background_thumbnails/Thumbnail_1_jim_wilsey_chris_eypxx9.jpg
     galleries:
       - images:
           - caption: Jimmy and Chris
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572905801/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/1_Photos/jim_wilsey_chrtis_kxjchp.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905801/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/1_Photos/jim_wilsey_chrtis_kxjchp.jpg
             orderNo: 1
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572905799/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/1_Photos/JimmyAndChris-jim_uhghbt.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905799/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/1_Photos/JimmyAndChris-jim_uhghbt.jpg
             orderNo: 2
           - caption: Young Jimmy
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572905798/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/1_Photos/YoungJimmy_aprtri.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905798/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/1_Photos/YoungJimmy_aprtri.jpg
             orderNo: 3
           - caption: Young Jimmy
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572905799/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/1_Photos/Jim-W-1_evs1ga.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905799/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/1_Photos/Jim-W-1_evs1ga.jpg
             orderNo: 4
           - caption: Jimmy and Patty Baker
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572905798/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/1_Photos/JimmyAndPattyBaker_zce9vg.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905798/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/1_Photos/JimmyAndPattyBaker_zce9vg.jpg
             orderNo: 5
           - caption: At Tom Mallons
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572905799/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/1_Photos/AtTomMallons_d9jspr.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905799/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/1_Photos/AtTomMallons_d9jspr.jpg
             orderNo: 6
         orderNo: 1
         type: imageGallery    
@@ -40,7 +40,7 @@ mediaItems:
     orderNo: 2
     mediaType: videos
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572905800/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/Background_thumbnails/Thumbnail_2_James-Calvin-Wilsey_v8hlit.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905800/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/Background_thumbnails/Thumbnail_2_James-Calvin-Wilsey_v8hlit.jpg
     galleries:
       - orderNo: 1
         type: videoGallery

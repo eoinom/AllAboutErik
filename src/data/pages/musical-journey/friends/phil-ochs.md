@@ -1,43 +1,43 @@
 ---
 name: Phil Ochs
 backgroundImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1572907986/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/Background_Thumbnails/Background_Phil_Erik-_tlgkoo.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907986/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/Background_Thumbnails/Background_Phil_Erik-_tlgkoo.jpg
 backgroundOpacity: 81
 mediaItems:
   - galleries:
       - images:
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907987/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/YoungPhil_dptal7.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907987/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/YoungPhil_dptal7.jpg
             orderNo: 1
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907985/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/phil_tahf7f.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907985/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/phil_tahf7f.jpg
             orderNo: 2
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907986/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/Phil_Ochs-featured_pfhrpd.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907986/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/Phil_Ochs-featured_pfhrpd.jpg
             orderNo: 3
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907990/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/Phil_Erik_xws0hz.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907990/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/Phil_Erik_xws0hz.jpg
             orderNo: 4
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907988/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/Phil_Erik2_z9pyz1.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907988/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/Phil_Erik2_z9pyz1.jpg
             orderNo: 5
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907986/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/Phil2_ys70he.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907986/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/Phil2_ys70he.jpg
             orderNo: 6
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907990/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/Phil_morsbh.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907990/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/1_Photos/Phil_morsbh.jpg
             orderNo: 7
           - caption: Alice
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907988/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/Alice_cwku6s.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907988/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/Alice_cwku6s.jpg
             orderNo: 8
           - caption: Alice and Meghan
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907990/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/Alice_Meghan_yarrkm.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907990/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/Alice_Meghan_yarrkm.jpg
             orderNo: 9
           - caption: Meghan
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907990/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/Meghan2_emolzv.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907990/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/Meghan2_emolzv.jpg
             orderNo: 10
         orderNo: 1
         type: imageGallery
@@ -45,16 +45,16 @@ mediaItems:
     mediaType: images
     orderNo: 1
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572907985/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/Background_Thumbnails/Thumbnail_1_phil_s6ukka.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907985/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/Background_Thumbnails/Thumbnail_1_phil_s6ukka.jpg
   - galleries:
       - images:
           - caption: John Train's Big Plan (1 / 2)
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907988/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/JohnTrainsBigPlan_2_eu2fhe.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907988/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/JohnTrainsBigPlan_2_eu2fhe.jpg
             orderNo: 1
           - caption: John Train's Big Plan (2 / 2)
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572907988/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/JohnTrainsBigPlan_gr0sr8.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907988/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/2_Phil%20Memorabilia/JohnTrainsBigPlan_gr0sr8.jpg
             orderNo: 2
         orderNo: 1
         type: imageGallery
@@ -62,7 +62,7 @@ mediaItems:
     mediaType: images
     orderNo: 2
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572907989/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/Background_Thumbnails/Thumbnail_2_JohnTrainsBigPlan_pscbtx.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907989/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/Background_Thumbnails/Thumbnail_2_JohnTrainsBigPlan_pscbtx.jpg
 ---
 One night my group, The Knoblick Upper 10,000, shared a bill at the Gaslight Café on McDougal Street with a fellow named Phil Ochs. He talked fast, and he was smart and funny. He was singing his own material and most of his songs were of a political protest bent. I liked him and proposed a drink after the show. We went to a little place on Bleecker Street, and we talked and drank. He was going to make an album for Elecktra Records and had total confidence that it would sell a million copies. I felt compelled to bet him a million dollar that it wouldn’t. Fifteen years later into our friendship, I reminded him he owed me the million, but he wormed out of the deal on the grounds that we hadn’t set a deadline and that the album could still possibly sell a million. It hasn’t till this day. 
 

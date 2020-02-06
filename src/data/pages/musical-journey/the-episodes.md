@@ -1,11 +1,11 @@
 ---
 pageTitle: The Episodes
 headerBgImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1570486955/Musical%20Journey/The%20Episodes/header-image_episode_7_r20bvr.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1570486955/Musical%20Journey/The%20Episodes/header-image_episode_7_r20bvr.png
 titleImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1570483854/Musical%20Journey/The%20Episodes/the_episodes_h486wp.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1570483854/Musical%20Journey/The%20Episodes/the_episodes_h486wp.png
 mainImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1570483855/Musical%20Journey/The%20Episodes/tim-1-episodes-sm_xt7swp.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1570483855/Musical%20Journey/The%20Episodes/tim-1-episodes-sm_xt7swp.jpg
 bgAudio: >-
   https://res.cloudinary.com/all-about-erik/video/upload/v1578612279/Musical%20Journey/The%20Episodes/Harpoon_-_John_Sebastian_rxmqfy.mp3
 bgAudioDuration: 142
@@ -17,7 +17,7 @@ videos:
     shortTitle: How it Began
     subText: Erik recounts the unique musical influences that have informed his journey
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1570483855/Musical%20Journey/The%20Episodes/episode_1_skinnylegs-wider-sm_jhukql.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1570483855/Musical%20Journey/The%20Episodes/episode_1_skinnylegs-wider-sm_jhukql.jpg
     title: Episode One - How it Began
     url: 'https://player.vimeo.com/video/355344620'
   - duration: 457
@@ -27,7 +27,7 @@ videos:
       He becomes a professional banjo player with his bluegrass group, The
       Knoblick Upper 10,000
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1570483855/Musical%20Journey/The%20Episodes/episode_2_image-sm_bfzp1e.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1570483855/Musical%20Journey/The%20Episodes/episode_2_image-sm_bfzp1e.jpg
     title: Episode Two - Knoblick
     url: 'https://player.vimeo.com/video/307147559'
   - duration: 426
@@ -37,7 +37,7 @@ videos:
       He puts down his banjo to become a producer and publisher, and discovers
       John Sebastian and Tim Hardin, and records the prototypes of folk rock
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1570483855/Musical%20Journey/The%20Episodes/episode_3_image-sm_vw6737.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1570483855/Musical%20Journey/The%20Episodes/episode_3_image-sm_vw6737.jpg
     title: Episode Three - The Aspiring Entrepreneur
     url: 'https://player.vimeo.com/video/307144869'
   - duration: 1094
@@ -47,7 +47,7 @@ videos:
       Wherein he hits it big with The Lovin' Spoonful and records Tim Hardin,
       The Charlatans, and The Sopwith Camel
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1570483855/Musical%20Journey/The%20Episodes/episode_3_alt_image-sm_uygknc.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1570483855/Musical%20Journey/The%20Episodes/episode_3_alt_image-sm_uygknc.jpg
     title: Episode Four - Music Magnate
     url: 'https://player.vimeo.com/video/312158722'
   - duration: 1202
@@ -55,7 +55,7 @@ videos:
     shortTitle: San Francisco Late Sixties
     subText: 'Erik moves to San Francisco and goes #1 with Normal Greenbaum and others'
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1570483854/Musical%20Journey/The%20Episodes/episode_5_image-sm_y19ybi.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1570483854/Musical%20Journey/The%20Episodes/episode_5_image-sm_y19ybi.jpg
     title: Episode Five - San Francisco Late Sixties
     url: 'https://player.vimeo.com/video/308610019'
   - duration: 668
@@ -63,7 +63,7 @@ videos:
     shortTitle: The Seventies
     subText: He keeps on recording
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1570483855/Musical%20Journey/The%20Episodes/episode_6_image-sm_yby9ms.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1570483855/Musical%20Journey/The%20Episodes/episode_6_image-sm_yby9ms.jpg
     title: Episode Six - The Seventies
     url: 'https://player.vimeo.com/video/311567599'
   - duration: 1078
@@ -73,7 +73,7 @@ videos:
       Erik hooks up with Chris Isaak and together they produce some great work,
       including the classic "Wicked Game"
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1570483854/Musical%20Journey/The%20Episodes/episode_7_image-sm_gxdzlw.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1570483854/Musical%20Journey/The%20Episodes/episode_7_image-sm_gxdzlw.jpg
     title: Episode Seven - The Eighties and Onward
     url: 'https://player.vimeo.com/video/309169773'
   - duration: 5231
@@ -81,7 +81,7 @@ videos:
     shortTitle: Erik's Musical Journey
     subText: Watch all of the episodes together in the complete Musical Journey film
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1570483854/Musical%20Journey/The%20Episodes/img020-2-alt-sm_tb2qbs.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1570483854/Musical%20Journey/The%20Episodes/img020-2-alt-sm_tb2qbs.jpg
     title: Erik's Musical Journey - The Complete Film
     url: 'https://player.vimeo.com/video/309199328'
 ---

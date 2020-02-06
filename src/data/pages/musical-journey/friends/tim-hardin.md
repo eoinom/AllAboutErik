@@ -1,111 +1,111 @@
 ---
 name: Tim Hardin
 backgroundImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1572910020/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/Background_Thumbnails/background_tim-img319-_f4myat.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910020/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/Background_Thumbnails/background_tim-img319-_f4myat.jpg
 backgroundOpacity: 100
 mediaItems:
   - galleries:
       - images:
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910009/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/TimsIcon_f8rnye.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910009/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/TimsIcon_f8rnye.jpg
             orderNo: 1
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910021/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312_sx5vpv.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910021/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312_sx5vpv.jpg
             orderNo: 2
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910013/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-3_yo1lan.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910013/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-3_yo1lan.jpg
             orderNo: 3
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910006/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-4_qhlow0.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910006/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-4_qhlow0.jpg
             orderNo: 4
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910016/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-5_bi1sfs.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910016/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-5_bi1sfs.jpg
             orderNo: 5
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910015/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-6_rzrzlu.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910015/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-6_rzrzlu.jpg
             orderNo: 6
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910024/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-7_bplgwx.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910024/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-7_bplgwx.jpg
             orderNo: 7
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910008/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-8_uviygx.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910008/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-8_uviygx.jpg
             orderNo: 8
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910008/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-9_af3rk1.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910008/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-9_af3rk1.jpg
             orderNo: 9
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910012/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-10_txdqqs.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910012/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-10_txdqqs.jpg
             orderNo: 10
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910013/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-11_qqcuei.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910013/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-11_qqcuei.jpg
             orderNo: 11
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910013/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-12_d3jj5i.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910013/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-12_d3jj5i.jpg
             orderNo: 12
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910012/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-13_i3s9gz.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910012/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-13_i3s9gz.jpg
             orderNo: 13
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910012/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-14_rabk9b.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910012/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-14_rabk9b.jpg
             orderNo: 14
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910010/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-15_twtnwd.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910010/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-15_twtnwd.jpg
             orderNo: 15
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910010/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-16_bp2m6t.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910010/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-16_bp2m6t.jpg
             orderNo: 16
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910007/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img424-2_hso3vs.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910007/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img424-2_hso3vs.jpg
             orderNo: 17
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910012/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-17_y3cpte.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910012/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/TimmysFirstPhotoshoot/img312-17_y3cpte.jpg
             orderNo: 18
         label: Tim's First Photo Shoot
         orderNo: 1
         type: imageGallery
       - images:
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910012/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootForTimsFirstAlbum/img313_vxc11w.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910012/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootForTimsFirstAlbum/img313_vxc11w.jpg
             orderNo: 1
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910009/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootForTimsFirstAlbum/img314_cqhuqc.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910009/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootForTimsFirstAlbum/img314_cqhuqc.jpg
             orderNo: 2
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910010/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootForTimsFirstAlbum/img315_nubj3q.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910010/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootForTimsFirstAlbum/img315_nubj3q.jpg
             orderNo: 3
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910010/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootForTimsFirstAlbum/img316_lalswa.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910010/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootForTimsFirstAlbum/img316_lalswa.jpg
             orderNo: 4
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910010/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootForTimsFirstAlbum/img317_wszcbg.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910010/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootForTimsFirstAlbum/img317_wszcbg.jpg
             orderNo: 5
         label: Photo Shoot for First Album
         orderNo: 2
         type: imageGallery
       - images:
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910006/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img319_u5ac6t.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910006/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img319_u5ac6t.jpg
             orderNo: 1
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910011/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img320_lgqpjy.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910011/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img320_lgqpjy.jpg
             orderNo: 2
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910009/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img322-2_gp6vyb.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910009/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img322-2_gp6vyb.jpg
             orderNo: 3
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910006/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img323_gjumw7.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910006/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img323_gjumw7.jpg
             orderNo: 4
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910007/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img324-2_odfzn4.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910007/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img324-2_odfzn4.jpg
             orderNo: 5
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910006/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img327_lb99i9.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910006/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img327_lb99i9.jpg
             orderNo: 6
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910008/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img329_xafy4e.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910008/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img329_xafy4e.jpg
             orderNo: 7
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910006/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img330_xfksak.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910006/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/1_Photos/PhotoshootAtLennyBruces/img330_xfksak.jpg
             orderNo: 8
         label: Photo Shoot at Lenny Bruce's
         orderNo: 3
@@ -114,47 +114,47 @@ mediaItems:
     mediaType: images
     orderNo: 1
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572910019/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/Background_Thumbnails/Thumbnail_1_img330_lsrbyz.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910019/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/Background_Thumbnails/Thumbnail_1_img330_lsrbyz.jpg
   - galleries:
       - images:
           - caption: Verve Article - Part 1
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910011/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/Verve%20article/Hardin_ow5nde.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910011/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/Verve%20article/Hardin_ow5nde.jpg
             orderNo: 1
           - caption: Verve Article - Part 2
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910013/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/Verve%20article/Hardin-1_datscj.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910013/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/Verve%20article/Hardin-1_datscj.jpg
             orderNo: 2
           - caption: Verve Article - Part 3
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910015/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/Verve%20article/Hardin-2_jsmtkq.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910015/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/Verve%20article/Hardin-2_jsmtkq.jpg
             orderNo: 3
           - caption: Verve Article - Part 4
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910014/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/Verve%20article/Hardin-3_eazhgy.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910014/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/Verve%20article/Hardin-3_eazhgy.jpg
             orderNo: 4
           - caption: Verve Article - Part 5
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910014/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/Verve%20article/Hardin-4_bbvtvj.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910014/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/Verve%20article/Hardin-4_bbvtvj.jpg
             orderNo: 5
           - caption: Verve Article - Part 6
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910018/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/Verve%20article/Hardin-5_phvshr.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910018/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/Verve%20article/Hardin-5_phvshr.jpg
             orderNo: 6
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910017/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img593-pic_w_Guitar-Article_frl3ra.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910017/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img593-pic_w_Guitar-Article_frl3ra.jpg
             orderNo: 7
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910016/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img594_v5y87q.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910016/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img594_v5y87q.jpg
             orderNo: 8
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910015/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img595_xfsd4l.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910015/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img595_xfsd4l.jpg
             orderNo: 9
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910016/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img600_dfmned.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910016/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img600_dfmned.jpg
             orderNo: 10
           - img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910023/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img602_lgsudc.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910023/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/2_Press%20and%20Editorial/img602_lgsudc.jpg
             orderNo: 11
         label: ''
         orderNo: 1
@@ -163,28 +163,28 @@ mediaItems:
     mediaType: images
     orderNo: 2
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572910020/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/Background_Thumbnails/Thumbnail_2_Hardin-2_v0jyqn.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910020/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/Background_Thumbnails/Thumbnail_2_Hardin-2_v0jyqn.jpg
   - galleries:
       - images:
           - caption: Bill for Tim's Blues Album
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910019/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/3_Tim%20Memorabilia/BillsForTimsBluesAlbum/img586_ng2fac.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910019/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/3_Tim%20Memorabilia/BillsForTimsBluesAlbum/img586_ng2fac.jpg
             orderNo: 1
           - caption: Bill for Tim's Blues Album
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910019/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/3_Tim%20Memorabilia/BillsForTimsBluesAlbum/img587_dod9sk.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910019/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/3_Tim%20Memorabilia/BillsForTimsBluesAlbum/img587_dod9sk.jpg
             orderNo: 2
           - caption: Dollars for Tim
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910018/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/3_Tim%20Memorabilia/DollarsForTim_fyttty.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910018/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/3_Tim%20Memorabilia/DollarsForTim_fyttty.jpg
             orderNo: 3
           - caption: My Notes on Blues Session
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910017/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/3_Tim%20Memorabilia/EriksNotesOnBluesSession_qj4ufv.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910017/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/3_Tim%20Memorabilia/EriksNotesOnBluesSession_qj4ufv.jpg
             orderNo: 4
           - caption: My First Contract with Tim
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572910020/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/3_Tim%20Memorabilia/MyFirstContractWithTim_yetj2j.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910020/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/3_Tim%20Memorabilia/MyFirstContractWithTim_yetj2j.jpg
             orderNo: 5
         orderNo: 1
         type: imageGallery
@@ -192,7 +192,7 @@ mediaItems:
     mediaType: images
     orderNo: 3
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572910020/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/Background_Thumbnails/Thumbnail_3_DollarsForTim_qop1gd.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910020/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/Background_Thumbnails/Thumbnail_3_DollarsForTim_qop1gd.jpg
 ---
 In '64 I was looking for artists to sing on my embarrassing and ill-fated attempt to start my own dance craze. A singing duo there in the village called Two Guys from Boston told me about a singer up there named Tim Hardin. I called him and agreed to send him some bucks to come down and audition. We met in the Dugout, a bar on Bleecker Street next to the Bitter End. We had a drink and talked. The conversation soon turned to drugs, and he asked me if I had any shit, or knew where to get some. Naively I thought he meant pot. But not so. It turned out his tastes also ran toward harder stuff. 
 

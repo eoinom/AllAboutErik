@@ -1,70 +1,70 @@
 ---
 name: Brian Elliot
 backgroundImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1572901752/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Background_brianelliot-studio_it6tv0.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901752/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Background_brianelliot-studio_it6tv0.jpg
 backgroundOpacity: 100
 mediaItems:
   - galleries:
       - images:
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901742/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/1Brian_movvwd.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901742/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/1Brian_movvwd.jpg
             orderNo: 1
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901743/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/2Brain_tfuzs3.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901743/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/2Brain_tfuzs3.jpg
             orderNo: 2
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901744/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/3Brian_eimcow.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901744/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/3Brian_eimcow.jpg
             orderNo: 3
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901743/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/4Brian_lfiae9.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901743/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/4Brian_lfiae9.jpg
             orderNo: 4
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901743/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/5Brian_c7pdsd.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901743/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/5Brian_c7pdsd.jpg
             orderNo: 5
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901742/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/6Brain_yyevle.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901742/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/6Brain_yyevle.jpg
             orderNo: 6
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901741/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/7Brian_nbyvxg.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901741/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/7Brian_nbyvxg.jpg
             orderNo: 7
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901744/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/8Brian_a99ubd.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901744/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/8Brian_a99ubd.jpg
             orderNo: 8
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901744/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/9Brian_sf55zy.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901744/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/9Brian_sf55zy.jpg
             orderNo: 9
           - caption: ' '
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/10Brian_fq67ew.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/10Brian_fq67ew.jpg
             orderNo: 10
           - caption: Brian and Erik
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901742/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/Brian_Erik_ufsjsq.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901742/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/1_Photos/Brian_Erik_ufsjsq.jpg
             orderNo: 11
           - caption: In Cabo San Lucas
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901750/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/4_Memorabilia/InCaboSanLucas_zfl2dh.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901750/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/4_Memorabilia/InCaboSanLucas_zfl2dh.jpg
             orderNo: 12
           - caption: 'Brian, Me, Brooke and Kaianne'
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901748/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/4_Memorabilia/BriansChildren/Brian_Erik_Kaianne_Brooke_w61evx.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901748/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/4_Memorabilia/BriansChildren/Brian_Erik_Kaianne_Brooke_w61evx.jpg
             orderNo: 13
           - caption: Brooke and Kaianne
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901749/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/4_Memorabilia/BriansChildren/Brooke_Kaianne_wxg7rc.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901749/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/4_Memorabilia/BriansChildren/Brooke_Kaianne_wxg7rc.jpg
             orderNo: 14
           - caption: Kaianne
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901749/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/4_Memorabilia/BriansChildren/Kaianne_tnknfv.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901749/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/4_Memorabilia/BriansChildren/Kaianne_tnknfv.jpg
             orderNo: 15
         orderNo: 1
         type: imageGallery
@@ -72,24 +72,24 @@ mediaItems:
     mediaType: images
     orderNo: 1
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572904890/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Thumbnail_1_3Brian_faqyu6.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904890/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Thumbnail_1_3Brian_faqyu6.jpg
   - galleries:
       - images:
           - caption: Papa Don't Preach Award
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/PapaDontPreachAwards/PapaDontPreach_ccauta.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/PapaDontPreachAwards/PapaDontPreach_ccauta.jpg
             orderNo: 1
           - caption: Ascap Award
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/PapaDontPreachAwards/BrianAscap_nu3f16.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/PapaDontPreachAwards/BrianAscap_nu3f16.jpg
             orderNo: 2
           - caption: Brian's 1st Album
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901746/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/BrianAlbums/Brians_1stalbum_nwwgit.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901746/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/BrianAlbums/Brians_1stalbum_nwwgit.jpg
             orderNo: 3
           - caption: Full Mental Nudity
             img: >-
-              https://res.cloudinary.com/all-about-erik/image/upload/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/BrianAlbums/FullMentalNudity_knw7sd.jpg
+              https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901745/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/2_Albums%20and%20Awards/BrianAlbums/FullMentalNudity_knw7sd.jpg
             orderNo: 4
         orderNo: 1
         type: imageGallery
@@ -97,7 +97,7 @@ mediaItems:
     mediaType: images
     orderNo: 2
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572904890/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Thumbnail_2_PapaDontPreach_he1yqu.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904890/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Thumbnail_2_PapaDontPreach_he1yqu.jpg
   - galleries:
       - orderNo: 1
         type: videoGallery
@@ -112,7 +112,7 @@ mediaItems:
     mediaType: videos
     orderNo: 3
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1572904891/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Thumbnail_3_FullMentalNudity-thumb_aew3ri.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904891/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Thumbnail_3_FullMentalNudity-thumb_aew3ri.jpg
 ---
 A guy walked into my office on Kearny Street, claiming to be a songwriter. He had met Peter Kraemer of the Sopwith Camel, who had sent him over to see me. I agreed to listen to a few of his songs, and after I did he asked me what I thought. I said “good parts, maybe the melody doesn’t open quite right in this chorus, maybe the idea behind these lyrics can take the narrative a little further, and how about a bridge for this one”? He listened but seemed somewhat skeptical and left saying he would think about my comments. Surprisingly, he called the very next day and said he’d done rewrites on the songs and would I listen again? I never had that happen before or since. I listened and was impressed by the changes he’d made. He played a few more songs and we began almost daily conversations about his work. Some of the songs were very funny.
 
