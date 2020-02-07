@@ -16,9 +16,6 @@
     <b-container fluid class="captionBanner p-2">
       <b-row align-h="center" align-v="center" style="height:100%">
         <b-col align-self="center">
-          <!-- <h4 class="videoTitle mb-1 mb-sm-2 mb-lg-4">{{ video.title }}</h4> -->
-          <!-- <h4 class="videoTitle m-1 m-sm-2 m-lg-2">{{ video.title }}</h4> -->
-          <!-- <h4 class="videoTitle p-1 p-sm-2 p-lg-2">{{ video.title }}</h4> -->
           <h4 class="videoTitle">{{ video.title }}</h4>
         </b-col>
       </b-row>
@@ -141,15 +138,6 @@ export default {
   text-transform: uppercase;
 }
 
-/* .thumbnailPlayVideoImg {
-  width: 14.14%;
-  min-width: 25px;
-  max-width: 40px;
-  height: auto;  
-  position: relative;
-  padding-bottom: 6px;
-} */
-
 .showOnHover {
   opacity: 0;
   transition: all 0.3s ease-in 0.2s;
@@ -184,62 +172,59 @@ export default {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {  
   .playVideoText {
-    font-size: 5vw;
-    line-height: 5vw;
-    letter-spacing: 7px;
+    font-size: calc(1.875rem + 7 * (100vw - 375px) / (576 - 375));
+    line-height: calc(1.875rem + 7 * (100vw - 375px) / (576 - 375));
+    letter-spacing: 9px;
   }
-  .thumbnailImgOverlay {
-    display: inline;
+  .videoDurationText {
+    font-size: calc(1.125rem + 6 * (100vw - 375px) / (576 - 375));
   }
-  .thumbnailImgOverlay .videoDurationText {
-    font-size: 3.5vw;
+  .videoTitle {
+    font-size: calc(0.9375rem + 1 * (100vw - 375px) / (576 - 375));
+    line-height: calc(1.25rem + 1 * (100vw - 375px) / (576 - 375));
+    letter-spacing: calc(0.3125rem + 1 * (100vw - 375px) / (576 - 375));
+  }
+  .captionBanner {
+    height: calc(90px + 25 * (100vw - 375px) / (576 - 375));
+    color: black; 
+    background-color: white;
   }
   .showOnHover {
     opacity: 1;
   }
   .thumbnailImg {
     opacity: 0.5;
-  }
-  .captionBanner {
-    /* height: 30% !important; */
   }
   .hideText {
     display: none;
   }
 }
-@media (max-width: 370px) {
-  .captionBanner {
-    /* padding: 1px 0px !important; */
-  }
-}
-@media (max-width: 350px) {
-  .captionBanner {
-    /* height: 32% !important; */
-  }
-}
-
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .playVideoText {
-    font-size: 4vw;
-    line-height: 4vw;
-    letter-spacing: 7px;
+    font-size: 4.8vw;
+    line-height: 4.8vw;
+    letter-spacing: 8px;
   }
-  .thumbnailImgOverlay {
-    display: inline;
+  .videoDurationText {
+    font-size: 2.86vw;
   }
-  .thumbnailImgOverlay .videoDurationText {
-    font-size: 3vw;
+  .videoTitle {
+    font-size: calc(1rem + 1 * (100vw - 576px) / (768 - 576));
+    line-height: calc(1.3125rem + 1 * (100vw - 576px) / (768 - 576));
+    letter-spacing: calc(0.375rem + 1 * (100vw - 576px) / (768 - 576));
+  }
+  .captionBanner {
+    height: calc(100px + 15 * (100vw - 576px) / (768 - 576));
+    color: black; 
+    background-color: white;
   }
   .showOnHover {
     opacity: 1;
   }
   .thumbnailImg {
     opacity: 0.5;
-  }
-  .captionBanner {
-    /* height: 28% !important; */
   }
   .hideText {
     display: none;
@@ -248,14 +233,15 @@ export default {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .captionBanner {
+     color: black; 
+    background-color: white;
+  }
   .showOnHover {
     opacity: 1;
   }
   .thumbnailImg {
     opacity: 0.5;
-  }
-  .captionBanner {
-    /* height: 25% !important; */
   }
   .hideText {
     display: none;
@@ -264,6 +250,14 @@ export default {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
+  .videoTitle {
+    font-size: calc(1rem + 1 * (100vw - 992px) / (1200 - 992));
+    line-height: calc(1.3125rem + 1 * (100vw - 992px) / (1200 - 992));
+    letter-spacing: calc(0.375rem + 1 * (100vw - 992px) / (1200 - 992));
+  }
+  .captionBanner {
+    height: calc(100px + 15 * (100vw - 992px) / (1200 - 992));
+  }
 }
 
 </style>

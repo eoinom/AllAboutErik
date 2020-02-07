@@ -19,7 +19,7 @@
       </b-row>
 
       <!-- VIDEOS -->
-      <b-row no-gutters  id="videos">
+      <b-row no-gutters align-h="center" id="videos">
         <b-col cols="12" sm="6" lg="4" xl="3"
           v-for="(video, index) in videos" 
           :key="video.title" 
