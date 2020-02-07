@@ -186,8 +186,8 @@ export default {
   }
   .captionBanner {
     height: calc(90px + 25 * (100vw - 375px) / (576 - 375));
-    color: black; 
-    background-color: white;
+    /* color: black; 
+    background-color: white; */
   }
   .showOnHover {
     opacity: 1;
@@ -217,8 +217,8 @@ export default {
   }
   .captionBanner {
     height: calc(100px + 15 * (100vw - 576px) / (768 - 576));
-    color: black; 
-    background-color: white;
+    /* color: black; 
+    background-color: white; */
   }
   .showOnHover {
     opacity: 1;
@@ -233,10 +233,10 @@ export default {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .captionBanner {
+  /* .captionBanner {
      color: black; 
     background-color: white;
-  }
+  } */
   .showOnHover {
     opacity: 1;
   }
