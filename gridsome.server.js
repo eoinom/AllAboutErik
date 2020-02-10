@@ -14,6 +14,9 @@ module.exports = function (api) {
   //   // Use the Pages API here: https://gridsome.org/docs/pages-api
   // })
 
+  const slugify = require('@sindresorhus/slugify')
+
+  // create the individual Friends pages
   api.createPages(async ({ graphql, createPage }) => {
     const { data } = await graphql(`{
       allFriends {
@@ -26,7 +29,7 @@ module.exports = function (api) {
       }
     }`)
 
-    const slugify = require('@sindresorhus/slugify')
+    // const slugify = require('@sindresorhus/slugify')
 
     data.allFriends.edges.forEach(({ node }) => {
       pageSlug = slugify(node.name)
@@ -39,4 +42,33 @@ module.exports = function (api) {
       })
     })
   })
+
+
+  // create the individual Collections pages
+  api.createPages(async ({ graphql, createPage }) => {
+    const { data } = await graphql(`{
+      allCollections {
+        edges {
+          node {
+            id
+            name
+          }
+        }
+      }
+    }`)
+
+    // const slugify = require('@sindresorhus/slugify')
+
+    // data.allCollections.edges.forEach(({ node }) => {
+    //   pageSlug = slugify(node.name)
+    //   createPage({
+    //     path: `/collections/${pageSlug}`,
+    //     component: './src/templates/Collection.vue',
+    //     context: {
+    //       id: node.id
+    //     }
+    //   })
+    // })
+  })
+
 }

@@ -120,5 +120,19 @@ module.exports = {
         typeName: 'Travels'
       }
     },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/pages/collections-page.md',
+        typeName: 'CollectionsPage'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/pages/collections/*.md',
+        typeName: 'Collections'
+      }
+    },
   ]
 }

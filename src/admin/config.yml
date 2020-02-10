@@ -289,10 +289,28 @@ collections:
             widget: "list"
             fields: 
               - {label: 'Title', name: 'title', widget: 'string', required: false}
-              # - {label: 'Subtext', name: 'subText', widget: 'markdown', required: false}
               - {label: "Vimeo Url", name: "url", widget: "string"}
               - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
               - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
+
+      - label: "Collections Page"
+        name: "collections-page"
+        file: "src/data/pages/collections-page.md"
+        fields:
+          - {label: "Page Title", name: "pageTitle", widget: "string"}
+          - {label: "Title Image", name: "titleImg", widget: "image"}
+          - {label: "Header video (Vimeo Url)", name: "headerVideoUrl", widget: "string"}
+          - {label: "Header overlay text", name: "headerText", widget: "string"}
+          - label: "Collections"
+            name: "collections"
+            widget: "list"
+            fields: 
+              - {label: 'Title', name: 'title', widget: 'string', required: false}
+              - {label: "Vimeo Url", name: "url", widget: "string"}
+              - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
+              - {label: "Thumbnail Hover Image", name: "thumbnailHoverImg", widget: "image"}
+              - {label: "Link (url)", name: "link", widget: "string"}
+      
 
   - label: "Friends"
     name: "friends"
@@ -374,4 +392,19 @@ collections:
                 fields:
                   - {label: "link (url)", name: "url", widget: "string"}
                 
-          
+  - label: "Collections"
+    name: "collections"
+    folder: "src/data/pages/collections"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: name
+    fields:
+      - {label: "Name", name: "name", widget: "string"} 
+      - {label: "Header Image", name: "backgroundImg", widget: "image"}
+      - {label: "Header Image Opacity (%)", name: "backgroundImgOpacity", widget: "number", valueType: "int", min: 0, max: 100}
+      - {label: 'Header text', name: 'body', widget: 'markdown'}
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields:
+          - {label: "Image", name: "img", widget: "image"}
