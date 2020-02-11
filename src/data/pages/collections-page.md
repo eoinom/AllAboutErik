@@ -8,14 +8,23 @@ slides:
       https://res.cloudinary.com/all-about-erik/image/upload/v1581372624/Collections/slideshow-01_f4tant.jpg
     opacity: 100
     orderNo: 1
+    panStart: bottom-right
+    scaleFrom: 1
+    scaleTo: 1.06
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1581372624/Collections/slideshow-02_n5ecs2.png
     opacity: 100
     orderNo: 2
+    panStart: centre
+    scaleFrom: 1
+    scaleTo: 1.06
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1581372624/Collections/slideshow-03_kc3kzt.jpg
     opacity: 100
     orderNo: 3
+    panStart: top
+    scaleFrom: 1.06
+    scaleTo: 1
 collections:
   - link: kimono-propaganda
     thumbnailHoverImg: >-
