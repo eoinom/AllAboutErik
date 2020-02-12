@@ -307,6 +307,14 @@ collections:
               - {label: "Image", name: "img", widget: "image"} 
               - {label: "Order no.", name: "orderNo", widget: "number", valueType: "int", min: 1} 
               - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+              - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, max: 60, required: false}
+              - {label: "Scale from", name: "scaleFrom", widget: "number", valueType: "float", min: 1, max: 2, required: false}
+              - {label: "Scale to", name: "scaleTo", widget: "number", valueType: "float", min: 1, max: 2, required: false}
+              - label: "Pan start from"
+                name: "panStart"
+                required: false
+                widget: "select"
+                options: ["top-left", "top", "top-right", "left", "centre", "right", "bottom-left", "bottom", "bottom-right"]
           - label: "Collections"
             name: "collections"
             widget: "list"
