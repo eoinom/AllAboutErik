@@ -299,7 +299,7 @@ collections:
         fields:
           - {label: "Page Title", name: "pageTitle", widget: "string"}
           - {label: "Title Image", name: "titleImg", widget: "image"}
-          - {label: "Slideshow overlay text", name: "slideshowText", widget: "markdown"}
+          - {label: 'Slideshow overlay text', name: 'body', widget: 'markdown'}
           - label: "Slides"
             name: "slides"
             widget: "list"
