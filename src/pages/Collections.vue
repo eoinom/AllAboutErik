@@ -95,7 +95,7 @@ export default {
       return this.$page.Collections.edges[0].node.slides
     },
     slideshowText(){
-      return this.$page.Collections.edges[0].node.slideshowText
+      return this.$page.Collections.edges[0].node.content
     },
     // slide_images() {    
     //   return this.slides.map(a => a.img)
