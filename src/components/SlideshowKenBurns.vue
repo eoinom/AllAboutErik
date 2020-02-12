@@ -82,6 +82,14 @@ export default {
       }
     },
 
+    scaleFrom(index) {
+      return this.slides[index].hasOwnProperty('scaleFrom') ? this.slides[index].scaleFrom : 0.8
+    },
+
+    scaleTo(index) {
+      return this.slides[index].hasOwnProperty('scaleTo') ? this.slides[index].scaleTo : 1.0
+    },
+
     startInterval() {
       const precision = 100;
       const clock = setInterval(() => {
@@ -112,24 +120,22 @@ export default {
     createKeyFrames() {
       for (let i = 0; i < this.slides.length; i++) {        
         let startPos = [0, 0, 0]  // x, y, z
-        if (this.slides[i].hasOwnProperty('panStart')) {
-          switch(this.slides[i].panStart.toLowerCase()) {
-            case 'bottom-left':   startPos = [-1, 1, 0];      break;
-            case 'bottom':        startPos = [0, 1, 0];       break;
-            case 'bottom-right':  startPos = [1, 1, 0];       break;
-            case 'left':          startPos = [-1, 0, 0];      break;
-            case 'centre':        startPos = [0, 0, 0];       break;
-            case 'right':         startPos = [1, 0, 0];       break;
-            case 'top-left':      startPos = [-1, -1, 0];     break;
-            case 'top':           startPos = [0, -1, 0];      break;
-            case 'top-right':     startPos = [1, -1, 0];      break;
-            default:
-              console.log('Did not recognise value for slides.panStart: ' + this.slides[i].panStart)
-          } 
+        switch(this.panStart(i)) {
+          case 'bottom left':   startPos = [-1, 1, 0];      break;
+          case 'bottom':        startPos = [0, 1, 0];       break;
+          case 'bottom right':  startPos = [1, 1, 0];       break;
+          case 'left':          startPos = [-1, 0, 0];      break;
+          case 'center':        startPos = [0, 0, 0];       break;
+          case 'right':         startPos = [1, 0, 0];       break;
+          case 'top left':      startPos = [-1, -1, 0];     break;
+          case 'top':           startPos = [0, -1, 0];      break;
+          case 'top right':     startPos = [1, -1, 0];      break;
+          default:
+            console.log('Did not recognise value for slides.panStart: ' + this.panStart(i))
         }
         const num = i + 1
-        const scaleFrom = this.slides[i].scaleFrom
-        const scaleTo = this.slides[i].scaleTo
+        const scaleFrom = this.scaleFrom(i)
+        const scaleTo = this.scaleTo(i)
         const Tx = this.translateFactor * startPos[0]
         const Ty = this.translateFactor * startPos[1]
         var style = document.createElement('style');
