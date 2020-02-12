@@ -9,11 +9,6 @@
     <header id="header" :style="headerStyles">
       <g-image :src="titleImg" id="titleImg" class="mb-4" />
       <p v-html="titleSubText" id="titleSubText" />
-      <!-- <div id="scrollDownContainer">
-        <ScrollDownArrow
-          scrollToElement="#topOfMainBody"
-        />
-      </div> -->
       <p id="targetForOpacity"></p>
     </header>
 
@@ -243,22 +238,17 @@ export default {
       return index === this.bgImgOverlayIndex ? 'showOverlay' : 'hidden'
     },
     scrollFunction() {
-      // console.log('in scroll EventListener');      
-      
       this.getDocumentHeight();
 
       if (this.scrollY != window.pageYOffset) {
-        this.scrollY = window.pageYOffset 
-        // console.log('this.scrollY = ' + this.scrollY);
+        this.scrollY = window.pageYOffset
         let bodyRect = document.body.getBoundingClientRect()
         let element = document.getElementById('topOfMainBody')
         let elemRect = element.getBoundingClientRect()
         this.targetPosY = elemRect.top - bodyRect.top
-        // console.log('in scrollFunction, elemRect.top - bodyRect.top = ' + elemRect.top + ' - ' + bodyRect.top + ' = ' + this.targetPosY);
       }
     },
-    addScrollListener() {
-      // console.log('in addScrollListener');      
+    addScrollListener() {    
       window.addEventListener('scroll', this.scrollFunction);
     },
     convertTrackListingToHtml(input) {
@@ -346,7 +336,6 @@ export default {
       let element = document.getElementById('topOfMainBody')      
       let elemRect = element.getBoundingClientRect()
       this.targetPosY = elemRect.top - bodyRect.top
-      // console.log('in mounted setTimeout, elemRect.top - bodyRect.top = ' + elemRect.top + ' - ' + bodyRect.top + ' = ' + this.targetPosY);
     }.bind(this), 500);
 
     this.windowWidth = window.innerWidth
@@ -355,7 +344,6 @@ export default {
 
     this.$nextTick(() => {
       window.addEventListener('resize', () => {
-      // console.log('in resize EventListener');      
         this.windowWidth = window.innerWidth
         this.windowHeight = window.innerHeight
         this.getDocumentHeight()
@@ -364,7 +352,6 @@ export default {
         let element = document.getElementById('topOfMainBody')
         let elemRect = element.getBoundingClientRect()
         this.targetPosY = elemRect.top - bodyRect.top
-        // console.log('in resize, elemRect.top - bodyRect.top = ' + elemRect.top + ' - ' + bodyRect.top + ' = ' + this.targetPosY);
       });
     })
   },
@@ -454,7 +441,7 @@ export default {
 
 #titleSubText {
   color: white;
-  font-family: 'NeueHaasGroteskText Pro55';
+  font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
   font-size: 1.5rem; /* 24px at 16px default size */
   font-weight: 500;
