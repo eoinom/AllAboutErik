@@ -2,21 +2,6 @@
 pageTitle: Collections
 titleImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1581372624/Collections/collections-white_icjjrm.png
-slideshowText: >-
-  My dad collected old Norwegian and Icelandic stamps and he collected and
-  raised tropical fish. Maybe his collecting passion rubbed off on me because
-  I’ve been collecting stuff my whole life. As a boy I collected Pep buttons
-  from cereal boxes, empty cigarette packages, fossils, copper Lincoln head
-  pennies, moths and butterflies, cocoons in winter, and raised tropical fish.
-
-
-  In college, I studied anthropology and became intrigued with tribal people.
-  Visiting Guatemala for the first time I was so impressed by the indigenous
-  villagers, whose clothes, especially those of the women, were all woven by
-  hand. I bought some “huipils” there, and “molas” in the San Blas Islands. I
-  went to South America and bought hand-woven cloth in Ecuador, Peru and
-  Bolivia. I went from there to Mid-Eastern rugs, Pre-Columbian weavings, and
-  Japanese kimono. I loved collecting these things.
 slides:
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/v1581372624/Collections/slideshow-01_f4tant.jpg
@@ -83,4 +68,6 @@ collections:
       https://res.cloudinary.com/all-about-erik/image/upload/v1581372625/Collections/07-bolivian-potolo_ed0ods.jpg
     title: Bolivian Potolo
 ---
+My dad collected old Norwegian and Icelandic stamps and he collected and raised tropical fish. Maybe his collecting passion rubbed off on me because I’ve been collecting stuff my whole life. As a boy I collected Pep buttons from cereal boxes, empty cigarette packages, fossils, copper Lincoln head pennies, moths and butterflies, cocoons in winter, and raised tropical fish.
 
+In college, I studied anthropology and became intrigued with tribal people. Visiting Guatemala for the first time I was so impressed by the indigenous villagers, whose clothes, especially those of the women, were all woven by hand. I bought some “huipils” there, and “molas” in the San Blas Islands. I went to South America and bought hand-woven cloth in Ecuador, Peru and Bolivia. I went from there to Mid-Eastern rugs, Pre-Columbian weavings, and Japanese kimono. I loved collecting these things.
