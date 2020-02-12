@@ -7,7 +7,11 @@
       <b-row no-gutters class="mb-1 px-1">
         <b-col class="slideshowCol">
           
-          <slideshow-images :slides="slides" />
+          <!-- <slideshow-images :slides="slides" /> -->
+
+          <!-- <div class="slideshow"> -->
+            <slideshow-kenburns-small :slides="slides" />
+          <!-- </div> -->
           
           <b-container fluid class="slideshowOverlay">
             <b-row>
@@ -15,7 +19,7 @@
                 
                 <g-image alt="Collections title image" v-if="titleImg != null" :src="titleImg" id="titleImg" class="mb-md-1 mb-lg-2 mb-xl-3"/>
                 
-                <p v-html="slideshowText" id="slideshowText" />    
+                <div v-html="slideshowText" id="slideshowText" />    
 
                 <!-- Scroll with arrow images - hidden on xs (e.g. portrait mobile devices) -->
                 <!-- <ScrollDownArrow
@@ -50,11 +54,14 @@
         id
         pageTitle
         titleImg        
-        slideshowText
+        content
         slides {
           orderNo
           img
           opacity
+          panStart
+          scaleFrom
+          scaleTo
         }
         collections {
           title
@@ -73,6 +80,7 @@
 // import BackgroundMusic from '../components/BackgroundMusic.vue'
 import ScrollDownArrow from '../components/ScrollDownArrow.vue'
 import SlideshowImages from '../components/SlideshowImages2.vue'
+import SlideshowKenBurnsSmall from '../components/SlideshowKenBurnsSmall.vue'
 
 export default { 
   metaInfo() {
@@ -110,6 +118,7 @@ export default {
 
   components: {
     'slideshow-images': require('../components/SlideshowImages2.vue').default,
+    'slideshow-kenburns-small': require('../components/SlideshowKenBurnsSmall.vue').default,
     ScrollDownArrow,
     // BackgroundMusic,
   },
@@ -139,9 +148,9 @@ export default {
   font-weight: normal;
 }
 
-.layout {
+/* .layout {
   background-color: #dddddd
-}
+} */
 
 .row {
   margin-bottom: 20px;
@@ -154,10 +163,17 @@ export default {
 
 .slideshowCol {
   position: relative;
-  max-height:1224px; 
-  width:auto;
+  max-height: 1224px; 
+  width: auto;
   text-align: center;
 }
+
+/* .slideshow {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+} */
 
 .slideshowOverlay {
   z-index: 100;
@@ -170,7 +186,8 @@ export default {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding-bottom: 2%;
+  /* padding-bottom: 2%; */
+  margin-bottom: -55px;
   padding-left: 5%;
   padding-right: 5%;
   text-align: center;
