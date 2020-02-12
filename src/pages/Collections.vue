@@ -33,7 +33,19 @@
 
         </b-col>
       </b-row>
-    </b-container>   
+    </b-container>
+
+
+    <b-container fluid class="collections">
+      <b-row no-gutters class="mb-1">        
+        <div v-for="(collection, index) in collections" :key="index">
+          <b-col cols="" class="collection mx-1 my-2">
+            <img :src="collection.thumbnailImg" class="thumbnailImg hideOnHover" />
+            <img :src="collection.thumbnailHoverImg" class="thumbnailImg showOnHover"/>
+          </b-col>
+        </div>
+      </b-row>
+    </b-container>  
    
 
     <!-- <BackgroundMusic
@@ -148,9 +160,9 @@ export default {
   font-weight: normal;
 }
 
-/* .layout {
-  background-color: #dddddd
-} */
+.layout {
+  padding: 0;
+}
 
 .row {
   margin-bottom: 20px;
@@ -159,6 +171,7 @@ export default {
 .main-col {
   /* padding: 0 6%; */
   max-width: 1458px;
+  height: 670px;
 }
 
 .slideshowCol {
@@ -183,11 +196,12 @@ export default {
 }
 
 .slideshowOverlay .mainContent{
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   width: 100%;
   /* padding-bottom: 2%; */
   margin-bottom: -55px;
+  padding-top: 85px;
   padding-left: 5%;
   padding-right: 5%;
   text-align: center;
@@ -216,7 +230,38 @@ export default {
   /* width: 90%; */
 }
 
+.collections {
+  padding: 0;
+}
+.collection {
+  padding: 0;
+  height: 552px;
+  /* width: calc((100vw - (7 * 2 * 4px)) / 7); */
+  width: calc((100vw - (7 * 2 * 4px) - 20px) / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: row;
+}
+.collection .thumbnailImg  {
+  flex: 1;
+  -webkit-box-flex: 1;
+  height: 100%;
+  cursor: pointer;
+  /* transition: opacity 2.5s ease; */
+}
 
+.thumbnailImg.showOnHover, .collection:hover .thumbnailImg.hideOnHover {
+  display: none;
+  opacity: 0;
+  transition: all 0.4s ease-in 0.1s;  /* Are these transitions working?! */
+}
+.thumbnailImg.hideOnHover, .collection:hover .thumbnailImg.showOnHover {
+  display: block;
+  opacity: 1;
+  transition: all 0.4s ease-in 0.1s;
+}
 
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
