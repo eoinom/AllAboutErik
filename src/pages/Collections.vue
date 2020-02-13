@@ -37,11 +37,10 @@
 
 
     <b-container fluid class="collections">
-      <b-row no-gutters class="mb-1">        
+      <b-row no-gutters align-h="center" class="mb-1">        
         <div v-for="(collection, index) in collections" :key="index">
-          <b-col cols="" class="collection mx-1 my-2">
-            <img :src="collection.thumbnailImg" class="thumbnailImg hideOnHover" />
-            <img :src="collection.thumbnailHoverImg" class="thumbnailImg showOnHover"/>
+          <b-col cols="" class="p-0 mx-1 my-2">
+            <collection-thumbnail :collection="collection" />
           </b-col>
         </div>
       </b-row>
@@ -90,6 +89,7 @@
 
 <script scoped>
 // import BackgroundMusic from '../components/BackgroundMusic.vue'
+import CollectionThumbnail from '../components/CollectionThumbnail.vue'
 import ScrollDownArrow from '../components/ScrollDownArrow.vue'
 import SlideshowImages from '../components/SlideshowImages2.vue'
 import SlideshowKenBurnsSmall from '../components/SlideshowKenBurnsSmall.vue'
@@ -131,6 +131,7 @@ export default {
   components: {
     'slideshow-images': require('../components/SlideshowImages2.vue').default,
     'slideshow-kenburns-small': require('../components/SlideshowKenBurnsSmall.vue').default,
+    CollectionThumbnail,
     ScrollDownArrow,
     // BackgroundMusic,
   },
@@ -232,35 +233,6 @@ export default {
 
 .collections {
   padding: 0;
-}
-.collection {
-  padding: 0;
-  height: 552px;
-  /* width: calc((100vw - (7 * 2 * 4px)) / 7); */
-  width: calc((100vw - (7 * 2 * 4px) - 20px) / 7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  flex-direction: row;
-}
-.collection .thumbnailImg  {
-  flex: 1;
-  -webkit-box-flex: 1;
-  height: 100%;
-  cursor: pointer;
-  /* transition: opacity 2.5s ease; */
-}
-
-.thumbnailImg.showOnHover, .collection:hover .thumbnailImg.hideOnHover {
-  display: none;
-  opacity: 0;
-  transition: all 0.4s ease-in 0.1s;  /* Are these transitions working?! */
-}
-.thumbnailImg.hideOnHover, .collection:hover .thumbnailImg.showOnHover {
-  display: block;
-  opacity: 1;
-  transition: all 0.4s ease-in 0.1s;
 }
 
 
