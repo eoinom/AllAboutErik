@@ -54,6 +54,7 @@ export default {
   /* width: calc((100vw - (7 * 2 * 4px)) / 7); */
   /* width: calc((100vw - (7 * 2 * 4px) - 20px) / 7); */
   width: 354.8px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

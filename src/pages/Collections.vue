@@ -1,13 +1,19 @@
 <template>
-  <Layout> 
+  <Layout>  
+
+    <!-- <BackgroundMusic
+      :audioFile="$page.Collections.edges[0].node.bgAudio"
+      :audioDuration="$page.Collections.edges[0].node.bgAudioDuration"
+      :audioFadeInDuration="$page.Collections.edges[0].node.bgAudioFadeInDuration"
+      :audioFadeOutDuration="$page.Collections.edges[0].node.bgAudioFadeOutDuration"
+    /> -->
+
     <b-container fluid class="main-col">
 
       <!-- HEADER SLIDESHOW -->
       <!-- <b-row no-gutters style="max-height:833px; width:auto;" class="mb-1 px-1"> -->
       <b-row no-gutters class="mb-1 px-1">
         <b-col class="slideshowCol">
-          
-          <!-- <slideshow-images :slides="slides" /> -->
 
           <!-- <div class="slideshow"> -->
             <slideshow-kenburns-small :slides="slides" />
@@ -21,12 +27,6 @@
                 
                 <div v-html="slideshowText" id="slideshowText" />    
 
-                <!-- Scroll with arrow images - hidden on xs (e.g. portrait mobile devices) -->
-                <!-- <ScrollDownArrow
-                  scrollToElement="#videos"
-                  class="d-none d-sm-inline"
-                /> -->
-
               </b-col>
             </b-row>
           </b-container>
@@ -37,22 +37,21 @@
 
 
     <b-container fluid class="collections">
-      <b-row no-gutters align-h="center" class="mb-1">        
-        <div v-for="(collection, index) in collections" :key="index">
-          <b-col cols="" class="p-0 mx-1 my-2">
+      <b-row no-gutters align-h="center" class="mb-1"> 
+
+        <div v-for="(collection, index) in collections" :key="index" style="max-width:80%">
+          <b-col cols="" class="p-0 mx-0 mx-sm-1 mx-md-2 mx-xl-1 my-2" >
             <collection-thumbnail :collection="collection" />
           </b-col>
         </div>
-      </b-row>
-    </b-container>  
-   
 
-    <!-- <BackgroundMusic
-      :audioFile="$page.RootsAndYouth.edges[0].node.bgAudio"
-      :audioDuration="$page.RootsAndYouth.edges[0].node.bgAudioDuration"
-      :audioFadeInDuration="$page.RootsAndYouth.edges[0].node.bgAudioFadeInDuration"
-      :audioFadeOutDuration="$page.RootsAndYouth.edges[0].node.bgAudioFadeOutDuration"
-    /> -->
+      </b-row>
+    </b-container> 
+
+    <ScrollToTop 
+      text="BACK TO THE TOP"
+      :includeArrow="true"
+    />
 
   </Layout>
 </template>
@@ -90,7 +89,7 @@
 <script scoped>
 // import BackgroundMusic from '../components/BackgroundMusic.vue'
 import CollectionThumbnail from '../components/CollectionThumbnail.vue'
-import ScrollDownArrow from '../components/ScrollDownArrow.vue'
+import ScrollToTop from '../components/ScrollToTop.vue'
 import SlideshowImages from '../components/SlideshowImages2.vue'
 import SlideshowKenBurnsSmall from '../components/SlideshowKenBurnsSmall.vue'
 
@@ -132,7 +131,7 @@ export default {
     'slideshow-images': require('../components/SlideshowImages2.vue').default,
     'slideshow-kenburns-small': require('../components/SlideshowKenBurnsSmall.vue').default,
     CollectionThumbnail,
-    ScrollDownArrow,
+    ScrollToTop,
     // BackgroundMusic,
   },
 }
@@ -212,9 +211,10 @@ export default {
 #titleImg {
   width: 100%;
   max-width: 755px;
-  /* max-height: 100%; */
+  min-width: 250px;
   height: auto;
   margin: auto;
+  padding-bottom: 15px;
 }
 
 #slideshowText {
@@ -243,26 +243,38 @@ export default {
   .layout, .main-col {
     padding: 0 0;   
   }
+  .main-col {
+    margin-bottom: 100px;
+  }
   .slideshowOverlay .mainContent {
     /* padding-bottom: 0.5%; */
     padding-left: 15%;
     padding-right: 15%;
   }
+  /* #titleImg {
+    width: 100%;
+    min-width: 100%;
+  } */
   #slideshowText {
-    font-size: 0.9rem;
-    line-height: 14px;
+    /* font-size: 0.9rem;
+    line-height: 14px; */
+    font-size: calc(1rem + 2 * (100vw - 375px) / (576 - 375) ); /* varies between 16px (1rem) and 18px */
+    line-height: calc(1.0625rem + 3 * (100vw - 375px) / (576 - 375) ); /* varies between 17px (1.0625rem) and 20px */
     margin-bottom: 0px;
   }
-  #mainText > p {
+  #slideshowText > p {
     margin-bottom: 0px !important;
   }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  #mainText {
-    font-size: 0.9rem;
-    line-height: 14px;
+  .main-col {
+    margin-bottom: 30px;
+  }
+  #slideshowText {
+    font-size: calc(1.125rem + 1.2 * (100vw - 576px) / (768 - 576) ); /* varies between 18px (1.125rem) and 19.2px */
+    line-height: 24px;
   }
   #slideshowText p {
     margin-bottom: 0px !important;
@@ -271,16 +283,22 @@ export default {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .main-col {
+    margin-bottom: 30px;
+  }
   #slideshowText {
-    font-size: 1.2rem;
+    font-size: calc(1.2rem + 1.8 * (100vw - 768px) / (992 - 768) ); /* varies between 19.2px (1.2rem) and 21px */
     line-height: 24px;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+  .main-col {
+    margin-bottom: 30px;
+  }
   #slideshowText {
-    font-size: 1.5rem;
+    font-size: 1.3125rem;
     line-height: 33px;
   }
 }
