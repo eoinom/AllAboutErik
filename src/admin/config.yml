@@ -320,19 +320,9 @@ collections:
             widget: "list"
             fields: 
               - {label: 'Title', name: 'title', widget: 'string', required: false}
-              - {label: "Title Image", name: "titleImg", widget: "image"}
-              - {label: "Header Background Image", name: "headerBgImg", widget: "image"}
-              - {label: "Header Image Opacity (%)", name: "backgroundImgOpacity", widget: "number", valueType: "int", min: 0, max: 100}
-              - {label: 'Header Text', name: 'body', widget: 'markdown', required: false}
-              - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
-              - {label: "Thumbnail Hover Image", name: "thumbnailHoverImg", widget: "image"}
-              - {label: "Link (url)", name: "link", widget: "string"}
-              - label: "Slides"
-                name: "slides"
-                widget: "list"
-                fields: 
-                  - {label: "Image", name: "img", widget: "image"}
-                  - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+              - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image", required: false}
+              - {label: "Thumbnail Hover Image", name: "thumbnailHoverImg", widget: "image", required: false}
+              - {label: "Link (url)", name: "link", widget: "string", required: false}
       
 
   - label: "Friends"
