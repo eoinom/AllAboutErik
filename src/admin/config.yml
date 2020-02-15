@@ -420,14 +420,16 @@ collections:
     folder: "src/data/pages/collections"
     create: true
     slug: "{{slug}}"
-    identifier_field: name
+    identifier_field: title
     fields:
-      - {label: "Name", name: "name", widget: "string"} 
-      - {label: "Header Image", name: "backgroundImg", widget: "image"}
-      - {label: "Header Image Opacity (%)", name: "backgroundImgOpacity", widget: "number", valueType: "int", min: 0, max: 100}
-      - {label: 'Header text', name: 'body', widget: 'markdown'}
+      - {label: 'Title', name: 'title', widget: 'string', required: false}
+      - {label: "Title Image", name: "titleImg", widget: "image", required: false}
+      - {label: "Header Background Image", name: "headerBgImg", widget: "image", required: false}
+      - {label: "Header Image Opacity (%)", name: "backgroundImgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+      - {label: 'Header Text', name: 'body', widget: 'markdown', required: false}
       - label: "Images"
         name: "images"
         widget: "list"
-        fields:
-          - {label: "Image", name: "img", widget: "image"}
+        fields: 
+          - {label: "Image", name: "img", widget: "image", required: false}
+          - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
