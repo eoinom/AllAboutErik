@@ -28,9 +28,6 @@ module.exports = function (api) {
         }
       }
     }`)
-
-    // const slugify = require('@sindresorhus/slugify')
-
     data.allFriends.edges.forEach(({ node }) => {
       pageSlug = slugify(node.name)
       createPage({
@@ -51,24 +48,21 @@ module.exports = function (api) {
         edges {
           node {
             id
-            name
+            title
           }
         }
       }
     }`)
-
-    // const slugify = require('@sindresorhus/slugify')
-
-    // data.allCollections.edges.forEach(({ node }) => {
-    //   pageSlug = slugify(node.name)
-    //   createPage({
-    //     path: `/collections/${pageSlug}`,
-    //     component: './src/templates/Collection.vue',
-    //     context: {
-    //       id: node.id
-    //     }
-    //   })
-    // })
+    data.allCollections.edges.forEach(({ node }) => {
+      pageSlug = slugify(node.title)
+      createPage({
+        path: `/collections/${pageSlug}`,
+        component: './src/templates/Collection.vue',
+        context: {
+          id: node.id
+        }
+      })
+    })
   })
 
 }

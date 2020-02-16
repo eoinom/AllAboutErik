@@ -1,20 +1,27 @@
 <template>
-  <Layout :style="layoutStyle"> 
+  <!-- <Layout :style="layoutStyle">   -->
+  <Layout>  
+    <header id="header" :style="headerStyle">
+      <div id="headerItems">
+        <g-image :src="titleImg" id="titleImg" class="my-4" />
+        <div v-html="$page.collection.content" id="mainContent" />
+      </div>
+    </header>
 
-    <div :style="navLinksVisibility" class="navLinksContainer">
+    <!-- <div :style="navLinksVisibility" class="navLinksContainer">
       <g-link :to="'/collections/' + prev_collection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_collection.name" class="nav_link" id="nav_prev">PREV</g-link>
       <g-link :to="'/collections/' + prev_collection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_collection.name" class="nav_link" id="nav_previous">PREVIOUS COLLECTION</g-link>
       <g-link :to="'/collections/' + prev_collection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_collection.name" class="nav_link" id="nav_next">NEXT COLLECTION</g-link>
-    </div>
+    </div> -->
 
-    <b-container fluid class="wrapper">
+    <!-- <b-container fluid class="wrapper">
       <b-container fluid class="main-col"> 
         <h1 id="heading"> {{ heading }} </h1>
         <div v-html="$page.collection.content" id="mainContent" />
-      </b-container>
+      </b-container> -->
 
-      <b-container fluid class="mediaItemsContainer">
-        <!-- <b-row align-h="center" id="mediaItemsRow">
+      <!-- <b-container fluid class="mediaItemsContainer">
+        <b-row align-h="center" id="mediaItemsRow">
           <b-col v-for="(item,index) in $page.friend.mediaItems" :key="index" class="mediaItems p-2" v-b-toggle="String(index+1)" @click="mediaItemClick(item, index)">
             <g-image :src="item.thumbnailImg" class="mediaItemsImg" :id="'mediaItemImg'+index" />
             <br />
@@ -31,7 +38,7 @@
               </div>
             </b-collapse>
           </b-col>
-        </b-row> -->
+        </b-row>
 
         <b-row align-h="center" class="text-center">
           <b-col>
@@ -41,16 +48,16 @@
           </b-col>
         </b-row>
         
-      </b-container>
-    </b-container>
+      </b-container> -->
+    <!-- </b-container> -->
 
 
-    <ImageLightBox
+    <!-- <ImageLightBox
       :images="images"
       :index="imageIndex"
       :disable-scroll="true"
       @close="imageIndex = null; galleryIndex = null"
-    />
+    /> -->
 
   </Layout>
 </template>
@@ -58,12 +65,14 @@
 <page-query>
 query ($id: ID!) {
   collection: collections(id: $id) {
-    name
-    backgroundImg
+    title
+    titleImg
+    headerBgImg
     backgroundImgOpacity
     content
     images {
       img
+      opacity
     }
   }
 }
@@ -71,16 +80,16 @@ query ($id: ID!) {
 
 <static-query>
 {
-  CollectionsPage: allCollectionsPages {
+  Collections: allCollectionsPage {
     edges {
       node {
-        collectionsPage {
+        collections {
           title
           link
         }
       }
     }
-  }
+  }	
 }
 </static-query>
 
@@ -93,7 +102,7 @@ var VueScrollTo = require('vue-scrollto');
 export default {
   metaInfo() {
     return {
-      title: this.name
+      title: this.title
     }
   },
 
@@ -110,27 +119,32 @@ export default {
   },
 
   computed: {
-    name() {
-      return this.$page.collection.name
+    title() {
+      return this.$page.collection.title
     },
-    heading() {
-      return this.$page.collection.heading ? this.$page.collection.heading : this.name
+    titleImg() {
+      return this.$page.collection.titleImg
     },
-    mediaItems() {
-      return this.$page.collection.mediaItems
+    // heading() {
+    //   return this.$page.collection.heading ? this.$page.collection.heading : this.name
+    // },
+    headerBgImg() {
+      return this.$page.collection.headerBgImg
     },
+    // mediaItems() {
+    //   return this.$page.collection.mediaItems
+    // },
     images() {
-      return this.mediaItemIndex != null && this.galleryIndex != null ?
-                this.mediaItems[this.mediaItemIndex].galleries[this.galleryIndex].images : []
+      return this.$page.collection.images
     },
     collections() {
       return this.$static.Collections.edges[0].node.collections
     },    
     collection_names() {
-      return this.collections.map(x => x.name);
+      return this.collections.map(x => x.title);
     },
     prev_collection() {
-      let i = this.collection_names.indexOf(this.heading)
+      let i = this.collection_names.indexOf(this.title)
       if (i === 0)
         var prev_i = this.collection_names.length - 1
       else
@@ -138,17 +152,22 @@ export default {
       return this.collections[prev_i]
     },
     next_collection() {
-      let i = this.collection_names.indexOf(this.heading)      
+      let i = this.collection_names.indexOf(this.title)      
       if (i === this.collection_names.length - 1)
         var next_i = 0
       else
         next_i = i + 1
       return this.collections[next_i]
     },
-    layoutStyle() {
+    // layoutStyle() {
+    //   return {
+    //     '--backgroundImg': 'url(' + this.$page.friend.backgroundImg + ')',
+    //     '--backgroundOpacity': this.$page.friend.backgroundOpacity / 100
+    //   }
+    // },    
+    headerStyle() {
       return {
-        '--backgroundImg': 'url(' + this.$page.friend.backgroundImg + ')',
-        '--backgroundOpacity': this.$page.friend.backgroundOpacity / 100
+        '--headerBgImg': 'url(' + this.headerBgImg + ')'
       }
     },
     navLinksVisibility() {
@@ -234,11 +253,53 @@ export default {
        url('../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
   font-weight: normal;
 }
+@font-face {
+  font-family: NeueHaasGroteskText Pro65;
+  src: url('../assets/fonts/nhaasgrotesktxpro-65md.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/nhaasgrotesktxpro-65md.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/nhaasgrotesktxpro-65md.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../assets/fonts/nhaasgrotesktxpro-65md.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+}
 
 .layout {
   padding: 0;
   overflow: hidden; /* added for pseudo-element */
   position: relative; /* added for pseudo-element */
+}
+
+#header {
+  background-image: var(--headerBgImg);
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.32);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
+}
+
+#headerItems {
+  width: 1036px; 
+  text-align: center;
+  margin: 0 auto;
+}
+#mainContent {
+  font-family: 'NeueHaasGroteskText Pro65';
+  font-feature-settings: 'liga';
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.29);
+  color: #FFFFFF;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 26px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+}
+
+#titleImg {
+  max-width: 70%;
 }
 
 /* To fix poor scroll speed using "background-size: cover" and "background-attachment: fixed"
@@ -327,18 +388,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   line-height: 50px;
   margin: 0px;
   padding: 0px;
-}
-
-#mainContent {
-  color: #FFFFFF;
-  font-family: 'NeueHaasGroteskText Pro55';
-  font-feature-settings: 'liga';
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  line-height: 32px;
-  text-align: justify;
-  text-shadow: 0px 0px 250px #1C0F07,0px 0px 250px #1C0F07/* glow */,1px 1px 2px rgba(28,16,23,0.89)/* drop shadow*/;
 }
 
 .mediaItemsContainer {
