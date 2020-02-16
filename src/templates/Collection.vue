@@ -1,10 +1,11 @@
 <template>
   <!-- <Layout :style="layoutStyle">   -->
   <Layout>  
-    <header id="header" :style="headerStyle">
+    <header id="header" :style="headerStyles">
       <div id="headerItems">
-        <g-image :src="titleImg" id="titleImg" class="my-4" />
-        <div v-html="$page.collection.content" id="mainContent" />
+        <g-image :src="titleImg" class="titleImg" />
+        <g-image :src="titleImgPt2" class="titleImg titleImgPt2" />
+        <div v-html="$page.collection.content" class="collections_headerText" />
       </div>
     </header>
 
@@ -67,6 +68,7 @@ query ($id: ID!) {
   collection: collections(id: $id) {
     title
     titleImg
+    titleImgPt2
     headerBgImg
     backgroundImgOpacity
     content
@@ -125,11 +127,23 @@ export default {
     titleImg() {
       return this.$page.collection.titleImg
     },
+    titleImgPt2() {
+      return this.$page.collection.hasOwnProperty('titleImgPt2') ? this.$page.collection.titleImgPt2 : ''
+    },
     // heading() {
     //   return this.$page.collection.heading ? this.$page.collection.heading : this.name
     // },
     headerBgImg() {
       return this.$page.collection.headerBgImg
+    },
+    headerBgImgOpacity() {
+      return this.$page.collection.hasOwnProperty('backgroundImgOpacity') ? this.$page.collection.backgroundImgOpacity : 0.5
+    },  
+    headerStyles() {
+      return {
+        '--headerBgImg': 'url(' + this.headerBgImg + ')',
+        '--bgOpacity': this.headerBgImgOpacity / 100
+      }
     },
     // mediaItems() {
     //   return this.$page.collection.mediaItems
@@ -158,17 +172,6 @@ export default {
       else
         next_i = i + 1
       return this.collections[next_i]
-    },
-    // layoutStyle() {
-    //   return {
-    //     '--backgroundImg': 'url(' + this.$page.friend.backgroundImg + ')',
-    //     '--backgroundOpacity': this.$page.friend.backgroundOpacity / 100
-    //   }
-    // },    
-    headerStyle() {
-      return {
-        '--headerBgImg': 'url(' + this.headerBgImg + ')'
-      }
     },
     navLinksVisibility() {
       let css = {}
@@ -269,14 +272,22 @@ export default {
 }
 
 #header {
-  background-image: var(--headerBgImg);
-  background-position: center;
-  background-color: rgba(0, 0, 0, 0.32);
-  background-repeat: no-repeat;
-  background-size: cover;
   text-align: center;
   padding-top: 12.5px;
   padding-bottom: 12.5px;
+}
+#header:after  {
+  content : "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--headerBgImg) no-repeat center;
+  background-size: cover;
+  opacity : var(--bgOpacity);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 #headerItems {
@@ -284,7 +295,7 @@ export default {
   text-align: center;
   margin: 0 auto;
 }
-#mainContent {
+.collections_headerText {
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
   text-shadow: 1px 1px 4px rgba(0,0,0,0.29);
@@ -297,10 +308,20 @@ export default {
   margin: 0px;
   padding: 0px;
 }
-
-#titleImg {
-  max-width: 70%;
+.collections_headerText > p { 
+  margin: 0px;
+  padding: 0px;
 }
+
+.titleImg {
+  max-width: 70%;
+  margin-bottom: -8px;
+}
+.titleImgPt2 {
+  margin-bottom: 20px;
+  margin-left: 16px;
+}
+
 
 /* To fix poor scroll speed using "background-size: cover" and "background-attachment: fixed"
 Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-will-change-property/ */
@@ -450,7 +471,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   #heading {
     font-size: 31.5px;
   }
-  #mainContent {
+  .collections_headerText {
     font-size: 15px;
     line-height: 24px;
   }
@@ -483,7 +504,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   #heading {
     font-size: 36.75px;
   }
-  #mainContent {
+  .collections_headerText {
     font-size: 17.5px;
     line-height: 28px;
   }
@@ -514,7 +535,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   #heading {
     font-size: 36.75px;
   }
-  #mainContent {
+  .collections_headerText {
     font-size: 17.5px;
     line-height: 28px;
   }

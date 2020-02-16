@@ -60,6 +60,12 @@ body {
 }
 
 
+.collections_headerText > p { 
+  margin: 0px;
+  padding: 0px;
+}
+
+
 /* Extra small devices (portrait phones, < 576px) */
 @media (max-width: 575.98px) {
   .discography_content h2 {
