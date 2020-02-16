@@ -2,6 +2,8 @@
 title: Propaganda Kimono
 titleImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1581798975/Collections/01%20Propaganda%20Kimono/title-propaganda-white_xfyec7.png
+titleImgPt2: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/v1581885910/Collections/01%20Propaganda%20Kimono/title-kimono-white_udficb.png
 headerBgImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1581798968/Collections/01%20Propaganda%20Kimono/banner-mhj_274_oxunri.jpg
 backgroundImgOpacity: 68
