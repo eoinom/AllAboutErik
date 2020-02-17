@@ -332,7 +332,7 @@ export default {
       margin: 0 auto;
       max-width: 85%;
       max-height: 100%;
-      height: calc(100vh - 203px);  // 203px is the height of the banner
+      height: calc(100vh - 203px - 20px);  // 203px is the height of the banner
       padding: 3.5vh 0;
       display: flex;
       justify-content: center;

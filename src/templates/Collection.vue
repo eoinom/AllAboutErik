@@ -18,50 +18,16 @@
       <g-link :to="'/collections/' + 'propaganda-kimono'" class="nav_link" id="nav_next">NEXT COLLECTION</g-link>
     </div>
 
-    <!-- <b-container fluid class="wrapper">
-      <b-container fluid class="main-col"> 
-        <h1 id="heading"> {{ heading }} </h1>
-        <div v-html="$page.collection.content" id="mainContent" />
-      </b-container> -->
-
-      <!-- <b-container fluid class="mediaItemsContainer">
-        <b-row align-h="center" id="mediaItemsRow">
-          <b-col v-for="(item,index) in $page.friend.mediaItems" :key="index" class="mediaItems p-2" v-b-toggle="String(index+1)" @click="mediaItemClick(item, index)">
-            <g-image :src="item.thumbnailImg" class="mediaItemsImg" :id="'mediaItemImg'+index" />
-            <br />
-            <span class="mediaItemsText mediaItemsLabel">{{ item.label }}</span>
-            <b-collapse v-if="item.galleries[0].label" :id="String(index+1)" accordion="mediaItems-accordion">
-              <div v-for="(gallery,galIndex) in item.galleries" :key="galIndex">
-                <br />
-                <span
-                  @click="galleryIndex = galIndex; setMediaIndexToZero(item.mediaType)"
-                  class="mediaItemsText galleriesLabel py-2 pr-2"
-                >
-                  {{ gallery.label }}
-                </span>
-              </div>
-            </b-collapse>
-          </b-col>
-        </b-row>
-
-        <b-row align-h="center" class="text-center">
-          <b-col>
-            <div :style="navLinksVisibility" class="navLinksContainer">
-              <g-link to="/collections/" class="nav_link pt-3" id="nav_back">BACK TO COLLECTIONS MENU</g-link>
-            </div>
-          </b-col>
-        </b-row>
-        
-      </b-container> -->
-    <!-- </b-container> -->
-
-
     <CollectionViewer
       :images="images"
       :index="imageIndex"
       :disable-scroll="true"
       @close="imageIndex = null"
     />
+
+    <div :style="navLinksVisibility" class="navLinksContainer">
+      <g-link to="/collections/" class="nav_link pt-3" id="nav_back">BACK TO COLLECTIONS MENU</g-link>
+    </div>
 
   </Layout>
 </template>
@@ -295,6 +261,8 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 .nav_link {
   color: white; 
   display: block;
+  position: fixed;
+  top: calc(203px + 14px);
   font-family: 'Ubuntu Condensed', sans-serif;
   font-feature-settings: 'liga';
   font-weight: 400;
@@ -304,9 +272,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
   margin: 0px;
   padding: 0px;
-  position: fixed;
-  top: calc(203px + 14px);
-  z-index: 2000;
+  z-index: 1500;
 }
 #nav_prev, #nav_previous {
   left: 45px;
@@ -319,10 +285,13 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   right: 45px;
   text-align: right;
 }
-/* #nav_back {
-  text-align: center;
-} */
-#nav_prev:hover, #nav_previous:hover, #nav_next:hover {
+#nav_back {
+  top: auto;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);    
+}
+#nav_prev:hover, #nav_previous:hover, #nav_next:hover, #nav_back:hover {
   color:	#EED047;
   cursor: pointer;
 }
