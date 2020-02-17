@@ -9,11 +9,14 @@
       </div>
     </header>
 
-    <!-- <div :style="navLinksVisibility" class="navLinksContainer">
-      <g-link :to="'/collections/' + prev_collection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_collection.name" class="nav_link" id="nav_prev">PREV</g-link>
+    <div :style="navLinksVisibility" class="navLinksContainer">
+      <!-- <g-link :to="'/collections/' + prev_collection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_collection.name" class="nav_link" id="nav_prev">PREV</g-link>
       <g-link :to="'/collections/' + prev_collection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_collection.name" class="nav_link" id="nav_previous">PREVIOUS COLLECTION</g-link>
-      <g-link :to="'/collections/' + prev_collection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_collection.name" class="nav_link" id="nav_next">NEXT COLLECTION</g-link>
-    </div> -->
+      <g-link :to="'/collections/' + next_collection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_collection.name" class="nav_link" id="nav_next">NEXT COLLECTION</g-link> -->
+      <!-- <g-link :to="'/collections/' + 'propaganda-kimono'" class="nav_link" id="nav_prev">PREV</g-link> -->
+      <g-link :to="'/collections/' + 'propaganda-kimono'" class="nav_link" id="nav_previous">PREVIOUS COLLECTION</g-link>
+      <g-link :to="'/collections/' + 'propaganda-kimono'" class="nav_link" id="nav_next">NEXT COLLECTION</g-link>
+    </div>
 
     <!-- <b-container fluid class="wrapper">
       <b-container fluid class="main-col"> 
@@ -163,14 +166,14 @@ export default {
     },
     navLinksVisibility() {
       let css = {}
-      if (this.imageIndex == null & this.videoIndex == null) {
+      // if (this.imageIndex == null) {
         css.visibility = 'visible'
         css.opacity = 1
-      }
-      else {
-        css.visibility = 'hidden'
-        css.opacity = 0
-      }
+      // }
+      // else {
+      //   css.visibility = 'hidden'
+      //   css.opacity = 0
+      // }
       return css
     }
   },
@@ -296,35 +299,32 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   font-feature-settings: 'liga';
   font-weight: 400;
   font-style: italic;
-  font-size: 39px;
+  font-size: 28px;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
   margin: 0px;
   padding: 0px;
-}
-.nav_link:hover,
-.mediaItems:hover,
-.mediaItems:hover .mediaItemsLabel {
-  color:	#EED047;
-  cursor: pointer;
+  position: fixed;
+  top: calc(203px + 14px);
+  z-index: 2000;
 }
 #nav_prev, #nav_previous {
-  position: fixed;
-  top: 44%;
-  left: 5%;
+  left: 45px;
   text-align: left;
 }
 #nav_prev {
   display: none;
 }
 #nav_next {
-  position: fixed;
-  top: 44%;
-  right: 5%;
+  right: 45px;
   text-align: right;
 }
-#nav_back {
+/* #nav_back {
   text-align: center;
+} */
+#nav_prev:hover, #nav_previous:hover, #nav_next:hover {
+  color:	#EED047;
+  cursor: pointer;
 }
 
 .wrapper {
