@@ -53,12 +53,12 @@
     <!-- </b-container> -->
 
 
-    <!-- <ImageLightBox
+    <CollectionViewer
       :images="images"
       :index="imageIndex"
       :disable-scroll="true"
-      @close="imageIndex = null; galleryIndex = null"
-    /> -->
+      @close="imageIndex = null"
+    />
 
   </Layout>
 </template>
@@ -97,7 +97,7 @@ query ($id: ID!) {
 
 
 <script scoped>
-import ImageLightBox from '../components/ImageLightBox.vue'
+import CollectionViewer from '../components/CollectionViewer.vue'
 
 var VueScrollTo = require('vue-scrollto');
 
@@ -110,13 +110,7 @@ export default {
 
   data() {
     return {
-      mediaItemIndex: null,
-      galleryIndex: null,
-      imageIndex: null,
-      videoIndex: null,
-      audioIndex: null,
-      windowHeight: 0,      
-      documentHeight: 0
+      imageIndex: 0,
     }
   },
 
@@ -130,9 +124,6 @@ export default {
     titleImgPt2() {
       return this.$page.collection.hasOwnProperty('titleImgPt2') ? this.$page.collection.titleImgPt2 : ''
     },
-    // heading() {
-    //   return this.$page.collection.heading ? this.$page.collection.heading : this.name
-    // },
     headerBgImg() {
       return this.$page.collection.headerBgImg
     },
@@ -145,9 +136,6 @@ export default {
         '--bgOpacity': this.headerBgImgOpacity / 100
       }
     },
-    // mediaItems() {
-    //   return this.$page.collection.mediaItems
-    // },
     images() {
       return this.$page.collection.images
     },
@@ -188,57 +176,13 @@ export default {
   },
 
   methods: {
-    // mediaItemClick(mediaItem, index) {
-    //   if (mediaItem.mediaType == 'images' || mediaItem.mediaType == 'videos' || mediaItem.mediaType == 'audio') {
-    //     this.mediaItemIndex = index
-    //     if (mediaItem.galleries.length == 1) {
-    //       this.galleryIndex = 0
-    //       this.setMediaIndexToZero(mediaItem.mediaType)
-    //     }
-    //     else {
-    //       this.$scrollTo('#mediaItemImg' + index, 500)
-    //     }
-    //   }
-    //   else if (mediaItem.mediaType == 'link') {
-    //     this.$router.push(mediaItem.galleries[0].url)
-    //   }
-    // },
-    setMediaIndexToZero(mediaType) {
-      if (mediaType == 'images') {
-        this.imageIndex = 0
-      }
-      if (mediaType == 'videos') {
-        this.videoIndex = 0
-      }
-      if (mediaType == 'audio') {
-        this.audioIndex = 0
-      }
-    },
-    getDocumentHeight() {
-      // ref: https://stackoverflow.com/a/1147768
-      const body = document.body
-      const html = document.documentElement  
-      this.documentHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight )
-    }
   },
 
-  mounted() {    
-    this.windowHeight = window.innerHeight
-    this.getDocumentHeight()
-
-    this.$nextTick(() => {
-
-      window.addEventListener('scroll', this.getDocumentHeight);
-      
-      window.addEventListener('resize', () => {
-        this.windowHeight = window.innerHeight 
-        this.getDocumentHeight()
-      });
-    })
+  mounted() {  
   },
 
   components: {
-    ImageLightBox
+    CollectionViewer
   },
 }
 </script>
@@ -395,58 +339,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   padding: 50px 0 10px 0;
 }
 
-#heading {
-  color: #FFFFFF;
-  font-family: 'Ubuntu Condensed', sans-serif;
-  font-feature-settings: 'liga';
-  font-weight: 400;
-  font-size: 42px;
-  font-style: normal;
-  text-align: left;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
-  letter-spacing: 2px;
-  line-height: 50px;
-  margin: 0px;
-  padding: 0px;
-}
-
-.mediaItemsContainer {
-  width: 100%;
-  padding: 4px 20% 20px 20%;
-}
-.mediaItems {
-  max-width: 295px;
-}
-.mediaItemsImg {
-  max-width: 275px;
-  height: 193px;
-}
-.mediaItemsText {
-  font-family: 'Ubuntu Condensed', sans-serif;
-  font-feature-settings: 'liga';
-  font-weight: 400;
-  text-align: left;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.16);
-  margin: 0px;
-  padding: 0px;
-}
-.mediaItemsLabel {
-  color: white;
-  font-size: 20px;
-  line-height: 30px;
-}
-.galleriesLabel {
-  color: #ECECEC;
-  font-size: 17px;
-  line-height: 30px;
-}
-.galleriesLabel:hover {
-  color: #2CACE4;
-  cursor: pointer;
-}
-
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
@@ -465,25 +357,8 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   #nav_next {
     right: 4%;
   }
-  .main-col, .galleriesContainer {
+  .main-col {
     max-width: 61.46%;
-  }
-  #heading {
-    font-size: 31.5px;
-  }
-  .collections_headerText {
-    font-size: 15px;
-    line-height: 24px;
-  }
-  .galleriesContainer {
-    padding: 4px 0 20px 0;
-  }
-  .galleries {
-    min-width: 100%;
-  }
-  .galleriesImg {
-    max-width: 100%;
-    height: auto;
   }
 }
 
@@ -498,26 +373,8 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   #nav_prev {
     display: block;
   }
-  .main-col, .galleriesContainer {
+  .main-col {
     max-width: 61.46%;
-  }
-  #heading {
-    font-size: 36.75px;
-  }
-  .collections_headerText {
-    font-size: 17.5px;
-    line-height: 28px;
-  }
-  .galleriesContainer {
-    padding: 4px 0 20px 0;
-  }
-  .galleries {
-    min-width: 50%;
-    width: auto;
-  }
-  .galleriesImg {
-    max-width: 100%;
-    height: auto;
   }
 }
 
@@ -529,26 +386,8 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   #nav_prev {
     display: block;
   }
-  .main-col, .galleriesContainer {
+  .main-col {
     max-width: 61.46%;
-  }
-  #heading {
-    font-size: 36.75px;
-  }
-  .collections_headerText {
-    font-size: 17.5px;
-    line-height: 28px;
-  }
-  .galleriesContainer {
-    padding: 4px 0 20px 0;
-  }
-  .galleries {
-    min-width: 50%;
-    width: auto;
-  }
-  .galleriesImg {
-    max-width: 100%;
-    height: auto;
   }
 }
 
@@ -560,21 +399,15 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   #nav_prev {
     display: block;
   }
-  .main-col, .galleriesContainer {
+  .main-col {
     max-width: 61.46%;
-  }
-  .galleriesContainer {
-    padding: 4px 0 20px 0;
   }
 }
 
 /* Special - Larger devices (desktops, 1200px and up) */
 @media (min-width: 1200px) and (max-width: 1390.98px) { 
-  .main-col, .galleriesContainer {
+  .main-col {
     max-width: 61.46%;
-  }
-  .galleriesContainer {
-    padding: 4px 0 20px 0;
   }
 }
 
