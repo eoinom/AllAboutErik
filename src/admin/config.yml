@@ -322,7 +322,6 @@ collections:
               - {label: 'Title', name: 'title', widget: 'string', required: false}
               - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image", required: false}
               - {label: "Thumbnail Hover Image", name: "thumbnailHoverImg", widget: "image", required: false}
-              - {label: "Link (url)", name: "link", widget: "string", required: false}
       
 
   - label: "Friends"

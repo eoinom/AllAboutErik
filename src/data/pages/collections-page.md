@@ -25,44 +25,37 @@ slides:
     scaleFrom: 1.06
     scaleTo: 1
 collections:
-  - link: kimono-propaganda
-    thumbnailHoverImg: >-
+  - thumbnailHoverImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372624/Collections/01-propaganda-kimono-rollover_yio2ty.jpg
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372624/Collections/01-propaganda-kimono_uxwgxd.jpg
     title: Propaganda Kimono
-  - link: kimono-modernity
-    thumbnailHoverImg: >-
+  - thumbnailHoverImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372625/Collections/02-modernity-kimono-rollover_eu1arp.jpg
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372624/Collections/02-modernity-kimono_q0uowo.jpg
     title: Modernity Kimono
-  - link: pre-columbian-art
-    thumbnailHoverImg: >-
+  - thumbnailHoverImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372625/Collections/03-precolumbian-textiles-rollover_lx91bx.jpg
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372625/Collections/03-precolumbian-textiles_xrbuu9.jpg
     title: Pre-Columbian Textiles
-  - link: rugs
-    thumbnailHoverImg: >-
+  - thumbnailHoverImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372625/Collections/04-mideastern-rugs-rollover_ddoixx.jpg
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372625/Collections/04-mideastern-rugs_v84gcs.jpg
     title: Mid-Eastern Rugs
-  - link: kimono-skeleton
-    thumbnailHoverImg: >-
+  - thumbnailHoverImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372625/Collections/06-skeleton-kimono-rollover_ozgkry.jpg
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372625/Collections/05-skeleton-kimono_bnj7cd.jpg
     title: Skeleton Kimono
-  - link: old-time-sportsmen-postals
-    thumbnailHoverImg: >-
+  - thumbnailHoverImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372625/Collections/06-old-time-sportsmen-rollover_hqrogf.jpg
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372625/Collections/06-old-time-sportsmen_d4oqjv.jpg
     title: Old-Time Sportsmen
-  - link: potolo-weaving
-    thumbnailHoverImg: >-
+  - thumbnailHoverImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372626/Collections/07-bolivian-potolo-rollover_pnqvei.jpg
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372625/Collections/07-bolivian-potolo_ed0ods.jpg

@@ -18,6 +18,8 @@
 
 
 <script scoped>
+const slugify = require('@sindresorhus/slugify')
+
 export default { 
   name: 'CollectionThumbnail',
 
@@ -30,9 +32,9 @@ export default {
   data() {
     return {
       title: this.collection.hasOwnProperty('title') ? this.collection.title : '',
+      link: this.collection.hasOwnProperty('title') ? slugify(this.collection.title) : '',
       image: this.collection.hasOwnProperty('thumbnailImg') ? this.collection.thumbnailImg : '',
-      hoverImage: this.collection.hasOwnProperty('thumbnailHoverImg') ? this.collection.thumbnailHoverImg : '',
-      link: this.collection.hasOwnProperty('link') ? this.collection.link : ''
+      hoverImage: this.collection.hasOwnProperty('thumbnailHoverImg') ? this.collection.thumbnailHoverImg : ''
     }
   }
 }

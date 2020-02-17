@@ -77,7 +77,6 @@
           title
           thumbnailImg
           thumbnailHoverImg
-          link
         }
       }
     }
