@@ -35,7 +35,7 @@
                     :src="shouldPreload(imageIndex) ? image.img : false"
                     @load="imageLoaded($event, imageIndex)"
                     :id="`lg-img-${imageIndex}`"
-                    @mouseover="magnify(`lg-img-${imageIndex}`, 3)"
+                    @mouseover="magnify(`lg-img-${imageIndex}`, 2)"
                   >
                 </div>
 
