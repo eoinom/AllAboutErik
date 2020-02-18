@@ -26,12 +26,19 @@
               :style="`transform: translate3d(${currentIndex * -100}%, 0px, 0px);`"
               class="image-lightbox__image-container"
             >
-              <div class="image-lightbox__image" :style="imageContainerCss">
-                <img
-                  :ref="`lg-img-${imageIndex}`"
-                  :src="shouldPreload(imageIndex) ? image.img : false"
-                  @load="imageLoaded($event, imageIndex)"
-                >
+              <div class="image-lightbox__image">
+                
+                <!-- image magnifier (ref: https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp) -->
+                <div class="img-magnifier-container">
+                  <img
+                    :ref="`lg-img-${imageIndex}`"
+                    :src="shouldPreload(imageIndex) ? image.img : false"
+                    @load="imageLoaded($event, imageIndex)"
+                    :id="`lg-img-${imageIndex}`"
+                    @mouseover="magnify(`lg-img-${imageIndex}`, 3)"
+                  >
+                </div>
+
               </div>
             </li>
           </ul>
@@ -66,8 +73,8 @@
             class="image-lightbox__next arrowImg" 
           />
         </div>
-
       </div>
+
     </div>
   </transition>
 </template>
@@ -78,6 +85,7 @@ const keyMap = {
   RIGHT: 39,
   ESC: 27,
 };
+
 export default {
   props: {
     images: {
@@ -113,50 +121,18 @@ export default {
         multitouch: false,
         flag: false,
       },
-      // windowWidth: 0,
-      // windowHeight: 0
+      glassElCreated: false
     };
   },
+
   computed: {
     formattedImages() {
       return this.images.map(image => (typeof image === 'string'
         ? { url: image } : image
       ));
-    },
-    // imageContainerCss() {
-    //   let css = {}
-    //   css.width = (0.8 * this.windowWidth) + 'px'
-    //   css.height = (0.8 * this.windowHeight) + 'px'
-    //   return css
-    // },
-    // imageTitleCss() {
-    //   let css = {}
-    //   if (this.centreTitle) {
-    //     css.textAlign = 'center'
-    //     css.marginTop = '20px'
-    //   }
-    //   else {
-    //     let containerWidth = 0.8 * this.windowWidth
-    //     let containerHeight = 0.8 * this.windowHeight      
-    //     const containerAspectRatio = containerWidth / containerHeight
-    //     const imageAspectRatio = 1502.22 / 845.0
-    //     const heightGoverns = containerAspectRatio >= imageAspectRatio
-    //     if (heightGoverns) {
-    //       var actualImgHeight = containerHeight
-    //       var actualImgWidth = actualImgHeight * imageAspectRatio
-    //     }
-    //     else {
-    //       var actualImgWidth = containerWidth
-    //       var actualImgHeight = actualImgWidth / imageAspectRatio
-    //     }
-    //     css.position = 'absolute'
-    //     css.padding = 0
-    //     css.bottom = ((containerHeight - actualImgHeight) / 2 - 40) + 'px'
-    //     css.left = ((containerWidth - actualImgWidth) / 2) + 'px'
-    //   }
-    //   return css
-    // }
+    }
   },
+
   watch: {
     index(val) {
       if (!document) return;
@@ -172,16 +148,6 @@ export default {
     },
   },
   mounted() {
-    // this.windowWidth = window.innerWidth
-    // this.windowHeight = window.innerHeight
-
-    // this.$nextTick(() => {
-    //   window.addEventListener('resize', () => {        
-    //     this.windowWidth = window.innerWidth
-    //     this.windowHeight = window.innerHeight 
-    //   });
-    // })
-
     if (!document) return;
     this.bodyOverflowStyle = document.body.style.overflow;
     this.bindEvents();
@@ -216,7 +182,6 @@ export default {
       return elements[0];
     },
     setImageLoaded(index) {
-      console.log('in setImageLoaded, index = ' + index);
       const el = this.getImageElByIndex(index);
       this.isImageLoaded = !el ? false : el.classList.contains('loaded');
     },
@@ -272,7 +237,88 @@ export default {
           break;
       }
     },
-  }
+
+    magnify(imgID, zoom) {
+      var img, glass, w, h, bw;
+      img = document.getElementById(imgID);
+      
+      /* Create magnifier glass: */
+      if (!this.glassElCreated) {
+        glass = document.createElement("DIV");
+        glass.setAttribute("class", "img-magnifier-glass");
+        this.glassElCreated = true
+      }
+
+      /* Insert magnifier glass: */
+      img.parentElement.insertBefore(glass, img);
+
+      /* Set background properties for the magnifier glass: */
+      glass.style.backgroundImage = "url('" + img.src + "')";
+      glass.style.backgroundRepeat = "no-repeat";
+      glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+      glass.style.backgroundColor = 'white'
+      bw = 3;
+      w = glass.offsetWidth / 2;
+      h = glass.offsetHeight / 2;
+
+      /* Execute a function when someone moves the magnifier glass over the image: */
+      glass.addEventListener("mousemove", moveMagnifier);
+      img.addEventListener("mousemove", moveMagnifier);
+
+      /*and also for touch screens:*/
+      glass.addEventListener("touchmove", moveMagnifier);
+      img.addEventListener("touchmove", moveMagnifier);
+      function moveMagnifier(e) {
+        var pos, x, y;
+        /* Prevent any other actions that may occur when moving over the image */
+        e.preventDefault();
+        /* Get the cursor's x and y positions: */
+        pos = getCursorPos(e);
+        x = pos.x;
+        y = pos.y;
+
+        /* Prevent the magnifier glass from being positioned outside the image: */
+        if (x > img.width - (w / zoom)) {
+          // x = img.width - (w / zoom);
+          glass.style.display = 'none'
+        }
+        else if (x < w / zoom) {
+          // x = w / zoom;
+          glass.style.display = 'none'
+        }
+        else if (y > img.height - (h / zoom)) {
+          // y = img.height - (h / zoom);
+          glass.style.display = 'none'
+        }
+        else if (y < h / zoom) {
+          // y = h / zoom;
+          glass.style.display = 'none'
+        }
+        else {
+          /* Set the position of the magnifier glass: */
+          glass.style.display = 'block'
+          glass.style.left = (x - w) + "px";
+          glass.style.top = (y - h) + "px";
+          /* Display what the magnifier glass "sees": */
+          glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+        }
+      }
+
+      function getCursorPos(e) {
+        var a, x = 0, y = 0;
+        e = e || window.event;
+        /* Get the x and y positions of the image: */
+        a = img.getBoundingClientRect();
+        /* Calculate the cursor's x and y coordinates, relative to the image: */
+        x = e.pageX - a.left;
+        y = e.pageY - a.top;
+        /* Consider any page scrolling: */
+        x = x - window.pageXOffset;
+        y = y - window.pageYOffset;
+        return {x : x, y : y};
+      }
+    }
+  },
 };
 </script>
 
@@ -286,6 +332,14 @@ export default {
        url('../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
   font-weight: normal;
 }
+
+
+// image magnifier (ref: https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp)
+.img-magnifier-container {
+  position: relative;
+}
+// See styles.css for .img-magnifier-glass
+
 
 .image-lightbox {
   &__modal {

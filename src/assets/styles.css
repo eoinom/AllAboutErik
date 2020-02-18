@@ -65,6 +65,17 @@ body {
   padding: 0px;
 }
 
+/* For CollectionViewer component */
+.img-magnifier-glass {
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  width: 500px;
+  height: 500px;
+  z-index: 3000;
+}
+
 
 /* Extra small devices (portrait phones, < 576px) */
 @media (max-width: 575.98px) {
