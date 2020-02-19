@@ -95,6 +95,13 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        path: 'src/data/pages/musical-journey/eduardo-unz-music.md',
+        typeName: 'EduardoUnzMusic'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         path: 'src/data/pages/musical-journey/early-productions.md',
         typeName: 'EarlyProductions'
       }
