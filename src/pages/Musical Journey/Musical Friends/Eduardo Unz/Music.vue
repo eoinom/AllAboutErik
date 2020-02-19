@@ -69,16 +69,16 @@ import AudioPlayer from '../../../../components/AudioPlayer'
 export default { 
   metaInfo() {
     return {
-      title: this.$page.NadiaMusic.edges[0].node.pageTitle
+      title: this.$page.EduardoUnzMusic.edges[0].node.pageTitle
     }
   },
 
   computed: {
     title() {
-      return this.$page.NadiaMusic.edges[0].node.titleText
+      return this.$page.EduardoUnzMusic.edges[0].node.titleText
     },
     tracks() {
-      return this.$page.NadiaMusic.edges[0].node.tracks
+      return this.$page.EduardoUnzMusic.edges[0].node.tracks
     }
   },
 

@@ -56,52 +56,10 @@ mediaItems:
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/Thumbnail_2_CallingCard_aymbqe.jpg
   - galleries:
-      - label: ''
-        orderNo: 1
-        type: audioGallery
-        audio:
-          - caption: 01 Lets Have Lunch
-            orderNo: 1
-            url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726699235%3Fsecret_token%3Ds-Fi3HB&visual=true
-          - caption: 02 Talk Talk
-            orderNo: 2
-            url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726699232%3Fsecret_token%3Ds-2r17W&visual=true
-          - caption: 03 Last Kiss Edited
-            orderNo: 3
-            url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726699229%3Fsecret_token%3Ds-b87Ji&visual=true
-          - caption: 04 Rock Steady
-            orderNo: 4
-            url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726699226%3Fsecret_token%3Ds-n94pS&visual=true
-          - caption: 05 The Spell
-            orderNo: 5
-            url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726699220%3Fsecret_token%3Ds-PSNJE&visual=true
-          - caption: 06 Ecstasy
-            orderNo: 6
-            url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726699205%3Fsecret_token%3Ds-l7Gp5&visual=true
-          - caption: 07 Sleep Walker
-            orderNo: 7
-            url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726699202%3Fsecret_token%3Ds-fqDOT&visual=true
-          - caption: 01 Urbanik 1990 Soundtrack Music
-            orderNo: 8
-            url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726697510%3Fsecret_token%3Ds-73sXU&visual=true
-          - caption: 02 Urbanik 1990 Soundtrack Music
-            orderNo: 9
-            url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726697507%3Fsecret_token%3Ds-aijvp&visual=true
-          - caption: 03 Urbanik 1990 Soundtrack Music
-            orderNo: 10
-            url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726697504%3Fsecret_token%3Ds-4YNhw&visual=true
+      - type: link
+        url: /musical-journey/musical-friends/eduardo-unz/music
     label: Music
-    mediaType: audio
+    mediaType: link
     orderNo: 3
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/Thumbnail_3_img440_ere8cj.jpg
