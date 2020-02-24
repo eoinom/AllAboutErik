@@ -65,13 +65,6 @@ images:
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582068850/Collections/03%20Pre-Columbian%20Textiles/28-h96_zuwvrp.jpg
 ---
-I bought my first Pre-Columbian textile fragments in Lima. As I started to read up on these artifacts and cultures, I became totally intrigued, and for 25 years I was engaged in collecting and studying the history of the civilizations that produced these pieces.
-
- 
-
-The collection contains woven examples from almost every era of Pre-Columbian culture, spanning the years from approximately
-
- 800 BC until the arrival of the Spanish in 1532. I published three books on the subject, which can be found here on the site.
-
-
+I bought my first Pre-Columbian textile fragments in Lima. As I started to read up on these artifacts and cultures, I became totally intrigued, and for 25 years I was engaged in collecting and studying the history of the civilizations that produced these pieces.  
+The collection contains woven examples from almost every era of Pre-Columbian culture, spanning the years from approximately 800 BC until the arrival of the Spanish in 1532. I published three books on the subject, which can be found here on the site.  
 I donated the entire collection to the Yale University Art Museum.

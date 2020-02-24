@@ -203,7 +203,7 @@ export default {
 }
 
 #headerItems {
-  width: 1036px; 
+  width: 1240px; 
   text-align: center;
   margin: 0 auto;
 }
