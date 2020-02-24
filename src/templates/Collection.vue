@@ -3,8 +3,8 @@
   <Layout>  
     <header id="header" :style="headerStyles">
       <div id="headerItems">
-        <g-image :src="titleImg" class="titleImg" />
-        <g-image :src="titleImgPt2" class="titleImg titleImgPt2" />
+        <g-image :src="titleImg1Line" class="titleImg titleImg1Line" />
+        <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
         <div v-html="$page.collection.content" class="collections_headerText" />
       </div>
     </header>
@@ -33,8 +33,8 @@
 query ($id: ID!) {
   collection: collections(id: $id) {
     title
-    titleImg
-    titleImgPt2
+    titleImg1Line
+    titleImg2Lines
     headerBgImg
     backgroundImgOpacity
     content
@@ -83,11 +83,11 @@ export default {
     title() {
       return this.$page.collection.title
     },
-    titleImg() {
-      return this.$page.collection.titleImg
+    titleImg1Line() {
+      return this.$page.collection.titleImg1Line
     },
-    titleImgPt2() {
-      return this.$page.collection.hasOwnProperty('titleImgPt2') ? this.$page.collection.titleImgPt2 : ''
+    titleImg2Lines() {
+      return this.$page.collection.hasOwnProperty('titleImgPt2') ? this.$page.collection.titleImg2Lines : ''
     },
     headerBgImg() {
       return this.$page.collection.headerBgImg
@@ -228,13 +228,23 @@ export default {
   padding: 0px;
 }
 
-.titleImg {
+/* .titleImg {
   max-width: 70%;
   margin-bottom: -8px;
 }
 .titleImgPt2 {
   margin-bottom: 20px;
   margin-left: 16px;
+} */
+.titleImg {
+  max-width: 70%;
+  margin-bottom: 20px;
+}
+.titleImg1Line {
+  display: block;
+}
+.titleImg2Lines {
+  display: none;
 }
 
 
@@ -331,6 +341,12 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .main-col {
     max-width: 61.46%;
   }
+  .titleImg1Line {
+    display: none;
+  }
+  .titleImg2Lines {
+    display: block;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -347,6 +363,12 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .main-col {
     max-width: 61.46%;
   }
+  .titleImg1Line {
+    display: none;
+  }
+  .titleImg2Lines {
+    display: block;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -359,6 +381,12 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   }
   .main-col {
     max-width: 61.46%;
+  }
+  .titleImg1Line {
+    display: none;
+  }
+  .titleImg2Lines {
+    display: block;
   }
 }
 

@@ -1,9 +1,9 @@
 ---
 title: Pre-Columbian Textiles
-titleImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582068850/Collections/03%20Pre-Columbian%20Textiles/title-precolumbian_vyqvaw.png
-titleImgPt2: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582068850/Collections/03%20Pre-Columbian%20Textiles/title-textiles_f8a2pt.png
+titleImg1Line: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582584929/Collections/03%20Pre-Columbian%20Textiles/title-precolumbian-textiles-1line_yla7bw.png
+titleImg2Lines: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582584929/Collections/03%20Pre-Columbian%20Textiles/title-precolumbian-textiles-2lines_phifve.png
 headerBgImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582068850/Collections/03%20Pre-Columbian%20Textiles/banner-precol_efrzlq.jpg
 backgroundImgOpacity: 75

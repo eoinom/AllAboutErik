@@ -1,9 +1,9 @@
 ---
 title: Modernity Kimono
-titleImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581799520/Collections/02%20Modernity%20Kimono/title-modernity-white_nfnohx.png
-titleImgPt2: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582067206/Collections/02%20Modernity%20Kimono/title-kimono-white_jloupw.png
+titleImg1Line: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582584821/Collections/02%20Modernity%20Kimono/title-modernity-kimono-white-1line_yhmfke.png
+titleImg2Lines: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582584821/Collections/02%20Modernity%20Kimono/title-modernity-kimono-white-2lines_pmnwkc.png
 headerBgImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582067203/Collections/02%20Modernity%20Kimono/banner-modernity_dldtad.jpg
 backgroundImgOpacity: 52

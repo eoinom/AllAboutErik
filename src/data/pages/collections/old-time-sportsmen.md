@@ -1,9 +1,9 @@
 ---
 title: Old-Time Sportsmen
-titleImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582072592/Collections/06%20Old-Time%20Sportsmen/title-old-time-sportsmen-black_mxzkfo.png
-headerBgImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582072594/Collections/06%20Old-Time%20Sportsmen/banner-old-time-sportsmen_hwvmig.png
+titleImg1Line: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582585215/Collections/06%20Old-Time%20Sportsmen/title-old-time-sportsmen-black-1line_sbvolx.png
+titleImg2Lines: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582585215/Collections/06%20Old-Time%20Sportsmen/title-old-time-sportsmen-black-2lines_c6verf.png
 backgroundImgOpacity: 100
 images:
   - img: >-

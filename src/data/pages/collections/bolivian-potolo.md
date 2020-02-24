@@ -1,11 +1,9 @@
 ---
 title: Bolivian Potolo
-titleImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582071204/Collections/07%20Bolivian%20Potolo/title-bolivian_ihqzbv.png
-titleImgPt2: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582071204/Collections/07%20Bolivian%20Potolo/title-potolo_h4pdv5.png
-titleImgPt3: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582071204/Collections/07%20Bolivian%20Potolo/title-textiles_ouzpfb.png
+titleImg1Line: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582585305/Collections/07%20Bolivian%20Potolo/title-bolivian-potolo-textiles-white-1line_k7yfdg.png
+titleImg2Lines: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582585305/Collections/07%20Bolivian%20Potolo/title-bolivian-potolo-textiles-white-2lines_vvmi54.png
 headerBgImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582071205/Collections/07%20Bolivian%20Potolo/banner-bolivian-potolo_v5pdgm.jpg
 backgroundImgOpacity: 56

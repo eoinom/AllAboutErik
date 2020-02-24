@@ -427,9 +427,8 @@ collections:
     identifier_field: title
     fields:
       - {label: 'Title', name: 'title', widget: 'string', required: false}
-      - {label: "Title Image", name: "titleImg", widget: "image", required: false}
-      - {label: "Title Image Part 2", name: "titleImgPt2", widget: "image", required: false}
-      - {label: "Title Image Part 3", name: "titleImgPt3", widget: "image", required: false}
+      - {label: "Title Image (Single line)", name: "titleImg1Line", widget: "image", required: false}
+      - {label: "Title Image (Two lines)", name: "titleImg2Lines", widget: "image", required: false}
       - {label: "Header Background Image", name: "headerBgImg", widget: "image", required: false}
       - {label: "Header Image Opacity (%)", name: "backgroundImgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
       - {label: 'Header Text', name: 'body', widget: 'markdown', required: false}

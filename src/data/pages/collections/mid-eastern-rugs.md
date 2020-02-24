@@ -1,9 +1,9 @@
 ---
 title: Mid-Eastern Rugs
-titleImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582069403/Collections/04%20Mid-Eastern%20Rugs/title-mideastern_li5sqo.png
-titleImgPt2: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582069403/Collections/04%20Mid-Eastern%20Rugs/title-rugs_zbc0zt.png
+titleImg1Line: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582585010/Collections/04%20Mid-Eastern%20Rugs/title-mideastern-rugs-1line_o2psnd.png
+titleImg2Lines: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582585010/Collections/04%20Mid-Eastern%20Rugs/title-mideastern-rugs-2lines_imez6u.png
 headerBgImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582069404/Collections/04%20Mid-Eastern%20Rugs/banner-mideastern-rugs_eg61u7.jpg
 backgroundImgOpacity: 54

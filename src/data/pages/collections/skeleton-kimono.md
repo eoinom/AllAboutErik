@@ -1,9 +1,9 @@
 ---
 title: Skeleton Kimono
-titleImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582070250/Collections/05%20Skeleton%20Kimono/title-skeleton-white_hbor49.png
-titleImgPt2: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582070250/Collections/05%20Skeleton%20Kimono/title-kimono-white_lpysdx.png
+titleImg1Line: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582585085/Collections/05%20Skeleton%20Kimono/title-skeleton-kimono-white-1line_x2uonr.png
+titleImg2Lines: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582585085/Collections/05%20Skeleton%20Kimono/title-skeleton-kimono-white-2lines_bx9a4b.png
 headerBgImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582070250/Collections/05%20Skeleton%20Kimono/banner_-_skeleton_e39gtl.jpg
 backgroundImgOpacity: 52
