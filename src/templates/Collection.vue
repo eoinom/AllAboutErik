@@ -10,12 +10,9 @@
     </header>
 
     <div :style="navLinksVisibility" class="navLinksContainer">
-      <!-- <g-link :to="'/collections/' + prev_collection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_collection.name" class="nav_link" id="nav_prev">PREV</g-link>
-      <g-link :to="'/collections/' + prev_collection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_collection.name" class="nav_link" id="nav_previous">PREVIOUS COLLECTION</g-link>
-      <g-link :to="'/collections/' + next_collection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_collection.name" class="nav_link" id="nav_next">NEXT COLLECTION</g-link> -->
-      <!-- <g-link :to="'/collections/' + 'propaganda-kimono'" class="nav_link" id="nav_prev">PREV</g-link> -->
-      <g-link :to="'/collections/' + 'propaganda-kimono'" class="nav_link" id="nav_previous">PREVIOUS COLLECTION</g-link>
-      <g-link :to="'/collections/' + 'propaganda-kimono'" class="nav_link" id="nav_next">NEXT COLLECTION</g-link>
+      <!-- <g-link :to="'/collections/' + prev_collection_link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_collection.name" class="nav_link" id="nav_prev">PREV</g-link> -->
+      <g-link :to="'/collections/' + prev_collection_link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_collection.name" class="nav_link" id="nav_previous">PREVIOUS COLLECTION</g-link>
+      <g-link :to="'/collections/' + next_collection_link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_collection.name" class="nav_link" id="nav_next">NEXT COLLECTION</g-link>
     </div>
 
     <CollectionViewer
@@ -67,7 +64,7 @@ query ($id: ID!) {
 <script scoped>
 import CollectionViewer from '../components/CollectionViewer.vue'
 
-var VueScrollTo = require('vue-scrollto');
+const slugify = require('@sindresorhus/slugify')
 
 export default {
   metaInfo() {
@@ -128,6 +125,12 @@ export default {
       else
         next_i = i + 1
       return this.collections[next_i]
+    },
+    prev_collection_link() {
+      return slugify(this.prev_collection.title)
+    },
+    next_collection_link() {
+      return slugify(this.next_collection.title)
     },
     navLinksVisibility() {
       let css = {}
