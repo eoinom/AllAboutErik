@@ -87,7 +87,7 @@ export default {
       return this.$page.collection.titleImg1Line
     },
     titleImg2Lines() {
-      return this.$page.collection.hasOwnProperty('titleImgPt2') ? this.$page.collection.titleImg2Lines : ''
+      return this.$page.collection.titleImg2Lines
     },
     headerBgImg() {
       return this.$page.collection.headerBgImg
@@ -207,6 +207,7 @@ export default {
 
 #headerItems {
   width: 1240px; 
+  max-width: 90vw; 
   text-align: center;
   margin: 0 auto;
 }
@@ -237,11 +238,11 @@ export default {
   margin-left: 16px;
 } */
 .titleImg {
-  max-width: 70%;
+  max-width: 100%;
   margin-bottom: 20px;
 }
 .titleImg1Line {
-  display: block;
+  display: inline;
 }
 .titleImg2Lines {
   display: none;
@@ -345,7 +346,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
     display: none;
   }
   .titleImg2Lines {
-    display: block;
+    display: inline;
   }
 }
 
@@ -367,7 +368,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
     display: none;
   }
   .titleImg2Lines {
-    display: block;
+    display: inline;
   }
 }
 
@@ -386,7 +387,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
     display: none;
   }
   .titleImg2Lines {
-    display: block;
+    display: inline;
   }
 }
 
