@@ -68,17 +68,20 @@ export default {
   methods: {
     emitGlobalPlayingEvent() {
       EventBus.$emit('audioPlaying')
+    },
+
+    eventBusListener() {
+      this.$refs.plyr.player.pause()
     }
   },
 
   mounted() {
     this.mounted = true
+    EventBus.$on('backgroundMusicPlaying', this.eventBusListener)
+  },
 
-    EventBus.$on('backgroundMusicPlaying', () => {
-      if (this.$refs.hasOwnProperty('plyr') && this.$refs.plyr.player.playing) {
-        this.$refs.plyr.player.pause()
-      }
-    })
+  beforeDestroy() {
+    EventBus.$off('backgroundMusicPlaying', this.eventBusListener)
   },
 
   components: {

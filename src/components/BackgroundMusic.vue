@@ -89,7 +89,7 @@ export default {
         this.audioMuted = false;
       }
     },
-    getSoundAndFadeAudio() {      
+    getSoundAndFadeAudio() {     
       // console.log('in getSoundAndFadeAudio');
       if (this.audioPlaying) { 
         // console.log('in getSoundAndFadeAudio, this.audioPlaying = ' + this.audioPlaying);
@@ -139,6 +139,13 @@ export default {
         }.bind(this), 200)
       }
     },
+
+    eventBusListener() {
+      if (this.audio != null && this.audioPlaying && !this.audioMuted) {
+        this.audio.muted = true;
+        this.audioMuted = true
+      }
+    }
   },
 
   watch: {
@@ -167,24 +174,17 @@ export default {
     this.audio = new Audio(this.audioFile)
     this.playAndFadeAudio()
 
-    EventBus.$on('audioPlaying', () => {
-      if (this.audio != null && this.audioPlaying && !this.audioMuted) {
-        this.audio.muted = true;
-        this.audioMuted = true
-      }
-    })
-    EventBus.$on('lightboxMediaLoaded', () => {
-      if (this.audio != null && this.audioPlaying && !this.audioMuted) {
-        this.audio.muted = true;
-        this.audioMuted = true
-      }
-    })
+    EventBus.$on('audioPlaying', this.eventBusListener)
+    EventBus.$on('lightboxMediaLoaded', this.eventBusListener)
   },
 
   beforeDestroy() {  
     // set data for fading out audio
     this.leavingPage = true
     this.audioTimeAtStartPageLeave = this.audio.currentTime
+
+    EventBus.$off('audioPlaying', this.eventBusListener)
+    EventBus.$off('lightboxMediaLoaded', this.eventBusListener)
   }
 }
 </script>
