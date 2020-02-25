@@ -130,7 +130,9 @@ export default {
             }
             else if (this.leavingPage) {
               this.audioPlaying = false
-              this.audioFinished = false             
+              this.audioFinished = false  
+              this.audio.pause();
+              this.audio.currentTime = 0.0;   
               clearInterval(fadeAudioOut);
             }
           }
