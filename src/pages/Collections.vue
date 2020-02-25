@@ -1,12 +1,12 @@
 <template>
   <Layout>  
 
-    <!-- <BackgroundMusic
+    <BackgroundMusic
       :audioFile="$page.Collections.edges[0].node.bgAudio"
       :audioDuration="$page.Collections.edges[0].node.bgAudioDuration"
       :audioFadeInDuration="$page.Collections.edges[0].node.bgAudioFadeInDuration"
       :audioFadeOutDuration="$page.Collections.edges[0].node.bgAudioFadeOutDuration"
-    /> -->
+    />
 
     <b-container fluid class="main-col">
 
@@ -63,7 +63,11 @@
       node {
         id
         pageTitle
-        titleImg        
+        titleImg
+        bgAudio
+        bgAudioDuration
+        bgAudioFadeInDuration
+        bgAudioFadeOutDuration      
         content
         slides {
           orderNo
@@ -86,7 +90,7 @@
 
 
 <script scoped>
-// import BackgroundMusic from '../components/BackgroundMusic.vue'
+import BackgroundMusic from '../components/BackgroundMusic.vue'
 import CollectionThumbnail from '../components/CollectionThumbnail.vue'
 import ScrollToTop from '../components/ScrollToTop.vue'
 import SlideshowImages from '../components/SlideshowImages2.vue'
@@ -129,9 +133,9 @@ export default {
   components: {
     'slideshow-images': require('../components/SlideshowImages2.vue').default,
     'slideshow-kenburns-small': require('../components/SlideshowKenBurnsSmall.vue').default,
+    BackgroundMusic,
     CollectionThumbnail,
-    ScrollToTop,
-    // BackgroundMusic,
+    ScrollToTop
   },
 }
 </script>

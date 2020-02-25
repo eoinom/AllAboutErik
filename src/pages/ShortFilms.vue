@@ -1,13 +1,13 @@
 <template>
   <Layout> 
 
-    <!-- <BackgroundMusic
-      :audioFile="$page.TheEpisodes.edges[0].node.bgAudio"
-      :audioDuration="$page.TheEpisodes.edges[0].node.bgAudioDuration"
-      :audioFadeInDuration="$page.TheEpisodes.edges[0].node.bgAudioFadeInDuration"
-      :audioFadeOutDuration="$page.TheEpisodes.edges[0].node.bgAudioFadeOutDuration"
-    /> -->
-    
+    <BackgroundMusic
+      :audioFile="$page.ShortFilms.edges[0].node.bgAudio"
+      :audioDuration="$page.ShortFilms.edges[0].node.bgAudioDuration"
+      :audioFadeInDuration="$page.ShortFilms.edges[0].node.bgAudioFadeInDuration"
+      :audioFadeOutDuration="$page.ShortFilms.edges[0].node.bgAudioFadeOutDuration"
+    />
+
     <header id="header" :style="headerStyle">
       <g-image :src="titleImg" id="titleImg" class="my-4" />
     </header>
@@ -72,6 +72,10 @@
         headerBgImg
         titleImg
         mainVideoUrl
+        bgAudio
+        bgAudioDuration
+        bgAudioFadeInDuration
+        bgAudioFadeOutDuration
         videos {
           title
           subText

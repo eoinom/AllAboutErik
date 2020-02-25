@@ -8,6 +8,11 @@ mainVideoUrl: 'https://player.vimeo.com/video/293166774'
 mainVideoText: >-
   Watch the travel documentaries that I shot on location, wrote, narrated, and
   set to regional music
+bgAudio: >-
+  https://res.cloudinary.com/all-about-erik/video/upload/v1582669012/Travels/Ramblin_Man_-_The_Blue_Velvet_Band_oq0s7w.mp3
+bgAudioDuration: 142
+bgAudioFadeInDuration: 3.5
+bgAudioFadeOutDuration: 3.5
 videos:
   - duration: 1362
     thumbnailImg: >-

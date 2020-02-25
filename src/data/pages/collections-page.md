@@ -2,6 +2,11 @@
 pageTitle: Collections
 titleImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372624/Collections/collections-white_icjjrm.png
+bgAudio: >-
+  https://res.cloudinary.com/all-about-erik/video/upload/v1582669076/Collections/Dicky_-_Edwardo_Unz_wirthx.mp3
+bgAudioDuration: 142
+bgAudioFadeInDuration: 3.5
+bgAudioFadeOutDuration: 3.5
 slides:
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372624/Collections/slideshow-01_f4tant.jpg

@@ -279,7 +279,11 @@ collections:
           - {label: "Page Title", name: "pageTitle", widget: "string"}
           - {label: "Header Background Image", name: "headerBgImg", widget: "image"}
           - {label: "Title Image", name: "titleImg", widget: "image"}
-          - {label: "Main video (Vimeo Url)", name: "mainVideoUrl", widget: "string"}
+          - {label: "Main video (Vimeo Url)", name: "mainVideoUrl", widget: "string"} 
+          - {label: 'Background Audio', name: 'bgAudio', widget: 'file', required: false}
+          - {label: 'Background Audio Duration', name: 'bgAudioDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - {label: 'Background Audio Fade In Duration', name: 'bgAudioFadeInDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - {label: 'Background Audio Fade Out Duration', name: 'bgAudioFadeOutDuration', widget: 'number', valueType: "float", min: 0, required: false}
           - label: "Videos"
             name: "videos"
             widget: "list"
@@ -298,7 +302,11 @@ collections:
           - {label: "Header Background Image", name: "headerBgImg", widget: "image"}
           - {label: "Title Image", name: "titleImg", widget: "image"}
           - {label: "Main video (Vimeo Url)", name: "mainVideoUrl", widget: "string"}
-          - {label: "Main video overlay text", name: "mainVideoText", widget: "string"}
+          - {label: "Main video overlay text", name: "mainVideoText", widget: "string"} 
+          - {label: 'Background Audio', name: 'bgAudio', widget: 'file', required: false}
+          - {label: 'Background Audio Duration', name: 'bgAudioDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - {label: 'Background Audio Fade In Duration', name: 'bgAudioFadeInDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - {label: 'Background Audio Fade Out Duration', name: 'bgAudioFadeOutDuration', widget: 'number', valueType: "float", min: 0, required: false}
           - label: "Videos"
             name: "videos"
             widget: "list"
@@ -314,7 +322,11 @@ collections:
         fields:
           - {label: "Page Title", name: "pageTitle", widget: "string"}
           - {label: "Title Image", name: "titleImg", widget: "image"}
-          - {label: 'Slideshow overlay text', name: 'body', widget: 'markdown'}
+          - {label: 'Slideshow overlay text', name: 'body', widget: 'markdown'} 
+          - {label: 'Background Audio', name: 'bgAudio', widget: 'file', required: false}
+          - {label: 'Background Audio Duration', name: 'bgAudioDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - {label: 'Background Audio Fade In Duration', name: 'bgAudioFadeInDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - {label: 'Background Audio Fade Out Duration', name: 'bgAudioFadeOutDuration', widget: 'number', valueType: "float", min: 0, required: false}
           - label: "Slides"
             name: "slides"
             widget: "list"

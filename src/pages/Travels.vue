@@ -1,12 +1,12 @@
 <template>
   <Layout> 
 
-    <!-- <BackgroundMusic
-      :audioFile="$page.TheEpisodes.edges[0].node.bgAudio"
-      :audioDuration="$page.TheEpisodes.edges[0].node.bgAudioDuration"
-      :audioFadeInDuration="$page.TheEpisodes.edges[0].node.bgAudioFadeInDuration"
-      :audioFadeOutDuration="$page.TheEpisodes.edges[0].node.bgAudioFadeOutDuration"
-    /> -->
+    <BackgroundMusic
+      :audioFile="$page.Travels.edges[0].node.bgAudio"
+      :audioDuration="$page.Travels.edges[0].node.bgAudioDuration"
+      :audioFadeInDuration="$page.Travels.edges[0].node.bgAudioFadeInDuration"
+      :audioFadeOutDuration="$page.Travels.edges[0].node.bgAudioFadeOutDuration"
+    />
 
     <header id="header" :style="headerStyle">
       <g-image :src="titleImg" id="titleImg" class="my-4" />
@@ -68,6 +68,10 @@
         titleImg
         mainVideoUrl
         mainVideoText
+        bgAudio
+        bgAudioDuration
+        bgAudioFadeInDuration
+        bgAudioFadeOutDuration
         videos {
           title
           url
@@ -82,7 +86,7 @@
 
 
 <script scoped>
-// import BackgroundMusic from '../components/BackgroundMusic.vue'
+import BackgroundMusic from '../components/BackgroundMusic.vue'
 import VideoLightBox from '../components/VideoLightBox.vue'
 import VideoThumbnailTravels from '../components/VideoThumbnailTravels.vue'
 import ScrollToTop from '../components/ScrollToTop.vue'
@@ -130,7 +134,7 @@ export default {
   },
 
   components: {
-    // BackgroundMusic,
+    BackgroundMusic,
     VideoLightBox,
     VideoThumbnailTravels,
     ScrollToTop
