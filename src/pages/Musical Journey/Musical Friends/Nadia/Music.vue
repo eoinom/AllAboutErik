@@ -39,6 +39,12 @@
         <hr class="style-two">
       </div>
 
+      <b-row align-h="center" class="text-center">
+        <b-col>
+          <g-link to="/musical-journey/musical-friends/nadia" class="nav_link py-3">BACK TO NADIA</g-link>
+        </b-col>
+      </b-row>
+
     </b-container>
   </Layout>
 </template>
@@ -92,6 +98,8 @@ export default {
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
+
 @font-face {
   font-family: NeueHaasGroteskText Pro55;
   src: url('../../../../assets/fonts/nhaasgrotesktxpro-55rg.eot'); /* IE9 Compat Modes */
@@ -166,6 +174,26 @@ hr.style-two {
   display: none;
 }
 
+.nav_link {
+  color: white; 
+  display: block;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-feature-settings: 'liga';
+  font-weight: 400;
+  font-style: italic;
+  font-size: 39px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
+  margin: 0px;
+  padding: 0px;
+}
+.nav_link:hover {
+  color:	#EED047;
+  cursor: pointer;
+}
+
+
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -187,6 +215,9 @@ hr.style-two {
   .showOnMobile {
     display: block;
   }
+  .nav_link {
+    font-size: 5vw;
+  }
 }
 
 @media (max-width: 340Px) {  /* for iPhone 5 etc. */
@@ -205,7 +236,9 @@ hr.style-two {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-
+  .nav_link {
+    font-size: 30px;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
