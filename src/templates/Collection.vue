@@ -9,22 +9,14 @@
       </div>
     </header>
 
-    <div :style="navLinksVisibility" class="navLinksContainer">
-      <!-- <g-link :to="'/collections/' + prev_collection_link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_collection.name" class="nav_link" id="nav_prev">PREV</g-link> -->
-      <g-link :to="'/collections/' + prev_collection_link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_collection.name" class="nav_link" id="nav_previous">PREVIOUS COLLECTION</g-link>
-      <g-link :to="'/collections/' + next_collection_link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_collection.name" class="nav_link" id="nav_next">NEXT COLLECTION</g-link>
-    </div>
-
     <CollectionViewer
       :images="images"
       :index="imageIndex"
       :disable-scroll="true"
+      :prevCollection="prev_collection"
+      :nextCollection="next_collection"
       @close="imageIndex = null"
     />
-
-    <div :style="navLinksVisibility" class="navLinksContainer">
-      <g-link to="/collections/" class="nav_link pt-3" id="nav_back">BACK TO COLLECTIONS MENU</g-link>
-    </div>
 
   </Layout>
 </template>
@@ -116,7 +108,9 @@ export default {
         var prev_i = this.collection_names.length - 1
       else
         prev_i = i - 1
-      return this.collections[prev_i]
+      let collection = {...this.collections[prev_i]}
+      collection.link = slugify(collection.title)
+      return collection
     },
     next_collection() {
       let i = this.collection_names.indexOf(this.title)      
@@ -124,32 +118,10 @@ export default {
         var next_i = 0
       else
         next_i = i + 1
-      return this.collections[next_i]
-    },
-    prev_collection_link() {
-      return slugify(this.prev_collection.title)
-    },
-    next_collection_link() {
-      return slugify(this.next_collection.title)
-    },
-    navLinksVisibility() {
-      let css = {}
-      // if (this.imageIndex == null) {
-        css.visibility = 'visible'
-        css.opacity = 1
-      // }
-      // else {
-      //   css.visibility = 'hidden'
-      //   css.opacity = 0
-      // }
-      return css
+      let collection = {...this.collections[next_i]}
+      collection.link = slugify(collection.title)
+      return collection
     }
-  },
-
-  methods: {
-  },
-
-  mounted() {  
   },
 
   components: {
@@ -229,14 +201,6 @@ export default {
   padding: 0px;
 }
 
-/* .titleImg {
-  max-width: 70%;
-  margin-bottom: -8px;
-}
-.titleImgPt2 {
-  margin-bottom: 20px;
-  margin-left: 16px;
-} */
 .titleImg {
   max-width: 100%;
   margin-bottom: 20px;
@@ -266,49 +230,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   opacity: var(--backgroundOpacity);
 }
 
-.navLinksContainer {
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0.5s linear 1s, opacity 0.5s linear 1s;
-}
-.nav_link {
-  color: white; 
-  display: block;
-  position: fixed;
-  top: calc(203px + 14px);
-  font-family: 'Ubuntu Condensed', sans-serif;
-  font-feature-settings: 'liga';
-  font-weight: 400;
-  font-style: italic;
-  font-size: 28px;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
-  margin: 0px;
-  padding: 0px;
-  z-index: 1500;
-}
-#nav_prev, #nav_previous {
-  left: 45px;
-  text-align: left;
-}
-#nav_prev {
-  display: none;
-}
-#nav_next {
-  right: 45px;
-  text-align: right;
-}
-#nav_back {
-  top: auto;
-  bottom: 20px;
-  left: 50%;
-  transform: translate(-50%, 0);    
-}
-#nav_prev:hover, #nav_previous:hover, #nav_next:hover, #nav_back:hover {
-  color:	#EED047;
-  cursor: pointer;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -326,19 +247,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .nav_link {
-    font-size: 5vw;
-  }
-  #nav_previous {
-    display: none;
-  }
-  #nav_prev {
-    display: block;
-    left: 4%;
-  }
-  #nav_next {
-    right: 4%;
-  }
   .main-col {
     max-width: 61.46%;
   }
@@ -352,15 +260,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .nav_link {
-    font-size: 30px;
-  }
-  #nav_previous {
-    display: none;
-  }
-  #nav_prev {
-    display: block;
-  }
   .main-col {
     max-width: 61.46%;
   }
@@ -374,12 +273,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  #nav_previous {
-    display: none;
-  }
-  #nav_prev {
-    display: block;
-  }
   .main-col {
     max-width: 61.46%;
   }
@@ -393,12 +286,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-  #nav_previous {
-    display: none;
-  }
-  #nav_prev {
-    display: block;
-  }
   .main-col {
     max-width: 61.46%;
   }

@@ -13,10 +13,24 @@
           <div class="image-lightbox__dot" :style="`border-color: ${interfaceColor}`" />
           <div class="image-lightbox__dot" :style="`border-color: ${interfaceColor}`" />
         </div>
-
-        <div v-show="isImageLoaded" class="image-lightbox__text">
-          HOVER OVER IMAGE FOR CLOSE-UP
-        </div>
+        
+        <b-container fluid>
+          <b-row align-h="between">
+            <!-- <b-col cols="3" md="4" lg="5"> -->
+              <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_small" id="nav_previous">PREV</g-link>
+              <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_big" id="nav_previous">PREVIOUS COLLECTION</g-link>
+            <!-- </b-col>
+            
+            <b-col cols="6" md="4" lg="2"> -->
+              <div class="image-lightbox__text image-lightbox__textcenter">HOVER OVER IMAGE FOR CLOSE-UP</div>
+            <!-- </b-col>
+            
+            <b-col cols="3" md="4" lg="5"> -->
+              <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_small" id="nav_next">NEXT</g-link>
+              <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_big" id="nav_next">NEXT COLLECTION</g-link>
+            <!-- </b-col> -->
+          </b-row>
+        </b-container>
 
         <div class="image-lightbox__container">
           <ul class="image-lightbox__content">
@@ -73,6 +87,8 @@
             class="image-lightbox__next arrowImg" 
           />
         </div>
+
+        <g-link to="/collections/" class="nav_link pt-3" id="nav_back">BACK TO COLLECTIONS MENU</g-link>
       </div>
 
     </div>
@@ -107,6 +123,12 @@ export default {
     interfaceColor: {
       type: String,
       default: 'rgba(255, 255, 255, 0.8)',
+    },
+    prevCollection: {
+      type: Object
+    },
+    nextCollection: {
+      type: Object
     }
   },
   data() {
@@ -340,6 +362,38 @@ export default {
 }
 // See styles.css for .img-magnifier-glass
 
+.nav_link {
+  color: white;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-feature-settings: 'liga';
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
+  margin: 0px;
+  padding: 0px 45px;
+  z-index: 1500;
+}
+.nav_link_small {
+  display: none;
+}
+.nav_link_big {
+  display: inline;
+}
+#nav_back { 
+  display: block;
+  position: fixed;
+  top: auto;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+#nav_prev:hover, #nav_previous:hover, #nav_next:hover, #nav_back:hover {
+  color:	#EED047;
+  cursor: pointer;
+}
 
 .image-lightbox {
   &__modal {
@@ -414,7 +468,7 @@ export default {
     color: #FFFFFF;
     font-size: 10px;
     letter-spacing: 4px;
-    margin: 14px;
+    margin: 14px 0px;
     padding: 0px;
   }
   &__next,
@@ -526,7 +580,7 @@ export default {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .image-lightbox{
+  .image-lightbox {
     // &__text {
     //   font-size: 0.8125rem; /* 13px with 16px default size */
     // }
@@ -537,11 +591,26 @@ export default {
       left: 1.5%;
     }
   }
+  .nav_link {
+    font-size: 5vw;
+  }
+  .nav_link_small {
+    display: inline;
+  }
+  .nav_link_big {
+    display: none;
+  }  
+  // #nav_prev {
+  //   left: 4%;
+  // }
+  // #nav_next {
+  //   right: 4%;
+  // }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .image-lightbox{
+  .image-lightbox {
     // &__text {
     //   font-size: 0.9375rem; /* 15px with 16px default size */
     // }
@@ -552,11 +621,20 @@ export default {
       left: 3.0%;
     }
   }
+  .nav_link {
+    font-size: 30px;
+  }
+  .nav_link_small {
+    display: inline;
+  }
+  .nav_link_big {
+    display: none;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) { 
-  .image-lightbox{
+  .image-lightbox {
     // &__text {
     //   font-size: 1.0625rem; /* 17px with 16px default size */
     // }
@@ -566,6 +644,12 @@ export default {
     &__prev {
       left: 4.5%;
     }
+  }
+  .nav_link_small {
+    display: inline;
+  }
+  .nav_link_big {
+    display: none;
   }
 }
 
