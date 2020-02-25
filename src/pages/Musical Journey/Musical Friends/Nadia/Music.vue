@@ -181,7 +181,7 @@ hr.style-two {
   font-feature-settings: 'liga';
   font-weight: 400;
   font-style: italic;
-  font-size: 39px;
+  font-size: 2.4375rem;
   letter-spacing: 1px;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
@@ -201,10 +201,10 @@ hr.style-two {
   .heading {
     font-size: 2.8rem;
     letter-spacing: 1.8px;
-    margin-bottom: 0 0 15px 0;
+    margin: 0 0 15px 0;
   }
   .trackTitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .trackCaption {
     font-size: 0.9rem;
@@ -216,17 +216,17 @@ hr.style-two {
     display: block;
   }
   .nav_link {
-    font-size: 5vw;
+    font-size: 1.7rem;
   }
 }
 
 @media (max-width: 340Px) {  /* for iPhone 5 etc. */
   .heading {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     letter-spacing: 1.6px;
-    margin-bottom: 0 0 10px 0;
+    margin: 0 0 10px 0;
   }
-  .trackTitle {
+  .trackTitle, .nav_link {
     font-size: 1.5rem;
   }
   .trackCaption {
@@ -236,14 +236,26 @@ hr.style-two {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .nav_link {
-    font-size: 30px;
+  .heading {
+    font-size: 2.8rem;
+    letter-spacing: 1.8px;
+    margin: 0 0 15px 0;
+  }
+  .trackTitle, .nav_link {
+    font-size: 2rem;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-
+  .heading {
+    font-size: 3rem;
+    letter-spacing: 1.8px;
+    margin: 0 0 15px 0;
+  }
+  .trackTitle, .nav_link {
+    font-size: 2.25rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */

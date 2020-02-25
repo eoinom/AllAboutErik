@@ -135,7 +135,7 @@ export default {
   color: #e7413f; 
   font-family: 'NeueHaasGroteskText Pro75Bd';
   font-feature-settings: 'liga';
-  font-size: 2.625rem;
+  font-size: 2rem;
   font-weight: 400;
   margin-bottom: 0;
 }
@@ -179,7 +179,8 @@ hr.style-two {
   font-feature-settings: 'liga';
   font-weight: 400;
   font-style: italic;
-  font-size: 39px;
+  /* font-size: 2.4375rem; */
+  font-size: 2rem;
   letter-spacing: 1px;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
@@ -197,12 +198,12 @@ hr.style-two {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .heading {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     letter-spacing: 1.8px;
-    margin-bottom: 0 0 15px 0;
+    margin: 0 0 15px 0;
   }
-  .trackTitle {
-    font-size: 2rem;
+  .trackTitle, .nav_link {
+    font-size: 1.5rem;
   }
   /* .trackCaption {
     font-size: 0.9rem;
@@ -213,19 +214,19 @@ hr.style-two {
   .showOnMobile {
     display: block;
   }
-  .nav_link {
-    font-size: 5vw;
-  }
 }
 
 @media (max-width: 340Px) {  /* for iPhone 5 etc. */
   .heading {
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 1.6px;
-    margin-bottom: 0 0 10px 0;
+    margin: 0 0 10px 0;
   }
   .trackTitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }  
+  .nav_link {
+    font-size: 1.375rem;
   }
   /* .trackCaption {
     font-size: 0.8rem;
@@ -233,15 +234,27 @@ hr.style-two {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .nav_link {
-    font-size: 30px;
+@media (min-width: 576px) and (max-width: 767.98px) {  
+  .heading {
+    font-size: 2.8rem;
+    letter-spacing: 1.8px;
+    margin: 0 0 15px 0;
+  }
+  .trackTitle, .nav_link {
+    font-size: 1.5rem;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-
+  .heading {
+    font-size: 3rem;
+    letter-spacing: 1.8px;
+    margin: 0 0 15px 0;
+  }
+  .trackTitle, .nav_link {
+    font-size: 1.75rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
