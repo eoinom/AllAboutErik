@@ -1,8 +1,5 @@
 <template>
-  <Layout>   
-    <MusicalFriendsComponent
-      :menuOnly="false"
-    />
+  <Layout>
 
     <BackgroundMusic
       :audioFile="$page.MusicalFriends.edges[0].node.bgAudio"
@@ -10,6 +7,11 @@
       :audioFadeInDuration="$page.MusicalFriends.edges[0].node.bgAudioFadeInDuration"
       :audioFadeOutDuration="$page.MusicalFriends.edges[0].node.bgAudioFadeOutDuration"
     />
+       
+    <MusicalFriendsComponent
+      :menuOnly="false"
+    />
+    
   </Layout>
 </template>
 

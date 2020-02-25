@@ -1,6 +1,13 @@
 <template>
   <Layout class="pb-5">
 
+    <BackgroundMusic
+      :audioFile="$page.Discography.edges[0].node.bgAudio"
+      :audioDuration="$page.Discography.edges[0].node.bgAudioDuration"
+      :audioFadeInDuration="$page.Discography.edges[0].node.bgAudioFadeInDuration"
+      :audioFadeOutDuration="$page.Discography.edges[0].node.bgAudioFadeOutDuration"
+    />
+
     <div v-for="(img,index) in backgroundImages" :key="index" >
       <g-image :src="backgroundImages[index].img" class="bgImg bgImgBack" :class="hideBgImg(index)" :style="bgStyles" />
       <g-image :src="backgroundImages[index].imgOverlay" class="bgImg bgImgOverlay" :class="hideBgImgOverlay(index)" :style="bgStyles" />
@@ -84,13 +91,7 @@
       </div>
     </b-container>
 
-    <BackgroundMusic
-      :audioFile="$page.Discography.edges[0].node.bgAudio"
-      :audioDuration="$page.Discography.edges[0].node.bgAudioDuration"
-      :audioFadeInDuration="$page.Discography.edges[0].node.bgAudioFadeInDuration"
-      :audioFadeOutDuration="$page.Discography.edges[0].node.bgAudioFadeOutDuration"
-    />
-    
+
     <ScrollToTop
       text="BACK TO THE TOP"
       :includeArrow="true"

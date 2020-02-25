@@ -1,5 +1,13 @@
 <template>
   <Layout>
+
+    <BackgroundMusic
+      :audioFile="audioFile"
+      :audioDuration="audioDuration"
+      :audioFadeInDuration="audioFadeInDuration"
+      :audioFadeOutDuration="audioFadeOutDuration"
+    />
+
     <b-container fluid>
       <div class="contentContainer">
         <div class="content">
@@ -23,12 +31,6 @@
       />
     </div>
 
-    <BackgroundMusic
-      :audioFile="audioFile"
-      :audioDuration="audioDuration"
-      :audioFadeInDuration="audioFadeInDuration"
-      :audioFadeOutDuration="audioFadeOutDuration"
-    />
   </Layout>
 </template>
 

@@ -1,5 +1,13 @@
 <template>
   <Layout> 
+
+    <!-- <BackgroundMusic
+      :audioFile="$page.TheEpisodes.edges[0].node.bgAudio"
+      :audioDuration="$page.TheEpisodes.edges[0].node.bgAudioDuration"
+      :audioFadeInDuration="$page.TheEpisodes.edges[0].node.bgAudioFadeInDuration"
+      :audioFadeOutDuration="$page.TheEpisodes.edges[0].node.bgAudioFadeOutDuration"
+    /> -->
+
     <header id="header" :style="headerStyle">
       <g-image :src="titleImg" id="titleImg" class="my-4" />
     </header>
@@ -34,13 +42,6 @@
     </b-container>
 
 
-    <!-- <BackgroundMusic
-      :audioFile="$page.TheEpisodes.edges[0].node.bgAudio"
-      :audioDuration="$page.TheEpisodes.edges[0].node.bgAudioDuration"
-      :audioFadeInDuration="$page.TheEpisodes.edges[0].node.bgAudioFadeInDuration"
-      :audioFadeOutDuration="$page.TheEpisodes.edges[0].node.bgAudioFadeOutDuration"
-    /> -->
-    
     <VideoLightBox
       :videos="videos"
       :index="videoIndex"

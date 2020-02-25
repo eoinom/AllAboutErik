@@ -1,5 +1,13 @@
 <template>
   <Layout> 
+
+    <BackgroundMusic
+      :audioFile="$page.RootsAndYouth.edges[0].node.bgAudio"
+      :audioDuration="$page.RootsAndYouth.edges[0].node.bgAudioDuration"
+      :audioFadeInDuration="$page.RootsAndYouth.edges[0].node.bgAudioFadeInDuration"
+      :audioFadeOutDuration="$page.RootsAndYouth.edges[0].node.bgAudioFadeOutDuration"
+    />
+    
     <b-container fluid class="main-col">
 
       <!-- HEADER SLIDESHOW -->
@@ -73,14 +81,7 @@
       </b-row>
     </b-container>   
    
-
-    <BackgroundMusic
-      :audioFile="$page.RootsAndYouth.edges[0].node.bgAudio"
-      :audioDuration="$page.RootsAndYouth.edges[0].node.bgAudioDuration"
-      :audioFadeInDuration="$page.RootsAndYouth.edges[0].node.bgAudioFadeInDuration"
-      :audioFadeOutDuration="$page.RootsAndYouth.edges[0].node.bgAudioFadeOutDuration"
-    />
-    
+   
     <VideoLightBox
       :videos="allVideos"
       :index="videoIndex"

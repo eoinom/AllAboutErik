@@ -533,13 +533,6 @@
     </b-container>
 
 
-    <!-- <BackgroundMusic
-      :audioFile="$page.EarlyProductions.edges[0].node.bgAudio"
-      :audioDuration="$page.EarlyProductions.edges[0].node.bgAudioDuration"
-      :audioFadeInDuration="$page.EarlyProductions.edges[0].node.bgAudioFadeInDuration"
-      :audioFadeOutDuration="$page.EarlyProductions.edges[0].node.bgAudioFadeOutDuration"
-    /> -->
-    
     <ImageLightBox
       :images="image"
       :index="imageIndex"
