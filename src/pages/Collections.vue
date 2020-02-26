@@ -40,7 +40,7 @@
       <b-row no-gutters align-h="center" class="mb-1"> 
 
         <div v-for="(collection, index) in collections" :key="index" style="max-width:80%">
-          <b-col cols="" class="p-0 mx-0 mx-sm-1 mx-md-2 mx-xl-1 my-2" >
+          <b-col class="p-0 mx-0 mx-sm-1 mx-md-2 mx-xl-1 my-2" >
             <collection-thumbnail :collection="collection" />
           </b-col>
         </div>
@@ -303,6 +303,14 @@ export default {
   #slideshowText {
     font-size: 1.3125rem;
     line-height: 33px;
+  }
+}
+
+
+/* Special breakpoint */
+@media (min-width: 1500px) and (max-width: 2539.98px) {  
+  .collections {
+    max-width: 1500px;
   }
 }
 
