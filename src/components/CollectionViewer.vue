@@ -43,6 +43,7 @@
                   </div>
                   <img
                     :src="shouldPreload(imageIndex) ? image.img : false"
+                    :ref="`lg-img-${imageIndex}`"
                     :id="`lg-img-${imageIndex}`"
                     @load="imageLoaded($event, imageIndex); addMagnifierListener(imageIndex)"
                     @mouseover="magnify()"
@@ -196,7 +197,8 @@ export default {
       }
     },
     getImageElByIndex(index) {
-      return document.getElementById(`lg-img-${index}`) || '';
+      const elements = this.$refs[`lg-img-${index}`] || [];
+      return elements[0];
     },
     setImageLoaded(index) {
       const el = this.getImageElByIndex(index);
