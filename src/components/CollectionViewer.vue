@@ -16,19 +16,13 @@
         
         <b-container fluid>
           <b-row align-h="between">
-            <!-- <b-col cols="3" md="4" lg="5"> -->
-              <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_small" id="nav_previous">PREV</g-link>
-              <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_big" id="nav_previous">PREVIOUS COLLECTION</g-link>
-            <!-- </b-col>
+            <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_small" id="nav_previous">PREV</g-link>
+            <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_big" id="nav_previous">PREVIOUS COLLECTION</g-link>
+          
+            <div class="image-lightbox__text image-lightbox__textcenter">HOVER OVER IMAGE FOR CLOSE-UP</div>
             
-            <b-col cols="6" md="4" lg="2"> -->
-              <div class="image-lightbox__text image-lightbox__textcenter">HOVER OVER IMAGE FOR CLOSE-UP</div>
-            <!-- </b-col>
-            
-            <b-col cols="3" md="4" lg="5"> -->
-              <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_small" id="nav_next">NEXT</g-link>
-              <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_big" id="nav_next">NEXT COLLECTION</g-link>
-            <!-- </b-col> -->
+            <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_small" id="nav_next">NEXT</g-link>
+            <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_big" id="nav_next">NEXT COLLECTION</g-link>
           </b-row>
         </b-container>
 
@@ -44,12 +38,14 @@
                 
                 <!-- image magnifier (ref: https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp) -->
                 <div class="img-magnifier-container">
+                  <div v-show="showMagnifier" class="img-magnifier-glass" :id="'magnifier'+imageIndex">
+
+                  </div>
                   <img
-                    :ref="`lg-img-${imageIndex}`"
                     :src="shouldPreload(imageIndex) ? image.img : false"
-                    @load="imageLoaded($event, imageIndex)"
                     :id="`lg-img-${imageIndex}`"
-                    @mouseover="magnify(`lg-img-${imageIndex}`, 2)"
+                    @load="imageLoaded($event, imageIndex); addMagnifierListener(imageIndex)"
+                    @mouseover="magnify()"
                   >
                 </div>
 
@@ -143,7 +139,9 @@ export default {
         multitouch: false,
         flag: false,
       },
-      glassElCreated: false
+      glassElCreated: false,
+      showMagnifier: false,
+      zoom: 2
     };
   },
 
@@ -185,12 +183,10 @@ export default {
     prev() {
       if (this.currentIndex === 0) return;
       this.currentIndex -= 1;
-      this.$emit('slide', { index: this.currentIndex });
     },
     next() {
       if (this.currentIndex === this.images.length - 1) return;
       this.currentIndex += 1
-      this.$emit('slide', { index: this.currentIndex });
     },
     imageLoaded($event, imageIndex) {
       const { target } = $event;
@@ -200,8 +196,7 @@ export default {
       }
     },
     getImageElByIndex(index) {
-      const elements = this.$refs[`lg-img-${index}`] || [];
-      return elements[0];
+      return document.getElementById(`lg-img-${index}`) || '';
     },
     setImageLoaded(index) {
       const el = this.getImageElByIndex(index);
@@ -260,70 +255,71 @@ export default {
       }
     },
 
-    magnify(imgID, zoom) {
-      var img, glass, w, h, bw;
-      img = document.getElementById(imgID);
-      
-      /* Create magnifier glass: */
-      if (!this.glassElCreated) {
-        glass = document.createElement("DIV");
-        glass.setAttribute("class", "img-magnifier-glass");
-        this.glassElCreated = true
-      }
-
-      /* Insert magnifier glass: */
-      img.parentElement.insertBefore(glass, img);
+    magnify(zoom) {      
+      // this.showMagnifier = true;
+      var img = document.getElementById(`lg-img-${this.currentIndex}`);
+      var glass = document.getElementById('magnifier'+this.currentIndex);
 
       /* Set background properties for the magnifier glass: */
       glass.style.backgroundImage = "url('" + img.src + "')";
-      glass.style.backgroundRepeat = "no-repeat";
-      glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
-      glass.style.backgroundColor = 'white'
-      bw = 3;
-      w = glass.offsetWidth / 2;
-      h = glass.offsetHeight / 2;
+      glass.style.backgroundSize = (img.width * this.zoom) + "px " + (img.height * this.zoom) + "px";
+    },
+    
+    addMagnifierListener(imageIndex) {
+      var img = document.getElementById(`lg-img-${imageIndex}`);
+      var glass = document.getElementById('magnifier'+imageIndex);
 
       /* Execute a function when someone moves the magnifier glass over the image: */
-      glass.addEventListener("mousemove", moveMagnifier);
-      img.addEventListener("mousemove", moveMagnifier);
+      glass.addEventListener("mousemove", this.moveMagnifier);
+      img.addEventListener("mousemove", this.moveMagnifier);
 
       /*and also for touch screens:*/
-      glass.addEventListener("touchmove", moveMagnifier);
-      img.addEventListener("touchmove", moveMagnifier);
-      function moveMagnifier(e) {
-        var pos, x, y;
-        /* Prevent any other actions that may occur when moving over the image */
-        e.preventDefault();
-        /* Get the cursor's x and y positions: */
-        pos = getCursorPos(e);
-        x = pos.x;
-        y = pos.y;
+      glass.addEventListener("touchmove", this.moveMagnifier);
+      img.addEventListener("touchmove", this.moveMagnifier);
+    },
 
-        /* Prevent the magnifier glass from being positioned outside the image: */
-        if (x > img.width - (w / zoom)) {
-          // x = img.width - (w / zoom);
-          glass.style.display = 'none'
-        }
-        else if (x < w / zoom) {
-          // x = w / zoom;
-          glass.style.display = 'none'
-        }
-        else if (y > img.height - (h / zoom)) {
-          // y = img.height - (h / zoom);
-          glass.style.display = 'none'
-        }
-        else if (y < h / zoom) {
-          // y = h / zoom;
-          glass.style.display = 'none'
-        }
-        else {
-          /* Set the position of the magnifier glass: */
-          glass.style.display = 'block'
-          glass.style.left = (x - w) + "px";
-          glass.style.top = (y - h) + "px";
-          /* Display what the magnifier glass "sees": */
-          glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
-        }
+    moveMagnifier(e) {
+      var img = document.getElementById(`lg-img-${this.currentIndex}`);
+      var glass = document.getElementById('magnifier'+this.currentIndex);
+
+      var bw = 3; // what's this for ??
+      var w = glass.offsetWidth / 2;
+      var h = glass.offsetHeight / 2;
+
+      var pos, x, y;
+      /* Prevent any other actions that may occur when moving over the image */
+      e.preventDefault();
+      /* Get the cursor's x and y positions: */
+      pos = getCursorPos(e);
+      x = pos.x;
+      y = pos.y;
+
+      /* Prevent the magnifier glass from being positioned outside the image: */
+      if (x > img.width - (w / this.zoom)) {
+        // x = img.width - (w / this.zoom);
+        this.showMagnifier = false;
+      }
+      else if (x < w / this.zoom) {
+        // x = w / this.zoom;
+        this.showMagnifier = false;
+      }
+      else if (y > img.height - (h / this.zoom)) {
+        // y = img.height - (h / this.zoom);
+        this.showMagnifier = false;
+      }
+      else if (y < h / this.zoom) {
+        // y = h / this.zoom;
+        this.showMagnifier = false;
+      }
+      else {
+        /* Set the position of the magnifier glass: */
+        glass.style.display = 'block'
+        glass.style.left = (x - w) + "px";
+        glass.style.top = (y - h) + "px";
+        /* Display what the magnifier glass "sees": */
+        glass.style.backgroundPosition = "-" + ((x * this.zoom) - w + bw) + "px -" + ((y * this.zoom) - h + bw) + "px";
+
+        this.showMagnifier = true;
       }
 
       function getCursorPos(e) {
@@ -340,6 +336,7 @@ export default {
         return {x : x, y : y};
       }
     }
+
   },
 };
 </script>
