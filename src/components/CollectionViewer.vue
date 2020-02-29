@@ -2,16 +2,16 @@
   <transition name="fade">
     <div
       v-if="typeof index === 'number'"
-      class="image-lightbox"
+      class="collection-viewer"
       @touchstart="touchstartHandler"
       @touchmove="touchmoveHandler"
       @touchend="touchendHandler"
     >
-      <div class="image-lightbox__modal" :style="`background: ${background}`" >
-        <div :class="['image-lightbox__spinner', !isImageLoaded || 'hide']" >
-          <div class="image-lightbox__dot" :style="`border-color: ${interfaceColor}`" />
-          <div class="image-lightbox__dot" :style="`border-color: ${interfaceColor}`" />
-          <div class="image-lightbox__dot" :style="`border-color: ${interfaceColor}`" />
+      <div class="collection-viewer__modal" :style="`background: ${background}`" >
+        <div :class="['collection-viewer__spinner', !isImageLoaded || 'hide']" >
+          <div class="collection-viewer__dot" :style="`border-color: ${interfaceColor}`" />
+          <div class="collection-viewer__dot" :style="`border-color: ${interfaceColor}`" />
+          <div class="collection-viewer__dot" :style="`border-color: ${interfaceColor}`" />
         </div>
         
         <b-container fluid>
@@ -19,36 +19,36 @@
             <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_small" id="nav_previous">PREV</g-link>
             <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_big" id="nav_previous">PREVIOUS COLLECTION</g-link>
           
-            <div class="image-lightbox__text image-lightbox__textcenter">HOVER OVER IMAGE FOR CLOSE-UP</div>
+            <div class="collection-viewer__text collection-viewer__textcenter">HOVER OVER IMAGE FOR CLOSE-UP</div>
             
             <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_small" id="nav_next">NEXT</g-link>
             <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_big" id="nav_next">NEXT COLLECTION</g-link>
           </b-row>
         </b-container>
 
-        <div class="image-lightbox__container">
-          <ul class="image-lightbox__content">
+        <div class="collection-viewer__container">
+          <ul class="collection-viewer__content">
             <li
               v-for="(image, imageIndex) in formattedImages"
               :key="imageIndex"
               :style="`transform: translate3d(${currentIndex * -100}%, 0px, 0px);`"
-              class="image-lightbox__image-container"
+              class="collection-viewer__image-container"
             >
-              <div class="image-lightbox__image">
+              <div class="collection-viewer__image">
                 
-                <!-- image magnifier (ref: https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp) -->
-                <div class="img-magnifier-container">
-                  <div v-show="showMagnifier" class="img-magnifier-glass" :id="'magnifier'+imageIndex">
-
-                  </div>
-                  <img
-                    :src="shouldPreload(imageIndex) ? image.img : false"
-                    :ref="`lg-img-${imageIndex}`"
-                    :id="`lg-img-${imageIndex}`"
-                    @load="imageLoaded($event, imageIndex); addMagnifierListener(imageIndex)"
-                    @mouseover="magnify()"
-                  >
-                </div>
+                  <image-magnifier 
+                    :src="image.img"
+                    :zoom-src="image.img"
+                    width="938.17"
+                    height="979.5"
+                    :zoom="6"
+                    zoom-width="500"
+                    zoom-height="500" 
+                    zoom-radius="50%"
+                    :mask-show="true"
+                    :show-cursor="false"
+                    @imgloaded="imageLoaded($event, imageIndex)"
+                  />
 
               </div>
             </li>
@@ -60,13 +60,13 @@
             alt="Left arrow, click for previous image" 
             src="../assets/images/arrow-left.png" 
             id="prevImageImg"
-            class="image-lightbox__prev arrowImg" 
+            class="collection-viewer__prev arrowImg" 
           />
           <img
             alt="Left arrow, click for previous image" 
             src="../assets/images/arrow-left-hover.png" 
             id="prevImageImg-hover"
-            class="image-lightbox__prev arrowImg" 
+            class="collection-viewer__prev arrowImg" 
           />
         </div>
 
@@ -75,13 +75,13 @@
             alt="Right arrow, click for next image" 
             src="../assets/images/arrow-right.png" 
             id="nextImageImg"
-            class="image-lightbox__next arrowImg"
+            class="collection-viewer__next arrowImg"
           />
           <img
             alt="Right arrow, click for next image" 
             src="../assets/images/arrow-right-hover.png" 
             id="nextImageImg-hover"
-            class="image-lightbox__next arrowImg" 
+            class="collection-viewer__next arrowImg" 
           />
         </div>
 
@@ -93,6 +93,8 @@
 </template>
 
 <script>
+import ImageMagnifier from './ImageMagnifier.vue'
+
 const keyMap = {
   LEFT: 37,
   RIGHT: 39,
@@ -142,7 +144,7 @@ export default {
       },
       glassElCreated: false,
       showMagnifier: false,
-      zoom: 2
+      zoom: 6
     };
   },
 
@@ -189,20 +191,11 @@ export default {
       if (this.currentIndex === this.images.length - 1) return;
       this.currentIndex += 1
     },
-    imageLoaded($event, imageIndex) {
-      const { target } = $event;
-      target.classList.add('loaded');
+    imageLoaded(img_el, imageIndex) {
+      img_el.classList.add('loaded');
       if (imageIndex === this.currentIndex) {
-        this.setImageLoaded(imageIndex);
+        this.isImageLoaded = !img_el ? false : img_el.classList.contains('loaded');
       }
-    },
-    getImageElByIndex(index) {
-      const elements = this.$refs[`lg-img-${index}`] || [];
-      return elements[0];
-    },
-    setImageLoaded(index) {
-      const el = this.getImageElByIndex(index);
-      this.isImageLoaded = !el ? false : el.classList.contains('loaded');
     },
     shouldPreload(index) {
       const el = this.getImageElByIndex(index) || {};
@@ -256,90 +249,11 @@ export default {
           break;
       }
     },
-
-    magnify(zoom) {      
-      // this.showMagnifier = true;
-      var img = document.getElementById(`lg-img-${this.currentIndex}`);
-      var glass = document.getElementById('magnifier'+this.currentIndex);
-
-      /* Set background properties for the magnifier glass: */
-      glass.style.backgroundImage = "url('" + img.src + "')";
-      glass.style.backgroundSize = (img.width * this.zoom) + "px " + (img.height * this.zoom) + "px";
-    },
-    
-    addMagnifierListener(imageIndex) {
-      var img = document.getElementById(`lg-img-${imageIndex}`);
-      var glass = document.getElementById('magnifier'+imageIndex);
-
-      /* Execute a function when someone moves the magnifier glass over the image: */
-      glass.addEventListener("mousemove", this.moveMagnifier);
-      img.addEventListener("mousemove", this.moveMagnifier);
-
-      /*and also for touch screens:*/
-      glass.addEventListener("touchmove", this.moveMagnifier);
-      img.addEventListener("touchmove", this.moveMagnifier);
-    },
-
-    moveMagnifier(e) {
-      var img = document.getElementById(`lg-img-${this.currentIndex}`);
-      var glass = document.getElementById('magnifier'+this.currentIndex);
-
-      var bw = 3; // what's this for ??
-      var w = glass.offsetWidth / 2;
-      var h = glass.offsetHeight / 2;
-
-      var pos, x, y;
-      /* Prevent any other actions that may occur when moving over the image */
-      e.preventDefault();
-      /* Get the cursor's x and y positions: */
-      pos = getCursorPos(e);
-      x = pos.x;
-      y = pos.y;
-
-      /* Prevent the magnifier glass from being positioned outside the image: */
-      if (x > img.width - (w / this.zoom)) {
-        // x = img.width - (w / this.zoom);
-        this.showMagnifier = false;
-      }
-      else if (x < w / this.zoom) {
-        // x = w / this.zoom;
-        this.showMagnifier = false;
-      }
-      else if (y > img.height - (h / this.zoom)) {
-        // y = img.height - (h / this.zoom);
-        this.showMagnifier = false;
-      }
-      else if (y < h / this.zoom) {
-        // y = h / this.zoom;
-        this.showMagnifier = false;
-      }
-      else {
-        /* Set the position of the magnifier glass: */
-        glass.style.display = 'block'
-        glass.style.left = (x - w) + "px";
-        glass.style.top = (y - h) + "px";
-        /* Display what the magnifier glass "sees": */
-        glass.style.backgroundPosition = "-" + ((x * this.zoom) - w + bw) + "px -" + ((y * this.zoom) - h + bw) + "px";
-
-        this.showMagnifier = true;
-      }
-
-      function getCursorPos(e) {
-        var a, x = 0, y = 0;
-        e = e || window.event;
-        /* Get the x and y positions of the image: */
-        a = img.getBoundingClientRect();
-        /* Calculate the cursor's x and y coordinates, relative to the image: */
-        x = e.pageX - a.left;
-        y = e.pageY - a.top;
-        /* Consider any page scrolling: */
-        x = x - window.pageXOffset;
-        y = y - window.pageYOffset;
-        return {x : x, y : y};
-      }
-    }
-
   },
+
+  components: {
+    ImageMagnifier
+  }
 };
 </script>
 
@@ -354,12 +268,6 @@ export default {
   font-weight: normal;
 }
 
-
-// image magnifier (ref: https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp)
-.img-magnifier-container {
-  position: relative;
-}
-// See styles.css for .img-magnifier-glass
 
 .nav_link {
   color: white;
@@ -394,7 +302,7 @@ export default {
   cursor: pointer;
 }
 
-.image-lightbox {
+.collection-viewer {
   &__modal {
     position: fixed;
     display: block;
@@ -579,7 +487,7 @@ export default {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .image-lightbox {
+  .collection-viewer {
     // &__text {
     //   font-size: 0.8125rem; /* 13px with 16px default size */
     // }
@@ -609,7 +517,7 @@ export default {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .image-lightbox {
+  .collection-viewer {
     // &__text {
     //   font-size: 0.9375rem; /* 15px with 16px default size */
     // }
@@ -633,7 +541,7 @@ export default {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) { 
-  .image-lightbox {
+  .collection-viewer {
     // &__text {
     //   font-size: 1.0625rem; /* 17px with 16px default size */
     // }
@@ -654,7 +562,7 @@ export default {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {  
-  .image-lightbox{
+  .collection-viewer{
     // &__text {
     //   font-size: 1.1875rem; /* 19px with 16px default size */
     // }
