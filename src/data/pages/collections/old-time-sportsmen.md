@@ -56,9 +56,11 @@ images:
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582073212/Collections/06%20Old-Time%20Sportsmen/23-653_xsqemq.jpg
 postcardHistory:
   images:
-    - img: >-
+    - altText: Brownie camera box
+      img: >-
         https://res.cloudinary.com/all-about-erik/image/upload/v1583082619/Collections/06%20Old-Time%20Sportsmen/browniebox_apabx5.png
-    - img: >-
+    - altText: Brownie camera
+      img: >-
         https://res.cloudinary.com/all-about-erik/image/upload/v1583082619/Collections/06%20Old-Time%20Sportsmen/browniecamera_iji3vd.png
   postcards:
     - caption: Kodak Kate. Early company poster girl for Kodak
