@@ -137,6 +137,13 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        path: 'src/data/pages/collections/old-time-sportsmen.md',
+        typeName: 'OldTimeSportsmen'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         path: 'src/data/pages/collections/*.md',
         typeName: 'Collections'
       }

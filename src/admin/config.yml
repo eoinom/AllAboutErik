@@ -349,7 +349,49 @@ collections:
               - {label: 'Title', name: 'title', widget: 'string', required: false}
               - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image", required: false}
               - {label: "Thumbnail Hover Image", name: "thumbnailHoverImg", widget: "image", required: false}
-      
+
+      - label: "Old-Time Sportsmen"
+        name: "oldTimeSportsmen"
+        file: "src/data/pages/collections/old-time-sportsmen.md"
+        fields:
+          - {label: 'Title', name: 'title', widget: 'string', required: false}
+          - {label: "Title Image (Single line)", name: "titleImg1Line", widget: "image", required: false}
+          - {label: "Title Image (Two lines)", name: "titleImg2Lines", widget: "image", required: false}
+          - {label: "Header Background Image", name: "headerBgImg", widget: "image", required: false}
+          - {label: "Header Image Opacity (%)", name: "backgroundImgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+          - {label: 'Header Text', name: 'body', widget: 'markdown', required: false}
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            fields: 
+              - {label: "Image", name: "img", widget: "image", required: false}
+              # - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+          - label: "Postcard History"
+            name: "postcardHistory"
+            widget: "object"
+            fields:
+            - {label: 'Title', name: 'title', widget: 'string', required: false}
+            - {label: "Text", name: "text", widget: "markdown", required: false}
+            - label: "Images"
+              name: "images"
+              widget: "list"
+              fields: 
+                - {label: "Image", name: "img", widget: "image", required: false}
+                - {label: "Alt Text", name: "altText", widget: "string", required: false}
+            - label: "Postcards"
+              name: "postcards"
+              widget: "list"
+              fields: 
+                - {label: "Front Image", name: "imgFront", widget: "image", required: false}
+                - {label: "Back Image", name: "imgBack", widget: "image", required: false}
+                - {label: "Caption", name: "caption", widget: "string", required: false}
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+            - {label: 'Title', name: 'title', widget: 'string', required: false}
+            - {label: "Text", name: "text", widget: "markdown", required: false}
+    
 
   - label: "Friends"
     name: "friends"

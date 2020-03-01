@@ -55,6 +55,8 @@ module.exports = function (api) {
     }`)
     data.allCollections.edges.forEach(({ node }) => {
       pageSlug = slugify(node.title)
+      if (pageSlug === 'old-time-sportsmen')
+        return;
       createPage({
         path: `/collections/${pageSlug}`,
         component: './src/templates/Collection.vue',
