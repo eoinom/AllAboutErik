@@ -161,16 +161,15 @@
         if (!this.imgRect) {
           return;
 				}
-				
-				this.maskX = this.outXCheck(e.clientX - this.imgRect.left - this.maskWidth / 2);
-				this.maskY = this.outYCheck(e.clientY - this.imgRect.top - this.maskHeight / 2);
+				this.maskX = e.clientX - this.imgRect.left - this.maskWidth;
+				this.maskY = e.clientY - this.imgRect.top - this.maskHeight;
 
 				this.zoomX = e.clientX - this.imgRect.left - this.zoomWidth / 2;
 				this.zoomY = e.clientY - this.imgRect.top - this.zoomHeight / 2;
 
         this.zoomLeft = this.imgRect.width + 10;
-        this.zoomPosition.x = this.maskX * (this.zoomImgWidth / this.imgRect.width)
-        this.zoomPosition.y = this.maskY * (this.zoomImgHeight / this.imgRect.height)
+        this.zoomPosition.x = this.maskX * (this.zoomImgWidth / this.imgRect.width);
+				this.zoomPosition.y = this.maskY * (this.zoomImgHeight / this.imgRect.height);
 			},
 			
       handleOut() {
@@ -183,26 +182,6 @@
           }, this.delayOut);
         }
 			},
-			
-      outXCheck(x) {
-        if (x < 0) {
-          return 0;
-        }
-        if (x + this.maskWidth > this.imgRect.width) {
-          return this.imgRect.width - this.maskWidth;
-        }
-        return x;
-			},
-			
-      outYCheck(y) {
-        if (y < 0) {
-          return 0;
-        }
-				if (y + this.maskHeight > this.imgRect.height) {
-          return this.imgRect.height - this.maskHeight;
-        }
-        return y;
-      }
     }
   }
 </script>
@@ -221,6 +200,7 @@
 		z-index: 2000;
   	border: 1px solid #000;
 		border-radius: var(--zoomRadius);
+		background-color: #000;
 		pointer-events: none;
 	}
 
