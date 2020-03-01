@@ -1,12 +1,21 @@
 <template>
-	<div :style="style" ref="container">
+	<!-- <div :style="style" ref="container"> -->
 		<div class="image-magnifier" 
 			@mouseenter="handleOver"
 			@mousemove="handleMove"
 			@mouseleave="handleOut"
+			:style="style"
 		>
-			<img :width="width"
+			<!-- <img 
+				:width="width"
 				:height="height"
+				:src="src"
+				class="image-magnifier__img"
+				ref="img"
+				id="img"
+				@load="emitImageLoaded()"
+			/> -->
+			<img
 				:src="src"
 				class="image-magnifier__img"
 				ref="img"
@@ -29,7 +38,7 @@
 			</div>
 		</div>
 
-	</div>
+	<!-- </div> -->
 </template>
 
 
@@ -189,6 +198,20 @@
 
 <style lang="scss" scoped>
 .image-magnifier {
+	&__img {
+		// width: var(--imgWidth);
+		// height: var(--imgHeight);		
+		width: auto;
+		height: auto;		
+		max-width: 100%;
+		max-height: 100%;		
+		// width: auto;
+		// height: auto;		
+		// width: auto;
+		// height: 100%;
+		object-fit: contain; 
+	}
+
 	&__zoom {
 		width: var(--zoomWidth);
 		height: var(--zoomHeight);

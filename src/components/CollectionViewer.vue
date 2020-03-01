@@ -6,6 +6,7 @@
       @touchstart="touchstartHandler"
       @touchmove="touchmoveHandler"
       @touchend="touchendHandler"
+      :style="viewerStyles"
     >
       <div class="collection-viewer__modal" :style="`background: ${background}`" >
         <div :class="['collection-viewer__spinner', !isImageLoaded || 'hide']" >
@@ -15,7 +16,7 @@
         </div>
         
         <b-container fluid>
-          <b-row align-h="between">
+          <b-row align-h="between" id="navLinks">
             <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_small" id="nav_previous">PREV</g-link>
             <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_big" id="nav_previous">PREVIOUS COLLECTION</g-link>
           
@@ -49,6 +50,7 @@
                     :show-cursor="false"
                     @imgloaded="imageLoaded($event, imageIndex)"
                   />
+                  
 
               </div>
             </li>
@@ -130,6 +132,7 @@ export default {
       type: Object
     }
   },
+
   data() {
     return {
       currentIndex: this.index,
@@ -144,7 +147,9 @@ export default {
       },
       glassElCreated: false,
       showMagnifier: false,
-      zoom: 6
+      zoom: 6,
+      headerEl: null,
+      headerHeight: 0
     };
   },
 
@@ -153,6 +158,11 @@ export default {
       return this.images.map(image => (typeof image === 'string'
         ? { url: image } : image
       ));
+    },
+    viewerStyles() {
+      return {
+        '--headerHeight': this.headerHeight + 'px'
+      }
     }
   },
 
@@ -169,19 +179,9 @@ export default {
     currentIndex(val) {
       this.setImageLoaded(val);
     },
+    
   },
-  mounted() {
-    if (!document) return;
-    this.bodyOverflowStyle = document.body.style.overflow;
-    this.bindEvents();
-  },
-  beforeDestroy() {
-    if (!document) return;
-    if (this.disableScroll) {
-      document.body.style.overflow = this.bodyOverflowStyle;
-    }
-    this.unbindEvents();
-  },
+
   methods: {
     prev() {
       if (this.currentIndex === 0) return;
@@ -249,6 +249,66 @@ export default {
           break;
       }
     },
+    getElementOffset(el) {
+      let top = 0;
+      let left = 0;
+      let element = el;
+
+      // Loop through the DOM tree
+      // and add it's parent's offset to get page offset
+      do {
+        top += element.offsetTop || 0;
+        left += element.offsetLeft || 0;
+        element = element.offsetParent;
+      } while (element);
+
+      return {
+        top,
+        left,
+      };
+    }
+  },
+
+  mounted() {
+    if (!document) return;
+    this.bodyOverflowStyle = document.body.style.overflow;
+    this.bindEvents();
+
+    // this.headerEl = document.getElementById('header');
+    // this.headerHeight = this.headerEl.getBoundingClientRect().height;
+
+    // let navLinksEl = document.getElementById('navLinks');
+    // this.headerHeight = navLinksEl.getBoundingClientRect().top;
+    this.$nextTick(()=>{
+      let navLinksEl = document.getElementById('navLinks');
+      // this.headerHeight = navLinksEl.getBoundingClientRect().top;
+      this.headerHeight = this.getElementOffset(navLinksEl).top;
+    })
+  },
+
+  // beforeUpdate() {
+  //   this.headerEl = document.getElementById('header');
+  //   this.headerHeight = headerEl.getBoundingClientRect().height;
+  // },
+  updated() {
+    // this.headerEl = document.getElementById('header');
+    // this.headerHeight = this.headerEl.getBoundingClientRect().height;
+    // let navLinksEl = document.getElementById('navLinks');
+    // this.headerHeight = navLinksEl.getBoundingClientRect().top;
+    this.$nextTick(()=>{
+      let navLinksEl = document.getElementById('navLinks');
+      // this.headerHeight = navLinksEl.getBoundingClientRect().top;
+      this.headerHeight = this.getElementOffset(navLinksEl).top;
+    })
+  },
+
+
+  beforeDestroy() {
+    if (!document) return;
+    if (this.disableScroll) {
+      document.body.style.overflow = this.bodyOverflowStyle;
+    }
+    this.unbindEvents();
   },
 
   components: {
@@ -310,7 +370,8 @@ export default {
     // top: 0;
     left: 0;
     width: 100%;
-    height: calc(100vh - 203px);  // 203px is the height of the banner
+    // height: calc(100vh - 203px);  // 203px is the height of the banner
+    height: calc(100vh - var(--headerHeight));
     overflow: hidden;
   }
   &__content {
@@ -325,7 +386,7 @@ export default {
     z-index: 1002;
     display: block;
     width: 100%;
-    top: 0;
+    // top: 0;
     left: 50%;
     transform: translate(-50%, 0);
     text-align: center;
@@ -347,8 +408,10 @@ export default {
       margin: 0 auto;
       max-width: 85%;
       max-height: 100%;
-      height: calc(100vh - 203px - 20px);  // 203px is the height of the banner
-      padding: 3.5vh 0;
+      // height: calc(100vh - 203px - 20px);  // 203px is the height of the banner
+      height: calc(100vh - var(--headerHeight) - 20px);  // 203px is the height of the banner
+      // padding: 3.5vh 0;
+      padding: 20px 0 80px 0;
       display: flex;
       justify-content: center;
     }
