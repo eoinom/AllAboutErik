@@ -41,7 +41,7 @@
                     :zoom-src="image.img"
                     width="938.17"
                     height="979.5"
-                    :zoom="6"
+                    :zoom="4"
                     zoom-width="500"
                     zoom-height="500" 
                     zoom-radius="50%"
