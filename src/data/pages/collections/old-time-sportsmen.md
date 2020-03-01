@@ -54,5 +54,92 @@ images:
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582073213/Collections/06%20Old-Time%20Sportsmen/22-996_tljsts.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582073212/Collections/06%20Old-Time%20Sportsmen/23-653_xsqemq.jpg
+postcardHistory:
+  postcards:
+    - caption: Kodak Kate. Early company poster girl for Kodak
+      imgBack: >-
+        https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard01-kate1017-back_xgx6st.jpg
+      imgFront: >-
+        https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard01-kate1017-front_tbtupk.jpg
+    - caption: How's this for luck?...
+      imgBack: >-
+        https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard02-luck1466-back_beyhgn.jpg
+      imgFront: >-
+        https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard02-luck1466-front_ljlw4w.jpg
+    - caption: 'Dear Grandpa, ...'
+      imgBack: >-
+        https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard03-grandpa027-back_qpccou.jpg
+      imgFront: >-
+        https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard03-grandpa027-front_douxhz.jpg
+    - caption: 'Say Fred, How....'
+      imgBack: >-
+        https://res.cloudinary.com/all-about-erik/image/upload/v1583083149/Collections/06%20Old-Time%20Sportsmen/postcards/postcard04-fred648-back_y3wrvs.jpg
+      imgFront: >-
+        https://res.cloudinary.com/all-about-erik/image/upload/v1583083149/Collections/06%20Old-Time%20Sportsmen/postcards/postcard04-fred648-front_xkzrlh.jpg
+  text: >-
+    In the first years of the 20th century, newly mobile American travellers,
+    hunters, and fishermen headed out by horseback, buggy, car and boat. Their
+    destination? The great outdoors!
+
+
+    Whether back in the photo studio, or in the field with their new “Brownie”
+    cameras, successful sportsmen posed proudly with their catch, sending their
+    pictures home through the U.S. mail, via photo postcards, then called
+    “postals.” Separated by vast distances, in those days before the advent of
+    the telephone, friends and family alike were naturally excited to send or
+    receive a card with a message and photo sent from afar.
+
+
+    When George Eastman produced his first “Brownie” camera in 1900, no one
+    could have foreseen the incredible popularity and success the new product
+    would quickly achieve! Eastman’s vision was to put photography into the
+    hands of the common man.
+
+
+    And he did!
+
+
+    Older cameras were bulky, unwieldy and difficult to use. But when people got
+    their hands on the light and versatile Brownie, a new era was born - that of
+    the “snapshot” and the “shutterbug.”
+
+
+    Although the controlled environment of the photo studio remained an
+    important element in portraiture, and is well represented in this
+    collection, the amateur photographer had suddenly been set free.
+
+
+    And when, on Mar. 1st, 1907, it became legal for the first time in the
+    United States to write a note on the back of a picture postcard, floodgates
+    opened, and an estimated 650 million were sent in the U.S. by year's end!
+
+
+    By the 20’s however, the golden age of the photo postcard was slowly drawing
+    to a close.
+
+
+    Please enjoy browsing this archive of photographic images, each bearing
+    witness to exciting and memorable moments in the lives of these early
+    American outdoorsmen and women.
+  title: History of the Photo Picture Postcard
+about:
+  text: >-
+    In 2001, I attended a fan fair in Los Angeles featuring vintage television
+    and movies stars signing autographs for long lines of nostalgic fans. Off
+    the main room there was a paper ephemera show in progress, with old
+    newspapers, posters and postcards for sale. As I browsed through a box of
+    old pictures postcards I came across a section devoted to fishing and
+    fishermen. As a lifelong angler and collecting enthusiast, the century old
+    images and the accompanying message intrigued and fascinated me. I was
+    hooked then and there.
+
+
+    In subsequent years, the collection has benefited greatly from the
+    assistance and keen eye of my oldest son Jakob Dulisse, who combed the
+    Internet relentlessly for new and exciting material.
+
+
+    \-Erik Jacobsen
+  title: About the Collection
 ---
 This gallery of uniquely American historical photos takes us back to a time, a century ago, when these wonderful images were captured and preserved for posterity on photo picture postcards. These vintage photographs each bear witness to memorable moments in the lives of these early 20th century American outdoorsmen and women.
