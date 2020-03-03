@@ -360,6 +360,7 @@ collections:
           - {label: "Header Background Image", name: "headerBgImg", widget: "image", required: false}
           - {label: "Header Image Opacity (%)", name: "backgroundImgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
           - {label: 'Header Text', name: 'body', widget: 'markdown', required: false}
+          - {label: "Footer Image", name: "footerImg", widget: "image", required: false}
           - label: "Images"
             name: "images"
             widget: "list"
@@ -374,7 +375,6 @@ collections:
             - {label: "Text Part 1", name: "textPt1", widget: "markdown", required: false}
             - {label: "Text Part 2", name: "textPt2", widget: "markdown", required: false}
             - {label: "Text Part 3", name: "textPt3", widget: "markdown", required: false}
-            - {label: "Footer Image", name: "footerImg", widget: "image", required: false}
             - label: "Images"
               name: "images"
               widget: "list"
@@ -388,12 +388,12 @@ collections:
                 - {label: "Front Image", name: "imgFront", widget: "image", required: false}
                 - {label: "Back Image", name: "imgBack", widget: "image", required: false}
                 - {label: "Caption", name: "caption", widget: "string", required: false}
-            - label: "About"
-              name: "about"
-              widget: "object"
-              fields:
-              - {label: 'Title', name: 'title', widget: 'string', required: false}
-              - {label: "Text", name: "text", widget: "markdown", required: false}
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+            - {label: 'Title', name: 'title', widget: 'string', required: false}
+            - {label: "Text", name: "text", widget: "markdown", required: false}
       
 
   - label: "Friends"

@@ -7,6 +7,8 @@ titleImg2Lines: >-
 headerBgImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582072594/Collections/06%20Old-Time%20Sportsmen/banner-old-time-sportsmen_hwvmig.png
 backgroundImgOpacity: 100
+footerImg: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/v1583278416/Collections/OldTimeSportsmen_collection_footer_av7yua.jpg
 images:
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582073037/Collections/06%20Old-Time%20Sportsmen/01-002_dp0pa8.jpg
@@ -55,8 +57,6 @@ images:
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582073212/Collections/06%20Old-Time%20Sportsmen/23-653_xsqemq.jpg
 postcardHistory:
-  footerImg: >-
-    https://res.cloudinary.com/all-about-erik/image/upload/v1583278416/Collections/OldTimeSportsmen_collection_footer_av7yua.jpg
   images:
     - altText: Brownie camera box
       img: >-

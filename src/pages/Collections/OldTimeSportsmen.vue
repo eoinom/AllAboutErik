@@ -45,6 +45,9 @@
 
     </section>
 
+    <footer>
+      <g-image :src="footerImg">
+    </footer>
   </Layout>
 </template>
 
@@ -59,6 +62,7 @@
         titleImg2Lines
         headerBgImg
         backgroundImgOpacity
+        footerImg
         content
         images {
           img
@@ -136,7 +140,10 @@ export default {
     },
     headerBgImgOpacity() {
       return this.$page.OldTimeSportsmen.edges[0].node.hasOwnProperty('backgroundImgOpacity') ? this.$page.OldTimeSportsmen.edges[0].node.backgroundImgOpacity : 0.5
-    },  
+    },
+    footerImg() {
+      return this.$page.OldTimeSportsmen.edges[0].node.footerImg
+    }, 
     headerStyles() {
       return {
         '--headerBgImg': 'url(' + this.headerBgImg + ')',
