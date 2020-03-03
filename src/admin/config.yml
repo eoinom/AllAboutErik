@@ -371,7 +371,9 @@ collections:
             widget: "object"
             fields:
             - {label: 'Title', name: 'title', widget: 'string', required: false}
-            - {label: "Text", name: "text", widget: "markdown", required: false}
+            - {label: "Text Part 1", name: "textPt1", widget: "markdown", required: false}
+            - {label: "Text Part 2", name: "textPt2", widget: "markdown", required: false}
+            - {label: "Text Part 3", name: "textPt3", widget: "markdown", required: false}
             - label: "Images"
               name: "images"
               widget: "list"

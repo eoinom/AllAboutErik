@@ -18,6 +18,83 @@
       @close="imageIndex = null"
     />
 
+    <section id="postcardHistory">
+      <div id="postcardHistory__textDiv">
+        <h2 class="title">{{ postcardHistory.title }}</h2>
+        <!-- <div>
+          <span v-html="postcardHistory.text" id="postcardText" />
+          <img :src="postcardHistory.images[0].img" style="float: left; z-index:50000">
+          <img :src="postcardHistory.images[1].img" style="float: right; clear: left">
+        </div> -->
+        <div>
+          <div style="float: right">
+            <img :src="postcardHistory.postcards[0].imgFront">
+            <p class="caption">{{ postcardHistory.postcards[0].caption }}</p>
+          </div>
+          <span v-html="postcardHistory.textPt1" id="postcardText" />
+          <!-- <p>
+          In the first years of the 20th century, newly mobile American travellers,
+          hunters, and fishermen headed out by horseback, buggy, car and boat. Their
+          destination? The great outdoors!
+          </p>
+          <p></p>
+          <p>
+          Whether back in the photo studio, or in the field with their new “Brownie”
+          cameras, successful sportsmen posed proudly with their catch, sending their
+          pictures home through the U.S. mail, via photo postcards, then called
+          “postals.” Separated by vast distances, in those days before the advent of
+          the telephone, friends and family alike were naturally excited to send or
+          receive a card with a message and photo sent from afar.
+          </p>
+          <p></p>
+          <p>
+          When George Eastman produced his first “Brownie” camera in 1900, no one
+          could have foreseen the incredible popularity and success the new product
+          would quickly achieve! Eastman’s vision was to put photography into the
+          hands of the common man.
+          </p>
+          <p></p>
+          <p>
+          And he did!
+          </p> -->
+          <img :src="postcardHistory.images[0].img" style="float: left">
+          <span v-html="postcardHistory.textPt2" id="postcardText" />
+          <!-- <p></p>
+          <p>
+          Older cameras were bulky, unwieldy and difficult to use. But when people got
+          their hands on the light and versatile Brownie, a new era was born - that of
+          the “snapshot” and the “shutterbug.”
+          </p>
+          <p></p>
+          <p>
+          Although the controlled environment of the photo studio remained an
+          important element in portraiture, and is well represented in this
+          collection, the amateur photographer had suddenly been set free.
+          </p>
+          <p></p> -->
+          <img :src="postcardHistory.images[1].img" style="float: right;">
+          <span v-html="postcardHistory.textPt3" id="postcardText" />
+          <!-- <p>
+          And when, on Mar. 1st, 1907, it became legal for the first time in the
+          United States to write a note on the back of a picture postcard, floodgates
+          opened, and an estimated 650 million were sent in the U.S. by year's end!
+          </p>
+          <p></p>
+          <p>
+          By the 20’s however, the golden age of the photo postcard was slowly drawing
+          to a close.
+          </p>
+          <p></p>
+          <p>
+          Please enjoy browsing this archive of photographic images, each bearing
+          witness to exciting and memorable moments in the lives of these early
+          American outdoorsmen and women.
+          </p> -->
+        </div>
+      </div> 
+
+    </section>
+
   </Layout>
 </template>
 
@@ -38,8 +115,14 @@
         }
         postcardHistory {
           title
-          text
+          textPt1
+          textPt2
+          textPt3
           images {
+            img
+            altText
+          }
+          postcards {
             imgFront
             imgBack
             caption
@@ -138,6 +221,9 @@ export default {
       let collection = {...this.collections[next_i]}
       collection.link = slugify(collection.title)
       return collection
+    },
+    postcardHistory() {
+      return this.$page.OldTimeSportsmen.edges[0].node.postcardHistory
     }
   },
 
@@ -149,8 +235,10 @@ export default {
 
 
 
-<style scoped>
+<style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:600,600i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&display=swap');
 
 @font-face {
   font-family: NeueHaasGroteskText Pro55;
@@ -237,37 +325,84 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   content: ' ';
   position: fixed;  /* instead of background-attachment */
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   top: 0;
   left: 0;
   background-color: black;
-  background: var(--backgroundImg) no-repeat center center;
+  /* background: var(--backgroundImg) no-repeat center center; */
   background-size: cover;
   will-change: transform; /* creates a new paint layer */
   z-index: -1;
-  opacity: var(--backgroundOpacity);
+  /* opacity: var(--backgroundOpacity); */
 }
 
-.wrapper {
+/* .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-}
+} */
 
-.main-col {
+/* .main-col {
   max-width: 855px;
   padding: 50px 0 10px 0;
-}
+} */
 
+
+#postcardHistory {
+    background-color: #E6E5DF;
+    width: 100%;
+
+  &__textDiv {
+    width: 1058px;
+    margin: 0 auto;
+
+    .title {
+      font-family: 'Open Sans Condensed';
+      font-feature-settings: 'liga';
+      font-weight: 700;
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+      letter-spacing: 0.8px;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 24px 0;
+    }
+
+    #postcardText {
+      font-family: 'Crimson Text', serif;
+      font-feature-settings: 'liga';
+      font-weight: 600;
+      font-size: 1.3125rem;
+      line-height: 1.5625rem;
+      text-align: left;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .caption {      
+      font-family: 'Crimson Text', serif;
+      font-feature-settings: 'liga';
+      font-style: italic;
+      font-weight: 600;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      letter-spacing: 1px;
+      text-align: left;
+      margin: 0px;
+      padding: 12px 0;
+    }
+  }
+}
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .main-col {
+  /* .main-col {
     max-width: 61.46%;
-  }
+  } */
   .titleImg1Line {
     display: none;
   }
@@ -278,9 +413,9 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .main-col {
+  /* .main-col {
     max-width: 61.46%;
-  }
+  } */
   .titleImg1Line {
     display: none;
   }
@@ -291,9 +426,9 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .main-col {
+  /* .main-col {
     max-width: 61.46%;
-  }
+  } */
   .titleImg1Line {
     display: none;
   }
@@ -304,16 +439,16 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-  .main-col {
+  /* .main-col {
     max-width: 61.46%;
-  }
+  } */
 }
 
 /* Special - Larger devices (desktops, 1200px and up) */
 @media (min-width: 1200px) and (max-width: 1390.98px) { 
-  .main-col {
+  /* .main-col {
     max-width: 61.46%;
-  }
+  } */
 }
 
 </style>
