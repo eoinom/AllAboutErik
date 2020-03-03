@@ -21,76 +21,26 @@
     <section id="postcardHistory">
       <div id="postcardHistory__textDiv">
         <h2 class="title">{{ postcardHistory.title }}</h2>
-        <!-- <div>
-          <span v-html="postcardHistory.text" id="postcardText" />
-          <img :src="postcardHistory.images[0].img" style="float: left; z-index:50000">
-          <img :src="postcardHistory.images[1].img" style="float: right; clear: left">
-        </div> -->
-        <div>
-          <div style="float: right">
+        <div class="pb-5">
+          <div class="pb-2 pl-5 pr-3" style="float: right">
             <img :src="postcardHistory.postcards[0].imgFront">
             <p class="caption">{{ postcardHistory.postcards[0].caption }}</p>
           </div>
-          <span v-html="postcardHistory.textPt1" id="postcardText" />
-          <!-- <p>
-          In the first years of the 20th century, newly mobile American travellers,
-          hunters, and fishermen headed out by horseback, buggy, car and boat. Their
-          destination? The great outdoors!
-          </p>
-          <p></p>
-          <p>
-          Whether back in the photo studio, or in the field with their new “Brownie”
-          cameras, successful sportsmen posed proudly with their catch, sending their
-          pictures home through the U.S. mail, via photo postcards, then called
-          “postals.” Separated by vast distances, in those days before the advent of
-          the telephone, friends and family alike were naturally excited to send or
-          receive a card with a message and photo sent from afar.
-          </p>
-          <p></p>
-          <p>
-          When George Eastman produced his first “Brownie” camera in 1900, no one
-          could have foreseen the incredible popularity and success the new product
-          would quickly achieve! Eastman’s vision was to put photography into the
-          hands of the common man.
-          </p>
-          <p></p>
-          <p>
-          And he did!
-          </p> -->
-          <img :src="postcardHistory.images[0].img" style="float: left">
-          <span v-html="postcardHistory.textPt2" id="postcardText" />
-          <!-- <p></p>
-          <p>
-          Older cameras were bulky, unwieldy and difficult to use. But when people got
-          their hands on the light and versatile Brownie, a new era was born - that of
-          the “snapshot” and the “shutterbug.”
-          </p>
-          <p></p>
-          <p>
-          Although the controlled environment of the photo studio remained an
-          important element in portraiture, and is well represented in this
-          collection, the amateur photographer had suddenly been set free.
-          </p>
-          <p></p> -->
-          <img :src="postcardHistory.images[1].img" style="float: right;">
-          <span v-html="postcardHistory.textPt3" id="postcardText" />
-          <!-- <p>
-          And when, on Mar. 1st, 1907, it became legal for the first time in the
-          United States to write a note on the back of a picture postcard, floodgates
-          opened, and an estimated 650 million were sent in the U.S. by year's end!
-          </p>
-          <p></p>
-          <p>
-          By the 20’s however, the golden age of the photo postcard was slowly drawing
-          to a close.
-          </p>
-          <p></p>
-          <p>
-          Please enjoy browsing this archive of photographic images, each bearing
-          witness to exciting and memorable moments in the lives of these early
-          American outdoorsmen and women.
-          </p> -->
+          <br />
+          <span v-html="postcardHistory.textPt1" class="postcardText" />
+
+          <img :src="postcardHistory.images[0].img" class="py-3 pr-3" style="float: left">
+          <span v-html="postcardHistory.textPt2" class="postcardText" />
+
+          <img :src="postcardHistory.images[1].img" class="pl-3" style="float: right;">
+          <!-- <br /> -->
+          <span v-html="postcardHistory.textPt3" class="postcardText" />
         </div>
+
+        
+        <h2 class="title">{{ about.title }}</h2>
+        <span v-html="about.text" class="postcardText" />
+
       </div> 
 
     </section>
@@ -224,6 +174,9 @@ export default {
     },
     postcardHistory() {
       return this.$page.OldTimeSportsmen.edges[0].node.postcardHistory
+    },
+    about() {
+      return this.$page.OldTimeSportsmen.edges[0].node.about
     }
   },
 
@@ -370,7 +323,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
       padding: 24px 0;
     }
 
-    #postcardText {
+    .postcardText {
       font-family: 'Crimson Text', serif;
       font-feature-settings: 'liga';
       font-weight: 600;
