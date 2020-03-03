@@ -364,7 +364,8 @@ export default {
 
 .collection-viewer {
   &__modal {
-    position: fixed;
+    // position: fixed;
+    position: relative;
     display: block;
     z-index: 1001;
     // top: 0;

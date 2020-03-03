@@ -139,10 +139,7 @@
 		
     methods: {
 			emitImageLoaded() {
-				// const imgElement = this.$refs.img.getBoundingClientRect()
 				const img_element = document.getElementById('img')
-      	console.log('in emitImageLoaded, img_element =')
-      	console.log(img_element)
 				this.$emit('imgloaded', img_element)
 			},
       handleOver() {
