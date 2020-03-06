@@ -23,8 +23,13 @@
         <h2 class="title">{{ postcardHistory.title }}</h2>
         <div class="pb-5">
           <div class="pb-2 pl-5 pr-3" style="float: right">
-            <img :src="postcardHistory.postcards[0].imgFront">
-            <p class="caption">{{ postcardHistory.postcards[0].caption }}</p>
+            <flip-postcard
+              :imgFront="postcardHistory.postcards[0].imgFront"
+              :imgBack="postcardHistory.postcards[0].imgBack"
+              :caption="postcardHistory.postcards[0].caption"
+              :width="480"
+              :height="297"
+            />
           </div>
           <br />
           <span v-html="postcardHistory.textPt1" class="postcardText" />
@@ -46,7 +51,7 @@
     </section>
 
     <footer>
-      <g-image :src="footerImg">
+      <g-image :src="footerImg" />
     </footer>
   </Layout>
 </template>
@@ -109,6 +114,7 @@
 
 <script scoped>
 import CollectionViewer from '../../components/CollectionViewer.vue'
+import FlipPostcard from '../../components/FlipPostcard.vue'
 
 const slugify = require('@sindresorhus/slugify')
 
@@ -188,7 +194,8 @@ export default {
   },
 
   components: {
-    CollectionViewer
+    CollectionViewer,
+    FlipPostcard
   },
 }
 </script>
