@@ -205,7 +205,7 @@ export default {
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text:600,600i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Francois+One&display=swap');
 
 @font-face {
   font-family: NeueHaasGroteskText Pro55;
@@ -325,9 +325,9 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
     margin: 0 auto;
 
     .title {
-      font-family: 'Open Sans Condensed';
+      font-family: 'Francois One', sans-serif;
       font-feature-settings: 'liga';
-      font-weight: 700;
+      font-weight: 400;
       font-size: 2.5rem;
       line-height: 2.75rem;
       letter-spacing: 0.8px;
