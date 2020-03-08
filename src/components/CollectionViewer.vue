@@ -340,7 +340,7 @@ export default {
   text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
   margin: 0px;
   padding: 0px 45px;
-  z-index: 1500;
+  z-index: 1000;
 }
 .nav_link_small {
   display: none;
@@ -367,7 +367,7 @@ export default {
     // position: fixed;
     position: relative;
     display: block;
-    z-index: 1001;
+    z-index: 501;
     // top: 0;
     left: 0;
     width: 100%;
@@ -384,7 +384,7 @@ export default {
   }
   &__container {
     position: absolute;
-    z-index: 1002;
+    z-index: 502;
     display: block;
     width: 100%;
     // top: 0;
@@ -465,7 +465,7 @@ export default {
   &__spinner {
     & {
       position: absolute;
-      z-index: 1003;
+      z-index: 503;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
