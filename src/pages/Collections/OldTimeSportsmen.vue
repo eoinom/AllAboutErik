@@ -1,7 +1,6 @@
 <template>
-  <!-- <Layout :style="layoutStyle">   -->
   <Layout>  
-    <header id="header" :style="headerStyles">
+    <header :style="headerStyles">
       <div id="headerItems">
         <g-image :src="titleImg1Line" class="titleImg titleImg1Line" />
         <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
@@ -38,7 +37,6 @@
           <span v-html="postcardHistory.textPt2" class="postcardText" />
 
           <img :src="postcardHistory.images[1].img" class="pl-3" style="float: right;">
-          <!-- <br /> -->
           <span v-html="postcardHistory.textPt3" class="postcardText" />
         </div>
 
@@ -50,9 +48,7 @@
 
     </section>
 
-    <footer>
-      <g-image :src="footerImg" />
-    </footer>
+    <footer :style="footerStyles" />
   </Layout>
 </template>
 
@@ -149,11 +145,16 @@ export default {
     },
     footerImg() {
       return this.$page.OldTimeSportsmen.edges[0].node.footerImg
-    }, 
+    },
     headerStyles() {
       return {
         '--headerBgImg': 'url(' + this.headerBgImg + ')',
         '--bgOpacity': this.headerBgImgOpacity / 100
+      }
+    },
+    footerStyles() {
+      return {
+        '--footerBgImg': 'url(' + this.footerImg + ')'
       }
     },
     images() {
@@ -230,13 +231,13 @@ export default {
   position: relative; /* added for pseudo-element */
 }
 
-#header {
+header {
   position: relative;
   text-align: center;
   padding-top: 12.5px;
   padding-bottom: 12.5px;
 }
-#header:after  {
+header:after  {
   content : "";
   display: inline-block;
   position: absolute;
@@ -260,7 +261,6 @@ export default {
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
   text-shadow: 1px 1px 4px rgba(0,0,0,0.29);
-  /* color: #FFFFFF; */
   color: #000;
   text-align: center;
   letter-spacing: 1px;
@@ -287,38 +287,44 @@ export default {
 }
 
 
+footer {
+  position: relative;
+  text-align: center;
+  padding: 0 0 346px 0;
+}
+footer:after  {
+  content : "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--footerBgImg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 536px;
+  z-index: -1;
+}
+
+
+
 /* To fix poor scroll speed using "background-size: cover" and "background-attachment: fixed"
 Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-will-change-property/ */
 .layout::before {
   content: ' ';
   position: fixed;  /* instead of background-attachment */
   width: 100%;
-  /* height: 100%; */
   top: 0;
   left: 0;
   background-color: black;
-  /* background: var(--backgroundImg) no-repeat center center; */
   background-size: cover;
   will-change: transform; /* creates a new paint layer */
-  z-index: -1;
-  /* opacity: var(--backgroundOpacity); */
+  z-index: -3;
 }
 
-/* .wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-} */
-
-/* .main-col {
-  max-width: 855px;
-  padding: 50px 0 10px 0;
-} */
-
-
 #postcardHistory {
-    background-color: #E6E5DF;
+    // background-color: #E6E5DF;
+    position: relative;
+    background-color: transparent;
     width: 100%;
 
   &__textDiv {
@@ -364,13 +370,21 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   }
 }
 
+#postcardHistory:after  {
+  content : "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #E6E5DF;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  /* .main-col {
-    max-width: 61.46%;
-  } */
   .titleImg1Line {
     display: none;
   }
@@ -381,9 +395,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  /* .main-col {
-    max-width: 61.46%;
-  } */
   .titleImg1Line {
     display: none;
   }
@@ -394,9 +405,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* .main-col {
-    max-width: 61.46%;
-  } */
   .titleImg1Line {
     display: none;
   }
@@ -407,16 +415,10 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-  /* .main-col {
-    max-width: 61.46%;
-  } */
 }
 
 /* Special - Larger devices (desktops, 1200px and up) */
 @media (min-width: 1200px) and (max-width: 1390.98px) { 
-  /* .main-col {
-    max-width: 61.46%;
-  } */
 }
 
 </style>

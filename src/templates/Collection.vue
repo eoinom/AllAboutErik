@@ -1,5 +1,4 @@
 <template>
-  <!-- <Layout :style="layoutStyle">   -->
   <Layout>  
     <header id="header" :style="headerStyles">
       <div id="headerItems">
@@ -224,23 +223,9 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   top: 0;
   left: 0;
   background-color: black;
-  background: var(--backgroundImg) no-repeat center center;
   background-size: cover;
   will-change: transform; /* creates a new paint layer */
   z-index: -1;
-  opacity: var(--backgroundOpacity);
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-}
-
-.main-col {
-  max-width: 855px;
-  padding: 50px 0 10px 0;
 }
 
 
@@ -248,9 +233,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .main-col {
-    max-width: 61.46%;
-  }
   .titleImg1Line {
     display: none;
   }
@@ -261,9 +243,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .main-col {
-    max-width: 61.46%;
-  }
   .titleImg1Line {
     display: none;
   }
@@ -274,9 +253,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .main-col {
-    max-width: 61.46%;
-  }
   .titleImg1Line {
     display: none;
   }
@@ -287,16 +263,10 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-  .main-col {
-    max-width: 61.46%;
-  }
 }
 
 /* Special - Larger devices (desktops, 1200px and up) */
 @media (min-width: 1200px) and (max-width: 1390.98px) { 
-  .main-col {
-    max-width: 61.46%;
-  }
 }
 
 </style>
