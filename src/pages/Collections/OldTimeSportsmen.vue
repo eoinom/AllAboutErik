@@ -231,6 +231,7 @@ export default {
 }
 
 #header {
+  position: relative;
   text-align: center;
   padding-top: 12.5px;
   padding-bottom: 12.5px;
@@ -239,7 +240,7 @@ export default {
   content : "";
   display: inline-block;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   background: var(--headerBgImg) no-repeat center;
   background-size: cover;
