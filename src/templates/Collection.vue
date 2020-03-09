@@ -1,21 +1,26 @@
 <template>
-  <Layout>  
-    <header id="header" :style="headerStyles">
-      <div id="headerItems">
-        <g-image :src="titleImg1Line" class="titleImg titleImg1Line" />
-        <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
-        <div v-html="$page.collection.content" class="collections_headerText" />
-      </div>
-    </header>
+  <Layout>
+    <transition name="page" mode="out-in">
+      <div :key="'collection_' + titleSlug"> <!-- Need a unique key for the transition above to work on route change -->
+        <header id="header" :style="headerStyles">
+          <div id="headerItems">
+            <g-image :src="titleImg1Line" class="titleImg titleImg1Line" />
+            <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
+            <div v-html="$page.collection.content" class="collections_headerText" />
+          </div>
+        </header>
 
-    <CollectionViewer
-      :images="images"
-      :index="imageIndex"
-      :disable-scroll="true"
-      :prevCollection="prev_collection"
-      :nextCollection="next_collection"
-      @close="imageIndex = null"
-    />
+        <CollectionViewer
+          :images="images"
+          :index="imageIndex"
+          :disable-scroll="true"
+          :prevCollection="prev_collection"
+          :nextCollection="next_collection"
+          @close="imageIndex = null"
+        />
+
+      </div>
+    </transition>
 
   </Layout>
 </template>
@@ -74,6 +79,9 @@ export default {
     title() {
       return this.$page.collection.title
     },
+    titleSlug() {
+      return slugify(this.title)
+    },
     titleImg1Line() {
       return this.$page.collection.titleImg1Line
     },
@@ -125,7 +133,7 @@ export default {
 
   components: {
     CollectionViewer
-  },
+  }
 }
 </script>
 
@@ -227,6 +235,26 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   will-change: transform; /* creates a new paint layer */
   z-index: -1;
 }
+
+
+
+/* Transition styles on router-view for fading the page */
+.page-enter-active {
+  transition-duration: 5.5s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+}
+.page-leave-active {
+  transition-duration: 1.5s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+
 
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */

@@ -48,12 +48,12 @@
         </div>
         
       </div>
-    <!-- </div> -->
 
     <!-- This transition is for all other page loads -->
     <!-- https://github.com/gridsome/gridsome/issues/24 -->
-    <transition name="page">
-      <router-view/>
+    <!-- https://github.com/gridsome/gridsome/issues/835 -->
+    <transition name="page" mode="out-in">
+      <router-view :key="$route.fullPath" />
     </transition>
 
     <!-- Need this transition for the home page initial load -->
@@ -63,13 +63,7 @@
         <slot />
       </main>
     </transition>
-
-    <!-- <router-view/>
-    <main>
-      <slot />
-    </main> -->
-     
-    <!-- <slot/> -->
+    
   </div>
 </template>
 

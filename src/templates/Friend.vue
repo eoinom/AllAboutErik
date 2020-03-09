@@ -1,71 +1,75 @@
 <template>
-  <Layout :style="layoutStyle"> 
+  <Layout>
+    <transition name="page" mode="out-in">
+      <div :key="'friend_' + nameSlug" class="background" :style="backgroundStyles"> <!-- Need a unique key for the transition above to work on route change -->
 
-    <div :style="navLinksVisibility" class="navLinksContainer">
-      <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_prev">PREV</g-link>
-      <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_previous">PREVIOUS</g-link>
-      <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.name" class="nav_link" id="nav_next">NEXT</g-link>
-    </div>
+        <div :style="navLinksVisibility" class="navLinksContainer">
+          <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_prev">PREV</g-link>
+          <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_previous">PREVIOUS</g-link>
+          <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.name" class="nav_link" id="nav_next">NEXT</g-link>
+        </div>
 
-    <b-container fluid class="wrapper">
-      <b-container fluid class="main-col"> 
-        <h1 id="heading"> {{ heading }} </h1>
-        <div v-html="$page.friend.content" id="mainContent" />
-      </b-container>
+        <b-container fluid class="wrapper">
+          <b-container fluid class="main-col"> 
+            <h1 id="heading"> {{ heading }} </h1>
+            <div v-html="$page.friend.content" id="mainContent" />
+          </b-container>
 
-      <b-container fluid class="mediaItemsContainer">
-        <b-row align-h="center" id="mediaItemsRow">
-          <b-col v-for="(item,index) in $page.friend.mediaItems" :key="index" class="mediaItems p-2" v-b-toggle="String(index+1)" @click="mediaItemClick(item, index)">
-            <g-image :src="item.thumbnailImg" class="mediaItemsImg" :id="'mediaItemImg'+index" />
-            <br />
-            <span class="mediaItemsText mediaItemsLabel">{{ item.label }}</span>
-            <b-collapse v-if="item.galleries[0].label" :id="String(index+1)" accordion="mediaItems-accordion">
-              <div v-for="(gallery,galIndex) in item.galleries" :key="galIndex">
+          <b-container fluid class="mediaItemsContainer">
+            <b-row align-h="center" id="mediaItemsRow">
+              <b-col v-for="(item,index) in $page.friend.mediaItems" :key="index" class="mediaItems p-2" v-b-toggle="String(index+1)" @click="mediaItemClick(item, index)">
+                <g-image :src="item.thumbnailImg" class="mediaItemsImg" :id="'mediaItemImg'+index" />
                 <br />
-                <span
-                  @click="galleryIndex = galIndex; setMediaIndexToZero(item.mediaType)"
-                  class="mediaItemsText galleriesLabel py-2 pr-2"
-                >
-                  {{ gallery.label }}
-                </span>
-              </div>
-            </b-collapse>
-          </b-col>
-        </b-row>
+                <span class="mediaItemsText mediaItemsLabel">{{ item.label }}</span>
+                <b-collapse v-if="item.galleries[0].label" :id="String(index+1)" accordion="mediaItems-accordion">
+                  <div v-for="(gallery,galIndex) in item.galleries" :key="galIndex">
+                    <br />
+                    <span
+                      @click="galleryIndex = galIndex; setMediaIndexToZero(item.mediaType)"
+                      class="mediaItemsText galleriesLabel py-2 pr-2"
+                    >
+                      {{ gallery.label }}
+                    </span>
+                  </div>
+                </b-collapse>
+              </b-col>
+            </b-row>
 
-        <b-row align-h="center" class="text-center">
-          <b-col>
-            <div :style="navLinksVisibility" class="navLinksContainer">
-              <g-link to="/musical-journey/musical-friends-menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
-            </div>
-          </b-col>
-        </b-row>
-        
-      </b-container>
-    </b-container>
+            <b-row align-h="center" class="text-center">
+              <b-col>
+                <div :style="navLinksVisibility" class="navLinksContainer">
+                  <g-link to="/musical-journey/musical-friends-menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
+                </div>
+              </b-col>
+            </b-row>
+            
+          </b-container>
+        </b-container>
 
 
-    <ImageLightBox
-      :images="images"
-      :index="imageIndex"
-      :disable-scroll="true"
-      @close="imageIndex = null; galleryIndex = null"
-    />
-    <VideoLightBox
-      :videos="videos"
-      :index="videoIndex"
-      :disable-scroll="true"
-      titlePosition="center"
-      @close="videoIndex = null; galleryIndex = null"
-    />
-    <AudioLightBox
-      :audios="audio"
-      :index="audioIndex"
-      :disable-scroll="true"
-      :show-caption="false"
-      @close="audioIndex = null; galleryIndex = null"
-    />
+        <ImageLightBox
+          :images="images"
+          :index="imageIndex"
+          :disable-scroll="true"
+          @close="imageIndex = null; galleryIndex = null"
+        />
+        <VideoLightBox
+          :videos="videos"
+          :index="videoIndex"
+          :disable-scroll="true"
+          titlePosition="center"
+          @close="videoIndex = null; galleryIndex = null"
+        />
+        <AudioLightBox
+          :audios="audio"
+          :index="audioIndex"
+          :disable-scroll="true"
+          :show-caption="false"
+          @close="audioIndex = null; galleryIndex = null"
+        />
 
+      </div>
+    </transition>
   </Layout>
 </template>
 
@@ -131,6 +135,7 @@ import VideoLightBox from '../components/VideoLightBox.vue'
 import AudioLightBox from '../components/AudioLightBox.vue'
 
 var VueScrollTo = require('vue-scrollto');
+const slugify = require('@sindresorhus/slugify')
 
 export default {
   metaInfo() {
@@ -154,6 +159,9 @@ export default {
   computed: {
     name() {
       return this.$page.friend.name
+    },
+    nameSlug() {
+      return slugify(this.name)
     },
     heading() {
       return this.$page.friend.heading ? this.$page.friend.heading : this.name
@@ -211,7 +219,7 @@ export default {
         next_i = i + 1
       return this.friends[next_i]
     },
-    layoutStyle() {
+    backgroundStyles() {
       return {
         '--backgroundImg': 'url(' + this.$page.friend.backgroundImg + ')',
         '--backgroundOpacity': this.$page.friend.backgroundOpacity / 100
@@ -311,7 +319,7 @@ export default {
 
 /* To fix poor scroll speed using "background-size: cover" and "background-attachment: fixed"
 Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-will-change-property/ */
-.layout::before {
+.background::before {
   content: ' ';
   position: fixed;  /* instead of background-attachment */
   width: 100%;
@@ -444,6 +452,25 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   color: #2CACE4;
   cursor: pointer;
 }
+
+
+
+/* Transition styles on router-view for fading the page */
+.page-enter-active {
+  transition-duration: 3.5s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+}
+.page-leave-active {
+  transition-duration: 1.5s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
 
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
