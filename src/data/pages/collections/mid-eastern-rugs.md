@@ -19,11 +19,11 @@ images:
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582069920/Collections/04%20Mid-Eastern%20Rugs/05_hpopze.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582069922/Collections/04%20Mid-Eastern%20Rugs/06_udpsrp.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583797101/Collections/04%20Mid-Eastern%20Rugs/06_opfsgf.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582069919/Collections/04%20Mid-Eastern%20Rugs/07_umhnrc.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582069922/Collections/04%20Mid-Eastern%20Rugs/08_bmgkrg.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583797100/Collections/04%20Mid-Eastern%20Rugs/08_ruq4si.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582069924/Collections/04%20Mid-Eastern%20Rugs/10_oottqv.jpg
   - img: >-
@@ -39,7 +39,7 @@ images:
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582069911/Collections/04%20Mid-Eastern%20Rugs/21_xa3oop.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582069909/Collections/04%20Mid-Eastern%20Rugs/258-8_kkkwve.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583797100/Collections/04%20Mid-Eastern%20Rugs/258-8_hkiepv.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582069913/Collections/04%20Mid-Eastern%20Rugs/258-9_dzpp51.jpg
   - img: >-
@@ -47,6 +47,6 @@ images:
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582069906/Collections/04%20Mid-Eastern%20Rugs/33_axsthe.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582069923/Collections/04%20Mid-Eastern%20Rugs/35_wyvlqv.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583797105/Collections/04%20Mid-Eastern%20Rugs/35_xt3px0.jpg
 ---
 I fell in love with Nomadic Mid-Eastern Rugs and Kelims. Mainly donated to the De Young Museum.

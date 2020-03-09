@@ -21,7 +21,7 @@ images:
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582071635/Collections/07%20Bolivian%20Potolo/06-22-2-_p1tork.jpg
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582071638/Collections/07%20Bolivian%20Potolo/07-02_yqgnct.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583796618/Collections/07%20Bolivian%20Potolo/07-02_yqgnct.jpg
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582071639/Collections/07%20Bolivian%20Potolo/08-03_lcysuj.jpg
   - img: >-
