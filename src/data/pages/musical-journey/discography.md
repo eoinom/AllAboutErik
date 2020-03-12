@@ -11,7 +11,7 @@ titleText: >-
   Lovin' Spoonful, The Charlatans, Sopwith Camel, and later with Norman
   Greenbaum and Chris Isaak.
 bgAudio: >-
-  https://res.cloudinary.com/all-about-erik/video/upload/v1578611704/Musical%20Journey/Discography/Brief_Synthophonia_-_Sopwith_Camel_qr7ilf.mp3
+  https://res.cloudinary.com/all-about-erik/video/upload/v1583973532/Musical%20Journey/Discography/Brief-Synthophonia-Sopwith-Camel_Discography_witrqh.mp3
 bgAudioDuration: 54
 bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5

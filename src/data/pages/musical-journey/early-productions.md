@@ -7,7 +7,7 @@ titleImg: >-
 mainImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576111097/Musical%20Journey/Early%20Productions/img312-2_-_Cropped_ji3ife.png
 bgAudio: >-
-  https://res.cloudinary.com/all-about-erik/video/upload/v1578611792/Musical%20Journey/Early%20Productions/Green_Rocky_Road_-_Tim_Hardin_zujehc.mp3
+  https://res.cloudinary.com/all-about-erik/video/upload/v1583973337/Musical%20Journey/Early%20Productions/Green-Rocky-Road-Tim-Hardin_EarlyProductions_pbvmpv.mp3
 bgAudioDuration: 138
 bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5

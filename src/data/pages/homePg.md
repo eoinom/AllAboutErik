@@ -4,8 +4,8 @@ headingImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580951957/Home%20Page/allabouterikwhite4-11-18_kwflva.png
 creditText: Guitar by John Sebastian
 bgAudio: >-
-  https://res.cloudinary.com/all-about-erik/video/upload/v1582666685/Home%20Page/Wildwood_Flower_-_John_Sebastian_kw4l8t.mp3
-bgAudioDuration: 123
+  https://res.cloudinary.com/all-about-erik/video/upload/v1583973805/Home%20Page/Wildwood-Flower-John-Sebastian_Home_z2xvir.mp3
+bgAudioDuration: 126
 bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5
 slides:

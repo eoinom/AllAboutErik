@@ -5,8 +5,8 @@ backgroundImg: >-
 titleImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1571091738/Musical%20Journey/Musical%20Friends/musical-friends_p2af5b.png
 bgAudio: >-
-  https://res.cloudinary.com/all-about-erik/video/upload/v1582667063/Musical%20Journey/Musical%20Friends/Japanese_Silky_-_Norman_Greenbaum_uwryye.mp3
-bgAudioDuration: 296
+  https://res.cloudinary.com/all-about-erik/video/upload/v1583973475/Musical%20Journey/Musical%20Friends/Japanese-Silky-Norman-Greenbaum_MusicalFriends_mni9xz.mp3
+bgAudioDuration: 100
 bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5
 friends:

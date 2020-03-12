@@ -6,8 +6,8 @@ titleImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1579900458/Short%20Films/short-films_e2hric.png
 mainVideoUrl: 'https://player.vimeo.com/video/309111649'
 bgAudio: >-
-  https://res.cloudinary.com/all-about-erik/video/upload/v1582668519/Short%20Films/Sweet_Moments_-_The_Blue_Velvet_Band_lxpokr.mp3
-bgAudioDuration: 142
+  https://res.cloudinary.com/all-about-erik/video/upload/v1583973154/Short%20Films/Sweet-Moments-The-Blue-Velvet-Band_ShortFilms_hpzn1s.mp3
+bgAudioDuration: 156
 bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5
 videos:

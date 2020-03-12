@@ -3,8 +3,8 @@ pageTitle: Collections
 titleImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1581372624/Collections/collections-white_icjjrm.png
 bgAudio: >-
-  https://res.cloudinary.com/all-about-erik/video/upload/v1582669076/Collections/Dicky_-_Edwardo_Unz_wirthx.mp3
-bgAudioDuration: 142
+  https://res.cloudinary.com/all-about-erik/video/upload/v1583971139/Collections/Dicky-Edwardo-Unz_Collections_lqaitw.mp3
+bgAudioDuration: 261
 bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5
 slides:
