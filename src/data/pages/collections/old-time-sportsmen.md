@@ -7,6 +7,14 @@ titleImg2Lines: >-
 headerBgImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582072594/Collections/06%20Old-Time%20Sportsmen/banner-old-time-sportsmen_hwvmig.png
 backgroundImgOpacity: 100
+headerLeftImg: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/v1584182010/Collections/06%20Old-Time%20Sportsmen/hunter_jcfk7z.png
+headerRightImg: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/v1584182010/Collections/06%20Old-Time%20Sportsmen/ducks_enicsy.png
+sportsmenSiteHoverImg: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/v1584183192/Collections/06%20Old-Time%20Sportsmen/flyline_ckmhvu.png
+sportsmenBookHoverImg: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/v1584183232/Collections/06%20Old-Time%20Sportsmen/old-log-cabin_kaeizd.png
 footerImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1583278416/Collections/OldTimeSportsmen_collection_footer_av7yua.jpg
 images:
@@ -118,20 +126,17 @@ postcardHistory:
   title: History of the Photo Picture Postcard
 about:
   text: >-
-    <p>In 2001, I attended a fan fair in Los Angeles featuring vintage television
-    and movies stars signing autographs for long lines of nostalgic fans. Off
-    the main room there was a paper ephemera show in progress, with old
-    newspapers, posters and postcards for sale. As I browsed through a box of
-    old pictures postcards I came across a section devoted to fishing and
+    <p>In 2001, I attended a fan fair in Los Angeles featuring vintage
+    television and movies stars signing autographs for long lines of nostalgic
+    fans. Off the main room there was a paper ephemera show in progress, with
+    old newspapers, posters and postcards for sale. As I browsed through a box
+    of old pictures postcards I came across a section devoted to fishing and
     fishermen. As a lifelong angler and collecting enthusiast, the century old
     images and the accompanying message intrigued and fascinated me. I was
-    hooked then and there.</p>
-    <p></p>
-    <p>In subsequent years, the collection has benefited greatly from the
-    assistance and keen eye of my oldest son Jakob Dulisse, who combed the
-    Internet relentlessly for new and exciting material.</p>
-    <p></p>
-    <p>-Erik Jacobsen</p>
+    hooked then and there.</p> <p></p> <p>In subsequent years, the collection
+    has benefited greatly from the assistance and keen eye of my oldest son
+    Jakob Dulisse, who combed the Internet relentlessly for new and exciting
+    material.</p> <p></p> <p>-Erik Jacobsen</p>
   title: About the Collection
 ---
 This gallery of uniquely American historical photos takes us back to a time, a century ago, when these wonderful images were captured and preserved for posterity on photo picture postcards. These vintage photographs each bear witness to memorable moments in the lives of these early 20th century American outdoorsmen and women.
