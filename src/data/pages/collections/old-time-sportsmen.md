@@ -13,8 +13,11 @@ headerRightImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584182010/Collections/06%20Old-Time%20Sportsmen/ducks_enicsy.png
 sportsmenSiteHoverImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584183192/Collections/06%20Old-Time%20Sportsmen/flyline_ckmhvu.png
+sportsmenSiteLink: 'http://oldtimeysportsmenphotogallery.com/gallery/'
 sportsmenBookHoverImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584183232/Collections/06%20Old-Time%20Sportsmen/old-log-cabin_kaeizd.png
+sportsmenBookLink: >-
+  https://www.amazon.com/Old-Timey-Sportsmen-Collection-Hunting-Fishing-ebook/dp/B07DH1WN4H/
 footerImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583278416/Collections/OldTimeSportsmen_collection_footer_av7yua.jpg
 images:
