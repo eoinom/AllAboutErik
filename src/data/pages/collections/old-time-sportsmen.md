@@ -8,15 +8,15 @@ headerBgImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582072594/Collections/06%20Old-Time%20Sportsmen/banner-old-time-sportsmen_hwvmig.png
 backgroundImgOpacity: 100
 headerLeftImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1584182010/Collections/06%20Old-Time%20Sportsmen/hunter_jcfk7z.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584182010/Collections/06%20Old-Time%20Sportsmen/hunter_jcfk7z.png
 headerRightImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1584182010/Collections/06%20Old-Time%20Sportsmen/ducks_enicsy.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584182010/Collections/06%20Old-Time%20Sportsmen/ducks_enicsy.png
 sportsmenSiteHoverImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1584183192/Collections/06%20Old-Time%20Sportsmen/flyline_ckmhvu.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584183192/Collections/06%20Old-Time%20Sportsmen/flyline_ckmhvu.png
 sportsmenBookHoverImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1584183232/Collections/06%20Old-Time%20Sportsmen/old-log-cabin_kaeizd.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584183232/Collections/06%20Old-Time%20Sportsmen/old-log-cabin_kaeizd.png
 footerImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1583278416/Collections/OldTimeSportsmen_collection_footer_av7yua.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583278416/Collections/OldTimeSportsmen_collection_footer_av7yua.jpg
 images:
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582073037/Collections/06%20Old-Time%20Sportsmen/01-002_dp0pa8.jpg
