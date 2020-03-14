@@ -1,11 +1,57 @@
 <template>
   <Layout>  
     <header :style="headerStyles">
-      <div id="headerItems">
-        <g-image :src="titleImg1Line" class="titleImg titleImg1Line" />
-        <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
-        <div v-html="$page.OldTimeSportsmen.edges[0].node.content" class="collections_headerText" />
-      </div>
+
+      <b-container fluid class="slideshowOverlay">
+        <b-row align-v="center">
+          <b-col style="text-align: right">            
+            <g-image alt="Hunter" v-if="headerLeftImg != null" :src="headerLeftImg" id="headerLeftImg" style="max-width:357px"/>
+          </b-col>
+
+          
+          <div id="headerItems">            
+            <g-image :src="titleImg1Line" class="titleImg titleImg1Line" />
+            <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
+            <div v-html="$page.OldTimeSportsmen.edges[0].node.content" class="collections_headerText" />
+
+            <b-row align-v="start" align-h="center" style="min-height:68px; padding-top:8px">
+              <a :href="sportsmenSiteLink">
+                <div v-if="sportsmenSiteHoverImg != null" id="sportsmenSiteHoverImgDiv">            
+                  <g-image class="sportsmenSiteHoverImg" alt="Fishing fly line" :src="sportsmenSiteHoverImg" :class="{ showImage: sportsmenSiteHover }" />
+                </div>
+
+                <div id="sportsmenSiteText" @mouseover="sportsmenSiteHover = true" @mouseleave="sportsmenSiteHover = false">
+                  <div class="collections_headerLinkText" style="margin-right:100px">
+                    <span>COME VISIT THE</span>
+                    <br>
+                    <span>Old-Time Sportsmen Website</span>
+                  </div>
+                </div>
+              </a>
+
+              <a :href="sportsmenBookLink">
+                <div v-if="sportsmenBookHoverImg != null" id="sportsmenBookHoverImgDiv">            
+                  <g-image class="sportsmenBookHoverImg" alt="Old log cabin" :src="sportsmenBookHoverImg" :class="{ showImage: sportsmenBookHover }" />
+                </div>
+
+                <div id="sportsmenBookText" @mouseover="sportsmenBookHover = true" @mouseleave="sportsmenBookHover = false">
+                  <div class="collections_headerLinkText" style="margin-right:150px">
+                    <span>AND SEE THE</span>
+                    <br>
+                    <span>Old-Time Sportsmen Book</span>
+                  </div>
+                </div>
+              </a>
+            </b-row>            
+          </div>
+
+          
+          <b-col style="text-align: left">            
+            <g-image alt="ducks" v-if="headerRightImg != null" :src="headerRightImg" id="headerRightImg" style="max-width:389px"/>
+          </b-col>
+        </b-row>
+      </b-container>
+
     </header>
 
     <CollectionViewer
@@ -63,6 +109,12 @@
         titleImg2Lines
         headerBgImg
         backgroundImgOpacity
+        headerLeftImg
+        headerRightImg
+        sportsmenSiteHoverImg
+        sportsmenSiteLink
+        sportsmenBookHoverImg
+        sportsmenBookLink
         footerImg
         content
         images {
@@ -124,6 +176,8 @@ export default {
   data() {
     return {
       imageIndex: 0,
+      sportsmenSiteHover: false,
+      sportsmenBookHover: false
     }
   },
 
@@ -142,6 +196,24 @@ export default {
     },
     headerBgImgOpacity() {
       return this.$page.OldTimeSportsmen.edges[0].node.hasOwnProperty('backgroundImgOpacity') ? this.$page.OldTimeSportsmen.edges[0].node.backgroundImgOpacity : 0.5
+    },
+    headerLeftImg() {
+      return this.$page.OldTimeSportsmen.edges[0].node.headerLeftImg
+    },
+    headerRightImg() {
+      return this.$page.OldTimeSportsmen.edges[0].node.headerRightImg
+    },
+    sportsmenSiteHoverImg() {
+      return this.$page.OldTimeSportsmen.edges[0].node.sportsmenSiteHoverImg
+    },
+    sportsmenSiteLink() {
+      return this.$page.OldTimeSportsmen.edges[0].node.sportsmenSiteLink
+    },
+    sportsmenBookHoverImg() {
+      return this.$page.OldTimeSportsmen.edges[0].node.sportsmenBookHoverImg
+    },
+    sportsmenBookLink() {
+      return this.$page.OldTimeSportsmen.edges[0].node.sportsmenBookLink
     },
     footerImg() {
       return this.$page.OldTimeSportsmen.edges[0].node.footerImg
@@ -233,7 +305,6 @@ export default {
 
 header {
   position: relative;
-  text-align: center;
   padding-top: 12.5px;
   padding-bottom: 12.5px;
 }
@@ -258,20 +329,84 @@ header:after  {
   margin: 0 auto;
 }
 .collections_headerText {
+  color: #000;
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
-  color: #000;
-  text-align: center;
-  letter-spacing: 1px;
-  line-height: 20px;
-  font-size: 16px;
   font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 1px;
+  text-align: center;
   margin: 0px;
   padding: 0px;
 }
 .collections_headerText > p { 
   margin: 0px;
   padding: 0px;
+}
+
+.collections_headerLinkText {
+  color: #000;
+  font-family: 'Francois One', sans-serif;
+  font-feature-settings: 'liga';
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.8px;
+  text-align: center;
+  line-height: 20px;
+  margin: 0px;
+  padding: 0px;
+  width: 220px;
+}
+.collections_headerLinkText > span:nth-child(3) {
+  font-size: 0.9375rem;
+}
+
+#sportsmenSiteHoverImgDiv {
+  position: relative;
+  text-align: right; 
+  width: 205px; 
+  padding-right: 0;
+  cursor: pointer;
+}
+.sportsmenSiteHoverImg {
+  max-width: 357px; 
+  position: absolute; 
+  right: -146px; 
+  top: -7px;
+  opacity: 0;
+}
+#sportsmenSiteText {
+  text-align: right; 
+  padding: 0;
+  cursor: pointer;
+}
+#sportsmenSiteHoverImgDiv:hover .sportsmenSiteHoverImg {
+  opacity: 1;
+}
+#sportsmenBookHoverImgDiv {
+  position: relative;
+  text-align: left;
+  width: 100px;
+  cursor: pointer;
+}
+.sportsmenBookHoverImg {
+  max-width: 389px; 
+  position: absolute; 
+  right: -27px; 
+  top: -6px;
+  opacity: 0;
+}
+#sportsmenBookText {
+  text-align: left;
+  cursor: pointer;
+}
+#sportsmenBookHoverImgDiv:hover .sportsmenBookHoverImg {
+  opacity: 1;
+}
+
+.showImage {
+  opacity: 1;
 }
 
 .titleImg {

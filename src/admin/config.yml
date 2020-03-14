@@ -362,7 +362,9 @@ collections:
           - {label: "Header Left Image", name: "headerLeftImg", widget: "image", required: false}
           - {label: "Header Right Image", name: "headerRightImg", widget: "image", required: false}
           - {label: "Sportsmen Website Hover Image", name: "sportsmenSiteHoverImg", widget: "image", required: false}
+          - {label: "Sportsmen Website Link", name: "sportsmenSiteLink", widget: "string", required: false}
           - {label: "Sportsmen Book Hover Image", name: "sportsmenBookHoverImg", widget: "image", required: false}
+          - {label: "Sportsmen Book Link", name: "sportsmenBookLink", widget: "string", required: false}
           - {label: 'Header Text', name: 'body', widget: 'markdown', required: false}
           - {label: "Footer Image", name: "footerImg", widget: "image", required: false}
           - label: "Images"
