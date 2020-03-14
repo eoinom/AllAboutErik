@@ -260,12 +260,11 @@ header:after  {
 .collections_headerText {
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.29);
   color: #000;
   text-align: center;
   letter-spacing: 1px;
-  line-height: 26px;
-  font-size: 18px;
+  line-height: 20px;
+  font-size: 16px;
   font-weight: 500;
   margin: 0px;
   padding: 0px;
@@ -276,8 +275,8 @@ header:after  {
 }
 
 .titleImg {
-  max-width: 100%;
-  margin-bottom: 20px;
+  max-width: 652px;
+  margin-bottom: 4px;
 }
 .titleImg1Line {
   display: inline;
