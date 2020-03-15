@@ -394,6 +394,7 @@ collections:
                 - {label: "Front Image", name: "imgFront", widget: "image", required: false}
                 - {label: "Back Image", name: "imgBack", widget: "image", required: false}
                 - {label: "Caption", name: "caption", widget: "string", required: false}
+                - {label: "Back Text", name: "backText", widget: "markdown", required: false}
           - label: "About"
             name: "about"
             widget: "object"

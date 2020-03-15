@@ -1,19 +1,30 @@
 <template>
-  <div class="flip-card" :style="flipCardStyles">
+  <div class="flip-card" :style="dimStyles">
+    <img v-if="seeTheBack" src="../assets/images/see-the-back.png" alt="See the back" class="flip-card-seeTheBack"  @click="lightBoxOpen()">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <img :src="imgFront" :alt="caption">
+        <img :src="imgFront" :alt="caption" :style="dimStyles">
       </div>
       <div class="flip-card-back">
-        <img :src="imgBack" :alt="caption">
+        <img :src="imgBack" :alt="caption" :style="dimStyles">
       </div>
     </div>
-    <p class="caption">{{ caption }}</p>    
+    <p class="caption">{{ caption }}</p> 
+
+  <ImageLightBox
+    :images="postcardImage"
+    :index="postcardIndex"
+    :disable-scroll="true"
+    @close="postcardIndex = null; postcardImage = null"
+  />
+
   </div>
 </template>
 
 
 <script scoped>
+import ImageLightBox from './ImageLightBox.vue'
+
 export default { 
   name: 'FlipPostcard',
 
@@ -33,16 +44,44 @@ export default {
     height: {
       type: Number
     },
+    seeTheBack: {
+      type: Boolean,
+      default: false
+    },
+    backText: {
+      type: String
+    },
+  },
+
+  data() {
+    return {
+      postcardIndex: null,
+      postcardImage: null
+    }
   },
 
   computed: {
-    flipCardStyles() {
+    dimStyles() {
       return {
         width: this.width + 'px',
         height: this.height + 'px'
       }
     }
-  }
+  },
+
+  methods: {    
+    lightBoxOpen() {
+      this.postcardImage = [{
+          'img': this.imgBack, 
+          'caption': this.backText
+        }]
+      this.postcardIndex = 0
+    }
+  },
+
+  components: {
+    ImageLightBox
+  },
 }
 </script>
 
@@ -67,7 +106,13 @@ export default {
 
 // From: https://www.w3schools.com/howto/howto_css_flip_card.asp
 .flip-card {
+  position: relative;
   background-color: transparent;
+}
+.flip-card-seeTheBack {
+  position: absolute;
+  top: -45px;
+  right: -45px;
 }
 
 /* This container is needed to position the front and back side */

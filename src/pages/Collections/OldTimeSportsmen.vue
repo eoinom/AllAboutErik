@@ -67,41 +67,102 @@
       :disable-scroll="true"
       :prevCollection="prev_collection"
       :nextCollection="next_collection"
-      @close="imageIndex = null"
     />
 
+
+
     <section id="postcardHistory">
-      <div id="postcardHistory__textDiv">
-        <h2 class="title">{{ postcardHistory.title }}</h2>
-        <div class="pb-5">
-          <div class="pb-2 pl-5 pr-3" style="float: right">
-            <flip-postcard
-              :imgFront="postcardHistory.postcards[0].imgFront"
-              :imgBack="postcardHistory.postcards[0].imgBack"
-              :caption="postcardHistory.postcards[0].caption"
-              :width="480"
-              :height="297"
-            />
-          </div>
-          <br />
-          <span v-html="postcardHistory.textPt1" class="postcardText" />
+      <b-container fluid class="slideshowOverlay">
+        <b-row align-v="center">
 
-          <img :src="postcardHistory.images[0].img" class="py-3 pr-3" style="float: left">
-          <span v-html="postcardHistory.textPt2" class="postcardText" />
+          <b-col>
+            <div id="postcardsSidebar" class="pb-5">
+              <div class="pb-2 pl-5 pr-3" style="float: left">
+                <flip-postcard
+                  :imgFront="postcardHistory.postcards[1].imgFront"
+                  :imgBack="postcardHistory.postcards[1].imgBack"
+                  :caption="postcardHistory.postcards[1].caption"
+                  :width="480"
+                  :height="297"
+                />
+              </div>
+            </div>
+          </b-col>
+          
+          <b-col> 
+            <div id="postcardHistory__textDiv">
+              <h2 class="title">{{ postcardHistory.title }}</h2>
+              <div class="pb-5">
+                <div class="pb-2 pl-5 pr-3" style="float: right">
+                  <flip-postcard
+                    :imgFront="postcardHistory.postcards[0].imgFront"
+                    :imgBack="postcardHistory.postcards[0].imgBack"
+                    :caption="postcardHistory.postcards[0].caption"
+                    :width="480"
+                    :height="297"
+                  />
+                </div>
+                <br />
+                <span v-html="postcardHistory.textPt1" class="postcardText" />
 
-          <img :src="postcardHistory.images[1].img" class="pl-3" style="float: right;">
-          <span v-html="postcardHistory.textPt3" class="postcardText" />
-        </div>
+                <img :src="postcardHistory.images[0].img" class="py-3 pr-3" style="float: left">
+                <span v-html="postcardHistory.textPt2" class="postcardText" />
 
-        
-        <h2 class="title">{{ about.title }}</h2>
-        <span v-html="about.text" class="postcardText" />
+                <img :src="postcardHistory.images[1].img" class="pl-3" style="float: right;">
+                <span v-html="postcardHistory.textPt3" class="postcardText" />
+              </div>
 
-      </div> 
+              
+              <h2 class="title">{{ about.title }}</h2>
+              <span v-html="about.text" class="postcardText" />
 
+            </div>
+          </b-col>
+
+          <b-col align-self="start">
+            <div id="postcardsSidebar" class="pt-5">
+              <div>
+                <flip-postcard
+                  :imgFront="postcardHistory.postcards[1].imgFront"
+                  :imgBack="postcardHistory.postcards[1].imgBack"
+                  :caption="postcardHistory.postcards[1].caption"
+                  :width="487"
+                  :height="307"
+                  seeTheBack=true
+                  :backText="postcardHistory.postcards[1].backText"
+                  class="sidePostcards"
+                />
+                <flip-postcard
+                  :imgFront="postcardHistory.postcards[2].imgFront"
+                  :imgBack="postcardHistory.postcards[2].imgBack"
+                  :caption="postcardHistory.postcards[2].caption"
+                  :width="487"
+                  :height="309"
+                  seeTheBack=true
+                  :backText="postcardHistory.postcards[2].backText"
+                  class="sidePostcards"
+                />
+                <flip-postcard
+                  :imgFront="postcardHistory.postcards[3].imgFront"
+                  :imgBack="postcardHistory.postcards[3].imgBack"
+                  :caption="postcardHistory.postcards[3].caption"
+                  :width="487"
+                  :height="310"
+                  seeTheBack=true
+                  :backText="postcardHistory.postcards[3].backText"
+                  class="sidePostcards"
+                />
+              </div>
+            </div>
+          </b-col>
+
+        </b-row>
+      </b-container>
+    
     </section>
 
     <footer :style="footerStyles" />
+
   </Layout>
 </template>
 
@@ -140,6 +201,7 @@
             imgFront
             imgBack
             caption
+            backText
           }
         }
         about {
@@ -518,6 +580,10 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+.sidePostcards {
+  margin:70px 0
 }
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
