@@ -51,6 +51,13 @@
                   {{ image.caption || image.title }}
                 </div>
 
+                <div
+                  v-show="(image.HTMLcaption) && isImageLoaded"
+                  class="image-lightbox__HTMLtext"
+                  :style="imageTitleCss"
+                  v-html="image.HTMLcaption"
+                />
+
               </div>
             </li>
           </ul>
@@ -173,7 +180,7 @@ export default {
         css.textAlign = 'center'
         css.marginTop = '20px'
       }
-      else {
+      else {        
         let containerWidth = 0.8 * this.windowWidth
         let containerHeight = 0.8 * this.windowHeight      
         const containerAspectRatio = containerWidth / containerHeight
@@ -322,6 +329,8 @@ export default {
 
 <style lang="scss" scoped>
 
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:600,600i&display=swap');
+
 @font-face {
   font-family: NeueHaasGroteskText Pro55;
   src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot'); /* IE9 Compat Modes */
@@ -411,6 +420,25 @@ export default {
     white-space: normal;
     // see imageTitleCss() in computed for further properties
   }
+  &__HTMLtext {
+    z-index: 1000;
+    display: block;
+    // margin: 0 auto;
+    box-sizing: border-box;
+
+    color: #FFFFFF;    
+    font-family: 'Crimson Text', serif;
+    font-feature-settings: 'liga';
+    font-size: 1.125rem; /* 18px with 16px default size */
+    font-weight: 600;
+    // font-style: italic;
+    letter-spacing: 1px;
+    text-align: left;
+    text-rendering: auto;
+    line-height: 1.375rem; /* 22px with 16px default size */
+    white-space: normal;
+  }
+  
   &__next,
   &__prev,
   &__close {

@@ -16,6 +16,7 @@
     :index="postcardIndex"
     :disable-scroll="true"
     @close="postcardIndex = null; postcardImage = null"
+    :centreTitle=true
   />
 
   </div>
@@ -50,6 +51,10 @@ export default {
     },
     backText: {
       type: String
+    },    
+    backTextIsHTML: {
+      type: Boolean,
+      default: false
     },
   },
 
@@ -71,10 +76,18 @@ export default {
 
   methods: {    
     lightBoxOpen() {
-      this.postcardImage = [{
+      if (this.backTextIsHTML) {
+        this.postcardImage = [{
+          'img': this.imgBack, 
+          'HTMLcaption': this.backText
+        }]
+      }
+      else {
+        this.postcardImage = [{
           'img': this.imgBack, 
           'caption': this.backText
         }]
+      }
       this.postcardIndex = 0
     }
   },

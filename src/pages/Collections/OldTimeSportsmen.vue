@@ -129,7 +129,8 @@
                   :width="487"
                   :height="307"
                   seeTheBack=true
-                  :backText="postcardHistory.postcards[1].backText"
+                  :backText="renderMarkdown(postcardHistory.postcards[1].backText)"
+                  backTextIsHTML=true
                   class="sidePostcards"
                 />
                 <flip-postcard
@@ -139,7 +140,8 @@
                   :width="487"
                   :height="309"
                   seeTheBack=true
-                  :backText="postcardHistory.postcards[2].backText"
+                  :backText="renderMarkdown(postcardHistory.postcards[2].backText)"
+                  backTextIsHTML=true
                   class="sidePostcards"
                 />
                 <flip-postcard
@@ -149,9 +151,11 @@
                   :width="487"
                   :height="310"
                   seeTheBack=true
-                  :backText="postcardHistory.postcards[3].backText"
+                  :backText="renderMarkdown(postcardHistory.postcards[3].backText)"
+                  backTextIsHTML=true
                   class="sidePostcards"
                 />
+                <p v-html="renderMarkdown(postcardHistory.postcards[1].backText)"></p>
               </div>
             </div>
           </b-col>
@@ -234,6 +238,7 @@ import CollectionViewer from '../../components/CollectionViewer.vue'
 import FlipPostcard from '../../components/FlipPostcard.vue'
 
 const slugify = require('@sindresorhus/slugify')
+const MarkdownIt = require('markdown-it')
 
 export default {
   metaInfo() {
@@ -332,6 +337,13 @@ export default {
     },
     about() {
       return this.$page.OldTimeSportsmen.edges[0].node.about
+    }
+  },
+
+  methods: {    
+    renderMarkdown(text) {
+      const md = new MarkdownIt()
+      return md.render(text) 
     }
   },
 
