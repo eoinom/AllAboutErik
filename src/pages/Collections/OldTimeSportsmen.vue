@@ -128,9 +128,9 @@
                   :caption="postcardHistory.postcards[1].caption"
                   :width="487"
                   :height="307"
-                  seeTheBack=true
+                  :seeTheBack=true
                   :backText="renderMarkdown(postcardHistory.postcards[1].backText)"
-                  backTextIsHTML=true
+                  :backTextIsHTML=true
                   class="sidePostcards"
                 />
                 <flip-postcard
@@ -139,9 +139,9 @@
                   :caption="postcardHistory.postcards[2].caption"
                   :width="487"
                   :height="309"
-                  seeTheBack=true
+                  :seeTheBack=true
                   :backText="renderMarkdown(postcardHistory.postcards[2].backText)"
-                  backTextIsHTML=true
+                  :backTextIsHTML=true
                   class="sidePostcards"
                 />
                 <flip-postcard
@@ -150,12 +150,11 @@
                   :caption="postcardHistory.postcards[3].caption"
                   :width="487"
                   :height="310"
-                  seeTheBack=true
+                  :seeTheBack=true
                   :backText="renderMarkdown(postcardHistory.postcards[3].backText)"
-                  backTextIsHTML=true
+                  :backTextIsHTML=true
                   class="sidePostcards"
                 />
-                <p v-html="renderMarkdown(postcardHistory.postcards[1].backText)"></p>
               </div>
             </div>
           </b-col>

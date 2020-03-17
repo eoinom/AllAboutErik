@@ -39,6 +39,7 @@
 
                 <img
                   :ref="`lg-img-${imageIndex}`"
+                  :id="'img' + imageIndex"
                   :src="shouldPreload(imageIndex) ? image.img : false"
                   @load="imageLoaded($event, imageIndex)"
                 >
@@ -54,7 +55,7 @@
                 <div
                   v-show="(image.HTMLcaption) && isImageLoaded"
                   class="image-lightbox__HTMLtext"
-                  :style="imageTitleCss"
+                  :style="htmlCaptionCss"
                   v-html="image.HTMLcaption"
                 />
 
@@ -159,7 +160,8 @@ export default {
         flag: false,
       },
       windowWidth: 0,
-      windowHeight: 0
+      windowHeight: 0,
+      imageWidth: 0
     };
   },
   computed: {
@@ -168,10 +170,13 @@ export default {
         ? { url: image } : image
       ));
     },
+    containerFactor() {
+      return this.formattedImages[this.currentIndex].hasOwnProperty('HTMLcaption') ? 0.6 : 0.8
+    },
     imageContainerCss() {
       let css = {}
-      css.width = (0.8 * this.windowWidth) + 'px'
-      css.height = (0.8 * this.windowHeight) + 'px'
+      css.width = (this.containerFactor * this.windowWidth) + 'px'
+      css.height = (this.containerFactor * this.windowHeight) + 'px'
       return css
     },
     imageTitleCss() {
@@ -180,9 +185,9 @@ export default {
         css.textAlign = 'center'
         css.marginTop = '20px'
       }
-      else {        
-        let containerWidth = 0.8 * this.windowWidth
-        let containerHeight = 0.8 * this.windowHeight      
+      else { 
+        let containerWidth = this.containerFactor * this.windowWidth
+        let containerHeight = this.containerFactor * this.windowHeight      
         const containerAspectRatio = containerWidth / containerHeight
         const imageAspectRatio = 1502.22 / 845.0
         const heightGoverns = containerAspectRatio >= imageAspectRatio
@@ -198,6 +203,23 @@ export default {
         css.padding = 0
         css.bottom = ((containerHeight - actualImgHeight) / 2 - 40) + 'px'
         css.left = ((containerWidth - actualImgWidth) / 2) + 'px'
+      }
+      return css
+    },
+    htmlCaptionCss() {
+      let css = {}
+      if (this.centreTitle) {
+        css.textAlign = 'center'
+        css.marginTop = '20px'
+      }
+      else {
+        if (this.isImageLoaded) {
+          this.updateImageWidth()
+          css.width = this.imageWidth + 'px'
+        }
+        css.textAlign = 'left'
+        css.margin = '40px auto 0 auto'
+        css.maxWidth = '600px'
       }
       return css
     }
@@ -224,6 +246,7 @@ export default {
       window.addEventListener('resize', () => {        
         this.windowWidth = window.innerWidth
         this.windowHeight = window.innerHeight 
+        this.updateImageWidth()
       });
     })
 
@@ -258,6 +281,7 @@ export default {
       if (imageIndex === this.currentIndex) {
         this.setImageLoaded(imageIndex);
       }
+      this.updateImageWidth()
     },
     getImageElByIndex(index) {
       const elements = this.$refs[`lg-img-${index}`] || [];
@@ -323,7 +347,21 @@ export default {
           break;
       }
     },
-  }
+    // HTMLcaptionParagraphs(imgIndex) {
+    //   if (formattedImages[imgIndex].hasOwnProperty('HTMLcaption')) {
+    //     const text = formattedImages[imgIndex].HTMLcaption
+    //     return text.split('<p>').length - 1
+    //   } else {
+    //     return 0
+    //   }
+    // },
+    updateImageWidth() {
+      if (this.isImageLoaded) {
+        let el = document.getElementById('img' + this.currentIndex)
+        this.imageWidth = el.width
+      }
+    }
+  },
 };
 </script>
 

@@ -16,7 +16,7 @@
     :index="postcardIndex"
     :disable-scroll="true"
     @close="postcardIndex = null; postcardImage = null"
-    :centreTitle=true
+    :centreTitle=false
   />
 
   </div>
