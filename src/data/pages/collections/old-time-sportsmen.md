@@ -92,6 +92,8 @@ postcardHistory:
       caption: How's this for luck?...
       imgBack: >-
         https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard02-luck1466-back_beyhgn.jpg
+      imgBackLarge: >-
+        https://res.cloudinary.com/all-about-erik/image/upload/v1584476400/Collections/06%20Old-Time%20Sportsmen/postcards/postcard02-luck1466-back-large_b0joc7.jpg
       imgFront: >-
         https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard02-luck1466-front_ljlw4w.jpg
     - backText: |-
@@ -107,6 +109,8 @@ postcardHistory:
       caption: 'Dear Grandpa, ...'
       imgBack: >-
         https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard03-grandpa027-back_qpccou.jpg
+      imgBackLarge: >-
+        https://res.cloudinary.com/all-about-erik/image/upload/v1584476400/Collections/06%20Old-Time%20Sportsmen/postcards/postcard03-grandpa027-back-large_sanegs.jpg
       imgFront: >-
         https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard03-grandpa027-front_douxhz.jpg
     - backText: >-
@@ -128,6 +132,8 @@ postcardHistory:
       caption: 'Say Fred, How....'
       imgBack: >-
         https://res.cloudinary.com/all-about-erik/image/upload/v1583083149/Collections/06%20Old-Time%20Sportsmen/postcards/postcard04-fred648-back_y3wrvs.jpg
+      imgBackLarge: >-
+        https://res.cloudinary.com/all-about-erik/image/upload/v1584476400/Collections/06%20Old-Time%20Sportsmen/postcards/postcard04-fred648-back-large_ccoo97.jpg
       imgFront: >-
         https://res.cloudinary.com/all-about-erik/image/upload/v1583083149/Collections/06%20Old-Time%20Sportsmen/postcards/postcard04-fred648-front_xkzrlh.jpg
   textPt1: >-
