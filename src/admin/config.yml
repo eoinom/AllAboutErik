@@ -401,6 +401,11 @@ collections:
             fields:
             - {label: 'Title', name: 'title', widget: 'string', required: false}
             - {label: "Text", name: "text", widget: "markdown", required: false}
+          - label: "People"
+            name: "people"
+            widget: "list"
+            fields: 
+              - {label: "Image", name: "img", widget: "image", required: false}
       
 
   - label: "Friends"
