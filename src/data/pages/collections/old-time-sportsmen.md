@@ -81,19 +81,50 @@ postcardHistory:
         https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard01-kate1017-back_xgx6st.jpg
       imgFront: >-
         https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard01-kate1017-front_tbtupk.jpg
-    - backText: "_Postmark: Indian Lake, New York, October 26, 1916_\n\n_Recipient:_\r\r  \n\n_J.B. Weets_\n\n_how is this for luck_\n\n_C.B._"
+    - backText: |-
+        _Postmark: Indian Lake, New York, October 26, 1916_
+
+        _Recipient: J.B. Weeks_
+
+        _How is this for luck_
+
+        _C.B._
       caption: How's this for luck?...
       imgBack: >-
         https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard02-luck1466-back_beyhgn.jpg
       imgFront: >-
         https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard02-luck1466-front_ljlw4w.jpg
-    - backText: "_Postmark: Lakeview, Ohio, July 14, 1911_\r\r\n\n_Recipient:_\r  \n\n_Edward Fraser_\r  \n\n_R. R. # 5 Dayton, Ohio_\r\r\n\n_Dear Grandpa_\r  \n\n_We are all well, and we are catching a lots of fish,_\r  \n\n_Carl_"
+    - backText: |-
+        _Postmark: Lakeview, Ohio, July 14, 1911_
+
+        _Recipient: Edward Fraser, R. R. # 5 Dayton, Ohio_
+
+        _Dear Grandpa_
+
+        _We are all well, and we are catching a lots of fish,_
+
+        _Carl_
       caption: 'Dear Grandpa, ...'
       imgBack: >-
         https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard03-grandpa027-back_qpccou.jpg
       imgFront: >-
         https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard03-grandpa027-front_douxhz.jpg
-    - backText: "_Postmark: Okoboji, Iowa, July 11, 1911_\r\n\n_Recipient:_\r\r  \n\n_Mr F.E. Leak_\r\r  \n\n_Greenville, Ill_\r \r\r\n\n_Say, Fred.  How would you like to be with this bunch for a few days during this beastly weather?  All well and enjoying life full up to the brim._\r\r  \n\n_Yours,_\r\r  \n\n_Lewis_"
+    - backText: >-
+        _Postmark: Okoboji, Iowa, July 11, 1911_
+
+
+        _Recipient: Mr F.E. Leak, Greenville, Ill_
+
+
+        _Say, Fred.  How would you like to be with this bunch for a few days
+        during this beastly weather?  All well and enjoying life full up to the
+        brim._
+
+
+        _Yours,_
+
+
+        _Lewis_
       caption: 'Say Fred, How....'
       imgBack: >-
         https://res.cloudinary.com/all-about-erik/image/upload/v1583083149/Collections/06%20Old-Time%20Sportsmen/postcards/postcard04-fred648-back_y3wrvs.jpg
