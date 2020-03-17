@@ -115,6 +115,7 @@
                 <flip-postcard
                   :imgFront="postcardHistory.postcards[1].imgFront"
                   :imgBack="postcardHistory.postcards[1].imgBack"
+                  :imgBackLarge="postcardHistory.postcards[1].imgBackLarge"
                   :caption="postcardHistory.postcards[1].caption"
                   :width="487"
                   :height="307"
@@ -126,6 +127,7 @@
                 <flip-postcard
                   :imgFront="postcardHistory.postcards[2].imgFront"
                   :imgBack="postcardHistory.postcards[2].imgBack"
+                  :imgBackLarge="postcardHistory.postcards[2].imgBackLarge"
                   :caption="postcardHistory.postcards[2].caption"
                   :width="487"
                   :height="309"
@@ -137,6 +139,7 @@
                 <flip-postcard
                   :imgFront="postcardHistory.postcards[3].imgFront"
                   :imgBack="postcardHistory.postcards[3].imgBack"
+                  :imgBackLarge="postcardHistory.postcards[3].imgBackLarge"
                   :caption="postcardHistory.postcards[3].caption"
                   :width="487"
                   :height="310"
@@ -193,6 +196,7 @@
           postcards {
             imgFront
             imgBack
+            imgBackLarge
             caption
             backText
           }

@@ -71,16 +71,16 @@ postcardHistory:
   images:
     - altText: Brownie camera box
       img: >-
-        https://res.cloudinary.com/all-about-erik/image/upload/v1583082619/Collections/06%20Old-Time%20Sportsmen/browniebox_apabx5.png
+        https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583082619/Collections/06%20Old-Time%20Sportsmen/browniebox_apabx5.png
     - altText: Brownie camera
       img: >-
-        https://res.cloudinary.com/all-about-erik/image/upload/v1583082619/Collections/06%20Old-Time%20Sportsmen/browniecamera_iji3vd.png
+        https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583082619/Collections/06%20Old-Time%20Sportsmen/browniecamera_iji3vd.png
   postcards:
     - caption: Kodak Kate. Early company poster girl for Kodak
       imgBack: >-
-        https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard01-kate1017-back_xgx6st.jpg
+        https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard01-kate1017-back_xgx6st.jpg
       imgFront: >-
-        https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard01-kate1017-front_tbtupk.jpg
+        https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard01-kate1017-front_tbtupk.jpg
     - backText: |-
         _Postmark: Indian Lake, New York, October 26, 1916_
 
@@ -91,11 +91,11 @@ postcardHistory:
         _C.B._
       caption: How's this for luck?...
       imgBack: >-
-        https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard02-luck1466-back_beyhgn.jpg
+        https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard02-luck1466-back_beyhgn.jpg
       imgBackLarge: >-
-        https://res.cloudinary.com/all-about-erik/image/upload/v1584476400/Collections/06%20Old-Time%20Sportsmen/postcards/postcard02-luck1466-back-large_b0joc7.jpg
+        https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584476400/Collections/06%20Old-Time%20Sportsmen/postcards/postcard02-luck1466-back-large_b0joc7.jpg
       imgFront: >-
-        https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard02-luck1466-front_ljlw4w.jpg
+        https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard02-luck1466-front_ljlw4w.jpg
     - backText: |-
         _Postmark: Lakeview, Ohio, July 14, 1911_
 
@@ -108,11 +108,11 @@ postcardHistory:
         _Carl_
       caption: 'Dear Grandpa, ...'
       imgBack: >-
-        https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard03-grandpa027-back_qpccou.jpg
+        https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard03-grandpa027-back_qpccou.jpg
       imgBackLarge: >-
-        https://res.cloudinary.com/all-about-erik/image/upload/v1584476400/Collections/06%20Old-Time%20Sportsmen/postcards/postcard03-grandpa027-back-large_sanegs.jpg
+        https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584476400/Collections/06%20Old-Time%20Sportsmen/postcards/postcard03-grandpa027-back-large_sanegs.jpg
       imgFront: >-
-        https://res.cloudinary.com/all-about-erik/image/upload/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard03-grandpa027-front_douxhz.jpg
+        https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard03-grandpa027-front_douxhz.jpg
     - backText: >-
         _Postmark: Okoboji, Iowa, July 11, 1911_
 
@@ -131,11 +131,11 @@ postcardHistory:
         _Lewis_
       caption: 'Say Fred, How....'
       imgBack: >-
-        https://res.cloudinary.com/all-about-erik/image/upload/v1583083149/Collections/06%20Old-Time%20Sportsmen/postcards/postcard04-fred648-back_y3wrvs.jpg
+        https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583083149/Collections/06%20Old-Time%20Sportsmen/postcards/postcard04-fred648-back_y3wrvs.jpg
       imgBackLarge: >-
-        https://res.cloudinary.com/all-about-erik/image/upload/v1584476400/Collections/06%20Old-Time%20Sportsmen/postcards/postcard04-fred648-back-large_ccoo97.jpg
+        https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584476400/Collections/06%20Old-Time%20Sportsmen/postcards/postcard04-fred648-back-large_ccoo97.jpg
       imgFront: >-
-        https://res.cloudinary.com/all-about-erik/image/upload/v1583083149/Collections/06%20Old-Time%20Sportsmen/postcards/postcard04-fred648-front_xkzrlh.jpg
+        https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583083149/Collections/06%20Old-Time%20Sportsmen/postcards/postcard04-fred648-front_xkzrlh.jpg
   textPt1: >-
     <p>In the first years of the 20th century, newly mobile American travellers,
     hunters, and fishermen headed out by horseback, buggy, car and boat. Their
@@ -183,18 +183,18 @@ about:
   title: About the Collection
 people:
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1584468461/Collections/06%20Old-Time%20Sportsmen/people/01_172_en54qz.png
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584468461/Collections/06%20Old-Time%20Sportsmen/people/01_172_en54qz.png
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1584468462/Collections/06%20Old-Time%20Sportsmen/people/02_377_ede427.png
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584468462/Collections/06%20Old-Time%20Sportsmen/people/02_377_ede427.png
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1584468461/Collections/06%20Old-Time%20Sportsmen/people/03_692_tn81ti.png
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584468461/Collections/06%20Old-Time%20Sportsmen/people/03_692_tn81ti.png
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1584468461/Collections/06%20Old-Time%20Sportsmen/people/04_995_lzbv24.png
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584468461/Collections/06%20Old-Time%20Sportsmen/people/04_995_lzbv24.png
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1584468462/Collections/06%20Old-Time%20Sportsmen/people/05_1054_xnav5t.png
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584468462/Collections/06%20Old-Time%20Sportsmen/people/05_1054_xnav5t.png
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1584468462/Collections/06%20Old-Time%20Sportsmen/people/06_1056_iaq4ez.png
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584468462/Collections/06%20Old-Time%20Sportsmen/people/06_1056_iaq4ez.png
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1584468462/Collections/06%20Old-Time%20Sportsmen/people/07_ras768_qf7jel.png
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584468462/Collections/06%20Old-Time%20Sportsmen/people/07_ras768_qf7jel.png
 ---
 This gallery of uniquely American historical photos takes us back to a time, a century ago, when these wonderful images were captured and preserved for posterity on photo picture postcards. These vintage photographs each bear witness to memorable moments in the lives of these early 20th century American outdoorsmen and women.

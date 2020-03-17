@@ -36,6 +36,9 @@ export default {
     imgBack: {
       type: String
     },
+    imgBackLarge: {
+      type: String
+    },
     caption: {
       type: String
     },
@@ -78,13 +81,13 @@ export default {
     lightBoxOpen() {
       if (this.backTextIsHTML) {
         this.postcardImage = [{
-          'img': this.imgBack, 
+          'img': this.imgBackLarge, 
           'HTMLcaption': this.backText
         }]
       }
       else {
         this.postcardImage = [{
-          'img': this.imgBack, 
+          'img': this.imgBackLarge, 
           'caption': this.backText
         }]
       }
