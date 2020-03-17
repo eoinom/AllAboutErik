@@ -53,7 +53,7 @@
           </div>
 
           
-          <b-col style="text-align: left">            
+          <b-col style="text-align:left">            
             <g-image alt="ducks" v-if="headerRightImg != null" :src="headerRightImg" id="headerRightImg" style="max-width:389px"/>
           </b-col>
         </b-row>
@@ -75,25 +75,15 @@
       <b-container fluid class="slideshowOverlay">
         <b-row align-v="center">
 
-          <b-col>
-            <div id="postcardsSidebar" class="pb-5">
-              <div class="pb-2 pl-5 pr-3" style="float: left">
-                <flip-postcard
-                  :imgFront="postcardHistory.postcards[1].imgFront"
-                  :imgBack="postcardHistory.postcards[1].imgBack"
-                  :caption="postcardHistory.postcards[1].caption"
-                  :width="480"
-                  :height="297"
-                />
-              </div>
-            </div>
+          <b-col align-self="start" style="padding-top:250px">
+            <slideshow-zoom :slides="people_images" />
           </b-col>
           
           <b-col> 
             <div id="postcardHistory__textDiv">
               <h2 class="title">{{ postcardHistory.title }}</h2>
               <div class="pb-5">
-                <div class="pb-2 pl-5 pr-3" style="float: right">
+                <div class="pb-2 pl-5 pr-3" style="float:right">
                   <flip-postcard
                     :imgFront="postcardHistory.postcards[0].imgFront"
                     :imgBack="postcardHistory.postcards[0].imgBack"
@@ -105,10 +95,10 @@
                 <br />
                 <span v-html="postcardHistory.textPt1" class="postcardText" />
 
-                <img :src="postcardHistory.images[0].img" class="py-3 pr-3" style="float: left">
+                <img :src="postcardHistory.images[0].img" class="py-3 pr-3" style="float:left">
                 <span v-html="postcardHistory.textPt2" class="postcardText" />
 
-                <img :src="postcardHistory.images[1].img" class="pl-3" style="float: right;">
+                <img :src="postcardHistory.images[1].img" class="pl-3" style="float:right">
                 <span v-html="postcardHistory.textPt3" class="postcardText" />
               </div>
 
@@ -211,6 +201,9 @@
           title
           text
         }
+        people {
+          img
+        }
       }
     }
   }	
@@ -235,6 +228,7 @@
 <script scoped>
 import CollectionViewer from '../../components/CollectionViewer.vue'
 import FlipPostcard from '../../components/FlipPostcard.vue'
+import SlideshowZoom from '../../components/SlideshowZoom.vue'
 
 const slugify = require('@sindresorhus/slugify')
 const MarkdownIt = require('markdown-it')
@@ -305,6 +299,9 @@ export default {
     images() {
       return this.$page.OldTimeSportsmen.edges[0].node.images
     },
+    people_images() {
+      return this.$page.OldTimeSportsmen.edges[0].node.people
+    },
     collections() {
       return this.$static.Collections.edges[0].node.collections
     },    
@@ -348,7 +345,8 @@ export default {
 
   components: {
     CollectionViewer,
-    FlipPostcard
+    FlipPostcard,
+    SlideshowZoom
   },
 }
 </script>
