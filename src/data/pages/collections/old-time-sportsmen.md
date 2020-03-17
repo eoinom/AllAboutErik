@@ -175,5 +175,20 @@ about:
     Jakob Dulisse, who combed the Internet relentlessly for new and exciting
     material.</p> <p></p> <p>-Erik Jacobsen</p>
   title: About the Collection
+people:
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1584468461/Collections/06%20Old-Time%20Sportsmen/people/01_172_en54qz.png
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1584468462/Collections/06%20Old-Time%20Sportsmen/people/02_377_ede427.png
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1584468461/Collections/06%20Old-Time%20Sportsmen/people/03_692_tn81ti.png
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1584468461/Collections/06%20Old-Time%20Sportsmen/people/04_995_lzbv24.png
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1584468462/Collections/06%20Old-Time%20Sportsmen/people/05_1054_xnav5t.png
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1584468462/Collections/06%20Old-Time%20Sportsmen/people/06_1056_iaq4ez.png
+  - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/v1584468462/Collections/06%20Old-Time%20Sportsmen/people/07_ras768_qf7jel.png
 ---
 This gallery of uniquely American historical photos takes us back to a time, a century ago, when these wonderful images were captured and preserved for posterity on photo picture postcards. These vintage photographs each bear witness to memorable moments in the lives of these early 20th century American outdoorsmen and women.
