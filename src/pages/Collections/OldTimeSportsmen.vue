@@ -12,7 +12,7 @@
           <div id="headerItems">            
             <g-image :src="titleImg1Line" class="titleImg titleImg1Line" />
             <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
-            <div v-html="$page.OldTimeSportsmen.edges[0].node.content" class="collections_headerText" />
+            <div v-html="node.content" class="collections_headerText" />
 
             <b-row align-v="start" align-h="center" style="min-height:68px; padding-top:8px">
               
@@ -253,41 +253,44 @@ export default {
   },
 
   computed: {
+    node() {
+      return this.$page.OldTimeSportsmen.edges[0].node
+    },
     title() {
-      return this.$page.OldTimeSportsmen.edges[0].node.title
+      return this.node.title
     },
     titleImg1Line() {
-      return this.$page.OldTimeSportsmen.edges[0].node.titleImg1Line
+      return this.node.titleImg1Line
     },
     titleImg2Lines() {
-      return this.$page.OldTimeSportsmen.edges[0].node.titleImg2Lines
+      return this.node.titleImg2Lines
     },
     headerBgImg() {
-      return this.$page.OldTimeSportsmen.edges[0].node.headerBgImg
+      return this.node.headerBgImg
     },
     headerBgImgOpacity() {
-      return this.$page.OldTimeSportsmen.edges[0].node.hasOwnProperty('backgroundImgOpacity') ? this.$page.OldTimeSportsmen.edges[0].node.backgroundImgOpacity : 0.5
+      return this.node.hasOwnProperty('backgroundImgOpacity') ? this.node.backgroundImgOpacity : 0.5
     },
     headerLeftImg() {
-      return this.$page.OldTimeSportsmen.edges[0].node.headerLeftImg
+      return this.node.headerLeftImg
     },
     headerRightImg() {
-      return this.$page.OldTimeSportsmen.edges[0].node.headerRightImg
+      return this.node.headerRightImg
     },
     sportsmenSiteHoverImg() {
-      return this.$page.OldTimeSportsmen.edges[0].node.sportsmenSiteHoverImg
+      return this.node.sportsmenSiteHoverImg
     },
     sportsmenSiteLink() {
-      return this.$page.OldTimeSportsmen.edges[0].node.sportsmenSiteLink
+      return this.node.sportsmenSiteLink
     },
     sportsmenBookHoverImg() {
-      return this.$page.OldTimeSportsmen.edges[0].node.sportsmenBookHoverImg
+      return this.node.sportsmenBookHoverImg
     },
     sportsmenBookLink() {
-      return this.$page.OldTimeSportsmen.edges[0].node.sportsmenBookLink
+      return this.node.sportsmenBookLink
     },
     footerImg() {
-      return this.$page.OldTimeSportsmen.edges[0].node.footerImg
+      return this.node.footerImg
     },
     headerStyles() {
       return {
@@ -301,10 +304,10 @@ export default {
       }
     },
     images() {
-      return this.$page.OldTimeSportsmen.edges[0].node.images
+      return this.node.images
     },
     people_images() {
-      return this.$page.OldTimeSportsmen.edges[0].node.people
+      return this.node.people
     },
     collections() {
       return this.$static.Collections.edges[0].node.collections
@@ -312,8 +315,11 @@ export default {
     collection_names() {
       return this.collections.map(x => x.title);
     },
+    collectionIndex() {
+      return this.collection_names.indexOf(this.title)
+    },
     prev_collection() {
-      let i = this.collection_names.indexOf(this.title)
+      const i = this.collectionIndex
       if (i === 0)
         var prev_i = this.collection_names.length - 1
       else
@@ -323,7 +329,7 @@ export default {
       return collection
     },
     next_collection() {
-      let i = this.collection_names.indexOf(this.title)      
+      const i = this.collectionIndex 
       if (i === this.collection_names.length - 1)
         var next_i = 0
       else
@@ -333,10 +339,10 @@ export default {
       return collection
     },
     postcardHistory() {
-      return this.$page.OldTimeSportsmen.edges[0].node.postcardHistory
+      return this.node.postcardHistory
     },
     about() {
-      return this.$page.OldTimeSportsmen.edges[0].node.about
+      return this.node.about
     }
   },
 

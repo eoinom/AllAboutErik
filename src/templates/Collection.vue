@@ -109,8 +109,11 @@ export default {
     collection_names() {
       return this.collections.map(x => x.title);
     },
+    collectionIndex() {
+      return this.collection_names.indexOf(this.title)
+    },
     prev_collection() {
-      let i = this.collection_names.indexOf(this.title)
+      const i = this.collectionIndex
       if (i === 0)
         var prev_i = this.collection_names.length - 1
       else
@@ -120,7 +123,7 @@ export default {
       return collection
     },
     next_collection() {
-      let i = this.collection_names.indexOf(this.title)      
+      const i = this.collectionIndex     
       if (i === this.collection_names.length - 1)
         var next_i = 0
       else
