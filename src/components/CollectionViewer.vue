@@ -35,8 +35,7 @@
               :style="`transform: translate3d(${currentIndex * -100}%, 0px, 0px);`"
               class="collection-viewer__image-container"
             >
-              <div class="collection-viewer__image">
-                
+              <div class="collection-viewer__image">                
                   <image-magnifier 
                     :src="image.img"
                     :zoom-src="image.img"
@@ -49,9 +48,7 @@
                     :mask-show="true"
                     :show-cursor="false"
                     @imgloaded="imageLoaded($event, imageIndex)"
-                  />
-                  
-
+                  />                 
               </div>
             </li>
           </ul>
@@ -168,7 +165,7 @@ export default {
 
   watch: {
     index(val) {
-      if (!document) return;
+      if (!document)  return;      
       this.currentIndex = val;
       if (this.disableScroll && typeof val === 'number') {
         document.body.style.overflow = 'hidden';
@@ -176,9 +173,9 @@ export default {
         document.body.style.overflow = this.bodyOverflowStyle;
       }
     },
-    currentIndex(val) {
-      this.setImageLoaded(val);
-    },
+    // currentIndex(val) {
+    //   this.setImageLoaded(val);
+    // },
     
   },
 
@@ -265,43 +262,24 @@ export default {
       return {
         top,
         left,
-      };
+      }
+    },
+    observeNavLinksPosition() {
+      let interval = setInterval(function () {    
+        let navLinksEl = document.getElementById('navLinks')
+        this.headerHeight = this.getElementOffset(navLinksEl).top
+      }.bind(this), 500);
     }
   },
 
   mounted() {
-    if (!document) return;
+    if (!document)  return;
+
+    this.observeNavLinksPosition()
+    
     this.bodyOverflowStyle = document.body.style.overflow;
     this.bindEvents();
-
-    // this.headerEl = document.getElementById('header');
-    // this.headerHeight = this.headerEl.getBoundingClientRect().height;
-
-    // let navLinksEl = document.getElementById('navLinks');
-    // this.headerHeight = navLinksEl.getBoundingClientRect().top;
-    this.$nextTick(()=>{
-      let navLinksEl = document.getElementById('navLinks');
-      // this.headerHeight = navLinksEl.getBoundingClientRect().top;
-      this.headerHeight = this.getElementOffset(navLinksEl).top;
-    })
   },
-
-  // beforeUpdate() {
-  //   this.headerEl = document.getElementById('header');
-  //   this.headerHeight = headerEl.getBoundingClientRect().height;
-  // },
-  updated() {
-    // this.headerEl = document.getElementById('header');
-    // this.headerHeight = this.headerEl.getBoundingClientRect().height;
-    // let navLinksEl = document.getElementById('navLinks');
-    // this.headerHeight = navLinksEl.getBoundingClientRect().top;
-    this.$nextTick(()=>{
-      let navLinksEl = document.getElementById('navLinks');
-      // this.headerHeight = navLinksEl.getBoundingClientRect().top;
-      this.headerHeight = this.getElementOffset(navLinksEl).top;
-    })
-  },
-
 
   beforeDestroy() {
     if (!document) return;
