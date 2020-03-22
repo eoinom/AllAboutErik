@@ -8,28 +8,23 @@
       :audioFadeOutDuration="$page.Collections.edges[0].node.bgAudioFadeOutDuration"
     />
 
-    <b-container fluid class="main-col">
-
-      <!-- HEADER SLIDESHOW -->
-      <!-- <b-row no-gutters style="max-height:833px; width:auto;" class="mb-1 px-1"> -->
+    <b-container fluid class="main-col" :style="mainColStyles">
       <b-row no-gutters class="mb-1 px-1">
         <b-col class="slideshowCol">
 
-          <!-- <div class="slideshow"> -->
-            <slideshow-kenburns-small :slides="slides" />
-          <!-- </div> -->
-          
-          <b-container fluid class="slideshowOverlay">
-            <b-row>
-              <b-col class="mainContent">
-                
-                <g-image alt="Collections title image" v-if="titleImg != null" :src="titleImg" id="titleImg" class="mb-md-1 mb-lg-2 mb-xl-3"/>
-                
-                <div v-html="slideshowText" id="slideshowText" />    
+          <!-- HEADER SLIDESHOW -->
+          <slideshow-kenburns-small :slides="slides" />
 
-              </b-col>
-            </b-row>
-          </b-container>
+          <!-- SLIDESHOW OVERLAY -->
+          <div class="slideshowOverlay">
+            <div class="mainContent">
+
+              <g-image alt="Collections title image" v-if="titleImg != null" :src="titleImg" id="titleImg" class="mb-md-1 mb-lg-2 mb-xl-3"/>
+
+              <div v-html="slideshowText" id="slideshowText" />
+
+            </div>
+          </div>
 
         </b-col>
       </b-row>
@@ -37,7 +32,7 @@
 
 
     <b-container fluid class="collections">
-      <b-row no-gutters align-h="center" class="mb-1"> 
+      <b-row no-gutters align-h="center" class="collections mb-1">
 
         <div v-for="(collection, index) in collections" :key="index" style="max-width:80%">
           <b-col class="p-0 mx-0 mx-sm-1 mx-md-2 mx-xl-1 my-2" >
@@ -105,7 +100,8 @@ export default {
 
   data() {
     return {
-      videoIndex: null
+      videoIndex: null,
+      mainColHeight: 600
     }
   },
 
@@ -124,10 +120,51 @@ export default {
     // },
     collections() {
       return this.$page.Collections.edges[0].node.collections
-    },  
+    },
+    mainColStyles() {
+      return {
+        height: this.mainColHeight + 'px'
+      }
+    }
   },
 
-  methods: {
+  methods: {    
+    getElementOffset(el) {
+      let top = 0
+      // let left = 0
+      let bottom = 0
+      let element = el
+      let height = el.offsetHeight
+
+      // Loop through the DOM tree
+      // and add it's parent's offset to get page offset
+      do {
+        top += element.offsetTop || 0;
+        // left += element.offsetLeft || 0;
+        element = element.offsetParent
+      } while (element)
+
+      bottom = top + height
+
+      return {
+        top,
+        // left,
+        bottom,
+      }
+    }
+  },
+
+  mounted() {
+    if (!document)  
+      return;
+
+    let textEl = document.getElementById('slideshowText')
+    this.mainColHeight = this.getElementOffset(textEl).bottom
+
+    window.addEventListener('resize', () => {
+      let textEl = document.getElementById('slideshowText')
+      this.mainColHeight = this.getElementOffset(textEl).bottom
+    })
   },
 
   components: {
@@ -172,9 +209,9 @@ export default {
 }
 
 .main-col {
-  /* padding: 0 6%; */
   max-width: 1458px;
-  height: 670px;
+  min-height: 600px;
+  margin-bottom: 30px;
 }
 
 .slideshowCol {
@@ -198,7 +235,7 @@ export default {
   position: absolute;
 }
 
-.slideshowOverlay .mainContent{
+.mainContent{
   /* position: absolute; */
   bottom: 0;
   width: 100%;
@@ -249,7 +286,7 @@ export default {
   .main-col {
     margin-bottom: 100px;
   }
-  .slideshowOverlay .mainContent {
+  .mainContent {
     /* padding-bottom: 0.5%; */
     padding-left: 15%;
     padding-right: 15%;
@@ -272,8 +309,9 @@ export default {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .main-col {
-    margin-bottom: 30px;
+  .mainContent {
+    padding-left: 12%;
+    padding-right: 12%;
   }
   #slideshowText {
     font-size: calc(1.125rem + 1.2 * (100vw - 576px) / (768 - 576) ); /* varies between 18px (1.125rem) and 19.2px */
@@ -286,8 +324,9 @@ export default {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .main-col {
-    margin-bottom: 30px;
+  .mainContent {
+    padding-left: 12%;
+    padding-right: 12%;
   }
   #slideshowText {
     font-size: calc(1.2rem + 1.8 * (100vw - 768px) / (992 - 768) ); /* varies between 19.2px (1.2rem) and 21px */
@@ -296,9 +335,10 @@ export default {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {  
-  .main-col {
-    margin-bottom: 30px;
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .mainContent {
+    padding-left: 12%;
+    padding-right: 12%;
   }
   #slideshowText {
     font-size: 1.3125rem;
@@ -308,7 +348,24 @@ export default {
 
 
 /* Special breakpoint */
-@media (min-width: 1500px) and (max-width: 2539.98px) {  
+@media (min-width: 1200px) and (max-width: 1499.98px) {
+  .mainContent {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+}
+
+
+/* Special breakpoint */
+@media (min-width: 1500px) and (max-width: 1749.98px) {
+  .mainContent {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+/* Special breakpoint */
+@media (min-width: 1500px) and (max-width: 2539.98px) {
   .collections {
     max-width: 1500px;
   }
