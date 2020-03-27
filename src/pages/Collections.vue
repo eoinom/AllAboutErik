@@ -1,5 +1,5 @@
 <template>
-  <Layout>  
+  <Layout>
 
     <BackgroundMusic
       :audioFile="$page.Collections.edges[0].node.bgAudio"
@@ -31,19 +31,31 @@
     </b-container>
 
 
-    <b-container fluid class="collections">
-      <b-row no-gutters align-h="center" class="collections mb-1">
+    <b-container fluid class="collectionsContainer">
+      <b-row no-gutters align-h="center" class="collectionsRow mb-1">
 
-        <div v-for="(collection, index) in collections" :key="index" style="max-width:80%">
-          <b-col class="p-0 mx-0 mx-sm-1 mx-md-2 mx-xl-1 my-2" >
-            <collection-thumbnail :collection="collection" />
+        <!-- <div v-for="(collection, index) in collections" :key="index" class="collectionThumbnails"> -->
+          <!-- <b-col cols="6" md="4" xl="3" class="p-0 mx-0 mx-sm-1 mx-md-2 mx-xl-1 my-2" > -->
+          <!-- <b-col cols="" md="" xl="" xxl="" class="collectionsCols p-0 mx-0 mx-sm-1 mx-md-2 mx-xl-1 my-2" > -->
+          <!-- <b-col class="p-0 mx-0 mx-sm-1 mx-md-2 mx-xl-1 my-2" > -->
+            <!-- <collection-thumbnail :collection="collection" />
           </b-col>
-        </div>
+        </div> -->
+
+        <b-col
+          v-for="(collection, index) in collections"
+          :key="index"
+          cols=""
+          align-self="center"
+          class="collectionsCols p-0 mx-0 mx-sm-1 mx-md-2 mx-xl-1 my-2"
+        >
+          <collection-thumbnail :collection="collection" />
+        </b-col>
 
       </b-row>
-    </b-container> 
+    </b-container>
 
-    <ScrollToTop 
+    <ScrollToTop
       text="BACK TO THE TOP"
       :includeArrow="true"
     />
@@ -62,7 +74,7 @@
         bgAudio
         bgAudioDuration
         bgAudioFadeInDuration
-        bgAudioFadeOutDuration      
+        bgAudioFadeOutDuration
         content
         slides {
           orderNo
@@ -79,7 +91,7 @@
         }
       }
     }
-  }	
+  }
 }
 </page-query>
 
@@ -91,7 +103,7 @@ import ScrollToTop from '../components/ScrollToTop.vue'
 import SlideshowImages from '../components/SlideshowImages2.vue'
 import SlideshowKenBurnsSmall from '../components/SlideshowKenBurnsSmall.vue'
 
-export default { 
+export default {
   metaInfo() {
     return {
       title: this.$page.Collections.edges[0].node.pageTitle
@@ -115,7 +127,7 @@ export default {
     slideshowText(){
       return this.$page.Collections.edges[0].node.content
     },
-    // slide_images() {    
+    // slide_images() {
     //   return this.slides.map(a => a.img)
     // },
     collections() {
@@ -128,7 +140,7 @@ export default {
     }
   },
 
-  methods: {    
+  methods: {
     getElementOffset(el) {
       let top = 0
       // let left = 0
@@ -155,7 +167,7 @@ export default {
   },
 
   mounted() {
-    if (!document)  
+    if (!document)
       return;
 
     let textEl = document.getElementById('slideshowText')
@@ -216,7 +228,7 @@ export default {
 
 .slideshowCol {
   position: relative;
-  max-height: 1224px; 
+  max-height: 1224px;
   width: auto;
   text-align: center;
 }
@@ -258,21 +270,32 @@ export default {
 }
 
 #slideshowText {
-  color: #FFFFFF;  
+  color: #FFFFFF;
   font-family: 'NeueHaasGroteskText Pro55';
   font-feature-settings: 'liga';
   font-size: 1.375rem;
   font-weight: 400;
   line-height: 2.0625rem;
-  letter-spacing: 2px;  
+  letter-spacing: 2px;
   text-align: justify;
   /* text-shadow: 2px 2px 5px rgba(0,0,0,0.65); */
   text-shadow: 0px 0px 250px #1C0F07,0px 0px 250px #1C0F07/* glow */, 1px 1px 2px rgba(28,16,23,0.89)/* drop shadow*/;
   /* width: 90%; */
 }
 
-.collections {
+.collectionsContainer,
+.collectionsRow {
   padding: 0;
+  max-width: 2543px;   /* Full width for a 27" screen */
+}
+
+/* .collectionThumbnails {
+  max-width: 80%;
+} */
+
+.collectionsCols {
+  flex: 0 0 13.96%;
+  max-width: 13.96%;
 }
 
 
@@ -281,7 +304,7 @@ export default {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .layout, .main-col {
-    padding: 0 0;   
+    padding: 0 0;
   }
   .main-col {
     margin-bottom: 100px;
@@ -332,6 +355,14 @@ export default {
     font-size: calc(1.2rem + 1.8 * (100vw - 768px) / (992 - 768) ); /* varies between 19.2px (1.2rem) and 21px */
     line-height: 24px;
   }
+  .collectionsRow {
+    width: calc(600px + 82 * (100vw - 768px)/(992 - 768));
+    margin: 0 auto;
+  }
+  .collectionsCols {
+    flex: 0 0 36.6%;
+    max-width: 36.6%;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -344,6 +375,14 @@ export default {
     font-size: 1.3125rem;
     line-height: 33px;
   }
+  .collectionsRow {
+    width: calc(800px + 82 * (100vw - 992px)/(1199 - 992));
+    margin: 0 auto;
+  }
+  .collectionsCols {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
 }
 
 
@@ -352,6 +391,14 @@ export default {
   .mainContent {
     padding-left: 12%;
     padding-right: 12%;
+  }
+  .collectionsRow {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .collectionsCols {
+    flex: 0 0 32%;
+    max-width: 32%;
   }
 }
 
@@ -366,8 +413,13 @@ export default {
 
 /* Special breakpoint */
 @media (min-width: 1500px) and (max-width: 2539.98px) {
-  .collections {
+  .collectionsRow {
     max-width: 1500px;
+    margin: 0 auto;
+  }
+  .collectionsCols {
+    flex: 0 0 24%;
+    max-width: 24%;
   }
 }
 

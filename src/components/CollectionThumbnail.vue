@@ -1,6 +1,5 @@
 <template>
 
-  <!-- <div class="collection"> -->
   <g-link :to="'/collections/' + link" class="collection">
     <div class="collectionImgDiv">
       <img :src="image" class="thumbnailImg hideOnHover" />
@@ -12,7 +11,6 @@
       <span class="viewCollectionText text">VIEW THIS COLLECTION</span>
     </div>
   </g-link>
-  <!-- </div> -->
 
 </template>
 
@@ -48,15 +46,19 @@ export default {
 
 .collection {
   cursor: pointer;
+  display: block;
+  position: relative;
+  width: 354.8px;
+  height: 552px;
+  margin: 0 auto;
 }
 
 .collectionImgDiv {
   padding: 0;
-  height: 552px;
-  /* width: calc((100vw - (7 * 2 * 4px)) / 7); */
-  /* width: calc((100vw - (7 * 2 * 4px) - 20px) / 7); */
-  width: 354.8px;
-  max-width: 100%;
+  /* height: 552px; */
+  /* max-width: 354.8px; */
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,6 +123,40 @@ export default {
 }
 .collection:hover .viewCollectionText {
   display: inline;
+}
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .collection {
+    width: 248.36px;
+    height: 386.4px;
+  }
+  .text {
+    /* line-height: 17px;
+    line-height: 1;
+    width: calc(100% - 8px - 16px);
+    padding: 18px 0 18px 16px; */
+    transform:scale(0.7,0.7);
+    transform-origin: left;
+    width: auto;
+  }
+
+  .titleText {
+    /* font-size: 2.25rem;
+    letter-spacing: 9px;
+    top: 18.2%; */
+
+    /* transform-origin: initial;    
+    transform:scale(0.7,0.7);
+    transform-origin: left; */
+  }
+  .viewCollectionText{
+    /* font-size: 1.12rem;
+    letter-spacing: 2px;
+    top: 72%; */
+  }
 }
 
 </style>
