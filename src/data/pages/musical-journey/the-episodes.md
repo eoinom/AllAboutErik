@@ -53,7 +53,7 @@ videos:
   - duration: 1202
     orderNo: 5
     shortTitle: San Francisco Late Sixties
-    subText: 'Erik moves to San Francisco and goes #1 with Normal Greenbaum and others'
+    subText: 'Erik moves to San Francisco and goes #1 with Norman Greenbaum and others'
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1570483854/Musical%20Journey/The%20Episodes/episode_5_image-sm_y19ybi.jpg
     title: Episode Five - San Francisco Late Sixties
