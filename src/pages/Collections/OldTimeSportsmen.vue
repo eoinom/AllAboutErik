@@ -16,13 +16,13 @@
 
             <b-row align-v="start" align-h="center" style="min-height:68px; padding-top:8px">
               
-              <div v-if="sportsmenSiteHoverImg != null" id="sportsmenSiteHoverImgDiv">     
+              <!-- <div v-if="sportsmenSiteHoverImg != null" id="sportsmenSiteHoverImgDiv">     
                 <a :href="sportsmenSiteLink" target="_blank">       
                   <g-image class="sportsmenSiteHoverImg" alt="Fishing fly line" :src="sportsmenSiteHoverImg" :class="{ showImage: sportsmenSiteHover }" />
                 </a>
-              </div>
+              </div> -->
               
-              <div style="margin-right:100px">
+              <!-- <div style="margin-right:100px">
                 <a :href="sportsmenSiteLink" target="_blank">
                   <div class="sportsmenLinkText collections_headerLinkText" @mouseover="sportsmenSiteHover = true" @mouseleave="sportsmenSiteHover = false">
                     <span>COME VISIT THE</span>
@@ -30,6 +30,27 @@
                     <span>Old-Time Sportsmen Website</span>
                   </div>
                 </a>
+              </div> -->
+
+              <div 
+                v-if="sportsmenSiteHoverImg != null" 
+                v-scroll-to="{ el:'#postcardHistory', duration:1500, easing:'ease' }"
+                id="sportsmenSiteHoverImgDiv"
+              >      
+                <g-image class="sportsmenSiteHoverImg" alt="Fishing fly line" :src="sportsmenSiteHoverImg" :class="{ showImage: sportsmenSiteHover }" />
+              </div>
+
+              <div style="margin-right:100px">
+                <div 
+                  v-scroll-to="{ el:'#postcardHistory', duration:1500, easing:'ease' }"
+                  class="sportsmenLinkText collections_headerLinkText" 
+                  @mouseover="sportsmenSiteHover = true" 
+                  @mouseleave="sportsmenSiteHover = false" 
+                >
+                  <span>MORE INFORMATION ON</span>
+                  <br>
+                  <span>Old-Time Sportsmen</span>
+                </div>
               </div>
 
               
@@ -38,7 +59,6 @@
                   <g-image class="sportsmenBookHoverImg" alt="Old log cabin" :src="sportsmenBookHoverImg" :class="{ showImage: sportsmenBookHover }" />
                 </a>
               </div>
-
               
               <div style="margin-right:150px">
                 <a :href="sportsmenBookLink" target="_blank">
@@ -280,9 +300,9 @@ export default {
     sportsmenSiteHoverImg() {
       return this.node.sportsmenSiteHoverImg
     },
-    sportsmenSiteLink() {
-      return this.node.sportsmenSiteLink
-    },
+    // sportsmenSiteLink() {
+    //   return this.node.sportsmenSiteLink
+    // },
     sportsmenBookHoverImg() {
       return this.node.sportsmenBookHoverImg
     },
