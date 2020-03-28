@@ -94,7 +94,10 @@ export default {
   font-feature-settings: 'liga';
   line-height: 1;
   width: calc(100% - 8px - 16px);
-  padding: calc(var(--scale)*(18px 0px 18px 16px));
+  padding-top: calc(var(--scale)*18px);
+  padding-bottom: calc(var(--scale)*18px);
+  padding-right: 0px;
+  padding-left: calc(var(--scale)*16px);
   text-transform: uppercase;
 }
 
