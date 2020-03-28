@@ -45,7 +45,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Lora:700&display=swap');
 
 * {
-  --defaultWidth: 354.8px;
+  --defaultWidth: 357.8px;
   --defaultHeight: 552px;
   --scale: 1.0;
 }

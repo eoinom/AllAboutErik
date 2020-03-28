@@ -8,12 +8,12 @@
       :audioFadeOutDuration="$page.Collections.edges[0].node.bgAudioFadeOutDuration"
     />
 
-    <b-container fluid class="main-col" :style="mainColStyles">
+    <b-container fluid class="main-col">
       <b-row no-gutters class="mb-1 px-1">
         <b-col class="slideshowCol">
 
           <!-- HEADER SLIDESHOW -->
-          <slideshow-kenburns-small :slides="slides" />
+          <slideshow-kenburns-small :slides="slides" :height="slideshowHeight" />
 
           <!-- SLIDESHOW OVERLAY -->
           <div class="slideshowOverlay">
@@ -33,15 +33,6 @@
 
     <b-container fluid class="collectionsContainer">
       <b-row no-gutters align-h="center" class="collectionsRow mb-1">
-
-        <!-- <div v-for="(collection, index) in collections" :key="index" class="collectionThumbnails"> -->
-          <!-- <b-col cols="6" md="4" xl="3" class="p-0 mx-0 mx-sm-1 mx-md-2 mx-xl-1 my-2" > -->
-          <!-- <b-col cols="" md="" xl="" xxl="" class="collectionsCols p-0 mx-0 mx-sm-1 mx-md-2 mx-xl-1 my-2" > -->
-          <!-- <b-col class="p-0 mx-0 mx-sm-1 mx-md-2 mx-xl-1 my-2" > -->
-            <!-- <collection-thumbnail :collection="collection" />
-          </b-col>
-        </div> -->
-
         <b-col
           v-for="(collection, index) in collections"
           :key="index"
@@ -49,9 +40,8 @@
           align-self="center"
           class="collectionsCols p-0 mx-0 my-2"
         >
-          <collection-thumbnail :collection="collection" />
+          <collection-thumbnail :collection="collection" />          
         </b-col>
-
       </b-row>
     </b-container>
 
@@ -127,16 +117,12 @@ export default {
     slideshowText(){
       return this.$page.Collections.edges[0].node.content
     },
-    // slide_images() {
-    //   return this.slides.map(a => a.img)
-    // },
     collections() {
       return this.$page.Collections.edges[0].node.collections
     },
-    mainColStyles() {
-      return {
-        height: this.mainColHeight + 'px'
-      }
+    slideshowHeight() {
+      let height = this.mainColHeight + 30
+      return height + 'px'
     }
   },
 
@@ -213,10 +199,11 @@ export default {
 }
 
 * {
-  /* --collectionWidth: 354.8px;
-  --collectionScale: 1.0; */
-  --collectionsDivWidth: 2543px;
+  --collectionWidth: 357.8px;
+  --collectionScale: 1.0;
   --maxCollectionsPerRow: 7;
+  --extraMargin: 6px;
+  --collectionsDivWidth: calc(var(--maxCollectionsPerRow) * (var(--collectionScale)*var(--collectionWidth) + var(--extraMargin)));   /* Full width for a 27" screen */
 }
 
 .layout {
@@ -230,7 +217,6 @@ export default {
 .main-col {
   max-width: 1458px;
   min-height: 600px;
-  margin-bottom: 30px;
 }
 
 .slideshowCol {
@@ -238,28 +224,20 @@ export default {
   max-height: 1224px;
   width: auto;
   text-align: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-/* .slideshow {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-} */
-
 .slideshowOverlay {
-  z-index: 100;
-  height: 100%;
-  top: 0;
   position: absolute;
+  top: 0;
+  z-index: 100;
 }
 
 .mainContent{
-  /* position: absolute; */
   bottom: 0;
   width: 100%;
-  /* padding-bottom: 2%; */
-  margin-bottom: -55px;
+  padding-bottom: 20px;
   padding-top: 85px;
   padding-left: 5%;
   padding-right: 5%;
@@ -285,16 +263,13 @@ export default {
   line-height: 2.0625rem;
   letter-spacing: 2px;
   text-align: justify;
-  /* text-shadow: 2px 2px 5px rgba(0,0,0,0.65); */
   text-shadow: 0px 0px 250px #1C0F07,0px 0px 250px #1C0F07/* glow */, 1px 1px 2px rgba(28,16,23,0.89)/* drop shadow*/;
-  /* width: 90%; */
 }
 
 .collectionsContainer,
 .collectionsRow {
   padding: 0;
-  /* margin: 0 auto; */
-  max-width: var(--collectionsDivWidth);   /* Full width for a 27" screen */
+  max-width: var(--collectionsDivWidth);
 }
 
 .collectionsCols {
@@ -306,24 +281,18 @@ export default {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+  * {
+    --collectionScale: 0.65;
+    --maxCollectionsPerRow: 1;
+  }
   .layout, .main-col {
     padding: 0 0;
   }
-  .main-col {
-    margin-bottom: 100px;
-  }
   .mainContent {
-    /* padding-bottom: 0.5%; */
     padding-left: 15%;
     padding-right: 15%;
   }
-  /* #titleImg {
-    width: 100%;
-    min-width: 100%;
-  } */
   #slideshowText {
-    /* font-size: 0.9rem;
-    line-height: 14px; */
     font-size: calc(1rem + 2 * (100vw - 375px) / (576 - 375) ); /* varies between 16px (1rem) and 18px */
     line-height: calc(1.0625rem + 3 * (100vw - 375px) / (576 - 375) ); /* varies between 17px (1.0625rem) and 20px */
     margin-bottom: 0px;
@@ -331,14 +300,14 @@ export default {
   #slideshowText > p {
     margin-bottom: 0px !important;
   }
-  * {
-    --collectionsDivWidth: 230.62px;
-    --maxCollectionsPerRow: 1;
-  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
+  * {
+    --collectionScale: 0.55934;
+    --maxCollectionsPerRow: 2;
+  }
   .mainContent {
     padding-left: 12%;
     padding-right: 12%;
@@ -350,14 +319,14 @@ export default {
   #slideshowText p {
     margin-bottom: 0px !important;
   }
-  * {
-    --collectionsDivWidth: 420.91px;
-    --maxCollectionsPerRow: 2;
-  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  * {
+    --collectionScale: 0.7;
+    --maxCollectionsPerRow: 2;
+  }
   .mainContent {
     padding-left: 12%;
     padding-right: 12%;
@@ -366,14 +335,14 @@ export default {
     font-size: calc(1.2rem + 1.8 * (100vw - 768px) / (992 - 768) ); /* varies between 19.2px (1.2rem) and 21px */
     line-height: 24px;
   }
-  * {
-    --collectionsDivWidth: 520.72px;
-    --maxCollectionsPerRow: 2;
-  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  * {
+    --collectionScale: 0.7;
+    --maxCollectionsPerRow: 3;
+  }
   .mainContent {
     padding-left: 12%;
     padding-right: 12%;
@@ -382,25 +351,18 @@ export default {
     font-size: 1.3125rem;
     line-height: 33px;
   }
-  * {
-    --collectionsDivWidth: 781.08px;
-    --maxCollectionsPerRow: 3;
-  }
 }
 
 
 /* Special breakpoint */
 @media (min-width: 1200px) and (max-width: 1499.98px) {
-  /* * {
+  * {
     --collectionScale: 0.9;
-  } */
+    --maxCollectionsPerRow: 3;
+  }
   .mainContent {
     padding-left: 12%;
     padding-right: 12%;
-  }
-  * {
-    --collectionsDivWidth: 993.93px;
-    --maxCollectionsPerRow: 3;
   }
 }
 
@@ -416,7 +378,6 @@ export default {
 /* Special breakpoint */
 @media (min-width: 1500px) and (max-width: 2539.98px) {
   * {
-    --collectionsDivWidth: 1468px;
     --maxCollectionsPerRow: 4;
   }
 }

@@ -9,6 +9,7 @@
       leave-active-class="SlideshowKenBurns__leaveActive"
       leave-to-class="SlideshowKenBurns__leaveTo"
       class="SlideshowKenBurns__slides"
+      :style="slideshowStyles"
     >
       <img
         v-for="(image, index) in images"
@@ -34,6 +35,10 @@ export default {
       default: () => [],
       type: Array,
     },
+    height: {
+      default: '40vh',
+      type: String,
+    },
   },
 
   data() {
@@ -48,6 +53,11 @@ export default {
     images() {    
       return this.slides.map(a => a.img)
     },
+    slideshowStyles() {
+      return {
+        '--height': this.height
+      }
+    }
   },
 
   methods: {
@@ -104,7 +114,6 @@ export default {
     },
 
     interval(index) {
-      // return 1000*this.slides[index].duration
       return 5000;
     },
 
@@ -174,17 +183,13 @@ export default {
     position: relative;
     display: flex;
     justify-content: center;
-
-    // padding-bottom: 100vh;
-    padding-bottom: 40vh;
+    padding-bottom: var(--height);
   }
 
   &__image {
     position: absolute;
     width: auto;
-    height: auto;
-    // min-height: 100%;
-    // min-width: 100%;    
+    height: auto;   
     overflow: hidden;  
     opacity: 0.62;    
     animation-duration: 8s;
@@ -200,22 +205,4 @@ export default {
   }  
 }
 
-
-/* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
-
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
-}
 </style>
