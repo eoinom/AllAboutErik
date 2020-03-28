@@ -44,19 +44,23 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lora:700&display=swap');
 
+* {
+  --defaultWidth: 354.8px;
+  --defaultHeight: 552px;
+  --scale: 1.0;
+}
+
 .collection {
   cursor: pointer;
   display: block;
   position: relative;
-  width: 354.8px;
-  height: 552px;
+  width: calc(var(--scale) * var(--defaultWidth));
+  height: calc(var(--scale) * var(--defaultHeight));
   margin: 0 auto;
 }
 
 .collectionImgDiv {
   padding: 0;
-  /* height: 552px; */
-  /* max-width: 354.8px; */
   width: 100%;
   height: 100%;
   display: flex;
@@ -87,12 +91,11 @@ export default {
 .text {
   display: block;
   text-align: left;
-  line-height: 17px;
   font-feature-settings: 'liga';
   line-height: 1;
   width: calc(100% - 8px - 16px);
-  padding: 18px 0 18px 16px;
-  text-transform: uppercase;  
+  padding: calc(var(--scale)*(18px 0 18px 16px));
+  text-transform: uppercase;
 }
 
 .titleText {
@@ -100,8 +103,8 @@ export default {
   background-color: rgba(221,221,221,0.74);
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
-  font-size: 2.25rem;
-  letter-spacing: 9px;
+  font-size: calc(var(--scale) * 2.25rem);
+  letter-spacing: calc(var(--scale) * 9px);
   position: absolute;
   top: 18.2%;
 }
@@ -115,8 +118,8 @@ export default {
   background-color: black;
   font-family: 'Lora', serif;
   font-weight: 700;
-  font-size: 1.12rem;
-  letter-spacing: 2px;
+  font-size: calc(var(--scale) * 1.12rem);
+  letter-spacing: calc(var(--scale) * 2px);
   position: absolute;
   top: 72%;
   display: none;
@@ -126,37 +129,40 @@ export default {
 }
 
 
+/* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .collection {
-    width: 248.36px;
-    height: 386.4px;
-  }
-  .text {
-    /* line-height: 17px;
-    line-height: 1;
-    width: calc(100% - 8px - 16px);
-    padding: 18px 0 18px 16px; */
-    transform:scale(0.7,0.7);
-    transform-origin: left;
-    width: auto;
-  }
-
-  .titleText {
-    /* font-size: 2.25rem;
-    letter-spacing: 9px;
-    top: 18.2%; */
-
-    /* transform-origin: initial;    
-    transform:scale(0.7,0.7);
-    transform-origin: left; */
-  }
-  .viewCollectionText{
-    /* font-size: 1.12rem;
-    letter-spacing: 2px;
-    top: 72%; */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  * {    
+    --scale: 0.65;
   }
 }
 
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  * {    
+    --scale: 0.55934;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  * {    
+    --scale: 0.7;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  * {    
+    --scale: 0.7;
+  }
+}
+
+/* Special breakpoint */
+@media (min-width: 1200px) and (max-width: 1499.98px) {
+  * {    
+    --scale: 0.9;
+  }
+}
 </style>
