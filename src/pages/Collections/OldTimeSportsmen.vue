@@ -15,22 +15,6 @@
             <div v-html="node.content" class="collections_headerText" />
 
             <b-row align-v="start" align-h="center" style="min-height:68px; padding-top:8px">
-              
-              <!-- <div v-if="sportsmenSiteHoverImg != null" id="sportsmenSiteHoverImgDiv">     
-                <a :href="sportsmenSiteLink" target="_blank">       
-                  <g-image class="sportsmenSiteHoverImg" alt="Fishing fly line" :src="sportsmenSiteHoverImg" :class="{ showImage: sportsmenSiteHover }" />
-                </a>
-              </div> -->
-              
-              <!-- <div style="margin-right:100px">
-                <a :href="sportsmenSiteLink" target="_blank">
-                  <div class="sportsmenLinkText collections_headerLinkText" @mouseover="sportsmenSiteHover = true" @mouseleave="sportsmenSiteHover = false">
-                    <span>COME VISIT THE</span>
-                    <br>
-                    <span>Old-Time Sportsmen Website</span>
-                  </div>
-                </a>
-              </div> -->
 
               <div 
                 v-if="sportsmenSiteHoverImg != null" 
@@ -54,20 +38,20 @@
               </div>
 
               
-              <div v-if="sportsmenBookHoverImg != null" id="sportsmenBookHoverImgDiv">   
-                <a :href="sportsmenBookLink" target="_blank">         
+              <div v-if="sportsmenBookHoverImg != null" id="sportsmenBookHoverImgDiv">  
+                <g-link to="/publications/old-time-sportsmen">      
                   <g-image class="sportsmenBookHoverImg" alt="Old log cabin" :src="sportsmenBookHoverImg" :class="{ showImage: sportsmenBookHover }" />
-                </a>
+                </g-link>
               </div>
               
               <div style="margin-right:150px">
-                <a :href="sportsmenBookLink" target="_blank">
+                <g-link to="/publications/old-time-sportsmen">
                   <div class="sportsmenLinkText collections_headerLinkText" @mouseover="sportsmenBookHover = true" @mouseleave="sportsmenBookHover = false">
                     <span>AND SEE THE</span>
                     <br>
                     <span>Old-Time Sportsmen Book</span>
                   </div>
-                </a>
+                </g-link>
               </div>
             </b-row>            
           </div>
@@ -196,7 +180,6 @@
         headerLeftImg
         headerRightImg
         sportsmenSiteHoverImg
-        sportsmenSiteLink
         sportsmenBookHoverImg
         sportsmenBookLink
         footerImg
@@ -300,9 +283,6 @@ export default {
     sportsmenSiteHoverImg() {
       return this.node.sportsmenSiteHoverImg
     },
-    // sportsmenSiteLink() {
-    //   return this.node.sportsmenSiteLink
-    // },
     sportsmenBookHoverImg() {
       return this.node.sportsmenBookHoverImg
     },
