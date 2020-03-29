@@ -35,17 +35,13 @@
               :style="`transform: translate3d(${currentIndex * -100}%, 0px, 0px);`"
               class="collection-viewer__image-container"
             >
-              <div class="collection-viewer__image">                
+              <div class="collection-viewer__image">
                   <image-magnifier 
                     :src="image.img"
                     :zoom-src="image.img"
-                    width="938.17"
-                    height="979.5"
-                    :zoom="4"
-                    zoom-width="500"
-                    zoom-height="500" 
+                    :zoom="2"                    
+                    zoom-diameter=500
                     zoom-radius="50%"
-                    :mask-show="true"
                     :show-cursor="false"
                     @imgloaded="imageLoaded($event, imageIndex)"
                   />                 

@@ -1,79 +1,56 @@
 <template>
-	<!-- <div :style="style" ref="container"> -->
-		<div class="image-magnifier" 
-			@mouseenter="handleOver"
-			@mousemove="handleMove"
-			@mouseleave="handleOut"
-			:style="style"
-		>
-			<!-- <img 
-				:width="width"
-				:height="height"
-				:src="src"
-				class="image-magnifier__img"
-				ref="img"
-				id="img"
-				@load="emitImageLoaded()"
-			/> -->
-			<img
-				:src="src"
-				class="image-magnifier__img"
-				ref="img"
-				id="img"
-				@load="emitImageLoaded()"
-			/>
+    <div class="image-magnifier" 
+      @mouseenter="handleOver"
+      @mousemove="handleMove"
+      @mouseleave="handleOut"
+      :style="style"
+    >
+      <img
+        :src="src"
+        class="image-magnifier__img"
+        ref="img"
+        id="img"
+        @load="emitImageLoaded()"
+      />
 
-			<div 
-				class="image-magnifier__zoom" 
-				:class="zoomClass" 
-				:style="zoomStyle" 
-				ref="zoom" 
-				v-show="zoomShow" 
-			>
-				<img 
-					class="image-magnifier__zoomImg" 
-					:src="zoomSrc" 
-					:style="zoomImgStyle" 
-				/>
-			</div>
-		</div>
+      <div 
+        class="image-magnifier__zoom" 
+        :class="zoomClass" 
+        :style="zoomStyle" 
+        ref="zoom" 
+        v-show="zoomShow" 
+      >
+        <img 
+          class="image-magnifier__zoomImg" 
+          :src="zoomSrc" 
+          :style="zoomImgStyle" 
+        />
+      </div>
+    </div>
 
-	<!-- </div> -->
 </template>
 
 
 <script>
   export default {
-		// Code adapted from: https://github.com/anthinkingcoder/vue-image-magnifier/blob/master/src/components/ImageMagnifier.vue
+    // Code adapted from: https://github.com/anthinkingcoder/vue-image-magnifier/blob/master/src/components/ImageMagnifier.vue
     name: "ImageMagnifier",
 
     props: {
-      width: {
-        default: 'auto'
-      },
-      height: {
-        default: 'auto'
-      },
       src: {},
       zoomSrc: {},
       zoom: {
         type: Number,
         default: 6
       },
-      zoomWidth: {
-        default: 'auto'
-      },
-      zoomHeight: {
-        default: 'auto'
+      zoomDiameter: {
+        type: Number,
+        default: 500
       },
       zoomRadius: {
         default: '0%'
       },
       zoomClass: {},
-      maskShow: {
-        type: Boolean,
-        default: true
-      },
       delayIn: {
         type: Number,
         default: 0
@@ -81,25 +58,20 @@
       delayOut: {
         type: Number,
         default: 0
-			},
-			showCursor: {
-				type: Boolean,
-				default: true
-			}
+      },
+      showCursor: {
+        type: Boolean,
+        default: true
+      }
     },
 
     data() {
       return {
         zoomShow: false,
-        imgRect: '',
-        maskX: 0,
-				maskY: 0,
-				maskWidth: 100,
-      	maskHeight: 100,
+        imgRect: '',        
         zoomX: 0,
         zoomY: 0,
         zoomImage: '',
-        zoomLeft: '',
         zoomImgWidth: 0,
         zoomImgHeight: 0,
         zoomPosition: {
@@ -107,7 +79,7 @@
           y: 0
         },
         zoomInTimeoutId: null,
-				zoomOutTimeoutId: null
+        zoomOutTimeoutId: null
       }
     },
 
@@ -115,33 +87,33 @@
       style() {
         return {
           position: 'relative',
-					cursor: this.showCursor ? 'move' : 'none',
+          cursor: this.showCursor ? 'move' : 'none',
         }
       },
       zoomStyle() {
         return {
-					'--zoomWidth' : this.zoomWidth + 'px',
-					'--zoomHeight' : this.zoomHeight + 'px',
-					'--zoomX' : this.zoomX + 'px',
-					'--zoomY' : this.zoomY + 'px',
-					'--zoomRadius' : this.zoomRadius
+          '--zoomDiameter' : this.zoomDiameter + 'px',
+          '--zoomDiameter' : this.zoomDiameter + 'px',
+          '--zoomX' : this.zoomX + 'px',
+          '--zoomY' : this.zoomY + 'px',
+          '--zoomRadius' : this.zoomRadius
         }
       },
       zoomImgStyle() {
         return {
-					'--zoomImgWidth' : this.zoomImgWidth + 'px',
-					'--zoomImgHeight' : this.zoomImgHeight + 'px',
-					'--zoomPositionX' : -this.zoomPosition.x + 'px',
-					'--zoomPositionY' : -this.zoomPosition.y + 'px'
+          '--zoomImgWidth' : this.zoomImgWidth + 'px',
+          '--zoomImgHeight' : this.zoomImgHeight + 'px',
+          '--zoomPositionX' : -this.zoomPosition.x + 'px',
+          '--zoomPositionY' : -this.zoomPosition.y + 'px'
         }
       }
-		},
-		
+    },
+    
     methods: {
-			emitImageLoaded() {
-				const img_element = document.getElementById('img')
-				this.$emit('imgloaded', img_element)
-			},
+      emitImageLoaded() {
+        const img_element = document.getElementById('img')
+        this.$emit('imgloaded', img_element)
+      },
       handleOver() {
         clearTimeout(this.zoomOutTimeoutId);
         this.calcZoomSize();
@@ -152,32 +124,30 @@
             this.zoomShow = true;
           }, this.delayIn)
         }
-			},
-			
+      },
+      
       calcZoomSize() {
         this.imgRect = this.$refs.img && this.$refs.img.getBoundingClientRect();
 
-				if (this.imgRect && this.zoom) {
-          this.zoomImgWidth = this.zoom * this.zoomWidth;
-          this.zoomImgHeight = this.zoom * this.zoomHeight;
+        // Calculate large image width and height
+        if (this.imgRect && this.zoom) {
+          this.zoomImgWidth = this.zoom * this.imgRect.width;
+          this.zoomImgHeight = this.zoom * this.imgRect.height;
         }
-			},
-			
+      },
+      
       handleMove(e) {
         if (!this.imgRect) {
           return;
-				}
-				this.maskX = e.clientX - this.imgRect.left - this.maskWidth;
-				this.maskY = e.clientY - this.imgRect.top - this.maskHeight;
-
-				this.zoomX = e.clientX - this.imgRect.left - this.zoomWidth / 2;
-				this.zoomY = e.clientY - this.imgRect.top - this.zoomHeight / 2;
-
-        this.zoomLeft = this.imgRect.width + 10;
-        this.zoomPosition.x = this.maskX * (this.zoomImgWidth / this.imgRect.width);
-				this.zoomPosition.y = this.maskY * (this.zoomImgHeight / this.imgRect.height);
-			},
-			
+        }
+        this.zoomX = (e.clientX - this.imgRect.left) - (this.zoomDiameter / 2);
+        this.zoomY = (e.clientY - this.imgRect.top) - (this.zoomDiameter / 2);
+        
+        // Calculate large image offset
+        this.zoomPosition.x = this.zoomX * (this.zoomImgWidth / this.imgRect.width) + this.zoomDiameter / 2
+        this.zoomPosition.y = this.zoomY * (this.zoomImgHeight / this.imgRect.height) + this.zoomDiameter / 2
+      },
+      
       handleOut() {
         clearTimeout(this.zoomInTimeoutId);
         if (this.delayOut === 0) {
@@ -187,7 +157,7 @@
             this.zoomShow = false;
           }, this.delayOut);
         }
-			},
+      }
     }
   }
 </script>
@@ -195,41 +165,36 @@
 
 <style lang="scss" scoped>
 .image-magnifier {
-	&__img {
-		// width: var(--imgWidth);
-		// height: var(--imgHeight);		
-		width: auto;
-		height: auto;		
-		max-width: 100%;
-		max-height: 100%;		
-		// width: auto;
-		// height: auto;		
-		// width: auto;
-		// height: 100%;
-		object-fit: contain; 
-	}
+  width: fit-content;
 
-	&__zoom {
-		width: var(--zoomWidth);
-		height: var(--zoomHeight);
-		position: absolute;
-		left: 0;
-		top: 0;
-		transform: translate(var(--zoomX), var(--zoomY));
-		overflow: hidden;
-		z-index: 2000;
-  	border: 1px solid #000;
-		border-radius: var(--zoomRadius);
-		background-color: #000;
-		pointer-events: none;
-	}
+  &__img {
+    width: auto;
+    height: auto;		
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+  }
 
-	&__zoomImg {
-		width: var(--zoomImgWidth);
-		height: var(--zoomImgHeight);
-		will-change: transform;
-		transform: translate(var(--zoomPositionX), var(--zoomPositionY));
-		pointer-events: none;
-	}
+  &__zoom {
+    width: var(--zoomDiameter);
+    height: var(--zoomDiameter);
+    position: absolute;
+    left: var(--zoomX);
+    top: var(--zoomY);
+    overflow: hidden;
+    z-index: 2000;
+    border: 1px solid #000;
+    border-radius: var(--zoomRadius);
+    background-color: #000;
+    pointer-events: none;
+  }
+
+  &__zoomImg {
+    width: var(--zoomImgWidth);
+    height: var(--zoomImgHeight);
+    will-change: transform;
+    transform: translate(var(--zoomPositionX), var(--zoomPositionY));
+    pointer-events: none;
+  }
 }
 </style>
