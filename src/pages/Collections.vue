@@ -103,7 +103,8 @@ export default {
   data() {
     return {
       videoIndex: null,
-      mainColHeight: 600
+      mainColHeight: 600,
+      interval: null
     }
   },
 
@@ -127,6 +128,13 @@ export default {
   },
 
   methods: {
+    observeTextBlockHeight() {
+      this.interval = setInterval(function () {    
+        let textEl = document.getElementById('slideshowText')
+        this.mainColHeight = this.getElementOffset(textEl).bottom
+        console.log('observing, ')
+      }.bind(this), 500);
+    },
     getElementOffset(el) {
       let top = 0
       // let left = 0
@@ -153,12 +161,10 @@ export default {
   },
 
   mounted() {
-    if (!document)
-      return;
+    this.observeTextBlockHeight()
 
-    let textEl = document.getElementById('slideshowText')
-    this.mainColHeight = this.getElementOffset(textEl).bottom
-
+    setTimeout(clearInterval(this.interval), 8000)
+    
     window.addEventListener('resize', () => {
       let textEl = document.getElementById('slideshowText')
       this.mainColHeight = this.getElementOffset(textEl).bottom
