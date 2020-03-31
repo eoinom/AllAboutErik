@@ -1,90 +1,94 @@
 <template>
-  <transition name="fade">
-    <div
-      v-if="typeof index === 'number'"
-      class="collection-viewer"
-      @touchstart="touchstartHandler"
-      @touchmove="touchmoveHandler"
-      @touchend="touchendHandler"
-      :style="viewerStyles"
-    >
-      <div class="collection-viewer__modal" :style="`background: ${background}`" >
-        <div :class="['collection-viewer__spinner', !isImageLoaded || 'hide']" >
-          <div class="collection-viewer__dot" :style="`border-color: ${interfaceColor}`" />
-          <div class="collection-viewer__dot" :style="`border-color: ${interfaceColor}`" />
-          <div class="collection-viewer__dot" :style="`border-color: ${interfaceColor}`" />
-        </div>
-        
-        <b-container fluid>
-          <b-row align-h="between" id="navLinks">
-            <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_small" id="nav_previous">PREV</g-link>
-            <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_big" id="nav_previous">PREVIOUS COLLECTION</g-link>
+  <div
+    v-if="typeof index === 'number'"
+    class="collection-viewer"
+    @touchstart="touchstartHandler"
+    @touchmove="touchmoveHandler"
+    @touchend="touchendHandler"
+    :style="viewerStyles"
+  >
+    <div class="collection-viewer__modal" :style="`background: ${background}`" >
+      <div :class="['collection-viewer__spinner', !isImageLoaded || 'hide']" >
+        <div class="collection-viewer__dot" :style="`border-color: ${interfaceColor}`" />
+        <div class="collection-viewer__dot" :style="`border-color: ${interfaceColor}`" />
+        <div class="collection-viewer__dot" :style="`border-color: ${interfaceColor}`" />
+      </div>
+      
+      <b-container fluid style="padding:0">
+        <b-row no-gutters align-v="center" id="navLinksRow">
+          <b-col cols="2" lg="" xl="4">
+            <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_small" id="nav_prev">PREV</g-link>
+            <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_big" id="nav_prev">PREVIOUS COLLECTION</g-link>
+          </b-col>
           
+          <b-col cols="8" lg="7" xl="4">
             <div class="collection-viewer__text collection-viewer__textcenter">HOVER OVER IMAGE FOR CLOSE-UP</div>
-            
+          </b-col>
+          
+          <b-col cols="2" lg="" xl="4">
             <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_small" id="nav_next">NEXT</g-link>
             <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_big" id="nav_next">NEXT COLLECTION</g-link>
-          </b-row>
-        </b-container>
+          </b-col>            
+        </b-row>
+      </b-container>
 
-        <div class="collection-viewer__container">
-          <ul class="collection-viewer__content">
-            <li
-              v-for="(image, imageIndex) in formattedImages"
-              :key="imageIndex"
-              :style="`transform: translate3d(${currentIndex * -100}%, 0px, 0px);`"
-              class="collection-viewer__image-container"
-            >
-              <div class="collection-viewer__image">
-                  <image-magnifier 
-                    :src="image.img"
-                    :zoom-src="image.img"
-                    :zoom="2"                    
-                    zoom-diameter=500
-                    zoom-radius="50%"
-                    :show-cursor="false"
-                    @imgloaded="imageLoaded($event, imageIndex)"
-                  />                 
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div id="leftArrowContainer" v-if="currentIndex > 0" @click="prev()">
-          <img
-            alt="Left arrow, click for previous image" 
-            src="../assets/images/arrow-left.png" 
-            id="prevImageImg"
-            class="collection-viewer__prev arrowImg" 
-          />
-          <img
-            alt="Left arrow, click for previous image" 
-            src="../assets/images/arrow-left-hover.png" 
-            id="prevImageImg-hover"
-            class="collection-viewer__prev arrowImg" 
-          />
-        </div>
-
-        <div id="rightArrowContainer" v-if="currentIndex + 1 < images.length" @click="next()">
-          <img
-            alt="Right arrow, click for next image" 
-            src="../assets/images/arrow-right.png" 
-            id="nextImageImg"
-            class="collection-viewer__next arrowImg"
-          />
-          <img
-            alt="Right arrow, click for next image" 
-            src="../assets/images/arrow-right-hover.png" 
-            id="nextImageImg-hover"
-            class="collection-viewer__next arrowImg" 
-          />
-        </div>
-
-        <g-link to="/collections/" class="nav_link pt-3" id="nav_back">BACK TO COLLECTIONS MENU</g-link>
+      <div class="collection-viewer__container">
+        <ul class="collection-viewer__content">
+          <li
+            v-for="(image, imageIndex) in formattedImages"
+            :key="imageIndex"
+            :style="`transform: translate3d(${currentIndex * -100}%, 0px, 0px);`"
+            class="collection-viewer__image-container"
+          >
+            <div class="collection-viewer__image">
+                <image-magnifier 
+                  :src="image.img"
+                  :zoom-src="image.img"
+                  :zoom="2"                    
+                  zoom-diameter=500
+                  zoom-radius="50%"
+                  :show-cursor="false"
+                  @imgloaded="imageLoaded($event, imageIndex)"
+                />                 
+            </div>
+          </li>
+        </ul>
       </div>
 
+      <div id="leftArrowContainer" v-if="currentIndex > 0" @click="prev()">
+        <img
+          alt="Left arrow, click for previous image" 
+          src="../assets/images/arrow-left.png" 
+          id="prevImageImg"
+          class="collection-viewer__prev arrowImg" 
+        />
+        <img
+          alt="Left arrow, click for previous image" 
+          src="../assets/images/arrow-left-hover.png" 
+          id="prevImageImg-hover"
+          class="collection-viewer__prev arrowImg" 
+        />
+      </div>
+
+      <div id="rightArrowContainer" v-if="currentIndex + 1 < images.length" @click="next()">
+        <img
+          alt="Right arrow, click for next image" 
+          src="../assets/images/arrow-right.png" 
+          id="nextImageImg"
+          class="collection-viewer__next arrowImg"
+        />
+        <img
+          alt="Right arrow, click for next image" 
+          src="../assets/images/arrow-right-hover.png" 
+          id="nextImageImg-hover"
+          class="collection-viewer__next arrowImg" 
+        />
+      </div>
+
+      <g-link to="/collections/" class="nav_link pt-3" id="nav_back">BACK TO COLLECTIONS MENU</g-link>
     </div>
-  </transition>
+
+  </div>
 </template>
 
 <script>
@@ -168,11 +172,7 @@ export default {
       } else if (this.disableScroll && !val) {
         document.body.style.overflow = this.bodyOverflowStyle;
       }
-    },
-    // currentIndex(val) {
-    //   this.setImageLoaded(val);
-    // },
-    
+    }    
   },
 
   methods: {
@@ -262,7 +262,7 @@ export default {
     },
     observeNavLinksPosition() {
       let interval = setInterval(function () {    
-        let navLinksEl = document.getElementById('navLinks')
+        let navLinksEl = document.getElementById('navLinksRow')
         this.headerHeight = this.getElementOffset(navLinksEl).top
       }.bind(this), 500);
     }
@@ -291,8 +291,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
 
+<style lang="scss" scoped>
 @font-face {
   font-family: NeueHaasGroteskText Pro55;
   src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot'); /* IE9 Compat Modes */
@@ -302,6 +302,9 @@ export default {
   font-weight: normal;
 }
 
+* {
+  --linkGutter:  45px;
+}
 
 .nav_link {
   color: white;
@@ -313,14 +316,22 @@ export default {
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
   margin: 0px;
-  padding: 0px 45px;
+  padding: 0px;
   z-index: 1000;
 }
 .nav_link_small {
   display: none;
 }
 .nav_link_big {
-  display: inline;
+  display: block;
+}
+#nav_prev {
+  text-align: left;
+  padding-left: var(--linkGutter);
+}
+#nav_next {
+  text-align: right;
+  padding-right: var(--linkGutter);
 }
 #nav_back { 
   display: block;
@@ -330,22 +341,21 @@ export default {
   left: 50%;
   transform: translate(-50%, 0);
   text-align: center;
+  padding: 0;
+  width: fit-content;
 }
-#nav_prev:hover, #nav_previous:hover, #nav_next:hover, #nav_back:hover {
+#nav_prev:hover, #nav_next:hover, #nav_back:hover {
   color:	#EED047;
   cursor: pointer;
 }
 
 .collection-viewer {
   &__modal {
-    // position: fixed;
     position: relative;
     display: block;
     z-index: 501;
-    // top: 0;
     left: 0;
     width: 100%;
-    // height: calc(100vh - 203px);  // 203px is the height of the banner
     height: calc(100vh - var(--headerHeight));
     overflow: hidden;
   }
@@ -361,7 +371,6 @@ export default {
     z-index: 502;
     display: block;
     width: 100%;
-    // top: 0;
     left: 50%;
     transform: translate(-50%, 0);
     text-align: center;
@@ -378,14 +387,11 @@ export default {
   }
   &__image {
     & {
-      // display: inline-block;
       position: relative;
       margin: 0 auto;
       max-width: 85%;
       max-height: 100%;
-      // height: calc(100vh - 203px - 20px);  // 203px is the height of the banner
-      height: calc(100vh - var(--headerHeight) - 20px);  // 203px is the height of the banner
-      // padding: 3.5vh 0;
+      height: calc(100vh - var(--headerHeight) - 20px);
       padding: 20px 0 80px 0;
       display: flex;
       justify-content: center;
@@ -414,7 +420,7 @@ export default {
     font-size: 10px;
     letter-spacing: 4px;
     margin: 14px 0px;
-    padding: 0px;
+    padding: 0px 20px;
   }
   &__next,
   &__prev {
@@ -477,18 +483,7 @@ export default {
     }
   }
 }
-// // transition fade on opening / closing of lightbox
-// .fade-enter-active, .fade-leave-active {
-//   position: fixed;
-//   z-index: 1000;
-//   // transition: opacity 0.2s;
-//   transition: opacity 0.5s ease;
-// }
-// .fade-enter, .fade-leave-to {
-//   position: fixed;
-//   opacity: 0;
-//   z-index: 1000;
-// }
+
 @keyframes spinner-animation {
   50% {
     transform: scale(1);
@@ -526,9 +521,6 @@ export default {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .collection-viewer {
-    // &__text {
-    //   font-size: 0.8125rem; /* 13px with 16px default size */
-    // }
     &__next {
       right: 1.5%;
     }
@@ -536,29 +528,32 @@ export default {
       left: 1.5%;
     }
   }
+  * {
+    --linkGutter: 25px;
+  }
   .nav_link {
-    font-size: 5vw;
+    font-size: calc(1.25rem + 4 * (100vw - 350px) / (576 - 350) ); /* varies between 20px - 24px */
   }
   .nav_link_small {
-    display: inline;
+    display: block;
   }
   .nav_link_big {
     display: none;
-  }  
-  // #nav_prev {
-  //   left: 4%;
-  // }
-  // #nav_next {
-  //   right: 4%;
-  // }
+  }
+}
+
+/* special breakpoint */
+@media (max-width: 338.98px) {
+  .collection-viewer {
+    &__text {
+      letter-spacing: 3px;
+    }
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .collection-viewer {
-    // &__text {
-    //   font-size: 0.9375rem; /* 15px with 16px default size */
-    // }
     &__next {
       right: 3.0%;
     }
@@ -566,11 +561,14 @@ export default {
       left: 3.0%;
     }
   }
+  * {
+    --linkGutter: calc(25px + 20 * (100vw - 576px) / (768 - 576) ); /* varies between 25px - 45px */
+  }
   .nav_link {
-    font-size: 30px;
+    font-size: calc(1.5rem + 4 * (100vw - 576px) / (768 - 576) ); /* varies between 24px - 28px */
   }
   .nav_link_small {
-    display: inline;
+    display: block;
   }
   .nav_link_big {
     display: none;
@@ -580,9 +578,6 @@ export default {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) { 
   .collection-viewer {
-    // &__text {
-    //   font-size: 1.0625rem; /* 17px with 16px default size */
-    // }
     &__next {
       right: 4.5%;
     }
@@ -591,7 +586,7 @@ export default {
     }
   }
   .nav_link_small {
-    display: inline;
+    display: block;
   }
   .nav_link_big {
     display: none;
@@ -601,15 +596,23 @@ export default {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {  
   .collection-viewer{
-    // &__text {
-    //   font-size: 1.1875rem; /* 19px with 16px default size */
-    // }
     &__next {
       right: 6.5%;
     }
     &__prev {
       left: 6.5%;
     }
+  }
+  * {
+    --linkGutter: 25px;
+  }
+  #nav_prev {
+    text-align: center;
+    padding: 0 var(--linkGutter);
+  }
+  #nav_next {
+    text-align: center;
+    padding: 0 var(--linkGutter);
   }
 }
 </style>
