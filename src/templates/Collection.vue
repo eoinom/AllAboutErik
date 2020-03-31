@@ -201,8 +201,8 @@ export default {
   color: #FFFFFF;
   text-align: center;
   letter-spacing: 1px;
-  line-height: 26px;
-  font-size: 18px;
+  line-height: 1.625rem;
+  font-size: 1.125rem;
   font-weight: 500;
   margin: 0px;
   padding: 0px;
@@ -269,6 +269,12 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   }
   .titleImg2Lines {
     display: inline;
+    margin: 10px 0px;
+    padding: 0px 60px;
+  }
+  .collections_headerText {
+    line-height: 1.4375rem;
+    font-size: 1rem;
   }
 }
 
