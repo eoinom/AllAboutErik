@@ -22,7 +22,7 @@
           </b-col>
           
           <b-col cols="8" lg="7" xl="4">
-            <div class="collection-viewer__text collection-viewer__textcenter">HOVER OVER IMAGE FOR CLOSE-UP</div>
+            <div v-if="windowWidth > 1366" class="collection-viewer__text collection-viewer__textcenter">HOVER OVER IMAGE FOR CLOSE-UP</div>
           </b-col>
           
           <b-col cols="2" lg="" xl="4">
@@ -58,36 +58,6 @@
           </li>
         </ul>
       </div>
-
-      <!-- <div id="leftArrowContainer" v-if="currentIndex > 0" @click="prev()">
-        <img
-          alt="Left arrow, click for previous image" 
-          src="../assets/images/arrow-left.png" 
-          id="prevImageImg"
-          class="collection-viewer__prev arrowImg" 
-        />
-        <img
-          alt="Left arrow, click for previous image" 
-          src="../assets/images/arrow-left-hover.png" 
-          id="prevImageImg-hover"
-          class="collection-viewer__prev arrowImg" 
-        />
-      </div>
-
-      <div id="rightArrowContainer" v-if="currentIndex + 1 < images.length" @click="next()">
-        <img
-          alt="Right arrow, click for next image" 
-          src="../assets/images/arrow-right.png" 
-          id="nextImageImg"
-          class="collection-viewer__next arrowImg"
-        />
-        <img
-          alt="Right arrow, click for next image" 
-          src="../assets/images/arrow-right-hover.png" 
-          id="nextImageImg-hover"
-          class="collection-viewer__next arrowImg" 
-        />
-      </div> -->
 
       <g-link to="/collections/" class="nav_link pt-3" id="nav_back">BACK TO COLLECTIONS MENU</g-link>
     </div>
@@ -150,7 +120,8 @@ export default {
       showMagnifier: false,
       zoom: 6,
       headerEl: null,
-      headerHeight: 0
+      headerHeight: 0,
+      windowWidth: 0.0
     };
   },
 
@@ -165,6 +136,29 @@ export default {
         '--headerHeight': this.headerHeight + 'px'
       }
     }
+  },
+
+  mounted() {
+    this.windowWidth = window.innerWidth
+    window.addEventListener('resize', () => {  
+      this.windowWidth = window.innerWidth
+    })
+    window.addEventListener('orientationchange', () => {  
+      this.windowWidth = window.innerWidth
+    })
+    
+    if (!document)  return;
+    this.observeNavLinksPosition()    
+    this.bodyOverflowStyle = document.body.style.overflow;
+    this.bindEvents();
+  },
+
+  beforeDestroy() {
+    if (!document) return;
+    if (this.disableScroll) {
+      document.body.style.overflow = this.bodyOverflowStyle;
+    }
+    this.unbindEvents();
   },
 
   watch: {
@@ -271,24 +265,7 @@ export default {
       }.bind(this), 500);
     }
   },
-
-  mounted() {
-    if (!document)  return;
-
-    this.observeNavLinksPosition()
-    
-    this.bodyOverflowStyle = document.body.style.overflow;
-    this.bindEvents();
-  },
-
-  beforeDestroy() {
-    if (!document) return;
-    if (this.disableScroll) {
-      document.body.style.overflow = this.bodyOverflowStyle;
-    }
-    this.unbindEvents();
-  },
-
+  
   components: {
     ImageMagnifier
   }
@@ -427,26 +404,6 @@ export default {
     margin: 14px 0px;
     padding: 0px 20px;
   }
-  // &__next,
-  // &__prev {
-  //   position: absolute;
-  //   top: 50%;
-  //   transform: translate(0, -50%);
-  //   z-index: 1002;
-  //   display: block;
-  //   background: transparent;
-  //   border: 0;
-  //   line-height: 0;
-  //   outline: none;
-  //   cursor: pointer;
-  // }
-  // &__next {
-  //   right: 8.5%;
-  //   vertical-align: middle;
-  // }
-  // &__prev {
-  //   left: 8.5%;
-  // }
   &__spinner {
     & {
       position: absolute;
@@ -499,27 +456,6 @@ export default {
   }
 }
 
-// .arrowImg {
-//   width: 7.0%;
-//   max-width: 26px;
-//   min-width: 15px;
-//   padding: 0;
-// }
-// #prevImageImg-hover, 
-// #leftArrowContainer:hover #prevImageImg {
-//   display: none;
-// }
-// #leftArrowContainer:hover #prevImageImg-hover {
-//   display: inline;
-// }
-
-// #nextImageImg-hover, 
-// #rightArrowContainer:hover #nextImageImg {
-//   display: none;
-// }
-// #rightArrowContainer:hover #nextImageImg-hover {
-//   display: inline;
-// }
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 

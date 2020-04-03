@@ -1,67 +1,65 @@
 <template>
-    <div class="image-magnifier" 
-      @mouseenter="handleOver"
-      @mousemove="handleMove"
-      @mouseleave="handleOut"
-      :style="magnifierStyle"
+  <div class="image-magnifier" 
+    @mouseenter="handleOver"
+    @mousemove="handleMove"
+    @mouseleave="handleOut"
+    :style="magnifierStyle"
+  >
+    <span class="helper" /> <!-- For centering the img vertically in the div, https://stackoverflow.com/a/7310398/13159696 -->
+
+    <img
+      :src="src"
+      class="image-magnifier__img"
+      ref="img"
+      id="img"
+      @load="emitImageLoaded()"
+    />
+
+    <div 
+      v-if="windowWidth > 1366"
+      class="image-magnifier__zoom" 
+      :class="zoomClass" 
+      :style="zoomStyle" 
+      ref="zoom" 
+      v-show="zoomShow" 
     >
-      <span class="helper" /> <!-- For centering the img vertically in the div, https://stackoverflow.com/a/7310398/13159696 -->
-
-      <img
-        :src="src"
-        class="image-magnifier__img"
-        ref="img"
-        id="img"
-        @load="emitImageLoaded()"
+      <img 
+        class="image-magnifier__zoomImg" 
+        :src="zoomSrc" 
+        :style="zoomImgStyle" 
       />
-
-      <div 
-        class="image-magnifier__zoom" 
-        :class="zoomClass" 
-        :style="zoomStyle" 
-        ref="zoom" 
-        v-show="zoomShow" 
-      >
-        <img 
-          class="image-magnifier__zoomImg" 
-          :src="zoomSrc" 
-          :style="zoomImgStyle" 
-        />
-      </div>
-
-      <div id="leftArrowContainer" v-if="currentIndex > 0" @click="$emit('prev')">
-        <img
-          alt="Left arrow, click for previous image" 
-          src="../assets/images/arrow-left.png" 
-          id="prevArrowImg"
-          class="prevArrow arrowImg" 
-        />
-        <img
-          alt="Left arrow, click for previous image" 
-          src="../assets/images/arrow-left-hover.png" 
-          id="prevArrowImg-hover"
-          class="prevArrow arrowImg" 
-        />
-      </div>
-
-      <div id="rightArrowContainer" v-if="currentIndex + 1 < imagesLength" @click="$emit('next')">
-        <img
-          alt="Right arrow, click for next image" 
-          src="../assets/images/arrow-right.png" 
-          id="nextArrowImg"
-          class="nextArrow arrowImg"
-        />
-        <img
-          alt="Right arrow, click for next image" 
-          src="../assets/images/arrow-right-hover.png" 
-          id="nextArrowImg-hover"
-          class="nextArrow arrowImg" 
-        />
-      </div>
     </div>
 
-    
+    <div id="leftArrowContainer" v-if="currentIndex > 0" @click="$emit('prev')">
+      <img
+        alt="Left arrow, click for previous image" 
+        src="../assets/images/arrow-left.png" 
+        id="prevArrowImg"
+        class="prevArrow arrowImg" 
+      />
+      <img
+        alt="Left arrow, click for previous image" 
+        src="../assets/images/arrow-left-hover.png" 
+        id="prevArrowImg-hover"
+        class="prevArrow arrowImg" 
+      />
+    </div>
 
+    <div id="rightArrowContainer" v-if="currentIndex + 1 < imagesLength" @click="$emit('next')">
+      <img
+        alt="Right arrow, click for next image" 
+        src="../assets/images/arrow-right.png" 
+        id="nextArrowImg"
+        class="nextArrow arrowImg"
+      />
+      <img
+        alt="Right arrow, click for next image" 
+        src="../assets/images/arrow-right-hover.png" 
+        id="nextArrowImg-hover"
+        class="nextArrow arrowImg" 
+      />
+    </div>
+  </div>
 </template>
 
 
@@ -119,7 +117,8 @@
           y: 0
         },
         zoomInTimeoutId: null,
-        zoomOutTimeoutId: null
+        zoomOutTimeoutId: null,
+        windowWidth: 0.0
       }
     },
 
@@ -147,6 +146,17 @@
           '--zoomPositionY' : -this.zoomPosition.y + 'px'
         }
       }
+    },
+
+    mounted() {
+      this.windowWidth = window.innerWidth
+
+      window.addEventListener('resize', () => {  
+        this.windowWidth = window.innerWidth
+      })
+      window.addEventListener('orientationchange', () => {  
+        this.windowWidth = window.innerWidth
+      })
     },
     
     methods: {
