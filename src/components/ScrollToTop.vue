@@ -3,7 +3,7 @@
     <button v-scroll-to="{ el:'body', duration:1500, easing:'ease' }" id="scrollToTopBtn" class="hide">      
       {{ text }}
       <svg v-if="includeArrow" viewBox="0 0 20 20" width="20" height="20" id="arrow">
-      <line x1="1" y1="13" x2="9" y2="4.5" />
+        <line x1="1" y1="13" x2="9" y2="4.5" />
         <line x1="8" y1="4.5" x2="16" y2="13" />
       </svg>
     </button>    

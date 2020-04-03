@@ -6,9 +6,32 @@
           <div id="headerItems">
             <g-image :src="titleImg1Line" class="titleImg titleImg1Line" />
             <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
-            <div v-html="$page.collection.content" class="collections_headerText" />
+
+            <div v-if="windowWidth < 1200 && !showIntro" v-b-toggle.collapse-1 class="collections_headerText" style="font-style: italic" @click="showIntro = true">
+              Read intro
+              <svg viewBox="0 0 20 20" width="20" height="20" class="arrow">
+                <line x1="1" y1="4.5" x2="9" y2="13" />
+                <line x1="8" y1="13" x2="16" y2="4.5" />
+              </svg>
+            </div>
+
+            <div v-else-if="windowWidth < 1200 && showIntro" v-b-toggle.collapse-1 class="collections_headerText" style="font-style: italic" @click="showIntro = false">
+              Hide intro
+              <svg viewBox="0 0 20 20" width="20" height="20" class="arrow">
+                <line x1="1" y1="13" x2="9" y2="4.5" />
+                <line x1="8" y1="4.5" x2="16" y2="13" />
+              </svg>
+            </div>
+            
+            <div v-else v-html="$page.collection.content" class="collections_headerText" />
+
           </div>
         </header>
+        
+        <b-collapse id="collapse-1">
+          <div v-html="$page.collection.content" class="collections_headerText" id="headerTextDevice" />
+        </b-collapse>
+        
 
         <CollectionViewer
           :images="images"
@@ -72,6 +95,8 @@ export default {
   data() {
     return {
       imageIndex: 0,
+      showIntro: false,
+      windowWidth: 0.0
     }
   },
 
@@ -132,6 +157,17 @@ export default {
       collection.link = slugify(collection.title)
       return collection
     }
+  },
+
+  mounted() {
+    this.windowWidth = window.innerWidth
+
+    window.addEventListener('resize', () => {  
+      this.windowWidth = window.innerWidth
+    })
+    window.addEventListener('orientationchange', () => {  
+      this.windowWidth = window.innerWidth
+    })
   },
 
   components: {
@@ -212,6 +248,21 @@ export default {
   padding: 0px;
 }
 
+#headerTextDevice {
+  color:#ECECEC;
+  font-size: 0.925rem;
+  margin: 20px;
+}
+
+.arrow {
+  margin-left: 5px;
+  margin-right: -3px;
+}
+.arrow > line {
+  stroke: rgb(203,203,201);
+  stroke-width: 2px;
+}
+
 .titleImg {
   max-width: 100%;
   margin-bottom: 20px;
@@ -222,6 +273,7 @@ export default {
 .titleImg2Lines {
   display: none;
 }
+
 
 
 /* To fix poor scroll speed using "background-size: cover" and "background-attachment: fixed"
@@ -285,6 +337,8 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   }
   .titleImg2Lines {
     display: inline;
+    margin: 10px 0px;
+    padding: 0px 80px;
   }
 }
 
@@ -295,15 +349,23 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   }
   .titleImg2Lines {
     display: inline;
+    margin: 10px 0px;
+    padding: 0px 80px;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
+  .titleImg {
+    padding: 0px 100px;
+  }
 }
 
 /* Special - Larger devices (desktops, 1200px and up) */
-@media (min-width: 1200px) and (max-width: 1390.98px) { 
+@media (min-width: 1200px) and (max-width: 1499.98px) {
+  .collections_headerText, .titleImg {
+    padding: 0px 120px;
+  }
 }
 
 </style>
