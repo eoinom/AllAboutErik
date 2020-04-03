@@ -45,17 +45,21 @@
                   :src="image.img"
                   :zoom-src="image.img"
                   :zoom="2"                    
-                  zoom-diameter=500
+                  :zoom-diameter=500
                   zoom-radius="50%"
                   :show-cursor="false"
                   @imgloaded="imageLoaded($event, imageIndex)"
+                  :current-index="currentIndex"
+                  :images-length="images.length"
+                  @prev="prev()"
+                  @next="next()"
                 />                 
             </div>
           </li>
         </ul>
       </div>
 
-      <div id="leftArrowContainer" v-if="currentIndex > 0" @click="prev()">
+      <!-- <div id="leftArrowContainer" v-if="currentIndex > 0" @click="prev()">
         <img
           alt="Left arrow, click for previous image" 
           src="../assets/images/arrow-left.png" 
@@ -83,7 +87,7 @@
           id="nextImageImg-hover"
           class="collection-viewer__next arrowImg" 
         />
-      </div>
+      </div> -->
 
       <g-link to="/collections/" class="nav_link pt-3" id="nav_back">BACK TO COLLECTIONS MENU</g-link>
     </div>
@@ -312,8 +316,9 @@ export default {
   font-feature-settings: 'liga';
   font-weight: 400;
   font-style: italic;
-  font-size: 28px;
+  font-size: 1.75rem;
   letter-spacing: 1px;
+  line-height: 2.1875rem;
   text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
   margin: 0px;
   padding: 0px;
@@ -422,26 +427,26 @@ export default {
     margin: 14px 0px;
     padding: 0px 20px;
   }
-  &__next,
-  &__prev {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    z-index: 1002;
-    display: block;
-    background: transparent;
-    border: 0;
-    line-height: 0;
-    outline: none;
-    cursor: pointer;
-  }
-  &__next {
-    right: 8.5%;
-    vertical-align: middle;
-  }
-  &__prev {
-    left: 8.5%;
-  }
+  // &__next,
+  // &__prev {
+  //   position: absolute;
+  //   top: 50%;
+  //   transform: translate(0, -50%);
+  //   z-index: 1002;
+  //   display: block;
+  //   background: transparent;
+  //   border: 0;
+  //   line-height: 0;
+  //   outline: none;
+  //   cursor: pointer;
+  // }
+  // &__next {
+  //   right: 8.5%;
+  //   vertical-align: middle;
+  // }
+  // &__prev {
+  //   left: 8.5%;
+  // }
   &__spinner {
     & {
       position: absolute;
@@ -494,27 +499,27 @@ export default {
   }
 }
 
-.arrowImg {
-  width: 7.0%;
-  max-width: 26px;
-  min-width: 15px;
-  padding: 0;
-}
-#prevImageImg-hover, 
-#leftArrowContainer:hover #prevImageImg {
-  display: none;
-}
-#leftArrowContainer:hover #prevImageImg-hover {
-  display: inline;
-}
+// .arrowImg {
+//   width: 7.0%;
+//   max-width: 26px;
+//   min-width: 15px;
+//   padding: 0;
+// }
+// #prevImageImg-hover, 
+// #leftArrowContainer:hover #prevImageImg {
+//   display: none;
+// }
+// #leftArrowContainer:hover #prevImageImg-hover {
+//   display: inline;
+// }
 
-#nextImageImg-hover, 
-#rightArrowContainer:hover #nextImageImg {
-  display: none;
-}
-#rightArrowContainer:hover #nextImageImg-hover {
-  display: inline;
-}
+// #nextImageImg-hover, 
+// #rightArrowContainer:hover #nextImageImg {
+//   display: none;
+// }
+// #rightArrowContainer:hover #nextImageImg-hover {
+//   display: inline;
+// }
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 

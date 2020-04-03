@@ -3,8 +3,10 @@
       @mouseenter="handleOver"
       @mousemove="handleMove"
       @mouseleave="handleOut"
-      :style="style"
+      :style="magnifierStyle"
     >
+      <span class="helper" /> <!-- For centering the img vertically in the div, https://stackoverflow.com/a/7310398/13159696 -->
+
       <img
         :src="src"
         class="image-magnifier__img"
@@ -26,7 +28,39 @@
           :style="zoomImgStyle" 
         />
       </div>
+
+      <div id="leftArrowContainer" v-if="currentIndex > 0" @click="$emit('prev')">
+        <img
+          alt="Left arrow, click for previous image" 
+          src="../assets/images/arrow-left.png" 
+          id="prevArrowImg"
+          class="prevArrow arrowImg" 
+        />
+        <img
+          alt="Left arrow, click for previous image" 
+          src="../assets/images/arrow-left-hover.png" 
+          id="prevArrowImg-hover"
+          class="prevArrow arrowImg" 
+        />
+      </div>
+
+      <div id="rightArrowContainer" v-if="currentIndex + 1 < imagesLength" @click="$emit('next')">
+        <img
+          alt="Right arrow, click for next image" 
+          src="../assets/images/arrow-right.png" 
+          id="nextArrowImg"
+          class="nextArrow arrowImg"
+        />
+        <img
+          alt="Right arrow, click for next image" 
+          src="../assets/images/arrow-right-hover.png" 
+          id="nextArrowImg-hover"
+          class="nextArrow arrowImg" 
+        />
+      </div>
     </div>
+
+    
 
 </template>
 
@@ -62,6 +96,12 @@
       showCursor: {
         type: Boolean,
         default: true
+      },
+      currentIndex: {
+        type: Number
+      },
+      imagesLength: {
+        type: Number
       }
     },
 
@@ -84,7 +124,7 @@
     },
 
     computed: {
-      style() {
+      magnifierStyle() {
         return {
           position: 'relative',
           cursor: this.showCursor ? 'move' : 'none',
@@ -164,6 +204,12 @@
 
 
 <style lang="scss" scoped>
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
 .image-magnifier {
   width: fit-content;
 
@@ -173,6 +219,7 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain; 
+    vertical-align: middle;
   }
 
   &__zoom {
@@ -197,4 +244,46 @@
     pointer-events: none;
   }
 }
+
+.arrowImg {
+  width: 7.0%;
+  max-width: 26px;
+  min-width: 15px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1002;
+  display: block;
+  background: transparent;
+  border: 0;
+  line-height: 0;
+  outline: none;
+  cursor: pointer;
+}
+.nextArrow {
+  right: -20px;
+  vertical-align: middle;
+}
+.prevArrow {
+  left: -20px;
+}
+
+#prevArrowImg-hover, 
+#leftArrowContainer:hover #prevArrowImg {
+  display: none;
+}
+#leftArrowContainer:hover #prevArrowImg-hover {
+  display: inline;
+}
+
+#nextArrowImg-hover, 
+#rightArrowContainer:hover #nextArrowImg {
+  display: none;
+}
+#rightArrowContainer:hover #nextArrowImg-hover {
+  display: inline;
+}
+
+
 </style>
