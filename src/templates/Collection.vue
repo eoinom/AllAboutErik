@@ -92,6 +92,10 @@ export default {
     }
   },
 
+  components: {
+    CollectionViewer
+  },
+
   data() {
     return {
       imageIndex: 0,
@@ -168,10 +172,6 @@ export default {
     window.addEventListener('orientationchange', () => {  
       this.windowWidth = window.innerWidth
     })
-  },
-
-  components: {
-    CollectionViewer
   }
 }
 </script>
@@ -331,14 +331,11 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .titleImg1Line {
-    display: none;
-  }
-  .titleImg2Lines {
-    display: inline;
-    margin: 10px 0px;
-    padding: 0px 80px;
+@media (min-width: 576px) and (max-width: 767.98px) {  
+  .titleImg {
+    max-width: 100%;
+    padding: 15px 40px 10px 70px;
+    margin: 0px;
   }
 }
 

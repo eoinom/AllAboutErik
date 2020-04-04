@@ -1,69 +1,88 @@
 <template>
   <Layout>  
     <header :style="headerStyles">
-
       <b-container fluid class="slideshowOverlay">
         <b-row align-v="center">
-          <b-col style="text-align: right">            
-            <g-image alt="Hunter" v-if="headerLeftImg != null" :src="headerLeftImg" id="headerLeftImg" style="max-width:357px"/>
-          </b-col>
 
+          <b-col cols="3" class="headerImageCol" style="text-align: right">            
+            <g-image alt="Hunter" v-if="headerLeftImg != null" :src="headerLeftImg" id="headerLeftImg" />
+          </b-col>
           
-          <div id="headerItems">            
+          <b-col id="headerItems">          
             <g-image :src="titleImg1Line" class="titleImg titleImg1Line" />
             <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
-            <div v-html="node.content" class="collections_headerText" />
+
+            <div v-if="windowWidth < 992 && !showIntro" v-b-toggle.collapse-1 class="collections_headerText" style="font-style: italic" @click="showIntro = true">
+              Read intro
+              <svg viewBox="0 0 20 20" width="20" height="20" class="arrow">
+                <line x1="1" y1="4.5" x2="9" y2="13" />
+                <line x1="8" y1="13" x2="16" y2="4.5" />
+              </svg>
+            </div>
+
+            <div v-else-if="windowWidth < 992 && showIntro" v-b-toggle.collapse-1 class="collections_headerText" style="font-style: italic" @click="showIntro = false">
+              Hide intro
+              <svg viewBox="0 0 20 20" width="20" height="20" class="arrow">
+                <line x1="1" y1="13" x2="9" y2="4.5" />
+                <line x1="8" y1="4.5" x2="16" y2="13" />
+              </svg>
+            </div>
+
+            <div v-else v-html="node.content" class="collections_headerText" />
 
             <b-row align-v="start" align-h="center" style="min-height:68px; padding-top:8px">
+              <b-col cols="2" />
 
-              <div 
-                v-if="sportsmenSiteHoverImg != null" 
-                v-scroll-to="{ el:'#postcardHistory', duration:1500, easing:'ease' }"
-                id="sportsmenSiteHoverImgDiv"
-              >      
-                <g-image class="sportsmenSiteHoverImg" alt="Fishing fly line" :src="sportsmenSiteHoverImg" :class="{ showImage: sportsmenSiteHover }" />
-              </div>
-
-              <div style="margin-right:100px">
+              <b-col cols="3">
                 <div 
                   v-scroll-to="{ el:'#postcardHistory', duration:1500, easing:'ease' }"
                   class="sportsmenLinkText collections_headerLinkText" 
-                  @mouseover="sportsmenSiteHover = true" 
-                  @mouseleave="sportsmenSiteHover = false" 
+                  style="float: right"
+                  @mouseover="updateSportsmenSiteHover(true)" 
+                  @mouseleave="updateSportsmenSiteHover(false)" 
                 >
                   <span>MORE INFORMATION ON</span>
                   <br>
                   <span>Old-Time Sportsmen</span>
-                </div>
-              </div>
 
+                  <g-image class="sportsmenSiteHoverImg" alt="Fishing fly line" :src="sportsmenSiteHoverImg" :class="{ showImage: sportsmenSiteHover }" />
+                </div>
+              </b-col>
+
+              <b-col cols="2" />
               
-              <div v-if="sportsmenBookHoverImg != null" id="sportsmenBookHoverImgDiv">  
-                <g-link to="/publications/old-time-sportsmen">      
-                  <g-image class="sportsmenBookHoverImg" alt="Old log cabin" :src="sportsmenBookHoverImg" :class="{ showImage: sportsmenBookHover }" />
-                </g-link>
-              </div>
-              
-              <div style="margin-right:150px">
+              <b-col cols="3">
                 <g-link to="/publications/old-time-sportsmen">
-                  <div class="sportsmenLinkText collections_headerLinkText" @mouseover="sportsmenBookHover = true" @mouseleave="sportsmenBookHover = false">
+                  <div 
+                    class="sportsmenLinkText collections_headerLinkText"
+                    @mouseover="updateSportsmenBookHover(true)" 
+                    @mouseleave="updateSportsmenBookHover(false)"
+                  >
                     <span>AND SEE THE</span>
                     <br>
                     <span>Old-Time Sportsmen Book</span>
+
+                    <g-image class="sportsmenBookHoverImg" alt="Old log cabin" :src="sportsmenBookHoverImg" :class="{ showImage: sportsmenBookHover }" />
                   </div>
                 </g-link>
-              </div>
-            </b-row>            
-          </div>
+              </b-col>
 
-          
-          <b-col style="text-align:left">            
-            <g-image alt="ducks" v-if="headerRightImg != null" :src="headerRightImg" id="headerRightImg" style="max-width:389px"/>
+              <b-col cols="2" />
+            </b-row>            
           </b-col>
+          
+          <b-col cols="3" class="headerImageCol" style="text-align:left">            
+            <g-image alt="ducks" v-if="headerRightImg != null" :src="headerRightImg" id="headerRightImg" />
+          </b-col>
+
         </b-row>
       </b-container>
-
     </header>
+        
+    <b-collapse id="collapse-1">
+      <div v-html="node.content" class="collections_headerText" id="headerTextDevice" />
+    </b-collapse>
+
 
     <CollectionViewer
       :images="images"
@@ -72,7 +91,6 @@
       :prevCollection="prev_collection"
       :nextCollection="next_collection"
     />
-
 
 
     <section id="postcardHistory">
@@ -251,7 +269,9 @@ export default {
     return {
       imageIndex: 0,
       sportsmenSiteHover: false,
-      sportsmenBookHover: false
+      sportsmenBookHover: false,
+      showIntro: false,
+      windowWidth: 0.0
     }
   },
 
@@ -346,10 +366,43 @@ export default {
     }
   },
 
+  watch: {
+    windowWidth: function (val) {
+      if (val <= 1366) {
+        this.sportsmenSiteHover = true
+        this.sportsmenBookHover = true
+      }
+      else {
+        this.sportsmenSiteHover = false
+        this.sportsmenBookHover = false
+      }
+    }
+  },
+
+  mounted() {
+    this.windowWidth = window.innerWidth
+
+    window.addEventListener('resize', () => {  
+      this.windowWidth = window.innerWidth
+    })
+    window.addEventListener('orientationchange', () => {  
+      this.windowWidth = window.innerWidth
+    })
+  },
+
+
   methods: {    
     renderMarkdown(text) {
       const md = new MarkdownIt()
       return md.render(text) 
+    },
+    updateSportsmenSiteHover(val) {
+      if (this.windowWidth > 1366)
+        this.sportsmenSiteHover = val
+    },
+    updateSportsmenBookHover(val) {
+      if (this.windowWidth > 1366)
+        this.sportsmenBookHover = val      
     }
   },
 
@@ -410,9 +463,18 @@ header:after  {
   z-index: -1;
 }
 
+#headerLeftImg {
+  min-width: 230px;
+  max-width: 70%;
+}
+#headerRightImg {
+  min-width: 230px;
+  max-width: 70%;
+}
+
 #headerItems {
   width: 1240px; 
-  max-width: 90vw; 
+  max-width: 77vw; 
   text-align: center;
   margin: 0 auto;
 }
@@ -450,45 +512,41 @@ header:after  {
   font-size: 0.9375rem;
 }
 
+#headerTextDevice {
+  color:#ECECEC;
+  font-size: 0.925rem;
+  margin: 20px;
+}
+
+.arrow {
+  margin-left: 5px;
+  margin-right: -3px;
+}
+.arrow > line {
+  stroke: black;
+  stroke-width: 2px;
+}
+
 .sportsmenLinkText {
   text-align: center; 
   padding: 0;
   cursor: pointer;
 }
 
-#sportsmenSiteHoverImgDiv {
-  position: relative;
-  text-align: right; 
-  width: 205px; 
-  padding-right: 0;
-  cursor: pointer;
-}
 .sportsmenSiteHoverImg {
   max-width: 357px; 
-  position: absolute; 
-  right: -146px; 
+  position: absolute;
+  right: 60px; 
   top: -7px;
   opacity: 0;
 }
-#sportsmenSiteHoverImgDiv:hover .sportsmenSiteHoverImg {
-  opacity: 1;
-}
 
-#sportsmenBookHoverImgDiv {
-  position: relative;
-  text-align: left;
-  width: 100px;
-  cursor: pointer;
-}
 .sportsmenBookHoverImg {
   max-width: 389px; 
-  position: absolute; 
-  right: -27px; 
+  position: absolute;
+  left: -54px; 
   top: -6px;
   opacity: 0;
-}
-#sportsmenBookHoverImgDiv:hover .sportsmenBookHoverImg {
-  opacity: 1;
 }
 
 .showImage {
@@ -609,6 +667,9 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+  .titleImg {
+    max-width: 82%;
+  }
   .titleImg1Line {
     display: none;
   }
@@ -619,16 +680,20 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .titleImg1Line {
-    display: none;
-  }
-  .titleImg2Lines {
-    display: inline;
+  .titleImg {
+    max-width: 90%;
+    padding: 15px 0;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 768px) and (max-width: 991.98px) {  
+  .titleImg {
+    max-width: 90%;
+  }
+  .titleImg {
+    max-width: 66%;
+  }
   .titleImg1Line {
     display: none;
   }
@@ -644,5 +709,15 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 /* Special - Larger devices (desktops, 1200px and up) */
 @media (min-width: 1200px) and (max-width: 1390.98px) { 
 }
+
+/* Special - Larger devices (desktops, 1200px and up) */
+@media (max-width: 1399.98px) { 
+  .headerImageCol {   
+    display: none;
+  }
+}
+
+
+
 
 </style>
