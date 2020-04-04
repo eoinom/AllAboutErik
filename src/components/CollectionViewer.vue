@@ -49,14 +49,40 @@
                   zoom-radius="50%"
                   :show-cursor="false"
                   @imgloaded="imageLoaded($event, imageIndex)"
-                  :current-index="currentIndex"
-                  :images-length="images.length"
-                  @prev="prev()"
-                  @next="next()"
                 />                 
             </div>
           </li>
         </ul>
+      </div>
+
+      <div id="leftArrowContainer" v-if="currentIndex > 0" @click="prev()">
+        <img
+          alt="Left arrow, click for previous image" 
+          src="../assets/images/arrow-left.png" 
+          id="prevArrowImg"
+          class="prevArrow arrowImg" 
+        />
+        <img
+          alt="Left arrow, click for previous image" 
+          src="../assets/images/arrow-left-hover.png" 
+          id="prevArrowImg-hover"
+          class="prevArrow arrowImg" 
+        />
+      </div>
+
+      <div id="rightArrowContainer" v-if="currentIndex + 1 < images.length" @click="next()">
+        <img
+          alt="Right arrow, click for next image" 
+          src="../assets/images/arrow-right.png" 
+          id="nextArrowImg"
+          class="nextArrow arrowImg"
+        />
+        <img
+          alt="Right arrow, click for next image" 
+          src="../assets/images/arrow-right-hover.png" 
+          id="nextArrowImg-hover"
+          class="nextArrow arrowImg" 
+        />
       </div>
 
       <g-link to="/collections/" class="nav_link pt-3" id="nav_back">BACK TO COLLECTIONS MENU</g-link>
@@ -64,6 +90,7 @@
 
   </div>
 </template>
+
 
 <script>
 import ImageMagnifier from './ImageMagnifier.vue'
@@ -285,6 +312,7 @@ export default {
 
 * {
   --linkGutter:  45px;
+  --arrowOffset:  8.5%;
 }
 
 .nav_link {
@@ -323,7 +351,7 @@ export default {
   left: 50%;
   transform: translate(-50%, 0);
   text-align: center;
-  padding: 0;
+  padding: 0 20px;
   width: fit-content;
 }
 #nav_prev:hover, #nav_next:hover, #nav_back:hover {
@@ -371,7 +399,7 @@ export default {
     & {
       position: relative;
       margin: 0 auto;
-      max-width: 85%;
+      max-width: 90%;
       max-height: 100%;
       height: calc(100vh - var(--headerHeight) - 20px);
       padding: 20px 0 80px 0;
@@ -456,21 +484,53 @@ export default {
   }
 }
 
+.arrowImg {
+  width: 7.0%;
+  max-width: 26px;
+  min-width: 15px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1002;
+  display: block;
+  background: transparent;
+  border: 0;
+  line-height: 0;
+  outline: none;
+  cursor: pointer;
+}
+.nextArrow {
+  right: var(--arrowOffset);
+}
+.prevArrow {
+  left: var(--arrowOffset);
+}
+
+#prevArrowImg-hover, 
+#leftArrowContainer:hover #prevArrowImg {
+  display: none;
+}
+#leftArrowContainer:hover #prevArrowImg-hover {
+  display: inline;
+}
+
+#nextArrowImg-hover, 
+#rightArrowContainer:hover #nextArrowImg {
+  display: none;
+}
+#rightArrowContainer:hover #nextArrowImg-hover {
+  display: inline;
+}
+
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .collection-viewer {
-    &__next {
-      right: 1.5%;
-    }
-    &__prev {
-      left: 1.5%;
-    }
-  }
   * {
     --linkGutter: 25px;
+    --arrowOffset: 3.0%;
   }
   .nav_link {
     font-size: calc(1.25rem + 4 * (100vw - 350px) / (576 - 350) ); /* varies between 20px - 24px */
@@ -494,16 +554,9 @@ export default {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .collection-viewer {
-    &__next {
-      right: 3.0%;
-    }
-    &__prev {
-      left: 3.0%;
-    }
-  }
   * {
     --linkGutter: calc(25px + 20 * (100vw - 576px) / (768 - 576) ); /* varies between 25px - 45px */
+    --arrowOffset: 3.0%;
   }
   .nav_link {
     font-size: calc(1.5rem + 4 * (100vw - 576px) / (768 - 576) ); /* varies between 24px - 28px */
@@ -518,13 +571,8 @@ export default {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) { 
-  .collection-viewer {
-    &__next {
-      right: 4.5%;
-    }
-    &__prev {
-      left: 4.5%;
-    }
+  * {
+    --arrowOffset: 4.5%;
   }
   .nav_link_small {
     display: block;
@@ -536,16 +584,9 @@ export default {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {  
-  .collection-viewer{
-    &__next {
-      right: 6.5%;
-    }
-    &__prev {
-      left: 6.5%;
-    }
-  }
   * {
     --linkGutter: 25px;
+    --arrowOffset: 4.5%;
   }
   #nav_prev {
     text-align: center;

@@ -29,36 +29,7 @@
         :style="zoomImgStyle" 
       />
     </div>
-
-    <div id="leftArrowContainer" v-if="currentIndex > 0" @click="$emit('prev')">
-      <img
-        alt="Left arrow, click for previous image" 
-        src="../assets/images/arrow-left.png" 
-        id="prevArrowImg"
-        class="prevArrow arrowImg" 
-      />
-      <img
-        alt="Left arrow, click for previous image" 
-        src="../assets/images/arrow-left-hover.png" 
-        id="prevArrowImg-hover"
-        class="prevArrow arrowImg" 
-      />
-    </div>
-
-    <div id="rightArrowContainer" v-if="currentIndex + 1 < imagesLength" @click="$emit('next')">
-      <img
-        alt="Right arrow, click for next image" 
-        src="../assets/images/arrow-right.png" 
-        id="nextArrowImg"
-        class="nextArrow arrowImg"
-      />
-      <img
-        alt="Right arrow, click for next image" 
-        src="../assets/images/arrow-right-hover.png" 
-        id="nextArrowImg-hover"
-        class="nextArrow arrowImg" 
-      />
-    </div>
+    
   </div>
 </template>
 
@@ -94,12 +65,6 @@
       showCursor: {
         type: Boolean,
         default: true
-      },
-      currentIndex: {
-        type: Number
-      },
-      imagesLength: {
-        type: Number
       }
     },
 
@@ -230,6 +195,7 @@
     max-height: 100%;
     object-fit: contain; 
     vertical-align: middle;
+    padding: 0 30px;
   }
 
   &__zoom {
@@ -254,46 +220,4 @@
     pointer-events: none;
   }
 }
-
-.arrowImg {
-  width: 7.0%;
-  max-width: 26px;
-  min-width: 15px;
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  z-index: 1002;
-  display: block;
-  background: transparent;
-  border: 0;
-  line-height: 0;
-  outline: none;
-  cursor: pointer;
-}
-.nextArrow {
-  right: -20px;
-  vertical-align: middle;
-}
-.prevArrow {
-  left: -20px;
-}
-
-#prevArrowImg-hover, 
-#leftArrowContainer:hover #prevArrowImg {
-  display: none;
-}
-#leftArrowContainer:hover #prevArrowImg-hover {
-  display: inline;
-}
-
-#nextArrowImg-hover, 
-#rightArrowContainer:hover #nextArrowImg {
-  display: none;
-}
-#rightArrowContainer:hover #nextArrowImg-hover {
-  display: inline;
-}
-
-
 </style>
