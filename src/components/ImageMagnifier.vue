@@ -195,7 +195,7 @@
     max-height: 100%;
     object-fit: contain; 
     vertical-align: middle;
-    padding: 0 30px;
+    padding: 0px;
   }
 
   &__zoom {
