@@ -327,6 +327,7 @@ export default {
   text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
   margin: 0px;
   padding: 0px;
+  width: fit-content;
   z-index: 1000;
 }
 .nav_link_small {
@@ -341,6 +342,7 @@ export default {
 }
 #nav_next {
   text-align: right;
+  float: right;
   padding-right: var(--linkGutter);
 }
 #nav_back { 
@@ -352,7 +354,6 @@ export default {
   transform: translate(-50%, 0);
   text-align: center;
   padding: 0 20px;
-  width: fit-content;
 }
 #nav_prev:hover, #nav_next:hover, #nav_back:hover {
   color:	#EED047;
