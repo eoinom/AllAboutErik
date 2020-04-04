@@ -31,43 +31,55 @@
             <div v-else v-html="node.content" class="collections_headerText" />
 
             <b-row align-v="start" align-h="center" style="min-height:68px; padding-top:8px">
-              <b-col cols="2" />
+              <b-col sm="1" md="2" class="d-none d-sm-block" />
 
-              <b-col cols="3">
+              <b-col cols="6" sm="4" md="3" style="padding:0 5px">
                 <div 
                   v-scroll-to="{ el:'#postcardHistory', duration:1500, easing:'ease' }"
                   class="sportsmenLinkText collections_headerLinkText" 
-                  style="float: right"
+                  id="sportsmenMoreInfoText"
                   @mouseover="updateSportsmenSiteHover(true)" 
                   @mouseleave="updateSportsmenSiteHover(false)" 
                 >
-                  <span>MORE INFORMATION ON</span>
-                  <br>
-                  <span>Old-Time Sportsmen</span>
+                  <div v-if="windowWidth > 484">
+                    <span>MORE INFORMATION ON</span>
+                    <br><span>Old-Time Sportsmen</span>
+                  </div>
+                  <div v-else-if="windowWidth > 479">
+                    <span>MORE INFORMATION <br>ON</span>
+                    <br><span>Old-Time Sportsmen</span>
+                  </div>
+                  <div v-else>
+                    <span>MORE INFORMATION <br>ON</span>
+                    <br><span>Old-Time <br>Sportsmen</span>
+                  </div>
 
                   <g-image class="sportsmenSiteHoverImg" alt="Fishing fly line" :src="sportsmenSiteHoverImg" :class="{ showImage: sportsmenSiteHover }" />
                 </div>
               </b-col>
 
-              <b-col cols="2" />
+              <b-col sm="1" md="2" class="d-none d-sm-block" />
               
-              <b-col cols="3">
-                <g-link to="/publications/old-time-sportsmen">
-                  <div 
-                    class="sportsmenLinkText collections_headerLinkText"
-                    @mouseover="updateSportsmenBookHover(true)" 
-                    @mouseleave="updateSportsmenBookHover(false)"
-                  >
-                    <span>AND SEE THE</span>
-                    <br>
-                    <span>Old-Time Sportsmen Book</span>
-
-                    <g-image class="sportsmenBookHoverImg" alt="Old log cabin" :src="sportsmenBookHoverImg" :class="{ showImage: sportsmenBookHover }" />
+              <b-col cols="6" sm="4" md="3" style="padding:0 5px">
+                <a :href="sportsmenGalleryLink" target="_blank"
+                  class="sportsmenLinkText collections_headerLinkText"
+                  @mouseover="updateSportsmenGalleryHover(true)" 
+                  @mouseleave="updateSportsmenGalleryHover(false)"
+                >
+                  <div v-if="windowWidth > 350">
+                    <span>OPEN A NEW TAB TO SEE THE</span>
+                    <br><span>Old-Time Sportsmen Gallery</span>
                   </div>
-                </g-link>
+                  <div v-else>
+                    <span>OPEN A NEW TAB TO SEE THE</span>
+                    <br><span>Old-Time Sportsmen <br>Gallery</span>
+                  </div>
+
+                  <g-image class="sportsmenGalleryHoverImg" alt="Old log cabin" :src="sportsmenGalleryHoverImg" :class="{ showImage: sportsmenGalleryHover }" />
+                </a>
               </b-col>
 
-              <b-col cols="2" />
+              <b-col sm="1" md="2" class="d-none d-sm-block" />
             </b-row>            
           </b-col>
           
@@ -199,7 +211,7 @@
         headerRightImg
         sportsmenSiteHoverImg
         sportsmenBookHoverImg
-        sportsmenBookLink
+        sportsmenSiteLink
         footerImg
         content
         images {
@@ -269,7 +281,7 @@ export default {
     return {
       imageIndex: 0,
       sportsmenSiteHover: false,
-      sportsmenBookHover: false,
+      sportsmenGalleryHover: false,
       showIntro: false,
       windowWidth: 0.0
     }
@@ -303,11 +315,11 @@ export default {
     sportsmenSiteHoverImg() {
       return this.node.sportsmenSiteHoverImg
     },
-    sportsmenBookHoverImg() {
+    sportsmenGalleryHoverImg() {
       return this.node.sportsmenBookHoverImg
     },
-    sportsmenBookLink() {
-      return this.node.sportsmenBookLink
+    sportsmenGalleryLink() {
+      return this.node.sportsmenSiteLink
     },
     footerImg() {
       return this.node.footerImg
@@ -368,13 +380,13 @@ export default {
 
   watch: {
     windowWidth: function (val) {
-      if (val <= 1366) {
+      if (val >= 576 && val <= 1366) {
         this.sportsmenSiteHover = true
-        this.sportsmenBookHover = true
+        this.sportsmenGalleryHover = true
       }
       else {
         this.sportsmenSiteHover = false
-        this.sportsmenBookHover = false
+        this.sportsmenGalleryHover = false
       }
     }
   },
@@ -400,9 +412,9 @@ export default {
       if (this.windowWidth > 1366)
         this.sportsmenSiteHover = val
     },
-    updateSportsmenBookHover(val) {
+    updateSportsmenGalleryHover(val) {
       if (this.windowWidth > 1366)
-        this.sportsmenBookHover = val      
+        this.sportsmenGalleryHover = val      
     }
   },
 
@@ -474,7 +486,7 @@ header:after  {
 
 #headerItems {
   width: 1240px; 
-  max-width: 77vw; 
+  max-width: 80vw; 
   text-align: center;
   margin: 0 auto;
 }
@@ -528,6 +540,7 @@ header:after  {
 }
 
 .sportsmenLinkText {
+  display: block;
   text-align: center; 
   padding: 0;
   cursor: pointer;
@@ -538,19 +551,22 @@ header:after  {
   position: absolute;
   right: 60px; 
   top: -7px;
-  opacity: 0;
+  display: none;
+}
+#sportsmenMoreInfoText {
+  float: right;
 }
 
-.sportsmenBookHoverImg {
+.sportsmenGalleryHoverImg {
   max-width: 389px; 
   position: absolute;
-  left: -54px; 
+  left: -70px; 
   top: -6px;
-  opacity: 0;
+  display: none;
 }
 
 .showImage {
-  opacity: 1;
+  display: block;
 }
 
 .titleImg {
@@ -676,6 +692,18 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .titleImg2Lines {
     display: inline;
   }
+  .collections_headerLinkText,
+  .collections_headerLinkText > span:nth-child(3) {
+    width: auto;
+    font-size: 14px;
+  }
+  .sportsmenLinkText {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  #sportsmenMoreInfoText {
+    float: none;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -683,6 +711,16 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .titleImg {
     max-width: 90%;
     padding: 15px 0;
+  }
+  .sportsmenSiteHoverImg {
+    height: 72px;
+    right: 76px;
+    top: 0px;
+  }
+  .sportsmenGalleryHoverImg {
+    height: 65px;
+    left: -58px;
+    top: 0px;
   }
 }
 
