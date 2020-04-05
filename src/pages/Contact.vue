@@ -9,7 +9,8 @@
       <p class="text-main">Please use this form to send any comments or questions about the website or if you want to get in touch.</p>
       
       <div class="form-container mb-5">
-        <form name="contact" netlify>
+        <form name="contact" method="POST" netlify data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" /> <!-- Hidden honeypot field to prevent against bot spam -->
 
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your name..">
