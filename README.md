@@ -12,3 +12,6 @@ This is the project you get when you run `gridsome create new-project`.
 2. `cd my-gridsome-site` to open the folder
 3. `gridsome develop` to start a local dev server at `http://localhost:8080`
 4. Happy coding 🎉🙌
+
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1ada54c3-1acc-45a3-9336-46e3bbef636d/deploy-status)](https://app.netlify.com/sites/all-about-erik/deploys)
