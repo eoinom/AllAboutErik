@@ -187,6 +187,7 @@
 
 .image-magnifier {
   width: fit-content;
+  max-width: 90%;
 
   &__img {
     width: auto;
@@ -218,6 +219,16 @@
     will-change: transform;
     transform: translate(var(--zoomPositionX), var(--zoomPositionY));
     pointer-events: none;
+  }
+}
+
+
+/* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .image-magnifier {
+    max-width: 85%;
   }
 }
 </style>

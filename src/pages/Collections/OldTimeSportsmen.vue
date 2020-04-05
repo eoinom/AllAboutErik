@@ -109,30 +109,41 @@
       <b-container fluid class="slideshowOverlay">
         <b-row align-v="center">
 
-          <b-col align-self="start" style="padding-top:250px">
+          <b-col v-if="windowWidth >= 2200" align-self="start" style="padding-top:250px">
             <slideshow-zoom :slides="people_images" />
           </b-col>
           
           <b-col> 
             <div id="postcardHistory__textDiv">
               <h2 class="title">{{ postcardHistory.title }}</h2>
-              <div class="pb-5">
-                <div class="pb-2 pl-5 pr-3" style="float:right">
+              <div class="pb-2 pb-sm-3 pb-md-4 pb-lg-5">
+                <div class="pb-4 pb-xl-2 pt-3 pt-xl-0 mb-3 mb-xl-0 pl-5 pr-3" style="float:right">
                   <flip-postcard
+                    v-if="windowWidth > 850"
                     :imgFront="postcardHistory.postcards[0].imgFront"
                     :imgBack="postcardHistory.postcards[0].imgBack"
                     :caption="postcardHistory.postcards[0].caption"
+                    :seeTheBack=false
                     :width="480"
                     :height="297"
                   />
+                  <flip-postcard
+                    v-else-if="windowWidth >= 768"
+                    :imgFront="postcardHistory.postcards[0].imgFront"
+                    :imgBack="postcardHistory.postcards[0].imgBack"
+                    :caption="postcardHistory.postcards[0].caption"
+                    :seeTheBack=false
+                    :width="408"
+                    :height="252.45"
+                  />
                 </div>
-                <br />
+                <br v-if="windowWidth >= 768" />
                 <span v-html="postcardHistory.textPt1" class="postcardText" />
 
-                <img :src="postcardHistory.images[0].img" class="py-3 pr-3" style="float:left">
+                <img :src="postcardHistory.images[0].img" class="py-3 pr-3" style="float:left; max-width:55%">
                 <span v-html="postcardHistory.textPt2" class="postcardText" />
 
-                <img :src="postcardHistory.images[1].img" class="pl-3" style="float:right">
+                <img :src="postcardHistory.images[1].img" class="pl-3" style="float:right; max-width:55%">
                 <span v-html="postcardHistory.textPt3" class="postcardText" />
               </div>
 
@@ -143,50 +154,108 @@
             </div>
           </b-col>
 
-          <b-col align-self="start">
+          <b-col v-if="windowWidth >= 2200" align-self="start">
             <div id="postcardsSidebar" class="pt-5">
-              <div>
-                <flip-postcard
-                  :imgFront="postcardHistory.postcards[1].imgFront"
-                  :imgBack="postcardHistory.postcards[1].imgBack"
-                  :imgBackLarge="postcardHistory.postcards[1].imgBackLarge"
-                  :caption="postcardHistory.postcards[1].caption"
-                  :width="487"
-                  :height="307"
-                  :seeTheBack=true
-                  :backText="renderMarkdown(postcardHistory.postcards[1].backText)"
-                  :backTextIsHTML=true
-                  class="sidePostcards"
-                />
-                <flip-postcard
-                  :imgFront="postcardHistory.postcards[2].imgFront"
-                  :imgBack="postcardHistory.postcards[2].imgBack"
-                  :imgBackLarge="postcardHistory.postcards[2].imgBackLarge"
-                  :caption="postcardHistory.postcards[2].caption"
-                  :width="487"
-                  :height="309"
-                  :seeTheBack=true
-                  :backText="renderMarkdown(postcardHistory.postcards[2].backText)"
-                  :backTextIsHTML=true
-                  class="sidePostcards"
-                />
-                <flip-postcard
-                  :imgFront="postcardHistory.postcards[3].imgFront"
-                  :imgBack="postcardHistory.postcards[3].imgBack"
-                  :imgBackLarge="postcardHistory.postcards[3].imgBackLarge"
-                  :caption="postcardHistory.postcards[3].caption"
-                  :width="487"
-                  :height="310"
-                  :seeTheBack=true
-                  :backText="renderMarkdown(postcardHistory.postcards[3].backText)"
-                  :backTextIsHTML=true
-                  class="sidePostcards"
-                />
-              </div>
+              <flip-postcard
+                :imgFront="postcardHistory.postcards[1].imgFront"
+                :imgBack="postcardHistory.postcards[1].imgBack"
+                :imgBackLarge="postcardHistory.postcards[1].imgBackLarge"
+                :caption="postcardHistory.postcards[1].caption"
+                :width="487"
+                :height="307"
+                :seeTheBack=true
+                :backText="renderMarkdown(postcardHistory.postcards[1].backText)"
+                :backTextIsHTML=true
+                class="sidePostcards"
+              />
+              <flip-postcard
+                :imgFront="postcardHistory.postcards[2].imgFront"
+                :imgBack="postcardHistory.postcards[2].imgBack"
+                :imgBackLarge="postcardHistory.postcards[2].imgBackLarge"
+                :caption="postcardHistory.postcards[2].caption"
+                :width="487"
+                :height="309"
+                :seeTheBack=true
+                :backText="renderMarkdown(postcardHistory.postcards[2].backText)"
+                :backTextIsHTML=true
+                class="sidePostcards"
+              />
+              <flip-postcard
+                :imgFront="postcardHistory.postcards[3].imgFront"
+                :imgBack="postcardHistory.postcards[3].imgBack"
+                :imgBackLarge="postcardHistory.postcards[3].imgBackLarge"
+                :caption="postcardHistory.postcards[3].caption"
+                :width="487"
+                :height="310"
+                :seeTheBack=true
+                :backText="renderMarkdown(postcardHistory.postcards[3].backText)"
+                :backTextIsHTML=true
+                class="sidePostcards"
+              />
+            </div>
+          </b-col>
+        </b-row>
+
+
+
+        <b-row v-if="windowWidth < 2200" align-v="center" align-h="center">
+
+          <b-col v-if="windowWidth > 1149" align-self="start" style="padding-top:250px">
+            <slideshow-zoom :slides="people_images" />
+          </b-col>
+          
+          <b-col align-self="start" :style="postcardsSidebarStyles">
+            <div id="postcardsSidebar" class="pt-4">
+              <flip-postcard
+                v-if="windowWidth < 768"
+                :imgFront="postcardHistory.postcards[0].imgFront"
+                :imgBack="postcardHistory.postcards[0].imgBack"
+                :caption="postcardHistory.postcards[0].caption"
+                :seeTheBack="windowWidth >= 576"
+                :width="postcardSize(0).width"
+                :height="postcardSize(0).height"
+              />
+              <flip-postcard
+                :imgFront="postcardHistory.postcards[1].imgFront"
+                :imgBack="postcardHistory.postcards[1].imgBack"
+                :imgBackLarge="postcardHistory.postcards[1].imgBackLarge"
+                :caption="postcardHistory.postcards[1].caption"
+                :width="postcardSize(1).width"
+                :height="postcardSize(1).height"
+                :seeTheBack="windowWidth >= 576"
+                :backText="renderMarkdown(postcardHistory.postcards[1].backText)"
+                :backTextIsHTML=true
+                class="sidePostcards"
+              />
+              <flip-postcard
+                :imgFront="postcardHistory.postcards[2].imgFront"
+                :imgBack="postcardHistory.postcards[2].imgBack"
+                :imgBackLarge="postcardHistory.postcards[2].imgBackLarge"
+                :caption="postcardHistory.postcards[2].caption"
+                :width="postcardSize(2).width"
+                :height="postcardSize(2).height"
+                :seeTheBack="windowWidth >= 576"
+                :backText="renderMarkdown(postcardHistory.postcards[2].backText)"
+                :backTextIsHTML=true
+                class="sidePostcards"
+              />
+              <flip-postcard
+                :imgFront="postcardHistory.postcards[3].imgFront"
+                :imgBack="postcardHistory.postcards[3].imgBack"
+                :imgBackLarge="postcardHistory.postcards[3].imgBackLarge"
+                :caption="postcardHistory.postcards[3].caption"
+                :width="postcardSize(3).width"
+                :height="postcardSize(3).height"
+                :seeTheBack="windowWidth >= 576"
+                :backText="renderMarkdown(postcardHistory.postcards[3].backText)"
+                :backTextIsHTML=true
+                class="sidePostcards"
+              />
             </div>
           </b-col>
 
         </b-row>
+
       </b-container>
     
     </section>
@@ -283,7 +352,13 @@ export default {
       sportsmenSiteHover: false,
       sportsmenGalleryHover: false,
       showIntro: false,
-      windowWidth: 0.0
+      windowWidth: 0.0,
+      postcardSizes: [
+        {width: 480, height: 297},
+        {width: 487, height: 307},
+        {width: 487, height: 309},
+        {width: 487, height: 310},
+      ]
     }
   },
 
@@ -333,6 +408,13 @@ export default {
     footerStyles() {
       return {
         '--footerBgImg': 'url(' + this.footerImg + ')'
+      }
+    },
+    postcardsSidebarStyles() {
+      if (this.windowWidth < 1150) {
+        return {
+          flex: 0
+        }
       }
     },
     images() {
@@ -415,6 +497,17 @@ export default {
     updateSportsmenGalleryHover(val) {
       if (this.windowWidth > 1366)
         this.sportsmenGalleryHover = val      
+    },
+    postcardSize(index) {
+      if (this.windowWidth >= 620)
+        return this.postcardSizes[index]
+      else {
+        let factor = this.windowWidth / 620
+        return {
+          width: factor * this.postcardSizes[index].width,
+          height:  factor * this.postcardSizes[index].height 
+        }
+      }
     }
   },
 
@@ -679,6 +772,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   margin:70px 0
 }
 
+
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -704,6 +798,11 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   #sportsmenMoreInfoText {
     float: none;
   }
+  #postcardHistory {
+    &__textDiv {
+      width: 90%;
+    }
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -722,6 +821,11 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
     left: -58px;
     top: 0px;
   }
+  #postcardHistory {
+    &__textDiv {
+      width: 90%;
+    }
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -738,24 +842,27 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .titleImg2Lines {
     display: inline;
   }
+  #postcardHistory {
+    &__textDiv {
+      width: 90%;
+    }
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
+  #postcardHistory {
+    &__textDiv {
+      width: 90%;
+    }
+  }
 }
 
-/* Special - Larger devices (desktops, 1200px and up) */
-@media (min-width: 1200px) and (max-width: 1390.98px) { 
-}
-
-/* Special - Larger devices (desktops, 1200px and up) */
+/* Special */
 @media (max-width: 1399.98px) { 
   .headerImageCol {   
     display: none;
   }
 }
-
-
-
 
 </style>
