@@ -18,8 +18,12 @@
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Your email..">
 
-          <label v-show="false" for="subject">Subject</label>
-          <textarea v-show="false" id="subject" name="subject" placeholder="Your subject.." style="height:50px"></textarea>
+          <!-- The default subject for all form notifications is as follows:
+          Form submission from {YOUR-FORM-NAME} form
+          To override this, add a subject field to your form, and the value of that field will be used for the notification email subject. 
+          This field does not need to be visible to your users. -->
+          <!-- <label v-show="false" for="subject">Subject</label> -->
+          <!-- <textarea v-show="false" id="subject" name="subject" placeholder="Your subject.." style="height:50px"></textarea> -->
 
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Your message.." style="height:200px"></textarea>
@@ -30,7 +34,7 @@
       </div>
 
 
-      <div class="clearfix colelem pb-5" id="u703734-52" data-muse-uid="U703734" data-muse-type="txt_frame" data-IBE-flags="txtStyleSrc"><!-- content -->
+      <div class="pb-5">
         <p id="u703734-2"><span class="text-titles" id="u703734">Musical Credits</span></p>
         <p id="u703734-3">&nbsp;</p>
         <br>
