@@ -422,7 +422,8 @@ collections:
             fields: 
               - {label: 'Page Name', name: 'pageName', widget: 'string', required: false}
               - {label: 'Track Title', name: 'trackTitle', widget: 'string', required: false}
-              - {label: 'Artist', name: 'artist', widget: 'string', required: false}          
+              - {label: 'Artist', name: 'artist', widget: 'string', required: false}   
+          - {label: 'Musical Credits Text', name: 'musicalCreditsText', widget: 'markdown', required: false}       
           - label: "Other Credits"
             name: "otherCredits"
             widget: "list"
