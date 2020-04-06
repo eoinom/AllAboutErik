@@ -171,7 +171,7 @@ input[type=text], input[type=email], textarea {
 
   color: #91465A;
   background-color: #DDD;
-  font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-style: italic;
 }
@@ -191,7 +191,8 @@ input[type=submit] {
   font-family: 'NeueHaasGroteskText Pro55', sans-serif;
   font-weight: 400;
   font-size: 1.125em;
-  letter-spacing: 1.25px;
+  // letter-spacing: 1.25px;
+  letter-spacing: 5px;
   text-transform: uppercase;
 }
 
