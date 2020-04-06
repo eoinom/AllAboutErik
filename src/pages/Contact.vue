@@ -2,11 +2,11 @@
   <Layout>
     <div class="container">
       
-      <!-- <g-image :src="titleImg" id="titleImg" /> -->
-      <g-image src="https://res.cloudinary.com/all-about-erik/image/upload/v1586088192/Contact/contact-and-credits_lgaabq.png" id="titleImg" class="py-5" />
+      <g-image :src="titleImg" id="titleImg" class="py-5" />
 
-      <p class="text-main">Please use this form to send any comments or questions about the website or if you want to get in touch.</p>
+      <span v-html="mainText" class="text-main" />
       
+      <!-- CONTACT FORM -->
       <div class="form-container mb-5">
         <form name="contact" method="POST" netlify data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact" /> <!-- Hidden honeypot field to prevent against bot spam -->
@@ -17,97 +17,121 @@
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Your email..">
 
-          <!-- The default subject for all form notifications is as follows:
-          Form submission from {YOUR-FORM-NAME} form
-          To override this, add a subject field to your form, and the value of that field will be used for the notification email subject. 
-          This field does not need to be visible to your users. -->
-          <!-- <label v-show="false" for="subject">Subject</label> -->
-          <!-- <textarea v-show="false" id="subject" name="subject" placeholder="Your subject.." style="height:50px"></textarea> -->
-
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Your message.." style="height:200px"></textarea>
 
           <input type="submit" value="Submit">
-
         </form>
       </div>
 
-
+      <!-- CREDITS -->
       <div class="pb-5">
-        <!-- <p><span class="text-titles" id="u703734">Musical Credits</span></p> -->
-        <p><span class="text-titles">Credits</span></p>
-        <p>&nbsp;</p>
+        <p class="text-titles">Credits</p>
         <br>
-        <!-- <p><span class="text-main">Home page – Wildwood Flower by John Sebastian</span></p>
-        <p><span class="text-main">Roots &amp; Youth – Body and Soul by Coleman Hawkins</span></p>
-        <p><span class="text-main">Musical Journey Episodes – Harpoon by John Sebastian</span></p>
-        <p><span class="text-main">Musical Friends – Japanese Silky by Norman Greenbaum</span></p>
-        <p><span class="text-main">Early Productions – Green Rocky Road by Tim Hardin</span></p>
-        <p><span class="text-main">Discography – Brief Synthophonia by Sopwith Camel</span></p>
-        <p><span class="text-main">Shorts – Sweet Moments by The Blue Velvet Band</span></p>
-        <p><span class="text-main">Travels – Ramblin Man by The Blue Velvet Band</span></p>
-        <p><span class="text-main">Collections – Dicky by Edwardo Unz</span></p>
-        <p><span class="text-main">Publications – 5 Pennies by Norman Greenbaum</span></p>
-        <p><span class="text-main">Archives – Fond Affection by The Blue Velvet Band</span></p>
-        <p>&nbsp;</p> -->
 
         <ul style="list-style-type:none; padding-left:0">
-          <li><span class="text-main">Home page – Wildwood Flower by John Sebastian</span></li>
-          <li><span class="text-main">Roots &amp; Youth – Body and Soul by Coleman Hawkins</span></li>
-          <li><span class="text-main">Musical Journey Episodes – Harpoon by John Sebastian</span></li>
-          <li><span class="text-main">Musical Friends – Japanese Silky by Norman Greenbaum</span></li>
-          <li><span class="text-main">Early Productions – Green Rocky Road by Tim Hardin</span></li>
-          <li><span class="text-main">Discography – Brief Synthophonia by Sopwith Camel</span></li>
-          <li><span class="text-main">Shorts – Sweet Moments by The Blue Velvet Band</span></li>
-          <li><span class="text-main">Travels – Ramblin Man by The Blue Velvet Band</span></li>
-          <li><span class="text-main">Collections – Dicky by Edwardo Unz</span></li>
-          <li><span class="text-main">Publications – 5 Pennies by Norman Greenbaum</span></li>
-          <li><span class="text-main">Archives – Fond Affection by The Blue Velvet Band</span></li>
+          <li v-for="(credit, i) in musicalCredits" :key="'credit'+i">
+            <span class="text-main">{{ credit.pageName }} – {{ credit.trackTitle }} by {{ credit.artist }}</span>
+          </li>
         </ul>
 
         <br>
-        <!-- <p><span class="text-titles">VISUAL CREDITS</span></p> -->
-        <p><span class="text-main">I want to thank my old buddy Henry Diltz for his contribution of photographs and his terrific long hand script included throughout this website. To all the photographers and musicians whose work I have so freely borrowed I extend my heartfelt thanks.</span></p>
-        <br>
-        <p>&nbsp;</p>
-        <br>
-        <p><span class="text-titles">WEBSITE CREDITS</span></p>
-        <p>&nbsp;</p>
-        <br>
-        <!-- <p><span class="text-main">Website Designer: Lindsey Brady</span></p> -->
-        <p><span class="text-main">Designer: Lindsey Brady</span></p>
-        <br>
-        <!-- <p><span class="text-main">Website Developer: Eoin O’Malley</span></p> -->
-        <p><span class="text-main">Developer: Eoin O’Malley</span></p>
+        <p class="text-main">{{ musicalCreditsText }}</p>
+        <br><br>
+        
+        <div v-for="(creditSection, i) in otherCredits" :key="'creditSection'+i">
+          <p class="text-titles">{{ creditSection.heading }}</p>
+          <br>
+          <span v-html="renderMarkdown(creditSection.text)" class="text-main" />
+          <br>
+        </div>
 
-        <!-- <ul style="list-style-type:none; padding-left:0">
-          <li><span class="text-main">Designer: Lindsey Brady</span></li>
-          <li><span class="text-main">Developer: Eoin O’Malley</span></li>
-        </ul> -->
-
-        <br>
-        <p>&nbsp;</p>
-        <br>
-        <p><span class="text-titles">CONTENT CREDITS</span></p>
-        <p>&nbsp;</p>
-        <br>
-        <p><span class="text-main">Video Editing: Lindsey Brady &amp; Heather Young</span></p>
       </div>    
     </div>
 
-
+  	<!-- BACKGROUND VIDEO -->
     <video autoplay loop muted id="contactBgVideo">
-      <!-- <source src="somevideo.webm" type="video/webm"> -->
-      <source src="https://res.cloudinary.com/all-about-erik/video/upload/v1586089708/Contact/water-3_kygpep.mp4" type="video/mp4">
+      <source :src="bgVideo.videoSrcWebm" type="video/webm">
+      <source :src="bgVideo.videoSrcMP4" type="video/mp4">
     </video>
 
   </Layout>
 </template>
 
+
+<page-query>
+{
+  Contact: allContact {
+    edges {
+      node {
+        id
+        pageTitle
+        headingImg
+        content
+        musicalCreditsHeading
+        musicalCredits {
+          pageName
+          trackTitle
+          artist
+        }
+        musicalCreditsText
+        otherCredits {
+          heading
+          text
+        }
+        bgVideo {
+          videoSrcWebm
+          videoSrcMP4
+        }
+      }
+    }
+  }	
+}
+</page-query>
+
+
 <script>
+const MarkdownIt = require('markdown-it')
+
 export default {
-  metaInfo: {
-    title: 'Contact'
+  metaInfo() {
+    return {
+      title: this.node.pageTitle
+    }
+  },
+
+  computed: {
+    node() {
+      return this.$page.Contact.edges[0].node
+    },
+    titleImg() {
+      return this.node.headingImg
+    },
+    mainText(){
+      return this.node.content
+    },
+    musicalCreditsHeading(){
+      return this.node.musicalCreditsHeading
+    },
+    musicalCredits(){
+      return this.node.musicalCredits
+    },
+    musicalCreditsText(){
+      return this.node.musicalCreditsText
+    },
+    otherCredits(){
+      return this.node.otherCredits
+    },
+    bgVideo(){
+      return this.node.bgVideo
+    }
+  },
+
+  methods: {    
+    renderMarkdown(text) {
+      const md = new MarkdownIt()
+      return md.render(text) 
+    }
   }
 }
 </script>
