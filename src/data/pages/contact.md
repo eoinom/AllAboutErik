@@ -50,5 +50,10 @@ otherCredits:
       Developer: Eoin O’Malley
   - heading: CONTENT CREDITS
     text: 'Video Editing: Lindsey Brady & Heather Young'
+bgVideo:
+  videoSrcMP4: >-
+    https://res.cloudinary.com/all-about-erik/video/upload/ac_none,q_auto:eco/v1586215216/Contact/water-3-reduced_xkjjmi.mp4
+  videoSrcWebm: >-
+    https://res.cloudinary.com/all-about-erik/video/upload/ac_none,q_auto:eco/v1586215501/Contact/water-3-reduced_mua9el.webm
 ---
 Please use this form to send any comments or questions about the website or if you want to get in touch.
