@@ -1,6 +1,5 @@
 <template>
   <Layout>
-
     <div class="container">
       
       <!-- <g-image :src="titleImg" id="titleImg" /> -->
@@ -35,46 +34,64 @@
 
 
       <div class="pb-5">
-        <p id="u703734-2"><span class="text-titles" id="u703734">Musical Credits</span></p>
-        <p id="u703734-3">&nbsp;</p>
-        <br>
-        <p id="u703734-5"><span class="text-main" id="u703734-4">Home page – Wildwood Flower by John Sebastian</span></p>
-        <p id="u703734-7"><span class="text-main" id="u703734-6">Roots &amp; Youth – Body and Soul by Coleman Hawkins</span></p>
-        <p id="u703734-9"><span class="text-main" id="u703734-8">Musical Journey Episodes – Harpoon by John Sebastian</span></p>
-        <p id="u703734-11"><span class="text-main" id="u703734-10">Musical Friends – Japanese Silky by Norman Greenbaum</span></p>
-        <p id="u703734-13"><span class="text-main" id="u703734-12">Early Productions – Green Rocky Road by Tim Hardin</span></p>
-        <p id="u703734-15"><span class="text-main" id="u703734-14">Discography – Brief Synthophonia by Sopwith Camel</span></p>
-        <p id="u703734-17"><span class="text-main" id="u703734-16">Shorts – Sweet Moments by The Blue Velvet Band</span></p>
-        <p id="u703734-19"><span class="text-main" id="u703734-18">Travels – Ramblin Man by The Blue Velvet Band</span></p>
-        <p id="u703734-21"><span class="text-main" id="u703734-20">Collections – Dicky by Edwardo Unz</span></p>
-        <p id="u703734-23"><span class="text-main" id="u703734-22">Publications – 5 Pennies by Norman Greenbaum</span></p>
-        <p id="u703734-25"><span class="text-main" id="u703734-24">Archives – Fond Affection by The Blue Velvet Band</span></p>
-        <p id="u703734-26">&nbsp;</p>
-        <br>
-        <p id="u703734-28"><span class="text-titles" id="u703734-27">VISUAL Credits</span></p>
+        <!-- <p><span class="text-titles" id="u703734">Musical Credits</span></p> -->
+        <p><span class="text-titles">Credits</span></p>
         <p>&nbsp;</p>
         <br>
-        <p id="u703734-31"><span class="text-main" id="u703734-30">I want to thank my old buddy Henry Diltz for his contribution of photographs and his terrific long hand script included throughout this website. I want to extend my appreciation to all the other photographers whose work I borrowed for this project.</span></p>
+        <!-- <p><span class="text-main">Home page – Wildwood Flower by John Sebastian</span></p>
+        <p><span class="text-main">Roots &amp; Youth – Body and Soul by Coleman Hawkins</span></p>
+        <p><span class="text-main">Musical Journey Episodes – Harpoon by John Sebastian</span></p>
+        <p><span class="text-main">Musical Friends – Japanese Silky by Norman Greenbaum</span></p>
+        <p><span class="text-main">Early Productions – Green Rocky Road by Tim Hardin</span></p>
+        <p><span class="text-main">Discography – Brief Synthophonia by Sopwith Camel</span></p>
+        <p><span class="text-main">Shorts – Sweet Moments by The Blue Velvet Band</span></p>
+        <p><span class="text-main">Travels – Ramblin Man by The Blue Velvet Band</span></p>
+        <p><span class="text-main">Collections – Dicky by Edwardo Unz</span></p>
+        <p><span class="text-main">Publications – 5 Pennies by Norman Greenbaum</span></p>
+        <p><span class="text-main">Archives – Fond Affection by The Blue Velvet Band</span></p>
+        <p>&nbsp;</p> -->
+
+        <ul style="list-style-type:none; padding-left:0">
+          <li><span class="text-main">Home page – Wildwood Flower by John Sebastian</span></li>
+          <li><span class="text-main">Roots &amp; Youth – Body and Soul by Coleman Hawkins</span></li>
+          <li><span class="text-main">Musical Journey Episodes – Harpoon by John Sebastian</span></li>
+          <li><span class="text-main">Musical Friends – Japanese Silky by Norman Greenbaum</span></li>
+          <li><span class="text-main">Early Productions – Green Rocky Road by Tim Hardin</span></li>
+          <li><span class="text-main">Discography – Brief Synthophonia by Sopwith Camel</span></li>
+          <li><span class="text-main">Shorts – Sweet Moments by The Blue Velvet Band</span></li>
+          <li><span class="text-main">Travels – Ramblin Man by The Blue Velvet Band</span></li>
+          <li><span class="text-main">Collections – Dicky by Edwardo Unz</span></li>
+          <li><span class="text-main">Publications – 5 Pennies by Norman Greenbaum</span></li>
+          <li><span class="text-main">Archives – Fond Affection by The Blue Velvet Band</span></li>
+        </ul>
+
+        <br>
+        <!-- <p><span class="text-titles">VISUAL CREDITS</span></p> -->
+        <p><span class="text-main">I want to thank my old buddy Henry Diltz for his contribution of photographs and his terrific long hand script included throughout this website. To all the photographers and musicians whose work I have so freely borrowed I extend my heartfelt thanks.</span></p>
+        <br>
         <p>&nbsp;</p>
         <br>
-        <p id="u703734-33">&nbsp;</p>
-        <br>
-        <p id="u703734-35"><span class="text-titles" id="u703734-34">WEBSITE Credits</span></p>
+        <p><span class="text-titles">WEBSITE CREDITS</span></p>
         <p>&nbsp;</p>
         <br>
-        <p id="u703734-38"><span class="text-main" id="u703734-37">Website Designer: Lindsey Brady</span></p>
-        <p id="u703734-39">&nbsp;</p>
+        <!-- <p><span class="text-main">Website Designer: Lindsey Brady</span></p> -->
+        <p><span class="text-main">Designer: Lindsey Brady</span></p>
         <br>
-        <p id="u703734-41"><span class="text-main" id="u703734-40">Website Developer: Eoin O’Malley</span></p>
+        <!-- <p><span class="text-main">Website Developer: Eoin O’Malley</span></p> -->
+        <p><span class="text-main">Developer: Eoin O’Malley</span></p>
+
+        <!-- <ul style="list-style-type:none; padding-left:0">
+          <li><span class="text-main">Designer: Lindsey Brady</span></li>
+          <li><span class="text-main">Developer: Eoin O’Malley</span></li>
+        </ul> -->
+
+        <br>
         <p>&nbsp;</p>
         <br>
-        <p id="u703734-44"><span class="text-titles" id="u703734-43">CONTENT Credits</span></p>
-        <p id="u703734-45">&nbsp;</p>
+        <p><span class="text-titles">CONTENT CREDITS</span></p>
+        <p>&nbsp;</p>
         <br>
-        <p id="u703734-47"><span class="text-main" id="u703734-46">Video Editing: Lindsey Brady &amp; Heather Young</span></p>
-        <p id="u703734-48">&nbsp;</p>
-        <br>
-        <p id="u703734-50"><span class="text-main" id="u703734-49">To all the photographers and musicians whose work I have so freely borrowed I extend my heartfelt thanks.</span></p>
+        <p><span class="text-main">Video Editing: Lindsey Brady &amp; Heather Young</span></p>
       </div>    
     </div>
 
@@ -149,7 +166,9 @@ input[type=text], input[type=email], textarea {
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+
+  font-style: italic;
 }
 
 /* Style the submit button with a specific background color etc */
@@ -164,18 +183,27 @@ input[type=submit] {
   font-weight: 400;
   font-size: 1.125em;
   letter-spacing: 1.25px;
-  // text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  opacity: 0.65;
+  // opacity: 0.65;
+  color: #EECF49;
+  // background-color: #AFBBBD;
 }
 
 label {
-  font-family: 'NeueHaasGroteskText Pro55', sans-serif;
   color: #406689;
-  font-size: 1.25em;
+  font-family: 'NeueHaasGroteskText Pro55', sans-serif;
+  font-weight: 400;
+  // font-size: 1.25em;
+
+  text-shadow: 6px 6px 8px rgba(0,0,0,0.5);
+  font-size: 1.3125rem;
+  line-height: 1.3125rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 p {
@@ -209,6 +237,10 @@ p {
   letter-spacing: 1px;
   line-height: 24px;
   text-shadow: 6px 6px 8px rgba(0,0,0,0.5);
+}
+
+li {
+  padding: 4px 0;
 }
 
 </style>
