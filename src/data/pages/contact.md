@@ -38,6 +38,11 @@ musicalCredits:
   - artist: The Blue Velvet Band
     pageName: Archives
     trackTitle: Fond Affection
+musicalCreditsText: >-
+  I want to thank my old buddy Henry Diltz for his contribution of photographs
+  and his terrific long hand script included throughout this website. To all the
+  photographers and musicians whose work I have so freely borrowed I extend my
+  heartfelt thanks.
 otherCredits:
   - heading: WEBSITE CREDITS
     text: |-
