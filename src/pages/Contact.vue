@@ -168,8 +168,12 @@ input[type=text], input[type=email], textarea {
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 
-  font-style: italic;
+
+  color: #91465A;
   background-color: #DDD;
+  font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+  font-size: 1rem;
+  font-style: italic;
 }
 input[type=text]:hover, input[type=email]:hover, textarea:hover,
 input[type=text]:focus, input[type=email]:focus, textarea:focus {
