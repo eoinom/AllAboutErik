@@ -822,7 +822,7 @@ albums:
     released: '1972'
     style: 'Classic Rock, Folk'
     text: >-
-      With the procedes from his world-wide hit, “Spirit  in the Sky,”  Norman
+      With the proceeds from his world-wide hit, “Spirit  in the Sky,”  Norman
       Greenbaum bought a farm and moved to Petaluma, California, to raise goats
       and sell milk and cheese throughout the Bay Area.  He then released his
       fourth Album entitled Petaluma with producer Erik Jacobsen.  The album, in
@@ -894,8 +894,8 @@ albums:
     text: >-
       In 1973, a reformed Sopwith Camel recorded The Miraculous Hump Returns
       from the Moon on Warner Bros. Records' Reprise label. In a somewhat
-      different style from their first release, this album has become a critics
-      favourite for its complex instrumentation and extraordinary song writing.
+      different style from their first release, this album has become a critics'
+      favorite for its complex instrumentation and extraordinary song writing.
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1574974948/Musical%20Journey/Discography/album%20covers/21_sopwith-hump-thumb_sg0di5.jpg
     title: The Miraculous Hump Returns from the Moon
