@@ -430,6 +430,13 @@ collections:
             fields: 
               - {label: 'Heading', name: 'heading', widget: 'string', required: false}
               - {label: 'Text', name: 'text', widget: 'markdown', required: false}
+          - label: "Background Video"
+            name: "bgVideo"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Video (webm)", name: "videoSrcWebm", widget: "string", required: false}
+              - {label: "Video (mp4)", name: "videoSrcMP4", widget: "string", required: false}
       
 
   - label: "Friends"
