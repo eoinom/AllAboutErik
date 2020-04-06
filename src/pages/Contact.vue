@@ -169,6 +169,11 @@ input[type=text], input[type=email], textarea {
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 
   font-style: italic;
+  background-color: #DDD;
+}
+input[type=text]:hover, input[type=email]:hover, textarea:hover,
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+  background-color: #FFF;
 }
 
 /* Style the submit button with a specific background color etc */
