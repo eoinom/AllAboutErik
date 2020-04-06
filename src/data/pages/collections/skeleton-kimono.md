@@ -43,6 +43,6 @@ images:
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582070631/Collections/05%20Skeleton%20Kimono/17-s_45b-copy_ucpzje.jpg
 ---
-For centuries images of skulls, bones and skeletons played rolls in the religious and popular history of Japan.
+For centuries images of skulls, bones and skeletons played roles in the religious and popular history of Japan.
 
 This collection of kimono focuses on that motif in clothing.
