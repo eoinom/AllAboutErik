@@ -22,14 +22,13 @@ musicalCredits:
   - artist: Sopwith Camel
     pageName: Discography
     trackTitle: Brief Synthophonia
-  - {}
   - artist: The Blue Velvet Band
     pageName: Shorts
     trackTitle: Sweet Moments
   - artist: The Blue Velvet Band
     pageName: Travels
     trackTitle: Ramblin' Man
-  - artist: The Blue Velvet Band
+  - artist: Edwardo Unz
     pageName: Collections
     trackTitle: Dicky
   - artist: Norman Greenbaum
