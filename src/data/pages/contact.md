@@ -2,6 +2,8 @@
 pageTitle: Contact & Credits
 headingImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1586088192/Contact/contact-and-credits_lgaabq.png
+headingImg2Lines: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/v1586296517/Contact/contact-and-credits-2line_zcilvt.png
 musicalCreditsHeading: Credits
 musicalCredits:
   - artist: John Sebastian
