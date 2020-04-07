@@ -339,9 +339,11 @@ body {
   transition-duration: 0.5s;
   transition-property: all;
   transition-timing-function: ease;
-
   margin-top: 9px;
   margin-bottom: 14px;
+}
+.verb-text:hover {
+  color: rgb(198, 156, 109);
 }
 
 .title-text {
@@ -364,6 +366,9 @@ body {
   transition-duration: 0.5s;
   transition-property: all;
   transition-timing-function: ease;
+}
+.title-text:hover {
+  color: rgb(127, 127, 127);
 }
 
 .simple-scrollbar {
