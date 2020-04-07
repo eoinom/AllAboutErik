@@ -1,20 +1,19 @@
 <template>
-  <div class="image-magnifier" 
-    @mouseenter="handleOver"
-    @mousemove="handleMove"
-    @mouseleave="handleOut"
-    :style="magnifierStyle"
+  <div class="image-magnifier"
+    ref="imgContainer"
   >
-    <span class="helper" /> <!-- For centering the img vertically in the div, https://stackoverflow.com/a/7310398/13159696 -->
-
+    <span class="helper" />  <!-- <For centering the img vertically in the div, https://stackoverflow.com/a/7310398/13159696 -->
     <img
       :src="src"
       class="image-magnifier__img"
       ref="img"
       id="img"
-      @load="emitImageLoaded()"
+      @load="emitImageLoaded()"      
+      @mouseenter="handleOver"
+      @mousemove="handleMove"
+      @mouseleave="handleOut"
+      :style="magnifierStyle"
     />
-
     <div 
       v-if="windowWidth > 1366"
       class="image-magnifier__zoom" 
@@ -29,7 +28,6 @@
         :style="zoomImgStyle" 
       />
     </div>
-    
   </div>
 </template>
 
@@ -70,11 +68,10 @@
 
     data() {
       return {
-        zoomShow: false,
-        imgRect: '',        
+        imgRect: '',
+        imgContainerRect: '',
         zoomX: 0,
         zoomY: 0,
-        zoomImage: '',
         zoomImgWidth: 0,
         zoomImgHeight: 0,
         zoomPosition: {
@@ -83,6 +80,7 @@
         },
         zoomInTimeoutId: null,
         zoomOutTimeoutId: null,
+        zoomShow: false,
         windowWidth: 0.0
       }
     },
@@ -90,13 +88,11 @@
     computed: {
       magnifierStyle() {
         return {
-          position: 'relative',
-          cursor: this.showCursor ? 'move' : 'none',
+          cursor: this.showCursor ? 'move' : 'none'
         }
       },
       zoomStyle() {
         return {
-          '--zoomDiameter' : this.zoomDiameter + 'px',
           '--zoomDiameter' : this.zoomDiameter + 'px',
           '--zoomX' : this.zoomX + 'px',
           '--zoomY' : this.zoomY + 'px',
@@ -143,6 +139,7 @@
       
       calcZoomSize() {
         this.imgRect = this.$refs.img && this.$refs.img.getBoundingClientRect();
+        this.imgContainerRect = this.$refs.imgContainer && this.$refs.imgContainer.getBoundingClientRect();
 
         // Calculate large image width and height
         if (this.imgRect && this.zoom) {
@@ -152,7 +149,7 @@
       },
       
       handleMove(e) {
-        if (!this.imgRect) {
+        if (!this.imgRect || !this.imgContainerRect) {
           return;
         }
         this.zoomX = (e.clientX - this.imgRect.left) - (this.zoomDiameter / 2);
@@ -161,6 +158,10 @@
         // Calculate large image offset
         this.zoomPosition.x = this.zoomX * (this.zoomImgWidth / this.imgRect.width) + this.zoomDiameter / 2
         this.zoomPosition.y = this.zoomY * (this.zoomImgHeight / this.imgRect.height) + this.zoomDiameter / 2
+
+        // Note: Firfox & Safari have a different size for the "imgContainer" compared to Chrome
+        // Therefore, we need to add on the offset between it and the img:
+        this.zoomX += (this.imgRect.left - this.imgContainerRect.left)
       },
       
       handleOut() {
@@ -186,6 +187,7 @@
 }
 
 .image-magnifier {
+  position: relative;
   width: fit-content;
   max-width: 90%;
 
