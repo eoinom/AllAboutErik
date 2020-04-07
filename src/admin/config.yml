@@ -414,6 +414,7 @@ collections:
         fields:
           - {label: "Page Title", name: "pageTitle", widget: "string"}  
           - {label: "Heading Image", name: "headingImg", widget: "image"}  
+          - {label: "Heading Image (2 Lines)", name: "headingImg2Lines", widget: "image"}  
           - {label: 'Main text', name: 'body', widget: 'markdown', required: false} 
           - {label: 'Musical Credits Heading', name: 'musicalCreditsHeading', widget: 'string', required: false}
           - label: "Musical Credits"

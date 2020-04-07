@@ -2,12 +2,13 @@
   <Layout>
     <div class="container">
       
-      <g-image :src="titleImg" id="titleImg" class="py-5" />
+      <g-image :src="titleImg1Line" class="titleImg titleImg1Line py-5" />
+      <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines py-4 my-3" />
 
       <span v-html="mainText" class="text-main" />
       
       <!-- CONTACT FORM -->
-      <div class="form-container mb-5">
+      <div class="form-container mb-4 mb-md-5">
         <form name="contact" method="POST" netlify data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact" /> <!-- Hidden honeypot field to prevent against bot spam -->
 
@@ -27,11 +28,10 @@
       <!-- CREDITS -->
       <div class="pb-5">
         <p class="text-titles">Credits</p>
-        <br>
 
         <ul style="list-style-type:none; padding-left:0">
-          <li v-for="(credit, i) in musicalCredits" :key="'credit'+i">
-            <span class="text-main">{{ credit.pageName }} – {{ credit.trackTitle }} by {{ credit.artist }}</span>
+          <li v-for="(credit, i) in musicalCredits" :key="'credit'+i" class="text-main">
+            {{ credit.pageName }} – {{ credit.trackTitle }} by {{ credit.artist }}
           </li>
         </ul>
 
@@ -41,8 +41,7 @@
         
         <div v-for="(creditSection, i) in otherCredits" :key="'creditSection'+i">
           <p class="text-titles">{{ creditSection.heading }}</p>
-          <br>
-          <span v-html="renderMarkdown(creditSection.text)" class="text-main" />
+          <span v-html="renderMarkdown(creditSection.text)" class="text-main contact_renderedContent" />
           <br>
         </div>
 
@@ -67,6 +66,7 @@
         id
         pageTitle
         headingImg
+        headingImg2Lines
         content
         musicalCreditsHeading
         musicalCredits {
@@ -104,8 +104,11 @@ export default {
     node() {
       return this.$page.Contact.edges[0].node
     },
-    titleImg() {
+    titleImg1Line() {
       return this.node.headingImg
+    },
+    titleImg2Lines() {
+      return this.node.headingImg2Lines
     },
     mainText(){
       return this.node.content
@@ -159,25 +162,29 @@ export default {
 }
 
 .container {
-  max-width: 900px;
+  width: 900px;
+  max-width: 75%;
 }
 
-#titleImg {
+.titleImg {
   display: block;
   width: 100%;
   height: auto;
   max-width: 800px;
   margin: 0 auto;
 }
+.titleImg1Line {
+  display: block;
+}
+.titleImg2Lines {
+  display: none;
+}
 
 /* Form adapted from https://www.w3schools.com/howto/howto_css_contact_form.asp */
 
 /* Add a background color and some padding around the form */
 .form-container {
-  // border-radius: 5px;
-  // background-color: #f2f2f2;
   background-color: transparent;
-  // padding: 20px;
   padding: 20px 0;
 }
 
@@ -191,8 +198,6 @@ input[type=text], input[type=email], textarea {
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-
-
   color: #91465A;
   background-color: #DDD;
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
@@ -215,66 +220,135 @@ input[type=submit] {
   font-family: 'NeueHaasGroteskText Pro55', sans-serif;
   font-weight: 400;
   font-size: 1.125em;
-  // letter-spacing: 1.25px;
   letter-spacing: 5px;
   text-transform: uppercase;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  // opacity: 0.65;
   color: #EECF49;
-  // background-color: #AFBBBD;
 }
 
+label,
+.text-titles,
+.text-main {
+  font-family: 'NeueHaasGroteskText Pro55', sans-serif;
+  font-feature-settings: 'liga';
+  font-weight: 400;
+  text-shadow: 6px 6px 8px rgba(0,0,0,0.5);
+}
 label {
   color: #406689;
-  font-family: 'NeueHaasGroteskText Pro55', sans-serif;
-  font-weight: 400;
-  // font-size: 1.25em;
-
-  text-shadow: 6px 6px 8px rgba(0,0,0,0.5);
   font-size: 1.3125rem;
   line-height: 1.3125rem;
   letter-spacing: 5px;
   text-transform: uppercase;
 }
-
-p {
-  font-family: 'NeueHaasGroteskText Pro55', sans-serif;
-  font-feature-settings: 'liga';
-  font-size: 14px;
-  line-height: 0px;
-  text-shadow: 6px 6px 8px rgba(0,0,0,0.5);
-  margin: 0px;
-  padding: 0px;
-}
-
-.text-titles {
-  color: #F2F2F2;
-  font-family: 'NeueHaasGroteskText Pro55', sans-serif;
-  font-feature-settings: 'liga';
-  font-weight: 400;
-  font-size: 21px;
-  letter-spacing: 5px;
-  line-height: 25px;
-  text-shadow: 6px 6px 8px rgba(0,0,0,0.5);
-  text-transform: uppercase;
-}
-
+.text-titles,
 .text-main {
   color: #F2F2F2;
-  font-family: 'NeueHaasGroteskText Pro55', sans-serif;
-  font-feature-settings: 'liga';
-  font-weight: 400;
-  font-size: 20px;
-  letter-spacing: 1px;
-  line-height: 24px;
+  margin: 0px;
+  padding: 0px;
   text-shadow: 6px 6px 8px rgba(0,0,0,0.5);
 }
-
-li {
-  padding: 4px 0;
+.text-titles {
+  font-size: 1.3125rem;
+  letter-spacing: 5px;
+  line-height: 25px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.text-main {
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  line-height: 24px;
+}
+li.text-main {
+  padding: 4.5px 0;
 }
 
+
+/* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
+
+/* Extra small devices (portrait phones, < 576px) */
+@media (max-width: 575.98px) {
+/* @media (min-width: 400px) and (max-width: 575.98px) { */
+  label,
+  input[type=submit],
+  .text-titles {
+    font-size: 1.0625rem;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+  }
+  input[type=submit] {
+    line-height: 23px;
+  }
+  .text-main {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  li.text-main {
+    text-align: initial;
+  }
+  .contact_renderedContent {
+    text-align: initial;
+    // See styles.css for additional
+  }
+  .titleImg1Line {
+    display: none;
+  }
+  .titleImg2Lines {
+    display: block;
+  }
+}
+
+/* Small devices (landscape phones, 576 - 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  label,
+  input[type=submit],
+  .text-titles {
+    font-size: 1.0625rem;
+    letter-spacing: 4px;
+  }
+  input[type=submit] {
+    line-height: 23px;
+  }
+  .text-main {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  li.text-main {
+    text-align: initial;
+  }
+}
+
+/* Medium devices (tablets, 768 - 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  label,
+  input[type=submit],
+  .text-titles {
+    font-size: 1.0625rem;
+    letter-spacing: 4px;
+  }
+  input[type=submit] {
+    line-height: 23px;
+  }
+  .text-main {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  li.text-main {
+    text-align: initial;
+  }
+}
+
+/* Large devices (desktops, 992 - 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+/* X-large devices (large desktops, 1200 - 1500px) */
+@media (min-width: 1200px) and (max-width: 1499.98px) {
+
+}
 </style>

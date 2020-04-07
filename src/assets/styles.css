@@ -87,6 +87,10 @@ body {
     padding-left: 0px;
     text-indent: 0px;
   }
+
+  .contact_renderedContent p {
+    margin-bottom: 0.5rem;
+  }
 }
 
 /* Small devices (landscape phones, 576 - 768px) */
