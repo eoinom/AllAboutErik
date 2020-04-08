@@ -114,9 +114,14 @@
 
       window.addEventListener('resize', () => {  
         this.windowWidth = window.innerWidth
+        this.imgRect = this.$refs.img && this.$refs.img.getBoundingClientRect();
+        this.imgContainerRect = this.$refs.imgContainer && this.$refs.imgContainer.getBoundingClientRect();
+        this.handleMove(e)
       })
       window.addEventListener('orientationchange', () => {  
         this.windowWidth = window.innerWidth
+        this.imgRect = this.$refs.img && this.$refs.img.getBoundingClientRect();
+        this.imgContainerRect = this.$refs.imgContainer && this.$refs.imgContainer.getBoundingClientRect();
       })
     },
     
