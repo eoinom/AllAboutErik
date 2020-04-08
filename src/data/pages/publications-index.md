@@ -9,6 +9,12 @@ bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5
 slides:
   - img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586379438/Publications/slideshow-04_vhxgr0.png
+    opacity: 86
+    panStart: right
+    scaleFrom: 1
+    scaleTo: 1.06
+  - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586379438/Publications/slideshow-01_q60alk.jpg
     opacity: 86
     panStart: centre
@@ -26,12 +32,6 @@ slides:
     panStart: centre
     scaleFrom: 1.06
     scaleTo: 1
-  - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586379438/Publications/slideshow-04_vhxgr0.png
-    opacity: 86
-    panStart: centre
-    scaleFrom: 1
-    scaleTo: 1.06
 publications:
   - thumbnailHoverImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586381698/Publications/01-skeleton-rollover_k9bgyv.jpg
