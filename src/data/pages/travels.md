@@ -9,7 +9,7 @@ mainVideoText: >-
   Watch the travel documentaries that I shot on location, wrote, narrated, and
   set to regional music
 bgAudio: >-
-  https://res.cloudinary.com/all-about-erik/video/upload/v1583971687/Travels/Ramblin-Man-The-Blue-Velvet-Band_Travels_zfpv8a.mp3
+  https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1583971687/Travels/Ramblin-Man-The-Blue-Velvet-Band_Travels_zfpv8a.mp3
 bgAudioDuration: 175
 bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5

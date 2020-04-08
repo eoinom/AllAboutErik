@@ -7,7 +7,7 @@ titleImg: >-
 mainImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1570483855/Musical%20Journey/The%20Episodes/tim-1-episodes-sm_xt7swp.jpg
 bgAudio: >-
-  https://res.cloudinary.com/all-about-erik/video/upload/v1583973255/Musical%20Journey/The%20Episodes/Harpoon-John-Sebastian_MusicalEpisodes_syn1lq.mp3
+  https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1583973255/Musical%20Journey/The%20Episodes/Harpoon-John-Sebastian_MusicalEpisodes_syn1lq.mp3
 bgAudioDuration: 142
 bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5

@@ -7,7 +7,7 @@ titleImg: >-
 mainImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576111097/Musical%20Journey/Early%20Productions/img312-2_-_Cropped_ji3ife.png
 bgAudio: >-
-  https://res.cloudinary.com/all-about-erik/video/upload/v1583973337/Musical%20Journey/Early%20Productions/Green-Rocky-Road-Tim-Hardin_EarlyProductions_pbvmpv.mp3
+  https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1583973337/Musical%20Journey/Early%20Productions/Green-Rocky-Road-Tim-Hardin_EarlyProductions_pbvmpv.mp3
 bgAudioDuration: 138
 bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5
@@ -33,7 +33,7 @@ sections:
         tracks:
           - title: Bobo the Cheerleader's Song
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/Little_Peetie_Love_-_Bobo_the_Cheerleaders_Song_dzi3qq.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/01%20-%20Bobo%20the%20Cheerleaders%20Song/Little_Peetie_Love_-_Bobo_the_Cheerleaders_Song_dzi3qq.mp3
         writer: Erik Jacobsen
     textBoxes:
       - heading: Bobo the Cheerleader's Song
@@ -58,7 +58,7 @@ sections:
         tracks:
           - title: Sound of Summer Showers
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018285/Musical%20Journey/Early%20Productions/Production%20Sections/02%20-%20Sound%20of%20Summer%20Showers/Jerry_Yester_-_Sound_of_Summer_Showers_bs1syc.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018285/Musical%20Journey/Early%20Productions/Production%20Sections/02%20-%20Sound%20of%20Summer%20Showers/Jerry_Yester_-_Sound_of_Summer_Showers_bs1syc.mp3
         writer: Erik Jacobsen
     textBoxes:
       - heading: Sound of Summer Showers
@@ -83,7 +83,7 @@ sections:
         tracks:
           - title: A Little Lovin'
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/03%20-%20A%20Little%20Lovin%27/Dwain_Story_-_A_Little_Lovin_edited_cqzax7.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/03%20-%20A%20Little%20Lovin%27/Dwain_Story_-_A_Little_Lovin_edited_cqzax7.mp3
         writer: Erik Jacobsen
     textBoxes:
       - heading: A Little Lovin'
@@ -99,7 +99,7 @@ sections:
       - buttonText: Slurp Sound
         caption: ''
         image: >-
-          https://res.cloudinary.com/all-about-erik/video/upload/v1576022134/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/slurp-sound_a8jyww.mp3
+          https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576022134/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/slurp-sound_a8jyww.mp3
     productions:
       - artist: Dee & Zee
         bgColor: 'rgba(221,221,221,0.35)'
@@ -112,10 +112,10 @@ sections:
         tracks:
           - title: The Slurp - I Got the Word
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018291/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/Dee_and_Zee_-_I_got_the_word_mixdown_dm3zgn.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018291/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/Dee_and_Zee_-_I_got_the_word_mixdown_dm3zgn.mp3
           - title: The Slurp
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018277/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/Dee_and_Zee_-_The_slurp_mf2bsu.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018277/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/Dee_and_Zee_-_The_slurp_mf2bsu.mp3
         writer: Erik Jacobsen
       - artist: Dwain Story
         bgColor: 'rgba(221,221,221,0.23)'
@@ -128,10 +128,10 @@ sections:
         tracks:
           - title: The Slurp - Slurpin to the East and West
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018277/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/Dwain_Story_-_The_slurp_-_slurpin_to_the_east_and_west_suhyro.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018277/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/Dwain_Story_-_The_slurp_-_slurpin_to_the_east_and_west_suhyro.mp3
           - title: 'The Slurp - #3'
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/Dwain_Story_-_The_slurp_3_hwhnvl.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018280/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/Dwain_Story_-_The_slurp_3_hwhnvl.mp3
         writer: Erik Jacobsen
     textBoxes:
       - heading: The Slurp
@@ -157,10 +157,10 @@ sections:
         tracks:
           - title: Rooty Toot
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018282/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/John_Sebastian_-_Rooty_Toot_yikxfq.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018282/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/John_Sebastian_-_Rooty_Toot_yikxfq.mp3
           - title: Warm Baby
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018286/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/John_Sebastian_-_Warm_Baby_rsfft9.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018286/Musical%20Journey/Early%20Productions/Production%20Sections/05%20-%20Rooty%20Toot/John_Sebastian_-_Warm_Baby_rsfft9.mp3
         writer: John Sebastian
     textBoxes:
       - heading: Rooty Toot
@@ -185,16 +185,16 @@ sections:
         tracks:
           - title: Oh Suzanna
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018284/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/Oh_suzanna_hczxfw.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018284/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/Oh_suzanna_hczxfw.mp3
           - title: Tom Dooley
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/Tom_dooley_siffrk.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018287/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/Tom_dooley_siffrk.mp3
           - title: Fun Fun - Zal & Cass
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018289/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/Zal_Cass_-_Fun_fun_pdc9uv.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018289/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/Zal_Cass_-_Fun_fun_pdc9uv.mp3
           - title: Hold Still - Zal & Cass
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018286/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/Zal_Cass_-_Hold_still_ypi8dz.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018286/Musical%20Journey/Early%20Productions/Production%20Sections/06%20-%20Cass%2C%20Denny%2C%20Jerry%2C%20Zal/Zal_Cass_-_Hold_still_ypi8dz.mp3
     textBoxes:
       - heading: 'Cass, Denny Doherty, Jerry Yester, Zal'
         text: >-
@@ -216,7 +216,7 @@ sections:
         tracks:
           - title: Lady Godiva
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018297/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/Lady_Godiva_ainpla.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018297/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/Lady_Godiva_ainpla.mp3
         writer: Erik Jacobsen
     textBoxes:
       - heading: Lady Godiva
@@ -240,7 +240,7 @@ sections:
         tracks:
           - title: Tweedlede Dum's Drive-In
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018290/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/A_Surfin_Crew_-_Tweedlede_Dums_Drive-In_lmnn4a.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018290/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/A_Surfin_Crew_-_Tweedlede_Dums_Drive-In_lmnn4a.mp3
         writer: Erik Jacobsen & Henry Diltz
   - imageLightboxes:
       - buttonText: Original Vinyl
@@ -258,22 +258,22 @@ sections:
         tracks:
           - title: Twelve Day Lover
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018295/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_1._Twelve_day_lover_pwjvrb.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018295/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_1._Twelve_day_lover_pwjvrb.mp3
           - title: Just Friends
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018297/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_2._Just_friends_zevp67.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018297/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_2._Just_friends_zevp67.mp3
           - title: Don't Lead Me
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018302/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_3._Dont_lead_me_ozshkt.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018302/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_3._Dont_lead_me_ozshkt.mp3
           - title: Tell Her For Me
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018295/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_4._Tell_her_for_me_wtqmpi.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018295/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_4._Tell_her_for_me_wtqmpi.mp3
           - title: Land of Music
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018297/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_5._Land_of_music_jknjcs.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018297/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_5._Land_of_music_jknjcs.mp3
           - title: I Need Your Love Inside Me
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018300/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_6._I_need_your_love_inside_me_pjmyyg.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018300/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/The_Strangers_-_6._I_need_your_love_inside_me_pjmyyg.mp3
     textBoxes:
       - heading: The Strangers
         text: >-
@@ -298,13 +298,13 @@ sections:
         tracks:
           - title: I'll Tell You
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/The_Sellouts_-_1._I_ll_tell_you_ignxi5.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018301/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/The_Sellouts_-_1._I_ll_tell_you_ignxi5.mp3
           - title: Bleecker & Macdougal (Written by Fred Neil)
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018304/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/The_Sellouts_-_2._I_want_to_go_home_q6yk3t.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018304/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/The_Sellouts_-_2._I_want_to_go_home_q6yk3t.mp3
           - title: Let It Show
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018307/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/The_Sellouts_-_3._Let_it_show_y0vune.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018307/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/The_Sellouts_-_3._Let_it_show_y0vune.mp3
         writer: Erik Jacobsen
     textBoxes:
       - heading: The Sellouts
@@ -328,7 +328,7 @@ sections:
         tracks:
           - title: Down on the River Road
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018310/Musical%20Journey/Early%20Productions/Production%20Sections/11%20-%20Ken%20and%20Bobby%20Fischler/Ken_and_Bobby_Fischler_-_Down_on_the_river_road_yswwkr.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018310/Musical%20Journey/Early%20Productions/Production%20Sections/11%20-%20Ken%20and%20Bobby%20Fischler/Ken_and_Bobby_Fischler_-_Down_on_the_river_road_yswwkr.mp3
         writer: Ken Fischler
     textBoxes:
       - heading: Ken & Bobby Fischler
@@ -345,10 +345,10 @@ sections:
         tracks:
           - title: Dyin' a Dime at a Time
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018317/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/Ray_Roe_-_Dyin_a_dime_at_a_time_b0b1hb.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018317/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/Ray_Roe_-_Dyin_a_dime_at_a_time_b0b1hb.mp3
           - title: Think Success
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018307/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/Ray_Roe_-_Think_success_qgnqlg.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018307/Musical%20Journey/Early%20Productions/Production%20Sections/12%20-%20Ray%20Roe/Ray_Roe_-_Think_success_qgnqlg.mp3
         writer: Ray Roe
     textBoxes:
       - heading: Ray Roe
@@ -365,7 +365,7 @@ sections:
         tracks:
           - title: Bill
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018313/Musical%20Journey/Early%20Productions/Production%20Sections/13%20-%20Ken%20Melville/Ken_Melville_-_Bill_weg5sc.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018313/Musical%20Journey/Early%20Productions/Production%20Sections/13%20-%20Ken%20Melville/Ken_Melville_-_Bill_weg5sc.mp3
         writer: Ken Melville
     textBoxes:
       - heading: Ken Melville
@@ -384,22 +384,22 @@ sections:
         tracks:
           - title: See Where You Are and Get Out
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018311/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_1._See_where_you_are_and_get_out_de0xz7.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018311/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_1._See_where_you_are_and_get_out_de0xz7.mp3
           - title: He Could be a Hollywood Star
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018318/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_2._He_could_be_a_star_in_hollywood_zxxyik.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018318/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_2._He_could_be_a_star_in_hollywood_zxxyik.mp3
           - title: Child of Sunshine
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018318/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_3._Child_of_sunshine_ejsxlj.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018318/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_3._Child_of_sunshine_ejsxlj.mp3
           - title: It's Hard to Believe in Love for Long
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018320/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_4._Its_hard_to_believe_in_love_for_long_cugymd.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018320/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_4._Its_hard_to_believe_in_love_for_long_cugymd.mp3
           - title: Love Without Pain
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018323/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_5._Love_without_pain_fwreg5.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018323/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_5._Love_without_pain_fwreg5.mp3
           - title: Look at me Running
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018322/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_6._Look_at_me_running_dwxcse.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018322/Musical%20Journey/Early%20Productions/Production%20Sections/14%20-%20Tim%20Hardin/Tim_Hardin_-_6._Look_at_me_running_dwxcse.mp3
         writer: Tim Hardin
     textBoxes:
       - heading: Tim Hardin
@@ -419,37 +419,37 @@ sections:
         tracks:
           - title: Track One
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018323/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/1-audio-track_uzfiyq.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018323/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/1-audio-track_uzfiyq.mp3
           - title: Track Two
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018325/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/2-audio-track_opzrt8.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018325/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/2-audio-track_opzrt8.mp3
           - title: Track Three
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018326/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/3-audio-track_c1x2fq.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018326/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/3-audio-track_c1x2fq.mp3
           - title: Track Four
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018329/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/4-audio-track_ghsx1m.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018329/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/4-audio-track_ghsx1m.mp3
           - title: Track Five
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018326/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/5-audio-track_d9ny9x.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018326/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/5-audio-track_d9ny9x.mp3
           - title: Track Six
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018327/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/6-audio-track_fx5rhf.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018327/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/6-audio-track_fx5rhf.mp3
           - title: Track Seven
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018328/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/7-audio-track_pmtazo.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018328/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/7-audio-track_pmtazo.mp3
           - title: Track Eight
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018329/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/8-audio-track_paypgg.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018329/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/8-audio-track_paypgg.mp3
           - title: Track Nine
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018328/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/9-audio-track_k60lv5.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018328/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/9-audio-track_k60lv5.mp3
           - title: Track Ten
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018323/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/10-audio-track_asg1ay.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018323/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/10-audio-track_asg1ay.mp3
           - title: Track Eleven
             track: >-
-              https://res.cloudinary.com/all-about-erik/video/upload/v1576018323/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/11-audio-track_lee7gs.mp3
+              https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018323/Musical%20Journey/Early%20Productions/Production%20Sections/15%20-%20Plum%20Creek%20Boys/11-audio-track_lee7gs.mp3
     textBoxes:
       - heading: Plum Creek Boys - at Oberlin College
         text: >-

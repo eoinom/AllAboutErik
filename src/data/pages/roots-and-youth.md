@@ -3,7 +3,7 @@ pageTitle: Roots and Youth
 headingImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1569014664/RootsAndYouth/rootsandyouth-u1271_rvbm7p.png
 bgAudio: >-
-  https://res.cloudinary.com/all-about-erik/video/upload/v1583973609/RootsAndYouth/Body-And-Soul-Coleman-Hawkins_Roots_pngp0s.mp3
+  https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1583973609/RootsAndYouth/Body-And-Soul-Coleman-Hawkins_Roots_pngp0s.mp3
 bgAudioDuration: 181
 bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5
