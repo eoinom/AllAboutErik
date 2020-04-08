@@ -13,7 +13,7 @@
         <b-col class="slideshowCol">
 
           <!-- HEADER SLIDESHOW -->
-          <slideshow-kenburns-small :slides="slides" :height="slideshowHeight" />
+          <SlideshowKenBurnsSmall :slides="slides" :height="slideshowHeight" />
 
           <!-- SLIDESHOW OVERLAY -->
           <div class="slideshowOverlay">
@@ -40,7 +40,7 @@
           align-self="center"
           class="collectionsCols p-0 mx-0 my-2"
         >
-          <collection-thumbnail :collection="collection" />          
+          <CollectionThumbnail :collection="collection" />          
         </b-col>
       </b-row>
     </b-container>
@@ -90,7 +90,6 @@
 import BackgroundMusic from '../../components/BackgroundMusic.vue'
 import CollectionThumbnail from '../../components/CollectionThumbnail.vue'
 import ScrollToTop from '../../components/ScrollToTop.vue'
-import SlideshowImages from '../../components/SlideshowImages2.vue'
 import SlideshowKenBurnsSmall from '../../components/SlideshowKenBurnsSmall.vue'
 
 export default {
@@ -98,6 +97,13 @@ export default {
     return {
       title: this.$page.Collections.edges[0].node.pageTitle
     }
+  },
+
+  components: {
+    BackgroundMusic,
+    CollectionThumbnail,
+    ScrollToTop,
+    SlideshowKenBurnsSmall
   },
 
   data() {
@@ -125,6 +131,17 @@ export default {
       let height = this.mainColHeight + 30
       return height + 'px'
     }
+  },
+
+  mounted() {
+    this.observeTextBlockHeight()
+
+    setTimeout(clearInterval(this.interval), 8000)
+    
+    window.addEventListener('resize', () => {
+      let textEl = document.getElementById('slideshowText')
+      this.mainColHeight = this.getElementOffset(textEl).bottom
+    })
   },
 
   methods: {
@@ -158,26 +175,7 @@ export default {
         bottom,
       }
     }
-  },
-
-  mounted() {
-    this.observeTextBlockHeight()
-
-    setTimeout(clearInterval(this.interval), 8000)
-    
-    window.addEventListener('resize', () => {
-      let textEl = document.getElementById('slideshowText')
-      this.mainColHeight = this.getElementOffset(textEl).bottom
-    })
-  },
-
-  components: {
-    'slideshow-images': require('../../components/SlideshowImages2.vue').default,
-    'slideshow-kenburns-small': require('../../components/SlideshowKenBurnsSmall.vue').default,
-    BackgroundMusic,
-    CollectionThumbnail,
-    ScrollToTop
-  },
+  }
 }
 </script>
 
