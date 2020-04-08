@@ -70,6 +70,7 @@ export default {
       let css = {}
       css.animationName = 'kenburns-'+ (index+1)
       css.transformOrigin = this.panStart(index)
+      css['--imgOpacity'] = this.slides[index].opacity ? this.slides[index].opacity / 100 : 0.62
       return css
     },
 
@@ -191,7 +192,7 @@ export default {
     width: auto;
     height: auto;   
     overflow: hidden;  
-    opacity: 0.62;    
+    opacity: var(--imgOpacity);
     animation-duration: 8s;
     animation-fill-mode: forwards;  // The element will retain the style values that is set by the last keyframe
   }
