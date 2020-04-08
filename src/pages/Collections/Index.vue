@@ -55,7 +55,7 @@
 
 <page-query>
 {
-  Collections: allCollectionsPage {
+  Collections: allCollectionsIndex {
     edges {
       node {
         id
@@ -87,11 +87,11 @@
 
 
 <script scoped>
-import BackgroundMusic from '../components/BackgroundMusic.vue'
-import CollectionThumbnail from '../components/CollectionThumbnail.vue'
-import ScrollToTop from '../components/ScrollToTop.vue'
-import SlideshowImages from '../components/SlideshowImages2.vue'
-import SlideshowKenBurnsSmall from '../components/SlideshowKenBurnsSmall.vue'
+import BackgroundMusic from '../../components/BackgroundMusic.vue'
+import CollectionThumbnail from '../../components/CollectionThumbnail.vue'
+import ScrollToTop from '../../components/ScrollToTop.vue'
+import SlideshowImages from '../../components/SlideshowImages2.vue'
+import SlideshowKenBurnsSmall from '../../components/SlideshowKenBurnsSmall.vue'
 
 export default {
   metaInfo() {
@@ -172,8 +172,8 @@ export default {
   },
 
   components: {
-    'slideshow-images': require('../components/SlideshowImages2.vue').default,
-    'slideshow-kenburns-small': require('../components/SlideshowKenBurnsSmall.vue').default,
+    'slideshow-images': require('../../components/SlideshowImages2.vue').default,
+    'slideshow-kenburns-small': require('../../components/SlideshowKenBurnsSmall.vue').default,
     BackgroundMusic,
     CollectionThumbnail,
     ScrollToTop
@@ -188,19 +188,19 @@ export default {
 
 @font-face {
   font-family: NeueHaasGroteskText Pro55;
-  src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot'); /* IE9 Compat Modes */
-  src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../assets/fonts/nhaasgrotesktxpro-55rg.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
+  src: url('../../assets/fonts/nhaasgrotesktxpro-55rg.eot'); /* IE9 Compat Modes */
+  src: url('../../assets/fonts/nhaasgrotesktxpro-55rg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../assets/fonts/nhaasgrotesktxpro-55rg.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
   font-weight: normal;
 }
 
 @font-face {
   font-family: NeueHaasGroteskText Pro65;
-  src: url('../assets/fonts/nhaasgrotesktxpro-65md.eot'); /* IE9 Compat Modes */
-  src: url('../assets/fonts/nhaasgrotesktxpro-65md.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../assets/fonts/nhaasgrotesktxpro-65md.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../assets/fonts/nhaasgrotesktxpro-65md.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
+  src: url('../../assets/fonts/nhaasgrotesktxpro-65md.eot'); /* IE9 Compat Modes */
+  src: url('../../assets/fonts/nhaasgrotesktxpro-65md.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../assets/fonts/nhaasgrotesktxpro-65md.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../../assets/fonts/nhaasgrotesktxpro-65md.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
   font-weight: normal;
 }
 

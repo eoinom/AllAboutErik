@@ -67,7 +67,7 @@ query ($id: ID!) {
 
 <static-query>
 {
-  Collections: allCollectionsPage {
+  Collections: allCollectionsIndex {
     edges {
       node {
         collections {

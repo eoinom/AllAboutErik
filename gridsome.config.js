@@ -130,8 +130,15 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/data/pages/collections-page.md',
-        typeName: 'CollectionsPage'
+        path: 'src/data/pages/collections-index.md',
+        typeName: 'CollectionsIndex'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/pages/collections/*.md',
+        typeName: 'Collections'
       }
     },
     {
@@ -144,8 +151,6 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/data/pages/collections/*.md',
-        typeName: 'Collections'
       }
     },
     {

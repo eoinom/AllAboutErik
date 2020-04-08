@@ -316,9 +316,9 @@ collections:
               - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
               - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
 
-      - label: "Collections Page"
-        name: "collections-page"
-        file: "src/data/pages/collections-page.md"
+      - label: "Collections Index"
+        name: "collections-index"
+        file: "src/data/pages/collections-index.md"
         fields:
           - {label: "Page Title", name: "pageTitle", widget: "string"}
           - {label: "Title Image", name: "titleImg", widget: "image"}
