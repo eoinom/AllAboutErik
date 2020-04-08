@@ -408,6 +408,38 @@ collections:
             fields: 
               - {label: "Image", name: "img", widget: "image", required: false}
 
+      - label: "Publications Index"
+        name: "publications-index"
+        file: "src/data/pages/publications-index.md"
+        fields:
+          - {label: "Page Title", name: "pageTitle", widget: "string"}
+          - {label: "Title Image", name: "titleImg", widget: "image"}
+          - {label: 'Background Audio', name: 'bgAudio', widget: 'file', required: false}
+          - {label: 'Background Audio Duration', name: 'bgAudioDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - {label: 'Background Audio Fade In Duration', name: 'bgAudioFadeInDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - {label: 'Background Audio Fade Out Duration', name: 'bgAudioFadeOutDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - label: "Slides"
+            name: "slides"
+            widget: "list"
+            fields: 
+              - {label: "Image", name: "img", widget: "image"}
+              - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+              - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, max: 60, required: false}
+              - {label: "Scale from", name: "scaleFrom", widget: "number", valueType: "float", min: 1, max: 2, required: false}
+              - {label: "Scale to", name: "scaleTo", widget: "number", valueType: "float", min: 1, max: 2, required: false}
+              - label: "Pan start from"
+                name: "panStart"
+                required: false
+                widget: "select"
+                options: ["top-left", "top", "top-right", "left", "centre", "right", "bottom-left", "bottom", "bottom-right"]
+          - label: "Publications"
+            name: "publications"
+            widget: "list"
+            fields: 
+              - {label: 'Title', name: 'title', widget: 'string', required: false}
+              - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image", required: false}
+              - {label: "Thumbnail Hover Image", name: "thumbnailHoverImg", widget: "image", required: false}
+
       - label: "Contact"
         name: "contact"
         file: "src/data/pages/contact.md"

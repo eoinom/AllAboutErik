@@ -151,6 +151,15 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        path: 'src/data/pages/publications-index.md',
+        typeName: 'PublicationsIndex'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/pages/publications/*.md',
+        typeName: 'Publications'
       }
     },
     {
