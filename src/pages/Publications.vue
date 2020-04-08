@@ -2,27 +2,23 @@
   <Layout>
 
     <BackgroundMusic
-      :audioFile="$page.Collections.edges[0].node.bgAudio"
-      :audioDuration="$page.Collections.edges[0].node.bgAudioDuration"
-      :audioFadeInDuration="$page.Collections.edges[0].node.bgAudioFadeInDuration"
-      :audioFadeOutDuration="$page.Collections.edges[0].node.bgAudioFadeOutDuration"
+      :audioFile="$page.Publications.edges[0].node.bgAudio"
+      :audioDuration="$page.Publications.edges[0].node.bgAudioDuration"
+      :audioFadeInDuration="$page.Publications.edges[0].node.bgAudioFadeInDuration"
+      :audioFadeOutDuration="$page.Publications.edges[0].node.bgAudioFadeOutDuration"
     />
 
     <b-container fluid class="main-col">
-      <b-row no-gutters class="mb-1 px-1">
+      <b-row no-gutters class="mb-1 mt-4 px-1">
         <b-col class="slideshowCol">
 
           <!-- HEADER SLIDESHOW -->
-          <slideshow-kenburns-small :slides="slides" :height="slideshowHeight" />
+          <SlideshowKenBurnsSmall :slides="slides" height="420px" />
 
           <!-- SLIDESHOW OVERLAY -->
           <div class="slideshowOverlay">
             <div class="mainContent">
-
-              <g-image alt="Collections title image" v-if="titleImg != null" :src="titleImg" id="titleImg" class="mb-md-1 mb-lg-2 mb-xl-3"/>
-
-              <div v-html="slideshowText" id="slideshowText" />
-
+              <g-image alt="Publications title image" v-if="titleImg != null" :src="titleImg" id="titleImg" class="mb-md-1 mb-lg-2 mb-xl-3"/>
             </div>
           </div>
 
@@ -31,16 +27,16 @@
     </b-container>
 
 
-    <b-container fluid class="collectionsContainer">
-      <b-row no-gutters align-h="center" class="collectionsRow mb-1">
+    <b-container fluid class="publicationsContainer">
+      <b-row no-gutters align-h="center" class="publicationsRow mb-1">
         <b-col
-          v-for="(collection, index) in collections"
+          v-for="(publication, index) in publications"
           :key="index"
           cols=""
           align-self="center"
-          class="collectionsCols p-0 mx-0 my-2"
+          class="publicationsCols p-0 mx-0 my-2"
         >
-          <collection-thumbnail :collection="collection" />          
+          <CollectionThumbnail :collection="publication" />          
         </b-col>
       </b-row>
     </b-container>
@@ -55,7 +51,7 @@
 
 <page-query>
 {
-  Collections: allCollectionsIndex {
+  Publications: allPublicationsIndex {
     edges {
       node {
         id
@@ -65,7 +61,6 @@
         bgAudioDuration
         bgAudioFadeInDuration
         bgAudioFadeOutDuration
-        content
         slides {
           img
           opacity
@@ -73,7 +68,7 @@
           scaleFrom
           scaleTo
         }
-        collections {
+        publications {
           title
           thumbnailImg
           thumbnailHoverImg
@@ -89,93 +84,43 @@
 import BackgroundMusic from '../components/BackgroundMusic.vue'
 import CollectionThumbnail from '../components/CollectionThumbnail.vue'
 import ScrollToTop from '../components/ScrollToTop.vue'
-import SlideshowImages from '../components/SlideshowImages2.vue'
 import SlideshowKenBurnsSmall from '../components/SlideshowKenBurnsSmall.vue'
 
 export default {
   metaInfo() {
     return {
-      title: this.$page.Collections.edges[0].node.pageTitle
+      title: this.$page.Publications.edges[0].node.pageTitle
     }
+  },
+
+  components: {
+    BackgroundMusic,
+    CollectionThumbnail,
+    ScrollToTop,
+    SlideshowKenBurnsSmall
   },
 
   data() {
     return {
-      videoIndex: null,
-      mainColHeight: 600,
-      interval: null
     }
   },
 
   computed: {
     titleImg() {
-      return this.$page.Collections.edges[0].node.titleImg
+      return this.$page.Publications.edges[0].node.titleImg
     },
     slides() {
-      return this.$page.Collections.edges[0].node.slides
+      return this.$page.Publications.edges[0].node.slides
     },
-    slideshowText(){
-      return this.$page.Collections.edges[0].node.content
-    },
-    collections() {
-      return this.$page.Collections.edges[0].node.collections
-    },
-    slideshowHeight() {
-      let height = this.mainColHeight + 30
-      return height + 'px'
+    publications() {
+      return this.$page.Publications.edges[0].node.publications
     }
   },
 
   methods: {
-    observeTextBlockHeight() {
-      this.interval = setInterval(function () {    
-        let textEl = document.getElementById('slideshowText')
-        this.mainColHeight = this.getElementOffset(textEl).bottom
-        console.log('observing, ')
-      }.bind(this), 500);
-    },
-    getElementOffset(el) {
-      let top = 0
-      // let left = 0
-      let bottom = 0
-      let element = el
-      let height = el.offsetHeight
-
-      // Loop through the DOM tree
-      // and add it's parent's offset to get page offset
-      do {
-        top += element.offsetTop || 0;
-        // left += element.offsetLeft || 0;
-        element = element.offsetParent
-      } while (element)
-
-      bottom = top + height
-
-      return {
-        top,
-        // left,
-        bottom,
-      }
-    }
   },
 
   mounted() {
-    this.observeTextBlockHeight()
-
-    setTimeout(clearInterval(this.interval), 8000)
-    
-    window.addEventListener('resize', () => {
-      let textEl = document.getElementById('slideshowText')
-      this.mainColHeight = this.getElementOffset(textEl).bottom
-    })
-  },
-
-  components: {
-    'slideshow-images': require('../components/SlideshowImages2.vue').default,
-    'slideshow-kenburns-small': require('../components/SlideshowKenBurnsSmall.vue').default,
-    BackgroundMusic,
-    CollectionThumbnail,
-    ScrollToTop
   },
 }
 </script>
@@ -204,11 +149,11 @@ export default {
 }
 
 * {
-  --collectionWidth: 357.8px;
-  --collectionScale: 1.0;
-  --maxCollectionsPerRow: 7;
+  --publicationWidth: 357.8px;
+  --publicationScale: 1.0;
+  --maxPublicationsPerRow: 7;
   --extraMargin: 6px;
-  --collectionsDivWidth: calc(var(--maxCollectionsPerRow) * (var(--collectionScale)*var(--collectionWidth) + var(--extraMargin)));   /* Full width for a 27" screen */
+  --publicationsDivWidth: calc(var(--maxPublicationsPerRow) * (var(--publicationScale)*var(--publicationWidth) + var(--extraMargin)));   /* Full width for a 27" screen */
 }
 
 .layout {
@@ -237,6 +182,7 @@ export default {
   position: absolute;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
 
 .mainContent{
@@ -259,26 +205,14 @@ export default {
   padding-bottom: 15px;
 }
 
-#slideshowText {
-  color: #FFFFFF;
-  font-family: 'NeueHaasGroteskText Pro55';
-  font-feature-settings: 'liga';
-  font-size: 1.375rem;
-  font-weight: 400;
-  line-height: 2.0625rem;
-  letter-spacing: 2px;
-  text-align: justify;
-  text-shadow: 0px 0px 250px #1C0F07,0px 0px 250px #1C0F07/* glow */, 1px 1px 2px rgba(28,16,23,0.89)/* drop shadow*/;
-}
-
-.collectionsContainer,
-.collectionsRow {
+.publicationsContainer,
+.publicationsRow {
   padding: 0;
-  max-width: var(--collectionsDivWidth);
+  max-width: var(--publicationsDivWidth);
 }
 
-.collectionsCols {
-  max-width: calc(var(--collectionsDivWidth) / var(--maxCollectionsPerRow));
+.publicationsCols {
+  max-width: calc(var(--publicationsDivWidth) / var(--maxPublicationsPerRow));
 }
 
 
@@ -287,8 +221,8 @@ export default {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   * {
-    --collectionScale: 0.65;
-    --maxCollectionsPerRow: 1;
+    --publicationScale: 0.65;
+    --maxPublicationsPerRow: 1;
   }
   .layout, .main-col {
     padding: 0 0;
@@ -297,64 +231,41 @@ export default {
     padding-left: 15%;
     padding-right: 15%;
   }
-  #slideshowText {
-    font-size: calc(1rem + 2 * (100vw - 375px) / (576 - 375) ); /* varies between 16px (1rem) and 18px */
-    line-height: calc(1.0625rem + 3 * (100vw - 375px) / (576 - 375) ); /* varies between 17px (1.0625rem) and 20px */
-    margin-bottom: 0px;
-  }
-  #slideshowText > p {
-    margin-bottom: 0px !important;
-  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   * {
-    --collectionScale: 0.55934;
-    --maxCollectionsPerRow: 2;
+    --publicationScale: 0.55934;
+    --maxPublicationsPerRow: 2;
   }
   .mainContent {
     padding-left: 12%;
     padding-right: 12%;
-  }
-  #slideshowText {
-    font-size: calc(1.125rem + 1.2 * (100vw - 576px) / (768 - 576) ); /* varies between 18px (1.125rem) and 19.2px */
-    line-height: 24px;
-  }
-  #slideshowText p {
-    margin-bottom: 0px !important;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   * {
-    --collectionScale: 0.7;
-    --maxCollectionsPerRow: 2;
+    --publicationScale: 0.7;
+    --maxPublicationsPerRow: 2;
   }
   .mainContent {
     padding-left: 12%;
     padding-right: 12%;
-  }
-  #slideshowText {
-    font-size: calc(1.2rem + 1.8 * (100vw - 768px) / (992 - 768) ); /* varies between 19.2px (1.2rem) and 21px */
-    line-height: 24px;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   * {
-    --collectionScale: 0.7;
-    --maxCollectionsPerRow: 3;
+    --publicationScale: 0.7;
+    --maxPublicationsPerRow: 3;
   }
   .mainContent {
     padding-left: 12%;
     padding-right: 12%;
-  }
-  #slideshowText {
-    font-size: 1.3125rem;
-    line-height: 33px;
   }
 }
 
@@ -362,8 +273,8 @@ export default {
 /* Special breakpoint */
 @media (min-width: 1200px) and (max-width: 1499.98px) {
   * {
-    --collectionScale: 0.9;
-    --maxCollectionsPerRow: 3;
+    --publicationScale: 0.9;
+    --maxPublicationsPerRow: 3;
   }
   .mainContent {
     padding-left: 12%;
@@ -383,7 +294,7 @@ export default {
 /* Special breakpoint */
 @media (min-width: 1500px) and (max-width: 2539.98px) {
   * {
-    --maxCollectionsPerRow: 4;
+    --maxPublicationsPerRow: 4;
   }
 }
 
