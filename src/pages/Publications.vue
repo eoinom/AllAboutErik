@@ -13,12 +13,23 @@
         <b-col class="slideshowCol">
 
           <!-- HEADER SLIDESHOW -->
-          <SlideshowKenBurnsSmall :slides="slides" height="420px" />
+          <SlideshowKenBurnsSmall 
+            :slides="slides" 
+            :height="slideshowHeight" 
+            :maxImgWidth="slideshowMaxWidth"
+            :centerVertically=true
+          />
 
           <!-- SLIDESHOW OVERLAY -->
           <div class="slideshowOverlay">
             <div class="mainContent">
-              <g-image alt="Publications title image" v-if="titleImg != null" :src="titleImg" id="titleImg" class="mb-md-1 mb-lg-2 mb-xl-3"/>
+              <g-image 
+                alt="Publications title image" 
+                v-if="titleImg != null" 
+                :src="titleImg" 
+                id="titleImg" 
+                class="mb-md-1 mb-lg-2 mb-xl-3"
+              />
             </div>
           </div>
 
@@ -27,19 +38,34 @@
     </b-container>
 
 
-    <b-container fluid class="publicationsContainer">
+    <b-container v-if="windowWidth > 1200" fluid class="publicationsContainer">
       <b-row no-gutters align-h="center" class="publicationsRow mb-1">
         <b-col
-          v-for="(publication, index) in publications"
-          :key="index"
+          v-for="(publication, i) in publications"
+          :key="'publication'+i"
           cols=""
           align-self="center"
-          class="publicationsCols p-0 mx-0 my-2"
+          class="publicationsCols p-0 m-2 m-md-3"
         >
-          <CollectionThumbnail :collection="publication" />          
+          <PublicationThumbnail :publication="publication" />          
         </b-col>
       </b-row>
     </b-container>
+
+    <b-container v-if="windowWidth <= 1200" fluid class="publicationsContainer">
+      <b-row no-gutters align-h="center" class="publicationsRow mb-1">
+        <b-col
+          v-for="(newPublication, i) in publicationsAltOrder"
+          :key="'newPublication'+i"
+          cols=""
+          align-self="center"
+          class="publicationsCols p-0 m-2 m-md-3"
+        >
+          <PublicationThumbnail :publication="newPublication" />          
+        </b-col>
+      </b-row>
+    </b-container>
+
 
     <ScrollToTop
       text="BACK TO THE TOP"
@@ -82,7 +108,7 @@
 
 <script scoped>
 import BackgroundMusic from '../components/BackgroundMusic.vue'
-import CollectionThumbnail from '../components/CollectionThumbnail.vue'
+import PublicationThumbnail from '../components/PublicationThumbnail.vue'
 import ScrollToTop from '../components/ScrollToTop.vue'
 import SlideshowKenBurnsSmall from '../components/SlideshowKenBurnsSmall.vue'
 
@@ -95,13 +121,14 @@ export default {
 
   components: {
     BackgroundMusic,
-    CollectionThumbnail,
+    PublicationThumbnail,
     ScrollToTop,
     SlideshowKenBurnsSmall
   },
 
   data() {
-    return {
+    return {      
+      windowWidth: 0.0
     }
   },
 
@@ -114,13 +141,45 @@ export default {
     },
     publications() {
       return this.$page.Publications.edges[0].node.publications
+    },    
+    publicationsAltOrder() {
+      let publicationsClone = [...this.publications]
+      let pubsAltOrder = publicationsClone.filter((val, index) => index !== 1)
+      pubsAltOrder.unshift(this.publications[1])
+      return pubsAltOrder
+    },
+    slideshowHeight() {      
+      if (this.windowWidth > 1000)
+        return "420px"
+      else {
+        const minImgWidth = 691
+        const maxImgHeight = 407
+        let maxWidth = 0.9 * this.windowWidth
+        let width = Math.min(maxWidth, minImgWidth)
+        let factor = width / minImgWidth
+        let height = factor * maxImgHeight
+        return height + 'px'
+      }
+    },
+    slideshowMaxWidth() {
+      if (this.windowWidth > 1000)
+        return "initial"
+      else
+        return "90vw"
     }
   },
 
-  methods: {
+  created() {    
+    this.windowWidth = window.innerWidth
   },
 
   mounted() {
+    window.addEventListener('resize', () => {  
+      this.windowWidth = window.innerWidth
+    })
+    window.addEventListener('orientationchange', () => {  
+      this.windowWidth = window.innerWidth
+    })
   },
 }
 </script>
@@ -149,11 +208,11 @@ export default {
 }
 
 * {
-  --publicationWidth: 357.8px;
+  --publicationWidth: 829.7px;
   --publicationScale: 1.0;
-  --maxPublicationsPerRow: 7;
-  --extraMargin: 6px;
-  --publicationsDivWidth: calc(var(--maxPublicationsPerRow) * (var(--publicationScale)*var(--publicationWidth) + var(--extraMargin)));   /* Full width for a 27" screen */
+  --maxPublicationsPerRow: 3;
+  --extraMargin: 12px;
+  --publicationsDivWidth: 1900px;
 }
 
 .layout {
@@ -166,7 +225,6 @@ export default {
 
 .main-col {
   max-width: 1458px;
-  min-height: 600px;
 }
 
 .slideshowCol {
@@ -212,7 +270,7 @@ export default {
 }
 
 .publicationsCols {
-  max-width: calc(var(--publicationsDivWidth) / var(--maxPublicationsPerRow));
+  flex-grow: 0;
 }
 
 
@@ -230,6 +288,14 @@ export default {
   .mainContent {
     padding-left: 15%;
     padding-right: 15%;
+  }
+}
+
+/* Special breakpoint (portrait phones, less than 345px, e.g. iPhone 5) */
+@media (max-width: 344.98px) {
+  .mainContent {
+    padding-left: 12%;
+    padding-right: 12%;
   }
 }
 
@@ -295,6 +361,37 @@ export default {
 @media (min-width: 1500px) and (max-width: 2539.98px) {
   * {
     --maxPublicationsPerRow: 4;
+  }
+}
+
+
+
+/* Special breakpoint */
+@media (max-width: 2100px) {
+  * {
+    --publicationsDivWidth: 1360px;
+  }
+}
+
+/* Special breakpoint */
+@media (max-width: 1599.98px) {
+  * {
+    /* --publicationsDivWidth: 1100px; */
+    --publicationsDivWidth: 1250px;
+  }
+}
+
+/* Special breakpoint */
+@media (max-width: 1200px) {
+  * {
+    --publicationsDivWidth: 900px;
+  }
+}
+
+/* Special breakpoint */
+@media (max-width: 767.98px) {
+  * {
+    --publicationsDivWidth: 600px;
   }
 }
 
