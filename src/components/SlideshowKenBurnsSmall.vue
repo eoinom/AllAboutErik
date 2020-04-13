@@ -33,11 +33,19 @@ export default {
   props: {
     slides: {
       default: () => [],
-      type: Array,
+      type: Array
     },
     height: {
       default: '40vh',
-      type: String,
+      type: String
+    },
+    maxImgWidth: {
+      default: 'initial',
+      type: String
+    },
+    centerVertically: {
+      default: false,
+      type: Boolean
     },
   },
 
@@ -71,6 +79,9 @@ export default {
       css.animationName = 'kenburns-'+ (index+1)
       css.transformOrigin = this.panStart(index)
       css['--imgOpacity'] = this.slides[index].opacity ? this.slides[index].opacity / 100 : 0.62
+      css.maxWidth = this.maxImgWidth
+      if (this.centerVertically)
+        css.top = '50%'
       return css
     },
 
@@ -147,7 +158,8 @@ export default {
         const scaleFrom = this.scaleFrom(i)
         const scaleTo = this.scaleTo(i)
         const Tx = this.translateFactor * startPos[0]
-        const Ty = this.translateFactor * startPos[1]
+        const Ty = this.centerVertically ? -50 + (this.translateFactor * startPos[1]) : this.translateFactor * startPos[1]
+        const translateTo = this.centerVertically ? '-50%' : '0'
         var style = document.createElement('style');
         style.type = 'text/css';
         var keyFrame = '\
@@ -156,9 +168,10 @@ export default {
             transform: scale3d('+ scaleFrom + ', '+ scaleFrom + ', 1) translate3d('+ Tx + '%, '+ Ty + '%, 0);\
           }\
           100% {\
-            transform: scale3d('+ scaleTo + ', '+ scaleTo + ', 1) translate3d(0, 0, 0);\
+            transform: scale3d('+ scaleTo + ', '+ scaleTo + ', 1) translate3d(0, ' + translateTo + ', 0);\
           }\
         }';
+
         style.innerHTML = keyFrame
         document.head.appendChild(style)
       }
