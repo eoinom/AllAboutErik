@@ -551,7 +551,7 @@ collections:
                 required: false
                 fields:
                   - {label: "link (url)", name: "url", widget: "string"}
-                
+
   - label: "Collections"
     name: "collections"
     folder: "src/data/pages/collections"
@@ -571,3 +571,23 @@ collections:
         fields: 
           - {label: "Image", name: "img", widget: "image", required: false}
           - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+ 
+  - label: "Publications"
+    name: "publications"
+    folder: "src/data/pages/publications"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - {label: 'Title', name: 'title', widget: 'string', required: false}
+      - {label: "Title Image (Single line)", name: "titleImg1Line", widget: "image", required: false}
+      - {label: "Title Image (Two lines)", name: "titleImg2Lines", widget: "image", required: false}
+      - {label: "Header Background Image", name: "headerBgImg", widget: "image", required: false}
+      - {label: "Header Image Opacity (%)", name: "headerBgImgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+      - {label: 'Header Text', name: 'body', widget: 'markdown', required: false}
+      - {label: "Page Background Image", name: "pageBgImg", widget: "image", required: false}
+      - {label: "Page Image Opacity (%)", name: "pageBgImgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+      - {label: 'Main text (top)', name: 'mainTextTop', widget: 'markdown', required: false}
+      - {label: 'Main text (bottom)', name: 'mainTextBottom', widget: 'markdown', required: false}
+      - {label: 'Book page images URLs (string)', name: 'bookImagesUrls', widget: 'markdown', required: false}
+      - {label: "Video (Vimeo Url)", name: "videoUrl", widget: "string", required: false} 

@@ -66,4 +66,29 @@ module.exports = function (api) {
       })
     })
   })
+
+
+  // create the individual Publications pages
+  api.createPages(async ({ graphql, createPage }) => {
+    const { data } = await graphql(`{
+      allPublications {
+        edges {
+          node {
+            id
+            title
+          }
+        }
+      }
+    }`)
+    data.allPublications.edges.forEach(({ node }) => {
+      pageSlug = slugify(node.title)
+      createPage({
+        path: `/publications/${pageSlug}`,
+        component: './src/templates/Publication.vue',
+        context: {
+          id: node.id
+        }
+      })
+    })
+  })
 }
