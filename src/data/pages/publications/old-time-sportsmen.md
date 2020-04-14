@@ -1,16 +1,16 @@
 ---
 title: Old Time Sportsmen
 titleImg1Line: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1586896741/Old%20Time%20Sportsmen%20%28Common%29/title-old-time-sportsmen-black-1line_vxphwj.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586896741/Old%20Time%20Sportsmen%20%28Common%29/title-old-time-sportsmen-black-1line_vxphwj.png
 titleImg2Lines: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1586896741/Old%20Time%20Sportsmen%20%28Common%29/title-old-time-sportsmen-black-2lines_em3dwd.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586896741/Old%20Time%20Sportsmen%20%28Common%29/title-old-time-sportsmen-black-2lines_em3dwd.png
 headerBgImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1586896743/Old%20Time%20Sportsmen%20%28Common%29/banner-old-time-sportsmen_fql1sy.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586896743/Old%20Time%20Sportsmen%20%28Common%29/banner-old-time-sportsmen_fql1sy.png
 headerBgImgOpacity: 100
 headerLeftImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1586896741/Old%20Time%20Sportsmen%20%28Common%29/hunter_ta5375.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586896741/Old%20Time%20Sportsmen%20%28Common%29/hunter_ta5375.png
 headerRightImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1586896742/Old%20Time%20Sportsmen%20%28Common%29/ducks_irayst.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586896742/Old%20Time%20Sportsmen%20%28Common%29/ducks_irayst.png
 mainTextTop: >-
   In the first years of the 20th century, newly mobile American travelers,
   hunters, and fisherman headed out by horseback, buggy, car, and boat. Their

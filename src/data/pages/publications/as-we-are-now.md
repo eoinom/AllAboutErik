@@ -1,11 +1,11 @@
 ---
 title: As We Are Now
 titleImg1Line: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1586895228/Publications/1.%20As%20We%20Are%20Now/title-aswearenow-white-1line_ts1z8c.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586895228/Publications/1.%20As%20We%20Are%20Now/title-aswearenow-white-1line_ts1z8c.png
 titleImg2Lines: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1586895227/Publications/1.%20As%20We%20Are%20Now/title-aswearenow-white-2lines_woqjeu.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586895227/Publications/1.%20As%20We%20Are%20Now/title-aswearenow-white-2lines_woqjeu.png
 pageBgImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/v1586895228/Publications/1.%20As%20We%20Are%20Now/background_skeleton_p0grqu.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586895228/Publications/1.%20As%20We%20Are%20Now/background_skeleton_p0grqu.jpg
 pageBgImgOpacity: 31
 mainTextTop: >-
   This in-depth, full-color work is a comprehensive survey exploring the theme
