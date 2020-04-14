@@ -584,6 +584,8 @@ collections:
       - {label: "Title Image (Two lines)", name: "titleImg2Lines", widget: "image", required: false}
       - {label: "Header Background Image", name: "headerBgImg", widget: "image", required: false}
       - {label: "Header Image Opacity (%)", name: "headerBgImgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+      - {label: "Header Left Image", name: "headerLeftImg", widget: "image", required: false}
+      - {label: "Header Right Image", name: "headerRightImg", widget: "image", required: false}
       - {label: 'Header Text', name: 'body', widget: 'markdown', required: false}
       - {label: "Page Background Image", name: "pageBgImg", widget: "image", required: false}
       - {label: "Page Image Opacity (%)", name: "pageBgImgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
