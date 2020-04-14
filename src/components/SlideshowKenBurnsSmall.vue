@@ -1,5 +1,5 @@
 <template>
-  <div class="SlideshowKenBurns">
+  <div class="SlideshowKenBurns" :style="{'backgroundColor':this.backgroundColor}">
     
     <!-- https://vuejs.org/v2/guide/transitions.html#List-Transitions -->
     <transition-group     
@@ -46,6 +46,10 @@ export default {
     centerVertically: {
       default: false,
       type: Boolean
+    },
+    backgroundColor: {
+      default: 'black',
+      type: String
     },
   },
 
@@ -190,8 +194,7 @@ export default {
 <style lang="scss" scoped>
 
 .SlideshowKenBurns {
-  --translateFactor: 1.5%;    
-  background-color: black;
+  --translateFactor: 1.5%;
 
   &__slides {
     position: relative;

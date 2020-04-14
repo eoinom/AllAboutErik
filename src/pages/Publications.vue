@@ -9,7 +9,7 @@
     />
 
     <b-container fluid class="main-col">
-      <b-row no-gutters class="mb-1 mt-4 px-1">
+      <b-row no-gutters class="mb-1 pt-4 px-1">
         <b-col class="slideshowCol">
 
           <!-- HEADER SLIDESHOW -->
@@ -18,6 +18,7 @@
             :height="slideshowHeight" 
             :maxImgWidth="slideshowMaxWidth"
             :centerVertically=true
+            backgroundColor='#141414'
           />
 
           <!-- SLIDESHOW OVERLAY -->
@@ -209,12 +210,12 @@ export default {
   --publicationWidth: 829.7px;
   --publicationScale: 1.0;
   --maxPublicationsPerRow: 3;
-  --extraMargin: 12px;
   --publicationsDivWidth: 1900px;
 }
 
 .layout {
   padding: 0;
+  background-color: #141414 !important;
 }
 
 .row {
