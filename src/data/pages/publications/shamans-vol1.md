@@ -6,6 +6,9 @@ headerBgImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1586900043/Publications/4.%20Shamans%20Vol1%20and%20Vol2/banner-Vol1-p22_qckbtb.jpg
 headerBgImgOpacity: 54
 mainTextTop: >-
+  ## VOLUME ONE: CHAVÍN KARWA, PARACAS, SIHUAS, NASCA
+
+
   Shamans, Supernaturals and Animal Spirits is a unique visual encyclopaedia
   exploring the mythical and shamanic figures represented in the extraordinary
   textile art of the pre-Columbian civilisations of the Andes. Over a span of
