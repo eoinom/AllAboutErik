@@ -34,29 +34,29 @@ slides:
     scaleTo: 1
 publications:
   - thumbnailHoverImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1586824930/Publications/01-skeleton-rollover_r3h9li.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/01-skeleton-rollover_r3h9li.jpg
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1586824930/Publications/01-skeleton_gvhdkt.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/01-skeleton_gvhdkt.jpg
     title: As We Are Now
   - thumbnailHoverImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1586824930/Publications/02-old-timey-sportsman-rollover_jzrn89.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/02-old-timey-sportsman-rollover_jzrn89.jpg
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1586824930/Publications/02-old-timey-sportsman_vn71ey.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/02-old-timey-sportsman_vn71ey.jpg
     title: Old Time Sportsmen
   - thumbnailHoverImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1586824930/Publications/03-animal-myth-rollover_sf8evm.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/03-animal-myth-rollover_sf8evm.jpg
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1586824930/Publications/03-animal-myth_ufyoua.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/03-animal-myth_ufyoua.jpg
     title: Animal Myth and Magic
   - thumbnailHoverImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1586824930/Publications/04-shamans_vol1-rollover_rz8zew.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/04-shamans_vol1-rollover_rz8zew.jpg
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1586824930/Publications/04-shamans_vol1_fuyv3c.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/04-shamans_vol1_fuyv3c.jpg
     title: Shamans Vol1
   - thumbnailHoverImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1586824930/Publications/05-shamans_vol2-rollover_ulhn4c.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/05-shamans_vol2-rollover_ulhn4c.jpg
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/v1586824930/Publications/05-shamans_vol2_midyxh.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/05-shamans_vol2_midyxh.jpg
     title: Shamans Vol2
 ---
 
