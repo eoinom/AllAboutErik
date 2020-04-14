@@ -1,16 +1,16 @@
 ---
 title: Old-Time Sportsmen
 titleImg1Line: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582585215/Collections/06%20Old-Time%20Sportsmen/title-old-time-sportsmen-black-1line_sbvolx.png
+  https://res.cloudinary.com/all-about-erik/image/upload/v1586896741/Old%20Time%20Sportsmen%20%28Common%29/title-old-time-sportsmen-black-1line_vxphwj.png
 titleImg2Lines: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582585215/Collections/06%20Old-Time%20Sportsmen/title-old-time-sportsmen-black-2lines_c6verf.png
+  https://res.cloudinary.com/all-about-erik/image/upload/v1586896741/Old%20Time%20Sportsmen%20%28Common%29/title-old-time-sportsmen-black-2lines_em3dwd.png
 headerBgImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1582072594/Collections/06%20Old-Time%20Sportsmen/banner-old-time-sportsmen_hwvmig.png
+  https://res.cloudinary.com/all-about-erik/image/upload/v1586896743/Old%20Time%20Sportsmen%20%28Common%29/banner-old-time-sportsmen_fql1sy.png
 backgroundImgOpacity: 100
 headerLeftImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584182010/Collections/06%20Old-Time%20Sportsmen/hunter_jcfk7z.png
+  https://res.cloudinary.com/all-about-erik/image/upload/v1586896741/Old%20Time%20Sportsmen%20%28Common%29/hunter_ta5375.png
 headerRightImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584182010/Collections/06%20Old-Time%20Sportsmen/ducks_enicsy.png
+  https://res.cloudinary.com/all-about-erik/image/upload/v1586896742/Old%20Time%20Sportsmen%20%28Common%29/ducks_irayst.png
 sportsmenSiteHoverImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1584183192/Collections/06%20Old-Time%20Sportsmen/flyline_ckmhvu.png
 sportsmenSiteLink: 'http://oldtimeysportsmenphotogallery.com/gallery/'
