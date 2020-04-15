@@ -101,7 +101,7 @@ export default {
     }
   },
 
-  methods: {    
+  methods: {
     renderMarkdown(text) {
       const md = new MarkdownIt()
       return md.render(text) 

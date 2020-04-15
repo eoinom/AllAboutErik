@@ -23,7 +23,6 @@
         </div>
       </simplebar>
     </div>
-    <!-- </simplebar> -->
 
     <!-- Sub navigation menu -->
       <div id="sideNav-sub" :style="subSideNavStyles()">
@@ -37,8 +36,14 @@
 
         <div class="submenu-text-container">
           <g-link :to="activeNav.to" class="verb-text">{{ activeNav.verb }}</g-link>
+
           <br>
-          <g-link :to="activeNav.to" class="title-text">{{ activeNav.title }}</g-link>
+
+          <g-link v-if="activeNav.title" :to="activeNav.to" class="title-text">{{ activeNav.title }}</g-link>
+          
+          <g-link v-else-if="activeNav.titleMD" :to="activeNav.to" class="title-text">
+            <span v-html="renderMarkdown(activeNav.titleMD)" />
+          </g-link>
 
           <div v-if="showSubPageLinks" class="submenu-nav-container">
             <nav v-for="subPage in activeNav.subPages" :key="subPage.subPageText">
@@ -80,6 +85,7 @@
         img
         verb
         title
+        titleMD
         subPages {
           subPageTo
           subPageText
@@ -93,6 +99,7 @@
 <script type="text/javascript">
   import simplebar from 'simplebar-vue';
   import 'simplebar/dist/simplebar.min.css';
+  const MarkdownIt = require('markdown-it')
 
   export default {
     data () {
@@ -143,6 +150,10 @@
       },
       onSubNavLinkHover(subNav) {
         this.activeSubNav = this.mainNavIsOpen ? Object.assign({}, subNav) : {}
+      },
+      renderMarkdown(text) {
+        const md = new MarkdownIt()
+        return md.render(text) 
       }
     },
 
