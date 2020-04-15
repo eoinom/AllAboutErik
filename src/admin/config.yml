@@ -27,7 +27,8 @@ collections:
       - {label: "Contains sub-menu?", name: "hasSubMenu", widget: "boolean"}      
       - {label: "Image", name: "img", widget: "image", required: false}  
       - {label: "Verb", name: "verb", widget: "string", required: false}  
-      - {label: "Title", name: "title", widget: "string", required: false}  
+      - {label: "Title", name: "title", widget: "string", required: false}
+      - {label: "Title (Markdown)", name: "titleMD", widget: "markdown", required: false}
       - label: "Sub Page"
         name: "subPages"
         widget: "list"
