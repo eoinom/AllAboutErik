@@ -8,9 +8,7 @@ verb: inform
 title: ''
 titleMD: |-
   Contact Form  
-
   &  
-
   Site Credits
 ---
 
