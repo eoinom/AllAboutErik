@@ -1,7 +1,7 @@
 ---
 pageTitle: Publications
 titleImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586379475/Publications/publications-white_ihpheu.png
+  https://res.cloudinary.com/all-about-erik/image/upload/v1586986051/Publications/publications-white-with-drop-shadow_tvveqi.png
 bgAudio: >-
   https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1583973956/Publications/5-Pennies-Norman-Greenbaum_Publications_v0zqqz.mp3
 bgAudioDuration: 167
