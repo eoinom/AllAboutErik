@@ -94,7 +94,7 @@ export default {
       return this.node.content
     },
     credits(){
-      return this.node.otherCredits
+      return this.node.credits
     },
     bgVideo(){
       return this.node.bgVideo
