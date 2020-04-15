@@ -1,7 +1,7 @@
 ---
 title: Animal Myth and Magic
 titleImg2Lines: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586898832/Publications/3.%20Animal%20Myth%20and%20Magic/animalmythmagic_uivucb.png
+  https://res.cloudinary.com/all-about-erik/image/upload/v1586992211/Publications/3.%20Animal%20Myth%20and%20Magic/animalmythmagic_-_cropped_fdlmnj.png
 headerBgImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586898832/Publications/3.%20Animal%20Myth%20and%20Magic/banner-h061_zya2mk.jpg
 headerBgImgOpacity: 62
