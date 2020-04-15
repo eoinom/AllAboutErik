@@ -26,25 +26,12 @@
       </div>
 
       <!-- CREDITS -->
-      <div class="pb-5">
-        <p class="text-titles">Credits</p>
-
-        <ul style="list-style-type:none; padding-left:0">
-          <li v-for="(credit, i) in musicalCredits" :key="'credit'+i" class="text-main">
-            {{ credit.pageName }} – {{ credit.trackTitle }} by {{ credit.artist }}
-          </li>
-        </ul>
-
-        <br>
-        <p class="text-main">{{ musicalCreditsText }}</p>
-        <br><br>
-        
-        <div v-for="(creditSection, i) in otherCredits" :key="'creditSection'+i">
-          <p class="text-titles">{{ creditSection.heading }}</p>
+      <div class="pb-4">        
+        <div v-for="(creditSection, i) in credits" :key="'creditSection'+i">
+          <p v-if="creditSection.heading" class="text-titles">{{ creditSection.heading }}</p>
           <span v-html="renderMarkdown(creditSection.text)" class="text-main contact_renderedContent" />
           <br>
         </div>
-
       </div>    
     </div>
 
@@ -68,14 +55,7 @@
         headingImg
         headingImg2Lines
         content
-        musicalCreditsHeading
-        musicalCredits {
-          pageName
-          trackTitle
-          artist
-        }
-        musicalCreditsText
-        otherCredits {
+        credits {
           heading
           text
         }
@@ -113,16 +93,7 @@ export default {
     mainText(){
       return this.node.content
     },
-    musicalCreditsHeading(){
-      return this.node.musicalCreditsHeading
-    },
-    musicalCredits(){
-      return this.node.musicalCredits
-    },
-    musicalCreditsText(){
-      return this.node.musicalCreditsText
-    },
-    otherCredits(){
+    credits(){
       return this.node.otherCredits
     },
     bgVideo(){

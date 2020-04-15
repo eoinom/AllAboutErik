@@ -447,18 +447,9 @@ collections:
           - {label: "Page Title", name: "pageTitle", widget: "string"}  
           - {label: "Heading Image", name: "headingImg", widget: "image"}  
           - {label: "Heading Image (2 Lines)", name: "headingImg2Lines", widget: "image"}  
-          - {label: 'Main text', name: 'body', widget: 'markdown', required: false} 
-          - {label: 'Musical Credits Heading', name: 'musicalCreditsHeading', widget: 'string', required: false}
-          - label: "Musical Credits"
-            name: "musicalCredits"
-            widget: "list"
-            fields: 
-              - {label: 'Page Name', name: 'pageName', widget: 'string', required: false}
-              - {label: 'Track Title', name: 'trackTitle', widget: 'string', required: false}
-              - {label: 'Artist', name: 'artist', widget: 'string', required: false}   
-          - {label: 'Musical Credits Text', name: 'musicalCreditsText', widget: 'markdown', required: false}       
-          - label: "Other Credits"
-            name: "otherCredits"
+          - {label: 'Main text', name: 'body', widget: 'markdown', required: false}       
+          - label: "Credits sections"
+            name: "credits"
             widget: "list"
             fields: 
               - {label: 'Heading', name: 'heading', widget: 'string', required: false}
