@@ -66,6 +66,16 @@ body {
 }
 
 
+.publication_mainText h2 {
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.18);
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  letter-spacing: 5px;
+}
+
+
 
 /* Extra small devices (portrait phones, < 576px) */
 @media (max-width: 575.98px) {
