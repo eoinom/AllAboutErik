@@ -7,7 +7,7 @@
             <g-image :src="titleImg1Line" class="titleImg titleImg1Line" />
             <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
 
-            <div v-if="windowWidth < 1200 && !showIntro" v-b-toggle.collapse-1 class="collections_headerText" style="font-style: italic" @click="showIntro = true">
+            <div v-if="windowWidth < 1200 && !showIntro" v-b-toggle.collapse-1 class="collection_headerText" style="font-style: italic" @click="showIntro = true">
               Read intro
               <svg viewBox="0 0 20 20" width="20" height="20" class="arrow">
                 <line x1="1" y1="4.5" x2="9" y2="13" />
@@ -15,7 +15,7 @@
               </svg>
             </div>
 
-            <div v-else-if="windowWidth < 1200 && showIntro" v-b-toggle.collapse-1 class="collections_headerText" style="font-style: italic" @click="showIntro = false">
+            <div v-else-if="windowWidth < 1200 && showIntro" v-b-toggle.collapse-1 class="collection_headerText" style="font-style: italic" @click="showIntro = false">
               Hide intro
               <svg viewBox="0 0 20 20" width="20" height="20" class="arrow">
                 <line x1="1" y1="13" x2="9" y2="4.5" />
@@ -23,13 +23,13 @@
               </svg>
             </div>
             
-            <div v-else v-html="$page.collection.content" class="collections_headerText" />
+            <div v-else v-html="$page.collection.content" class="collection_headerText" />
 
           </div>
         </header>
         
         <b-collapse id="collapse-1">
-          <div v-html="$page.collection.content" class="collections_headerText" id="headerTextDevice" />
+          <div v-html="$page.collection.content" class="collection_headerText" id="headerTextDevice" />
         </b-collapse>
         
 
@@ -230,7 +230,7 @@ export default {
   text-align: center;
   margin: 0 auto;
 }
-.collections_headerText {
+.collection_headerText {
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
   text-shadow: 1px 1px 4px rgba(0,0,0,0.29);
@@ -242,10 +242,7 @@ export default {
   font-weight: 500;
   margin: 0px;
   padding: 0px;
-}
-.collections_headerText > p { 
-  margin: 0px;
-  padding: 0px;
+  /* See styles.css for further styles */
 }
 
 #headerTextDevice {
@@ -324,7 +321,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
     margin: 10px 0px;
     padding: 0px 60px;
   }
-  .collections_headerText {
+  .collection_headerText {
     line-height: 1.4375rem;
     font-size: 1rem;
   }
@@ -360,7 +357,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Special - Larger devices (desktops, 1200px and up) */
 @media (min-width: 1200px) and (max-width: 1499.98px) {
-  .collections_headerText, .titleImg {
+  .collection_headerText, .titleImg {
     padding: 0px 120px;
   }
 }

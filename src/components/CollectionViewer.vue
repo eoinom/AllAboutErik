@@ -22,7 +22,7 @@
           </b-col>
           
           <b-col cols="8" lg="7" xl="4">
-            <div v-if="windowWidth > 1366" class="collection-viewer__text collection-viewer__textcenter">HOVER OVER IMAGE FOR CLOSE-UP</div>
+            <div v-if="windowWidth > 1366" class="collection-viewer__text">HOVER OVER IMAGE FOR CLOSE-UP</div>
           </b-col>
           
           <b-col cols="2" lg="" xl="4">
