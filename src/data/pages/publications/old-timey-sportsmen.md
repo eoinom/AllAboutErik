@@ -1,5 +1,5 @@
 ---
-title: Old Time Sportsmen
+title: Old Timey Sportsmen
 titleImg1Line: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586896741/Old%20Time%20Sportsmen%20%28Common%29/title-old-time-sportsmen-black-1line_vxphwj.png
 titleImg2Lines: >-
