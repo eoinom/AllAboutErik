@@ -38,7 +38,9 @@
               <g-link :to="'/publications/' + nextPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextPublication.title" class="nav_link nav_link_big" id="nav_next">NEXT PUBLICATION</g-link>
             </b-col>            
           </b-row>
-        </b-container>        
+        </b-container>
+
+        <g-link to="/publications/" class="nav_link pt-3" id="nav_back">BACK TO PUBLICATIONS MENU</g-link>
 
       </div>
     </transition>
@@ -204,9 +206,6 @@ export default {
     window.addEventListener('orientationchange', () => {  
       this.windowWidth = window.innerWidth
     })
-
-    // console.log('this.node:')
-    // console.log(this.node)
   },
 
   methods: {
