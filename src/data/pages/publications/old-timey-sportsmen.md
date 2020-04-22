@@ -11,6 +11,8 @@ headerLeftImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586896741/Old%20Time%20Sportsmen%20%28Common%29/hunter_ta5375.png
 headerRightImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586896742/Old%20Time%20Sportsmen%20%28Common%29/ducks_irayst.png
+headerHoverImg: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/v1587596183/Publications/2.%20Old-Time%20Sportsmen/guns-crossed_imnn0f.png
 mainTextTop: >-
   In the first years of the 20th century, newly mobile American travelers,
   hunters, and fisherman headed out by horseback, buggy, car, and boat. Their
