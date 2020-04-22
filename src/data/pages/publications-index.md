@@ -42,7 +42,7 @@ publications:
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/02-old-timey-sportsman-rollover_jzrn89.jpg
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/02-old-timey-sportsman_vn71ey.jpg
-    title: Old Time Sportsmen
+    title: Old Timey Sportsmen
   - thumbnailHoverImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/03-animal-myth-rollover_sf8evm.jpg
     thumbnailImg: >-
