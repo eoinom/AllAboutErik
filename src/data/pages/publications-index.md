@@ -52,11 +52,11 @@ publications:
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/04-shamans_vol1-rollover_rz8zew.jpg
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/04-shamans_vol1_fuyv3c.jpg
-    title: Shamans Vol1
+    title: Shamans Volume One
   - thumbnailHoverImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/05-shamans_vol2-rollover_ulhn4c.jpg
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/05-shamans_vol2_midyxh.jpg
-    title: Shamans Vol2
+    title: Shamans Volume Two
 ---
 
