@@ -6,6 +6,7 @@
       :audioDuration="$page.Publications.edges[0].node.bgAudioDuration"
       :audioFadeInDuration="$page.Publications.edges[0].node.bgAudioFadeInDuration"
       :audioFadeOutDuration="$page.Publications.edges[0].node.bgAudioFadeOutDuration"
+      :maxVolume=0.88
     />
 
     <b-container fluid class="main-col">

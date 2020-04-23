@@ -28,7 +28,11 @@ export default {
     audioFadeOutDuration: {
       type: Number,
       default: 5
-    }    
+    },
+    maxVolume: {
+      type: Number,
+      default: 1.0
+    }
   },
 
   data() {
@@ -93,7 +97,7 @@ export default {
       // console.log('in getSoundAndFadeAudio');
       if (this.audioPlaying) { 
         // console.log('in getSoundAndFadeAudio, this.audioPlaying = ' + this.audioPlaying);
-        // console.log('in getSoundAndFadeAudio, this.audio.volume = ' + this.audio.volume + ' & this.audio.currentTime = ' + this.audio.currentTime);
+        console.log('in getSoundAndFadeAudio, this.audio.volume = ' + this.audio.volume + ' & this.audio.currentTime = ' + this.audio.currentTime);
         this.audio.volume = 0.0
         this.audio.currentTime = 0
         // console.log('now, this.audio.volume = ' + this.audio.volume + ' & this.audio.currentTime = ' + this.audio.currentTime);
@@ -101,19 +105,20 @@ export default {
         // Fade In
         let fadeAudioIn = setInterval(function () {
           // console.log('fadeAudioIn, this.audio.currentTime = ' + this.audio.currentTime + ', this.audio.volume = ' + this.audio.volume);
-          if ((this.audio.currentTime < this.audioFadeInDuration) && (this.audio.volume != 1.0)) {
-            this.audio.volume = Math.min((this.audio.currentTime / this.audioFadeInDuration) * 1.0, 1.0);
+          if ((this.audio.currentTime < this.audioFadeInDuration) && (this.audio.volume != this.maxVolume)) {
+            this.audio.volume = Math.min((this.audio.currentTime / this.audioFadeInDuration) * this.maxVolume, this.maxVolume);
           }
-          if ((this.audio.currentTime >= this.audioFadeInDuration) || (this.audio.volume >= 1.0)) {
+          if ((this.audio.currentTime >= this.audioFadeInDuration) || (this.audio.volume >= this.maxVolume)) {
             clearInterval(fadeAudioIn);
-            this.audio.volume = 1.0
+            this.audio.volume = this.maxVolume
           }          
         }.bind(this), 200);
 
         // Fade Out
         let fadeOutPoint = this.audioDuration - this.audioFadeOutDuration;
         let fadeAudioOut = setInterval(function() {
-          // console.log('fadeAudioOut, this.audio.currentTime = ' + this.audio.currentTime + ', this.audio.volume = ' + this.audio.volume);
+          console.log('fadeAudioOut, this.audio.currentTime = ' + this.audio.currentTime + ', this.audio.volume = ' + this.audio.volume);
+          console.log('fadeAudioOut, this.maxVolume = ' + this.maxVolume);
           this.audioFinished = false
           if ((this.audio.currentTime >= fadeOutPoint) && (this.audio.volume != 0.0)) {
             this.audio.volume = Math.max(0.0, (this.audioDuration - this.audio.currentTime) / this.audioFadeOutDuration);
