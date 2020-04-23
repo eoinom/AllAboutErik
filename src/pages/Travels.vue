@@ -18,7 +18,7 @@
       <b-row no-gutters align-h="center" align-v="center" id="mainVideoContainer" class="my-2 my-sm-3 px-2 px-sm-3">
         <b-col cols="12" align-self="center" style="max-width: 960px">          
           <iframe 
-            :src="mainVideoUrl + '?autoplay=1&loop=1&color=505050'" 
+            :src="mainVideoUrl + '?autoplay=1&loop=1&mute=1&color=505050'" 
             width="960" height="540" 
             frameborder="0"
             id="mainVideo" />
