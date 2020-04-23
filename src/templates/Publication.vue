@@ -3,17 +3,76 @@
     <transition name="page" mode="out-in">
       <div :key="'publication_' + titleSlug"> <!-- Need a unique key for the transition above to work on route change -->
         
-        <img v-if="pageBgImg != ''" :src="pageBgImg" id="pageBgImg" :style="pageBgStyles" />
+        <img v-if="node.pageBgImg != ''" :src="node.pageBgImg" id="pageBgImg" :style="pageBgStyles" />
+
+        <!-- FOR OLD TIMEY SPORTSMEN -->
+        <header v-if="title == 'Old Timey Sportsmen'" id="header" :style="headerStyles">
+          <b-container fluid class="slideshowOverlay">
+            <b-row align-v="start" style="min-height:240px">
+
+              <b-col v-if="node.headerLeftImg != ''" align-self="center" class="headerImageCol" style="text-align: right">            
+                <g-image alt="Hunter" :src="node.headerLeftImg" id="headerLeftImg" />
+              </b-col>
+              
+              <b-col id="headerItems" style="max-width: 970px">          
+                <g-image :src="node.titleImg1Line" class="titleImg titleImg1Line pt-3" />
+                <g-image :src="node.titleImg2Lines" class="titleImg titleImg2Lines" />
+
+                <div v-html="node.content" class="headerText" />
+
+                <b-row align-v="start" align-h="center" style="min-height:68px; padding-top:8px">                  
+                  <b-col>
+                    <a href="http://oldtimeysportsmenphotogallery.com/gallery/" target="_blank"
+                      class="sportsmenLinkText"
+                      style="margin: 0 auto"
+                      @mouseover="updateSportsmenGalleryHover(true)" 
+                      @mouseleave="updateSportsmenGalleryHover(false)"
+                    >
+
+                      <div v-if="windowWidth > 350" style="padding-bottom: 66px">
+                        <span>SEE MORE OF THE COLLECTION, CLICK FOR A NEW TAB</span>
+                        <br><span class="line2">Old-Time Sportsmen Gallery</span>
+                      </div>
+                      <div v-else style="padding-bottom: 66px">
+                        <span>SEE MORE OF THE COLLECTION, CLICK FOR A NEW TAB</span>
+                        <br><span class="line2">Old-Time Sportsmen <br>Gallery</span>
+                      </div>
+
+                      <g-image v-show="sportsmenGalleryHover" class="headerHoverImg" alt="Guns crossed" :src="node.headerHoverImg" />
+                      <!-- <g-image v-show="true" class="headerHoverImg" alt="Guns crossed" :src="node.headerHoverImg" /> -->
+                    </a>
+                  </b-col>
+                </b-row>            
+              </b-col>
+              
+              <b-col v-if="node.headerRightImg != ''" align-self="center" class="headerImageCol" style="text-align:left">            
+                <g-image alt="ducks" :src="node.headerRightImg" id="headerRightImg" />
+              </b-col>
+
+            </b-row>
+          </b-container>
+        </header>
         
-        <header id="header" :style="headerStyles">
+        <!-- FOR OTHER PAGES -->
+        <header v-else id="header" :style="headerStyles">
           <div id="headerItems">
             <g-image :src="titleImg1Line" class="titleImg titleImg1Line pt-3" />
             <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
             
             <div v-html="node.content" class="headerText" />
-
           </div>
         </header>
+
+
+
+
+
+
+
+
+
+
+
       
 
         <b-container fluid class="py-4 px-5">
@@ -25,12 +84,12 @@
             
             <b-col cols="7">
               <div class="publication_mainText">
-                <span v-html="renderMarkdown(mainTextTop)" />
+                <span v-html="renderMarkdown(node.mainTextTop)" />
               </div>
 
               <br><br><br><br><br><br><br><br><br><br><br><br>
 
-              <div class="publication_mainText">{{ mainTextBottom }}</div>
+              <div class="publication_mainText">{{ node.mainTextBottom }}</div>
             </b-col>
             
             <b-col cols="">
@@ -58,6 +117,7 @@ query ($id: ID!) {
     headerBgImgOpacity
     headerLeftImg
     headerRightImg
+    headerHoverImg
     content
     pageBgImg
     pageBgImgOpacity
@@ -101,6 +161,7 @@ export default {
     return {
       imageIndex: 0,
       showIntro: false,
+      sportsmenGalleryHover: false,
       windowWidth: 0.0
     }
   },
@@ -133,18 +194,6 @@ export default {
         '--bgOpacity': this.headerBgImgOpacity / 100
       }
     },
-    headerLeftImg() {
-      return this.node.headerLeftImg
-    },
-    headerRightImg() {
-      return this.node.headerRightImg
-    },
-    headerText() {
-      return this.node.content
-    },
-    pageBgImg() {
-      return this.node.pageBgImg
-    },
     pageBgStyles() {
       let css = {} 
       css.opacity = this.node.pageBgImgOpacity / 100
@@ -154,12 +203,7 @@ export default {
       //   css.height = this.windowHeight + 'px';
       return css
     },
-    mainTextTop() {
-      return this.node.mainTextTop
-    },
-    mainTextBottom() {
-      return this.node.mainTextBottom
-    },
+    
     // bookImagesUrls() {
     //   return this.node.bookImagesUrls
     // },
@@ -197,6 +241,17 @@ export default {
     }
   },
 
+  watch: {
+    windowWidth: function (val) {
+      if (val >= 576 && val <= 1366) {
+        this.sportsmenGalleryHover = true
+      }
+      else {
+        this.sportsmenGalleryHover = false
+      }
+    }
+  },
+
   mounted() {
     this.windowWidth = window.innerWidth
 
@@ -212,7 +267,11 @@ export default {
     renderMarkdown(text) {
       const md = new MarkdownIt()
       return md.render(text) 
-    }
+    },
+    updateSportsmenGalleryHover(val) {
+      if (this.windowWidth > 1366)
+        this.sportsmenGalleryHover = val      
+    },
   }
 }
 </script>
@@ -221,6 +280,7 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Francois+One&display=swap');
 
 @font-face {
   font-family: NeueHaasGroteskText Pro55;
@@ -263,6 +323,7 @@ export default {
   text-align: center;
   padding-top: 12.5px;
   padding-bottom: 12.5px;
+  /* min-height: 301px; */
 }
 #header:after  {
   content : "";
@@ -276,6 +337,22 @@ export default {
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+#headerLeftImg {
+  min-width: 230px;
+  max-width: 70%;
+  max-height: 189px;
+}
+#headerRightImg {
+  min-width: 230px;
+  max-width: 70%;
+  max-height: 149px;
+}
+#headerLeftImg,
+#headerRightImg {
+  /* max-height: 189px;
+  max-width: 70%; */
 }
 
 #headerItems {
@@ -297,12 +374,36 @@ export default {
   margin: 0px;
   padding: 0px;
 
-
   text-shadow: 4px 4px 3px rgba(0,0,0,0.18);
   text-transform: uppercase;
   font-size: 1.0625rem;
   line-height: 1.5rem;
   letter-spacing: 8px;
+}
+.sportsmenLinkText {
+  color: #000;
+  font-family: 'Francois One', sans-serif;
+  font-feature-settings: 'liga';
+  font-weight: 400;
+  /* font-size: 0.875rem; */
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  text-align: center;
+  line-height: 20px;
+  margin: 0px;
+  padding: 0px;
+  width: 397px;
+  display: block;
+  cursor: pointer;
+}
+.sportsmenLinkText .line2 {
+  font-size: 1.125rem;
+}
+
+.headerHoverImg {
+  display: block;
+  position: absolute;
+  bottom: 0;
 }
 
 .titleImg {
@@ -463,6 +564,13 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 @media (min-width: 1200px) and (max-width: 1499.98px) {
   .headerText, .titleImg {
     padding: 0px 120px;
+  }
+}
+
+/* Special */
+@media (max-width: 1399.98px) { 
+  .headerImageCol {   
+    display: none;
   }
 }
 
