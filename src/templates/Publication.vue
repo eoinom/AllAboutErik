@@ -39,7 +39,6 @@
                       </div>
 
                       <g-image v-show="sportsmenGalleryHover" class="headerHoverImg" alt="Guns crossed" :src="node.headerHoverImg" />
-                      <!-- <g-image v-show="true" class="headerHoverImg" alt="Guns crossed" :src="node.headerHoverImg" /> -->
                     </a>
                   </b-col>
                 </b-row>            
@@ -66,15 +65,6 @@
 
 
 
-
-
-
-
-
-
-
-      
-
         <b-container fluid class="py-4 px-5">
           <b-row no-gutters align-v="start" id="navLinksRow">
             <b-col cols="">
@@ -82,7 +72,7 @@
               <g-link :to="'/publications/' + prevPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevPublication.title" class="nav_link nav_link_big" id="nav_prev">PREVIOUS PUBLICATION</g-link>
             </b-col>
             
-            <b-col cols="7">
+            <b-col cols="7" class="pb-5">
               <div class="publication_mainText">
                 <span v-html="renderMarkdown(node.mainTextTop)" />
               </div>
@@ -90,6 +80,19 @@
               <br><br><br><br><br><br><br><br><br><br><br><br>
 
               <div class="publication_mainText">{{ node.mainTextBottom }}</div>
+
+              <br />
+
+              <div v-if="node.videoUrl !== ''" style="width:100%;height:100%;position:relative; text-align:center">
+                <h2 class="videoTitleText mb-3">WATCH THE VIDEO ABOUT THE BOOK HERE</h2>
+                <iframe 
+                  :src="node.videoUrl + '?autoplay=0&color=505050&title=0&byline=0&portrait=0'"
+                  style="width:954.656px; height:537px; max-width:100%" 
+                  frameborder="0" 
+                  webkitallowfullscreen mozallowfullscreen allowfullscreen >
+                </iframe>
+              </div>
+
             </b-col>
             
             <b-col cols="">
@@ -182,15 +185,12 @@ export default {
     titleImg2Lines() {
       return this.node.titleImg2Lines
     },
-    headerBgImg() {
-      return this.node.headerBgImg
-    },
     headerBgImgOpacity() {
       return this.node.hasOwnProperty('headerBgImgOpacity') ? this.node.headerBgImgOpacity : 0.5
     },  
     headerStyles() {
       return {
-        '--headerBgImg': 'url(' + this.headerBgImg + ')',
+        '--headerBgImg': 'url(' + this.node.headerBgImg + ')',
         '--bgOpacity': this.headerBgImgOpacity / 100
       }
     },
@@ -207,9 +207,6 @@ export default {
     // bookImagesUrls() {
     //   return this.node.bookImagesUrls
     // },
-    videoUrl() {
-      return this.node.videoUrl
-    },
     publications() {
       return this.$static.Publications.edges[0].node.publications
     },    
@@ -475,6 +472,17 @@ export default {
   text-shadow: 0px 0px 14px rgba(0,0,0,0.19),0px 0px 14px rgba(0,0,0,0.19)/* glow */,
   0px 0px 29px rgba(0,0,0,0.57)/* drop shadow*/;
   /* See styles.css for further styles */
+}
+
+.videoTitleText {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-feature-settings: 'liga';
+  font-weight: 400;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  letter-spacing: 1px;
 }
 
 
