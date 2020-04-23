@@ -21,7 +21,7 @@
           
           <div>
             <iframe 
-              :src="mainVideoUrl + '?autoplay=1&loop=1&mute=1&color=505050'" 
+              :src="mainVideoUrl + '?autoplay=1&loop=1&muted=1&color=505050'" 
               width="960" height="540" 
               frameborder="0"
               id="mainVideo" />
