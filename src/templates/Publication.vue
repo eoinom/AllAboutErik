@@ -77,7 +77,11 @@
                 <span v-html="renderMarkdown(node.mainTextTop)" />
               </div>
 
-              <br><br><br><br><br><br><br><br><br><br><br><br>
+              <br><br><br><br><br><br>
+              
+              <BookViewer :pages="bookImagesUrls" />
+              
+              <br><br><br><br><br><br>
 
               <div class="publication_mainText">{{ node.mainTextBottom }}</div>
 
@@ -147,6 +151,7 @@ query ($id: ID!) {
 
 
 <script scoped>
+import BookViewer from '../components/BookViewer.vue'
 const slugify = require('@sindresorhus/slugify')
 const MarkdownIt = require('markdown-it')
 
@@ -158,6 +163,7 @@ export default {
   },
 
   components: {
+    BookViewer
   },
 
   data() {
@@ -165,7 +171,8 @@ export default {
       imageIndex: 0,
       showIntro: false,
       sportsmenGalleryHover: false,
-      windowWidth: 0.0
+      windowWidth: 0.0,
+      bookFilenames: []
     }
   },
 
@@ -202,11 +209,16 @@ export default {
       // else
       //   css.height = this.windowHeight + 'px';
       return css
+    },    
+    bookImagesUrls() {
+      let pages = [null]  // first element is null so that cover page appears on its own
+      let urlPrepend = 'https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588104930/Publications/temp/'
+      this.bookFilenames.forEach((filename) => {
+        let url = urlPrepend + filename
+        pages.push(url)
+      })
+      return pages
     },
-    
-    // bookImagesUrls() {
-    //   return this.node.bookImagesUrls
-    // },
     publications() {
       return this.$static.Publications.edges[0].node.publications
     },    
@@ -258,6 +270,8 @@ export default {
     window.addEventListener('orientationchange', () => {  
       this.windowWidth = window.innerWidth
     })
+
+    this.bookFilenames = ['SkeletonKimono_10-20-1.jpg', 'SkeletonKimono_10-20-2.jpg', 'SkeletonKimono_10-20-3.jpg', 'SkeletonKimono_10-20-4.jpg', 'SkeletonKimono_10-20-5.jpg', 'SkeletonKimono_10-20-6.jpg', 'SkeletonKimono_10-20-7.jpg', 'SkeletonKimono_10-20-8.jpg', 'SkeletonKimono_10-20-9.jpg', 'SkeletonKimono_10-20-10.jpg', 'SkeletonKimono_10-20-11.jpg', 'SkeletonKimono_10-20-12.jpg', 'SkeletonKimono_10-20-13.jpg', 'SkeletonKimono_10-20-14.jpg', 'SkeletonKimono_10-20-15.jpg', 'SkeletonKimono_10-20-16.jpg', 'SkeletonKimono_10-20-17.jpg', 'SkeletonKimono_10-20-18.jpg', 'SkeletonKimono_10-20-19.jpg', 'SkeletonKimono_10-20-20.jpg']
   },
 
   methods: {
@@ -269,13 +283,38 @@ export default {
       if (this.windowWidth > 1366)
         this.sportsmenGalleryHover = val      
     },
+    onFlipLeftStart(page) {
+      console.log('flip-left-start', page)
+    },
+    onFlipLeftEnd(page) {
+      console.log('flip-left-end', page)
+      window.location.hash = '#' + page
+    },
+    onFlipRightStart(page) {
+      console.log('flip-right-start', page)
+    },
+    onFlipRightEnd(page) {
+      console.log('flip-right-end', page)
+      window.location.hash = '#' + page
+    },
+    onZoomStart(zoom) {
+      console.log('zoom-start', zoom)
+    },
+    onZoomEnd(zoom) {
+      console.log('zoom-end', zoom)
+    },
+    setPageFromHash() {
+      n = parseInt(window.location.hash.slice(1), 10)
+      if (isFinite(n))
+        this.pageNum = n
+    }
   }
 }
 </script>
 
 
 
-<style scoped>
+<style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Francois+One&display=swap');
 

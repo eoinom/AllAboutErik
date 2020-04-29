@@ -76,6 +76,14 @@ body {
 }
 
 
+/* For icons in BookViewer component */
+.material-design-icon__svg {
+  background-color: #999;
+  border-radius: 50%;
+  fill: black !important;
+}
+
+
 
 /* Extra small devices (portrait phones, < 576px) */
 @media (max-width: 575.98px) {
