@@ -282,31 +282,6 @@ export default {
     updateSportsmenGalleryHover(val) {
       if (this.windowWidth > 1366)
         this.sportsmenGalleryHover = val      
-    },
-    onFlipLeftStart(page) {
-      console.log('flip-left-start', page)
-    },
-    onFlipLeftEnd(page) {
-      console.log('flip-left-end', page)
-      window.location.hash = '#' + page
-    },
-    onFlipRightStart(page) {
-      console.log('flip-right-start', page)
-    },
-    onFlipRightEnd(page) {
-      console.log('flip-right-end', page)
-      window.location.hash = '#' + page
-    },
-    onZoomStart(zoom) {
-      console.log('zoom-start', zoom)
-    },
-    onZoomEnd(zoom) {
-      console.log('zoom-end', zoom)
-    },
-    setPageFromHash() {
-      n = parseInt(window.location.hash.slice(1), 10)
-      if (isFinite(n))
-        this.pageNum = n
     }
   }
 }
