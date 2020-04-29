@@ -77,7 +77,7 @@
                 <span v-html="renderMarkdown(node.mainTextTop)" />
               </div>
 
-              <br><br><br><br><br><br>
+              <br><br><br>
               
               <BookViewer :pages="bookImagesUrls" />
               
