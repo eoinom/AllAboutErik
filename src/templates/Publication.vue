@@ -172,7 +172,7 @@ export default {
       showIntro: false,
       sportsmenGalleryHover: false,
       windowWidth: 0.0,
-      bookFilenames: []
+      bookFilenames: ['SkeletonKimono_10-20-1.jpg', 'SkeletonKimono_10-20-2.jpg', 'SkeletonKimono_10-20-3.jpg', 'SkeletonKimono_10-20-4.jpg', 'SkeletonKimono_10-20-5.jpg', 'SkeletonKimono_10-20-6.jpg', 'SkeletonKimono_10-20-7.jpg', 'SkeletonKimono_10-20-8.jpg', 'SkeletonKimono_10-20-9.jpg', 'SkeletonKimono_10-20-10.jpg', 'SkeletonKimono_10-20-11.jpg', 'SkeletonKimono_10-20-12.jpg', 'SkeletonKimono_10-20-13.jpg', 'SkeletonKimono_10-20-14.jpg', 'SkeletonKimono_10-20-15.jpg', 'SkeletonKimono_10-20-16.jpg', 'SkeletonKimono_10-20-17.jpg', 'SkeletonKimono_10-20-18.jpg', 'SkeletonKimono_10-20-19.jpg', 'SkeletonKimono_10-20-20.jpg']
     }
   },
 
@@ -270,8 +270,6 @@ export default {
     window.addEventListener('orientationchange', () => {  
       this.windowWidth = window.innerWidth
     })
-
-    this.bookFilenames = ['SkeletonKimono_10-20-1.jpg', 'SkeletonKimono_10-20-2.jpg', 'SkeletonKimono_10-20-3.jpg', 'SkeletonKimono_10-20-4.jpg', 'SkeletonKimono_10-20-5.jpg', 'SkeletonKimono_10-20-6.jpg', 'SkeletonKimono_10-20-7.jpg', 'SkeletonKimono_10-20-8.jpg', 'SkeletonKimono_10-20-9.jpg', 'SkeletonKimono_10-20-10.jpg', 'SkeletonKimono_10-20-11.jpg', 'SkeletonKimono_10-20-12.jpg', 'SkeletonKimono_10-20-13.jpg', 'SkeletonKimono_10-20-14.jpg', 'SkeletonKimono_10-20-15.jpg', 'SkeletonKimono_10-20-16.jpg', 'SkeletonKimono_10-20-17.jpg', 'SkeletonKimono_10-20-18.jpg', 'SkeletonKimono_10-20-19.jpg', 'SkeletonKimono_10-20-20.jpg']
   },
 
   methods: {

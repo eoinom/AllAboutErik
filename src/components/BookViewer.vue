@@ -72,7 +72,6 @@
 
 
 <script scoped>
-import Flipbook from 'flipbook-vue'
 import 'vue-material-design-icons/styles.css'
 import FirstPageIcon from 'vue-material-design-icons/PageFirst'
 import LeftIcon from 'vue-material-design-icons/ChevronLeft'
@@ -85,7 +84,7 @@ export default {
   name: 'BookViewer',
 
   components: {
-    Flipbook, 
+    Flipbook: () => import("flipbook-vue"),
     FirstPageIcon, LeftIcon, RightIcon, LastPageIcon, PlusIcon, MinusIcon
   },
 
