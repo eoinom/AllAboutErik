@@ -222,7 +222,7 @@ export default {
       let pages = [null]  // first element is null so that cover page appears on its own
       const book = this.node.bookImages
       // let urlPrepend = 'https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588104930/Publications/temp/'
-      let urlPrepend = book.commonPathStdRes + book.commonFilenameStdRes
+      let urlCommon = book.commonPathStdRes + book.commonFilenameStdRes
       for (let i = book.commonFilenameStartNum; i <= book.commonFilenameLastNum; i++) {
         let url = urlCommon + i + '.jpg'
         pages.push(url)
