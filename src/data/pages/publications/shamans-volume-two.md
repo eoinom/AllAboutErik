@@ -1,21 +1,35 @@
 ---
 title: Shamans Volume Two
-titleImg2Lines: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586900042/Publications/4.%20Shamans%20Vol1%20and%20Vol2/title-shamans-white-2lines_ow7pfq.png
-headerBgImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586900044/Publications/4.%20Shamans%20Vol1%20and%20Vol2/banner-Vol2-h16_dwthfs.jpg
+titleImg2Lines: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586900042/Publications/4.%20Shamans%20Vol1%20and%20Vol2/title-shamans-white-2lines_ow7pfq.png
+headerBgImg: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586900044/Publications/4.%20Shamans%20Vol1%20and%20Vol2/banner-Vol2-h16_dwthfs.jpg
 headerBgImgOpacity: 54
 mainTextTop: >-
   ## VOLUME TWO: TIWANAKU PUKARA, WARI, HUARMEY, CHIMÚ, CHANCAY, PACHACAMAC
 
 
-  Shamans, Supernaturals and Animal Spirits is a unique visual encyclopaedia
-  exploring the mythical and shamanic figures represented in the extraordinary
-  textile art of the pre-Columbian civilisations of the Andes. Over a span of
-  2000 years, textile artists - weavers, embroiderers, painters and dyers - gave
-  vivid 1 form to the multitude of fantastical supernatural personages and
-  animals that populated the imaginations, cosmologies, cultural narratives, and
-  ritual traditions of the ancient Andean peoples.
-mainTextBottom: "Illustrated with over 400 fully annotated colour plates, the 2 volume set traces the aesthetic and symbolic evolution of this visionary iconography. The images of otherworldly divinities, ancestral icons, warlords, warriors, surreal beings and animal archetypes conceived by the Chavin, Paracas, Wari, Chimú, Inka and other major cultures (from 500 BC - AD 1530) were depicted with intricate detail and superb colour. Costumed ritualists, trancing shamans, shapeshifters, and animals with symbolic characteristics and powers (such as jaguars, hawks, killer whales, and snakes) express the core notion of spiritual metamorphosis that shaped ancient Andean religious cults dedicated to oracles, hallucinogenic rituals, ancestral veneration, and reverence for the forces embodied in celestial bodies and the sacred landscapes of the coastal deserts, mountain peaks and tropical forests. \r\n\n2 volumes, with 438 full-colour plates, 308 extended captions, select bibliography, map and timeline."
+  Shamans, Supernaturals and Animal Spirits is a unique visual encyclopaedia exploring the mythical and shamanic figures represented in the extraordinary textile art of the pre-Columbian civilisations of the Andes. Over a span of 2000 years, textile artists - weavers, embroiderers, painters and dyers - gave vivid 1 form to the multitude of fantastical supernatural personages and animals that populated the imaginations, cosmologies, cultural narratives, and ritual traditions of the ancient Andean peoples.
+mainTextBottom: "Illustrated with over 400 fully annotated colour plates, the 2
+  volume set traces the aesthetic and symbolic evolution of this visionary
+  iconography. The images of otherworldly divinities, ancestral icons, warlords,
+  warriors, surreal beings and animal archetypes conceived by the Chavin,
+  Paracas, Wari, Chimú, Inka and other major cultures (from 500 BC - AD 1530)
+  were depicted with intricate detail and superb colour. Costumed ritualists,
+  trancing shamans, shapeshifters, and animals with symbolic characteristics and
+  powers (such as jaguars, hawks, killer whales, and snakes) express the core
+  notion of spiritual metamorphosis that shaped ancient Andean religious cults
+  dedicated to oracles, hallucinogenic rituals, ancestral veneration, and
+  reverence for the forces embodied in celestial bodies and the sacred
+  landscapes of the coastal deserts, mountain peaks and tropical forests. \r
+
+
+  2 volumes, with 438 full-colour plates, 308 extended captions, select
+  bibliography, map and timeline."
+bookImages:
+  commonPathStdRes: https://res.cloudinary.com/all-about-erik/image/upload/v1588289908/Publications/4.%20Shamans%20Vol1%20and%20Vol2/Book%20Images/Vol2%20-%20FullScreen/
+  commonFilenameStdRes: Shamans_Supernaturals_Animal_Spirits-vol2
+  commonPathHiRes: https://res.cloudinary.com/all-about-erik/image/upload/v1588290217/Publications/4.%20Shamans%20Vol1%20and%20Vol2/Book%20Images/Vol2%20-%20Zoomed%20sm/
+  commonFilenameHiRes: Shamans_Supernaturals_Animal_Spirits-vol2_-_zm-sm
+  commonFilenameStartNum: 1
+  commonFilenameLastNum: 310
 ---
 VANESSA DRAKE MORAGA
