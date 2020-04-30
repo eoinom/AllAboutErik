@@ -1,73 +1,75 @@
 <template>
-  <Flipbook 
-    class="flipbook" 
-    :pages="pages"
-    :pagesHiRes="pagesHiRes"
-    :startPage="startPage"
-    :flipDuration="flipDuration"
-    v-slot="flipbook"
-    ref="flipbook"
-    @flip-left-start="onFlipLeftStart()"
-    @flip-left-end="onFlipLeftEnd()"
-    @flip-right-start="onFlipRightStart()"
-    @flip-right-end="onFlipRightEnd()"
-    @zoom-start="onZoomStart()"
-    @zoom-end="onZoomEnd()"
-  >
-    <div class="action-bar">
-      <FirstPageIcon
-        class="btn left"
-        :class="{ disabled: !flipbook.canFlipLeft }"
-        @click="flipToPage(1)"
-        v-b-tooltip.hover="{ variant: 'secondary' }" 
-        title="First page"
-        id="firstpage_icon"
-      />
-      <LeftIcon
-        class="btn left"
-        :class="{ disabled: !flipbook.canFlipLeft }"
-        @click="flipbook.flipLeft"
-        v-b-tooltip.hover="{ variant: 'secondary' }" 
-        title="Previous page"
-        id="left_icon"
-      />
-      <MinusIcon
-        class="btn minus"
-        :class="{ disabled: !flipbook.canZoomOut }"
-        @click="flipbook.zoomOut"
-        v-b-tooltip.hover="{ variant: 'secondary' }" 
-        title="Zoom out"
-        id="minus_icon"
-      />
-      <span class="page-num">
-        Page {{ flipbook.page }} of {{ flipbook.numPages }}
-      </span>
-      <PlusIcon
-        class="btn plus"
-        :class="{ disabled: !flipbook.canZoomIn }"
-        @click="flipbook.zoomIn"
-        v-b-tooltip.hover="{ variant: 'secondary' }" 
-        title="Zoom in"
-        id="plus_icon"
-      />
-      <RightIcon
-        class="btn right"
-        :class="{ disabled: !flipbook.canFlipRight }"
-        @click="flipbook.flipRight"
-        v-b-tooltip.hover="{ variant: 'secondary' }" 
-        title="Next page"
-        id="right_icon"
-      />
-      <LastPageIcon
-        class="btn right"
-        :class="{ disabled: !flipbook.canFlipRight }"
-        @click="flipToPage(pages.length)"
-        v-b-tooltip.hover="{ variant: 'secondary' }" 
-        title="Last page"
-        id="lastpage_icon"
-      />
-    </div>
-  </Flipbook>
+  <ClientOnly>
+    <Flipbook 
+      class="flipbook" 
+      :pages="pages"
+      :pagesHiRes="pagesHiRes"
+      :startPage="startPage"
+      :flipDuration="flipDuration"
+      v-slot="flipbook"
+      ref="flipbook"
+      @flip-left-start="onFlipLeftStart()"
+      @flip-left-end="onFlipLeftEnd()"
+      @flip-right-start="onFlipRightStart()"
+      @flip-right-end="onFlipRightEnd()"
+      @zoom-start="onZoomStart()"
+      @zoom-end="onZoomEnd()"
+    >
+      <div class="action-bar">
+        <FirstPageIcon
+          class="btn left"
+          :class="{ disabled: !flipbook.canFlipLeft }"
+          @click="flipToPage(1)"
+          v-b-tooltip.hover="{ variant: 'secondary' }" 
+          title="First page"
+          id="firstpage_icon"
+        />
+        <LeftIcon
+          class="btn left"
+          :class="{ disabled: !flipbook.canFlipLeft }"
+          @click="flipbook.flipLeft"
+          v-b-tooltip.hover="{ variant: 'secondary' }" 
+          title="Previous page"
+          id="left_icon"
+        />
+        <MinusIcon
+          class="btn minus"
+          :class="{ disabled: !flipbook.canZoomOut }"
+          @click="flipbook.zoomOut"
+          v-b-tooltip.hover="{ variant: 'secondary' }" 
+          title="Zoom out"
+          id="minus_icon"
+        />
+        <span class="page-num">
+          Page {{ flipbook.page }} of {{ flipbook.numPages }}
+        </span>
+        <PlusIcon
+          class="btn plus"
+          :class="{ disabled: !flipbook.canZoomIn }"
+          @click="flipbook.zoomIn"
+          v-b-tooltip.hover="{ variant: 'secondary' }" 
+          title="Zoom in"
+          id="plus_icon"
+        />
+        <RightIcon
+          class="btn right"
+          :class="{ disabled: !flipbook.canFlipRight }"
+          @click="flipbook.flipRight"
+          v-b-tooltip.hover="{ variant: 'secondary' }" 
+          title="Next page"
+          id="right_icon"
+        />
+        <LastPageIcon
+          class="btn right"
+          :class="{ disabled: !flipbook.canFlipRight }"
+          @click="flipToPage(pages.length)"
+          v-b-tooltip.hover="{ variant: 'secondary' }" 
+          title="Last page"
+          id="lastpage_icon"
+        />
+      </div>
+    </Flipbook>
+  </ClientOnly>
 </template>
 
 

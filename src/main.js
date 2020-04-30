@@ -12,6 +12,9 @@ import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faVolumeUp, faVolumeMute, faPlay } from '@fortawesome/free-solid-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
+// import Flipbook from './plugins/flipbook-vue-component'
+// import { Flipbook } from 'flipbook-vue'
+
 config.autoAddCss = false;
 library.add(faVolumeUp, faVolumeMute, faPlay)
 
@@ -38,6 +41,12 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   // vue-scrollto: https://github.com/rigor789/vue-scrollto
   var VueScrollTo = require('vue-scrollto')
   Vue.use(VueScrollTo)
+
+  // Vue.use(Flipbook)
+  // if (process.isClient) {
+    // const Flipbook = require('flipbook-vue').default;
+    // Vue.use(Flipbook);
+  // }
 
   // Add a meta tag
   head.meta.push({
