@@ -224,7 +224,7 @@ export default {
       // let urlPrepend = 'https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588104930/Publications/temp/'
       let urlPrepend = book.commonPathStdRes + book.commonFilenameStdRes
       for (let i = book.commonFilenameStartNum; i <= book.commonFilenameLastNum; i++) {
-        let url = urlCommon + i
+        let url = urlCommon + i + '.jpg'
         pages.push(url)
       }
       return pages
@@ -234,7 +234,7 @@ export default {
       const book = this.node.bookImages
       let urlCommon = book.commonPathHiRes + book.commonFilenameHiRes
       for (let i = book.commonFilenameStartNum; i <= book.commonFilenameLastNum; i++) {
-        let url = urlCommon + i
+        let url = urlCommon + i + '.jpg'
         pages.push(url)
       }
       return pages
