@@ -584,5 +584,15 @@ collections:
       - {label: "Page Image Opacity (%)", name: "pageBgImgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
       - {label: 'Main text (top)', name: 'mainTextTop', widget: 'markdown', required: false}
       - {label: 'Main text (bottom)', name: 'mainTextBottom', widget: 'markdown', required: false}
-      - {label: 'Book page images URLs (string)', name: 'bookImagesUrls', widget: 'markdown', required: false}
-      - {label: "Video (Vimeo Url)", name: "videoUrl", widget: "string", required: false} 
+      - {label: "Video (Vimeo Url)", name: "videoUrl", widget: "string", required: false}
+      - label: "Book Images"
+        name: "bookImages"
+        widget: "object"
+        required: false
+        fields:
+          - {label: 'URL common path (Std. Res)', name: 'commonPathStdRes', widget: 'string', required: false}
+          - {label: 'URL common filename (Std. Res)', name: 'commonFilenameStdRes', widget: 'string', required: false}
+          - {label: 'URL common path (Hi-Res)', name: 'commonPathHiRes', widget: 'string', required: false}
+          - {label: 'URL common filename (Hi-Res)', name: 'commonFilenameHiRes', widget: 'string', required: false}
+          - {label: 'URL common filename start number', name: 'commonFilenameStartNum', widget: 'number', valueType: "int", min: 1, required: false}
+          - {label: 'URL common filename last number', name: 'commonFilenameLastNum', widget: 'number', valueType: "int", min: 1, required: false} 

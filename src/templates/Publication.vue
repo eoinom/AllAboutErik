@@ -79,7 +79,7 @@
 
               <br><br><br>
               
-              <BookViewer :pages="bookImagesUrls" />
+              <BookViewer :pages="bookImagesUrlsStdRes" :pagesHiRes="bookImagesUrlsHiRes" />
               
               <br><br><br><br><br><br>
 
@@ -131,6 +131,14 @@ query ($id: ID!) {
     mainTextTop
     mainTextBottom
     videoUrl
+    bookImages {
+      commonPathStdRes
+      commonFilenameStdRes
+      commonPathHiRes
+      commonFilenameHiRes
+      commonFilenameStartNum
+      commonFilenameLastNum
+    }
   }
 }
 </page-query>
@@ -209,14 +217,26 @@ export default {
       // else
       //   css.height = this.windowHeight + 'px';
       return css
-    },    
-    bookImagesUrls() {
+    },
+    bookImagesUrlsStdRes() {
       let pages = [null]  // first element is null so that cover page appears on its own
-      let urlPrepend = 'https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588104930/Publications/temp/'
-      this.bookFilenames.forEach((filename) => {
-        let url = urlPrepend + filename
+      const book = this.node.bookImages
+      // let urlPrepend = 'https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588104930/Publications/temp/'
+      let urlPrepend = book.commonPathStdRes + book.commonFilenameStdRes
+      for (let i = book.commonFilenameStartNum; i <= book.commonFilenameLastNum; i++) {
+        let url = urlCommon + i
         pages.push(url)
-      })
+      }
+      return pages
+    },
+    bookImagesUrlsHiRes() {
+      let pages = [null]  // first element is null so that cover page appears on its own
+      const book = this.node.bookImages
+      let urlCommon = book.commonPathHiRes + book.commonFilenameHiRes
+      for (let i = book.commonFilenameStartNum; i <= book.commonFilenameLastNum; i++) {
+        let url = urlCommon + i
+        pages.push(url)
+      }
       return pages
     },
     publications() {
