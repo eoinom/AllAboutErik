@@ -166,7 +166,7 @@ videos:
     url: 'https://player.vimeo.com/video/386613137'
   - duration: 475
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588627870/Travels/Tahiti_n7hlog.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588627870/Travels/Tahiti_c0p1re.jpg
     title: Tahiti
     url: 'https://player.vimeo.com/video/396573214'
   - duration: 329
