@@ -1,19 +1,20 @@
 <template>
   <ClientOnly>
     <Flipbook 
-      class="flipbook" 
+      class="flipbook"
+      :class="{ fullscreen : isFullscreen }"
       :pages="pages"
       :pagesHiRes="pagesHiRes"
-      :startPage="startPage"
+      :startPage="pageNum"
       :flipDuration="flipDuration"
       v-slot="flipbook"
       ref="flipbook"
-      @flip-left-start="onFlipLeftStart()"
-      @flip-left-end="onFlipLeftEnd()"
-      @flip-right-start="onFlipRightStart()"
-      @flip-right-end="onFlipRightEnd()"
-      @zoom-start="onZoomStart()"
-      @zoom-end="onZoomEnd()"
+      @flip-left-start="onFlipLeftStart"
+      @flip-right-start="onFlipRightStart"
+      @flip-left-end="onFlipLeftEnd"
+      @flip-right-end="onFlipRightEnd"
+      @zoom-start="onZoomStart"
+      @zoom-end="onZoomEnd"
     >
       <div class="action-bar">
         <FirstPageIcon
@@ -67,6 +68,13 @@
           title="Last page"
           id="lastpage_icon"
         />
+        <FullscreenIcon
+          class="btn right"
+          @click="toggleFullscreen"
+          v-b-tooltip.hover="{ variant: 'secondary' }" 
+          title="Fullscreen"
+          id="fullscreen_icon"
+        />
       </div>
     </Flipbook>
   </ClientOnly>
@@ -81,13 +89,14 @@ import RightIcon from 'vue-material-design-icons/ChevronRight'
 import LastPageIcon from 'vue-material-design-icons/PageLast'
 import PlusIcon from 'vue-material-design-icons/Plus'
 import MinusIcon from 'vue-material-design-icons/Minus'
+import FullscreenIcon from 'vue-material-design-icons/Fullscreen'
 
 export default { 
   name: 'BookViewer',
 
   components: {
     Flipbook: () => import("flipbook-vue"),
-    FirstPageIcon, LeftIcon, RightIcon, LastPageIcon, PlusIcon, MinusIcon
+    FirstPageIcon, LeftIcon, RightIcon, LastPageIcon, PlusIcon, MinusIcon, FullscreenIcon
   },
 
   props: {
@@ -102,6 +111,10 @@ export default {
     startPage: {
       type: Number,
       required: false
+    },
+    isFullscreen: {
+      type: Boolean,
+      required: false
     }
   },
 
@@ -109,8 +122,20 @@ export default {
     return {     
       hasMouse: true,
       pageNum: null,
-      flipDuration: 1000
+      flipDuration: 1000,
+      // isFullscreen: false
     }
+  },
+
+  mounted() {
+    if (this.startPage != null) {
+      this.pageNum = this.startPage
+    }
+    else {
+      this.setPageFromHash()
+    }
+    
+    window.addEventListener('hashchange', () => this.setPageFromHash())
   },
 
   methods: {
@@ -156,29 +181,30 @@ export default {
       }
     },
     onFlipLeftStart(page) {
-      console.log('flip-left-start', page)
+      // console.log('flip-left-start', page)
     },
     onFlipLeftEnd(page) {
-      console.log('flip-left-end', page)
       window.location.hash = '#' + page
     },
     onFlipRightStart(page) {
-      console.log('flip-right-start', page)
+      // console.log('flip-right-start', page)
     },
     onFlipRightEnd(page) {
-      console.log('flip-right-end', page)
       window.location.hash = '#' + page
     },
     onZoomStart(zoom) {
-      console.log('zoom-start', zoom)
+      // console.log('zoom-start', zoom)
     },
     onZoomEnd(zoom) {
-      console.log('zoom-end', zoom)
+      // console.log('zoom-end', zoom)
     },
     setPageFromHash() {
-      n = parseInt(window.location.hash.slice(1), 10)
-      if (isFinite(n))
+      let n = parseInt(window.location.hash.slice(1), 10)
+      if (Number.isInteger(n) && (n > 0) && (n < this.pages.length) )
         this.pageNum = n
+    },
+    toggleFullscreen() {
+      this.$emit('toggleFullscreen')
     }
   }
 }
@@ -190,6 +216,25 @@ export default {
 .flipbook {
   width: 100%;
   height: 60vh;
+}
+.fullscreen {
+  // width: 90vw;
+  // height: calc(100vh - 50px - 40px);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  padding-top: 40px;
+  z-index: 2000;
+  // transition: all 1s;
+  // transition: all 2s, height 4s, position 4s, top 4s, padding-top 0s;
+  transition: all 1s, padding-top 0s;
+  transition-timing-function: ease-in-out;
+}
+.fullscreen .container {
+  max-width: 100%;
 }
 
 .action-bar {
@@ -235,11 +280,6 @@ export default {
   font-size: 1rem;
   margin-left: 40px;
 }
-
-// .flipbook .viewport {
-//   width: 90vw;
-//   height: calc(100vh - 50px - 40px);
-// }
 
 .flipbook .bounding-box {
   box-shadow: 0 0 20px #000;

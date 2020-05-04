@@ -82,6 +82,9 @@ body {
   border-radius: 50%;
   fill: black !important;
 }
+.flipbook.fullscreen .container {
+  max-width: 100%;
+}
 
 
 

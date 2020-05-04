@@ -77,11 +77,11 @@
                 <span v-html="renderMarkdown(node.mainTextTop)" />
               </div>
 
-              <br><br><br>
+              <br><br>
+
+              <BookViewer :pages="bookImagesUrlsStdRes" :pagesHiRes="bookImagesUrlsHiRes" :isFullscreen="isBookFullscreen" :key="'bookViewer'+bookKey" @toggleFullscreen="toggleFullscreen()" />
               
-              <BookViewer :pages="bookImagesUrlsStdRes" :pagesHiRes="bookImagesUrlsHiRes" />
-              
-              <br><br><br><br><br><br>
+              <br><br><br><br>
 
               <div class="publication_mainText">{{ node.mainTextBottom }}</div>
 
@@ -180,7 +180,8 @@ export default {
       showIntro: false,
       sportsmenGalleryHover: false,
       windowWidth: 0.0,
-      bookFilenames: ['SkeletonKimono_10-20-1.jpg', 'SkeletonKimono_10-20-2.jpg', 'SkeletonKimono_10-20-3.jpg', 'SkeletonKimono_10-20-4.jpg', 'SkeletonKimono_10-20-5.jpg', 'SkeletonKimono_10-20-6.jpg', 'SkeletonKimono_10-20-7.jpg', 'SkeletonKimono_10-20-8.jpg', 'SkeletonKimono_10-20-9.jpg', 'SkeletonKimono_10-20-10.jpg', 'SkeletonKimono_10-20-11.jpg', 'SkeletonKimono_10-20-12.jpg', 'SkeletonKimono_10-20-13.jpg', 'SkeletonKimono_10-20-14.jpg', 'SkeletonKimono_10-20-15.jpg', 'SkeletonKimono_10-20-16.jpg', 'SkeletonKimono_10-20-17.jpg', 'SkeletonKimono_10-20-18.jpg', 'SkeletonKimono_10-20-19.jpg', 'SkeletonKimono_10-20-20.jpg']
+      isBookFullscreen: false,
+      bookKey: 1
     }
   },
 
@@ -300,6 +301,10 @@ export default {
     updateSportsmenGalleryHover(val) {
       if (this.windowWidth > 1366)
         this.sportsmenGalleryHover = val      
+    },
+    toggleFullscreen() {
+      this.isBookFullscreen = !this.isBookFullscreen
+      this.bookKey += 1 // increment component key to force reload between toggle of fullscreen / normal-screen
     }
   }
 }
@@ -505,6 +510,7 @@ export default {
   0px 0px 29px rgba(0,0,0,0.57)/* drop shadow*/;
   /* See styles.css for further styles */
 }
+
 
 .videoTitleText {
   font-family: 'Ubuntu Condensed', sans-serif;
