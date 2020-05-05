@@ -30,4 +30,5 @@ bookImages:
   commonFilenameHiRes: Old-Time_Sportsmen-zm
   commonFilenameStartNum: 1
   commonFilenameLastNum: 97
+  orientation: landscape
 ---
