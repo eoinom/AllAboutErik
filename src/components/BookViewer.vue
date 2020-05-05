@@ -95,11 +95,20 @@
         />
 
         <FullscreenIcon
+          v-if="!isFullscreen"
           class="btn right"
           @click="toggleFullscreen"
           v-b-tooltip.hover="{ variant: 'secondary' }" 
           title="Fullscreen"
           id="fullscreen_icon"
+        />
+        <FullscreenExitIcon
+          v-else
+          class="btn right"
+          @click="toggleFullscreen"
+          v-b-tooltip.hover="{ variant: 'secondary' }" 
+          title="Exit fullscreen"
+          id="fullscreenExit_icon"
         />
       </div>
     </Flipbook>
@@ -116,6 +125,7 @@ import LastPageIcon from 'vue-material-design-icons/PageLast'
 import PlusIcon from 'vue-material-design-icons/Plus'
 import MinusIcon from 'vue-material-design-icons/Minus'
 import FullscreenIcon from 'vue-material-design-icons/Fullscreen'
+import FullscreenExitIcon from 'vue-material-design-icons/FullscreenExit'
 import StopIcon from 'vue-material-design-icons/Pause'
 
 export default { 
@@ -123,7 +133,7 @@ export default {
 
   components: {
     Flipbook: () => import("flipbook-vue"),
-    FirstPageIcon, LeftIcon, RightIcon, LastPageIcon, PlusIcon, MinusIcon, FullscreenIcon, StopIcon
+    FirstPageIcon, LeftIcon, RightIcon, LastPageIcon, PlusIcon, MinusIcon, FullscreenIcon, FullscreenExitIcon, StopIcon
   },
 
   props: {
