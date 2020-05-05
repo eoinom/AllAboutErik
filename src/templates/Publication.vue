@@ -487,7 +487,7 @@ export default {
 }
 #nav_back { 
   display: block;
-  position: fixed;
+  position: absolute;
   top: auto;
   bottom: 20px;
   left: 50%;
