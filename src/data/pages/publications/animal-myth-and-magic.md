@@ -34,5 +34,6 @@ bookImages:
   commonFilenameHiRes: Animal_Myth_and_Magic_without_red_pages-
   commonFilenameStartNum: 1
   commonFilenameLastNum: 164
+  orientation: portrait
 ---
 VANESSA DRAKE MORAGA
