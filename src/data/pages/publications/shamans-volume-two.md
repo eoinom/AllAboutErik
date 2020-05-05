@@ -31,5 +31,6 @@ bookImages:
   commonFilenameHiRes: Shamans_Supernaturals_Animal_Spirits-vol2_-_zm-sm
   commonFilenameStartNum: 1
   commonFilenameLastNum: 310
+  orientation: landscape
 ---
 VANESSA DRAKE MORAGA
