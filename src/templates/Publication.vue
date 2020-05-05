@@ -79,7 +79,14 @@
 
               <br><br>
 
-              <BookViewer :pages="bookImagesUrlsStdRes" :pagesHiRes="bookImagesUrlsHiRes" :isFullscreen="isBookFullscreen" :key="'bookViewer'+bookKey" @toggleFullscreen="toggleFullscreen()" @reload="reloadBook()" />
+              <BookViewer 
+                :pages="bookImagesUrlsStdRes" 
+                :pagesHiRes="bookImagesUrlsHiRes" 
+                :isFullscreen="isBookFullscreen"
+                :viewportHeight="bookVpHeight"
+                :key="'bookViewer'+bookKey" 
+                @toggleFullscreen="toggleFullscreen()" 
+                @reload="reloadBook()" />
               
               <br><br><br><br>
 
@@ -138,6 +145,7 @@ query ($id: ID!) {
       commonFilenameHiRes
       commonFilenameStartNum
       commonFilenameLastNum
+      orientation
     }
   }
 }
@@ -239,6 +247,19 @@ export default {
         pages.push(url)
       }
       return pages
+    },
+    bookVpHeight() {
+      if (this.node.bookImages.orientation == 'portrait') {
+        return '60vh'
+      }
+      else {
+        if (this.titleSlug === 'old-timey-sportsmen') {
+          return '42vh'
+        }
+        else {
+          return '48vh'
+        }
+      }
     },
     publications() {
       return this.$static.Publications.edges[0].node.publications

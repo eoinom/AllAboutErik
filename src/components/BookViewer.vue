@@ -3,6 +3,7 @@
     <Flipbook 
       class="flipbook"
       :class="{ fullscreen : isFullscreen }"
+      :style="{ width: viewportWidth, height: viewportHeight }"
       :pages="pages"
       :pagesHiRes="pagesHiRes"
       :startPage="pageNum"
@@ -152,6 +153,16 @@ export default {
     isFullscreen: {
       type: Boolean,
       required: false
+    },
+    viewportWidth: {
+      type: String,
+      required: false,
+      default: '100%'
+    },
+    viewportHeight: {
+      type: String,
+      required: false,
+      default: '100vh'
     }
   },
 
@@ -268,10 +279,9 @@ export default {
 
 
 <style scoped lang="scss">
-.flipbook {
-  width: 100%;
-  height: 60vh;
-}
+// .flipbook {
+//   width: 100%;
+// }
 .fullscreen {
   // width: 90vw;
   // height: calc(100vh - 50px - 40px);
