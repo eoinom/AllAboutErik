@@ -595,4 +595,5 @@ collections:
           - {label: 'URL common path (Hi-Res)', name: 'commonPathHiRes', widget: 'string', required: false}
           - {label: 'URL common filename (Hi-Res)', name: 'commonFilenameHiRes', widget: 'string', required: false}
           - {label: 'URL common filename start number', name: 'commonFilenameStartNum', widget: 'number', valueType: "int", min: 1, required: false}
-          - {label: 'URL common filename last number', name: 'commonFilenameLastNum', widget: 'number', valueType: "int", min: 1, required: false} 
+          - {label: 'URL common filename last number', name: 'commonFilenameLastNum', widget: 'number', valueType: "int", min: 1, required: false}
+          - {label: "Page Orientation", name: "orientation", widget: "select", options: ["landscape", "portrait"]}
