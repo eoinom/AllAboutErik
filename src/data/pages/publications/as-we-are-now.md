@@ -33,5 +33,6 @@ bookImages:
   commonFilenameHiRes: AsWeAreNow-_zoomed-_sm
   commonFilenameStartNum: 1
   commonFilenameLastNum: 141
+  orientation: portrait
 ---
 JACQUELINE MARX ATKINS
