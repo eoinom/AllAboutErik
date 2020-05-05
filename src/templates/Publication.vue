@@ -79,7 +79,7 @@
 
               <br><br>
 
-              <BookViewer :pages="bookImagesUrlsStdRes" :pagesHiRes="bookImagesUrlsHiRes" :isFullscreen="isBookFullscreen" :key="'bookViewer'+bookKey" @toggleFullscreen="toggleFullscreen()" />
+              <BookViewer :pages="bookImagesUrlsStdRes" :pagesHiRes="bookImagesUrlsHiRes" :isFullscreen="isBookFullscreen" :key="'bookViewer'+bookKey" @toggleFullscreen="toggleFullscreen()" @reload="reloadBook()" />
               
               <br><br><br><br>
 
@@ -304,6 +304,9 @@ export default {
     },
     toggleFullscreen() {
       this.isBookFullscreen = !this.isBookFullscreen
+      this.reloadBook()
+    },
+    reloadBook() {
       this.bookKey += 1 // increment component key to force reload between toggle of fullscreen / normal-screen
     }
   }

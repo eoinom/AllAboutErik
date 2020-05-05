@@ -17,14 +17,25 @@
       @zoom-end="onZoomEnd"
     >
       <div class="action-bar">
+
         <FirstPageIcon
+          v-if="!flippingToStart"
           class="btn left"
           :class="{ disabled: !flipbook.canFlipLeft }"
-          @click="flipToPage(1)"
+          @click="flipToStart()"
           v-b-tooltip.hover="{ variant: 'secondary' }" 
           title="First page"
           id="firstpage_icon"
         />
+        <StopIcon
+          v-else
+          class="btn right"
+          @click="stopFlip = true"
+          v-b-tooltip.hover="{ variant: 'secondary' }" 
+          title="Stop"
+          id="stop_icon"
+        />
+
         <LeftIcon
           class="btn left"
           :class="{ disabled: !flipbook.canFlipLeft }"
@@ -33,6 +44,7 @@
           title="Previous page"
           id="left_icon"
         />
+
         <MinusIcon
           class="btn minus"
           :class="{ disabled: !flipbook.canZoomOut }"
@@ -41,9 +53,11 @@
           title="Zoom out"
           id="minus_icon"
         />
+
         <span class="page-num">
           Page {{ flipbook.page }} of {{ flipbook.numPages }}
         </span>
+
         <PlusIcon
           class="btn plus"
           :class="{ disabled: !flipbook.canZoomIn }"
@@ -52,6 +66,7 @@
           title="Zoom in"
           id="plus_icon"
         />
+
         <RightIcon
           class="btn right"
           :class="{ disabled: !flipbook.canFlipRight }"
@@ -59,15 +74,26 @@
           v-b-tooltip.hover="{ variant: 'secondary' }" 
           title="Next page"
           id="right_icon"
-        />
+        />        
+        
         <LastPageIcon
+          v-if="!flippingToEnd"
           class="btn right"
           :class="{ disabled: !flipbook.canFlipRight }"
-          @click="flipToPage(pages.length)"
+          @click="flipToEnd()"
           v-b-tooltip.hover="{ variant: 'secondary' }" 
           title="Last page"
           id="lastpage_icon"
         />
+        <StopIcon
+          v-else
+          class="btn right"
+          @click="stopFlip = true"
+          v-b-tooltip.hover="{ variant: 'secondary' }" 
+          title="Stop"
+          id="stop_icon"
+        />
+
         <FullscreenIcon
           class="btn right"
           @click="toggleFullscreen"
@@ -90,13 +116,14 @@ import LastPageIcon from 'vue-material-design-icons/PageLast'
 import PlusIcon from 'vue-material-design-icons/Plus'
 import MinusIcon from 'vue-material-design-icons/Minus'
 import FullscreenIcon from 'vue-material-design-icons/Fullscreen'
+import StopIcon from 'vue-material-design-icons/Pause'
 
 export default { 
   name: 'BookViewer',
 
   components: {
     Flipbook: () => import("flipbook-vue"),
-    FirstPageIcon, LeftIcon, RightIcon, LastPageIcon, PlusIcon, MinusIcon, FullscreenIcon
+    FirstPageIcon, LeftIcon, RightIcon, LastPageIcon, PlusIcon, MinusIcon, FullscreenIcon, StopIcon
   },
 
   props: {
@@ -123,7 +150,9 @@ export default {
       hasMouse: true,
       pageNum: null,
       flipDuration: 1000,
-      // isFullscreen: false
+      flippingToStart: false,
+      flippingToEnd: false,
+      stopFlip: false
     }
   },
 
@@ -136,6 +165,8 @@ export default {
     }
     
     window.addEventListener('hashchange', () => this.setPageFromHash())
+
+    window.addEventListener('resize', () => this.reload())
   },
 
   methods: {
@@ -172,9 +203,12 @@ export default {
           if (this.$refs.flipbook[`canFlip${method}`]) {
             this.$refs.flipbook[`flip${method}`]();
             flips--;
-            if (flips == 0) {
+            if (flips == 0 || this.stopFlip) {
               clearInterval(interval)
               this.flipDuration = 1000
+              this.flippingToStart = false
+              this.flippingToEnd = false
+              this.stopFlip = false
             }
           }
         }, 100);
@@ -203,8 +237,19 @@ export default {
       if (Number.isInteger(n) && (n > 0) && (n < this.pages.length) )
         this.pageNum = n
     },
+    flipToStart() {
+      this.flippingToStart = true
+      this.flipToPage(1)
+    },
+    flipToEnd() {
+      this.flippingToEnd = true
+      this.flipToPage(this.pages.length)
+    },
     toggleFullscreen() {
       this.$emit('toggleFullscreen')
+    },
+    reload() {
+      this.$emit('reload')
     }
   }
 }
@@ -220,13 +265,14 @@ export default {
 .fullscreen {
   // width: 90vw;
   // height: calc(100vh - 50px - 40px);
+  height: calc(100vh);
   width: 100vw;
-  height: 100vh;
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   background-color: #000;
   padding-top: 40px;
+  // padding-bottom: 50px;
   z-index: 2000;
   // transition: all 1s;
   // transition: all 2s, height 4s, position 4s, top 4s, padding-top 0s;
