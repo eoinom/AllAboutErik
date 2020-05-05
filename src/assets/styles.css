@@ -82,9 +82,13 @@ body {
   border-radius: 50%;
   fill: black !important;
 }
+.flipbook .container {
+  padding: 0;
+}
 .flipbook.fullscreen .container {
   max-width: 100%;
 }
+
 
 
 
