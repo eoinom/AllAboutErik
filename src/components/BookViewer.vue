@@ -1,118 +1,120 @@
 <template>
   <ClientOnly>
-    <Flipbook 
-      class="flipbook"
-      :class="{ fullscreen : isFullscreen }"
-      :style="{ width: viewportWidth, height: viewportHeight }"
-      :pages="pages"
-      :pagesHiRes="pagesHiRes"
-      :startPage="pageNum"
-      :flipDuration="flipDuration"
-      v-slot="flipbook"
-      ref="flipbook"
-      @flip-left-start="onFlipLeftStart"
-      @flip-right-start="onFlipRightStart"
-      @flip-left-end="onFlipLeftEnd"
-      @flip-right-end="onFlipRightEnd"
-      @zoom-start="onZoomStart"
-      @zoom-end="onZoomEnd"
-    >
-      <div class="action-bar">
+    <div :class="{ fullscreenContainer : isFullscreen }">
+      <Flipbook 
+        class="flipbook"
+        :class="{ fullscreen : isFullscreen }"
+        :style="{ width: viewportWidth, height: viewportHeight }"
+        :pages="pages"
+        :pagesHiRes="pagesHiRes"
+        :startPage="pageNum"
+        :flipDuration="flipDuration"
+        v-slot="flipbook"
+        ref="flipbook"
+        @flip-left-start="onFlipLeftStart"
+        @flip-right-start="onFlipRightStart"
+        @flip-left-end="onFlipLeftEnd"
+        @flip-right-end="onFlipRightEnd"
+        @zoom-start="onZoomStart"
+        @zoom-end="onZoomEnd"
+      >
+        <div class="action-bar">
 
-        <FirstPageIcon
-          v-if="!flippingToStart"
-          class="btn left"
-          :class="{ disabled: !flipbook.canFlipLeft }"
-          @click="flipToStart()"
-          v-b-tooltip.hover="{ variant: 'secondary' }" 
-          title="First page"
-          id="firstpage_icon"
-        />
-        <StopIcon
-          v-else
-          class="btn right"
-          @click="stopFlip = true"
-          v-b-tooltip.hover="{ variant: 'secondary' }" 
-          title="Stop"
-          id="stop_icon"
-        />
+          <FirstPageIcon
+            v-if="!flippingToStart"
+            class="btn left"
+            :class="{ disabled: !flipbook.canFlipLeft }"
+            @click="flipToStart()"
+            v-b-tooltip.hover="{ variant: 'secondary' }" 
+            title="First page"
+            id="firstpage_icon"
+          />
+          <StopIcon
+            v-else
+            class="btn right"
+            @click="stopFlip = true"
+            v-b-tooltip.hover="{ variant: 'secondary' }" 
+            title="Stop"
+            id="stop_icon"
+          />
 
-        <LeftIcon
-          class="btn left"
-          :class="{ disabled: !flipbook.canFlipLeft }"
-          @click="flipbook.flipLeft"
-          v-b-tooltip.hover="{ variant: 'secondary' }" 
-          title="Previous page"
-          id="left_icon"
-        />
+          <LeftIcon
+            class="btn left"
+            :class="{ disabled: !flipbook.canFlipLeft }"
+            @click="flipbook.flipLeft"
+            v-b-tooltip.hover="{ variant: 'secondary' }" 
+            title="Previous page"
+            id="left_icon"
+          />
 
-        <MinusIcon
-          class="btn minus"
-          :class="{ disabled: !flipbook.canZoomOut }"
-          @click="flipbook.zoomOut"
-          v-b-tooltip.hover="{ variant: 'secondary' }" 
-          title="Zoom out"
-          id="minus_icon"
-        />
+          <MinusIcon
+            class="btn minus"
+            :class="{ disabled: !flipbook.canZoomOut }"
+            @click="flipbook.zoomOut"
+            v-b-tooltip.hover="{ variant: 'secondary' }" 
+            title="Zoom out"
+            id="minus_icon"
+          />
 
-        <span class="page-num">
-          Page {{ flipbook.page }} of {{ flipbook.numPages }}
-        </span>
+          <span class="page-num">
+            Page {{ flipbook.page }} of {{ flipbook.numPages }}
+          </span>
 
-        <PlusIcon
-          class="btn plus"
-          :class="{ disabled: !flipbook.canZoomIn }"
-          @click="flipbook.zoomIn"
-          v-b-tooltip.hover="{ variant: 'secondary' }" 
-          title="Zoom in"
-          id="plus_icon"
-        />
+          <PlusIcon
+            class="btn plus"
+            :class="{ disabled: !flipbook.canZoomIn }"
+            @click="flipbook.zoomIn"
+            v-b-tooltip.hover="{ variant: 'secondary' }" 
+            title="Zoom in"
+            id="plus_icon"
+          />
 
-        <RightIcon
-          class="btn right"
-          :class="{ disabled: !flipbook.canFlipRight }"
-          @click="flipbook.flipRight"
-          v-b-tooltip.hover="{ variant: 'secondary' }" 
-          title="Next page"
-          id="right_icon"
-        />        
-        
-        <LastPageIcon
-          v-if="!flippingToEnd"
-          class="btn right"
-          :class="{ disabled: !flipbook.canFlipRight }"
-          @click="flipToEnd()"
-          v-b-tooltip.hover="{ variant: 'secondary' }" 
-          title="Last page"
-          id="lastpage_icon"
-        />
-        <StopIcon
-          v-else
-          class="btn right"
-          @click="stopFlip = true"
-          v-b-tooltip.hover="{ variant: 'secondary' }" 
-          title="Stop"
-          id="stop_icon"
-        />
+          <RightIcon
+            class="btn right"
+            :class="{ disabled: !flipbook.canFlipRight }"
+            @click="flipbook.flipRight"
+            v-b-tooltip.hover="{ variant: 'secondary' }" 
+            title="Next page"
+            id="right_icon"
+          />        
+          
+          <LastPageIcon
+            v-if="!flippingToEnd"
+            class="btn right"
+            :class="{ disabled: !flipbook.canFlipRight }"
+            @click="flipToEnd()"
+            v-b-tooltip.hover="{ variant: 'secondary' }" 
+            title="Last page"
+            id="lastpage_icon"
+          />
+          <StopIcon
+            v-else
+            class="btn right"
+            @click="stopFlip = true"
+            v-b-tooltip.hover="{ variant: 'secondary' }" 
+            title="Stop"
+            id="stop_icon"
+          />
 
-        <FullscreenIcon
-          v-if="!isFullscreen"
-          class="btn right"
-          @click="toggleFullscreen"
-          v-b-tooltip.hover="{ variant: 'secondary' }" 
-          title="Fullscreen"
-          id="fullscreen_icon"
-        />
-        <FullscreenExitIcon
-          v-else
-          class="btn right"
-          @click="toggleFullscreen"
-          v-b-tooltip.hover="{ variant: 'secondary' }" 
-          title="Exit fullscreen"
-          id="fullscreenExit_icon"
-        />
-      </div>
-    </Flipbook>
+          <FullscreenIcon
+            v-if="!isFullscreen"
+            class="btn right"
+            @click="toggleFullscreen"
+            v-b-tooltip.hover="{ variant: 'secondary' }" 
+            title="Fullscreen"
+            id="fullscreen_icon"
+          />
+          <FullscreenExitIcon
+            v-else
+            class="btn right"
+            @click="toggleFullscreen"
+            v-b-tooltip.hover="{ variant: 'secondary' }" 
+            title="Exit fullscreen"
+            id="fullscreenExit_icon"
+          />
+        </div>
+      </Flipbook>
+    </div>
   </ClientOnly>
 </template>
 
@@ -279,25 +281,28 @@ export default {
 
 
 <style scoped lang="scss">
-// .flipbook {
-//   width: 100%;
-// }
-.fullscreen {
-  // width: 90vw;
-  // height: calc(100vh - 50px - 40px);
-  height: calc(100vh) !important;
-  width: 100vw !important;
+.fullscreenContainer {
   position: fixed;
-  top: 0px;
+  display: block;
+  z-index: 1001;
+  top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   background-color: #000;
+}
+.fullscreen {  
+  width: 90vw !important;
+  height: calc(100vh - 40px - 50px) !important;  
   padding-top: 40px;
-  // padding-bottom: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
   z-index: 2000;
   // transition: all 1s;
   // transition: all 2s, height 4s, position 4s, top 4s, padding-top 0s;
   transition: all 1s, padding-top 0s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;  
 }
 .fullscreen .container {
   max-width: 100%;
