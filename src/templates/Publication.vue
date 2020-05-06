@@ -75,6 +75,7 @@
             <b-col cols="7" class="pb-5">
               <div class="publication_mainText">
                 <span v-html="renderMarkdown(node.mainTextTop)" />
+                <span v-scroll-to="{ el:'#textBottom', duration:2000, easing:'ease' }" id="readMoreText" > [Click to read more below...]</span>
               </div>
 
               <br><br>
@@ -90,7 +91,7 @@
               
               <br><br><br><br>
 
-              <div class="publication_mainText">{{ node.mainTextBottom }}</div>
+              <div id="textBottom" class="publication_mainText">{{ node.mainTextBottom }}</div>
 
               <br />
 
@@ -535,6 +536,11 @@ export default {
   /* See styles.css for further styles */
 }
 
+#readMoreText {
+  cursor: pointer;
+  font-size: 1.0625rem;
+  color: #F4F4F4;
+}
 
 .videoTitleText {
   font-family: 'Ubuntu Condensed', sans-serif;
