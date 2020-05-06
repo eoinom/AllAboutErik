@@ -285,8 +285,8 @@ export default {
 .fullscreen {
   // width: 90vw;
   // height: calc(100vh - 50px - 40px);
-  height: calc(100vh);
-  width: 100vw;
+  height: calc(100vh) !important;
+  width: 100vw !important;
   position: fixed;
   top: 0px;
   left: 0;
