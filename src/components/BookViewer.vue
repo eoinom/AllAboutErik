@@ -12,12 +12,8 @@
           :flipDuration="flipDuration"
           v-slot="flipbook"
           ref="flipbook"
-          @flip-left-start="onFlipLeftStart"
-          @flip-right-start="onFlipRightStart"
           @flip-left-end="onFlipLeftEnd"
           @flip-right-end="onFlipRightEnd"
-          @zoom-start="onZoomStart"
-          @zoom-end="onZoomEnd"
         >
           <div class="action-bar">
 
@@ -239,23 +235,11 @@ export default {
         }, 100);
       }
     },
-    onFlipLeftStart(page) {
-      // console.log('flip-left-start', page)
-    },
     onFlipLeftEnd(page) {
       window.location.hash = '#' + page
     },
-    onFlipRightStart(page) {
-      // console.log('flip-right-start', page)
-    },
     onFlipRightEnd(page) {
       window.location.hash = '#' + page
-    },
-    onZoomStart(zoom) {
-      // console.log('zoom-start', zoom)
-    },
-    onZoomEnd(zoom) {
-      // console.log('zoom-end', zoom)
     },
     setPageFromHash() {
       let n = parseInt(window.location.hash.slice(1), 10)
