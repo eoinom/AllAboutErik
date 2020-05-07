@@ -23,7 +23,7 @@
 
             <FirstPageIcon
               v-if="!flippingToStart"
-              class="btn left"
+              class="btn"
               :class="{ disabled: !flipbook.canFlipLeft }"
               @click="flipToStart()"
               v-b-tooltip.hover="{ variant: 'secondary' }" 
@@ -32,7 +32,7 @@
             />
             <StopIcon
               v-else
-              class="btn right"
+              class="btn"
               @click="stopFlip = true"
               v-b-tooltip.hover="{ variant: 'secondary' }" 
               title="Stop"
@@ -40,7 +40,7 @@
             />
 
             <LeftIcon
-              class="btn left"
+              class="btn"
               :class="{ disabled: !flipbook.canFlipLeft }"
               @click="flipbook.flipLeft"
               v-b-tooltip.hover="{ variant: 'secondary' }" 
@@ -49,7 +49,7 @@
             />
 
             <MinusIcon
-              class="btn minus"
+              class="btn"
               :class="{ disabled: !flipbook.canZoomOut }"
               @click="flipbook.zoomOut"
               v-b-tooltip.hover="{ variant: 'secondary' }" 
@@ -62,7 +62,7 @@
             </span>
 
             <PlusIcon
-              class="btn plus"
+              class="btn"
               :class="{ disabled: !flipbook.canZoomIn }"
               @click="flipbook.zoomIn"
               v-b-tooltip.hover="{ variant: 'secondary' }" 
@@ -71,7 +71,7 @@
             />
 
             <RightIcon
-              class="btn right"
+              class="btn"
               :class="{ disabled: !flipbook.canFlipRight }"
               @click="flipbook.flipRight"
               v-b-tooltip.hover="{ variant: 'secondary' }" 
@@ -81,7 +81,7 @@
             
             <LastPageIcon
               v-if="!flippingToEnd"
-              class="btn right"
+              class="btn"
               :class="{ disabled: !flipbook.canFlipRight }"
               @click="flipToEnd()"
               v-b-tooltip.hover="{ variant: 'secondary' }" 
@@ -90,7 +90,7 @@
             />
             <StopIcon
               v-else
-              class="btn right"
+              class="btn"
               @click="stopFlip = true"
               v-b-tooltip.hover="{ variant: 'secondary' }" 
               title="Stop"
@@ -99,7 +99,7 @@
 
             <FullscreenIcon
               v-if="!isFullscreen"
-              class="btn right"
+              class="btn"
               @click="toggleFullscreen"
               v-b-tooltip.hover="{ variant: 'secondary' }" 
               title="Fullscreen"
@@ -107,7 +107,7 @@
             />
             <FullscreenExitIcon
               v-else
-              class="btn right"
+              class="btn"
               @click="toggleFullscreen"
               v-b-tooltip.hover="{ variant: 'secondary' }" 
               title="Exit fullscreen"
@@ -320,6 +320,7 @@ export default {
 .action-bar .btn {
   font-size: 30px;
   color: #999;
+  padding: 0;
 }
 
 .action-bar .btn svg {
