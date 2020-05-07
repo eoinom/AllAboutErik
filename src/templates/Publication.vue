@@ -7,14 +7,14 @@
 
         <!-- FOR OLD TIMEY SPORTSMEN -->
         <header v-if="title == 'Old Timey Sportsmen'" id="header" :style="headerStyles">
-          <b-container fluid class="slideshowOverlay">
-            <b-row align-v="start" style="min-height:240px">
+          <b-container fluid>
+            <b-row align-v="center" style="min-height:215px">
 
               <b-col v-if="node.headerLeftImg != ''" align-self="center" class="headerImageCol" style="text-align: right">            
                 <g-image alt="Hunter" :src="node.headerLeftImg" id="headerLeftImg" />
               </b-col>
               
-              <b-col id="headerItems" style="max-width: 970px">          
+              <b-col id="headerItems" align-self="end" style="max-width: 970px">          
                 <g-image :src="node.titleImg1Line" class="titleImg titleImg1Line pt-3" />
                 <g-image :src="node.titleImg2Lines" class="titleImg titleImg2Lines" />
 
@@ -545,7 +545,7 @@ export default {
 .videoTitleText {
   font-family: 'Ubuntu Condensed', sans-serif;
   font-feature-settings: 'liga';
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
   color: #FFFFFF;
   font-size: 1.75rem;
