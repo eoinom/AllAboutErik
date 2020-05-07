@@ -333,7 +333,8 @@ export default {
 .action-bar .page-num {
   color: white;
   font-size: 1rem;
-  margin-left: 40px;
+  margin-left: 30px;
+  margin-right: 20px;
 }
 
 .flipbook .bounding-box {
