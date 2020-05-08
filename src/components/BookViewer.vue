@@ -1,7 +1,7 @@
 <template>
   <ClientOnly>
     <transition name="fade" mode="out-in">
-      <div id="flipbookContainer" :class="{ fullscreenContainer : isFullscreen }" :style="flipStyles">
+      <div id="flipbookContainer" :class="{ fullscreenContainer : isFullscreen }">
         <Flipbook 
           class="flipbook"
           :class="{ fullscreen : isFullscreen }"
@@ -17,98 +17,104 @@
         >
           <div class="action-bar">
 
-            <FirstPageIcon
-              v-if="!flippingToStart"
-              class="btn"
-              :class="{ disabled: !flipbook.canFlipLeft }"
-              @click="flipToStart()"
-              v-b-tooltip.hover="{ variant: 'secondary' }" 
-              title="First page"
-              id="firstpage_icon"
-            />
-            <StopIcon
-              v-else
-              class="btn"
-              @click="stopFlip = true"
-              v-b-tooltip.hover="{ variant: 'secondary' }" 
-              title="Stop"
-              id="stop_icon"
-            />
+            <div v-if="!flippingToStart" id="firstpage_icon_wrapper">
+              <FirstPageIcon                
+                class="btn"
+                :class="{ disabled: !flipbook.canFlipLeft }"
+                @click="flipToStart()"
+                id="firstpage_icon"
+              />
+              <b-tooltip v-if="flipbook.canFlipLeft" target="firstpage_icon_wrapper" triggers="hover" variant="secondary">First page</b-tooltip>
+            </div>
 
-            <LeftIcon
-              class="btn"
-              :class="{ disabled: !flipbook.canFlipLeft }"
-              @click="flipbook.flipLeft"
-              v-b-tooltip.hover="{ variant: 'secondary' }" 
-              title="Previous page"
-              id="left_icon"
-            />
+            <div v-if="flippingToStart" id="stop_icon_start_wrapper">
+              <StopIcon
+                class="btn"
+                @click="stopFlip = true"
+                id="stop_icon_start"
+              />
+              <b-tooltip target="stop_icon_start_wrapper" triggers="hover" variant="secondary">Stop</b-tooltip>
+            </div>
 
-            <MinusIcon
-              class="btn"
-              :class="{ disabled: !flipbook.canZoomOut }"
-              @click="flipbook.zoomOut"
-              v-b-tooltip.hover="{ variant: 'secondary' }" 
-              title="Zoom out"
-              id="minus_icon"
-            />
+            <div id="left_icon_wrapper" class="btn_wrapper">
+              <LeftIcon
+                class="btn"
+                :class="{ disabled: !flipbook.canFlipLeft }"
+                @click="flipbook.flipLeft"
+                id="left_icon"
+              />
+              <b-tooltip v-if="flipbook.canFlipLeft" target="left_icon_wrapper" triggers="hover" variant="secondary">Previous page</b-tooltip>
+            </div>
+
+            <div id="minus_icon_wrapper" class="btn_wrapper">
+              <MinusIcon
+                class="btn"
+                :class="{ disabled: !flipbook.canZoomOut }"
+                @click="flipbook.zoomOut"
+                id="minus_icon"
+              />
+              <b-tooltip v-if="flipbook.canZoomOut" target="minus_icon_wrapper" triggers="hover" variant="secondary">Zoom out</b-tooltip>
+            </div>
 
             <span class="page-num">
               Page {{ flipbook.page }} of {{ flipbook.numPages }}
             </span>
 
-            <PlusIcon
-              class="btn"
-              :class="{ disabled: !flipbook.canZoomIn }"
-              @click="flipbook.zoomIn"
-              v-b-tooltip.hover="{ variant: 'secondary' }" 
-              title="Zoom in"
-              id="plus_icon"
-            />
+            <div id="plus_icon_wrapper" class="btn_wrapper">
+              <PlusIcon
+                class="btn"
+                :class="{ disabled: !flipbook.canZoomIn }"
+                @click="flipbook.zoomIn"
+                id="plus_icon"
+              />
+              <b-tooltip v-if="flipbook.canZoomIn" target="plus_icon_wrapper" triggers="hover" variant="secondary">Zoom in</b-tooltip>
+            </div>
 
-            <RightIcon
-              class="btn"
-              :class="{ disabled: !flipbook.canFlipRight }"
-              @click="flipbook.flipRight"
-              v-b-tooltip.hover="{ variant: 'secondary' }" 
-              title="Next page"
-              id="right_icon"
-            />        
+            <div id="right_icon_wrapper" class="btn_wrapper">
+              <RightIcon
+                class="btn"
+                :class="{ disabled: !flipbook.canFlipRight }"
+                @click="flipbook.flipRight"
+                id="right_icon"
+              />
+              <b-tooltip v-if="flipbook.canFlipRight" target="right_icon_wrapper" triggers="hover" variant="secondary">Next page</b-tooltip> 
+            </div>
             
-            <LastPageIcon
-              v-if="!flippingToEnd"
-              class="btn"
-              :class="{ disabled: !flipbook.canFlipRight }"
-              @click="flipToEnd()"
-              v-b-tooltip.hover="{ variant: 'secondary' }" 
-              title="Last page"
-              id="lastpage_icon"
-            />
-            <StopIcon
-              v-else
-              class="btn"
-              @click="stopFlip = true"
-              v-b-tooltip.hover="{ variant: 'secondary' }" 
-              title="Stop"
-              id="stop_icon"
-            />
+            <div v-if="!flippingToEnd" id="lastpage_icon_wrapper" class="btn_wrapper">
+              <LastPageIcon
+                class="btn"
+                :class="{ disabled: !flipbook.canFlipRight }"
+                @click="flipToEnd()"
+                id="lastpage_icon"
+              />
+              <b-tooltip v-if="flipbook.canFlipRight" target="lastpage_icon_wrapper" triggers="hover" variant="secondary">Last page</b-tooltip> 
+            </div>
+
+            <div v-if="flippingToEnd" id="stop_icon_end_wrapper" class="btn_wrapper">
+              <StopIcon
+                class="btn"
+                @click="stopFlip = true"
+                id="stop_icon_end"
+              />
+              <b-tooltip target="stop_icon_end_wrapper" triggers="hover" variant="secondary">Stop</b-tooltip> 
+            </div>
 
             <FullscreenIcon
               v-if="!isFullscreen"
               class="btn"
               @click="toggleFullscreen"
-              v-b-tooltip.hover="{ variant: 'secondary' }" 
-              title="Fullscreen"
               id="fullscreen_icon"
             />
+            <b-tooltip v-if="!isFullscreen" target="fullscreen_icon" triggers="hover" variant="secondary">Fullscreen</b-tooltip> 
+
             <FullscreenExitIcon
-              v-else
+              v-if="isFullscreen"
               class="btn"
               @click="toggleFullscreen"
-              v-b-tooltip.hover="{ variant: 'secondary' }" 
-              title="Exit fullscreen"
               id="fullscreenExit_icon"
             />
+            <b-tooltip v-if="isFullscreen" target="fullscreenExit_icon" triggers="hover" variant="secondary">Exit fullscreen</b-tooltip> 
+
           </div>
         </Flipbook>
       </div>
@@ -191,20 +197,27 @@ export default {
   },
 
   methods: {
-    flipToPage(page) { // not index mode
-      if (page > this.$refs.flipbook.numPages) {
-        console.error("Page out of range")
-      }
-
-      page = page - 1 // make the page indexed by 0
-
-      let method = page > this.$refs.flipbook.currentPage ? 'Right' : 'Left' // Direction to go
-      let flips = Math.abs(page - this.$refs.flipbook.currentPage) // number of flips to do
+    numFlips(toPage) {
+      let flips = Math.abs(toPage - this.$refs.flipbook.currentPage) // number of flips to do
 
       if (!this.$refs.flipbook.singlePage) {
         // If is not in single page mode, the flips are divided by 2 cause in each flip show 2 pages
-        flips = Math.floor(flips / 2)
+        if (toPage < this.$refs.flipbook.currentPage)
+          flips = Math.ceil(flips / 2)
+        else
+          flips = Math.floor(flips / 2)
       }
+      return flips
+    },
+    flipToPage(toPage) { // not index mode
+      if (toPage > this.$refs.flipbook.numPages) {
+        console.error("Page out of range")
+      }
+
+      let pgIndex = toPage - 1 // get the page indexed by 0
+      let method = pgIndex > this.$refs.flipbook.currentPage ? 'Right' : 'Left' // Direction to go
+
+      let flips = this.numFlips(toPage)
 
       if (flips == 0) {
         // If flips is equal to 0 it means the page is already visible
@@ -247,12 +260,25 @@ export default {
         this.pageNum = n
     },
     flipToStart() {
-      this.flippingToStart = true
-      this.flipToPage(1)
+      const toPage = 1
+      let flips = this.numFlips(toPage) // number of flips to do
+
+      if (flips > 1) {
+        this.flippingToStart = true
+        this.flipToPage(toPage)
+      }
+      else
+        this.$refs.flipbook.flipLeft()
     },
     flipToEnd() {
-      this.flippingToEnd = true
-      this.flipToPage(this.pages.length)
+      let flips = this.numFlips(this.$refs.flipbook.numPages) // number of flips to do
+
+      if (flips > 1) {
+        this.flippingToEnd = true
+        this.flipToPage(this.$refs.flipbook.numPages)
+      }
+      else
+        this.$refs.flipbook.flipRight()
     },
     toggleFullscreen() {
       this.$emit('toggleFullscreen')
@@ -311,7 +337,7 @@ export default {
   bottom: 0;
 }
 
-.action-bar .btn:not(:first-child) {
+.action-bar .btn:not(:first-child), .btn_wrapper {
   margin-left: 10px;
 }
 
