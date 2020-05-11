@@ -15,6 +15,10 @@
           @flip-left-end="onFlipLeftEnd"
           @flip-right-end="onFlipRightEnd"
         >
+          <span class="page-num pb-3" id="page-num-sm">
+            Page {{ flipbook.page }} of {{ flipbook.numPages }}
+          </span>
+
           <div class="action-bar">
 
             <div v-if="!flippingToStart" id="firstpage_icon_wrapper">
@@ -56,7 +60,7 @@
               <b-tooltip v-if="flipbook.canZoomOut" target="minus_icon_wrapper" triggers="hover" variant="secondary">Zoom out</b-tooltip>
             </div>
 
-            <span class="page-num">
+            <span class="page-num" id="page-num-lg">
               Page {{ flipbook.page }} of {{ flipbook.numPages }}
             </span>
 
@@ -116,6 +120,7 @@
             <b-tooltip v-if="isFullscreen" target="fullscreenExit_icon" triggers="hover" variant="secondary">Exit fullscreen</b-tooltip> 
 
           </div>
+          
         </Flipbook>
       </div>
     </transition>
@@ -356,7 +361,7 @@ export default {
   pointer-events: none;
 }
 
-.action-bar .page-num {
+.page-num {
   color: white;
   font-size: 1rem;
   margin-left: 30px;
@@ -376,4 +381,23 @@ export default {
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.8s ease-in;
 }
+
+
+
+/* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
+@media (max-width: 991.98px) {
+  #page-num-lg {
+    display: none;
+  }
+  #page-num-sm {
+    display: block;
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  #page-num-sm {
+    display: none;
+  }
+}
+
 </style>

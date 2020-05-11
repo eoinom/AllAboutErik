@@ -5,7 +5,7 @@
         
         <img v-if="node.pageBgImg != ''" :src="node.pageBgImg" id="pageBgImg" :style="pageBgStyles" />
 
-        <!-- FOR OLD TIMEY SPORTSMEN -->
+        <!-- Header for OLD TIMEY SPORTSMEN -->
         <header v-if="title == 'Old Timey Sportsmen'" id="header" :style="headerStyles">
           <b-container fluid>
             <b-row align-v="center" style="min-height:215px">
@@ -52,7 +52,7 @@
           </b-container>
         </header>
         
-        <!-- FOR OTHER PAGES -->
+        <!-- Header for OTHER PAGES -->
         <header v-else id="header" :style="headerStyles">
           <div id="headerItems">
             <g-image :src="titleImg1Line" class="titleImg titleImg1Line pt-3" />
@@ -65,14 +65,14 @@
 
 
 
-        <b-container fluid class="py-4 px-5">
-          <b-row no-gutters align-v="start" id="navLinksRow">
+        <b-container fluid class="py-3 py-md-4 px-3 px-md-5">
+          <b-row no-gutters align-v="start">
             <b-col cols="">
               <g-link :to="'/publications/' + prevPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevPublication.title" class="nav_link nav_link_small" id="nav_prev">PREV</g-link>
               <g-link :to="'/publications/' + prevPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevPublication.title" class="nav_link nav_link_big" id="nav_prev">PREVIOUS PUBLICATION</g-link>
             </b-col>
             
-            <b-col cols="7" class="pb-5">
+            <b-col cols="8" md="7" class="pb-5" id="mainCol">
               <div class="publication_mainText">
                 <span v-html="renderMarkdown(node.mainTextTop)" />
                 <span v-scroll-to="{ el:'#textBottom', duration:2000, easing:'ease' }" id="readMoreText" > [Click to read more below...]</span>
@@ -606,14 +606,43 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
     line-height: 1.4375rem;
     font-size: 1rem;
   }
+  .nav_link_small {
+    display: block;
+  }
+  .nav_link_big {
+    display: none;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {  
-  .titleImg {
-    max-width: 100%;
-    padding: 15px 40px 10px 70px;
-    margin: 0px;
+  // .titleImg {
+  //   max-width: 100%;
+  //   padding: 15px 40px 10px 70px;
+  //   margin: 0px;
+  // }  
+  .titleImg1Line {
+    display: none;
+  }
+  .titleImg2Lines {
+    display: inline;
+    margin: 10px 0px;
+    // padding: 0px 80px;
+    padding: 0px;
+  }
+  #headerItems {
+    padding: 0px 80px;
+  }
+  .headerText {
+    font-size: 0.9375rem;
+    letter-spacing: 7px;
+    line-height: 1.325rem;
+  }
+  .nav_link_small {
+    display: block;
+  }
+  .nav_link_big {
+    display: none;
   }
 }
 
@@ -627,12 +656,32 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
     margin: 10px 0px;
     padding: 0px 80px;
   }
+  .nav_link_small {
+    display: block;
+  }
+  .nav_link_big {
+    display: none;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-  .titleImg {
-    padding: 0px 100px;
+  // .titleImg {
+  //   padding: 0px 100px;
+  // }
+  .titleImg1Line {
+    display: none;
+  }
+  .titleImg2Lines {
+    display: inline;
+    margin: 10px 0px;
+    padding: 0px 80px;
+  }
+  .nav_link_small {
+    display: block;
+  }
+  .nav_link_big {
+    display: none;
   }
 }
 
@@ -640,6 +689,16 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 @media (min-width: 1200px) and (max-width: 1499.98px) {
   .headerText, .titleImg {
     padding: 0px 120px;
+  }
+}
+
+/* Special */
+@media (min-width: 1200px) {
+  #nav_next {
+    padding-left: 54.5px; // so goes over two lines at same point as the "nav_prev" link
+  }
+  #mainCol {
+    margin: 0 40px;
   }
 }
 
