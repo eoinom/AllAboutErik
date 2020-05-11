@@ -200,8 +200,8 @@ export default {
     numFlips(toPage) {
       let flips = Math.abs(toPage - this.$refs.flipbook.currentPage) // number of flips to do
 
-      if (!this.$refs.flipbook.singlePage) {
-        // If is not in single page mode, the flips are divided by 2 cause in each flip show 2 pages
+      if (this.$refs.flipbook.displayedPages == 2) {
+        // Is in double page mode, therefore divide flips by 2 because in each flip 2 pages are shown
         if (toPage < this.$refs.flipbook.currentPage)
           flips = Math.ceil(flips / 2)
         else
