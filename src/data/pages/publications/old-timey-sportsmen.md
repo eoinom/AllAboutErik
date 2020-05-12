@@ -24,11 +24,13 @@ mainTextBottom: Old-Timey Sportsmen contains a gallery of uniquely American
   century outdoorsmen and women.
 videoUrl: https://player.vimeo.com/video/283168900
 bookImages:
+  width: 713
+  height: 535
   commonPathStdRes: https://res.cloudinary.com/all-about-erik/image/upload/v1588288292/Publications/2.%20Old-Time%20Sportsmen/Book%20Images/FullScreen/
-  commonFilenameStdRes: Old-Time_Sportsmen-_full
-  commonPathHiRes: https://res.cloudinary.com/all-about-erik/image/upload/v1588288306/Publications/2.%20Old-Time%20Sportsmen/Book%20Images/Zoomed%20sm/
   commonFilenameHiRes: Old-Time_Sportsmen-zm
+  commonPathHiRes: https://res.cloudinary.com/all-about-erik/image/upload/v1588288306/Publications/2.%20Old-Time%20Sportsmen/Book%20Images/Zoomed%20sm/
+  commonFilenameStdRes: Old-Time_Sportsmen-_full
+  orientation: landscape
   commonFilenameStartNum: 1
   commonFilenameLastNum: 97
-  orientation: landscape
 ---
