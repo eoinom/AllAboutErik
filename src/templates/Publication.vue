@@ -16,7 +16,7 @@
               
               <b-col id="headerItems" align-self="end" style="max-width: 970px">          
                 <g-image :src="node.titleImg1Line" class="titleImg titleImg1Line pt-3" />
-                <g-image :src="node.titleImg2Lines" class="titleImg titleImg2Lines" />
+                <g-image :src="node.titleImg2Lines" class="titleImg titleImg2Lines oldTime2LineTitleImg" />
 
                 <div v-html="node.content" class="headerText" />
 
@@ -296,13 +296,8 @@ export default {
   },
 
   watch: {
-    windowWidth: function (val) {
-      if (val >= 576 && val <= 1366) {
-        this.sportsmenGalleryHover = true
-      }
-      else {
-        this.sportsmenGalleryHover = false
-      }
+    windowWidth: (val) => {
+      this.sportsmenGalleryHover = val < 1400
     }
   },
 
@@ -472,6 +467,9 @@ export default {
 }
 .titleImg2Lines {
   display: none;
+}
+.oldTime2LineTitleImg {    
+  max-width: 396px;
 }
 
 .nav_link {
@@ -664,8 +662,9 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   }
   .titleImg2Lines {
     display: inline;
-    margin: 10px 0px;
-    padding: 0px 120px;
+    // margin: 10px 0px;
+    // padding: 0px 120px;
+    margin: 10px 120px;
   }
   .nav_link_small {
     display: block;
@@ -682,8 +681,9 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   }
   .titleImg2Lines {
     display: inline;
-    margin: 10px 0px;
-    padding: 0px 120px;
+    // margin: 10px 0px;
+    // padding: 0px 120px;
+    margin: 10px 120px;
   }
   .nav_link_small {
     display: block;
@@ -704,7 +704,8 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .titleImg2Lines {
     display: inline;
     margin: 10px 0px;
-    padding: 0px 80px;
+    // padding: 0px 80px;
+    // margin: 10px 80px;
   }
 }
 
