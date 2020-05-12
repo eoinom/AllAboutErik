@@ -28,12 +28,14 @@ mainTextBottom: "Illustrated with 155 marvellous images from pre-Columbian
   symbolism, Native American art, and the vitality and creativity of the
   pre-Colombian imagination."
 bookImages:
+  width: 590
+  height: 778
   commonPathStdRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588457871/Publications/3.%20Animal%20Myth%20and%20Magic/Book%20Images/FullScreen/
-  commonFilenameStdRes: Animal_Myth_and_Magic_without_red_pages-
-  commonPathHiRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588457978/Publications/3.%20Animal%20Myth%20and%20Magic/Book%20Images/Large%20File%20Size/
   commonFilenameHiRes: Animal_Myth_and_Magic_without_red_pages-
+  commonPathHiRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588457978/Publications/3.%20Animal%20Myth%20and%20Magic/Book%20Images/Large%20File%20Size/
+  commonFilenameStdRes: Animal_Myth_and_Magic_without_red_pages-
+  orientation: portrait
   commonFilenameStartNum: 1
   commonFilenameLastNum: 164
-  orientation: portrait
 ---
 VANESSA DRAKE MORAGA
