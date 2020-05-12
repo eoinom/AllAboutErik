@@ -73,7 +73,7 @@
             </b-col>
             
             <b-col cols="8" md="7" class="pb-5" id="mainCol">
-              <div class="publication_mainText">
+              <div class="publication_mainText pb-4">
                 <span v-html="renderMarkdown(node.mainTextTop)" />
                 <span v-scroll-to="{ el:'#textBottom', duration:2000, easing:'ease' }" id="readMoreText" > [Click to read more below...]</span>
               </div>
@@ -86,10 +86,9 @@
                 :showSinglePage="bookShowSinglePage"
                 :key="'bookViewer'+bookKey" 
                 @toggleFullscreen="toggleFullscreen()" 
-                @reload="reloadBook()" 
-                class="my-4" />
+                @reload="reloadBook()" />
 
-              <div id="textBottom" class="publication_mainText">{{ node.mainTextBottom }}</div>
+              <div id="textBottom" class="publication_mainText pt-4">{{ node.mainTextBottom }}</div>
 
               <br />
 
@@ -145,6 +144,8 @@ query ($id: ID!) {
       commonFilenameStartNum
       commonFilenameLastNum
       orientation
+      width
+      height
     }
   }
 }
@@ -222,10 +223,6 @@ export default {
     pageBgStyles() {
       let css = {} 
       css.opacity = this.node.pageBgImgOpacity / 100
-      // if (this.bgImgAspectRatio <= this.windowAspectRatio)
-      //   css.width = this.windowWidth + 'px';
-      // else
-      //   css.height = this.windowHeight + 'px';
       return css
     },
     bookImagesUrlsStdRes() {
@@ -249,86 +246,23 @@ export default {
       return pages
     },
     bookVpHeight() {
-      if (this.node.bookImages.orientation == 'portrait') {
-        const pageWidth = 566
-        const pageHeight = 778
-
-        if (this.windowWidth > 1200) {
-          // show two pages, so width > height
-          const twoPagesWidth = 2 * pageWidth
-          let actualWidth = Math.min(twoPagesWidth, this.mainColWidth)
-          let actualHeight = (actualWidth / twoPagesWidth) * pageHeight
-          console.log('twoPagesWidth: ' + twoPagesWidth)
-          console.log('actualWidth: ' + actualWidth)
-          console.log('actualHeight: ' + actualHeight)
-          this.bookShowSinglePage = false
-          return actualHeight + 'px'
-        }
-        else {
-          // show single pages, so height > width
-          let actualWidth = Math.min(pageWidth, this.mainColWidth)
-          let actualHeight = (actualWidth / pageWidth) * pageHeight
-          console.log('pageWidth: ' + pageWidth)
-          console.log('actualWidth: ' + actualWidth)
-          console.log('actualHeight: ' + actualHeight)
-          this.bookShowSinglePage = true
-          return actualHeight + 'px'
-        }
+      const pageWidth = this.node.bookImages.width
+      const pageHeight = this.node.bookImages.height
+      
+      if (this.windowWidth > 1200) {
+        // show double pages
+        const twoPagesWidth = 2 * pageWidth
+        let actualWidth = Math.min(twoPagesWidth, this.mainColWidth)
+        var actualHeight = (actualWidth / twoPagesWidth) * pageHeight
+        this.bookShowSinglePage = false
       }
       else {
-        if (this.titleSlug === 'old-timey-sportsmen') {
-          const pageWidth = 714
-          const pageHeight = 535
-
-          if (this.windowWidth > 1200) {
-            // show two pages, so width > height
-            const twoPagesWidth = 2 * pageWidth
-            let actualWidth = Math.min(twoPagesWidth, this.mainColWidth)
-            let actualHeight = (actualWidth / twoPagesWidth) * pageHeight
-            console.log('twoPagesWidth: ' + twoPagesWidth)
-            console.log('actualWidth: ' + actualWidth)
-            console.log('actualHeight: ' + actualHeight)
-            this.bookShowSinglePage = false
-            return actualHeight + 'px'
-          }
-          else {
-            // show single pages, so height > width
-            let actualWidth = Math.min(pageWidth, this.mainColWidth)
-            let actualHeight = (actualWidth / pageWidth) * pageHeight
-            console.log('pageWidth: ' + pageWidth)
-            console.log('actualWidth: ' + actualWidth)
-            console.log('actualHeight: ' + actualHeight)
-            this.bookShowSinglePage = true
-            return actualHeight + 'px'
-          }
-        }
-        else {
-          const pageWidth = 714
-          const pageHeight = 620
-
-          if (this.windowWidth > 1200) {
-            // show two pages, so width > height
-            const twoPagesWidth = 2 * pageWidth
-            let actualWidth = Math.min(twoPagesWidth, this.mainColWidth)
-            let actualHeight = (actualWidth / twoPagesWidth) * pageHeight
-            console.log('twoPagesWidth: ' + twoPagesWidth)
-            console.log('actualWidth: ' + actualWidth)
-            console.log('actualHeight: ' + actualHeight)
-            this.bookShowSinglePage = false
-            return actualHeight + 'px'
-          }
-          else {
-            // show single pages, so height > width
-            let actualWidth = Math.min(pageWidth, this.mainColWidth)
-            let actualHeight = (actualWidth / pageWidth) * pageHeight
-            console.log('pageWidth: ' + pageWidth)
-            console.log('actualWidth: ' + actualWidth)
-            console.log('actualHeight: ' + actualHeight)
-            this.bookShowSinglePage = true
-            return actualHeight + 'px'
-          }
-        }
+        // show single pages
+        let actualWidth = Math.min(pageWidth, this.mainColWidth)
+        actualHeight = (actualWidth / pageWidth) * pageHeight
+        this.bookShowSinglePage = true
       }
+      return actualHeight + 'px'
     },
     publications() {
       return this.$static.Publications.edges[0].node.publications
@@ -406,9 +340,6 @@ export default {
       let element = document.getElementById('mainCol')
       let elemRect = element.getBoundingClientRect()
       this.mainColWidth = elemRect.width
-
-      console.log('this.mainColWidth:')
-      console.log(this.mainColWidth)
     }
   }
 }
@@ -461,7 +392,6 @@ export default {
   text-align: center;
   padding-top: 12.5px;
   padding-bottom: 12.5px;
-  /* min-height: 301px; */
 }
 #header:after  {
   content : "";
@@ -486,11 +416,6 @@ export default {
   min-width: 230px;
   max-width: 70%;
   max-height: 149px;
-}
-#headerLeftImg,
-#headerRightImg {
-  /* max-height: 189px;
-  max-width: 70%; */
 }
 
 #headerItems {
@@ -700,19 +625,13 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {  
-  // .titleImg {
-  //   max-width: 100%;
-  //   padding: 15px 40px 10px 70px;
-  //   margin: 0px;
-  // }  
+@media (min-width: 576px) and (max-width: 767.98px) {   
   .titleImg1Line {
     display: none;
   }
   .titleImg2Lines {
     display: inline;
     margin: 10px 0px;
-    // padding: 0px 80px;
     padding: 0px;
   }
   #headerItems {
@@ -758,9 +677,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-  // .titleImg {
-  //   padding: 0px 100px;
-  // }
   .titleImg1Line {
     display: none;
   }
@@ -779,9 +695,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Special - Larger devices (desktops, 1200px and up) */
 @media (min-width: 1200px) and (max-width: 1499.98px) {
-  // .headerText, .titleImg {
-  //   padding: 0px 120px;
-  // }
   .headerText {
     padding: 0px 120px;
   }
