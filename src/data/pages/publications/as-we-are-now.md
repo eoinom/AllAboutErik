@@ -17,7 +17,7 @@ mainTextBottom: The two decades in which skeleton imagery gained greatest
   encompassed the Taishō (1912-1926) and early Shōwa eras (1926-1989), a period
   lasting roughly from about 1920 to the mid to late 1930s, losing its emphasis
   as Japan moved closer to total war. This period corresponds to what Miriam
-  Silverberg terms Japan’s “modan \[modern] years,” a time characterized by a
+  Silverberg terms Japan’s “modan [modern] years,” a time characterized by a
   post-traditional, cosmopolitan world no longer bound by timeless customs and
   informed by a sense of open-ended possibilities, new mores, and the mass
   communications that were shaping the material and popular culture of the
