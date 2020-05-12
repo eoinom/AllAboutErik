@@ -78,24 +78,22 @@
                 <span v-scroll-to="{ el:'#textBottom', duration:2000, easing:'ease' }" id="readMoreText" > [Click to read more below...]</span>
               </div>
 
-              <br><br>
-
               <BookViewer 
                 :pages="bookImagesUrlsStdRes" 
                 :pagesHiRes="bookImagesUrlsHiRes" 
                 :isFullscreen="isBookFullscreen"
                 :viewportHeight="bookVpHeight"
+                :showSinglePage="bookShowSinglePage"
                 :key="'bookViewer'+bookKey" 
                 @toggleFullscreen="toggleFullscreen()" 
-                @reload="reloadBook()" />
-              
-              <br><br><br><br>
+                @reload="reloadBook()" 
+                class="my-4" />
 
               <div id="textBottom" class="publication_mainText">{{ node.mainTextBottom }}</div>
 
               <br />
 
-              <div v-if="node.videoUrl !== ''" style="width:100%;height:100%;position:relative; text-align:center">
+              <div v-if="node.videoUrl !== ''" id="videoDiv">
                 <h2 class="videoTitleText mb-3">WATCH THE VIDEO ABOUT THE BOOK HERE</h2>
                 <iframe 
                   :src="node.videoUrl + '?autoplay=0&color=505050&title=0&byline=0&portrait=0'"
@@ -190,7 +188,9 @@ export default {
       sportsmenGalleryHover: false,
       windowWidth: 0.0,
       isBookFullscreen: false,
-      bookKey: 1
+      bookShowSinglePage: false,
+      bookKey: 1,
+      mainColWidth: 900
     }
   },
 
@@ -231,7 +231,6 @@ export default {
     bookImagesUrlsStdRes() {
       let pages = [null]  // first element is null so that cover page appears on its own
       const book = this.node.bookImages
-      // let urlPrepend = 'https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588104930/Publications/temp/'
       let urlCommon = book.commonPathStdRes + book.commonFilenameStdRes
       for (let i = book.commonFilenameStartNum; i <= book.commonFilenameLastNum; i++) {
         let url = urlCommon + i + '.jpg'
@@ -251,14 +250,83 @@ export default {
     },
     bookVpHeight() {
       if (this.node.bookImages.orientation == 'portrait') {
-        return '60vh'
+        const pageWidth = 566
+        const pageHeight = 778
+
+        if (this.windowWidth > 1200) {
+          // show two pages, so width > height
+          const twoPagesWidth = 2 * pageWidth
+          let actualWidth = Math.min(twoPagesWidth, this.mainColWidth)
+          let actualHeight = (actualWidth / twoPagesWidth) * pageHeight
+          console.log('twoPagesWidth: ' + twoPagesWidth)
+          console.log('actualWidth: ' + actualWidth)
+          console.log('actualHeight: ' + actualHeight)
+          this.bookShowSinglePage = false
+          return actualHeight + 'px'
+        }
+        else {
+          // show single pages, so height > width
+          let actualWidth = Math.min(pageWidth, this.mainColWidth)
+          let actualHeight = (actualWidth / pageWidth) * pageHeight
+          console.log('pageWidth: ' + pageWidth)
+          console.log('actualWidth: ' + actualWidth)
+          console.log('actualHeight: ' + actualHeight)
+          this.bookShowSinglePage = true
+          return actualHeight + 'px'
+        }
       }
       else {
         if (this.titleSlug === 'old-timey-sportsmen') {
-          return '42vh'
+          const pageWidth = 714
+          const pageHeight = 535
+
+          if (this.windowWidth > 1200) {
+            // show two pages, so width > height
+            const twoPagesWidth = 2 * pageWidth
+            let actualWidth = Math.min(twoPagesWidth, this.mainColWidth)
+            let actualHeight = (actualWidth / twoPagesWidth) * pageHeight
+            console.log('twoPagesWidth: ' + twoPagesWidth)
+            console.log('actualWidth: ' + actualWidth)
+            console.log('actualHeight: ' + actualHeight)
+            this.bookShowSinglePage = false
+            return actualHeight + 'px'
+          }
+          else {
+            // show single pages, so height > width
+            let actualWidth = Math.min(pageWidth, this.mainColWidth)
+            let actualHeight = (actualWidth / pageWidth) * pageHeight
+            console.log('pageWidth: ' + pageWidth)
+            console.log('actualWidth: ' + actualWidth)
+            console.log('actualHeight: ' + actualHeight)
+            this.bookShowSinglePage = true
+            return actualHeight + 'px'
+          }
         }
         else {
-          return '48vh'
+          const pageWidth = 714
+          const pageHeight = 620
+
+          if (this.windowWidth > 1200) {
+            // show two pages, so width > height
+            const twoPagesWidth = 2 * pageWidth
+            let actualWidth = Math.min(twoPagesWidth, this.mainColWidth)
+            let actualHeight = (actualWidth / twoPagesWidth) * pageHeight
+            console.log('twoPagesWidth: ' + twoPagesWidth)
+            console.log('actualWidth: ' + actualWidth)
+            console.log('actualHeight: ' + actualHeight)
+            this.bookShowSinglePage = false
+            return actualHeight + 'px'
+          }
+          else {
+            // show single pages, so height > width
+            let actualWidth = Math.min(pageWidth, this.mainColWidth)
+            let actualHeight = (actualWidth / pageWidth) * pageHeight
+            console.log('pageWidth: ' + pageWidth)
+            console.log('actualWidth: ' + actualWidth)
+            console.log('actualHeight: ' + actualHeight)
+            this.bookShowSinglePage = true
+            return actualHeight + 'px'
+          }
         }
       }
     },
@@ -306,12 +374,15 @@ export default {
 
   mounted() {
     this.windowWidth = window.innerWidth
+    this.updateMainColWidth()
 
     window.addEventListener('resize', () => {  
       this.windowWidth = window.innerWidth
+      this.updateMainColWidth()
     })
     window.addEventListener('orientationchange', () => {  
       this.windowWidth = window.innerWidth
+      this.updateMainColWidth()
     })
   },
 
@@ -330,6 +401,14 @@ export default {
     },
     reloadBook() {
       this.bookKey += 1 // increment component key to force reload between toggle of fullscreen / normal-screen
+    },
+    updateMainColWidth() {
+      let element = document.getElementById('mainCol')
+      let elemRect = element.getBoundingClientRect()
+      this.mainColWidth = elemRect.width
+
+      console.log('this.mainColWidth:')
+      console.log(this.mainColWidth)
     }
   }
 }
@@ -421,30 +500,24 @@ export default {
   margin: 0 auto;
 }
 .headerText {
-  font-family: 'NeueHaasGroteskText Pro65';
-  font-feature-settings: 'liga';
-  /* text-shadow: 1px 1px 4px rgba(0,0,0,0.29); */
   color: #FFFFFF;
-  text-align: center;
-  /* font-size: 1.125rem; */
-  /* line-height: 1.625rem; */
-  /* letter-spacing: 1px; */
+  font-family: 'NeueHaasGroteskText Pro65';
+  font-feature-settings: 'liga';  
   font-weight: 500;
-  margin: 0px;
-  padding: 0px;
-
-  text-shadow: 4px 4px 3px rgba(0,0,0,0.18);
-  text-transform: uppercase;
   font-size: 1.0625rem;
   line-height: 1.5rem;
   letter-spacing: 8px;
+  text-align: center;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.18);
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 0px;
 }
 .sportsmenLinkText {
   color: #000;
   font-family: 'Francois One', sans-serif;
   font-feature-settings: 'liga';
   font-weight: 400;
-  /* font-size: 0.875rem; */
   font-size: 1rem;
   letter-spacing: 0.8px;
   text-align: center;
@@ -467,7 +540,6 @@ export default {
 
 .titleImg {
   max-width: 100%;
-  /* margin-bottom: 20px; */
   margin-bottom: 8px;
 }
 .titleImg1Line {
@@ -542,6 +614,12 @@ export default {
   color: #F4F4F4;
 }
 
+#videoDiv {
+  width: 100%;
+  height: 100%;
+  position: relative; 
+  text-align: center;
+}
 .videoTitleText {
   font-family: 'Ubuntu Condensed', sans-serif;
   font-feature-settings: 'liga';
@@ -612,6 +690,13 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .nav_link_big {
     display: none;
   }
+  .publication_mainText {
+    font-size: calc(1rem + 2 * (100vw - 375px) / (576 - 375) ); /* varies between 16px (1rem) and 18px */
+    line-height: calc(1.0625rem + 7 * (100vw - 375px) / (576 - 375) ); /* varies between 17px (1.0625rem) and 24px */
+  }
+  #readMoreText {
+    font-size: calc(0.875rem + 2 * (100vw - 375px) / (576 - 375) ); /* varies between 14px (0.875rem) and 16px */
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -644,6 +729,13 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .nav_link_big {
     display: none;
   }
+  .publication_mainText {
+    font-size: calc(1.125rem + 1.0 * (100vw - 576px) / (768 - 576) ); /* varies between 18px (1.125rem) and 19px */
+    line-height: calc(1.5rem + 12 * (100vw - 576px) / (768 - 576) ); /* varies between 24px (1.5rem) and 32px */
+  }
+  #readMoreText {
+    font-size: calc(1rem + 1 * (100vw - 576px) / (768 - 576) ); /* varies between 16px (1rem) and 17px */
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -654,7 +746,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .titleImg2Lines {
     display: inline;
     margin: 10px 0px;
-    padding: 0px 80px;
+    padding: 0px 120px;
   }
   .nav_link_small {
     display: block;
@@ -675,7 +767,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .titleImg2Lines {
     display: inline;
     margin: 10px 0px;
-    padding: 0px 80px;
+    padding: 0px 120px;
   }
   .nav_link_small {
     display: block;
@@ -687,8 +779,19 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Special - Larger devices (desktops, 1200px and up) */
 @media (min-width: 1200px) and (max-width: 1499.98px) {
-  .headerText, .titleImg {
+  // .headerText, .titleImg {
+  //   padding: 0px 120px;
+  // }
+  .headerText {
     padding: 0px 120px;
+  }
+  .titleImg1Line {
+    display: none;
+  }
+  .titleImg2Lines {
+    display: inline;
+    margin: 10px 0px;
+    padding: 0px 80px;
   }
 }
 

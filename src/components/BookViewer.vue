@@ -10,6 +10,7 @@
           :pagesHiRes="pagesHiRes"
           :startPage="pageNum"
           :flipDuration="flipDuration"
+          :singlePage="showSinglePage"
           v-slot="flipbook"
           ref="flipbook"
           @flip-left-end="onFlipLeftEnd"
@@ -161,6 +162,10 @@ export default {
       type: Number,
       required: false
     },
+    showSinglePage: {
+      type: Boolean,
+      required: false
+    },
     isFullscreen: {
       type: Boolean,
       required: false
@@ -299,6 +304,10 @@ export default {
 
 <style scoped lang="scss">
 
+#flipbookContainer {
+  padding-bottom: 46px;   // to account for the action-bar
+}
+
 .fullscreenContainer {
   position: fixed;
   display: block;
@@ -392,6 +401,9 @@ export default {
   #page-num-sm {
     display: block;
     text-align: center;
+  }
+  #flipbookContainer {
+    padding-bottom: 86px;  // to account for the action-bar
   }
 }
 @media (min-width: 992px) {
