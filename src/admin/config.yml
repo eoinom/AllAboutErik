@@ -574,6 +574,7 @@ collections:
       - {label: 'Title', name: 'title', widget: 'string', required: false}
       - {label: "Title Image (Single line)", name: "titleImg1Line", widget: "image", required: false}
       - {label: "Title Image (Two lines)", name: "titleImg2Lines", widget: "image", required: false}
+      - {label: "Title Image (Two lines - concise)", name: "titleImg2LinesConcise", widget: "image", required: false}
       - {label: "Header Background Image", name: "headerBgImg", widget: "image", required: false}
       - {label: "Header Image Opacity (%)", name: "headerBgImgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
       - {label: "Header Left Image", name: "headerLeftImg", widget: "image", required: false}
