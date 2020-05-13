@@ -1,6 +1,8 @@
 ---
 title: Shamans Volume One
 titleImg2Lines: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586900042/Publications/4.%20Shamans%20Vol1%20and%20Vol2/title-shamans-white-2lines_ow7pfq.png
+titleImg2LinesConcise:
+  - https://res.cloudinary.com/all-about-erik/image/upload/v1589409475/Publications/4.%20Shamans%20Vol1%20and%20Vol2/title-shamans-white-2lines_concise_mqaqm6.png
 headerBgImg: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586900043/Publications/4.%20Shamans%20Vol1%20and%20Vol2/banner-Vol1-p22_qckbtb.jpg
 headerBgImgOpacity: 54
 mainTextTop: >-
