@@ -202,8 +202,6 @@ export default {
     }
     
     window.addEventListener('hashchange', () => this.setPageFromHash())
-
-    window.addEventListener('resize', () => this.reload())
   },
 
   methods: {

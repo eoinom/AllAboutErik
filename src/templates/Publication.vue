@@ -63,8 +63,7 @@
         </header>
 
 
-
-
+        <!-- MAIN CONTENT -->
         <b-container fluid class="py-3 py-md-4 px-3 px-md-5">
           <b-row no-gutters align-v="start" align-h="center">
             <b-col cols="">
@@ -324,6 +323,10 @@ export default {
   watch: {
     windowWidth: function(val) {
       this.sportsmenGalleryHover = val < 1400
+
+      this.updateMainColWidth()
+      
+      this.reloadBook()
     }
   },
 
@@ -334,12 +337,10 @@ export default {
     window.addEventListener('resize', () => {
       if (this.windowWidth != window.innerWidth) {
         this.windowWidth = window.innerWidth
-        this.updateMainColWidth()
       }
     })
     window.addEventListener('orientationchange', () => {  
       this.windowWidth = window.innerWidth
-      this.updateMainColWidth()
     })
   },
 
