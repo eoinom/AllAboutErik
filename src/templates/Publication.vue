@@ -331,9 +331,11 @@ export default {
     this.windowWidth = window.innerWidth
     this.updateMainColWidth()
 
-    window.addEventListener('resize', () => {  
-      this.windowWidth = window.innerWidth
-      this.updateMainColWidth()
+    window.addEventListener('resize', () => {
+      if (this.windowWidth != window.innerWidth) {
+        this.windowWidth = window.innerWidth
+        this.updateMainColWidth()
+      }
     })
     window.addEventListener('orientationchange', () => {  
       this.windowWidth = window.innerWidth
