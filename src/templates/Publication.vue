@@ -14,15 +14,15 @@
                 <g-image alt="Hunter" :src="node.headerLeftImg" id="headerLeftImg" />
               </b-col>
               
-              <b-col id="headerItems" align-self="end" style="max-width: 970px">          
+              <b-col class="sportsmenHeaderMainCol" align-self="end">          
                 <g-image :src="node.titleImg1Line" class="titleImg titleImg1Line pt-3" />
-                <g-image :src="node.titleImg2Lines" class="titleImg titleImg2Lines oldTime2LineTitleImg" />
+                <g-image :src="node.titleImg2Lines" class="titleImg titleImg2Lines sportsmen2LineTitleImg" />
 
                 <div v-html="node.content" class="headerText" />
 
                 <b-row align-v="start" align-h="center" style="min-height:68px; padding-top:8px">                  
                   <b-col>
-                    <a href="http://oldtimeysportsmenphotogallery.com/gallery/" target="_blank"
+                    <a href="http://sportsmenysportsmenphotogallery.com/gallery/" target="_blank"
                       class="sportsmenLinkText"
                       style="margin: 0 auto"
                       @mouseover="updateSportsmenGalleryHover(true)" 
@@ -54,7 +54,7 @@
         
         <!-- Header for OTHER PAGES -->
         <header v-else id="header" :style="headerStyles">
-          <div id="headerItems">
+          <div class="headerItems">
             <g-image :src="titleImg1Line" class="titleImg titleImg1Line pt-3" />
             <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
             
@@ -66,13 +66,13 @@
 
 
         <b-container fluid class="py-3 py-md-4 px-3 px-md-5">
-          <b-row no-gutters align-v="start">
+          <b-row no-gutters align-v="start" align-h="center">
             <b-col cols="">
               <g-link :to="'/publications/' + prevPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevPublication.title" class="nav_link nav_link_small" id="nav_prev">PREV</g-link>
               <g-link :to="'/publications/' + prevPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevPublication.title" class="nav_link nav_link_big" id="nav_prev">PREVIOUS PUBLICATION</g-link>
             </b-col>
             
-            <b-col cols="8" md="7" class="pb-5" id="mainCol">
+            <b-col cols="11" sm="8" md="7" order="3" order-sm="2" class="pt-3 pb-3 pt-sm-0" id="mainCol">
               <div class="publication_mainText pb-4">
                 <span v-html="renderMarkdown(node.mainTextTop)" />
                 <span v-scroll-to="{ el:'#textBottom', duration:2000, easing:'ease' }" id="readMoreText" > [Click to read more below...]</span>
@@ -96,7 +96,8 @@
                 <h2 class="videoTitleText mb-3">WATCH THE VIDEO ABOUT THE BOOK HERE</h2>
                 <iframe 
                   :src="node.videoUrl + '?autoplay=0&color=505050&title=0&byline=0&portrait=0'"
-                  style="width:954.656px; height:537px; max-width:100%" 
+                  style="max-width:100%"
+                  :style="videoFrameStyles"
                   frameborder="0" 
                   webkitallowfullscreen mozallowfullscreen allowfullscreen >
                 </iframe>
@@ -104,14 +105,18 @@
 
             </b-col>
             
-            <b-col cols="">
+            <b-col cols="" order="2" order-sm="3">
               <g-link :to="'/publications/' + nextPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextPublication.title" class="nav_link nav_link_small" id="nav_next">NEXT</g-link>
               <g-link :to="'/publications/' + nextPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextPublication.title" class="nav_link nav_link_big" id="nav_next">NEXT PUBLICATION</g-link>
             </b-col>            
           </b-row>
-        </b-container>
 
-        <g-link to="/publications/" class="nav_link pt-3" id="nav_back">BACK TO PUBLICATIONS MENU</g-link>
+          <b-row no-gutters>
+            <b-col>
+              <g-link to="/publications/" class="nav_link" id="nav_back">BACK TO PUBLICATIONS MENU</g-link>
+            </b-col>
+          </b-row>
+        </b-container>
 
       </div>
     </transition>
@@ -125,6 +130,7 @@ query ($id: ID!) {
     title
     titleImg1Line
     titleImg2Lines
+    titleImg2LinesConcise
     headerBgImg
     headerBgImgOpacity
     headerLeftImg
@@ -209,7 +215,15 @@ export default {
       return this.node.titleImg1Line !== '' ? this.node.titleImg1Line : this.node.titleImg2Lines
     },
     titleImg2Lines() {
-      return this.node.titleImg2Lines
+      let titleImg2LinesConcise = Array.isArray(this.node.titleImg2LinesConcise) ? this.node.titleImg2LinesConcise[0] : this.node.titleImg2LinesConcise   // due to some unknown issue this field is coming out as an array
+
+      if ((this.titleSlug === 'animal-myth-and-magic' && this.windowWidth < 576) ||
+          (this.titleSlug.substring(0, 7) === 'shamans' && this.windowWidth < 768)) {
+        return titleImg2LinesConcise !== '' ? titleImg2LinesConcise : this.node.titleImg2Lines
+      }
+      else  {
+        return this.node.titleImg2Lines
+      }
     },
     headerBgImgOpacity() {
       return this.node.hasOwnProperty('headerBgImgOpacity') ? this.node.headerBgImgOpacity : 0.5
@@ -224,6 +238,35 @@ export default {
       let css = {} 
       css.opacity = this.node.pageBgImgOpacity / 100
       return css
+    },
+    publications() {
+      return this.$static.Publications.edges[0].node.publications
+    },    
+    publication_names() {
+      return this.publications.map(x => x.title);
+    },
+    publicationIndex() {
+      return this.publication_names.indexOf(this.title)
+    },
+    prevPublication() {
+      const i = this.publicationIndex
+      if (i === 0)
+        var prev_i = this.publication_names.length - 1
+      else
+        prev_i = i - 1
+      let publication = {...this.publications[prev_i]}
+      publication.link = slugify(publication.title)
+      return publication
+    },
+    nextPublication() {
+      const i = this.publicationIndex     
+      if (i === this.publication_names.length - 1)
+        var next_i = 0
+      else
+        next_i = i + 1
+      let publication = {...this.publications[next_i]}
+      publication.link = slugify(publication.title)
+      return publication
     },
     bookImagesUrlsStdRes() {
       let pages = [null]  // first element is null so that cover page appears on its own
@@ -264,39 +307,22 @@ export default {
       }
       return actualHeight + 'px'
     },
-    publications() {
-      return this.$static.Publications.edges[0].node.publications
-    },    
-    publication_names() {
-      return this.publications.map(x => x.title);
-    },
-    publicationIndex() {
-      return this.publication_names.indexOf(this.title)
-    },
-    prevPublication() {
-      const i = this.publicationIndex
-      if (i === 0)
-        var prev_i = this.publication_names.length - 1
-      else
-        prev_i = i - 1
-      let publication = {...this.publications[prev_i]}
-      publication.link = slugify(publication.title)
-      return publication
-    },
-    nextPublication() {
-      const i = this.publicationIndex     
-      if (i === this.publication_names.length - 1)
-        var next_i = 0
-      else
-        next_i = i + 1
-      let publication = {...this.publications[next_i]}
-      publication.link = slugify(publication.title)
-      return publication
+    videoFrameStyles() {
+      const maxVidWidth = 954.656
+      const maxVidHeight = 537
+      
+      let actualWidth = maxVidWidth < this.mainColWidth ? maxVidWidth : this.mainColWidth
+      let actualHeight = (actualWidth / maxVidWidth) * maxVidHeight
+      return {
+        width: actualWidth + 'px',
+        height: actualHeight + 'px'
+      }
+
     }
   },
 
   watch: {
-    windowWidth: (val) => {
+    windowWidth: function(val) {
       this.sportsmenGalleryHover = val < 1400
     }
   },
@@ -413,7 +439,7 @@ export default {
   max-height: 149px;
 }
 
-#headerItems {
+.headerItems {
   width: 1240px; 
   max-width: 90vw; 
   text-align: center;
@@ -432,6 +458,13 @@ export default {
   text-transform: uppercase;
   margin: 0px;
   padding: 0px;
+}
+
+.sportsmenHeaderMainCol {
+  width: 1240px;
+  max-width: 970px; 
+  text-align: center;
+  margin: 0 auto;
 }
 .sportsmenLinkText {
   color: #000;
@@ -468,7 +501,7 @@ export default {
 .titleImg2Lines {
   display: none;
 }
-.oldTime2LineTitleImg {    
+.sportsmen2LineTitleImg {
   max-width: 396px;
 }
 
@@ -504,13 +537,9 @@ export default {
 }
 #nav_back { 
   display: block;
-  position: absolute;
-  top: auto;
-  bottom: 20px;
-  left: 50%;
-  transform: translate(-50%, 0);
   text-align: center;
   padding: 0 20px;
+  width: 100%;
 }
 #nav_prev:hover, #nav_next:hover, #nav_back:hover {
   color:	#EED047;
@@ -601,11 +630,26 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .titleImg2Lines {
     display: inline;
     margin: 10px 0px;
+  }
+  .headerItems {
     padding: 0px 60px;
   }
   .headerText {
-    line-height: 1.4375rem;
-    font-size: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 7px;
+  }
+  .sportsmenHeaderMainCol {
+    max-width: 100%;
+    padding: 0px 60px;
+  }
+  .sportsmenLinkText,
+  .sportsmenLinkText img,
+  .sportsmen2LineTitleImg {
+    max-width: 100%;
+  }
+  .sportsmenLinkText img {
+    margin-left: -15px;
   }
   .nav_link_small {
     display: block;
@@ -632,13 +676,13 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
     margin: 10px 0px;
     padding: 0px;
   }
-  #headerItems {
+  .headerItems {
     padding: 0px 80px;
   }
   .headerText {
     font-size: 0.9375rem;
-    letter-spacing: 7px;
     line-height: 1.325rem;
+    letter-spacing: 7px;
   }
   .nav_link_small {
     display: block;
@@ -662,9 +706,10 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   }
   .titleImg2Lines {
     display: inline;
-    // margin: 10px 0px;
-    // padding: 0px 120px;
-    margin: 10px 120px;
+    margin: 10px 0px;
+  }
+  .headerItems {
+    padding: 0px 120px;
   }
   .nav_link_small {
     display: block;
@@ -681,9 +726,10 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   }
   .titleImg2Lines {
     display: inline;
-    // margin: 10px 0px;
-    // padding: 0px 120px;
-    margin: 10px 120px;
+    margin: 10px 0px;
+  }
+  .headerItems {
+    padding: 0px 120px;
   }
   .nav_link_small {
     display: block;
@@ -704,8 +750,9 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .titleImg2Lines {
     display: inline;
     margin: 10px 0px;
-    // padding: 0px 80px;
-    // margin: 10px 80px;
+  }
+  .headerItems {
+    padding: 0px 130px;
   }
 }
 

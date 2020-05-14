@@ -116,6 +116,11 @@ body {
   .contact_renderedContent p {
     margin-bottom: 0.5rem;
   }
+
+  .publication_mainText h2 {
+    font-size: calc(0.9375rem + 3 * (100vw - 375px) / (576 - 375) ); /* varies between 15px (0.9375rem) and 18px */
+    line-height: calc(1.0625rem + 7 * (100vw - 375px) / (576 - 375) ); /* varies between 17px (1.0625rem) and 24px */
+  }
 }
 
 /* Small devices (landscape phones, 576 - 768px) */
