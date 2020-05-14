@@ -144,15 +144,19 @@ export default {
     }
   },
 
+  components: {
+    ImageLightBox,
+    VideoLightBox,
+    AudioLightBox
+  },
+
   data() {
     return {
       mediaItemIndex: null,
       galleryIndex: null,
       imageIndex: null,
       videoIndex: null,
-      audioIndex: null,
-      windowHeight: 0,      
-      documentHeight: 0
+      audioIndex: null
     }
   },
 
@@ -265,35 +269,8 @@ export default {
       if (mediaType == 'audio') {
         this.audioIndex = 0
       }
-    },
-    getDocumentHeight() {
-      // ref: https://stackoverflow.com/a/1147768
-      const body = document.body
-      const html = document.documentElement  
-      this.documentHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight )
     }
-  },
-
-  mounted() {    
-    this.windowHeight = window.innerHeight
-    this.getDocumentHeight()
-
-    this.$nextTick(() => {
-
-      window.addEventListener('scroll', this.getDocumentHeight);
-      
-      window.addEventListener('resize', () => {
-        this.windowHeight = window.innerHeight 
-        this.getDocumentHeight()
-      });
-    })
-  },
-
-  components: {
-    ImageLightBox,
-    VideoLightBox,
-    AudioLightBox
-  },
+  }
 }
 </script>
 
