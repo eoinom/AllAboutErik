@@ -429,6 +429,7 @@ export default {
   width: 100%;
   height: 100%;
   z-index: -1;
+  transform: translate3d(0,0,0);  // Needed to fix an issue on iOS where the header image disappears
 }
 
 #headerLeftImg {
