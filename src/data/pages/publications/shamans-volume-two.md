@@ -2,7 +2,7 @@
 title: Shamans Volume Two
 titleImg2Lines: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586900042/Publications/4.%20Shamans%20Vol1%20and%20Vol2/title-shamans-white-2lines_ow7pfq.png
 titleImg2LinesConcise:
-  - https://res.cloudinary.com/all-about-erik/image/upload/v1589409475/Publications/4.%20Shamans%20Vol1%20and%20Vol2/title-shamans-white-2lines_concise_mqaqm6.png
+  - https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1589409475/Publications/4.%20Shamans%20Vol1%20and%20Vol2/title-shamans-white-2lines_concise_mqaqm6.png
 headerBgImg: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586900044/Publications/4.%20Shamans%20Vol1%20and%20Vol2/banner-Vol2-h16_dwthfs.jpg
 headerBgImgOpacity: 54
 mainTextTop: >-
@@ -29,9 +29,9 @@ mainTextBottom: "Illustrated with over 400 fully annotated colour plates, the
 bookImages:
   width: 713
   height: 620
-  commonPathStdRes: https://res.cloudinary.com/all-about-erik/image/upload/v1588289908/Publications/4.%20Shamans%20Vol1%20and%20Vol2/Book%20Images/Vol2%20-%20FullScreen/
+  commonPathStdRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588289908/Publications/4.%20Shamans%20Vol1%20and%20Vol2/Book%20Images/Vol2%20-%20FullScreen/
   commonFilenameHiRes: Shamans_Supernaturals_Animal_Spirits-vol2_-_zm-sm
-  commonPathHiRes: https://res.cloudinary.com/all-about-erik/image/upload/v1588290217/Publications/4.%20Shamans%20Vol1%20and%20Vol2/Book%20Images/Vol2%20-%20Zoomed%20sm/
+  commonPathHiRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588290217/Publications/4.%20Shamans%20Vol1%20and%20Vol2/Book%20Images/Vol2%20-%20Zoomed%20sm/
   commonFilenameStdRes: Shamans_Supernaturals_Animal_Spirits-vol2
   orientation: landscape
   commonFilenameStartNum: 1

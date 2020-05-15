@@ -6,7 +6,7 @@ headerBgImg: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586
 headerBgImgOpacity: 100
 headerLeftImg: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586896741/Old%20Time%20Sportsmen%20%28Common%29/hunter_ta5375.png
 headerRightImg: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586896742/Old%20Time%20Sportsmen%20%28Common%29/ducks_irayst.png
-headerHoverImg: https://res.cloudinary.com/all-about-erik/image/upload/v1587596183/Publications/2.%20Old-Time%20Sportsmen/guns-crossed_imnn0f.png
+headerHoverImg: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1587596183/Publications/2.%20Old-Time%20Sportsmen/guns-crossed_imnn0f.png
 mainTextTop: In the first years of the 20th century, newly mobile American
   travelers, hunters, and fisherman headed out by horseback, buggy, car, and
   boat. Their destination? The Great Outdoors! Whether in the photo studio or
@@ -26,9 +26,9 @@ videoUrl: https://player.vimeo.com/video/283168900
 bookImages:
   width: 713
   height: 535
-  commonPathStdRes: https://res.cloudinary.com/all-about-erik/image/upload/v1588288292/Publications/2.%20Old-Time%20Sportsmen/Book%20Images/FullScreen/
+  commonPathStdRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588288292/Publications/2.%20Old-Time%20Sportsmen/Book%20Images/FullScreen/
   commonFilenameHiRes: Old-Time_Sportsmen-zm
-  commonPathHiRes: https://res.cloudinary.com/all-about-erik/image/upload/v1588288306/Publications/2.%20Old-Time%20Sportsmen/Book%20Images/Zoomed%20sm/
+  commonPathHiRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588288306/Publications/2.%20Old-Time%20Sportsmen/Book%20Images/Zoomed%20sm/
   commonFilenameStdRes: Old-Time_Sportsmen-_full
   orientation: landscape
   commonFilenameStartNum: 1
