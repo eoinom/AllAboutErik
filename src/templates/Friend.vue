@@ -48,12 +48,14 @@
 
 
         <ImageLightBox
+          v-if="images != null"
           :images="images"
           :index="imageIndex"
           :disable-scroll="true"
           @close="imageIndex = null; galleryIndex = null"
         />
         <VideoLightBox
+          v-if="videos != null"
           :videos="videos"
           :index="videoIndex"
           :disable-scroll="true"
@@ -61,6 +63,7 @@
           @close="videoIndex = null; galleryIndex = null"
         />
         <AudioLightBox
+          v-if="audio != null"
           :audios="audio"
           :index="audioIndex"
           :disable-scroll="true"

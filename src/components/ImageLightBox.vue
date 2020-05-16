@@ -288,7 +288,6 @@ export default {
       return elements[0];
     },
     setImageLoaded(index) {
-      console.log('in setImageLoaded, index = ' + index);
       const el = this.getImageElByIndex(index);
       this.isImageLoaded = !el ? false : el.classList.contains('loaded');
     },
