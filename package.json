@@ -7,10 +7,6 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.24",
-    "@fortawesome/free-brands-svg-icons": "^5.11.1",
-    "@fortawesome/free-solid-svg-icons": "^5.11.1",
-    "@fortawesome/vue-fontawesome": "^0.1.7",
     "@gridsome/cli": "^0.3.1",
     "@gridsome/source-filesystem": "^0.5.0",
     "@gridsome/transformer-remark": "^0.3.2",
@@ -38,6 +34,7 @@
     "eslint-plugin-gridsome": "^1.2.8",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
-    "vue-eslint-parser": "^6.0.4"
+    "vue-eslint-parser": "^6.0.4",
+    "webpack-bundle-analyzer": "^3.7.0"
   }
 }

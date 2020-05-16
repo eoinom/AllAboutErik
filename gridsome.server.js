@@ -5,6 +5,9 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 module.exports = function (api) {
   api.loadSource(actions => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api
@@ -90,5 +93,14 @@ module.exports = function (api) {
         }
       })
     })
+  })
+
+  // configure webpack to use bundle analyzer plugin (ref: https://medium.com/js-dojo/how-to-reduce-your-vue-js-bundle-size-with-webpack-3145bf5019b7)
+  // reduce bundle size ref: https://www.codegram.com/blog/improving-a-gridsome-website-performance/
+  // (api.chainWebpack ref: https://gridsome.org/docs/server-api/#apichainwebpackfn)
+  api.chainWebpack(config => {
+    config
+      .plugin('BundleAnalyzerPlugin')
+      .use(BundleAnalyzerPlugin, [{ analyzerMode: 'static' }])
   })
 }

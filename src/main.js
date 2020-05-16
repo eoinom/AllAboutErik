@@ -7,13 +7,7 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import '~/assets/styles.css'
 import '~/assets/custom.scss'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { config, library } from '@fortawesome/fontawesome-svg-core'
-import { faVolumeUp, faVolumeMute, faPlay } from '@fortawesome/free-solid-svg-icons'
-import '@fortawesome/fontawesome-svg-core/styles.css'
 
-config.autoAddCss = false;
-library.add(faVolumeUp, faVolumeMute, faPlay)
 
 export default function (Vue, { router, head, isClient, appOptions }) {
   // for getting page leave transitions to work (https://github.com/gridsome/gridsome/issues/24)
@@ -28,12 +22,9 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
-  // Vue.use(BootstrapVue)
   Vue.use(BootstrapVue, {
     breakpoints: [`xs`, 'sm', 'md', 'lg', 'xl', 'xxl']
   })
-
-  Vue.component('font-awesome', FontAwesomeIcon)
 
   // vue-scrollto: https://github.com/rigor789/vue-scrollto
   var VueScrollTo = require('vue-scrollto')
