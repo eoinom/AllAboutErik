@@ -36,7 +36,7 @@ publications:
   - thumbnailHoverImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/01-skeleton-rollover_r3h9li.jpg
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/01-skeleton_gvhdkt.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/01-skeleton_i8q3lo.jpg
     title: As We Are Now
   - thumbnailHoverImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586824930/Publications/02-old-timey-sportsman-rollover_jzrn89.jpg
