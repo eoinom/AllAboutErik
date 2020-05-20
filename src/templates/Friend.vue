@@ -10,7 +10,7 @@
         </div>
 
         <b-container fluid class="wrapper">
-          <b-container fluid class="main-col"> 
+          <b-container fluid class="main-col mt-4 pt-4 px-4 pb-2 mb-2"> 
             <h1 id="heading"> {{ heading }} </h1>
             <div v-html="$page.friend.content" id="mainContent" />
           </b-container>
@@ -46,33 +46,33 @@
           </b-container>
         </b-container>
 
-
-        <ImageLightBox
-          v-if="images != null"
-          :images="images"
-          :index="imageIndex"
-          :disable-scroll="true"
-          @close="imageIndex = null; galleryIndex = null"
-        />
-        <VideoLightBox
-          v-if="videos != null"
-          :videos="videos"
-          :index="videoIndex"
-          :disable-scroll="true"
-          titlePosition="center"
-          @close="videoIndex = null; galleryIndex = null"
-        />
-        <AudioLightBox
-          v-if="audio != null"
-          :audios="audio"
-          :index="audioIndex"
-          :disable-scroll="true"
-          :show-caption="false"
-          @close="audioIndex = null; galleryIndex = null"
-        />
-
       </div>
     </transition>
+
+    <ImageLightBox
+      v-if="images != null"
+      :images="images"
+      :index="imageIndex"
+      :disable-scroll="true"
+      @close="imageIndex = null; galleryIndex = null"
+    />
+    <VideoLightBox
+      v-if="videos != null"
+      :videos="videos"
+      :index="videoIndex"
+      :disable-scroll="true"
+      titlePosition="center"
+      @close="videoIndex = null; galleryIndex = null"
+    />
+    <AudioLightBox
+      v-if="audio != null"
+      :audios="audio"
+      :index="audioIndex"
+      :disable-scroll="true"
+      :show-caption="false"
+      @close="audioIndex = null; galleryIndex = null"
+    />
+
   </Layout>
 </template>
 
@@ -137,7 +137,6 @@ import ImageLightBox from '../components/ImageLightBox.vue'
 import VideoLightBox from '../components/VideoLightBox.vue'
 import AudioLightBox from '../components/AudioLightBox.vue'
 
-var VueScrollTo = require('vue-scrollto');
 const slugify = require('@sindresorhus/slugify')
 
 export default {
@@ -196,8 +195,7 @@ export default {
             video.height = details.height
           });      
         });
-      }
-      
+      }      
       return videos
     },
     audio() {
@@ -279,7 +277,7 @@ export default {
 
 
 
-<style scoped>
+<style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 
 @font-face {
@@ -365,8 +363,9 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 
 .main-col {
-  max-width: 855px;
-  padding: 50px 0 10px 0;
+  max-width: 903px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
 }
 
 #heading {
@@ -387,14 +386,14 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 #mainContent {
   color: #FFFFFF;
-  font-family: 'NeueHaasGroteskText Pro55';
+  font-family: 'NeueHaasGroteskText Pro55', sans-serif;
   font-feature-settings: 'liga';
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 32px;
   text-align: justify;
-  text-shadow: 0px 0px 250px #1C0F07,0px 0px 250px #1C0F07/* glow */,1px 1px 2px rgba(28,16,23,0.89)/* drop shadow*/;
+  // text-shadow: 0px 0px 250px #1C0F07,0px 0px 250px #1C0F07/* glow */,1px 1px 2px rgba(28,16,23,0.89)/* drop shadow*/;  // NOTE: DISABLED AS THIS CAUSES A SEVERE PERFORMANCE HIT
 }
 
 .mediaItemsContainer {
@@ -437,7 +436,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Transition styles on router-view for fading the page */
 .page-enter-active {
-  transition-duration: 3.5s;
+  transition-duration: 5.5s;
   transition-property: opacity;
   transition-timing-function: ease-in-out;
 }
@@ -447,8 +446,12 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   transition-timing-function: ease-in-out;
 }
 .page-enter,
-.page-leave-active {
+.page-leave-to {
   opacity: 0;
+}
+.page-enter-to,
+.page-leave {
+  opacity: 1;
 }
 
 

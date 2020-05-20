@@ -26,7 +26,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     breakpoints: [`xs`, 'sm', 'md', 'lg', 'xl', 'xxl']
   })
 
-  // vue-scrollto: https://github.com/rigor789/vue-scrollto
+  // vue-scrollto (ref: https://github.com/rigor789/vue-scrollto)
   var VueScrollTo = require('vue-scrollto')
   Vue.use(VueScrollTo)
 
