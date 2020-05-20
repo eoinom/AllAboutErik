@@ -506,7 +506,7 @@ I began going to their gigs as they played around town. After many conversations
 
 
 
- A talent scout from Warners, Felix Chamberlin, came to see the group and brought his critique back to the company. Terrible songs, the singer can’t sing, guitar player sucks, and the band is raggedy and loose. But fate intervened, and with the help of an incredible string of positive fortune cookies that I got at late night dinners in Chinatown with Chris, and which I subsequently sent to Michael Ostin at Warner’s (which you can see below.), we finally got signed and began recording our first album. 
+ A talent scout from Warners, Felix Chamberlin, came to see the group and brought his critique back to the company. Terrible songs, the singer can’t sing, guitar player sucks, and the band is raggedy and loose. But fate intervened, and with the help of an incredible string of positive fortune cookies that I got at late night dinners in Chinatown with Chris, and which I subsequently sent to Michael Ostin at Warner’s (which you can see below), we finally got signed and began recording our first album. 
 
 
 
