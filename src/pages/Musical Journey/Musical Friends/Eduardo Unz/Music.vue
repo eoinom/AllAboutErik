@@ -3,36 +3,21 @@
     <b-container class="main-col pt-5">
       
       <div style="text-align: center">
-        <!-- <h1 class="heading">{{ title }}</h1> -->
-        <h1 class="heading">Eduardo Unz Music</h1>
+        <h1 class="heading">{{ title }}</h1>
       </div>
       
       <div v-for="(track, index) in tracks" :key="index" class="mb-3">
 
         <b-row v-if="index % 2 === 0" align-h="end" align-v="center">
-          <b-col class="">
+          <b-col>
             <p class="trackTitle textAlignEnd">{{ track.title }}</p>
-            <!-- <p class="trackCaption textAlignEnd hideOnMobile">{{ track.caption }}</p> -->
           </b-col>
-          <!-- <b-col cols="auto" class="pl-2">
-            <g-image :src="track.image" class="trackImg my-3" />
-          </b-col>           -->
-          <!-- <b-col cols="12" class="pr-4">
-            <p class="trackCaption textAlignEnd showOnMobile">{{ track.caption }}</p>
-          </b-col> -->
         </b-row>
 
         <b-row v-else align-h="start" align-v="center">
-          <!-- <b-col cols="auto" class="pr-2">
-            <g-image :src="track.image" class="trackImg my-3" />
-          </b-col> -->
-          <b-col class="">
+          <b-col>
             <p class="trackTitle">{{ track.title }}</p>
-            <!-- <p class="trackCaption hideOnMobile">{{ track.caption }}</p> -->
           </b-col>
-          <!-- <b-col cols="12" class="pl-4">
-            <p class="trackCaption showOnMobile">{{ track.caption }}</p>
-          </b-col> -->
         </b-row>
 
         <audio-player :src="track.url" secondaryColor="#E7413F" padding="5px 0px" />
@@ -99,14 +84,6 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 
-/* @font-face {
-  font-family: NeueHaasGroteskText Pro55;
-  src: url('../../../../assets/fonts/nhaasgrotesktxpro-55rg.eot');
-  src: url('../../../../assets/fonts/nhaasgrotesktxpro-55rg.eot?#iefix') format('embedded-opentype'),
-       url('../../../../assets/fonts/nhaasgrotesktxpro-55rg.woff') format('woff'),
-       url('../../../../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg');
-  font-weight: normal;
-} */
 @font-face {
   font-family: NeueHaasGroteskText Pro75Bd;
   src: url('../../../../assets/fonts/nhaasgrotesktxpro-75bd.woff') format('woff'), /* Pretty Modern Browsers */
@@ -140,20 +117,6 @@ export default {
   margin-bottom: 0;
 }
 
-/* .trackCaption {
-  color: #cecece; 
-  font-family: 'NeueHaasGroteskText Pro55';
-  font-feature-settings: 'liga';
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 0;
-} */
-
-/* .trackImg {
-  max-height: 86px;
-  display: block;
-} */
-
 .textAlignEnd {
   text-align: end;
 }
@@ -179,7 +142,6 @@ hr.style-two {
   font-feature-settings: 'liga';
   font-weight: 400;
   font-style: italic;
-  /* font-size: 2.4375rem; */
   font-size: 2rem;
   letter-spacing: 1px;
   text-align: center;
@@ -205,9 +167,6 @@ hr.style-two {
   .trackTitle, .nav_link {
     font-size: 1.5rem;
   }
-  /* .trackCaption {
-    font-size: 0.9rem;
-  } */
   .hideOnMobile {
     display: none;
   }
@@ -228,9 +187,6 @@ hr.style-two {
   .nav_link {
     font-size: 1.375rem;
   }
-  /* .trackCaption {
-    font-size: 0.8rem;
-  } */
 }
 
 /* Small devices (landscape phones, 576px and up) */
