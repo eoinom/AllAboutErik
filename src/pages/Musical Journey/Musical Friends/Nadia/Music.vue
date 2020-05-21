@@ -34,7 +34,7 @@
           </b-col>
         </b-row>
 
-        <audio-player :src="track.url" secondaryColor="#E7413F" padding="5px 0px" />
+        <AudioPlayer :src="track.url" secondaryColor="#E7413F" padding="5px 0px" />
 
         <hr class="style-two">
       </div>
