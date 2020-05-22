@@ -5,6 +5,10 @@
       <div style="text-align: center">
         <h1 class="heading">{{ title }}</h1>
       </div>
+
+      <div class="mt-4">
+        <b-button variant="danger" @click="onPlayAllClick()">{{ playBtnText }}</b-button>
+      </div>
       
       <div v-for="(track, index) in tracks" :key="index" class="mb-3">
 
@@ -34,7 +38,7 @@
           </b-col>
         </b-row>
 
-        <AudioPlayer :src="track.url" secondaryColor="#E7413F" padding="5px 0px" />
+        <AudioPlayer :ref="'nadiaSong-'+index" :src="track.url" secondaryColor="#E7413F" padding="5px 0px" />
 
         <hr class="style-two">
       </div>
@@ -72,6 +76,7 @@
 
 <script scoped>
 import AudioPlayer from '../../../../components/AudioPlayer'
+import { EventBus } from '../../../../event-bus'
 
 export default { 
   metaInfo() {
@@ -80,18 +85,58 @@ export default {
     }
   },
 
+  components: {
+    AudioPlayer
+  },
+
+  data: () => ({
+    playingAll: false,
+    playingIndex: null
+  }),
+
   computed: {
     title() {
       return this.$page.NadiaMusic.edges[0].node.titleText
     },
     tracks() {
       return this.$page.NadiaMusic.edges[0].node.tracks
+    },
+    playBtnText() {
+      return this.playingAll ? 'Stop' : 'Play All'
     }
   },
 
-  components: {
-    AudioPlayer
+  mounted() {
+    EventBus.$on('audioEnded', this.eventBusListener)
   },
+
+  methods: {
+    onPlayAllClick() {
+      if (!this.playingAll) {
+        this.playAll()
+      } else {
+        this.$refs[`nadiaSong-${this.playingIndex}`][0].stop()
+        this.playingAll = false
+        this.playingIndex = null
+      }
+    },
+    playAll() {
+      this.playingAll = true
+      this.playingIndex = 0
+      this.$refs[`nadiaSong-${this.playingIndex}`][0].play()
+    },
+    eventBusListener() {
+      if (this.playingAll) {
+        this.playingIndex++
+        if (this.playingIndex >= this.tracks.length) {
+          this.playingAll = false
+          this.playingIndex = null
+        } else {
+          this.$refs[`nadiaSong-${this.playingIndex}`][0].play()
+        }
+      }
+    },
+  }
 }
 </script>
 
