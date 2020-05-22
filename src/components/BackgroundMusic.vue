@@ -119,6 +119,7 @@ export default {
         let fadeAudioOut = setInterval(function() {
           // console.log('fadeAudioOut, this.audio.currentTime = ' + this.audio.currentTime + ', this.audio.volume = ' + this.audio.volume);
           // console.log('fadeAudioOut, this.maxVolume = ' + this.maxVolume);
+          // console.log('fadeAudioOut, this.audio.volume = ' + this.audio.volume);
           this.audioFinished = false
           if ((this.audio.currentTime >= fadeOutPoint) && (this.audio.volume != 0.0)) {
             this.audio.volume = Math.max(0.0, (this.audioDuration - this.audio.currentTime) / this.audioFadeOutDuration);

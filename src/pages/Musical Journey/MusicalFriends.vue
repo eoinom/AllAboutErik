@@ -6,6 +6,7 @@
       :audioDuration="$page.MusicalFriends.edges[0].node.bgAudioDuration"
       :audioFadeInDuration="$page.MusicalFriends.edges[0].node.bgAudioFadeInDuration"
       :audioFadeOutDuration="$page.MusicalFriends.edges[0].node.bgAudioFadeOutDuration"
+      :maxVolume=0.9
     />
        
     <MusicalFriendsComponent
