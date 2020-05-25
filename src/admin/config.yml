@@ -494,6 +494,7 @@ collections:
             fields: 
               - {label: "Text", name: "text", widget: "string", required: false}
               - {label: "Image", name: "img", widget: "image", required: false}
+              - {label: "Image (bright version)", name: "img_bright", widget: "image"}
               - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
       
 
