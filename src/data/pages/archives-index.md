@@ -68,6 +68,50 @@ tiles:
     opacity: 84
     img:
       - https://res.cloudinary.com/all-about-erik/image/upload/v1590447717/Archives/tiles/01_icon_music_biz_fpi9uh.jpg
+    img_bright:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447717/Archives/tiles/01_icon_music_biz-bright_ke9guf.jpg
+  - text: Spoonful at the Nite Owl '64
+    img:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447717/Archives/tiles/02-icon-spoonful_tfbjir.jpg
+    img_bright:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447717/Archives/tiles/02-icon-spoonful-bright_ghltvs.jpg
+    opacity: 84
+  - text: Knob Lick Upper 10,000
+    img:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447717/Archives/tiles/03-icon-knoblick_qkmpfx.jpg
+    img_bright:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447717/Archives/tiles/03-icon-knoblick-bright_wlscyt.jpg
+    opacity: 84
+  - text: '"Adult" Erik'
+    img:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447717/Archives/tiles/04-icon-adult_ke4iyp.jpg
+    img_bright:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447717/Archives/tiles/04-icon-adult-bright_xp5u3r.jpg
+    opacity: 100
+  - text: Interviews & Articles
+    img:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447717/Archives/tiles/05-icon-interviews_w1b5nu.jpg
+    img_bright:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447718/Archives/tiles/05-icon-interviews-bright_ymi1lo.jpg
+    opacity: 84
+  - text: My Old Partner Bob
+    img:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447718/Archives/tiles/06-icon-bob_stipuy.jpg
+    img_bright:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447716/Archives/tiles/06-icon-bob-bright_qdmt1u.jpg
+    opacity: 100
+  - text: Lots of Fishing
+    img:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447716/Archives/tiles/07-icon-fishing_e32hbu.jpg
+    img_bright:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447717/Archives/tiles/07-icon-fishing-bright_crvto3.jpg
+    opacity: 100
+  - text: The "Writer"
+    img:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447716/Archives/tiles/08-icon-writing_jkdvre.jpg
+    img_bright:
+      - https://res.cloudinary.com/all-about-erik/image/upload/v1590447716/Archives/tiles/08-icon-writing-bright_gzfowt.jpg
+    opacity: 100
 ---
 These so called archives are comprised of a potpourri of memorabilia.  
 
