@@ -462,6 +462,39 @@ collections:
             fields:
               - {label: "Video (webm)", name: "videoSrcWebm", widget: "string", required: false}
               - {label: "Video (mp4)", name: "videoSrcMP4", widget: "string", required: false}
+
+      - label: "Archives Index"
+        name: "archives-index" 
+        file: "src/data/pages/archives-index.md"
+        fields:
+          - {label: "Page Title", name: "pageTitle", widget: "string"}  
+          - {label: "Heading Image", name: "headingImg", widget: "image"}  
+          - {label: 'Main text', name: 'body', widget: 'markdown'}  
+          - {label: 'Background Audio', name: 'bgAudio', widget: 'file', required: false}
+          - {label: 'Background Audio Duration', name: 'bgAudioDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - {label: 'Background Audio Fade In Duration', name: 'bgAudioFadeInDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - {label: 'Background Audio Fade Out Duration', name: 'bgAudioFadeOutDuration', widget: 'number', valueType: "float", min: 0, required: false}
+          - label: "Slides"
+            name: "slides"
+            widget: "list"
+            fields: 
+              - {label: "Image", name: "img", widget: "image"}
+              - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+              - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, max: 60, required: false}
+              - {label: "Scale from", name: "scaleFrom", widget: "number", valueType: "float", min: 1, max: 2, required: false}
+              - {label: "Scale to", name: "scaleTo", widget: "number", valueType: "float", min: 1, max: 2, required: false}
+              - label: "Pan start from"
+                name: "panStart"
+                widget: "select"
+                required: false
+                options: ["top-left", "top", "top-right", "left", "centre", "right", "bottom-left", "bottom", "bottom-right"]
+          - label: "Tiles"
+            name: "tiles"
+            widget: "list"
+            fields: 
+              - {label: "Text", name: "text", widget: "string", required: false}
+              - {label: "Image", name: "img", widget: "image", required: false}
+              - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
       
 
   - label: "Friends"
