@@ -32,20 +32,10 @@
 </page-query>
 
 <script scoped>
-import BackgroundMusic from '../../components/BackgroundMusic.vue'
-import MusicalFriendsComponent from '../../components/MusicalFriendsComponent.vue'
+import BackgroundMusic from '../../../components/BackgroundMusic.vue'
+import MusicalFriendsComponent from '../../../components/MusicalFriendsComponent.vue'
 
 export default {
-  metaInfo() {
-    return {
-    }
-  },
-
-  data() {
-    return {
-    }
-  },
-
   components: {
     BackgroundMusic,
     MusicalFriendsComponent

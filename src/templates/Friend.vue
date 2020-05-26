@@ -38,7 +38,7 @@
             <b-row align-h="center" class="text-center">
               <b-col>
                 <div :style="navLinksVisibility" class="navLinksContainer">
-                  <g-link to="/musical-journey/musical-friends-menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
+                  <g-link to="/musical-journey/musical-friends/menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
                 </div>
               </b-col>
             </b-row>
