@@ -468,7 +468,7 @@ collections:
         file: "src/data/pages/archives-index.md"
         fields:
           - {label: "Page Title", name: "pageTitle", widget: "string"}  
-          - {label: "Heading Image", name: "headingImg", widget: "image"}  
+          - {label: "Heading Image", name: "titleImg", widget: "image"}  
           - {label: 'Main text', name: 'body', widget: 'markdown'}  
           - {label: 'Background Audio', name: 'bgAudio', widget: 'file', required: false}
           - {label: 'Background Audio Duration', name: 'bgAudioDuration', widget: 'number', valueType: "float", min: 0, required: false}
