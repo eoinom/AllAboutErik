@@ -2,7 +2,7 @@
   <Layout>
 
     <BackgroundMusic
-      :audioFile="node.bgAudio[0]"
+      :audioFile="node.bgAudio"
       :audioDuration="node.bgAudioDuration"
       :audioFadeInDuration="node.bgAudioFadeInDuration"
       :audioFadeOutDuration="node.bgAudioFadeOutDuration"
@@ -21,13 +21,13 @@
           <div class="slideshowOverlay mb-5 pb-5">
             <div class="mainContent mx-auto">
 
-              <g-image alt="Archives title image" v-if="titleImg != null" :src="titleImg[0]" id="titleImg" class="mb-md-1 mb-lg-2 mb-xl-3"/>
+              <g-image alt="Archives title image" v-if="titleImg != null" :src="titleImg" id="titleImg" class="mb-md-1 mb-lg-2 mb-xl-3"/>
 
               <div v-html="slideshowText" id="slideshowText" />
 
               <div id="scrollDownContainer" class="pb-5">
                 <ScrollDownArrow
-                  scrollToElement="#topOfMainBody"
+                  scrollToElement="#tilesContainer"
                 />
               </div>
 
@@ -39,16 +39,16 @@
     </b-container>
 
 
-    <b-container fluid class="tilesContainer" id="topOfMainBody">
+    <b-container fluid id="tilesContainer">
       <b-row no-gutters align-h="center" class="tilesRow mb-1">
         <b-col
           v-for="(tile, index) in tiles"
           :key="index"
-          cols=""
+          cols="3"
           align-self="center"
-          class="tilesCols p-0 mx-0 my-2"
+          class="tilesCols p-0 mx-3 my-3"
         >
-          <!-- <CollectionThumbnail :collection="collection" />           -->
+          <ArchivesThumbnail :thumbnailObj="tile" />
         </b-col>
       </b-row>
     </b-container>
@@ -92,8 +92,8 @@
 
 
 <script scoped>
+import ArchivesThumbnail from '../components/ArchivesThumbnail.vue'
 import BackgroundMusic from '../components/BackgroundMusic.vue'
-// import PublicationThumbnail from '../components/PublicationThumbnail.vue'
 import ScrollDownArrow from '../components/ScrollDownArrow.vue'
 import ScrollToTop from '../components/ScrollToTop.vue'
 import SlideshowKenBurnsSmall from '../components/SlideshowKenBurnsSmall.vue'
@@ -106,8 +106,8 @@ export default {
   },
 
   components: {
+    ArchivesThumbnail,
     BackgroundMusic,
-    // PublicationThumbnail,
     ScrollDownArrow,
     ScrollToTop,
     SlideshowKenBurnsSmall
@@ -216,6 +216,17 @@ export default {
   letter-spacing: 2px;
   text-align: center;
   text-shadow: 0px 0px 250px #1C0F07,0px 0px 250px #1C0F07/* glow */, 1px 1px 2px rgba(28,16,23,0.89)/* drop shadow*/;
+}
+
+#tilesContainer {
+  width: 100%;
+  max-width: 2048px;
+  padding: 0;
+  text-align: center;
+}
+
+.tilesCols {
+  max-width: 480px;
 }
 
 

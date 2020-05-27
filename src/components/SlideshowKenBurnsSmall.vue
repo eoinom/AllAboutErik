@@ -102,7 +102,9 @@ export default {
           case 'top':           return 'top';
           case 'top-right':     return 'top right';
           default:
-            console.log('Did not recognise value for slides.panStart: ' + this.slides[index].panStart)
+            console.log('Did not recognise value for slides[' + index + '].panStart: ' + this.slides[index].panStart)
+            console.log('this.slides[' + index + ']: ')
+            console.log(this.slides[index])
         } 
         return 'center'
       }
