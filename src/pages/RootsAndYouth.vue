@@ -134,7 +134,7 @@
 <script scoped>
 import BackgroundMusic from '../components/BackgroundMusic.vue'
 import ScrollDownArrow from '../components/ScrollDownArrow.vue'
-import SlideshowImages from '../components/SlideshowImages2.vue'
+import SlideshowImages from '../components/SlideshowImages.vue'
 import VideoLightBox from '../components/VideoLightBox.vue'
 import VideoThumbnailRoots from '../components/VideoThumbnailRoots.vue'
 
@@ -200,7 +200,7 @@ export default {
   },
 
   components: {
-    'slideshow-images': require('../components/SlideshowImages2.vue').default,
+    'slideshow-images': require('../components/SlideshowImages.vue').default,
     ScrollDownArrow,
     BackgroundMusic,
     VideoLightBox,
