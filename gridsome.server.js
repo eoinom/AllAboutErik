@@ -98,9 +98,10 @@ module.exports = function (api) {
   // configure webpack to use bundle analyzer plugin (ref: https://medium.com/js-dojo/how-to-reduce-your-vue-js-bundle-size-with-webpack-3145bf5019b7)
   // reduce bundle size ref: https://www.codegram.com/blog/improving-a-gridsome-website-performance/
   // (api.chainWebpack ref: https://gridsome.org/docs/server-api/#apichainwebpackfn)
+  // ref: https://github.com/webpack-contrib/webpack-bundle-analyzer/blob/master/README.md
   api.chainWebpack(config => {
     config
       .plugin('BundleAnalyzerPlugin')
-      .use(BundleAnalyzerPlugin, [{ analyzerMode: 'static' }])
+      .use(BundleAnalyzerPlugin, [{ analyzerMode: 'static', openAnalyzer: false }])
   })
 }
