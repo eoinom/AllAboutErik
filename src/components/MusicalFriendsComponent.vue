@@ -1256,6 +1256,12 @@ export default {
     }
   },
 
+  components: {
+    FriendCard,
+    ScrollDownArrow,
+    ScrollToTop
+  },
+
   props: {
     menuOnly: {
       type: Boolean,
@@ -1323,25 +1329,6 @@ export default {
     }
   },
 
-  methods: {
-    scrollFunction() {
-      // console.log('in scroll EventListener');      
-      if (this.scrollY != window.pageYOffset) {
-        this.scrollY = window.pageYOffset 
-        // console.log('this.scrollY = ' + this.scrollY);
-        let bodyRect = document.body.getBoundingClientRect()
-        let element = document.getElementById('topOfFriends')
-        let elemRect = element.getBoundingClientRect()
-        this.targetPosY = elemRect.top - bodyRect.top
-        // console.log('in scrollFunction, elemRect.top - bodyRect.top = ' + elemRect.top + ' - ' + bodyRect.top + ' = ' + this.targetPosY);
-      }
-    },
-    addScrollListener() {
-      // console.log('in addScrollListener');      
-      window.addEventListener('scroll', this.scrollFunction);
-    }
-  },
-
   mounted() {
     this.addScrollListener()
     
@@ -1354,32 +1341,38 @@ export default {
       let element = document.getElementById('topOfFriends')      
       let elemRect = element.getBoundingClientRect()
       this.targetPosY = elemRect.top - bodyRect.top
-      // console.log('in mounted setTimeout, elemRect.top - bodyRect.top = ' + elemRect.top + ' - ' + bodyRect.top + ' = ' + this.targetPosY);
     }.bind(this), 500);
 
     this.windowWidth = window.innerWidth
     this.windowHeight = window.innerHeight
 
-    this.$nextTick(() => {
-      window.addEventListener('resize', () => {
-      // console.log('in resize EventListener');      
-        this.windowWidth = window.innerWidth
-        this.windowHeight = window.innerHeight
+    window.addEventListener('resize', this.onResize)
+    window.addEventListener('orientationchange', this.onResize)
+  },
 
+  methods: {
+    addScrollListener() { 
+      window.addEventListener('scroll', this.scrollFunction);
+    },
+    scrollFunction() {   
+      if (this.scrollY != window.pageYOffset) {
+        this.scrollY = window.pageYOffset
         let bodyRect = document.body.getBoundingClientRect()
         let element = document.getElementById('topOfFriends')
         let elemRect = element.getBoundingClientRect()
         this.targetPosY = elemRect.top - bodyRect.top
-        // console.log('in resize, elemRect.top - bodyRect.top = ' + elemRect.top + ' - ' + bodyRect.top + ' = ' + this.targetPosY);
-      });
-    })
-  },
+      }
+    },
+    onResize() {
+      this.windowWidth = window.innerWidth
+      this.windowHeight = window.innerHeight
 
-  components: {
-    FriendCard,
-    ScrollDownArrow,
-    ScrollToTop
-  },
+      let bodyRect = document.body.getBoundingClientRect()
+      let element = document.getElementById('topOfFriends')
+      let elemRect = element.getBoundingClientRect()
+      this.targetPosY = elemRect.top - bodyRect.top
+    }
+  }
 }
 </script>
 

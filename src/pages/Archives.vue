@@ -11,14 +11,13 @@
 
     <b-container fluid class="main-col m-0, p-0">
       <b-row no-gutters class="mb-1 px-1">
-        <b-col class="slideshowCol">
+        <b-col class="slideshowCol" :style="slideshowColStyles">
 
           <!-- HEADER SLIDESHOW -->
-          <!-- <SlideshowKenBurnsSmall :slides="slides" height="79vh" /> -->
           <SlideshowKenBurnsSmall :slides="slides" height="100vh" />
 
           <!-- SLIDESHOW OVERLAY -->
-          <div class="slideshowOverlay mb-5 pb-5">
+          <div class="slideshowOverlay mb-5 pb-5" :style="slideshowOverlayStyles">
             <div class="mainContent mx-auto">
 
               <g-image alt="Archives title image" v-if="titleImg != null" :src="titleImg" id="titleImg" class="mb-md-1 mb-lg-2 mb-xl-3"/>
@@ -26,9 +25,7 @@
               <div v-html="slideshowText" id="slideshowText" />
 
               <div id="scrollDownContainer" class="pb-5">
-                <ScrollDownArrow
-                  scrollToElement="#tilesContainer"
-                />
+                <ScrollDownArrow scrollToElement="#tilesRow" />
               </div>
 
             </div>
@@ -39,8 +36,8 @@
     </b-container>
 
 
-    <b-container fluid id="tilesContainer">
-      <b-row no-gutters align-h="center" class="tilesRow mb-1">
+    <b-container fluid id="tilesContainer" :style="tilesContainerStyles">
+      <b-row no-gutters align-h="center" id="tilesRow" class="mb-1">
         <b-col
           v-for="(tile, index) in tiles"
           :key="index"
@@ -115,6 +112,9 @@ export default {
 
   data() {
     return {
+      scrollY: 0.0,
+      targetPosY: 0.0,
+      windowHeight: 0
     }
   },
 
@@ -131,12 +131,66 @@ export default {
     slides() {
       return this.node.slides
     },
+    slideshowColStyles() {
+      return {
+        opacity: this.scrollY < this.targetPosY ? 1.0 - (this.scrollY / this.targetPosY) : 0.0
+      }
+    },
+    slideshowOverlayStyles() {
+      return {
+        opacity: this.scrollY < (this.targetPosY / 2) ? 1.0 - (this.scrollY / (this.targetPosY / 2)) : 0.0
+      }
+    },
     tiles() {
       return this.node.tiles
     },
+    tilesContainerStyles() {
+      return {
+        paddingTop: this.windowHeight + 'px'
+      }
+    }
+  },
+
+  mounted() {
+    this.addScrollListener()
+    
+    setTimeout(function(){
+      if (window.pageYOffset != 0) {
+        window.scrollTo(0, 0); // scroll to top of page (avoid inconsistent behaviour of using browser back button)
+        this.scrollY = window.pageYOffset
+      }
+      let bodyRect = document.body.getBoundingClientRect()
+      let element = document.getElementById('tilesRow')      
+      let elemRect = element.getBoundingClientRect()
+      this.targetPosY = elemRect.top - bodyRect.top
+    }.bind(this), 500);
+
+    this.windowHeight = window.innerHeight
+    window.addEventListener('resize', this.onResize)
+    window.addEventListener('orientationchange', this.onResize)
   },
 
   methods: {
+    addScrollListener() {      
+      window.addEventListener('scroll', this.scrollFunction);
+    },
+    scrollFunction() {    
+      if (this.scrollY != window.pageYOffset) {
+        this.scrollY = window.pageYOffset
+        let bodyRect = document.body.getBoundingClientRect()
+        let element = document.getElementById('tilesRow')
+        let elemRect = element.getBoundingClientRect()
+        this.targetPosY = elemRect.top - bodyRect.top
+      }
+    },
+    onResize() {
+      this.windowHeight = window.innerHeight
+      
+      let bodyRect = document.body.getBoundingClientRect()
+      let element = document.getElementById('tilesRow')
+      let elemRect = element.getBoundingClientRect()
+      this.targetPosY = elemRect.top - bodyRect.top
+    }
   },
 }
 </script>
@@ -164,9 +218,10 @@ export default {
 }
 
 .main-col {
-  // max-width: 1458px;
   max-width: 100%;
   min-height: 600px;
+  position: fixed;
+  z-index: 0;
 }
 
 .slideshowCol {
@@ -180,9 +235,8 @@ export default {
 
 .slideshowOverlay {
   position: absolute;
-  // top: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 10;
   width: 100%;
 }
 
@@ -194,7 +248,7 @@ export default {
   padding-left: 5%;
   padding-right: 5%;
   text-align: center;
-  z-index: 500;
+  z-index: 20;
 }
 
 #titleImg {
@@ -223,10 +277,12 @@ export default {
   max-width: 2048px;
   padding: 0;
   text-align: center;
+  z-index: 50;
 }
 
 .tilesCols {
   max-width: 480px;
+  background-color: black;
 }
 
 

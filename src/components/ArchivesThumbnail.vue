@@ -186,14 +186,6 @@ https://codepen.io/beije/pen/zxjeae */
   display: none;
 }
 
-// .thumbnailImgContainer {
-//   opacity: 0.7;
-//   transition: all 0.5s ease 0s;
-// }
-// .thumbnailContainer:hover .thumbnailImgContainer {
-//   opacity: 1;
-// }
-
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
