@@ -37,7 +37,7 @@
 
 
     <b-container fluid id="tilesContainer" :style="tilesContainerStyles">
-      <b-row no-gutters align-h="center" id="tilesRow" class="mb-1">
+      <b-row no-gutters align-h="center" id="tilesRow" class="mb-5 pb-4">
         <b-col
           v-for="(tile, index) in tiles"
           :key="index"
