@@ -173,6 +173,6 @@ videos:
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1588627933/Travels/Capri_q1eqyf.jpg
     title: Capri & The Famous Blue Grotto
-    url: 'https://player.vimeo.com/video/393446527'
+    url: 'https://player.vimeo.com/video/421757880'
 ---
 
