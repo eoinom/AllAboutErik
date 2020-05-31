@@ -89,17 +89,13 @@ tiles:
     img_bright:
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447717/Archives/tiles/04-icon-adult-bright_xp5u3r.jpg
     opacity: 100
-  - text: Interviews & Articles
-    img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447717/Archives/tiles/05-icon-interviews_w1b5nu.jpg
-    img_bright:
-      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447718/Archives/tiles/05-icon-interviews-bright_ymi1lo.jpg
-    opacity: 84
-  - text: My Old Partner Bob
-    img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447718/Archives/tiles/06-icon-bob_stipuy.jpg
-    img_bright:
-      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447716/Archives/tiles/06-icon-bob-bright_qdmt1u.jpg
+  - text: My Amazing Mom
+    img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/14-icon-mom_vl0yad.jpg
+    img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/14-icon-mom-bright_r5nndg.jpg
+    opacity: 100
+  - text: Erik's Flowers
+    img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/22-icon-flowers_g0unts.jpg
+    img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/22-icon-flowers-bright_xk752p.jpg
     opacity: 100
   - text: Lots of Fishing
     img: >-
@@ -107,9 +103,9 @@ tiles:
     img_bright:
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447717/Archives/tiles/07-icon-fishing-bright_crvto3.jpg
     opacity: 100
-  - text: The "Writer"
-    img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447716/Archives/tiles/08-icon-writing_jkdvre.jpg
-    img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447716/Archives/tiles/08-icon-writing-bright_gzfowt.jpg
+  - text: Baby Erik
+    img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/12-icon-baby_saqqng.jpg
+    img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/12-icon-baby-bright_nhawfj.jpg
     opacity: 100
   - text: The Scout
     img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447716/Archives/tiles/09-icon_scouts2_zgwpop.jpg
@@ -123,19 +119,15 @@ tiles:
     img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/11-icon-boyhood_b5zkal.jpg
     img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/11-icon-boyhood-bright_qrikjy.jpg
     opacity: 100
-  - text: Baby Erik
-    img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/12-icon-baby_saqqng.jpg
-    img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/12-icon-baby-bright_nhawfj.jpg
+  - text: Family Trip to Europe '57
+    img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/20-icon-trip_y7g9b7.jpg
+    img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447306/Archives/tiles/20-icon-trip-bright_qqnpr3.jpg
     opacity: 100
   - text: Relatives
     img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/13-icon_relatives_cspx68.jpg
     img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/13-icon_relatives-bright_gv9qyy.jpg
     opacity: 100
-  - text: My Amazing Mom
-    img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/14-icon-mom_vl0yad.jpg
-    img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/14-icon-mom-bright_r5nndg.jpg
-    opacity: 100
-  - text: My Dad Earle
+  - text: My Dad Earl
     img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/15-icon-earle_mvvs5n.jpg
     img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/15-icon-earle-bright_vmdclc.jpg
     opacity: 100
@@ -155,25 +147,33 @@ tiles:
     img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447306/Archives/tiles/19-icon_grandparents_jllraz.jpg
     img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447306/Archives/tiles/19-icon_grandparents-bright_umghpu.jpg
     opacity: 100
-  - text: Family Trip to Europe '57
-    img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/20-icon-trip_y7g9b7.jpg
-    img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447306/Archives/tiles/20-icon-trip-bright_qqnpr3.jpg
-    opacity: 100
-  - text: Memorabilia
-    img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/21-icon-documentation_swomkp.jpg
-    img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/21-icon-documentation-bright_blgqv8.jpg
+  - text: My Old Partner Bob
+    img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447718/Archives/tiles/06-icon-bob_stipuy.jpg
+    img_bright:
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447716/Archives/tiles/06-icon-bob-bright_qdmt1u.jpg
     opacity: 100
   - text: My Son Jakob
-    img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/22-icon-flowers_g0unts.jpg
-    img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/22-icon-flowers-bright_xk752p.jpg
-    opacity: 100
-  - text: My Son Nico
     img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/23-icon-jakob_ebvkly.jpg
     img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/23-icon-jakob-bright_iqgwgj.jpg
     opacity: 100
-  - text: Erik's Flowers
+  - text: My Son Nico
     img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/24-icon-nico_nodm3w.jpg
     img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/24-icon-nico-bright_hi6k1t.jpg
+    opacity: 100
+  - text: The "Writer"
+    img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447716/Archives/tiles/08-icon-writing_jkdvre.jpg
+    img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447716/Archives/tiles/08-icon-writing-bright_gzfowt.jpg
+    opacity: 100
+  - text: Interviews & Articles
+    img: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447717/Archives/tiles/05-icon-interviews_w1b5nu.jpg
+    img_bright:
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447718/Archives/tiles/05-icon-interviews-bright_ymi1lo.jpg
+    opacity: 84
+  - text: Documentation
+    img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/21-icon-documentation_swomkp.jpg
+    img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/21-icon-documentation-bright_blgqv8.jpg
     opacity: 100
 ---
 These so called archives are comprised of a potpourri of memorabilia.  
