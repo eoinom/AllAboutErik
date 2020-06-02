@@ -56,9 +56,13 @@ slides:
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590445374/Archives/slideshow/10-music_8_ttkjun.jpg
     panStart: centre
+    scaleFrom: 1
+    scaleTo: 1.06
   - img: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590445375/Archives/slideshow/11-img347_mbycsi.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1591135597/Archives/slideshow/11-img347-cropped_jnfkuh.jpg
     panStart: centre
+    scaleFrom: 1.06
+    scaleTo: 1
   - img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590445374/Archives/slideshow/12-erik-jacobsen-boat-sept1967_t7szc2.jpg
     panStart: top-right

@@ -47,6 +47,10 @@ export default {
       default: false,
       type: Boolean
     },
+    scaleImgToContainer: {
+      default: false,
+      type: Boolean
+    },
     backgroundColor: {
       default: 'black',
       type: String
@@ -84,8 +88,13 @@ export default {
       css.transformOrigin = this.panStart(index)
       css['--imgOpacity'] = this.slides[index].opacity ? this.slides[index].opacity / 100 : 0.62
       css.maxWidth = this.maxImgWidth
-      if (this.centerVertically)
+      if (this.centerVertically) {
         css.top = '50%'
+      }
+      if (this.scaleImgToContainer) {
+        css.minWidth = '100%'
+        css.minHeight = '100%'
+      }
       return css
     },
 

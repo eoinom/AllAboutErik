@@ -14,7 +14,11 @@
         <b-col class="slideshowCol" :style="slideshowColStyles">
 
           <!-- HEADER SLIDESHOW -->
-          <SlideshowKenBurnsSmall :slides="slides" height="100vh" />
+          <SlideshowKenBurnsSmall 
+            :slides="slides" 
+            height="100vh" 
+            :scaleImgToContainer=true
+          />
 
           <!-- SLIDESHOW OVERLAY -->
           <div class="slideshowOverlay mb-5 pb-5" :style="slideshowOverlayStyles">
@@ -226,7 +230,6 @@ export default {
 
 .slideshowCol {
   position: relative;
-  max-height: 1224px;
   width: auto;
   text-align: center;
   overflow-x: hidden;
