@@ -7,7 +7,7 @@ tracks:
       https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1582154523/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Music/01_Lets_Have_Lunch_acgdzb.mp3
   - title: Talk Talk
     url: >-
-      https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1582154529/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Music/02_Talk_Talk_mkqfab.mp3
+      https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1591130811/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Music/02_Talk_Talk_mp30zr.mp3
   - title: Last Kiss
     url: >-
       https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1582154529/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Music/03_Last_Kiss_rcanwg.mp3
