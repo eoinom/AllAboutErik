@@ -45,7 +45,7 @@
         <b-col
           v-for="(tile, index) in tiles"
           :key="index"
-          cols="3"
+          cols="12" md="5" lg="3"
           align-self="center"
           class="tilesCols p-0 mx-3 my-3"
         >
@@ -245,7 +245,7 @@ export default {
 
 .mainContent{
   bottom: 0;
-  width: 1289px;
+  max-width: 1289px;
   padding-bottom: 20px;
   padding-top: 85px;
   padding-left: 5%;
