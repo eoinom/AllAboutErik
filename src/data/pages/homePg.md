@@ -16,7 +16,7 @@ slides:
     orderNo: 1
     panStart: bottom-right
     scaleFrom: 1
-    scaleTo: 1.06
+    scaleTo: 1.04
   - duration: 8
     img: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580951957/Home%20Page/slide-2-fireplacewall-_clq0an.jpg

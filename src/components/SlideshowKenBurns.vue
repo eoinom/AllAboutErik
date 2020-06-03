@@ -13,7 +13,7 @@
       <img
         v-for="(image, index) in images"
         v-show="index === activeIndex"
-        :key="image"
+        :key="'imgIndex'+index"
         :src="image"
         class="SlideshowKenBurns__image"
         :style="imgStyle(index)"
@@ -60,6 +60,9 @@ export default {
       let css = {}
       css.animationName = 'kenburns-'+ (index+1)
       css.transformOrigin = this.panStart(index)
+      if (index === 0) {
+        css.animationDuration = '10s'
+      }
       return css
     },
 
@@ -105,7 +108,7 @@ export default {
 
     interval(index) {
       // return 1000*this.slides[index].duration
-      return 5000;
+      return index === 0 ? 7000 : 5000;
     },
 
     next() {  
