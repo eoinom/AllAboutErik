@@ -40,8 +40,7 @@ export default {
     return {
       activeIndex: 0,
       time: 0,
-      translateFactor: 1.5,
-      loaded: false
+      translateFactor: 1.5
     };
   },
 
@@ -49,6 +48,15 @@ export default {
     images() {    
       return this.slides.map(a => a.img)
     },
+  },  
+
+  beforeMount() {
+    this.createKeyFrames()
+    this.goToIndex(0)
+  },
+
+  mounted() {
+    this.startInterval()
   },
 
   methods: {
@@ -63,9 +71,6 @@ export default {
       css.transformOrigin = this.panStart(index)
       if (index === 0) {
         css.animationDuration = '10s'
-      }
-      if (index == this.images.length - 1) {
-        this.loaded = true
       }
       return css
     },
@@ -160,13 +165,7 @@ export default {
         document.head.appendChild(style)
       }
     }
-  },
-
-  beforeMount() {
-    this.createKeyFrames()
-    this.goToIndex(0);
-    this.startInterval();
-  },
+  }
 };
 </script>
 
@@ -214,6 +213,7 @@ export default {
     opacity: 0.62;    
     animation-duration: 8s;
     animation-fill-mode: forwards;  // The element will retain the style values that is set by the last keyframe
+    transform-origin: 'bottom-right';
   }
 
   &__enterActive, &__leaveActive {
