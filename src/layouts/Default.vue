@@ -63,7 +63,7 @@
 
     <!-- Need this transition for the home page initial load -->
     <!-- https://gridsome.org/docs/page-transitions -->
-    <transition name="page" appear>
+    <transition name="home" appear>
       <main>
         <slot />
       </main>
@@ -388,17 +388,25 @@ body {
 
 
 /* Transition styles on router-view for fading the page */
+.home-enter-active {
+  transition-duration: 6.5s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+}
 .page-enter-active {
   transition-duration: 5.5s;
   transition-property: opacity;
   transition-timing-function: ease-in-out;
 }
+.home-leave-active,
 .page-leave-active {
   transition-duration: 1.5s;
   transition-property: opacity;
   transition-timing-function: ease-in-out;
 }
+.home-enter,
 .page-enter,
+.home-leave-active,
 .page-leave-active {
   opacity: 0;
 }
