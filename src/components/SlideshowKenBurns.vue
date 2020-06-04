@@ -40,7 +40,8 @@ export default {
     return {
       activeIndex: 0,
       time: 0,
-      translateFactor: 1.5
+      translateFactor: 1.5,
+      loaded: false
     };
   },
 
@@ -62,6 +63,9 @@ export default {
       css.transformOrigin = this.panStart(index)
       if (index === 0) {
         css.animationDuration = '10s'
+      }
+      if (index == this.images.length - 1) {
+        this.loaded = true
       }
       return css
     },
