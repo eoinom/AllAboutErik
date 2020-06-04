@@ -130,8 +130,7 @@ export default {
     },
 
     createKeyFrames() {
-      // for (let i = 0; i < this.slides.length; i++) {    
-      for (let i = 1; i < this.slides.length; i++) {    
+      for (let i = 1; i < this.slides.length; i++) {    // Note: keyframe for first slide (i == 0) is manually included in styles.css in order to avoid jitter on initial page load
         let startPos = [0, 0, 0]  // x, y, z
         switch(this.panStart(i)) {
           case 'bottom left':   startPos = [-1, 1, 0];      break;
