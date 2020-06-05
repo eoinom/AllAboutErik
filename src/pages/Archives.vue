@@ -16,19 +16,20 @@
           <!-- HEADER SLIDESHOW -->
           <SlideshowKenBurnsSmall 
             :slides="slides" 
-            height="100vh" 
+            height="100vh"
+            maxImgHeight="100vh"
             :scaleImgToContainer=true
           />
 
           <!-- SLIDESHOW OVERLAY -->
-          <div class="slideshowOverlay mb-5 pb-5" :style="slideshowOverlayStyles">
+          <div class="slideshowOverlay mb-3" :style="slideshowOverlayStyles">
             <div class="mainContent mx-auto">
 
               <g-image alt="Archives title image" v-if="titleImg != null" :src="titleImg" id="titleImg" class="mb-md-1 mb-lg-2 mb-xl-3"/>
 
               <div v-html="slideshowText" id="slideshowText" />
 
-              <div id="scrollDownContainer" class="pb-5">
+              <div id="scrollDownContainer" class="">
                 <ScrollDownArrow scrollToElement="#tilesRow" />
               </div>
 
@@ -41,13 +42,13 @@
 
 
     <b-container fluid id="tilesContainer" :style="tilesContainerStyles">
-      <b-row no-gutters align-h="center" id="tilesRow" class="mb-5 pb-4">
+      <b-row no-gutters align-h="center" id="tilesRow" class="mx-3 mx-sm-0 mb-5 pb-4">
         <b-col
           v-for="(tile, index) in tiles"
           :key="index"
-          cols="12" md="5" lg="3"
+          cols="12" md="5" xl="3"
           align-self="center"
-          class="tilesCols p-0 mx-3 my-3"
+          class="tilesCols p-0 m-2 m-sm-3"
         >
           <ArchivesThumbnail :thumbnailObj="tile" />
         </b-col>
@@ -188,12 +189,14 @@ export default {
       }
     },
     onResize() {
-      this.windowHeight = window.innerHeight
-      
-      let bodyRect = document.body.getBoundingClientRect()
-      let element = document.getElementById('tilesRow')
-      let elemRect = element.getBoundingClientRect()
-      this.targetPosY = elemRect.top - bodyRect.top
+      if (this.windowHeight != window.innerHeight) {
+        this.windowHeight = window.innerHeight
+        
+        let bodyRect = document.body.getBoundingClientRect()
+        let element = document.getElementById('tilesRow')
+        let elemRect = element.getBoundingClientRect()
+        this.targetPosY = elemRect.top - bodyRect.top
+      }
     }
   },
 }
@@ -241,13 +244,12 @@ export default {
   bottom: 0;
   z-index: 10;
   width: 100%;
+  padding-bottom: 12vh;
 }
 
 .mainContent{
   bottom: 0;
   max-width: 1289px;
-  padding-bottom: 20px;
-  padding-top: 85px;
   padding-left: 5%;
   padding-right: 5%;
   text-align: center;
@@ -255,7 +257,7 @@ export default {
 }
 
 #titleImg {
-  width: 100%;
+  width: 95%;
   max-width: 538px;
   min-width: 250px;
   height: auto;
@@ -272,7 +274,7 @@ export default {
   line-height: 2.0625rem;
   letter-spacing: 2px;
   text-align: center;
-  text-shadow: 0px 0px 250px #1C0F07,0px 0px 250px #1C0F07/* glow */, 1px 1px 2px rgba(28,16,23,0.89)/* drop shadow*/;
+  //text-shadow: 0px 0px 250px #1C0F07,0px 0px 250px #1C0F07/* glow */, 1px 1px 2px rgba(28,16,23,0.89)/* drop shadow*/; // commented out for performance reasons
 }
 
 #tilesContainer {
@@ -291,24 +293,70 @@ export default {
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+// /* Extra small devices (portrait phones, less than 576px) */
+// @media (max-width: 575.98px) {
+//   // .mainContent {
+//   //   padding-left: 15%;
+//   //   padding-right: 15%;
+//   // }
+//   #slideshowText {
+//     // font-size: calc(1rem + 2 * (100vw - 375px) / (576 - 375) ); /* varies between 16px (1rem) and 18px */
+//     // line-height: calc(1.0625rem + 3 * (100vw - 375px) / (576 - 375) ); /* varies between 17px (1.0625rem) and 20px */
+//     font-size: 16px;
+//     line-height: 17px;
+//     margin-bottom: 0px;
+//   }
+//   #slideshowText > p {
+//     margin-bottom: 0px !important;
+//   }
+// }
 
-}
+// /* Small devices (landscape phones, 576px and up) */
+// @media (min-width: 576px) and (max-width: 767.98px) {
+//   // .mainContent {
+//   //   padding-left: 12%;
+//   //   padding-right: 12%;
+//   // }
+//   #slideshowText {
+//     font-size: calc(1.125rem + 1.2 * (100vw - 576px) / (768 - 576) ); /* varies between 18px (1.125rem) and 19.2px */
+//     line-height: 24px;
+//   }
+//   #slideshowText p {
+//     margin-bottom: 0px !important;
+//   }
+// }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+// /* Medium devices (tablets, 768px and up) */
+// @media (min-width: 768px) and (max-width: 991.98px) {
+//   // .mainContent {
+//   //   padding-left: 12%;
+//   //   padding-right: 12%;
+//   // }
+//   #slideshowText {
+//     font-size: calc(1.2rem + 1.8 * (100vw - 768px) / (992 - 768) ); /* varies between 19.2px (1.2rem) and 21px */
+//     line-height: 24px;
+//   }
+// }
 
-}
+// /* Large devices (desktops, 992px and up) */
+// @media (min-width: 992px) and (max-width: 1199.98px) {
+//   // .mainContent {
+//   //   padding-left: 12%;
+//   //   padding-right: 12%;
+//   // }
+//   #slideshowText {
+//     font-size: 1.3125rem;
+//     line-height: 33px;
+//   }
+// }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
 
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
-
+  #slideshowText {
+    font-size: calc(1rem + 6 * (100vw - 300px) / (1200 - 300) ); /* varies between 16px (1rem) at 300px vw and 22px (1.375rem) at 1200px vw */
+    line-height: calc(1.0625rem + 16 * (100vw - 300px) / (1200 - 300) ); /* varies between 17px (1.0625rem) at 300px vw and 33px (2.0625rem) at 1200px vw */
+    // margin-bottom: 0px;
+  }
 }
 
 </style>

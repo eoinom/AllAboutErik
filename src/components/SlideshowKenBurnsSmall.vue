@@ -43,6 +43,10 @@ export default {
       default: 'initial',
       type: String
     },
+    maxImgHeight: {
+      default: 'initial',
+      type: String
+    },
     centerVertically: {
       default: false,
       type: Boolean
@@ -88,6 +92,7 @@ export default {
       css.transformOrigin = this.panStart(index)
       css['--imgOpacity'] = this.slides[index].opacity ? this.slides[index].opacity / 100 : 0.62
       css.maxWidth = this.maxImgWidth
+      css.maxHeight = this.maxImgHeight
       if (this.centerVertically) {
         css.top = '50%'
       }

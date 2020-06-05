@@ -187,49 +187,44 @@ https://codepen.io/beije/pen/zxjeae */
 }
 
 
-/* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
-
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+// Media queries for overlay text & img shadow variables
+// Note that these are based on when the containing tile is less than 480px wide
+/* Small */
+@media (max-width: 512px) { 
   .overlayText {
-    font-size: 1.6622rem;
-    letter-spacing: 8.4324px;
+    font-size: calc(2.0703125rem + 19.875 * (100vw - 332px) / (512 - 332));
+    line-height: calc(2.0703125rem + 19.875 * (100vw - 332px) / (512 - 332));
+    letter-spacing: calc(8.125px + 4.875 * (100vw - 332px) / (512 - 332));
   }
   .thumbnailImgContainer:after {
-    --blur_px: calc(var(--blur) * 2px);
-    --spread_px: calc(var(--spread) * 2px);
+    --blur_px: calc(var(--blur) * 1px * (0.078125rem + 0.75 * (100vw - 332px) / (512 - 332)) );
+    --spread_px: calc(var(--blur) * 1px * (0.078125rem + 0.75 * (100vw - 332px) / (512 - 332)) );
   }
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+/* Medium + Large */
+@media (min-width: 768px) and (max-width: 1152px) { 
   .overlayText {
-    font-size: 1.6622rem;
-    letter-spacing: 8.4324px;
+    font-size: calc(2.2083333rem + 17.6666667 * (100vw - 768px) / (1152 - 768));
+    line-height: calc(2.2083333rem + 17.6666667 * (100vw - 768px) / (1152 - 768));
+    letter-spacing: calc(8.667px + 4.333 * (100vw - 768px) / (1152 - 768));
   }
   .thumbnailImgContainer:after {
-    --blur_px: calc(var(--blur) * 2px);
-    --spread_px: calc(var(--spread) * 2px);
+    --blur_px: calc(var(--blur) * 1px * (0.08333rem + 0.6667 * (100vw - 768px) / (1152 - 768)) );
+    --spread_px: calc(var(--blur) * 1px * (0.08333rem + 0.6667 * (100vw - 768px) / (1152 - 768)) );
   }
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+/* XL+ */
+@media (min-width: 1200px) and (max-width: 1920px) { 
   .overlayText {
-    font-size: 2.0778rem;
-    letter-spacing: 13px;
+    font-size: calc(2.0703125rem + 19.875 * (100vw - 1200px) / (1920 - 1200));
+    line-height: calc(2.0703125rem + 19.875 * (100vw - 1200px) / (1920 - 1200));
+    letter-spacing: calc(8.125px + 4.875 * (100vw - 1200px) / (1920 - 1200));
   }
   .thumbnailImgContainer:after {
-    --blur_px: calc(var(--blur) * 2px);
-    --spread_px: calc(var(--spread) * 2px);
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
-  .overlayText {
-    font-size: 2.0778rem;
-    letter-spacing: 13px;
+    --blur_px: calc(var(--blur) * 1px * (0.078125rem + 0.75 * (100vw - 1200px) / (1920 - 1200)) );
+    --spread_px: calc(var(--blur) * 1px * (0.078125rem + 0.75 * (100vw - 1200px) / (1920 - 1200)) );
   }
 }
 
