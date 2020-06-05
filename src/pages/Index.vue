@@ -26,9 +26,7 @@
     </b-container>
 
     <div class="slideshow">
-      <slideshow-kenburns
-        :slides="slides"
-      />
+      <SlideshowKenBurns :slides="slides" />
     </div>
 
   </Layout>
@@ -73,10 +71,10 @@ export default {
       title: this.$page.HomePage.edges[0].node.pageTitle,  // <-- "this" is the Vue instance with $page
     }
   },
-
-  data() {
-    return {
-    }
+  
+  components: {
+    'SlideshowKenBurns': require('../components/SlideshowKenBurns.vue').default,
+    BackgroundMusic
   },
 
   computed: {
@@ -107,17 +105,10 @@ export default {
     audioFadeOutDuration() {
       return this.$page.HomePage.edges[0].node.bgAudioFadeOutDuration
     }
-  },
-
-  methods: {    
-  },
-
-  components: {
-    'slideshow-kenburns': require('../components/SlideshowKenBurns.vue').default,
-    BackgroundMusic
   }
 }
 </script>
+
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');

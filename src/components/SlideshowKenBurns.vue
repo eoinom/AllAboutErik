@@ -117,7 +117,7 @@ export default {
 
     interval(index) {
       // return 1000*this.slides[index].duration
-      return index === 0 ? 7000 : 5000;
+      return 5000;
     },
 
     next() {  

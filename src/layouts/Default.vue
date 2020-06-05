@@ -389,7 +389,8 @@ body {
 
 /* Transition styles on router-view for fading the page */
 .home-enter-active {
-  transition-duration: 6.5s;
+  /* transition-duration: 6.5s; */
+  transition-duration: 5.5s;
   transition-property: opacity;
   transition-timing-function: ease-in-out;
 }
