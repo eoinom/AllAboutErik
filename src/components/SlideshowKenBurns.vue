@@ -208,7 +208,8 @@ export default {
     width: auto;
     height: auto;
     min-height: 100%;
-    min-width: 100%;    
+    min-width: 100%;  
+    max-height: 100vh;
     overflow: hidden;  
     opacity: 0.62;    
     animation-duration: 8s;
