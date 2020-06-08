@@ -1319,7 +1319,10 @@ export default {
       return css
     },
     paddingTop() {
-      return !this.menuOnly ? (this.windowHeight / 2) - 150 : 50
+      if (this.windowHeight > this.windowWidth)
+        return !this.menuOnly ? (this.windowHeight / 2) - 150 : 50
+      else
+        return !this.menuOnly ? (this.windowHeight / 2) - 90 : 50
     },
     headerStyles() {
       let css = {}
@@ -1378,7 +1381,7 @@ export default {
 
 
 
-<style scoped>
+<style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Merriweather:900&display=swap');
 
 .layout {
@@ -1403,13 +1406,12 @@ export default {
 }
 
 #titleImg {
-  width: 100%;
+  width: 90%;
   max-width: 1324px;
   min-width: 350px;
   height: auto;
-  margin: auto;
-  padding-left: 115px;
-  padding-right: 115px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 #titleSubText {
@@ -1432,10 +1434,13 @@ export default {
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   #titleImg {
-    padding-left: 50px;
-    padding-right: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
   }
   #titleSubText {
     font-size: 16px;
@@ -1445,11 +1450,7 @@ export default {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  #titleImg {
-    padding-left: 75px;
-    padding-right: 75px;
-  }
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   #titleSubText {
     font-size: 20px;
     line-height: 28.5px;
@@ -1458,11 +1459,7 @@ export default {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #titleImg {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   #titleSubText {
     font-size: 24px;
     line-height: 34px;
@@ -1471,11 +1468,7 @@ export default {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  #titleImg {
-    padding-left: 105px;
-    padding-right: 105px;
-  }
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
 }
 
 </style>
