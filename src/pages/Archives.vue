@@ -257,7 +257,7 @@ export default {
 }
 
 #titleImg {
-  width: 95%;
+  width: 70%;
   max-width: 538px;
   min-width: 250px;
   height: auto;
@@ -293,70 +293,46 @@ export default {
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
-// /* Extra small devices (portrait phones, less than 576px) */
-// @media (max-width: 575.98px) {
-//   // .mainContent {
-//   //   padding-left: 15%;
-//   //   padding-right: 15%;
-//   // }
-//   #slideshowText {
-//     // font-size: calc(1rem + 2 * (100vw - 375px) / (576 - 375) ); /* varies between 16px (1rem) and 18px */
-//     // line-height: calc(1.0625rem + 3 * (100vw - 375px) / (576 - 375) ); /* varies between 17px (1.0625rem) and 20px */
-//     font-size: 16px;
-//     line-height: 17px;
-//     margin-bottom: 0px;
-//   }
-//   #slideshowText > p {
-//     margin-bottom: 0px !important;
-//   }
-// }
-
-// /* Small devices (landscape phones, 576px and up) */
-// @media (min-width: 576px) and (max-width: 767.98px) {
-//   // .mainContent {
-//   //   padding-left: 12%;
-//   //   padding-right: 12%;
-//   // }
-//   #slideshowText {
-//     font-size: calc(1.125rem + 1.2 * (100vw - 576px) / (768 - 576) ); /* varies between 18px (1.125rem) and 19.2px */
-//     line-height: 24px;
-//   }
-//   #slideshowText p {
-//     margin-bottom: 0px !important;
-//   }
-// }
-
-// /* Medium devices (tablets, 768px and up) */
-// @media (min-width: 768px) and (max-width: 991.98px) {
-//   // .mainContent {
-//   //   padding-left: 12%;
-//   //   padding-right: 12%;
-//   // }
-//   #slideshowText {
-//     font-size: calc(1.2rem + 1.8 * (100vw - 768px) / (992 - 768) ); /* varies between 19.2px (1.2rem) and 21px */
-//     line-height: 24px;
-//   }
-// }
-
-// /* Large devices (desktops, 992px and up) */
-// @media (min-width: 992px) and (max-width: 1199.98px) {
-//   // .mainContent {
-//   //   padding-left: 12%;
-//   //   padding-right: 12%;
-//   // }
-//   #slideshowText {
-//     font-size: 1.3125rem;
-//     line-height: 33px;
-//   }
-// }
-
-@media (max-width: 1199.98px) {
-
+@media only screen and (max-width: 1199.98px) {
   #slideshowText {
     font-size: calc(1rem + 6 * (100vw - 300px) / (1200 - 300) ); /* varies between 16px (1rem) at 300px vw and 22px (1.375rem) at 1200px vw */
     line-height: calc(1.0625rem + 16 * (100vw - 300px) / (1200 - 300) ); /* varies between 17px (1.0625rem) at 300px vw and 33px (2.0625rem) at 1200px vw */
-    // margin-bottom: 0px;
   }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media only screen and (max-width: 575.98px) and (orientation: landscape) {
+  #slideshowText {
+    font-size: 14.5px;
+  }
+  .slideshowOverlay {
+    padding-bottom: 0px;
+    margin-bottom: 8px !important;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) and (max-width: 767.98px) and (orientation: landscape) {
+  #slideshowText {
+    font-size: 16px;
+  }
+  .slideshowOverlay {
+    padding-bottom: 4px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
+  #slideshowText {
+    font-size: 18px;
+  }
+  .slideshowOverlay {
+    padding-bottom: 4px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
 }
 
 </style>
