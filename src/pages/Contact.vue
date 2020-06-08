@@ -242,8 +242,8 @@ li.text-main {
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, < 576px) */
-@media (max-width: 575.98px) {
-/* @media (min-width: 400px) and (max-width: 575.98px) { */
+@media only screen and (max-width: 575.98px) {
+/* @media only screen and (min-width: 400px) and (max-width: 575.98px) { */
   label,
   input[type=submit],
   .text-titles {
@@ -274,7 +274,7 @@ li.text-main {
 }
 
 /* Small devices (landscape phones, 576 - 768px) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   label,
   input[type=submit],
   .text-titles {
@@ -294,7 +294,7 @@ li.text-main {
 }
 
 /* Medium devices (tablets, 768 - 992px) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   label,
   input[type=submit],
   .text-titles {
@@ -314,12 +314,12 @@ li.text-main {
 }
 
 /* Large devices (desktops, 992 - 1200px) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
 
 }
 
 /* X-large devices (large desktops, 1200 - 1500px) */
-@media (min-width: 1200px) and (max-width: 1499.98px) {
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) {
 
 }
 </style>

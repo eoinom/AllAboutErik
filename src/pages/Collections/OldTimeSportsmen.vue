@@ -776,7 +776,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   .titleImg {
     max-width: 82%;
   }
@@ -806,7 +806,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .titleImg {
     max-width: 90%;
     padding: 15px 0;
@@ -829,7 +829,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {  
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {  
   .titleImg {
     max-width: 90%;
   }
@@ -850,7 +850,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
   #postcardHistory {
     &__textDiv {
       width: 90%;
@@ -859,7 +859,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 
 /* Special */
-@media (max-width: 1399.98px) { 
+@media only screen and (max-width: 1399.98px) { 
   .headerImageCol {   
     display: none;
   }

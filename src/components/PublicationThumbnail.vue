@@ -113,49 +113,49 @@ export default {
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   * {
     --scale: 0.45;
   }
 }
 
 /* Special breakpoint, Extra small devices (portrait phones, less than 400px) */
-@media (max-width: 399.98px) {
+@media only screen and (max-width: 399.98px) {
   * {
     --scale: 0.35;
   }
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   * {    
     --scale: 0.55934;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   * {    
     --scale: 0.7;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   * {    
     --scale: 0.7;
   }
 }
 
 /* Special breakpoint */
-@media (min-width: 1200px) and (max-width: 1399.98px) {
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   * {
     --scale: 0.7;
   }
 }
 
 /* Special breakpoint */
-@media (min-width: 1400px) and (max-width: 1599.98px) {
+@media only screen and (min-width: 1400px) and (max-width: 1599.98px) {
   * {
     --scale: 0.85;
   }

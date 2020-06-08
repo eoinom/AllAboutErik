@@ -101,7 +101,7 @@ body {
 
 
 /* Extra small devices (portrait phones, < 576px) */
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   .discography_content h2 {
     font-size: 1.4125rem; /* 22.6px at 16px default size */
     line-height: 30px;
@@ -132,7 +132,7 @@ body {
 }
 
 /* Small devices (landscape phones, 576 - 768px) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .discography_content h2 {
     font-size: 1.4125rem; /* 22.6px at 16px default size */
     line-height: 1.875rem;
@@ -146,7 +146,7 @@ body {
 }
 
 /* Medium devices (tablets, 768 - 992px) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .discography_content h2 {
     font-size: 1.52rem; /* 24.32px at 16px default size */
     line-height: 2rem;
@@ -160,12 +160,12 @@ body {
 }
 
 /* Large devices (desktops, 992 - 1200px) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
 
 }
 
 /* X-large devices (large desktops, 1200 - 1500px) */
-@media (min-width: 1200px) and (max-width: 1499.98px) {
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) {
   .discography_albumCredits_lg ul,
   .discography_albumCredits_md ul {
     columns: 2;
@@ -173,7 +173,7 @@ body {
 }
 
 /* XX-large devices (x-large desktops, 1500px and up) */
-@media (min-width: 1500px) {
+@media only screen and (min-width: 1500px) {
   .discography_albumCredits_md ul {
     columns: 2;
   }

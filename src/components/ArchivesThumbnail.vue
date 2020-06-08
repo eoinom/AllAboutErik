@@ -190,7 +190,7 @@ https://codepen.io/beije/pen/zxjeae */
 // Media queries for overlay text & img shadow variables
 // Note that these are based on when the containing tile is less than 480px wide
 /* Small */
-@media (max-width: 512px) { 
+@media only screen and (max-width: 512px) { 
   .overlayText {
     font-size: calc(2.0703125rem + 19.875 * (100vw - 332px) / (512 - 332));
     line-height: calc(2.0703125rem + 19.875 * (100vw - 332px) / (512 - 332));
@@ -203,7 +203,7 @@ https://codepen.io/beije/pen/zxjeae */
 }
 
 /* Medium + Large */
-@media (min-width: 768px) and (max-width: 1152px) { 
+@media only screen and (min-width: 768px) and (max-width: 1152px) { 
   .overlayText {
     font-size: calc(2.2083333rem + 17.6666667 * (100vw - 768px) / (1152 - 768));
     line-height: calc(2.2083333rem + 17.6666667 * (100vw - 768px) / (1152 - 768));
@@ -216,7 +216,7 @@ https://codepen.io/beije/pen/zxjeae */
 }
 
 /* XL+ */
-@media (min-width: 1200px) and (max-width: 1920px) { 
+@media only screen and (min-width: 1200px) and (max-width: 1920px) { 
   .overlayText {
     font-size: calc(2.0703125rem + 19.875 * (100vw - 1200px) / (1920 - 1200));
     line-height: calc(2.0703125rem + 19.875 * (100vw - 1200px) / (1920 - 1200));

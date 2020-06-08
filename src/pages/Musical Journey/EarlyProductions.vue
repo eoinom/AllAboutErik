@@ -875,19 +875,19 @@ body {
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 400px) {
   #titleImg {
     max-width: 55%;
   }
 }
-@media (min-width: 400.01px) and (max-width: 575.98px) {
+@media only screen and (min-width: 400.01px) and (max-width: 575.98px) {
   #titleImg {
     max-width: 58%;
   }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {  
+@media only screen and (max-width: 575.98px) {  
   #mainImgText {
     font-size: calc(0.9375rem + 3 * (100vw - 375px) / (576 - 375) ); /* varies between 15px (0.9375rem) at 375px viewport width (iPhone 6) and 18px at 576px vw width */
     line-height: calc(1.1875rem + 6.6 * (100vw - 375px) / (576 - 375) ); /* varies between 19px (1rem) and 25.6px */
@@ -905,7 +905,7 @@ body {
     margin-right: 10px;
   }
 }
-@media (max-width: 355px) { /* e.g. for iPhone 5 etc. */
+@media only screen and (max-width: 355px) { /* e.g. for iPhone 5 etc. */
   .lightBoxBtn {
     margin: 0;
     font-size: 0.9375rem;
@@ -915,7 +915,7 @@ body {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   #titleImg {
     max-width: 63%;
   }
@@ -936,7 +936,7 @@ body {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   #titleImg {
     max-width: 65%;
   }
@@ -975,7 +975,7 @@ body {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
   #mainImgText {
     font-size: 1.625rem;  /* 26px with 16px default size */  
     letter-spacing: 1px;

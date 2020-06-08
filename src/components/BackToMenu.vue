@@ -127,7 +127,7 @@ export default {
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   button {
     font-size: 10px;
     padding: 10.5px;    
@@ -136,7 +136,7 @@ export default {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   button {      
     font-size: 12px;
     padding: 12.75px;
@@ -145,12 +145,12 @@ export default {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
 
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
 
 }
 </style>

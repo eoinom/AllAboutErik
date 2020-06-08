@@ -157,12 +157,12 @@ export default {
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 400px) {
   #titleImg {
     max-width: 60%;
   }
 }
-@media (min-width: 400.01px) and (max-width: 575.98px) {
+@media only screen and (min-width: 400.01px) and (max-width: 575.98px) {
   #titleImg {
     max-width: 65%;
   }
@@ -170,7 +170,7 @@ export default {
 
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {  
+@media only screen and (max-width: 575.98px) {  
   .playVideoText {
     font-size: calc(1.875rem + 7 * (100vw - 375px) / (576 - 375));
     line-height: calc(1.875rem + 7 * (100vw - 375px) / (576 - 375));
@@ -201,7 +201,7 @@ export default {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .playVideoText {
     font-size: 4.8vw;
     line-height: 4.8vw;
@@ -232,7 +232,7 @@ export default {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   /* .captionBanner {
      color: black; 
     background-color: white;
@@ -249,7 +249,7 @@ export default {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
   .videoTitle {
     font-size: calc(1rem + 1 * (100vw - 992px) / (1200 - 992));
     line-height: calc(1.3125rem + 1 * (100vw - 992px) / (1200 - 992));

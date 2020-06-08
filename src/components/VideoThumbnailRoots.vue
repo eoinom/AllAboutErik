@@ -248,7 +248,7 @@ https://codepen.io/beije/pen/zxjeae */
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   .videoTitle {
     font-size: 1.6622rem;
     letter-spacing: 8.4324px;
@@ -267,7 +267,7 @@ https://codepen.io/beije/pen/zxjeae */
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .videoTitle {
     font-size: 1.6622rem;
     letter-spacing: 8.4324px;
@@ -286,7 +286,7 @@ https://codepen.io/beije/pen/zxjeae */
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .videoTitle {
     font-size: 2.0778rem;
     letter-spacing: 13px;
@@ -305,7 +305,7 @@ https://codepen.io/beije/pen/zxjeae */
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
   .videoTitle {
     font-size: 2.0778rem;
     letter-spacing: 13px;

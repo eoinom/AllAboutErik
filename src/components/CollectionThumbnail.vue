@@ -135,35 +135,35 @@ export default {
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   * {    
     --scale: 0.65;
   }
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   * {    
     --scale: 0.55934;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   * {    
     --scale: 0.7;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   * {    
     --scale: 0.7;
   }
 }
 
 /* Special breakpoint */
-@media (min-width: 1200px) and (max-width: 1499.98px) {
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) {
   * {    
     --scale: 0.9;
   }

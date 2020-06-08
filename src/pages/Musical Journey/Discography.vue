@@ -521,14 +521,14 @@ export default {
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra extra small devices (portrait phones, < 400px) */
-@media (max-width: 398.98px) {
+@media only screen and (max-width: 398.98px) {
   #titleSubText {
     font-size: 0.9375rem; /* 15px at 16px default size */
     line-height: 1.33887rem; /* 21.42px at 16px default size */
   }
 }
 /* Extra extra small devices (portrait phones, 400 - 576px) */
-@media (min-width: 400px) and (max-width: 575.98px) {
+@media only screen and (min-width: 400px) and (max-width: 575.98px) {
   #titleSubText {
     font-size: 1.0rem; /* 16px at 16px default size */
     line-height: 1.428125rem; /* 22.85px at 16px default size */
@@ -536,8 +536,8 @@ export default {
 }
 
 /* Extra small devices (portrait phones, < 576px) */
-@media (max-width: 575.98px) {
-/* @media (min-width: 400px) and (max-width: 575.98px) { */
+@media only screen and (max-width: 575.98px) {
+/* @media only screen and (min-width: 400px) and (max-width: 575.98px) { */
   #header {
     padding-left: 10%;
     padding-right: 10%;
@@ -575,7 +575,7 @@ export default {
 }
 
 /* Small devices (landscape phones, 576 - 768px) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   #titleSubText {
     font-size: 1.25rem; /* 20px at 16px default size */
     line-height: 1.78125rem; /* 28.5px at 16px default size */
@@ -598,7 +598,7 @@ export default {
 }
 
 /* Medium devices (tablets, 768 - 992px) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   #titleSubText {
     font-size: 22px;
     line-height: 31px;
@@ -616,14 +616,14 @@ export default {
 }
 
 /* Large devices (desktops, 992 - 1200px) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .main-col {
     width: 80%;
   }
 }
 
 /* X-large devices (large desktops, 1200 - 1500px) */
-@media (min-width: 1200px) and (max-width: 1499.98px) {
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) {
   .main-col {
     width: 80%;
   }

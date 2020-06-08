@@ -277,7 +277,7 @@ export default {
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   * {
     --publicationScale: 0.65;
     --maxPublicationsPerRow: 1;
@@ -292,7 +292,7 @@ export default {
 }
 
 /* Special breakpoint (portrait phones, less than 345px, e.g. iPhone 5) */
-@media (max-width: 344.98px) {
+@media only screen and (max-width: 344.98px) {
   .mainContent {
     padding-left: 12%;
     padding-right: 12%;
@@ -300,7 +300,7 @@ export default {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   * {
     --publicationScale: 0.55934;
     --maxPublicationsPerRow: 2;
@@ -312,7 +312,7 @@ export default {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   * {
     --publicationScale: 0.7;
     --maxPublicationsPerRow: 2;
@@ -324,7 +324,7 @@ export default {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   * {
     --publicationScale: 0.7;
     --maxPublicationsPerRow: 3;
@@ -337,7 +337,7 @@ export default {
 
 
 /* Special breakpoint */
-@media (min-width: 1200px) and (max-width: 1499.98px) {
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) {
   * {
     --publicationScale: 0.9;
     --maxPublicationsPerRow: 3;
@@ -350,7 +350,7 @@ export default {
 
 
 /* Special breakpoint */
-@media (min-width: 1500px) and (max-width: 1749.98px) {
+@media only screen and (min-width: 1500px) and (max-width: 1749.98px) {
   .mainContent {
     padding-left: 10%;
     padding-right: 10%;
@@ -358,7 +358,7 @@ export default {
 }
 
 /* Special breakpoint */
-@media (min-width: 1500px) and (max-width: 2539.98px) {
+@media only screen and (min-width: 1500px) and (max-width: 2539.98px) {
   * {
     --maxPublicationsPerRow: 4;
   }
@@ -367,14 +367,14 @@ export default {
 
 
 /* Special breakpoint */
-@media (max-width: 2100px) {
+@media only screen and (max-width: 2100px) {
   * {
     --publicationsDivWidth: 1360px;
   }
 }
 
 /* Special breakpoint */
-@media (max-width: 1599.98px) {
+@media only screen and (max-width: 1599.98px) {
   * {
     /* --publicationsDivWidth: 1100px; */
     --publicationsDivWidth: 1250px;
@@ -382,14 +382,14 @@ export default {
 }
 
 /* Special breakpoint */
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   * {
     --publicationsDivWidth: 900px;
   }
 }
 
 /* Special breakpoint */
-@media (max-width: 767.98px) {
+@media only screen and (max-width: 767.98px) {
   * {
     --publicationsDivWidth: 600px;
   }

@@ -340,7 +340,7 @@ export default {
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   .layout, .main-col {
     padding: 0 0;   
   }
@@ -364,7 +364,7 @@ export default {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   #mainText {
     font-size: 0.9rem;
     line-height: 14px;
@@ -379,7 +379,7 @@ export default {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   #mainText {
     font-size: 1.2rem;
     line-height: 24px;
@@ -387,7 +387,7 @@ export default {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
   #mainText {
     font-size: 1.5rem;
     line-height: 33px;

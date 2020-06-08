@@ -392,7 +392,7 @@ export default {
 
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
-@media (max-width: 991.98px) {
+@media only screen and (max-width: 991.98px) {
   #page-num-lg {
     display: none;
   }
@@ -404,7 +404,7 @@ export default {
     padding-bottom: 86px;  // to account for the action-bar
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   #page-num-sm {
     display: none;
   }

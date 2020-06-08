@@ -416,7 +416,7 @@ body {
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   #sideNav-main {
     padding: 15px 0;
   }
@@ -447,7 +447,7 @@ body {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   #sideNav-main {
     padding: 20px 0;
   }
@@ -475,7 +475,7 @@ body {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .openbtn {
     top: 41px;
     left: 46px;
@@ -489,7 +489,7 @@ body {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
   .openbtn {
     top: 44px;
     left: 44px;

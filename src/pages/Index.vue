@@ -182,7 +182,7 @@ export default {
 
 
 /* Centre credit text when aspect ratio <= 1.0 */
-@media (max-aspect-ratio: 1/1) {
+@media only screen and (max-aspect-ratio: 1/1) {
   .secondaryContent{
     position: absolute;
     bottom: 50px;
@@ -196,7 +196,7 @@ export default {
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   .openbtn {
     top: 25px;
     left: 25px;
@@ -207,7 +207,7 @@ export default {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .openbtn {
     top: 35px;
     left: 35px;
@@ -218,7 +218,7 @@ export default {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .openbtn {
     top: 46px;
     left: 46px;
@@ -229,7 +229,7 @@ export default {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
   .homePgMainText {
     font-size: calc(0.875em + 0.625vw);
   }

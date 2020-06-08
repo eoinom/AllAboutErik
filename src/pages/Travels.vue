@@ -207,19 +207,19 @@ export default {
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 400px) {
   #titleImg {
     max-width: 60%;
   }
 }
-@media (min-width: 400.01px) and (max-width: 575.98px) {
+@media only screen and (min-width: 400.01px) and (max-width: 575.98px) {
   #titleImg {
     max-width: 65%;
   }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {    
+@media only screen and (max-width: 575.98px) {    
   #mainVideo {
     --containerWidth: calc(100vw - 16px);
   }
@@ -232,7 +232,7 @@ export default {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   #mainVideoText {
     font-size: 1.3125rem;
     line-height: 2rem;
@@ -242,7 +242,7 @@ export default {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   #mainVideoText {
     font-size: 1.4rem;
     line-height: 2.125rem;
@@ -252,7 +252,7 @@ export default {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
   #mainVideoText {
     font-size: 1.4rem;
     line-height: 2.125rem;
@@ -261,7 +261,7 @@ export default {
   }
 }
 
-@media (min-width: 977px) { 
+@media only screen and (min-width: 977px) { 
   #mainVideoContainer {
     margin: 8px 0;
   }

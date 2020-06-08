@@ -172,12 +172,12 @@ export default {
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 400px) {
   #titleImg {
     max-width: 60%;
   }
 }
-@media (min-width: 400.01px) and (max-width: 575.98px) {
+@media only screen and (min-width: 400.01px) and (max-width: 575.98px) {
   #titleImg {
     max-width: 65%;
   }
@@ -185,7 +185,7 @@ export default {
 
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {  
+@media only screen and (max-width: 575.98px) {  
   .videoTitle {
     font-size: 5vw;
     line-height: 5vw;
@@ -215,12 +215,12 @@ export default {
     display: none;
   }
 }
-@media (max-width: 370px) {
+@media only screen and (max-width: 370px) {
   .durationBanner {
     padding: 1px 0px !important;
   }
 }
-@media (max-width: 350px) {
+@media only screen and (max-width: 350px) {
   .durationBanner {
     height: 32% !important;
   }
@@ -228,7 +228,7 @@ export default {
 
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .videoTitle {
     font-size: 4vw;
     line-height: 4vw;
@@ -260,7 +260,7 @@ export default {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .showOnHover {
     opacity: 1;
   }
@@ -276,7 +276,7 @@ export default {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
 }
 
 </style>

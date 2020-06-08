@@ -312,7 +312,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   .titleImg1Line {
     display: none;
   }
@@ -328,7 +328,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {  
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {  
   .titleImg {
     max-width: 100%;
     padding: 15px 40px 10px 70px;
@@ -337,7 +337,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .titleImg1Line {
     display: none;
   }
@@ -349,14 +349,14 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
   .titleImg {
     padding: 0px 100px;
   }
 }
 
 /* Special - Larger devices (desktops, 1200px and up) */
-@media (min-width: 1200px) and (max-width: 1499.98px) {
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) {
   .collection_headerText, .titleImg {
     padding: 0px 120px;
   }

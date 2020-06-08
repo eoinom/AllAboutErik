@@ -203,7 +203,7 @@ hr.style-two {
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   .heading {
     font-size: 2.5rem;
     letter-spacing: 1.8px;
@@ -220,7 +220,7 @@ hr.style-two {
   }
 }
 
-@media (max-width: 340Px) {  /* for iPhone 5 etc. */
+@media only screen and (max-width: 340Px) {  /* for iPhone 5 etc. */
   .heading {
     font-size: 2rem;
     letter-spacing: 1.6px;
@@ -235,7 +235,7 @@ hr.style-two {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {  
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {  
   .heading {
     font-size: 2.8rem;
     letter-spacing: 1.8px;
@@ -247,7 +247,7 @@ hr.style-two {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .heading {
     font-size: 3rem;
     letter-spacing: 1.8px;
@@ -259,7 +259,7 @@ hr.style-two {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
 
 }
 

@@ -528,7 +528,7 @@ export default {
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
   * {
     --linkGutter: 25px;
     --arrowOffset: 3.0%;
@@ -545,7 +545,7 @@ export default {
 }
 
 /* special breakpoint */
-@media (max-width: 338.98px) {
+@media only screen and (max-width: 338.98px) {
   .collection-viewer {
     &__text {
       letter-spacing: 3px;
@@ -554,7 +554,7 @@ export default {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   * {
     --linkGutter: calc(25px + 20 * (100vw - 576px) / (768 - 576) ); /* varies between 25px - 45px */
     --arrowOffset: 3.0%;
@@ -571,7 +571,7 @@ export default {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) { 
+@media only screen and (min-width: 768px) and (max-width: 991.98px) { 
   * {
     --arrowOffset: 4.5%;
   }
@@ -584,7 +584,7 @@ export default {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {  
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {  
   * {
     --linkGutter: 25px;
     --arrowOffset: 4.5%;
