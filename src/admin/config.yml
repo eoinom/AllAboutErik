@@ -634,3 +634,54 @@ collections:
           - {label: "Page Orientation", name: "orientation", widget: "select", options: ["landscape", "portrait"]}
           - {label: 'Page Width (px)', name: 'width', widget: 'number', valueType: "float", min: 0, required: false}
           - {label: 'Page Height (px)', name: 'height', widget: 'number', valueType: "float", min: 0, required: false}
+
+  - label: "Archives"
+    name: "archives"
+    folder: "src/data/pages/archives"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - {label: 'Title', name: 'title', widget: 'string', required: false}
+      - {label: "Title Image (Single line)", name: "titleImg1Line", widget: "image", required: false}
+      - {label: "Title Image (Two lines)", name: "titleImg2Lines", widget: "image", required: false}
+      # - {label: "Title Image (Two lines concise)", name: "titleImg2LinesConcise", widget: "image", required: false}
+      - {label: "Header Image - Left", name: "headerImgLeft", widget: "image", required: false}
+      - {label: "Header Image - Centre", name: "headerImgCentre", widget: "image", required: false}
+      - {label: "Header Image - Right", name: "headerImgRight", widget: "image", required: false}
+      - {label: "Header Image - Left+Centre", name: "headerImgLeftCentre", widget: "image", required: false}
+      - {label: "Header Image - Right+Centre", name: "headerImgRightCentre", widget: "image", required: false}
+      - {label: "Header Image Opacity (%)", name: "headerImgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+      - {label: 'Header Text', name: 'body', widget: 'markdown', required: false}
+      # - {label: "Page Background Image", name: "pageBgImg", widget: "image", required: false}
+      # - {label: "Page Image Opacity (%)", name: "pageBgImgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+      - label: "Header Slideshow - Left"
+        name: "headerSlideshowLeft"
+        widget: "list"
+        required: false
+        fields: 
+          - {label: "Image", name: "img", widget: "image", required: false} 
+          - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+      - label: "Header Slideshow - Center"
+        name: "headerSlideshowCenter"
+        widget: "list"
+        required: false
+        fields: 
+          - {label: "Image", name: "img", widget: "image", required: false} 
+          - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+      - label: "Header Slideshow - Right"
+        name: "headerSlideshowRight"
+        widget: "list"
+        required: false
+        fields: 
+          - {label: "Image", name: "img", widget: "image", required: false} 
+          - {label: "Opacity (%)", name: "opacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+      - {label: "Slide duration (secs)", name: "slideDuration", widget: "number", valueType: "float", min: 0, max: 60, required: false}  
+      - label: "Image Gallery"
+        name: "imageGallery"
+        widget: "object"
+        required: false
+        fields: 
+          - {label: 'URL common path (Lo-Res)', name: 'commonPathLoRes', widget: 'string', required: false}
+          - {label: 'URL common path (Hi-Res)', name: 'commonPathHiRes', widget: 'string', required: false}
+          - {label: 'Number of images', name: 'numImages', widget: 'number', valueType: "int", min: 1, required: false}
