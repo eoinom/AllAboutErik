@@ -1,7 +1,7 @@
 ---
 title: Music Biz
-titleImg1Line:
-  - https://res.cloudinary.com/all-about-erik/image/upload/v1591747443/Archives/01.%20Music%20Biz/music_biz.png
+titleImg1Line: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/v1591747443/Archives/01.%20Music%20Biz/music_biz.png
 headerSlideshowLeft:
   - img:
       - https://res.cloudinary.com/all-about-erik/image/upload/v1591747444/Archives/01.%20Music%20Biz/header-slideshow-left/19--img397-crop-u739659.jpg
@@ -42,8 +42,8 @@ headerSlideshowRight:
   - img:
       - https://res.cloudinary.com/all-about-erik/image/upload/v1591747442/Archives/01.%20Music%20Biz/header-slideshow-right/87--stovalls_1-crop-u740139.jpg
 imageGallery:
-  commonPathHiRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1591744802/Archives/01.%20Music%20Biz/high-res/music-biz_hi-res_.jpg
-  commonPathLoRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1591744264/Archives/01.%20Music%20Biz/low-res/music-biz_lo-res_.jpg
+  commonPathHiRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1591744802/Archives/01.%20Music%20Biz/high-res/music-biz_hi-res_
+  commonPathLoRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1591744264/Archives/01.%20Music%20Biz/low-res/music-biz_lo-res_
   numImages: 123
 ---
 Here’s a bunch of stuff pertaining to my “career” in the music biz.

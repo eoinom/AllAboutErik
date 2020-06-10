@@ -1,5 +1,5 @@
 <template>
-  <div class="thumbnailContainer">    
+  <g-link :to="'/archives/' + link" class="thumbnailContainer">    
     <div class="thumbnailImgContainer" :style="vignetteStyles">
       <g-image :alt="thumbnailObj.title" v-if="thumbnailObj.img != null" :src="thumbnailObj.img" class="thumbnailImg hideOnHover"/>
       <g-image :alt="thumbnailObj.title" v-if="thumbnailObj.img_bright != null" :src="thumbnailObj.img_bright" class="thumbnailImg showOnHover"/>
@@ -17,11 +17,13 @@
         </p>
       </div>
     </div>
-  </div>
+  </g-link>
 </template>
 
 
 <script scoped>
+const slugify = require('@sindresorhus/slugify')
+
 export default { 
   name: 'ArchivesThumbnail',
 
@@ -34,6 +36,7 @@ export default {
 
   data() {
     return {
+      link: this.thumbnailObj.hasOwnProperty('text') ? slugify(this.thumbnailObj.text) : '',
       windowWidth: 0,
     }
   },

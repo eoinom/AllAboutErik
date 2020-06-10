@@ -95,6 +95,31 @@ module.exports = function (api) {
     })
   })
 
+
+  // create the individual Archives pages
+  api.createPages(async ({ graphql, createPage }) => {
+    const { data } = await graphql(`{
+      allArchives {
+        edges {
+          node {
+            id
+            title
+          }
+        }
+      }
+    }`)
+    data.allArchives.edges.forEach(({ node }) => {
+      pageSlug = slugify(node.title)
+      createPage({
+        path: `/archives/${pageSlug}`,
+        component: './src/templates/Archive.vue',
+        context: {
+          id: node.id
+        }
+      })
+    })
+  })
+
   // configure webpack to use bundle analyzer plugin (ref: https://medium.com/js-dojo/how-to-reduce-your-vue-js-bundle-size-with-webpack-3145bf5019b7)
   // reduce bundle size ref: https://www.codegram.com/blog/improving-a-gridsome-website-performance/
   // (api.chainWebpack ref: https://gridsome.org/docs/server-api/#apichainwebpackfn)
