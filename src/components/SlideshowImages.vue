@@ -4,7 +4,7 @@
       :id="id"
       :ref="id"
       v-model="slide"
-      :interval="4000"
+      :interval="interval"
       fade
       background="#ababab"
       img-width="1024"
@@ -58,6 +58,10 @@ export default {
     id: {
       type: String,
       default: 'carousel-1'
+    },
+    interval: {
+      type: Number,
+      default: 4000
     }
   },
 

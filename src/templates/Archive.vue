@@ -6,26 +6,50 @@
         <!-- <header id="header" :style="headerStyles"> -->
         <header id="header">
           <div class="headerWrapper">
-            <SlideshowImages :slides="node.headerSlideshowLeft" borderRadius="15px" ref="slideshowLeft" class="headerBox" />
+            <SlideshowImages 
+              :slides="node.headerSlideshowLeft" 
+              borderRadius="15px" 
+              ref="slideshowLeft" 
+              :interval="4500" 
+              class="headerBox" 
+            />
 
-            <SlideshowImages :slides="node.headerSlideshowCenter" borderRadius="15px" ref="slideshowCenter" class="headerBox" >
+            <SlideshowImages 
+              :slides="node.headerSlideshowCenter" 
+              borderRadius="15px" 
+              ref="slideshowCenter" 
+              :interval="4500" 
+              class="headerBox"
+            >
               <div class="slideshowOverlay">
-                <g-image :alt="node.title + ' title image'" v-if="node.titleImg1Line != null" :src="node.titleImg1Line" class="titleImg titleImg1Line" />
+                <g-image 
+                  v-if="node.titleImg1Line != null"
+                  :src="node.titleImg1Line"
+                  :alt="node.title + ' title image'" 
+                  class="titleImg titleImg1Line" 
+                />
                 <span v-html="node.content" class="archive_headerText" />
               </div>
             </SlideshowImages>
 
-            <SlideshowImages :slides="node.headerSlideshowRight" borderRadius="15px" ref="slideshowRight" class="headerBox" />
+            <SlideshowImages 
+              :slides="node.headerSlideshowRight" 
+              borderRadius="15px" 
+              ref="slideshowRight" 
+              :interval="4500" 
+              class="headerBox" 
+            />
           </div>
         </header>
 
 
         <div class="galleryWrapper">
-          <div v-for="(img, i) in imageUrlsLowRes" :key="'img'+i" class="galleryBox">
-            <img 
-              :src="imageUrlsLowRes[i]" 
-              class="galleryImage"
-            >
+          <div 
+            v-for="(img, i) in imageUrlsLowRes" 
+            :key="'img'+i" 
+            class="galleryBox"
+          >
+            <img :src="imageUrlsLowRes[i]" class="galleryImage">
           </div>
         </div>
         
@@ -34,6 +58,7 @@
 
   </Layout>
 </template>
+
 
 <page-query>
 query ($id: ID!) {
@@ -58,7 +83,6 @@ query ($id: ID!) {
   }
 }
 </page-query>
-
 
 
 <script scoped>
