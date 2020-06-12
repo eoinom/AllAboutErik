@@ -6,16 +6,16 @@
         <!-- <header id="header" :style="headerStyles"> -->
         <header id="header">
           <div class="headerWrapper">
-            <SlideshowImages :slides="node.headerSlideshowLeft" borderRadius="15px" class="headerBox" />
+            <SlideshowImages :slides="node.headerSlideshowLeft" borderRadius="15px" ref="slideshowLeft" class="headerBox" />
 
-            <SlideshowImages :slides="node.headerSlideshowCenter" borderRadius="15px" class="headerBox" >
+            <SlideshowImages :slides="node.headerSlideshowCenter" borderRadius="15px" ref="slideshowCenter" class="headerBox" >
               <div class="slideshowOverlay">
                 <g-image :alt="node.title + ' title image'" v-if="node.titleImg1Line != null" :src="node.titleImg1Line" class="titleImg titleImg1Line" />
                 <span v-html="node.content" class="archive_headerText" />
               </div>
             </SlideshowImages>
 
-            <SlideshowImages :slides="node.headerSlideshowRight" borderRadius="15px" class="headerBox" />
+            <SlideshowImages :slides="node.headerSlideshowRight" borderRadius="15px" ref="slideshowRight" class="headerBox" />
           </div>
         </header>
 
@@ -160,6 +160,28 @@ export default {
     //   archive.link = slugify(archive.title)
     //   return archive
     // }
+  },
+
+  mounted() {
+    this.$refs.slideshowLeft.pause()
+    this.$refs.slideshowCenter.pause()
+    this.$refs.slideshowRight.pause()
+    this.staggerSlideshowStarts()
+  },
+
+  methods: {
+    delay(ms) {
+      return new Promise(res => setTimeout(res, ms))
+    },
+    async staggerSlideshowStarts() {
+      this.$refs.slideshowLeft.start()
+
+      await this.delay(1500);
+      this.$refs.slideshowRight.start()
+
+      await this.delay(1500);
+      this.$refs.slideshowCenter.start()
+    }
   }
 }
 </script>

@@ -1,7 +1,8 @@
 <template>
   <div>
     <b-carousel
-      id="carousel-roots&youth"
+      :id="id"
+      :ref="id"
       v-model="slide"
       :interval="4000"
       fade
@@ -53,6 +54,10 @@ export default {
     borderRadius: {
       type: String,
       default: ''
+    },
+    id: {
+      type: String,
+      default: 'carousel-1'
     }
   },
 
@@ -87,15 +92,6 @@ export default {
     // }
   },
 
-  methods: {
-    onSlideStart(slide) {
-      this.sliding = true
-    },
-    onSlideEnd(slide) {
-      this.sliding = false
-    }
-  },
-
   mounted() {
     this.windowWidth = window.innerWidth
     this.windowHeight = window.innerHeight
@@ -106,6 +102,30 @@ export default {
         this.windowHeight = window.innerHeight
       });
     })
+  },
+
+  methods: {
+    onSlideStart(slide) {
+      this.sliding = true
+    },
+    onSlideEnd(slide) {
+      this.sliding = false
+    },
+    pause() {
+      this.$refs[this.id].pause()
+    },
+    start() {
+      this.$refs[this.id].start()
+    },
+    next() {
+      this.$refs[this.id].next()
+    },
+    prev() {
+      this.$refs[this.id].prev()
+    },
+    setSlide(index) {
+      this.$refs[this.id].setSlide(index)
+    }
   }
 };
 </script>
