@@ -2,37 +2,23 @@
   <Layout>
     <transition name="page" mode="out-in">
       <div :key="'archive_' + titleSlug"> <!-- Need a unique key for the transition above to work on route change -->
+
         <!-- <header id="header" :style="headerStyles"> -->
         <header id="header">
-          <div id="headerItems">
-            <g-image :src="node.titleImg1Line" class="titleImg titleImg1Line" />
-            <!-- <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" /> -->
+          <div class="headerWrapper">
+            <SlideshowImages :slides="node.headerSlideshowLeft" borderRadius="15px" class="headerBox" />
 
-            <!-- <div v-if="windowWidth < 1200 && !showIntro" v-b-toggle.collapse-1 class="archive_headerText" style="font-style: italic" @click="showIntro = true">
-              Read intro
-              <svg viewBox="0 0 20 20" width="20" height="20" class="arrow">
-                <line x1="1" y1="4.5" x2="9" y2="13" />
-                <line x1="8" y1="13" x2="16" y2="4.5" />
-              </svg>
-            </div>
+            <SlideshowImages :slides="node.headerSlideshowCenter" borderRadius="15px" class="headerBox" >
+              <div class="slideshowOverlay">
+                <g-image :alt="node.title + ' title image'" v-if="node.titleImg1Line != null" :src="node.titleImg1Line" class="titleImg titleImg1Line" />
+                <span v-html="node.content" class="archive_headerText" />
+              </div>
+            </SlideshowImages>
 
-            <div v-else-if="windowWidth < 1200 && showIntro" v-b-toggle.collapse-1 class="archive_headerText" style="font-style: italic" @click="showIntro = false">
-              Hide intro
-              <svg viewBox="0 0 20 20" width="20" height="20" class="arrow">
-                <line x1="1" y1="13" x2="9" y2="4.5" />
-                <line x1="8" y1="4.5" x2="16" y2="13" />
-              </svg>
-            </div>
-            
-            <div v-else v-html="$page.archive.content" class="archive_headerText" /> -->
-            <span v-html="node.content" class="archive_headerText" />
-
+            <SlideshowImages :slides="node.headerSlideshowRight" borderRadius="15px" class="headerBox" />
           </div>
         </header>
-        
-        <!-- <b-collapse id="collapse-1">
-          <div v-html="$page.archive.content" class="archive_headerText" id="headerTextDevice" />
-        </b-collapse> -->
+
 
         <div class="galleryWrapper">
           <div v-for="(img, i) in imageUrlsLowRes" :key="'img'+i" class="galleryBox">
@@ -40,11 +26,9 @@
               :src="imageUrlsLowRes[i]" 
               class="galleryImage"
             >
-          </div>          
+          </div>
         </div>
-
         
-
       </div>
     </transition>
 
@@ -57,6 +41,15 @@ query ($id: ID!) {
     title
     titleImg1Line
     content
+    headerSlideshowLeft {
+      img
+    }
+    headerSlideshowCenter {
+      img
+    }
+    headerSlideshowRight {
+      img
+    }
     imageGallery {
       numImages
       commonPathLoRes
@@ -69,7 +62,7 @@ query ($id: ID!) {
 
 
 <script scoped>
-
+import SlideshowImages from '../components/SlideshowImages.vue'
 const slugify = require('@sindresorhus/slugify')
 
 export default {
@@ -80,6 +73,7 @@ export default {
   },
 
   components: {
+    'SlideshowImages': require('../components/SlideshowImages.vue').default,
   },
 
   data() {
@@ -166,18 +160,7 @@ export default {
     //   archive.link = slugify(archive.title)
     //   return archive
     // }
-  },
-
-  // mounted() {
-    // this.windowWidth = window.innerWidth
-
-    // window.addEventListener('resize', () => {  
-    //   this.windowWidth = window.innerWidth
-    // })
-    // window.addEventListener('orientationchange', () => {  
-    //   this.windowWidth = window.innerWidth
-    // })
-  // }
+  }
 }
 </script>
 
@@ -229,12 +212,6 @@ export default {
   z-index: -1;
 }
 
-#headerItems {
-  width: 1240px; 
-  max-width: 90vw; 
-  text-align: center;
-  margin: 0 auto;
-}
 .archive_headerText {
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
@@ -265,9 +242,45 @@ export default {
 //   stroke-width: 2px;
 // }
 
-.titleImg {
+.slideshowCol {
+  position: relative;
+  max-height:1224px; 
+  width:auto;
+  text-align: center;
+}
+
+
+
+.headerWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 786px);
+  grid-gap: 30px;
+  justify-content: center;
+}
+.headerBox {
+  width: 786px;
+  height: 617px;
+  position: relative;
+}
+
+.slideshowOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto auto;
+  max-width: 85%;
+  height: fit-content;
+  z-index: 500;
+}
+
+#titleImg {
+  position: relative;
+  width: 100%;
   max-width: 100%;
-  margin-bottom: 20px;
+  height: auto;
+  margin: auto;
 }
 .titleImg1Line {
   display: inline;
@@ -283,7 +296,6 @@ export default {
   grid-gap: 30px;
   justify-content: center;
 }
-
 .galleryBox {
   width: 350px;
   height: 350px;

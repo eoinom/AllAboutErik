@@ -10,7 +10,8 @@
       img-height="480"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
-      class="carousel" 
+      class="carousel"
+      :style="carouselStyles"
     >
       <!-- <b-carousel-slide
         v-for="(image, iImg) in images"
@@ -28,7 +29,12 @@
         text=""
         :img-src="image"
         class="carousel-slide"
-      />
+      >
+        <slot name="caption"></slot>
+      </b-carousel-slide>
+
+      <slot></slot>
+      
     </b-carousel>
 
   </div>
@@ -44,6 +50,10 @@ export default {
       default: () => [],
       type: Array,
     },
+    borderRadius: {
+      type: String,
+      default: ''
+    }
   },
 
   data() {
@@ -62,6 +72,13 @@ export default {
     currentImg() {
       return this.images[this.slide]
     },
+    carouselStyles() {
+      if (this.borderRadius != '') {
+        return {
+          '--borderRadius': this.borderRadius
+        }
+      }
+    }
     // vignetteStyles() {
     //   return {
     //     '--blur': (0.1*this.windowWidth) + 'px',
@@ -94,8 +111,7 @@ export default {
 </script>
 
 
-<style>
-
+<style lang="scss">
 
 @font-face {
   font-family: NeueHaasGroteskText Pro65;
@@ -120,6 +136,10 @@ export default {
 
 .carousel {
   text-shadow: 1px 1px 2px #333;
+  border-radius: var(--borderRadius);
+}
+.carousel-inner {
+  border-radius: var(--borderRadius);
 }
 
   /* For vignette effect, see https://benjaminhorn.io/code/proper-lens-vignette-with-css/ & 
