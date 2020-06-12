@@ -1,8 +1,7 @@
 <template>
   <div>
     <b-carousel
-      :id="id"
-      :ref="id"
+      :ref="refName"
       v-model="slide"
       :interval="interval"
       fade
@@ -55,7 +54,7 @@ export default {
       type: String,
       default: ''
     },
-    id: {
+    refName: {
       type: String,
       default: 'carousel-1'
     },
@@ -116,19 +115,19 @@ export default {
       this.sliding = false
     },
     pause() {
-      this.$refs[this.id].pause()
+      this.$refs[this.refName].pause()
     },
     start() {
-      this.$refs[this.id].start()
+      this.$refs[this.refName].start()
     },
     next() {
-      this.$refs[this.id].next()
+      this.$refs[this.refName].next()
     },
     prev() {
-      this.$refs[this.id].prev()
+      this.$refs[this.refName].prev()
     },
     setSlide(index) {
-      this.$refs[this.id].setSlide(index)
+      this.$refs[this.refName].setSlide(index)
     }
   }
 };

@@ -4,21 +4,24 @@
       <div :key="'archive_' + titleSlug"> <!-- Need a unique key for the transition above to work on route change -->
 
         <!-- <header id="header" :style="headerStyles"> -->
-        <header id="header">
+        <header id="header" class="px-3">
           <div class="headerWrapper">
             <SlideshowImages 
+              v-if="windowWidth >= 1200"
               :slides="node.headerSlideshowLeft" 
-              borderRadius="15px" 
-              ref="slideshowLeft" 
               :interval="4500" 
+              borderRadius="15px" 
+              refName="slideshowLeft" 
+              id="slideshowLeft" 
               class="headerBox" 
             />
 
             <SlideshowImages 
-              :slides="node.headerSlideshowCenter" 
-              borderRadius="15px" 
-              ref="slideshowCenter" 
+              :slides="node.headerSlideshowCenter"  
               :interval="4500" 
+              borderRadius="15px" 
+              refName="slideshowCenter"
+              id="slideshowCenter"
               class="headerBox"
             >
               <div class="slideshowOverlay">
@@ -33,23 +36,27 @@
             </SlideshowImages>
 
             <SlideshowImages 
+              v-if="windowWidth >= 1200"
               :slides="node.headerSlideshowRight" 
-              borderRadius="15px" 
-              ref="slideshowRight" 
               :interval="4500" 
+              borderRadius="15px" 
+              refName="slideshowRight" 
+              id="slideshowRight" 
               class="headerBox" 
             />
           </div>
         </header>
 
 
-        <div class="galleryWrapper">
-          <div 
-            v-for="(img, i) in imageUrlsLowRes" 
-            :key="'img'+i" 
-            class="galleryBox"
-          >
-            <img :src="imageUrlsLowRes[i]" class="galleryImage">
+        <div id="mainContent" class="px-3">
+          <div class="galleryWrapper">
+            <div 
+              v-for="(img, i) in imageUrlsLowRes" 
+              :key="'img'+i" 
+              class="galleryBox"
+            >
+              <img :src="imageUrlsLowRes[i]" class="galleryImage">
+            </div>
           </div>
         </div>
         
@@ -187,6 +194,14 @@ export default {
   },
 
   mounted() {
+    this.windowWidth = window.innerWidth
+    window.addEventListener('resize', () => {  
+      this.windowWidth = window.innerWidth
+    })
+    window.addEventListener('orientationchange', () => {  
+      this.windowWidth = window.innerWidth
+    })
+
     this.$refs.slideshowLeft.pause()
     this.$refs.slideshowCenter.pause()
     this.$refs.slideshowRight.pause()
@@ -243,6 +258,8 @@ export default {
   text-align: center;
   padding-top: 12.5px;
   padding-bottom: 12.5px;
+  max-width: 2434px;
+  margin: 0 auto;
 }
 #header:after  {
   content : "";
@@ -299,14 +316,16 @@ export default {
 
 .headerWrapper {
   display: grid;
-  grid-template-columns: repeat(3, 786px);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   justify-content: center;
 }
 .headerBox {
-  width: 786px;
-  height: 617px;
+  width: 100%;
+  max-width: 786px;
+  // height: 617px;
   position: relative;
+  place-self: center;
 }
 
 .slideshowOverlay {
@@ -321,7 +340,7 @@ export default {
   z-index: 500;
 }
 
-#titleImg {
+.titleImg {
   position: relative;
   width: 100%;
   max-width: 100%;
@@ -335,17 +354,26 @@ export default {
   display: none;
 }
 
+#mainContent {
+  width: 100%;
+  max-width: calc(5 * 350px + 4 * 30px + 2 * 16px);
+  margin: 0 auto;
+}
 
 .galleryWrapper {
   display: grid;
-  grid-template-columns: repeat(5, 350px);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-auto-flow: row;
   grid-gap: 30px;
+  align-items: center;
   justify-content: center;
 }
 .galleryBox {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   height: 350px;
   position: relative;
+  place-self: center;
 }
 .galleryImage {
   position: absolute;
@@ -400,13 +428,16 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media only screen and (max-width: 575.98px) {
-  .titleImg1Line {
-    display: none;
-  }
-  .titleImg2Lines {
-    display: inline;
-    margin: 10px 0px;
-    padding: 0px 60px;
+  // .titleImg1Line {
+  //   display: none;
+  // }
+  // .titleImg2Lines {
+  //   display: inline;
+  //   margin: 10px 0px;
+  //   padding: 0px 60px;
+  // }
+  .galleryWrapper {
+    grid-gap: 16px;
   }
   .archive_headerText {
     line-height: 1.4375rem;
@@ -416,37 +447,72 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {  
-  .titleImg {
-    max-width: 100%;
-    padding: 15px 40px 10px 70px;
-    margin: 0px;
+  // .titleImg {
+  //   max-width: 100%;
+  //   padding: 15px 40px 10px 70px;
+  //   margin: 0px;
+  // }
+  .galleryWrapper {
+    grid-gap: 16px;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .titleImg1Line {
-    display: none;
-  }
-  .titleImg2Lines {
-    display: inline;
-    margin: 10px 0px;
-    padding: 0px 80px;
+  // .titleImg1Line {
+  //   display: none;
+  // }
+  // .titleImg2Lines {
+  //   display: inline;
+  //   margin: 10px 0px;
+  //   padding: 0px 80px;
+  // }
+  .galleryWrapper {
+    grid-gap: 24px;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
   .titleImg {
-    padding: 0px 100px;
+    // padding: 0px 100px;
+  }
+  .galleryWrapper {
+    grid-gap: 24px;
   }
 }
 
 /* Special - Larger devices (desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) and (max-width: 1499.98px) {
   .archive_headerText, .titleImg {
-    padding: 0px 120px;
+    // padding: 0px 120px;
   }
 }
+
+/* Special - Larger devices (desktops, 1200px and up) */
+@media only screen and (max-width: 360px) {
+  .galleryWrapper {
+    // grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(1fr);
+    grid-gap: 16px;
+  }
+  .galleryBox {
+    max-height: calc(350px - 32px);
+  }
+}
+
+/* Special - Larger devices (desktops, 1200px and up) */
+@media only screen and (max-width: 1199.98px) {
+  // #slideshowLeft, #slideshowRight {
+  // .headerBox:first-child, .headerBox:last-child {
+  //   display: none;
+  // }
+  .headerWrapper {
+    grid-template-columns: 1fr;
+    // grid-gap: 30px;
+  }
+}
+
+
 
 </style>
