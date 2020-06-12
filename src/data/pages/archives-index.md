@@ -1,7 +1,7 @@
 ---
 pageTitle: Archives
 titleImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590443172/Archives/archives_pzfww1.png
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590443172/Archives/archives_resized.png
 bgAudio: >-
   https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1583973940/Archives/Fond-Affection-The-Blue-Velvet-Band_Archives_jndcac.mp3
 bgAudioDuration: 169
