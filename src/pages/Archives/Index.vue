@@ -29,7 +29,7 @@
 
               <div v-html="slideshowText" id="slideshowText" />
 
-              <div id="scrollDownContainer" class="">
+              <div id="scrollDownContainer">
                 <ScrollDownArrow scrollToElement="#tilesRow" />
               </div>
 
@@ -40,20 +40,8 @@
       </b-row>
     </b-container>
 
-
-    <b-container fluid id="tilesContainer" :style="tilesContainerStyles">
-      <b-row no-gutters align-h="center" id="tilesRow" class="mx-3 mx-sm-0 mb-5 pb-4">
-        <b-col
-          v-for="(tile, index) in tiles"
-          :key="index"
-          cols="12" md="5" xl="3"
-          align-self="center"
-          class="tilesCols p-0 m-2 m-sm-3"
-        >
-          <ArchivesThumbnail :thumbnailObj="tile" />
-        </b-col>
-      </b-row>
-    </b-container>
+    <!-- TILES -->
+    <ArchivesTiles :tiles="tiles" :style="tilesContainerStyles" />
 
     <ScrollToTop
       text="BACK TO THE TOP"
@@ -94,11 +82,11 @@
 
 
 <script scoped>
-import ArchivesThumbnail from '../components/ArchivesThumbnail.vue'
-import BackgroundMusic from '../components/BackgroundMusic.vue'
-import ScrollDownArrow from '../components/ScrollDownArrow.vue'
-import ScrollToTop from '../components/ScrollToTop.vue'
-import SlideshowKenBurnsSmall from '../components/SlideshowKenBurnsSmall.vue'
+import ArchivesTiles from '../../components/ArchivesTiles.vue'
+import BackgroundMusic from '../../components/BackgroundMusic.vue'
+import ScrollDownArrow from '../../components/ScrollDownArrow.vue'
+import ScrollToTop from '../../components/ScrollToTop.vue'
+import SlideshowKenBurnsSmall from '../../components/SlideshowKenBurnsSmall.vue'
 
 export default { 
   metaInfo() {
@@ -108,7 +96,7 @@ export default {
   },
 
   components: {
-    ArchivesThumbnail,
+    ArchivesTiles,
     BackgroundMusic,
     ScrollDownArrow,
     ScrollToTop,
@@ -208,10 +196,10 @@ export default {
 
 @font-face {
   font-family: NeueHaasGroteskText Pro55;
-  src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot'); /* IE9 Compat Modes */
-  src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../assets/fonts/nhaasgrotesktxpro-55rg.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
+  src: url('../../assets/fonts/nhaasgrotesktxpro-55rg.eot'); /* IE9 Compat Modes */
+  src: url('../../assets/fonts/nhaasgrotesktxpro-55rg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../assets/fonts/nhaasgrotesktxpro-55rg.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
   font-weight: normal;
 }
 
@@ -274,20 +262,6 @@ export default {
   line-height: 2.0625rem;
   letter-spacing: 2px;
   text-align: center;
-  //text-shadow: 0px 0px 250px #1C0F07,0px 0px 250px #1C0F07/* glow */, 1px 1px 2px rgba(28,16,23,0.89)/* drop shadow*/; // commented out for performance reasons
-}
-
-#tilesContainer {
-  width: 100%;
-  max-width: 2048px;
-  padding: 0;
-  text-align: center;
-  z-index: 50;
-}
-
-.tilesCols {
-  max-width: 480px;
-  background-color: black;
 }
 
 
@@ -329,10 +303,6 @@ export default {
   .slideshowOverlay {
     padding-bottom: 4px;
   }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
 }
 
 </style>

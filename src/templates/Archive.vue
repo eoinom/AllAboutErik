@@ -3,6 +3,11 @@
     <transition name="page" mode="out-in">
       <div :key="'archive_' + titleSlug"> <!-- Need a unique key for the transition above to work on route change -->
 
+      <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
+        <g-image src="~/assets/images/arrow-full-left.png"  />
+        <p class="pt-2 mb-0">Back to<br />Archives</p>
+      </g-link>
+
         <!-- <header id="header" :style="headerStyles"> -->
         <header id="header" class="px-3">
           <div class="headerWrapper">
@@ -251,6 +256,21 @@ export default {
   padding: 0;
   overflow: hidden; /* added for pseudo-element */
   position: relative; /* added for pseudo-element */
+}
+
+.backToArchives {
+  position: fixed;
+  top: 50px;
+  right: 60px;
+  z-index: 5;
+
+  font-family: NeueHaasGroteskText Pro65;
+  font-size: 20px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.65);
 }
 
 #header {
