@@ -98,13 +98,13 @@
 
         <div id="closeImgContainer" @click="close()">
           <g-image 
-            alt="Right arrow, click for next audio" 
+            alt="Close icon, click to close lightbox" 
             src="~/assets/images/lightbox-close.png" 
             id="closeImg"
             class="audio-lightbox__close" 
           />
           <g-image 
-            alt="Right arrow, click for next audio" 
+            alt="Close icon, click to close lightbox" 
             src="~/assets/images/lightbox-close-hover.png" 
             id="closeImg-hover"
             class="audio-lightbox__close" 

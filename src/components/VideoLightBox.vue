@@ -95,13 +95,13 @@
 
         <div id="closeImgContainer" @click="close()">
           <img
-            alt="Right arrow, click for next video" 
+            alt="Close icon, click to close lightbox" 
             src="../assets/images/lightbox-close.png" 
             id="closeImg"
             class="video-lightbox__close" 
           />
           <img
-            alt="Right arrow, click for next video" 
+            alt="Close icon, click to close lightbox" 
             src="../assets/images/lightbox-close-hover.png" 
             id="closeImg-hover"
             class="video-lightbox__close" 
