@@ -56,14 +56,28 @@
         <div id="mainContent" class="px-3">
           <div class="galleryWrapper">
             <div 
-              v-for="(img, i) in imageUrlsLowRes" 
-              :key="'img'+i" 
+              v-for="(img, iImg) in imageUrlsLowRes" 
+              :key="'img'+iImg" 
               class="galleryBox"
+              @click="onGalleryImgClick(iImg)"
             >
-              <img :src="imageUrlsLowRes[i]" class="galleryImage">
+              <img :src="img" :id="'galleryImage_' + iImg" class="galleryImage">
             </div>
           </div>
         </div>
+
+        <!-- <g-image 
+          v-if="zoomedImgIndex"
+          :src="imageUrlsHiRes[zoomedImgIndex]"
+          class="zoomedImg"
+          :style="zoomedImgStyles"
+        /> -->
+        <img 
+          v-if="zoomedImgIndex"
+          :src="imageUrlsHiRes[zoomedImgIndex]"
+          class="zoomedImg"
+          :style="zoomedImgStyles"
+        />
         
       </div>
     </transition>
@@ -116,7 +130,14 @@ export default {
     return {
       imageIndex: 0,
       showIntro: false,
-      windowWidth: 0.0
+      windowWidth: 0.0,
+      zoomedImgIndex: null,
+      imgPosition: {
+        top: null,
+        right: null,
+        left: null
+      },
+      applyLargeImgStyles: false
     }
   },
 
@@ -146,6 +167,22 @@ export default {
       }
       return urls
     },
+    zoomedImgStyles() {
+      let css = {}
+      css.top = this.imgPosition.top ? this.imgPosition.top.toFixed(2) + 'px' : ''
+      // css.right = this.imgPosition.right ? this.imgPosition.right.toFixed(2) + 'px' : ''
+      css.left = this.imgPosition.left ? this.imgPosition.left.toFixed(2) + 'px' : ''
+
+      if (this.applyLargeImgStyles) {
+        css.maxWidth = '90%'
+        css.height = '90vh'
+        css.top = '50%'
+        css.left = '50%'
+        css.transform = 'translate3d(-50%, -50%, 0)'
+      }
+
+      return css
+    }
     // titleImg1Line() {
     //   return this.$page.archive.titleImg1Line
     // },
@@ -225,6 +262,24 @@ export default {
 
       await this.delay(1500);
       this.$refs.slideshowCenter.start()
+    },
+    onGalleryImgClick(iImg) {
+      let imgElement = document.getElementById('galleryImage_' + iImg)
+      this.updateImgPosition(imgElement)
+      this.zoomedImgIndex = iImg
+
+      this.applyLargeImgStyles = true
+    },
+    updateImgPosition(el) {
+      let elemRect = el.getBoundingClientRect()
+      this.imgPosition.top = elemRect.top
+      this.imgPosition.right = elemRect.right
+      this.imgPosition.left = elemRect.left
+    },
+    resetImgPosition(el) {
+      this.imgPosition.top = null
+      this.imgPosition.right = null
+      this.imgPosition.left = null
     }
   }
 }
@@ -357,7 +412,7 @@ export default {
   margin: auto auto;
   max-width: 85%;
   height: fit-content;
-  z-index: 500;
+  z-index: 50;
 }
 
 .titleImg {
@@ -406,6 +461,19 @@ export default {
   margin: auto;
 }
 
+.zoomedImg {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  // width: 350px;
+  height: 350px;
+  // max-width: 100%;
+  max-height: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  z-index: 100;
+}
 
 
 /* To fix poor scroll speed using "background-size: cover" and "background-attachment: fixed"
