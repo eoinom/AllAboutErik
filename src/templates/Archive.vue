@@ -12,11 +12,11 @@
         <header id="header" class="px-3">
           <div class="headerWrapper">
             <SlideshowImages 
-              v-if="windowWidth >= 1200"
+              v-show="windowWidth >= 1200"
               :slides="node.headerSlideshowLeft" 
               :interval="4500" 
               borderRadius="15px" 
-              refName="slideshowLeft" 
+              ref="slideshowLeft" 
               id="slideshowLeft" 
               class="headerBox" 
             />
@@ -25,7 +25,7 @@
               :slides="node.headerSlideshowCenter"  
               :interval="4500" 
               borderRadius="15px" 
-              refName="slideshowCenter"
+              ref="slideshowCenter" 
               id="slideshowCenter"
               class="headerBox"
             >
@@ -41,11 +41,11 @@
             </SlideshowImages>
 
             <SlideshowImages 
-              v-if="windowWidth >= 1200"
+              v-show="windowWidth >= 1200"
               :slides="node.headerSlideshowRight" 
               :interval="4500" 
               borderRadius="15px" 
-              refName="slideshowRight" 
+              ref="slideshowRight" 
               id="slideshowRight" 
               class="headerBox" 
             />

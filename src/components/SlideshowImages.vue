@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-carousel
-      :ref="refName"
+      ref="carousel"
       v-model="slide"
       :interval="interval"
       fade
@@ -53,10 +53,6 @@ export default {
     borderRadius: {
       type: String,
       default: ''
-    },
-    refName: {
-      type: String,
-      default: 'carousel-1'
     },
     interval: {
       type: Number,
@@ -115,19 +111,19 @@ export default {
       this.sliding = false
     },
     pause() {
-      this.$refs[this.refName].pause()
+      this.$refs.carousel.pause()
     },
     start() {
-      this.$refs[this.refName].start()
+      this.$refs.carousel.start()
     },
     next() {
-      this.$refs[this.refName].next()
+      this.$refs.carousel.next()
     },
     prev() {
-      this.$refs[this.refName].prev()
+      this.$refs.carousel.prev()
     },
     setSlide(index) {
-      this.$refs[this.refName].setSlide(index)
+      this.$refs.carousel.setSlide(index)
     }
   }
 };
