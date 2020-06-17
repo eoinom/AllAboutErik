@@ -154,6 +154,8 @@ export default {
         top: 0,
         left: 0
       },
+      imgWidth: 0,
+      imgHeight: 0,
       applyLargeImgStyles: false,
       eventName: null,
       hiResImages: []
@@ -188,8 +190,10 @@ export default {
     },
     zoomedImgStyles() {
       let css = {}
-      css['--startPosTop'] = this.imgPosition.top.toFixed(2) + 'px'
-      css['--startPosLeft'] = this.imgPosition.left.toFixed(2) + 'px'
+      const topPosition = this.imgPosition.top + (this.imgHeight / 2) 
+      const leftPosition = this.imgPosition.left + (this.imgWidth / 2) 
+      css['--startPosTop'] = topPosition.toFixed(2) + 'px'
+      css['--startPosLeft'] = leftPosition.toFixed(2) + 'px'
       return css
     }
     // titleImg1Line() {
@@ -282,6 +286,8 @@ export default {
       const elemRect = imgEl.getBoundingClientRect()
       this.imgPosition.top = elemRect.top
       this.imgPosition.left = elemRect.left
+      this.imgWidth = elemRect.width
+      this.imgHeight = elemRect.height
     },
     updateNewImgPosition(iImg) {
       const imgEl = document.getElementById('galleryImage_' + iImg)
@@ -508,7 +514,7 @@ export default {
   object-fit: contain;
   top: var(--startPosTop);
   left: var(--startPosLeft);
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(-50%, -50%, 0);
 
   transition: all 0.3s linear 0s;
 }
@@ -517,10 +523,8 @@ export default {
   max-height: 90vh;
   height: 90vh;
   width: auto;
-  object-fit: contain;
   top: 50%;
   left: 50%;
-  transform: translate3d(-50%, -50%, 0);
 }
 
 
