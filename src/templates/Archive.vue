@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <transition name="page" mode="out-in">
-      <div :key="'archive_' + titleSlug" v-on:[eventName]="closeLargeImg()"> <!-- Need a unique key for the transition above to work on route change -->
+      <div :key="'archive_' + titleSlug" v-on:[eventName]="closeLargeImg()" class="pb-5"> <!-- Need a unique key for the transition above to work on route change -->
 
         <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
           <g-image src="~/assets/images/arrow-full-left.png"  />
@@ -88,6 +88,11 @@
           :class="applyLargeImgStyles ? 'centerPos' : null"
           :style="zoomedImgStyles"
         />
+
+        <ScrollToTop
+          text="BACK TO THE TOP"
+          :includeArrow="true"
+        />
         
       </div>
     </transition>
@@ -122,6 +127,7 @@ query ($id: ID!) {
 
 
 <script scoped>
+import ScrollToTop from '../components/ScrollToTop.vue'
 import SlideshowImages from '../components/SlideshowImages.vue'
 const slugify = require('@sindresorhus/slugify')
 
@@ -137,6 +143,7 @@ export default {
   },
 
   components: {
+    ScrollToTop,
     'SlideshowImages': require('../components/SlideshowImages.vue').default,
   },
 
