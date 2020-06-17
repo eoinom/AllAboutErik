@@ -210,7 +210,7 @@ export default {
   },
 
   mounted() {
-    // to preload the hi-res images
+    // to preload the hi-res images (ref: https://stackoverflow.com/q/3646036/13159696)
     for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
       const image = new Image();
       image.src = this.node.imageGallery.commonPathHiRes + i + '.jpg'
