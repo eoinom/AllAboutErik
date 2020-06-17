@@ -55,27 +55,17 @@
 
         <div id="mainContent" class="px-3">
           <div class="galleryWrapper">
-            <!-- <div 
+            <div 
               v-for="(img, iImg) in imageUrlsLowRes" 
               :key="'img'+iImg" 
               class="galleryBox"
               @click.prevent="onGalleryImgClick(iImg)"
-              @mouseenter="zoomedImgIndex == null ? updateImgPosition(iImg) : updateNewImgPosition(iImg)"
-            > -->
-            <!-- Loading HiRes images dynamically is slow so better to load all upfront?? See created hook -->
-            <!-- Jumping effect when changing from lores to hires so avoid by only having hi res? -->
-            <div 
-              v-for="(img, iImg) in imageUrlsHiRes" 
-              :key="'img'+iImg" 
-              class="galleryBox"
-              @click.prevent="onGalleryImgClick(iImg)"
-              @mouseenter="zoomedImgIndex == null ? updateImgPosition(iImg) : updateNewImgPosition(iImg)"
             >
-              <img 
-                v-show="zoomedImgIndex !== iImg" 
+              <img
                 :src="img" 
                 :id="'galleryImage_' + iImg" 
                 class="galleryImage"
+                :class="zoomedImgIndex == iImg ? 'zeroOpacity' : 'fullOpacity'"
               >
             </div>
           </div>
@@ -153,16 +143,14 @@ export default {
       showIntro: false,
       windowWidth: 0.0,
       zoomedImgIndex: null,
-      imgPosition: {
+      imgCenterPos: {
         top: 0,
         left: 0
       },
-      imgNewPosition: {
+      imgNewCenterPos: {
         top: 0,
         left: 0
       },
-      imgWidth: 0,
-      imgHeight: 0,
       applyLargeImgStyles: false,
       eventName: null,
       hiResImages: []
@@ -196,12 +184,10 @@ export default {
       return urls
     },
     zoomedImgStyles() {
-      let css = {}
-      const topPosition = this.imgPosition.top + (this.imgHeight / 2) 
-      const leftPosition = this.imgPosition.left + (this.imgWidth / 2) 
-      css['--startPosTop'] = topPosition.toFixed(2) + 'px'
-      css['--startPosLeft'] = leftPosition.toFixed(2) + 'px'
-      return css
+      return {
+        '--startPosTop': this.imgCenterPos.top.toFixed(2) + 'px',
+        '--startPosLeft': this.imgCenterPos.left.toFixed(2) + 'px'
+      }
     }
     // titleImg1Line() {
     //   return this.$page.archive.titleImg1Line
@@ -224,6 +210,7 @@ export default {
   },
 
   mounted() {
+    // to preload the hi-res images
     for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
       const image = new Image();
       image.src = this.node.imageGallery.commonPathHiRes + i + '.jpg'
@@ -253,9 +240,11 @@ export default {
   methods: {
     bindEvents() {
       document.addEventListener('keydown', this.keyDownHandler, false);
+      document.addEventListener('scroll', this.scrollHandler, false);
     },
     unbindEvents() {
       document.removeEventListener('keydown', this.keyDownHandler, false);
+      document.removeEventListener('scroll', this.scrollHandler, false);
     },
     delay(ms) {
       return new Promise(res => setTimeout(res, ms))
@@ -269,18 +258,19 @@ export default {
       await this.delay(1500)
       this.$refs.slideshowCenter.start()
     },
-    onGalleryImgClick(iImg) {
-      if (this.zoomedImgIndex !== null)
+    async onGalleryImgClick(iImg) {
+      if (this.zoomedImgIndex !== null) {
+        this.updateNewImgPosition(iImg)
         return
+      }
 
-      // let imgElement = document.getElementById('galleryImage_' + iImg)
-      // this.updateImgPosition(imgElement)
       this.updateImgPosition(iImg)
+
+      await this.delay(300)
 
       this.$nextTick(() => {
         this.zoomedImgIndex = iImg
       })
-      // this.zoomedImgIndex = iImg
 
       this.$nextTick(() => {
         this.applyLargeImgStyles = true
@@ -289,18 +279,17 @@ export default {
       this.eventName = 'click'
     },
     updateImgPosition(iImg) {
+      console.log('in updateImgPosition, iImg: ' + iImg)
       const imgEl = document.getElementById('galleryImage_' + iImg)
       const elemRect = imgEl.getBoundingClientRect()
-      this.imgPosition.top = elemRect.top
-      this.imgPosition.left = elemRect.left
-      this.imgWidth = elemRect.width
-      this.imgHeight = elemRect.height
+      this.imgCenterPos.top = elemRect.top + (elemRect.height / 2)
+      this.imgCenterPos.left = elemRect.left + (elemRect.width / 2)
     },
     updateNewImgPosition(iImg) {
       const imgEl = document.getElementById('galleryImage_' + iImg)
       const elemRect = imgEl.getBoundingClientRect()
-      this.imgNewPosition.top = elemRect.top
-      this.imgNewPosition.left = elemRect.left
+      this.imgNewCenterPos.top = elemRect.top + (elemRect.height / 2)
+      this.imgNewCenterPos.left = elemRect.left + (elemRect.width / 2)
     },
     closeLargeImg() {
       if (this.applyLargeImgStyles) {
@@ -311,23 +300,29 @@ export default {
     },
     async resetZoomedImgIndex() {
       await this.delay(400);
-      this.zoomedImgIndex = null
-      if (this.imgNewPosition.top !== null) {
-        this.imgPosition.top = this.imgNewPosition.top
-        this.imgPosition.left = this.imgNewPosition.left
-        this.imgNewPosition.top = 0
-        this.imgNewPosition.left = 0
-      }
+      this.zoomedImgIndex = null      
+      this.imgCenterPos.top = this.imgNewCenterPos.top
+      this.imgCenterPos.left = this.imgNewCenterPos.left
+      this.imgNewCenterPos.top = 0
+      this.imgNewCenterPos.left = 0
     },
     keyDownHandler(event) {
       switch (event.keyCode) {
         case keyMap.ESC:
-          this.closeLargeImg();
-          break;
+          this.closeLargeImg()
+          break
         default:
-          break;
+          break
       }
     },
+    scrollHandler() {      
+      if (this.zoomedImgIndex !== null) {
+        this.updateImgPosition(this.zoomedImgIndex)
+        this.$nextTick(() => {
+          this.closeLargeImg()
+        })
+      }
+    }
   }
 }
 </script>
@@ -508,6 +503,13 @@ export default {
   object-fit: contain;
   margin: auto;
   cursor: zoom-in;
+}
+
+.fullOpacity {
+  opacity: 1;
+}
+.zeroOpacity {
+  opacity: 0;
 }
 
 .zoomedImg {
