@@ -212,15 +212,13 @@ export default {
     // },
   },
 
-  created() {
+  mounted() {
     for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
       const image = new Image();
       image.src = this.node.imageGallery.commonPathHiRes + i + '.jpg'
       this.hiResImages.push(image)
     }
-  },
 
-  mounted() {
     this.windowWidth = window.innerWidth
     window.addEventListener('resize', () => {  
       this.windowWidth = window.innerWidth
@@ -515,8 +513,6 @@ export default {
   transition: all 0.3s linear 0s;
 }
 .zoomedImg.centerPos {
-  // max-width: 90%;
-  // height: 90vh;
   max-width: 90vw;
   max-height: 90vh;
   height: 90vh;
