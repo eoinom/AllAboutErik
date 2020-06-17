@@ -1,12 +1,12 @@
 <template>
   <Layout>
     <transition name="page" mode="out-in">
-      <div :key="'archive_' + titleSlug"> <!-- Need a unique key for the transition above to work on route change -->
+      <div :key="'archive_' + titleSlug" v-on:[eventName]="closeLargeImg()"> <!-- Need a unique key for the transition above to work on route change -->
 
-      <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
-        <g-image src="~/assets/images/arrow-full-left.png"  />
-        <p class="pt-2 mb-0">Back to<br />Archives</p>
-      </g-link>
+        <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
+          <g-image src="~/assets/images/arrow-full-left.png"  />
+          <p class="pt-2 mb-0">Back to<br />Archives</p>
+        </g-link>
 
         <!-- <header id="header" :style="headerStyles"> -->
         <header id="header" class="px-3">
@@ -55,27 +55,37 @@
 
         <div id="mainContent" class="px-3">
           <div class="galleryWrapper">
-            <div 
+            <!-- <div 
               v-for="(img, iImg) in imageUrlsLowRes" 
               :key="'img'+iImg" 
               class="galleryBox"
-              @click="onGalleryImgClick(iImg)"
+              @click.prevent="onGalleryImgClick(iImg)"
+              @mouseenter="zoomedImgIndex == null ? updateImgPosition(iImg) : updateNewImgPosition(iImg)"
+            > -->
+            <!-- Loading HiRes images dynamically is slow so better to load all upfront?? See created hook -->
+            <!-- Jumping effect when changing from lores to hires so avoid by only having hi res? -->
+            <div 
+              v-for="(img, iImg) in imageUrlsHiRes" 
+              :key="'img'+iImg" 
+              class="galleryBox"
+              @click.prevent="onGalleryImgClick(iImg)"
+              @mouseenter="zoomedImgIndex == null ? updateImgPosition(iImg) : updateNewImgPosition(iImg)"
             >
-              <img :src="img" :id="'galleryImage_' + iImg" class="galleryImage">
+              <img 
+                v-show="zoomedImgIndex !== iImg" 
+                :src="img" 
+                :id="'galleryImage_' + iImg" 
+                class="galleryImage"
+              >
             </div>
           </div>
         </div>
-
-        <!-- <g-image 
-          v-if="zoomedImgIndex"
-          :src="imageUrlsHiRes[zoomedImgIndex]"
-          class="zoomedImg"
-          :style="zoomedImgStyles"
-        /> -->
+        
         <img 
-          v-if="zoomedImgIndex"
+          v-if="zoomedImgIndex >= 0"
           :src="imageUrlsHiRes[zoomedImgIndex]"
           class="zoomedImg"
+          :class="applyLargeImgStyles ? 'centerPos' : null"
           :style="zoomedImgStyles"
         />
         
@@ -115,6 +125,10 @@ query ($id: ID!) {
 import SlideshowImages from '../components/SlideshowImages.vue'
 const slugify = require('@sindresorhus/slugify')
 
+const keyMap = {
+  ESC: 27
+};
+
 export default {
   metaInfo() {
     return {
@@ -133,11 +147,16 @@ export default {
       windowWidth: 0.0,
       zoomedImgIndex: null,
       imgPosition: {
-        top: null,
-        right: null,
-        left: null
+        top: 0,
+        left: 0
       },
-      applyLargeImgStyles: false
+      imgNewPosition: {
+        top: 0,
+        left: 0
+      },
+      applyLargeImgStyles: false,
+      eventName: null,
+      hiResImages: []
     }
   },
 
@@ -169,18 +188,8 @@ export default {
     },
     zoomedImgStyles() {
       let css = {}
-      css.top = this.imgPosition.top ? this.imgPosition.top.toFixed(2) + 'px' : ''
-      // css.right = this.imgPosition.right ? this.imgPosition.right.toFixed(2) + 'px' : ''
-      css.left = this.imgPosition.left ? this.imgPosition.left.toFixed(2) + 'px' : ''
-
-      if (this.applyLargeImgStyles) {
-        css.maxWidth = '90%'
-        css.height = '90vh'
-        css.top = '50%'
-        css.left = '50%'
-        css.transform = 'translate3d(-50%, -50%, 0)'
-      }
-
+      css['--startPosTop'] = this.imgPosition.top.toFixed(2) + 'px'
+      css['--startPosLeft'] = this.imgPosition.left.toFixed(2) + 'px'
       return css
     }
     // titleImg1Line() {
@@ -201,38 +210,14 @@ export default {
     //     '--bgOpacity': this.headerBgImgOpacity / 100
     //   }
     // },
-    // images() {
-    //   return this.$page.archive.images
-    // },
-    // archives() {
-    //   return this.$static.Archives.edges[0].node.archives
-    // },    
-    // archive_names() {
-    //   return this.archives.map(x => x.title);
-    // },
-    // archiveIndex() {
-    //   return this.archive_names.indexOf(this.title)
-    // },
-    // prev_archive() {
-    //   const i = this.archiveIndex
-    //   if (i === 0)
-    //     var prev_i = this.archive_names.length - 1
-    //   else
-    //     prev_i = i - 1
-    //   let archive = {...this.archives[prev_i]}
-    //   archive.link = slugify(archive.title)
-    //   return archive
-    // },
-    // next_archive() {
-    //   const i = this.archiveIndex     
-    //   if (i === this.archive_names.length - 1)
-    //     var next_i = 0
-    //   else
-    //     next_i = i + 1
-    //   let archive = {...this.archives[next_i]}
-    //   archive.link = slugify(archive.title)
-    //   return archive
-    // }
+  },
+
+  created() {
+    for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
+      const image = new Image();
+      image.src = this.node.imageGallery.commonPathHiRes + i + '.jpg'
+      this.hiResImages.push(image)
+    }
   },
 
   mounted() {
@@ -248,39 +233,90 @@ export default {
     this.$refs.slideshowCenter.pause()
     this.$refs.slideshowRight.pause()
     this.staggerSlideshowStarts()
+
+    this.bindEvents()
+  },
+
+  beforeDestroy() {
+    this.unbindEvents()
   },
 
   methods: {
+    bindEvents() {
+      document.addEventListener('keydown', this.keyDownHandler, false);
+    },
+    unbindEvents() {
+      document.removeEventListener('keydown', this.keyDownHandler, false);
+    },
     delay(ms) {
       return new Promise(res => setTimeout(res, ms))
     },
     async staggerSlideshowStarts() {
       this.$refs.slideshowLeft.start()
 
-      await this.delay(1500);
+      await this.delay(1500)
       this.$refs.slideshowRight.start()
 
-      await this.delay(1500);
+      await this.delay(1500)
       this.$refs.slideshowCenter.start()
     },
     onGalleryImgClick(iImg) {
-      let imgElement = document.getElementById('galleryImage_' + iImg)
-      this.updateImgPosition(imgElement)
-      this.zoomedImgIndex = iImg
+      if (this.zoomedImgIndex !== null)
+        return
 
-      this.applyLargeImgStyles = true
+      // let imgElement = document.getElementById('galleryImage_' + iImg)
+      // this.updateImgPosition(imgElement)
+      this.updateImgPosition(iImg)
+
+      this.$nextTick(() => {
+        this.zoomedImgIndex = iImg
+      })
+      // this.zoomedImgIndex = iImg
+
+      this.$nextTick(() => {
+        this.applyLargeImgStyles = true
+      })
+      
+      this.eventName = 'click'
     },
-    updateImgPosition(el) {
-      let elemRect = el.getBoundingClientRect()
+    updateImgPosition(iImg) {
+      const imgEl = document.getElementById('galleryImage_' + iImg)
+      const elemRect = imgEl.getBoundingClientRect()
       this.imgPosition.top = elemRect.top
-      this.imgPosition.right = elemRect.right
       this.imgPosition.left = elemRect.left
     },
-    resetImgPosition(el) {
-      this.imgPosition.top = null
-      this.imgPosition.right = null
-      this.imgPosition.left = null
-    }
+    updateNewImgPosition(iImg) {
+      const imgEl = document.getElementById('galleryImage_' + iImg)
+      const elemRect = imgEl.getBoundingClientRect()
+      this.imgNewPosition.top = elemRect.top
+      this.imgNewPosition.left = elemRect.left
+    },
+    closeLargeImg() {
+      if (this.applyLargeImgStyles) {
+        this.applyLargeImgStyles = false
+        this.eventName = null
+        this.resetZoomedImgIndex()
+      }
+    },
+    async resetZoomedImgIndex() {
+      await this.delay(400);
+      this.zoomedImgIndex = null
+      if (this.imgNewPosition.top !== null) {
+        this.imgPosition.top = this.imgNewPosition.top
+        this.imgPosition.left = this.imgNewPosition.left
+        this.imgNewPosition.top = 0
+        this.imgNewPosition.left = 0
+      }
+    },
+    keyDownHandler(event) {
+      switch (event.keyCode) {
+        case keyMap.ESC:
+          this.closeLargeImg();
+          break;
+        default:
+          break;
+      }
+    },
   }
 }
 </script>
@@ -448,7 +484,7 @@ export default {
   max-width: 350px;
   height: 350px;
   position: relative;
-  place-self: center;
+  // place-self: center;
 }
 .galleryImage {
   position: absolute;
@@ -458,21 +494,37 @@ export default {
   bottom: 0;
   max-width: 100%;
   max-height: 100%;
+  object-fit: contain;
   margin: auto;
+  cursor: zoom-in;
 }
 
 .zoomedImg {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  // width: 350px;
-  height: 350px;
-  // max-width: 100%;
-  max-height: 100%;
-  max-width: 350px;
-  margin: 0 auto;
+  margin: auto;
   z-index: 100;
+  cursor: zoom-out;
+  
+  max-width: 350px;
+  height: 350px;
+  object-fit: contain;
+  top: var(--startPosTop);
+  left: var(--startPosLeft);
+  transform: translate3d(0, 0, 0);
+
+  transition: all 0.3s linear 0s;
+}
+.zoomedImg.centerPos {
+  // max-width: 90%;
+  // height: 90vh;
+  max-width: 90vw;
+  max-height: 90vh;
+  height: 90vh;
+  width: auto;
+  object-fit: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
 }
 
 
