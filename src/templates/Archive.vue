@@ -29,6 +29,7 @@
               id="slideshowCenter"
               class="headerBox"
             >
+              <div class="slideshowFilter" />
               <div class="slideshowOverlay">
                 <g-image 
                   v-if="node.titleImg1Line != null"
