@@ -445,7 +445,14 @@ export default {
   position: relative;
   place-self: center;
 }
-
+.slideshowFilter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 40;
+  background-color: #3E2E20;
+  opacity: 0.29;
+}
 .slideshowOverlay {
   position: absolute;
   top: 0;
