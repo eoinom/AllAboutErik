@@ -350,6 +350,7 @@ export default {
 }
 
 .layout {
+  background-color: #222222;
   padding: 0;
   overflow: hidden; /* added for pseudo-element */
   position: relative; /* added for pseudo-element */
