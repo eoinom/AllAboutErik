@@ -11,69 +11,118 @@
         <!-- <header id="header" :style="headerStyles"> -->
         <header id="header" class="px-3">
           <div class="headerWrapper">
-            <SlideshowImages 
-              v-show="windowWidth >= 1200"
-              :slides="node.headerSlideshowLeft" 
-              :interval="4500" 
-              borderRadius="15px" 
-              ref="slideshowLeft" 
-              id="slideshowLeft" 
-              class="headerBox" 
-            />
 
-            <SlideshowImages 
-              :slides="node.headerSlideshowCenter"  
-              :interval="4500" 
-              borderRadius="15px" 
-              ref="slideshowCenter" 
-              id="slideshowCenter"
-              class="headerBox"
-            >
-              <div class="slideshowFilter" />
-              <div class="slideshowOverlay">
-                <g-image 
-                  v-if="node.titleImg1Line != null"
-                  :src="node.titleImg1Line"
-                  :alt="node.title + ' title image'" 
-                  class="titleImg titleImg1Line" 
-                />
-                <span v-html="node.content" class="archive_headerText" />
+            <!-- SLIDESHOWS -->
+            <template v-if="node.headerSlideshowLeft.length > 0">
+              <SlideshowImages 
+                v-show="windowWidth >= 1200"
+                :slides="node.headerSlideshowLeft" 
+                :interval="4500" 
+                borderRadius="15px" 
+                ref="slideshowLeft" 
+                id="slideshowLeft" 
+                class="headerBox" 
+              />
+
+              <SlideshowImages 
+                :slides="node.headerSlideshowCenter"  
+                :interval="4500" 
+                borderRadius="15px" 
+                ref="slideshowCenter" 
+                id="slideshowCenter"
+                class="headerBox"
+              >
+                <div class="slideshowFilter" />
+                <div class="slideshowOverlay">
+                  <g-image 
+                    v-if="node.titleImg1Line != null"
+                    :src="node.titleImg1Line"
+                    :alt="node.title + ' title image'" 
+                    class="titleImg titleImg1Line" 
+                  />
+                  <span v-html="node.content" class="archive_headerText" />
+                </div>
+              </SlideshowImages>
+
+              <SlideshowImages 
+                v-show="windowWidth >= 1200"
+                :slides="node.headerSlideshowRight" 
+                :interval="4500" 
+                borderRadius="15px" 
+                ref="slideshowRight" 
+                id="slideshowRight" 
+                class="headerBox" 
+              />
+            </template>
+
+            <!-- STATIC HEADER IMAGES -->
+            <template v-if="node.headerImgLeft !== ''">
+              <div class="headerBox">
+                <img :src="node.headerImgLeft" />
               </div>
-            </SlideshowImages>
 
-            <SlideshowImages 
-              v-show="windowWidth >= 1200"
-              :slides="node.headerSlideshowRight" 
-              :interval="4500" 
-              borderRadius="15px" 
-              ref="slideshowRight" 
-              id="slideshowRight" 
-              class="headerBox" 
-            />
+              <div class="headerBox">
+                <img :src="node.headerImgCentre" />
+                <div class="slideshowOverlay">
+                  <g-image 
+                    v-if="node.titleImg2Lines != ''"
+                    :src="node.titleImg2Lines"
+                    :alt="node.title + ' title image'" 
+                    class="titleImg" 
+                  />
+                  <span v-html="node.content" class="archive_headerText" />
+                </div>
+              </div>
+
+              <div class="headerBox">
+                <img :src="node.headerImgRight" />
+              </div>
+            </template>
+
           </div>
         </header>
 
-
+        
         <div id="mainContent" class="px-3">
           <div class="galleryWrapper">
-            <div 
-              v-for="(img, iImg) in imageUrlsLowRes" 
-              :key="'img'+iImg" 
-              class="galleryBox"
-              @click.prevent="onGalleryImgClick(iImg)"
-            >
-              <img
-                :src="img" 
-                :id="'galleryImage_' + iImg" 
-                class="galleryImage"
-                :class="zoomedImgIndex == iImg ? 'zeroOpacity' : 'fullOpacity'"
+
+            <!-- IMAGE GALLERY -->
+            <template v-if="imageUrlsLowRes != null">
+              <div 
+                v-for="(img, iImg) in imageUrlsLowRes" 
+                :key="'img'+iImg" 
+                class="galleryBox"
+                @click.prevent="onGalleryImgClick(iImg)"
               >
-            </div>
+                <img
+                  :src="img" 
+                  :id="'galleryImage_' + iImg" 
+                  class="galleryImage"
+                  :class="zoomedImgIndex == iImg ? 'zeroOpacity' : 'fullOpacity'"
+                >
+              </div>
+            </template>
+
+            <!-- AUDIO GALLERY -->
+            <template v-if="audioTracks != null">
+              <div 
+                v-for="(track, iTrack) in audioTracks" 
+                :key="'track'+iTrack" 
+                class="galleryBox"
+                @click.prevent="onAudioTrackClick(iTrack)"
+              >
+                <img
+                  :src="track.thumbnailImg" 
+                  :id="'galleryImage_' + iTrack" 
+                  class="galleryImage"
+                >
+              </div>
+            </template>
           </div>
         </div>
         
         <img 
-          v-if="zoomedImgIndex >= 0"
+          v-if="zoomedImgIndex != null && zoomedImgIndex >= 0"
           :src="imageUrlsHiRes[zoomedImgIndex]"
           class="zoomedImg"
           :class="applyLargeImgStyles ? 'centerPos' : null"
@@ -97,7 +146,11 @@ query ($id: ID!) {
   archive: archives(id: $id) {
     title
     titleImg1Line
+    titleImg2Lines
     content
+    headerImgLeft
+    headerImgCentre
+    headerImgRight
     headerSlideshowLeft {
       img
     }
@@ -111,6 +164,11 @@ query ($id: ID!) {
       numImages
       commonPathLoRes
       commonPathHiRes
+    }
+    audioGallery {
+      url
+      caption
+      thumbnailImg
     }
   }
 }
@@ -166,9 +224,13 @@ export default {
       return slugify(this.title)
     },
     node() {
+      console.log('this.node:')
+      console.log(this.$page.archive)
       return this.$page.archive
     },
     imageUrlsLowRes() {
+      if (this.node.imageGallery == null)
+        return null
       let urls = []
       for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
         let url = this.node.imageGallery.commonPathLoRes + i + '.jpg'
@@ -177,6 +239,8 @@ export default {
       return urls
     },
     imageUrlsHiRes() {
+      if (this.node.imageGallery == null)
+        return null
       let urls = []
       for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
         let url = this.node.imageGallery.commonPathHiRes + i + '.jpg'
@@ -189,6 +253,9 @@ export default {
         '--startPosTop': this.imgCenterPos.top.toFixed(2) + 'px',
         '--startPosLeft': this.imgCenterPos.left.toFixed(2) + 'px'
       }
+    },
+    audioTracks() {
+      return this.node.audioGallery
     }
     // titleImg1Line() {
     //   return this.$page.archive.titleImg1Line
@@ -212,10 +279,12 @@ export default {
 
   mounted() {
     // to preload the hi-res images (ref: https://stackoverflow.com/q/3646036/13159696)
-    for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
-      const image = new Image();
-      image.src = this.node.imageGallery.commonPathHiRes + i + '.jpg'
-      this.hiResImages.push(image)
+    if (this.node.imageGallery != null) {
+      for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
+        const image = new Image();
+        image.src = this.node.imageGallery.commonPathHiRes + i + '.jpg'
+        this.hiResImages.push(image)
+      }
     }
 
     this.windowWidth = window.innerWidth
@@ -226,10 +295,12 @@ export default {
       this.windowWidth = window.innerWidth
     })
 
-    this.$refs.slideshowLeft.pause()
-    this.$refs.slideshowCenter.pause()
-    this.$refs.slideshowRight.pause()
-    this.staggerSlideshowStarts()
+    if (this.node.headerSlideshowLeft.length > 0) {
+      this.$refs.slideshowLeft.pause()
+      this.$refs.slideshowCenter.pause()
+      this.$refs.slideshowRight.pause()
+      this.staggerSlideshowStarts()
+    }
 
     this.bindEvents()
   },
@@ -423,14 +494,6 @@ export default {
 //   stroke: rgb(203,203,201);
 //   stroke-width: 2px;
 // }
-
-.slideshowCol {
-  position: relative;
-  max-height:1224px; 
-  width:auto;
-  text-align: center;
-}
-
 
 
 .headerWrapper {
