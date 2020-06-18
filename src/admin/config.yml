@@ -692,3 +692,4 @@ collections:
         fields: 
           - {label: "Audio Url (Soundcloud)", name: "url", widget: "string", required: false}
           - {label: "Caption", name: "caption", widget: "string", required: false}
+          - {label: "Thumbnail image", name: "thumbnailImg", widget: "image", required: false} 
