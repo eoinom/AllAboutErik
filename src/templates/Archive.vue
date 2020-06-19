@@ -32,15 +32,15 @@
                 id="slideshowCenter"
                 class="headerBox"
               >
-                <div class="slideshowFilter" />
-                <div class="slideshowOverlay">
+                <div class="headerFilter" />
+                <div class="headerOverlay">
                   <g-image 
                     v-if="node.titleImg1Line != null"
                     :src="node.titleImg1Line"
                     :alt="node.title + ' title image'" 
                     class="titleImg titleImg1Line" 
                   />
-                  <span v-html="node.content" class="archive_headerText" />
+                  <span v-html="node.content" class="archive_headerText" :style="headerTextStyles" />
                 </div>
               </SlideshowImages>
 
@@ -57,24 +57,25 @@
 
             <!-- STATIC HEADER IMAGES -->
             <template v-if="node.headerImgLeft !== ''">
-              <div class="headerBox">
+              <div v-show="windowWidth >= 1200" class="headerBox">
                 <img :src="node.headerImgLeft" />
               </div>
 
               <div class="headerBox">
+                <div class="headerFilter" />
                 <img :src="node.headerImgCentre" />
-                <div class="slideshowOverlay">
+                <div class="headerOverlay">
                   <g-image 
                     v-if="node.titleImg2Lines != ''"
                     :src="node.titleImg2Lines"
                     :alt="node.title + ' title image'" 
                     class="titleImg" 
                   />
-                  <span v-html="node.content" class="archive_headerText" />
+                  <span v-html="node.content" class="archive_headerText" :style="headerTextStyles" />
                 </div>
               </div>
 
-              <div class="headerBox">
+              <div v-show="windowWidth >= 1200" class="headerBox">
                 <img :src="node.headerImgRight" />
               </div>
             </template>
@@ -83,7 +84,7 @@
         </header>
 
         
-        <div id="mainContent" class="px-3">
+        <div id="mainContent" class="px-3" :style="mainContentStyles">
           <div class="galleryWrapper">
 
             <!-- IMAGE GALLERY -->
@@ -108,19 +109,26 @@
               <div 
                 v-for="(track, iTrack) in audioTracks" 
                 :key="'track'+iTrack" 
-                class="galleryBox"
+                class="galleryBox audioBox"
+                :style="'background: transparent url(' + track.thumbnailImg + ') no-repeat left top'"
                 @click.prevent="onAudioTrackClick(iTrack)"
               >
-                <img
-                  :src="track.thumbnailImg" 
-                  :id="'galleryImage_' + iTrack" 
-                  class="galleryImage"
-                >
+                <div class="boxOverlay mb-5">
+                  <transition name="fade">
+                    <span class="thumbnailCaption hideOnHover">{{ track.caption }}</span>
+                  </transition>
+                  
+                  <transition name="fade">
+                    <g-image alt="Play symbol" src="~/assets/images/music_symbol_circle.png" class="playSymbol showOnHover" />
+                  </transition>
+                </div>
+
               </div>
             </template>
           </div>
         </div>
         
+        <!-- HI-RES ZOOMED GALLERY IMAGE -->
         <img 
           v-if="zoomedImgIndex != null && zoomedImgIndex >= 0"
           :src="imageUrlsHiRes[zoomedImgIndex]"
@@ -228,6 +236,11 @@ export default {
       console.log(this.$page.archive)
       return this.$page.archive
     },
+    headerTextStyles() {
+      let css = {}
+      css.textAlign = this.node.content.length < 80 ? 'center' : 'justify'
+      return css
+    },
     imageUrlsLowRes() {
       if (this.node.imageGallery == null)
         return null
@@ -256,25 +269,26 @@ export default {
     },
     audioTracks() {
       return this.node.audioGallery
+    },
+    numItems() {
+      let num = 0
+      num += this.imageUrlsLowRes ? this.imageUrlsLowRes.length : 0
+      num += this.audioTracks ? this.audioTracks.length : 0
+      return num
+    },
+    mainContentStyles() {
+      let css = {}
+      if (this.numItems == 1) {
+        css['--maxPerRow'] = 1
+        css['--boxSize'] = '480px'
+        css['--gridGap'] = '0px'
+      } else {
+        css['--maxPerRow'] = 5
+        css['--boxSize'] = '350px'
+        css['--gridGap'] = '30px'
+      }
+      return css
     }
-    // titleImg1Line() {
-    //   return this.$page.archive.titleImg1Line
-    // },
-    // titleImg2Lines() {
-    //   return this.$page.archive.titleImg2Lines
-    // },
-    // headerBgImg() {
-    //   return this.$page.archive.headerBgImg
-    // },
-    // headerBgImgOpacity() {
-    //   return this.$page.archive.hasOwnProperty('backgroundImgOpacity') ? this.$page.archive.backgroundImgOpacity : 0.5
-    // },  
-    // headerStyles() {
-    //   return {
-    //     '--headerBgImg': 'url(' + this.headerBgImg + ')',
-    //     '--bgOpacity': this.headerBgImgOpacity / 100
-    //   }
-    // },
   },
 
   mounted() {
@@ -402,6 +416,7 @@ export default {
 
 
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 
 @font-face {
@@ -426,13 +441,14 @@ export default {
   padding: 0;
   overflow: hidden; /* added for pseudo-element */
   position: relative; /* added for pseudo-element */
+  min-height: 100vh;
 }
 
 .backToArchives {
   position: fixed;
   top: 50px;
   right: 60px;
-  z-index: 5;
+  z-index: 100;
 
   font-family: NeueHaasGroteskText Pro65;
   font-size: 20px;
@@ -468,9 +484,9 @@ export default {
 .archive_headerText {
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.29);
+  // text-shadow: 1px 1px 4px rgba(0,0,0,0.29);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.65);
   color: #FFFFFF;
-  text-align: center;
   letter-spacing: 1px;
   line-height: 1.625rem;
   font-size: 1.125rem;
@@ -509,7 +525,10 @@ export default {
   position: relative;
   place-self: center;
 }
-.slideshowFilter {
+.headerBox img {
+  border-radius: 15px;
+}
+.headerFilter {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -517,24 +536,28 @@ export default {
   background-color: #3E2E20;
   opacity: 0.29;
 }
-.slideshowOverlay {
+.headerOverlay {
   position: absolute;
-  top: 0;
+  top: 100px;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto auto;
-  max-width: 85%;
+  // max-width: 85%;
+  max-width: 100%;
+  margin: auto 24px;
   height: fit-content;
   z-index: 50;
 }
 
 .titleImg {
   position: relative;
-  width: 100%;
-  max-width: 100%;
+  // width: 100%;
+  // max-width: 100%;
+  max-width: 85%;
   height: auto;
   margin: auto;
+  padding-bottom: 8px;
 }
 .titleImg1Line {
   display: inline;
@@ -544,26 +567,56 @@ export default {
 }
 
 #mainContent {
+  max-width: calc(var(--maxPerRow) * var(--boxSize) + (var(--maxPerRow - 1) * var(--gridGap)) + 2 * 16px);
   width: 100%;
-  max-width: calc(5 * 350px + 4 * 30px + 2 * 16px);
   margin: 0 auto;
 }
 
 .galleryWrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--boxSize), 1fr));
   grid-auto-flow: row;
-  grid-gap: 30px;
+  grid-gap: var(--gridGap);
   align-items: center;
   justify-content: center;
 }
 .galleryBox {
   width: 100%;
-  max-width: 350px;
-  height: 350px;
+  max-width: var(--boxSize);
+  height: var(--boxSize);
   position: relative;
-  // place-self: center;
+  place-self: center;
 }
+
+.galleryBox.audioBox {
+  cursor: pointer;
+  opacity: 0.84;
+  transition: opacity 0.2s ease;
+}
+.galleryBox.audioBox::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  box-shadow: inset 0px 0px 150px rgba(0,0,0,0.5), inset 0px 0px 150px rgba(0,0,0,0.5);
+  pointer-events: none;
+  transition: box-shadow 0.2s ease;
+}
+.galleryBox.audioBox:hover {
+  opacity: 1;
+}
+.galleryBox.audioBox:hover::before {
+  box-shadow: none;
+}
+.audioBox .playSymbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
 .galleryImage {
   position: absolute;
   right: 0;
@@ -577,11 +630,54 @@ export default {
   cursor: zoom-in;
 }
 
+.thumbnailCaption {
+  color: white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-feature-settings: 'liga';
+  font-weight: 300;
+  font-size: 53px;
+  line-height: 53px;
+  letter-spacing: 9px;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.32);
+  text-transform: uppercase;
+  transition: inherit;
+}
+
 .fullOpacity {
   opacity: 1;
 }
 .zeroOpacity {
   opacity: 0;
+}
+
+.boxOverlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+.hideOnHover {
+  opacity: 1;
+  transition: all 0.5s ease 0s;
+}
+.audioBox:hover .hideOnHover {
+  opacity: 0;
+}
+.showOnHover {
+  opacity: 0;
+  transition: all 0.5s ease 0s;
+}
+.audioBox:hover .showOnHover {
+  opacity: 1;
 }
 
 .zoomedImg {
@@ -733,7 +829,5 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
     // grid-gap: 30px;
   }
 }
-
-
 
 </style>

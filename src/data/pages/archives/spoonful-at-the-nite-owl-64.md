@@ -1,5 +1,5 @@
 ---
-title: Spoonful at the Nite Owl
+title: Spoonful at the Nite Owl '64
 titleImg2Lines: >-
   https://res.cloudinary.com/all-about-erik/image/upload/v1592436354/Archives/02.%20Spoonful%20at%20the%20Nite%20Owl/titleImg2Line_spoonful-nite-owl.png
 headerImgLeft: >-
