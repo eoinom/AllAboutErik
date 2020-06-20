@@ -1,149 +1,139 @@
 <template>
   <Layout>
-    <transition name="page" mode="out-in">
-      <div :key="'archive_' + titleSlug" v-on:[eventName]="closeLargeImg()" class="pb-5"> <!-- Need a unique key for the transition above to work on route change -->
+    <div :key="'archive_' + titleSlug" v-on:[eventName]="closeLargeImg()" class="pb-5"> <!-- Need a unique key for the transition above to work on route change -->
 
-        <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
-          <g-image src="~/assets/images/arrow-full-left.png"  />
-          <p class="pt-2 mb-0">Back to<br />Archives</p>
-        </g-link>
+      <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
+        <g-image src="~/assets/images/arrow-full-left.png"  />
+        <p class="pt-2 mb-0">Back to<br />Archives</p>
+      </g-link>
 
-        <!-- <header id="header" :style="headerStyles"> -->
-        <header id="header" class="px-3">
-          <div class="headerWrapper">
+      <!-- <header id="header" :style="headerStyles"> -->
+      <header id="header" class="px-3">
+        <div class="headerWrapper">
 
-            <!-- SLIDESHOWS -->
-            <template v-if="node.headerSlideshowLeft.length > 0">
-              <SlideshowImages 
-                v-show="windowWidth >= 1200"
-                :slides="node.headerSlideshowLeft" 
-                :interval="4500" 
-                borderRadius="15px" 
-                ref="slideshowLeft" 
-                id="slideshowLeft" 
-                class="headerBox" 
-              />
+          <!-- SLIDESHOWS -->
+          <template v-if="node.headerSlideshowLeft.length > 0">
+            <SlideshowImages 
+              v-show="windowWidth >= 1200"
+              :slides="node.headerSlideshowLeft" 
+              :interval="4500" 
+              borderRadius="15px" 
+              ref="slideshowLeft" 
+              id="slideshowLeft" 
+              class="headerBox" 
+            />
 
-              <SlideshowImages 
-                :slides="node.headerSlideshowCenter"  
-                :interval="4500" 
-                borderRadius="15px" 
-                ref="slideshowCenter" 
-                id="slideshowCenter"
-                class="headerBox"
-              >
-                <div class="headerFilter" />
-                <div class="headerOverlay">
-                  <g-image 
-                    v-if="node.titleImg1Line != null"
-                    :src="node.titleImg1Line"
-                    :alt="node.title + ' title image'" 
-                    class="titleImg titleImg1Line" 
-                  />
-                  <span v-html="node.content" class="archive_headerText" :style="headerTextStyles" />
-                </div>
-              </SlideshowImages>
-
-              <SlideshowImages 
-                v-show="windowWidth >= 1200"
-                :slides="node.headerSlideshowRight" 
-                :interval="4500" 
-                borderRadius="15px" 
-                ref="slideshowRight" 
-                id="slideshowRight" 
-                class="headerBox" 
-              />
-            </template>
-
-            <!-- STATIC HEADER IMAGES -->
-            <template v-if="node.headerImgLeft !== ''">
-              <div v-show="windowWidth >= 1200" class="headerBox">
-                <img :src="node.headerImgLeft" />
+            <SlideshowImages 
+              :slides="node.headerSlideshowCenter"  
+              :interval="4500" 
+              borderRadius="15px" 
+              ref="slideshowCenter" 
+              id="slideshowCenter"
+              class="headerBox"
+            >
+              <div class="headerFilter" />
+              <div class="headerOverlay">
+                <g-image 
+                  v-if="node.titleImg1Line != null"
+                  :src="node.titleImg1Line"
+                  :alt="node.title + ' title image'" 
+                  class="titleImg titleImg1Line" 
+                />
+                <span v-html="node.content" class="archive_headerText" :style="headerTextStyles" />
               </div>
+            </SlideshowImages>
 
-              <div class="headerBox">
-                <div class="headerFilter" />
-                <img :src="node.headerImgCentre" />
-                <div class="headerOverlay">
-                  <g-image 
-                    v-if="node.titleImg2Lines != ''"
-                    :src="node.titleImg2Lines"
-                    :alt="node.title + ' title image'" 
-                    class="titleImg" 
-                  />
-                  <span v-html="node.content" class="archive_headerText" :style="headerTextStyles" />
-                </div>
+            <SlideshowImages 
+              v-show="windowWidth >= 1200"
+              :slides="node.headerSlideshowRight" 
+              :interval="4500" 
+              borderRadius="15px" 
+              ref="slideshowRight" 
+              id="slideshowRight" 
+              class="headerBox" 
+            />
+          </template>
+
+          <!-- STATIC HEADER IMAGES -->
+          <template v-if="node.headerImgLeft !== ''">
+            <div v-show="windowWidth >= 1200" class="headerBox">
+              <img :src="node.headerImgLeft" />
+            </div>
+
+            <div class="headerBox">
+              <div class="headerFilter" />
+              <img :src="node.headerImgCentre" />
+              <div class="headerOverlay">
+                <g-image 
+                  v-if="node.titleImg2Lines != ''"
+                  :src="node.titleImg2Lines"
+                  :alt="node.title + ' title image'" 
+                  class="titleImg" 
+                />
+                <span v-html="node.content" class="archive_headerText" :style="headerTextStyles" />
               </div>
+            </div>
 
-              <div v-show="windowWidth >= 1200" class="headerBox">
-                <img :src="node.headerImgRight" />
-              </div>
-            </template>
+            <div v-show="windowWidth >= 1200" class="headerBox">
+              <img :src="node.headerImgRight" />
+            </div>
+          </template>
 
-          </div>
-        </header>
-
-        
-        <div id="mainContent" class="px-3" :style="mainContentStyles">
-          <div class="galleryWrapper">
-
-            <!-- IMAGE GALLERY -->
-            <template v-if="imageUrlsLowRes != null">
-              <div 
-                v-for="(img, iImg) in imageUrlsLowRes" 
-                :key="'img'+iImg" 
-                class="galleryBox"
-                @click.prevent="onGalleryImgClick(iImg)"
-              >
-                <img
-                  :src="img" 
-                  :id="'galleryImage_' + iImg" 
-                  class="galleryImage"
-                  :class="zoomedImgIndex == iImg ? 'zeroOpacity' : 'fullOpacity'"
-                >
-              </div>
-            </template>
-
-            <!-- AUDIO GALLERY -->
-            <template v-if="audioTracks != null">
-              <div 
-                v-for="(track, iTrack) in audioTracks" 
-                :key="'track'+iTrack" 
-                class="galleryBox audioBox"
-                :style="'background: transparent url(' + track.thumbnailImg + ') no-repeat left top'"
-                @click.prevent="onAudioTrackClick(iTrack)"
-              >
-                <div class="boxOverlay mb-5">
-                  <transition name="fade">
-                    <span class="thumbnailCaption hideOnHover">{{ track.caption }}</span>
-                  </transition>
-                  
-                  <transition name="fade">
-                    <g-image alt="Play symbol" src="~/assets/images/music_symbol_circle.png" class="playSymbol showOnHover" />
-                  </transition>
-                </div>
-
-              </div>
-            </template>
-          </div>
         </div>
-        
-        <!-- HI-RES ZOOMED GALLERY IMAGE -->
-        <img 
-          v-if="zoomedImgIndex != null && zoomedImgIndex >= 0"
-          :src="imageUrlsHiRes[zoomedImgIndex]"
-          class="zoomedImg"
-          :class="applyLargeImgStyles ? 'centerPos' : null"
-          :style="zoomedImgStyles"
-        />
+      </header>
 
-        <ScrollToTop
-          text="BACK TO THE TOP"
-          :includeArrow="true"
-        />
-        
+      
+      <div id="mainContent" class="px-3" :style="mainContentStyles">
+        <div class="galleryWrapper">
+
+          <!-- IMAGE GALLERY -->
+          <template v-if="imageUrlsLowRes != null">
+            <div 
+              v-for="(img, iImg) in imageUrlsLowRes" 
+              :key="'img'+iImg" 
+              class="galleryBox"
+              @click.prevent="onGalleryImgClick(iImg)"
+            >
+              <img 
+                :src="img"
+                :id="'galleryImage_' + iImg"
+                class="galleryImage" 
+                :class="{ 'centerPos': applyLargeImgStyles && zoomedImgIndex == iImg }"
+                :style="zoomedImgStyles"
+              />
+            </div>
+          </template>
+
+          <!-- AUDIO GALLERY -->
+          <template v-if="audioTracks != null">
+            <div 
+              v-for="(track, iTrack) in audioTracks" 
+              :key="'track'+iTrack" 
+              class="galleryBox audioBox"
+              :style="'background: transparent url(' + track.thumbnailImg + ') no-repeat left top'"
+              @click.prevent="onAudioTrackClick(iTrack)"
+            >
+              <div class="boxOverlay mb-5">
+                <transition name="fade">
+                  <span class="thumbnailCaption hideOnHover">{{ track.caption }}</span>
+                </transition>
+                
+                <transition name="fade">
+                  <g-image alt="Play symbol" src="~/assets/images/music_symbol_circle.png" class="playSymbol showOnHover" />
+                </transition>
+              </div>
+
+            </div>
+          </template>
+        </div>
       </div>
-    </transition>
+
+      <ScrollToTop
+        text="BACK TO THE TOP"
+        :includeArrow="true"
+      />
+      
+    </div>
 
   </Layout>
 </template>
@@ -209,18 +199,14 @@ export default {
       imageIndex: 0,
       showIntro: false,
       windowWidth: 0.0,
+      windowHeight: 0.0,
       zoomedImgIndex: null,
       imgCenterPos: {
         top: 0,
         left: 0
       },
-      imgNewCenterPos: {
-        top: 0,
-        left: 0
-      },
       applyLargeImgStyles: false,
       eventName: null,
-      hiResImages: []
     }
   },
 
@@ -262,9 +248,11 @@ export default {
       return urls
     },
     zoomedImgStyles() {
+      let absCenterTop = this.windowHeight / 2 - this.imgCenterPos.top + 175
+      let absCenterLeft = this.windowWidth / 2 - this.imgCenterPos.left + 175
       return {
-        '--startPosTop': this.imgCenterPos.top.toFixed(2) + 'px',
-        '--startPosLeft': this.imgCenterPos.left.toFixed(2) + 'px'
+        '--startPosTop': absCenterTop.toFixed(2) + 'px',
+        '--startPosLeft': absCenterLeft.toFixed(2) + 'px'
       }
     },
     audioTracks() {
@@ -293,21 +281,15 @@ export default {
 
   mounted() {
     // to preload the hi-res images (ref: https://stackoverflow.com/q/3646036/13159696)
-    if (this.node.imageGallery != null) {
-      for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
-        const image = new Image();
-        image.src = this.node.imageGallery.commonPathHiRes + i + '.jpg'
-        this.hiResImages.push(image)
-      }
-    }
+    // if (this.node.imageGallery != null) {
+    //   for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
+    //     const image = new Image();
+    //     image.src = this.node.imageGallery.commonPathHiRes + i + '.jpg'
+    //     this.hiResImages.push(image)
+    //   }
+    // }
 
-    this.windowWidth = window.innerWidth
-    window.addEventListener('resize', () => {  
-      this.windowWidth = window.innerWidth
-    })
-    window.addEventListener('orientationchange', () => {  
-      this.windowWidth = window.innerWidth
-    })
+    this.updateWindowDims()
 
     if (this.node.headerSlideshowLeft.length > 0) {
       this.$refs.slideshowLeft.pause()
@@ -327,10 +309,14 @@ export default {
     bindEvents() {
       document.addEventListener('keydown', this.keyDownHandler, false);
       document.addEventListener('scroll', this.scrollHandler, false);
+      document.addEventListener('resize', this.updateWindowDims, false);
+      document.addEventListener('orientationchange', this.updateWindowDims, false);
     },
     unbindEvents() {
       document.removeEventListener('keydown', this.keyDownHandler, false);
       document.removeEventListener('scroll', this.scrollHandler, false);
+      document.removeEventListener('resize', this.updateWindowDims, false);
+      document.removeEventListener('orientationchange', this.updateWindowDims, false);
     },
     delay(ms) {
       return new Promise(res => setTimeout(res, ms))
@@ -344,53 +330,32 @@ export default {
       await this.delay(1500)
       this.$refs.slideshowCenter.start()
     },
-    async onGalleryImgClick(iImg) {
-      if (this.zoomedImgIndex !== null) {
-        this.updateNewImgPosition(iImg)
+    onGalleryImgClick(iImg) {
+      if (this.zoomedImgIndex == iImg) {
         return
       }
-
-      this.updateImgPosition(iImg)
-
-      await this.delay(300)
+      
+      const imgEl = document.getElementById('galleryImage_' + iImg)
+      const elemRect = imgEl.getBoundingClientRect()
+      this.imgCenterPos.top = elemRect.top + (elemRect.height / 2)
+      this.imgCenterPos.left = elemRect.left + (elemRect.width / 2)
 
       this.$nextTick(() => {
         this.zoomedImgIndex = iImg
-      })
-
-      this.$nextTick(() => {
         this.applyLargeImgStyles = true
       })
       
       this.eventName = 'click'
     },
-    updateImgPosition(iImg) {
-      console.log('in updateImgPosition, iImg: ' + iImg)
-      const imgEl = document.getElementById('galleryImage_' + iImg)
-      const elemRect = imgEl.getBoundingClientRect()
-      this.imgCenterPos.top = elemRect.top + (elemRect.height / 2)
-      this.imgCenterPos.left = elemRect.left + (elemRect.width / 2)
-    },
-    updateNewImgPosition(iImg) {
-      const imgEl = document.getElementById('galleryImage_' + iImg)
-      const elemRect = imgEl.getBoundingClientRect()
-      this.imgNewCenterPos.top = elemRect.top + (elemRect.height / 2)
-      this.imgNewCenterPos.left = elemRect.left + (elemRect.width / 2)
-    },
     closeLargeImg() {
       if (this.applyLargeImgStyles) {
-        this.applyLargeImgStyles = false
-        this.eventName = null
-        this.resetZoomedImgIndex()
+        this.applyLargeImgStyles = false        
+
+        this.$nextTick(() => {
+          this.eventName = null
+          this.zoomedImgIndex = null
+        })
       }
-    },
-    async resetZoomedImgIndex() {
-      await this.delay(400);
-      this.zoomedImgIndex = null      
-      this.imgCenterPos.top = this.imgNewCenterPos.top
-      this.imgCenterPos.left = this.imgNewCenterPos.left
-      this.imgNewCenterPos.top = 0
-      this.imgNewCenterPos.left = 0
     },
     keyDownHandler(event) {
       switch (event.keyCode) {
@@ -403,11 +368,12 @@ export default {
     },
     scrollHandler() {      
       if (this.zoomedImgIndex !== null) {
-        this.updateImgPosition(this.zoomedImgIndex)
-        this.$nextTick(() => {
-          this.closeLargeImg()
-        })
+        this.closeLargeImg()
       }
+    },
+    updateWindowDims() {      
+      this.windowWidth = window.innerWidth;
+      this.windowHeight = window.innerHeight;
     }
   }
 }
@@ -619,15 +585,25 @@ export default {
 
 .galleryImage {
   position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  max-width: 100%;
-  max-height: 100%;
+  transform: translate3d(-50%, -50%, 0);
   object-fit: contain;
   margin: auto;
+  top: 175px;
+  left: 175px;
+  width: 350px;
+  height: 350px;
+  z-index: 10;
   cursor: zoom-in;
+  transition: all 0.3s linear;
+}
+.centerPos {
+  top: var(--startPosTop);
+  left: var(--startPosLeft);
+  width: 90vw;
+  height: 90vh;
+  z-index: 100;
+  cursor: zoom-out;
+  transition: all 0.3s linear;
 }
 
 .thumbnailCaption {
@@ -642,13 +618,6 @@ export default {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.32);
   text-transform: uppercase;
   transition: inherit;
-}
-
-.fullOpacity {
-  opacity: 1;
-}
-.zeroOpacity {
-  opacity: 0;
 }
 
 .boxOverlay {
@@ -679,65 +648,6 @@ export default {
 .audioBox:hover .showOnHover {
   opacity: 1;
 }
-
-.zoomedImg {
-  position: fixed;
-  margin: auto;
-  z-index: 100;
-  cursor: zoom-out;
-  
-  max-width: 350px;
-  height: 350px;
-  object-fit: contain;
-  top: var(--startPosTop);
-  left: var(--startPosLeft);
-  transform: translate3d(-50%, -50%, 0);
-
-  transition: all 0.3s linear 0s;
-}
-.zoomedImg.centerPos {
-  max-width: 90vw;
-  max-height: 90vh;
-  height: 90vh;
-  width: auto;
-  top: 50%;
-  left: 50%;
-}
-
-
-/* To fix poor scroll speed using "background-size: cover" and "background-attachment: fixed"
-Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-will-change-property/ */
-.layout::before {
-  content: ' ';
-  position: fixed;  /* instead of background-attachment */
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: black;
-  background-size: cover;
-  will-change: transform; /* creates a new paint layer */
-  z-index: -1;
-}
-
-
-
-/* Transition styles on router-view for fading the page */
-.page-enter-active {
-  transition-duration: 5.5s;
-  transition-property: opacity;
-  transition-timing-function: ease-in-out;
-}
-.page-leave-active {
-  transition-duration: 1.5s;
-  transition-property: opacity;
-  transition-timing-function: ease-in-out;
-}
-.page-enter,
-.page-leave-active {
-  opacity: 0;
-}
-
 
 
 
