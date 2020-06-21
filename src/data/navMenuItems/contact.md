@@ -1,5 +1,5 @@
 ---
-text: Contact
+text: Contact & Credits
 to: /contact
 orderNo: 9
 hasSubMenu: true
