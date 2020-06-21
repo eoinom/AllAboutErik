@@ -6,6 +6,7 @@
       :audioDuration="$page.Collections.edges[0].node.bgAudioDuration"
       :audioFadeInDuration="$page.Collections.edges[0].node.bgAudioFadeInDuration"
       :audioFadeOutDuration="$page.Collections.edges[0].node.bgAudioFadeOutDuration"
+      :playMusic="playMusic"
     />
 
     <b-container fluid class="main-col">
@@ -110,7 +111,8 @@ export default {
     return {
       videoIndex: null,
       mainColHeight: 600,
-      interval: null
+      interval: null,
+      playMusic: true
     }
   },
 
@@ -130,6 +132,12 @@ export default {
     slideshowHeight() {
       let height = this.mainColHeight + 30
       return height + 'px'
+    }
+  },
+
+  created() {
+    if (this.$route.query.hasOwnProperty('playMusic')) {
+      this.playMusic = this.$route.query.playMusic == 'true'
     }
   },
 

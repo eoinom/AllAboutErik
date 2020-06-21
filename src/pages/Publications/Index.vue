@@ -7,6 +7,7 @@
       :audioFadeInDuration="$page.Publications.edges[0].node.bgAudioFadeInDuration"
       :audioFadeOutDuration="$page.Publications.edges[0].node.bgAudioFadeOutDuration"
       :maxVolume=0.78
+      :playMusic="playMusic"
     />
 
     <b-container fluid class="main-col">
@@ -130,7 +131,8 @@ export default {
 
   data() {
     return {      
-      windowWidth: 0.0
+      windowWidth: 0.0,
+      playMusic: true
     }
   },
 
@@ -168,6 +170,12 @@ export default {
         return "initial"
       else
         return "90vw"
+    }
+  },
+
+  created() {
+    if (this.$route.query.hasOwnProperty('playMusic')) {
+      this.playMusic = this.$route.query.playMusic == 'true'
     }
   },
 

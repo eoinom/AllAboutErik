@@ -32,6 +32,10 @@ export default {
     maxVolume: {
       type: Number,
       default: 1.0
+    },
+    playMusic: {
+      type: Boolean,
+      default: true
     }
   },
 
@@ -178,7 +182,9 @@ export default {
 
   mounted() {
     this.audio = new Audio(this.audioFile)
-    this.playAndFadeAudio()
+    if (this.playMusic) {      
+      this.playAndFadeAudio()
+    }
 
     EventBus.$on('audioPlaying', this.eventBusListener)
     EventBus.$on('lightboxMediaLoaded', this.eventBusListener)

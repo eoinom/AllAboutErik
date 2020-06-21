@@ -112,7 +112,7 @@
 
           <b-row no-gutters>
             <b-col>
-              <g-link to="/publications/" class="nav_link" id="nav_back">BACK TO PUBLICATIONS MENU</g-link>
+              <g-link :to="{ path: '/publications/', query: { playMusic: 'false' }}" class="nav_link" id="nav_back">BACK TO PUBLICATIONS MENU</g-link>
             </b-col>
           </b-row>
         </b-container>

@@ -85,7 +85,7 @@
         />
       </div>
 
-      <g-link to="/collections/" class="nav_link pt-3" id="nav_back">BACK TO COLLECTIONS MENU</g-link>
+      <g-link :to="{ path: '/collections/', query: { playMusic: 'false' }}" class="nav_link pt-3" id="nav_back">BACK TO COLLECTIONS MENU</g-link>
     </div>
 
   </div>
