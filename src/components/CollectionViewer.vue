@@ -148,7 +148,8 @@ export default {
       zoom: 6,
       headerEl: null,
       headerHeight: 0,
-      windowWidth: 0.0
+      windowWidth: 0.0,
+      interval: null
     };
   },
 
@@ -185,6 +186,7 @@ export default {
     if (this.disableScroll) {
       document.body.style.overflow = this.bodyOverflowStyle;
     }
+    clearInterval(this.interval);
     this.unbindEvents();
   },
 
@@ -286,7 +288,7 @@ export default {
       }
     },
     observeNavLinksPosition() {
-      let interval = setInterval(function () {    
+      this.interval = setInterval(function () {    
         let navLinksEl = document.getElementById('navLinksRow')
         this.headerHeight = this.getElementOffset(navLinksEl).top
       }.bind(this), 500);
