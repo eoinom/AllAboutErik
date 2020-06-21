@@ -251,8 +251,8 @@ export default {
       let absCenterTop = this.windowHeight / 2 - this.imgCenterPos.top + 175
       let absCenterLeft = this.windowWidth / 2 - this.imgCenterPos.left + 175
       return {
-        '--startPosTop': absCenterTop.toFixed(2) + 'px',
-        '--startPosLeft': absCenterLeft.toFixed(2) + 'px'
+        '--absCenterTop': absCenterTop.toFixed(2) + 'px',
+        '--absCenterLeft': absCenterLeft.toFixed(2) + 'px'
       }
     },
     audioTracks() {
@@ -290,6 +290,7 @@ export default {
     // }
 
     this.updateWindowDims()
+    this.bindEvents()
 
     if (this.node.headerSlideshowLeft.length > 0) {
       this.$refs.slideshowLeft.pause()
@@ -297,8 +298,6 @@ export default {
       this.$refs.slideshowRight.pause()
       this.staggerSlideshowStarts()
     }
-
-    this.bindEvents()
   },
 
   beforeDestroy() {
@@ -309,14 +308,14 @@ export default {
     bindEvents() {
       document.addEventListener('keydown', this.keyDownHandler, false);
       document.addEventListener('scroll', this.scrollHandler, false);
-      document.addEventListener('resize', this.updateWindowDims, false);
-      document.addEventListener('orientationchange', this.updateWindowDims, false);
+      window.addEventListener('resize', this.updateWindowDims, false);
+      window.addEventListener('orientationchange', this.updateWindowDims, false);
     },
     unbindEvents() {
       document.removeEventListener('keydown', this.keyDownHandler, false);
       document.removeEventListener('scroll', this.scrollHandler, false);
-      document.removeEventListener('resize', this.updateWindowDims, false);
-      document.removeEventListener('orientationchange', this.updateWindowDims, false);
+      window.removeEventListener('resize', this.updateWindowDims, false);
+      window.removeEventListener('orientationchange', this.updateWindowDims, false);
     },
     delay(ms) {
       return new Promise(res => setTimeout(res, ms))
@@ -597,8 +596,8 @@ export default {
   transition: all 0.3s linear;
 }
 .centerPos {
-  top: var(--startPosTop);
-  left: var(--startPosLeft);
+  top: var(--absCenterTop);
+  left: var(--absCenterLeft);
   width: 90vw;
   height: 90vh;
   z-index: 100;
