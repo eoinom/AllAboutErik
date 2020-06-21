@@ -87,9 +87,9 @@
         <div class="galleryWrapper">
 
           <!-- IMAGE GALLERY -->
-          <template v-if="imageUrlsLowRes != null">
+          <template v-if="imageUrls != null">
             <div 
-              v-for="(img, iImg) in imageUrlsLowRes" 
+              v-for="(img, iImg) in imageUrls" 
               :key="'img'+iImg" 
               class="galleryBox"
               @click.prevent="onGalleryImgClick(iImg)"
@@ -160,8 +160,7 @@ query ($id: ID!) {
     }
     imageGallery {
       numImages
-      commonPathLoRes
-      commonPathHiRes
+      commonPath
     }
     audioGallery {
       url
@@ -227,22 +226,12 @@ export default {
       css.textAlign = this.node.content.length < 80 ? 'center' : 'justify'
       return css
     },
-    imageUrlsLowRes() {
+    imageUrls() {
       if (this.node.imageGallery == null)
         return null
       let urls = []
       for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
-        let url = this.node.imageGallery.commonPathLoRes + i + '.jpg'
-        urls.push(url)
-      }
-      return urls
-    },
-    imageUrlsHiRes() {
-      if (this.node.imageGallery == null)
-        return null
-      let urls = []
-      for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
-        let url = this.node.imageGallery.commonPathHiRes + i + '.jpg'
+        let url = this.node.imageGallery.commonPath + i + '.jpg'
         urls.push(url)
       }
       return urls
@@ -260,7 +249,7 @@ export default {
     },
     numItems() {
       let num = 0
-      num += this.imageUrlsLowRes ? this.imageUrlsLowRes.length : 0
+      num += this.imageUrls ? this.imageUrls.length : 0
       num += this.audioTracks ? this.audioTracks.length : 0
       return num
     },

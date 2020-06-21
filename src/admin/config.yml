@@ -684,8 +684,7 @@ collections:
         widget: "object"
         required: false
         fields: 
-          - {label: 'URL common path (Lo-Res)', name: 'commonPathLoRes', widget: 'string', required: false}
-          - {label: 'URL common path (Hi-Res)', name: 'commonPathHiRes', widget: 'string', required: false}
+          - {label: 'URL common path', name: 'commonPath', widget: 'string', required: false}
           - {label: 'Number of images', name: 'numImages', widget: 'number', valueType: "int", min: 1, required: false}
       - label: "Audio Gallery"
         name: "audioGallery"
