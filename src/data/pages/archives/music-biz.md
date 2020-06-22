@@ -24,7 +24,7 @@ headerSlideshowRight:
   - img: https://res.cloudinary.com/all-about-erik/image/upload/v1591747442/Archives/01.%20Music%20Biz/header-slideshow-right/46--115474252-crop-u740141.jpg
   - img: https://res.cloudinary.com/all-about-erik/image/upload/v1591747442/Archives/01.%20Music%20Biz/header-slideshow-right/87--stovalls_1-crop-u740139.jpg
 imageGallery:
-  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592698347/Archives/01.%20Music%20Biz/med-res/music-biz_med-res_
-  numImages: 122
+  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592854457/Archives/01.%20Music%20Biz/gallery/music-biz_gallery-img_
+  numImages: 119
 ---
 Here’s a bunch of stuff pertaining to my “career” in the music biz.
