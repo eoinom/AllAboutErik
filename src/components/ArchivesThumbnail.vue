@@ -36,7 +36,7 @@ export default {
 
   data() {
     return {
-      link: this.thumbnailObj.hasOwnProperty('text') ? slugify(this.thumbnailObj.text) : '',
+      link: this.thumbnailObj.hasOwnProperty('text') ? slugify(this.thumbnailObj.text, {customReplacements: [['\'', '']]}) : '',
       windowWidth: 0,
     }
   },

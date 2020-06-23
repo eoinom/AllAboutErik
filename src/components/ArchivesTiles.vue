@@ -16,7 +16,6 @@
 
 
 <script scoped>
-const slugify = require('@sindresorhus/slugify')
 import ArchivesThumbnail from './ArchivesThumbnail.vue'
 
 export default { 

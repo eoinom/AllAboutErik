@@ -98,7 +98,6 @@ tiles:
     img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447305/Archives/tiles/14-icon-mom-bright_r5nndg.jpg
     opacity: 100
   - text: Erik's Flowers
-    link: Eriks Flowers
     img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/22-icon-flowers_g0unts.jpg
     img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/22-icon-flowers-bright_xk752p.jpg
     opacity: 100

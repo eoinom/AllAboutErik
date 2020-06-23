@@ -109,7 +109,7 @@ module.exports = function (api) {
       }
     }`)
     data.allArchives.edges.forEach(({ node }) => {
-      pageSlug = slugify(node.title)
+      pageSlug = slugify(node.title, {customReplacements: [['\'', '']]})
       createPage({
         path: `/archives/${pageSlug}`,
         component: './src/templates/Archive.vue',

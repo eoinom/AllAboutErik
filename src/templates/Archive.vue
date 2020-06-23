@@ -12,10 +12,10 @@
         <div class="headerWrapper">
 
           <!-- SLIDESHOWS -->
-          <template v-if="node.headerSlideshowLeft.length > 0">
+          <template v-if="slideshowLeftImgs != null">
             <SlideshowImages 
               v-show="windowWidth >= 1200"
-              :slides="node.headerSlideshowLeft" 
+              :slides="slideshowLeftImgs" 
               :interval="4500" 
               borderRadius="15px" 
               ref="slideshowLeft" 
@@ -24,14 +24,18 @@
             />
 
             <SlideshowImages 
-              :slides="node.headerSlideshowCenter"  
+              :slides="slideshowCenterImgs"  
               :interval="4500" 
               borderRadius="15px" 
               ref="slideshowCenter" 
               id="slideshowCenter"
               class="headerBox"
             >
-              <div class="headerFilter" />
+              <div 
+                v-if="node.headerSlideshowCenter.applyFilter !== false" 
+                class="headerFilter" 
+              />
+              
               <div class="headerOverlay">
                 <g-image 
                   v-if="node.titleImg1Line != null"
@@ -45,7 +49,7 @@
 
             <SlideshowImages 
               v-show="windowWidth >= 1200"
-              :slides="node.headerSlideshowRight" 
+              :slides="slideshowRightImgs" 
               :interval="4500" 
               borderRadius="15px" 
               ref="slideshowRight" 
@@ -87,9 +91,9 @@
         <div class="galleryWrapper">
 
           <!-- IMAGE GALLERY -->
-          <template v-if="imageUrls != null">
+          <template v-if="galleryImgUrls != null">
             <div 
-              v-for="(img, iImg) in imageUrls" 
+              v-for="(img, iImg) in galleryImgUrls" 
               :key="'img'+iImg" 
               class="galleryBox"
               @click.prevent="onGalleryImgClick(iImg)"
@@ -150,17 +154,21 @@ query ($id: ID!) {
     headerImgCentre
     headerImgRight
     headerSlideshowLeft {
-      img
+      commonPath
+      numImages
     }
     headerSlideshowCenter {
-      img
+      commonPath
+      numImages
+      applyFilter
     }
     headerSlideshowRight {
-      img
+      commonPath
+      numImages
     }
     imageGallery {
-      numImages
       commonPath
+      numImages
     }
     audioGallery {
       url
@@ -226,7 +234,37 @@ export default {
       css.textAlign = this.node.content.length < 80 ? 'center' : 'justify'
       return css
     },
-    imageUrls() {
+    slideshowLeftImgs() {
+      if (this.node.headerSlideshowLeft == null)
+        return null
+      let imgs = []
+      for (let i = 1; i <= this.node.headerSlideshowLeft.numImages; i++) {
+        let url = this.node.headerSlideshowLeft.commonPath + i + '.jpg'
+        imgs.push({img: url})
+      }
+      return imgs
+    },
+    slideshowCenterImgs() {
+      if (this.node.headerSlideshowCenter == null)
+        return null
+      let imgs = []
+      for (let i = 1; i <= this.node.headerSlideshowCenter.numImages; i++) {
+        let url = this.node.headerSlideshowCenter.commonPath + i + '.jpg'
+        imgs.push({img: url})
+      }
+      return imgs
+    },
+    slideshowRightImgs() {
+      if (this.node.headerSlideshowRight == null)
+        return null
+      let imgs = []
+      for (let i = 1; i <= this.node.headerSlideshowRight.numImages; i++) {
+        let url = this.node.headerSlideshowRight.commonPath + i + '.jpg'
+        imgs.push({img: url})
+      }
+      return imgs
+    },
+    galleryImgUrls() {
       if (this.node.imageGallery == null)
         return null
       let urls = []
@@ -249,7 +287,7 @@ export default {
     },
     numItems() {
       let num = 0
-      num += this.imageUrls ? this.imageUrls.length : 0
+      num += this.galleryImgUrls ? this.galleryImgUrls.length : 0
       num += this.audioTracks ? this.audioTracks.length : 0
       return num
     },
@@ -281,7 +319,7 @@ export default {
     this.updateWindowDims()
     this.bindEvents()
 
-    if (this.node.headerSlideshowLeft.length > 0) {
+    if (this.node.headerSlideshowLeft != null) {
       this.$refs.slideshowLeft.pause()
       this.$refs.slideshowCenter.pause()
       this.$refs.slideshowRight.pause()
