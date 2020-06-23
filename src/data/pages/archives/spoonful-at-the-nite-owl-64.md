@@ -11,7 +11,7 @@ headerImgCentre: >-
 headerImgRight: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592436354/Archives/02.%20Spoonful%20at%20the%20Nite%20Owl/banner-right-spoon5__cropped.jpg
 audioGallery:
-  - url: https://soundcloud.com/user-289131527/the-lovin-spoonful-at-the-nite-owl/s-qy4rGkyUHAM
+  - url: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/842090311%3Fsecret_token%3Ds-qy4rGkyUHAM&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true
     caption: Listen to the Recording
     thumbnailImg:
       - https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592439516/Archives/02.%20Spoonful%20at%20the%20Nite%20Owl/thumbnail-spoon4-cropped.jpg

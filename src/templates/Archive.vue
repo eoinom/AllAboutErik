@@ -113,7 +113,7 @@
               :key="'track'+iTrack" 
               class="galleryBox audioBox"
               :style="'background: transparent url(' + track.thumbnailImg + ') no-repeat left top'"
-              @click.prevent="onAudioTrackClick(iTrack)"
+              @click.prevent="audioIndex = iTrack"
             >
               <div class="boxOverlay mb-5">
                 <transition name="fade">
@@ -129,6 +129,16 @@
           </template>
         </div>
       </div>
+
+      
+      <AudioLightBox
+        v-if="audioTracks != null"
+        :audios="audioTracks"
+        :index="audioIndex"
+        :disable-scroll="true"
+        :show-caption="false"
+        @close="audioIndex = null"
+      />
 
       <ScrollToTop
         text="BACK TO THE TOP"
@@ -181,6 +191,7 @@ query ($id: ID!) {
 
 
 <script scoped>
+import AudioLightBox from '../components/AudioLightBox.vue'
 import ScrollToTop from '../components/ScrollToTop.vue'
 import SlideshowImages from '../components/SlideshowImages.vue'
 const slugify = require('@sindresorhus/slugify')
@@ -197,16 +208,14 @@ export default {
   },
 
   components: {
+    AudioLightBox,
     ScrollToTop,
     'SlideshowImages': require('../components/SlideshowImages.vue').default,
   },
 
   data() {
     return {
-      imageIndex: 0,
-      showIntro: false,
-      windowWidth: 0.0,
-      windowHeight: 0.0,
+      audioIndex: null,
       zoomedImgIndex: null,
       imgCenterPos: {
         top: 0,
@@ -214,6 +223,8 @@ export default {
       },
       applyLargeImgStyles: false,
       eventName: null,
+      windowWidth: 0.0,
+      windowHeight: 0.0
     }
   },
 
