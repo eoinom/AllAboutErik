@@ -5,7 +5,7 @@ titleImg1Line: >-
 titleImgMaxWidth: 51.3
 titleImgTopOffset: 38
 headerSlideshowLeft:
-  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592864706/Archives/04.%20Adult%20Erik/header-slideshows/1.%20left/adult-erik_slideshow-left_
+  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592950273/Archives/04.%20Adult%20Erik/header-slideshows/1.%20left/adult-erik_slideshow-left_
   numImages: 6
 headerSlideshowCenter:
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592864707/Archives/04.%20Adult%20Erik/header-slideshows/2.%20center/adult-erik_slideshow-center_
