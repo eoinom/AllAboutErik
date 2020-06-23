@@ -2,6 +2,8 @@
 title: Music Biz
 titleImg1Line: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1591747443/Archives/01.%20Music%20Biz/music_biz.png
+titleImgMaxWidth: 46.8
+titleImgTopOffset: 33.1
 headerSlideshowLeft:
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592867036/Archives/01.%20Music%20Biz/header-slideshows/1.%20left/music-biz_slideshow-left_
   numImages: 6

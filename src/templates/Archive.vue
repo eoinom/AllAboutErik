@@ -36,14 +36,13 @@
                 class="headerFilter" 
               />
               
-              <div class="headerOverlay">
+              <div class="headerOverlay" :style="overlayStyles">
                 <g-image 
-                  v-if="node.titleImg1Line != null"
-                  :src="node.titleImg1Line"
+                  :src="titleImg"
                   :alt="node.title + ' title image'" 
-                  class="titleImg titleImg1Line" 
+                  class="titleImg" 
                 />
-                <span v-html="node.content" class="archive_headerText" :style="headerTextStyles" />
+                <div v-html="node.content" class="archive_headerText" :style="headerTextStyles" />
               </div>
             </SlideshowImages>
 
@@ -67,14 +66,13 @@
             <div class="headerBox">
               <div class="headerFilter" />
               <img :src="node.headerImgCentre" />
-              <div class="headerOverlay">
+              <div class="headerOverlay" :style="overlayStyles">
                 <g-image 
-                  v-if="node.titleImg2Lines != ''"
-                  :src="node.titleImg2Lines"
+                  :src="titleImg"
                   :alt="node.title + ' title image'" 
                   class="titleImg" 
                 />
-                <span v-html="node.content" class="archive_headerText" :style="headerTextStyles" />
+                <div v-html="node.content" class="archive_headerText" :style="headerTextStyles" />
               </div>
             </div>
 
@@ -149,6 +147,8 @@ query ($id: ID!) {
     title
     titleImg1Line
     titleImg2Lines
+    titleImgTopOffset
+    titleImgMaxWidth
     content
     headerImgLeft
     headerImgCentre
@@ -229,6 +229,9 @@ export default {
       console.log(this.$page.archive)
       return this.$page.archive
     },
+    titleImg() {
+      return this.node.titleImg1Line != '' ? this.node.titleImg1Line : this.node.titleImg2Lines
+    },
     headerTextStyles() {
       let css = {}
       css.textAlign = this.node.content.length < 80 ? 'center' : 'justify'
@@ -253,6 +256,12 @@ export default {
         imgs.push({img: url})
       }
       return imgs
+    },
+    overlayStyles() {
+      return {
+        '--titleTopOffset': this.node.titleImgTopOffset + '%',
+        '--titleMaxWidth': this.node.titleImgMaxWidth + '%'
+      }
     },
     slideshowRightImgs() {
       if (this.node.headerSlideshowRight == null)
@@ -473,21 +482,6 @@ export default {
   z-index: -1;
 }
 
-.archive_headerText {
-  font-family: 'NeueHaasGroteskText Pro65';
-  font-feature-settings: 'liga';
-  // text-shadow: 1px 1px 4px rgba(0,0,0,0.29);
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.65);
-  color: #FFFFFF;
-  letter-spacing: 1px;
-  line-height: 1.625rem;
-  font-size: 1.125rem;
-  font-weight: 500;
-  margin: 0px;
-  padding: 0px;
-  /* See styles.css for further styles */
-}
-
 // #headerTextDevice {
 //   color:#ECECEC;
 //   font-size: 0.925rem;
@@ -530,32 +524,43 @@ export default {
 }
 .headerOverlay {
   position: absolute;
-  top: 100px;
+  top: var(--titleTopOffset);
   right: 0;
-  bottom: 0;
   left: 0;
-  margin: auto auto;
-  // max-width: 85%;
   max-width: 100%;
-  margin: auto 24px;
   height: fit-content;
   z-index: 50;
+}
+.headerOverlay * {
+  padding-right: 32px;
+  padding-left: 32px;
 }
 
 .titleImg {
   position: relative;
-  // width: 100%;
-  // max-width: 100%;
-  max-width: 85%;
+  max-width: var(--titleMaxWidth);
   height: auto;
   margin: auto;
-  padding-bottom: 8px;
+  padding: 0 0 8px 0;
 }
-.titleImg1Line {
-  display: inline;
-}
-.titleImg2Lines {
-  display: none;
+// .titleImg1Line {
+//   display: inline;
+// }
+// .titleImg2Lines {
+//   display: none;
+// }
+
+.archive_headerText {
+  font-family: 'NeueHaasGroteskText Pro65';
+  font-feature-settings: 'liga';
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.65);
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  line-height: 1.625rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0px;
+  /* See styles.css for further styles */
 }
 
 #mainContent {

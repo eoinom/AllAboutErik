@@ -2,6 +2,8 @@
 title: Lots of Fishing
 titleImg1Line: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592865592/Archives/07.%20Lots%20of%20Fishing/lots_of_fishing.png
+titleImgMaxWidth: 59.4
+titleImgTopOffset: 38.1
 headerSlideshowLeft:
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592865606/Archives/07.%20Lots%20of%20Fishing/header-slideshows/1.%20left/lots-of-fishing_slideshow-left_
   numImages: 6

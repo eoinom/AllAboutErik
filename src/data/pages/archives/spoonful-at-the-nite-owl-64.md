@@ -2,6 +2,8 @@
 title: Spoonful at the Nite Owl '64
 titleImg2Lines: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592436354/Archives/02.%20Spoonful%20at%20the%20Nite%20Owl/titleImg2Line_spoonful-nite-owl.png
+titleImgMaxWidth: 66.1
+titleImgTopOffset: 25.3
 headerImgLeft: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592436354/Archives/02.%20Spoonful%20at%20the%20Nite%20Owl/banner-left-spoon4__cropped.jpg
 headerImgCentre: >-

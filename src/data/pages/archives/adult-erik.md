@@ -2,6 +2,8 @@
 title: Adult Erik
 titleImg1Line: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592864677/Archives/04.%20Adult%20Erik/adult_erik.png
+titleImgMaxWidth: 51.3
+titleImgTopOffset: 38
 headerSlideshowLeft:
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592864706/Archives/04.%20Adult%20Erik/header-slideshows/1.%20left/adult-erik_slideshow-left_
   numImages: 6

@@ -4,6 +4,8 @@ titleImg1Line: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592867819/Archives/03.%20Knob%20Lick%20Upper%2010000/knoblick_upper_1_line.png
 titleImg2Lines: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592867819/Archives/03.%20Knob%20Lick%20Upper%2010000/knoblick_upper_2_lines.png
+titleImgMaxWidth: 91.5
+titleImgTopOffset: 26.7
 headerImgLeft: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592864675/Archives/03.%20Knob%20Lick%20Upper%2010000/header-images/knob-lick-upper_header-img1_left.jpg
 headerImgCentre: >-

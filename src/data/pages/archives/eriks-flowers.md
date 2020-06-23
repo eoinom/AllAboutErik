@@ -2,6 +2,8 @@
 title: Erik's Flowers
 titleImg1Line: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592864793/Archives/06.%20Eriks%20Flowers/eriks_flowers.png
+titleImgMaxWidth: 65
+titleImgTopOffset: 38.2
 headerSlideshowLeft:
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592864785/Archives/06.%20Eriks%20Flowers/header-slideshows/1.%20left/eriks-flowers_slideshow-left_
   numImages: 6
