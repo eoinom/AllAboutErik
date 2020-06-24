@@ -594,6 +594,7 @@ export default {
   justify-content: center;
 }
 .galleryBox {
+  background-color: black;
   width: 100%;
   max-width: var(--boxSize);
   height: var(--boxSize);
