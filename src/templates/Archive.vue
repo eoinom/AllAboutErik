@@ -450,10 +450,11 @@ export default {
 
 .layout {
   background-color: #222222;
-  padding: 0;
+  padding: 0 12px;
   overflow: hidden; /* added for pseudo-element */
   position: relative; /* added for pseudo-element */
   min-height: 100vh;
+  width: 100%;
 }
 
 .backToArchives {
@@ -476,7 +477,7 @@ export default {
   text-align: center;
   padding-top: 12.5px;
   padding-bottom: 12.5px;
-  max-width: 2434px;
+  width: 100%;
   margin: 0 auto;
 }
 #header:after  {
@@ -512,18 +513,22 @@ export default {
 .headerWrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
+  grid-gap: 25px;
   justify-content: center;
 }
 .headerBox {
   width: 100%;
-  max-width: 786px;
+  // max-width: 786px;
   // height: 617px;
+  max-width: 821px;
+  // height: 644px;
   position: relative;
   place-self: center;
 }
 .headerBox img {
   border-radius: 15px;
+  width: 100%;
+  height: auto;
 }
 .headerFilter {
   position: absolute;
