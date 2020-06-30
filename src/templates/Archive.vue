@@ -3,8 +3,8 @@
     <div :key="'archive_' + titleSlug" v-on:[eventName]="closeLargeImg()" class="pb-5"> <!-- Need a unique key for the transition above to work on route change -->
 
       <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
-        <g-image src="~/assets/images/arrow-full-left.png"  />
-        <p class="pt-2 mb-0">Back to<br />Archives</p>
+        <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
+        <g-image v-else alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-top.png" class="backToArchivesImg" />
       </g-link>
 
       <!-- <header id="header" :style="headerStyles"> -->
@@ -31,7 +31,10 @@
               id="slideshowCenter"
               class="headerBox"
             >
-              <div v-if="node.applyCenterFilter !== false" class="headerFilter" />
+              <div 
+                v-if="node.applyCenterFilter !== false" 
+                class="headerFilter" 
+              />
               
               <div class="headerOverlay" :style="overlayStyles">
                 <g-image 
@@ -415,8 +418,8 @@ export default {
       }
     },
     updateWindowDims() {      
-      this.windowWidth = window.innerWidth;
-      this.windowHeight = window.innerHeight;
+      this.windowWidth = window.innerWidth
+      this.windowHeight = window.innerHeight
     }
   }
 }
@@ -459,14 +462,10 @@ export default {
   top: 50px;
   right: 60px;
   z-index: 100;
-
-  font-family: NeueHaasGroteskText Pro65;
-  font-size: 20px;
-  font-weight: 400;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  text-align: center;
-  text-shadow: 2px 2px 2px rgba(0,0,0,0.65);
+}
+.backToArchivesImg {
+  max-width: 222px;
+  height: auto;
 }
 
 #header {
@@ -715,6 +714,13 @@ export default {
     line-height: 1.4375rem;
     font-size: 1rem;
   }
+  .backToArchives {
+    top: 20px;
+    right: 20px;
+  }
+  .backToArchivesImg {
+    max-width: 100px;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -726,6 +732,13 @@ export default {
   // }
   .galleryWrapper {
     grid-gap: 16px;
+  }
+  .backToArchives {
+    top: 27px;
+    right: 27px;
+  }
+  .backToArchivesImg {
+    max-width: 110px;
   }
 }
 
@@ -742,6 +755,13 @@ export default {
   .galleryWrapper {
     grid-gap: 24px;
   }
+  .backToArchives {
+    top: 33px;
+    right: 33px;
+  }
+  .backToArchivesImg {
+    max-width: 120px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -751,6 +771,13 @@ export default {
   }
   .galleryWrapper {
     grid-gap: 24px;
+  }
+  .backToArchives {
+    top: 37px;
+    right: 37px;
+  }
+  .backToArchivesImg {
+    max-width: 130px;
   }
 }
 
