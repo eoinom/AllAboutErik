@@ -31,10 +31,7 @@
               id="slideshowCenter"
               class="headerBox"
             >
-              <div 
-                v-if="node.headerSlideshowCenter.applyFilter !== false" 
-                class="headerFilter" 
-              />
+              <div v-if="node.applyCenterFilter !== false" class="headerFilter" />
               
               <div class="headerOverlay" :style="overlayStyles">
                 <g-image 
@@ -64,7 +61,7 @@
             </div>
 
             <div class="headerBox">
-              <div class="headerFilter" />
+              <div v-if="node.applyCenterFilter !== false" class="headerFilter" />
               <img :src="node.headerImgCentre" />
               <div class="headerOverlay" :style="overlayStyles">
                 <g-image 
@@ -169,13 +166,13 @@ query ($id: ID!) {
     }
     headerSlideshowCenter {
       commonPath
-      numImages
-      applyFilter
+      numImages      
     }
     headerSlideshowRight {
       commonPath
       numImages
     }
+    applyCenterFilter
     imageGallery {
       commonPath
       numImages

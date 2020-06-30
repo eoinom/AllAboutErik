@@ -662,7 +662,6 @@ collections:
         fields: 
           - {label: 'URL common path', name: 'commonPath', widget: 'string', required: false}
           - {label: 'Number of images', name: 'numImages', widget: 'number', valueType: "int", min: 1, required: false}
-          - {label: "Apply filter?", name: "applyFilter", widget: "boolean", required: false}   
       - label: "Header Slideshow - Center"
         name: "headerSlideshowCenter"
         widget: "object"
@@ -670,7 +669,6 @@ collections:
         fields: 
           - {label: 'URL common path', name: 'commonPath', widget: 'string', required: false}
           - {label: 'Number of images', name: 'numImages', widget: 'number', valueType: "int", min: 1, required: false}
-          - {label: "Apply filter?", name: "applyFilter", widget: "boolean", required: false}   
       - label: "Header Slideshow - Right"
         name: "headerSlideshowRight"
         widget: "object"
@@ -678,8 +676,8 @@ collections:
         fields: 
           - {label: 'URL common path', name: 'commonPath', widget: 'string', required: false}
           - {label: 'Number of images', name: 'numImages', widget: 'number', valueType: "int", min: 1, required: false}
-          - {label: "Apply filter?", name: "applyFilter", widget: "boolean", required: false}   
       - {label: "Slide duration (secs)", name: "slideDuration", widget: "number", valueType: "float", min: 0, max: 60, required: false}  
+      - {label: "Apply header center filter?", name: "applyCenterFilter", widget: "boolean", required: false}
       - label: "Image Gallery"
         name: "imageGallery"
         widget: "object"

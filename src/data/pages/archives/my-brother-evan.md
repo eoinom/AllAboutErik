@@ -10,6 +10,7 @@ headerImgCentre: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1593547694/Archives/17.%20My%20Brother%20Evan/header-images/my-brother-evan_header-img2_center.jpg
 headerImgRight: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1593547689/Archives/17.%20My%20Brother%20Evan/header-images/my-brother-evan_header-img3_right.jpg
+applyCenterFilter: false
 imageGallery:
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1593547688/Archives/17.%20My%20Brother%20Evan/gallery/my-brother-evan_gallery-img_
   numImages: 92

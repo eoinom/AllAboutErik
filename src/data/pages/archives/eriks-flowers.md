@@ -10,10 +10,10 @@ headerSlideshowLeft:
 headerSlideshowCenter:
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592864786/Archives/06.%20Eriks%20Flowers/header-slideshows/2.%20center/eriks-flowers_slideshow-center_
   numImages: 6
-  applyFilter: false
 headerSlideshowRight:
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592864788/Archives/06.%20Eriks%20Flowers/header-slideshows/3.%20right/eriks-flowers_slideshow-right_
   numImages: 6
+applyCenterFilter: false
 imageGallery:
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592864840/Archives/06.%20Eriks%20Flowers/gallery/eriks-flowers_gallery-img_
   numImages: 105
