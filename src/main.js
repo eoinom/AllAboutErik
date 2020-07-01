@@ -23,11 +23,11 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.component('Layout', DefaultLayout)
 
   Vue.use(BootstrapVue, {
-    breakpoints: [`xs`, 'sm', 'md', 'lg', 'xl', 'xxl']
+    breakpoints: ['xs', 'sm', 'md', 'lg', 'xl', 'xxl']
   })
 
   // vue-scrollto (ref: https://github.com/rigor789/vue-scrollto)
-  var VueScrollTo = require('vue-scrollto')
+  const VueScrollTo = require('vue-scrollto')
   Vue.use(VueScrollTo)
 
   // Add a meta tag

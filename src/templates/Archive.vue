@@ -1,13 +1,12 @@
 <template>
   <Layout>
-    <div :key="'archive_' + titleSlug" v-on:[eventName]="closeLargeImg()" class="pb-5"> <!-- Need a unique key for the transition above to work on route change -->
+    <div v-on:[eventName]="closeLargeImg()" class="pb-5">
 
       <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
         <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
         <g-image v-else alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-top.png" class="backToArchivesImg" />
       </g-link>
 
-      <!-- <header id="header" :style="headerStyles"> -->
       <header id="header" class="px-3">
         <div class="headerWrapper">
 
@@ -42,7 +41,13 @@
                   :alt="node.title + ' title image'" 
                   class="titleImg" 
                 />
-                <div v-html="node.content" class="archive_headerText" :style="headerTextStyles" />
+                <simplebar 
+                  id="headerTextDiv" 
+                  class="headerText simple-scrollbar" 
+                  :style="headerTextStyles" 
+                  data-simplebar-auto-hide="false" 
+                  v-html="node.content" 
+                />
               </div>
             </SlideshowImages>
 
@@ -72,7 +77,13 @@
                   :alt="node.title + ' title image'" 
                   class="titleImg" 
                 />
-                <div v-html="node.content" class="archive_headerText" :style="headerTextStyles" />
+                <simplebar 
+                  id="headerTextDiv" 
+                  class="headerText simple-scrollbar" 
+                  :style="headerTextStyles" 
+                  data-simplebar-auto-hide="false" 
+                  v-html="node.content" 
+                />
               </div>
             </div>
 
@@ -194,6 +205,8 @@ query ($id: ID!) {
 import AudioLightBox from '../components/AudioLightBox.vue'
 import ScrollToTop from '../components/ScrollToTop.vue'
 import SlideshowImages from '../components/SlideshowImages.vue'
+import simplebar from 'simplebar-vue'
+import 'simplebar/dist/simplebar.min.css'
 const slugify = require('@sindresorhus/slugify')
 
 const keyMap = {
@@ -211,6 +224,7 @@ export default {
     AudioLightBox,
     ScrollToTop,
     'SlideshowImages': require('../components/SlideshowImages.vue').default,
+    simplebar
   },
 
   data() {
@@ -236,8 +250,6 @@ export default {
       return slugify(this.title)
     },
     node() {
-      console.log('this.node:')
-      console.log(this.$page.archive)
       return this.$page.archive
     },
     titleImg() {
@@ -269,10 +281,16 @@ export default {
       return imgs
     },
     overlayStyles() {
-      return {
-        '--titleTopOffset': this.node.titleImgTopOffset + '%',
-        '--titleMaxWidth': this.node.titleImgMaxWidth + '%'
-      }
+      let css = {}
+      if (this.windowWidth < 576)
+        var topOffset = Math.min(50, this.node.titleImgTopOffset)
+      else if (this.windowWidth < 576)
+        topOffset = Math.min(60, this.node.titleImgTopOffset)
+      else
+        topOffset = this.node.titleImgTopOffset
+      css['--titleTopOffset'] = topOffset + '%'
+      css['--titleMaxWidth'] = this.node.titleImgMaxWidth + '%'
+      return css
     },
     slideshowRightImgs() {
       if (this.node.headerSlideshowRight == null)
@@ -336,15 +354,16 @@ export default {
     //   }
     // }
 
-    this.updateWindowDims()
-    this.bindEvents()
-
     if (this.node.headerSlideshowLeft != null) {
       this.$refs.slideshowLeft.pause()
       this.$refs.slideshowCenter.pause()
       this.$refs.slideshowRight.pause()
       this.staggerSlideshowStarts()
     }
+
+    this.updateWindowDims()
+
+    this.bindEvents()
   },
 
   beforeDestroy() {
@@ -353,16 +372,16 @@ export default {
 
   methods: {
     bindEvents() {
-      document.addEventListener('keydown', this.keyDownHandler, false);
-      document.addEventListener('scroll', this.scrollHandler, false);
-      window.addEventListener('resize', this.updateWindowDims, false);
-      window.addEventListener('orientationchange', this.updateWindowDims, false);
+      window.addEventListener('resize', this.updateWindowDims, false)
+      window.addEventListener('orientationchange', this.updateWindowDims, false)
+      document.addEventListener('keydown', this.keyDownHandler, false)
+      document.addEventListener('scroll', this.scrollHandler, false)
     },
     unbindEvents() {
-      document.removeEventListener('keydown', this.keyDownHandler, false);
-      document.removeEventListener('scroll', this.scrollHandler, false);
-      window.removeEventListener('resize', this.updateWindowDims, false);
-      window.removeEventListener('orientationchange', this.updateWindowDims, false);
+      window.removeEventListener('resize', this.updateWindowDims, false)
+      window.removeEventListener('orientationchange', this.updateWindowDims, false)
+      document.removeEventListener('keydown', this.keyDownHandler, false)
+      document.removeEventListener('scroll', this.scrollHandler, false)
     },
     delay(ms) {
       return new Promise(res => setTimeout(res, ms))
@@ -540,7 +559,8 @@ export default {
   right: 0;
   left: 0;
   max-width: 100%;
-  height: fit-content;
+  height: calc(100% - var(--titleTopOffset));
+  padding-bottom: 16px;
   z-index: 50;
 }
 .headerOverlay * {
@@ -562,17 +582,21 @@ export default {
 //   display: none;
 // }
 
-.archive_headerText {
+.simple-scrollbar {
+  height: inherit;
+}
+#headerTextDiv {
+  margin: 0px;
+}
+.headerText {
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';
   text-shadow: 2px 2px 5px rgba(0,0,0,0.65);
   color: #FFFFFF;
   letter-spacing: 1px;
-  line-height: 1.625rem;
+  // line-height: 1.625rem;
   font-size: 1.125rem;
   font-weight: 500;
-  margin: 0px;
-  /* See styles.css for further styles */
 }
 
 #mainContent {
@@ -710,7 +734,7 @@ export default {
   .galleryWrapper {
     grid-gap: 16px;
   }
-  .archive_headerText {
+  .headerText {
     line-height: 1.4375rem;
     font-size: 1rem;
   }
@@ -783,7 +807,7 @@ export default {
 
 /* Special - Larger devices (desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) and (max-width: 1499.98px) {
-  .archive_headerText, .titleImg {
+  .headerText, .titleImg {
     // padding: 0px 120px;
   }
 }
