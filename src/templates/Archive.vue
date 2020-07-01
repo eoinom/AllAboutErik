@@ -41,13 +41,9 @@
                   :alt="node.title + ' title image'" 
                   class="titleImg" 
                 />
-                <simplebar 
-                  id="headerTextDiv" 
-                  class="headerText simple-scrollbar" 
-                  :style="headerTextStyles" 
-                  data-simplebar-auto-hide="false" 
-                  v-html="node.content" 
-                />
+                <simplebar class="simple-scrollbar" data-simplebar-auto-hide="false">
+                  <span id="archive_headerText" :style="headerTextStyles" v-html="node.content" />
+                </simplebar>
               </div>
             </SlideshowImages>
 
@@ -77,13 +73,9 @@
                   :alt="node.title + ' title image'" 
                   class="titleImg" 
                 />
-                <simplebar 
-                  id="headerTextDiv" 
-                  class="headerText simple-scrollbar" 
-                  :style="headerTextStyles" 
-                  data-simplebar-auto-hide="false" 
-                  v-html="node.content" 
-                />
+                <simplebar class="simple-scrollbar" data-simplebar-auto-hide="false">
+                  <span id="archive_headerText" :style="headerTextStyles" v-html="node.content" />
+                </simplebar>
               </div>
             </div>
 
@@ -284,7 +276,7 @@ export default {
       let css = {}
       if (this.windowWidth < 576)
         var topOffset = Math.min(50, this.node.titleImgTopOffset)
-      else if (this.windowWidth < 576)
+      else if (this.windowWidth < 768)
         topOffset = Math.min(60, this.node.titleImgTopOffset)
       else
         topOffset = this.node.titleImgTopOffset
@@ -573,7 +565,7 @@ export default {
   max-width: var(--titleMaxWidth);
   height: auto;
   margin: auto;
-  padding: 0 0 8px 0;
+  padding: 0 0 16px 0;
 }
 // .titleImg1Line {
 //   display: inline;
@@ -582,21 +574,14 @@ export default {
 //   display: none;
 // }
 
+#archive_headerText { 
+  padding-right: 0px;
+  padding-left: 0px;
+  // see styles.css for more
+}
+
 .simple-scrollbar {
   height: inherit;
-}
-#headerTextDiv {
-  margin: 0px;
-}
-.headerText {
-  font-family: 'NeueHaasGroteskText Pro65';
-  font-feature-settings: 'liga';
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.65);
-  color: #FFFFFF;
-  letter-spacing: 1px;
-  // line-height: 1.625rem;
-  font-size: 1.125rem;
-  font-weight: 500;
 }
 
 #mainContent {

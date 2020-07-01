@@ -74,6 +74,18 @@ body {
   letter-spacing: 5px;
 }
 
+#archive_headerText > p { 
+  font-family: 'NeueHaasGroteskText Pro65';
+  font-feature-settings: 'liga';
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.65);
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  line-height: 1.625rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+
 
 /* For icons in BookViewer component */
 .material-design-icon__svg {
