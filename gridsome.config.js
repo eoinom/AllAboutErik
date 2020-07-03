@@ -20,15 +20,9 @@ module.exports = {
 
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
+      use: '@gridsome/plugin-google-analytics',
       options: {
-        path: 'src/data/posts/**/*.md',
-        typeName: 'Post',
-        remark: {
-          plugins: [
-            // ...local plugins
-          ]
-        }
+        id: 'UA-171601307-1'
       }
     },
     {
