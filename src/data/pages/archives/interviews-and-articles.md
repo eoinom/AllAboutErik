@@ -33,7 +33,7 @@ articleGallery:
 
   - caption: Rolling Stone Magazine
     thumbnailImg:
-      - https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1594674468/Archives/23.%20Interviews%20and%20Articles/thumbnail-images/4-Rolling-Stone-Magazine_icon.png
+      - https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1594855160/Archives/23.%20Interviews%20and%20Articles/thumbnail-images/4-Rolling-Stone-Magazine_icon.png
     commonPathStdRes: https://res.cloudinary.com/all-about-erik/image/upload/v1594771431/Archives/23.%20Interviews%20and%20Articles/
     commonFilenameStdRes: 4._Rolling-Stone_article_pg
     orientation: portrait

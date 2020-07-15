@@ -114,17 +114,20 @@
             <div 
               v-for="(track, iTrack) in audioTracks" 
               :key="'track'+iTrack" 
-              class="galleryBox audioBox"
-              :style="'background: transparent url(' + track.thumbnailImg + ') no-repeat left top'"
+              class="galleryBox"
               @click.prevent="audioIndex = iTrack"
             >
+              <div 
+                class="mediaBox"
+                :style="'background: transparent url(' + track.thumbnailImg + ') no-repeat left top'"
+              />
               <div class="boxOverlay mb-5">
                 <transition name="fade">
-                  <span class="thumbnailCaption hideOnHover">{{ track.caption }}</span>
+                  <span class="thumbnailCaption absCenter hideOnHover">{{ track.caption }}</span>
                 </transition>
                 
                 <transition name="fade">
-                  <g-image alt="Play symbol" src="~/assets/images/music_symbol_circle.png" class="playSymbol showOnHover" />
+                  <g-image alt="Play symbol" src="~/assets/images/music_symbol_circle.png" class="absCenter showOnHover" />
                 </transition>
               </div>
 
@@ -132,24 +135,26 @@
           </template>
 
           <!-- ARTICLE GALLERY -->
-          <template v-if="articles != null">
+          <template v-if="articles != null">            
             <div 
               v-for="(article, iArticle) in articles"
-              :key="'article'+iArticle" 
-              class="galleryBox audioBox"
-              :style="'background: transparent url(' + article.thumbnailImg + ') no-repeat left top'"
+              :key="'article'+iArticle"
               @click.prevent="articleIndex = iArticle; toggleFullscreen()"
+              class="galleryBox"
             >
+              <div 
+                class="mediaBox"
+                :style="'background: transparent url(' + article.thumbnailImg + ') no-repeat left top'"
+              />
               <div class="boxOverlay mb-5">
                 <transition name="fade">
-                  <span class="thumbnailCaption hideOnHover">{{ article.caption }}</span>
+                  <span class="thumbnailCaption absCenter hideOnHover">{{ article.caption }}</span>
                 </transition>
                 
                 <transition name="fade">
-                  <g-image alt="Eye icon" src="~/assets/images/eye.png" class="playSymbol showOnHover" />
+                  <g-image alt="Eye icon" src="~/assets/images/eye.png" class="absCenter showOnHover" />
                 </transition>
               </div>
-
             </div>
           </template>
         </div>
@@ -678,13 +683,17 @@ export default {
   place-self: center;
 }
 
-.galleryBox.audioBox {
+.mediaBox {
   cursor: pointer;
-  opacity: 0.84;
-  // opacity: 0.46;
+  opacity: 0.46;
   transition: opacity 0.2s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
-.galleryBox.audioBox::before {
+.galleryBox .mediaBox::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -695,17 +704,11 @@ export default {
   pointer-events: none;
   transition: box-shadow 0.2s ease;
 }
-.galleryBox.audioBox:hover {
+.galleryBox:hover .mediaBox {
   opacity: 1;
 }
-.galleryBox.audioBox:hover::before {
+.galleryBox:hover .mediaBox::before {
   box-shadow: none;
-}
-.audioBox .playSymbol {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
 }
 
 .galleryImage {
@@ -743,6 +746,15 @@ export default {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.32);
   text-transform: uppercase;
   transition: inherit;
+  width: 100%;
+  padding: 0 20px 0 26px;
+}
+
+.absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
 }
 
 .boxOverlay {
@@ -751,6 +763,12 @@ export default {
   height: 100%;
   display: flex;
   align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -763,14 +781,14 @@ export default {
   opacity: 1;
   transition: all 0.5s ease 0s;
 }
-.audioBox:hover .hideOnHover {
+.galleryBox:hover .hideOnHover {
   opacity: 0;
 }
 .showOnHover {
   opacity: 0;
   transition: all 0.5s ease 0s;
 }
-.audioBox:hover .showOnHover {
+.galleryBox:hover .showOnHover {
   opacity: 1;
 }
 
