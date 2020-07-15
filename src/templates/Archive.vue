@@ -130,9 +130,30 @@
 
             </div>
           </template>
+
+          <!-- ARTICLE GALLERY -->
+          <template v-if="articles != null">
+            <div 
+              v-for="(article, iArticle) in articles"
+              :key="'article'+iArticle" 
+              class="galleryBox audioBox"
+              :style="'background: transparent url(' + article.thumbnailImg + ') no-repeat left top'"
+              @click.prevent="articleIndex = iArticle; toggleFullscreen()"
+            >
+              <div class="boxOverlay mb-5">
+                <transition name="fade">
+                  <span class="thumbnailCaption hideOnHover">{{ article.caption }}</span>
+                </transition>
+                
+                <transition name="fade">
+                  <g-image alt="Eye icon" src="~/assets/images/eye.png" class="playSymbol showOnHover" />
+                </transition>
+              </div>
+
+            </div>
+          </template>
         </div>
       </div>
-
       
       <AudioLightBox
         v-if="audioTracks != null"
@@ -141,6 +162,16 @@
         :disable-scroll="true"
         :show-caption="false"
         @close="audioIndex = null"
+      />
+
+      <BookViewer 
+        v-show="isBookFullscreen"
+        :pages="bookImagesUrlsStdRes" 
+        :isFullscreen="isBookFullscreen"
+        :showSinglePage="bookShowSinglePage"
+        :key="'bookViewer'+bookKey" 
+        @toggleFullscreen="toggleFullscreen()" 
+        @reload="reloadBook()" 
       />
 
       <ScrollToTop
@@ -188,6 +219,17 @@ query ($id: ID!) {
       caption
       thumbnailImg
     }
+    articleGallery {
+      caption
+      thumbnailImg
+      commonPathStdRes
+      commonFilenameStdRes
+      commonFilenameStartNum
+      commonFilenameLastNum
+      orientation
+      width
+      height
+    }
   }
 }
 </page-query>
@@ -195,6 +237,7 @@ query ($id: ID!) {
 
 <script scoped>
 import AudioLightBox from '../components/AudioLightBox.vue'
+import BookViewer from '../components/BookViewer.vue'
 import ScrollToTop from '../components/ScrollToTop.vue'
 import SlideshowImages from '../components/SlideshowImages.vue'
 import simplebar from 'simplebar-vue'
@@ -214,6 +257,7 @@ export default {
 
   components: {
     AudioLightBox,
+    BookViewer,
     ScrollToTop,
     'SlideshowImages': require('../components/SlideshowImages.vue').default,
     simplebar
@@ -230,7 +274,12 @@ export default {
       applyLargeImgStyles: false,
       eventName: null,
       windowWidth: 0.0,
-      windowHeight: 0.0
+      windowHeight: 0.0,
+      
+      articleIndex: null,
+      isBookFullscreen: false,
+      bookShowSinglePage: false,
+      bookKey: 1,
     }
   },
 
@@ -314,6 +363,9 @@ export default {
     },
     audioTracks() {
       return this.node.audioGallery
+    },    
+    articles() {
+      return this.node.articleGallery
     },
     numItems() {
       let num = 0
@@ -323,16 +375,28 @@ export default {
     },
     mainContentStyles() {
       let css = {}
-      if (this.numItems == 1) {
+      if (this.numItems <= 8) {
         css['--maxPerRow'] = 1
         css['--boxSize'] = '480px'
-        css['--gridGap'] = '0px'
+        css['--gridGap'] = '30px'
       } else {
         css['--maxPerRow'] = 5
         css['--boxSize'] = '350px'
         css['--gridGap'] = '30px'
       }
       return css
+    },
+    bookImagesUrlsStdRes() {
+      if (this.articleIndex == null)
+        return null
+      const book = this.articles[this.articleIndex]
+      let pages = []
+      let urlCommon = book.commonPathStdRes + book.commonFilenameStdRes
+      for (let i = book.commonFilenameStartNum; i <= book.commonFilenameLastNum; i++) {
+        let url = urlCommon + i + '.jpg'
+        pages.push(url)
+      }
+      return pages
     }
   },
 
@@ -431,7 +495,14 @@ export default {
     updateWindowDims() {      
       this.windowWidth = window.innerWidth
       this.windowHeight = window.innerHeight
-    }
+    },
+    toggleFullscreen() {
+      this.isBookFullscreen = !this.isBookFullscreen
+      this.reloadBook()
+    },
+    reloadBook() {
+      this.bookKey += 1 // increment component key to force reload between toggle of fullscreen / normal-screen
+    },
   }
 }
 </script>
@@ -610,6 +681,7 @@ export default {
 .galleryBox.audioBox {
   cursor: pointer;
   opacity: 0.84;
+  // opacity: 0.46;
   transition: opacity 0.2s ease;
 }
 .galleryBox.audioBox::before {

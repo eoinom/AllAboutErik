@@ -693,3 +693,18 @@ collections:
           - {label: "Audio Url (Soundcloud)", name: "url", widget: "string", required: false}
           - {label: "Caption", name: "caption", widget: "string", required: false}
           - {label: "Thumbnail image", name: "thumbnailImg", widget: "image", required: false} 
+      - label: "Article Gallery"
+        name: "articleGallery"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Caption", name: "caption", widget: "string", required: false}
+          - {label: 'URL common path (Std. Res)', name: 'commonPathStdRes', widget: 'string', required: false}
+          - {label: 'URL common filename (Std. Res)', name: 'commonFilenameStdRes', widget: 'string', required: false}
+          - {label: 'URL common path (Hi-Res)', name: 'commonPathHiRes', widget: 'string', required: false}
+          - {label: 'URL common filename (Hi-Res)', name: 'commonFilenameHiRes', widget: 'string', required: false}
+          - {label: 'URL common filename start number', name: 'commonFilenameStartNum', widget: 'number', valueType: "int", min: 1, required: false}
+          - {label: 'URL common filename last number', name: 'commonFilenameLastNum', widget: 'number', valueType: "int", min: 1, required: false}
+          - {label: "Page Orientation", name: "orientation", widget: "select", options: ["landscape", "portrait"]}
+          - {label: 'Page Width (px)', name: 'width', widget: 'number', valueType: "float", min: 0, required: false}
+          - {label: 'Page Height (px)', name: 'height', widget: 'number', valueType: "float", min: 0, required: false}

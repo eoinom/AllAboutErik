@@ -85,7 +85,8 @@
                 :showSinglePage="bookShowSinglePage"
                 :key="'bookViewer'+bookKey" 
                 @toggleFullscreen="toggleFullscreen()" 
-                @reload="reloadBook()" />
+                @reload="reloadBook()" 
+              />
 
               <div id="textBottom" class="publication_mainText pt-4">{{ node.mainTextBottom }}</div>
 
