@@ -681,10 +681,10 @@ export default {
   height: var(--boxSize);
   position: relative;
   place-self: center;
+  cursor: pointer;
 }
 
 .mediaBox {
-  cursor: pointer;
   opacity: 0.46;
   transition: opacity 0.2s ease;
   position: absolute;
