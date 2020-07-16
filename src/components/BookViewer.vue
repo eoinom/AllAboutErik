@@ -141,6 +141,12 @@ import FullscreenIcon from 'vue-material-design-icons/Fullscreen'
 import FullscreenExitIcon from 'vue-material-design-icons/FullscreenExit'
 import StopIcon from 'vue-material-design-icons/Pause'
 
+const keyMap = {
+  LEFT: 37,
+  RIGHT: 39,
+  ESC: 27,
+}
+
 export default { 
   name: 'BookViewer',
 
@@ -201,10 +207,26 @@ export default {
       this.setPageFromHash()
     }
     
-    window.addEventListener('hashchange', () => this.setPageFromHash())
+    if (!document) 
+      return
+    this.bindEvents()
+  },
+
+  beforeDestroy() {
+    if (!document) 
+      return
+    this.unbindEvents()
   },
 
   methods: {
+    bindEvents() {
+      window.addEventListener('hashchange', () => this.setPageFromHash(), false)
+      document.addEventListener('keydown', this.keyDownHandler, false);
+    },
+    unbindEvents() {
+      window.removeEventListener('hashchange', () => this.setPageFromHash(), false)
+      document.removeEventListener('keydown', this.keyDownHandler, false);
+    },
     numFlips(toPage) {
       let flips = Math.abs(toPage - this.$refs.flipbook.currentPage) // number of flips to do
 
@@ -293,7 +315,23 @@ export default {
     },
     reload() {
       this.$emit('reload')
-    }
+    },
+    keyDownHandler(event) {
+      switch (event.keyCode) {
+        case keyMap.LEFT:
+          this.$refs.flipbook.flipLeft();
+          break;
+        case keyMap.RIGHT:
+          this.$refs.flipbook.flipRight();
+          break;
+        case keyMap.ESC:
+          if (this.isFullscreen)
+            this.toggleFullscreen();
+          break;
+        default:
+          break;
+      }
+    },
   }
 }
 </script>
