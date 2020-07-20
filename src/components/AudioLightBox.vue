@@ -266,7 +266,6 @@ export default {
       return elements[0];
     },
     setAudioLoaded(index) {
-      console.log('in setAudioLoaded, index = ' + index);
       const el = this.getAudioElByIndex(index);
       this.isAudioLoaded = !el ? false : el.classList.contains('loaded');
     },
