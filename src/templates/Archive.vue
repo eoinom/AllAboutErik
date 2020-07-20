@@ -221,20 +221,24 @@ query ($id: ID!) {
     }
     otherGalleries {
       audioGallery {
-        url
-        caption
-        thumbnailImg
+        audios {
+          url
+          caption
+          thumbnailImg
+        }
       }
       articleGallery {
-        caption
-        thumbnailImg
-        commonPathStdRes
-        commonFilenameStdRes
-        commonFilenameStartNum
-        commonFilenameLastNum
-        orientation
-        width
-        height
+        articles {
+          caption
+          thumbnailImg
+          commonPathStdRes
+          commonFilenameStdRes
+          commonFilenameStartNum
+          commonFilenameLastNum
+          orientation
+          width
+          height
+        }
       }
     }
   }
