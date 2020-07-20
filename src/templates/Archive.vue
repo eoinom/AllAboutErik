@@ -220,25 +220,21 @@ query ($id: ID!) {
       numImages
     }
     otherGalleries {
-      audioGallery {
-        audios {
-          url
-          caption
-          thumbnailImg
-        }
+      audios {
+        caption
+        url
+        thumbnailImg
       }
-      articleGallery {
-        articles {
-          caption
-          thumbnailImg
-          commonPathStdRes
-          commonFilenameStdRes
-          commonFilenameStartNum
-          commonFilenameLastNum
-          orientation
-          width
-          height
-        }
+      articles {
+        caption
+        thumbnailImg
+        commonPathStdRes
+        commonFilenameStdRes
+        commonFilenameStartNum
+        commonFilenameLastNum
+        orientation
+        width
+        height
       }
     }
   }
@@ -373,12 +369,28 @@ export default {
       }
     },
     audioTracks() {
-      // return this.node.audioGallery
-      return this.node.otherGalleries.audioGallery
-    },    
+      console.log('this.node.otherGalleries:')
+      console.log(this.node.otherGalleries)
+      for (let i = 0; i < this.node.otherGalleries.length; i++) {
+        const iGallery = this.node.otherGalleries[i]
+        if (iGallery.hasOwnProperty('audios')) {
+          if (iGallery.audios != null && iGallery.audios.length > 0) {
+            return iGallery.audios
+          }
+        }
+      }
+    },
     articles() {
-      // return this.node.articleGallery
-      return this.node.otherGalleries.articleGallery
+      console.log('this.node.otherGalleries:')
+      console.log(this.node.otherGalleries)
+      for (let i = 0; i < this.node.otherGalleries.length; i++) {
+        const iGallery = this.node.otherGalleries[i]
+        if (iGallery.hasOwnProperty('articles')) {
+          if (iGallery.articles != null && iGallery.articles.length > 0) {
+            return iGallery.articles
+          }
+        }
+      }
     },
     numItems() {
       let num = 0
@@ -400,8 +412,8 @@ export default {
       return css
     },
     bookImagesUrlsStdRes() {
-      if (this.articleIndex == null)
-        return null
+      if (this.articles == null || this.articleIndex == null)
+        return []
       const book = this.articles[this.articleIndex]
       let pages = []
       let urlCommon = book.commonPathStdRes + book.commonFilenameStdRes
