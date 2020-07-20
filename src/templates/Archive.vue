@@ -219,21 +219,23 @@ query ($id: ID!) {
       commonPath
       numImages
     }
-    audioGallery {
-      url
-      caption
-      thumbnailImg
-    }
-    articleGallery {
-      caption
-      thumbnailImg
-      commonPathStdRes
-      commonFilenameStdRes
-      commonFilenameStartNum
-      commonFilenameLastNum
-      orientation
-      width
-      height
+    otherGalleries {
+      audioGallery {
+        url
+        caption
+        thumbnailImg
+      }
+      articleGallery {
+        caption
+        thumbnailImg
+        commonPathStdRes
+        commonFilenameStdRes
+        commonFilenameStartNum
+        commonFilenameLastNum
+        orientation
+        width
+        height
+      }
     }
   }
 }
@@ -367,10 +369,12 @@ export default {
       }
     },
     audioTracks() {
-      return this.node.audioGallery
+      // return this.node.audioGallery
+      return this.node.otherGalleries.audioGallery
     },    
     articles() {
-      return this.node.articleGallery
+      // return this.node.articleGallery
+      return this.node.otherGalleries.articleGallery
     },
     numItems() {
       let num = 0
