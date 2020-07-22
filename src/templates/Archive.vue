@@ -109,54 +109,32 @@
             </div>
           </template>
 
-          <!-- AUDIO GALLERY -->
-          <template v-if="audioTracks != null">
+          <!-- AUDIOS & ARTICLES GALLERY -->
+          <template v-if="audiosAndArticles != null">
             <div 
-              v-for="(track, iTrack) in audioTracks" 
-              :key="'track'+iTrack" 
+              v-for="(item, iItem) in audiosAndArticles" 
+              :key="'item'+iItem" 
               class="galleryBox"
-              @click.prevent="audioIndex = iTrack"
+              @click.prevent="onGalleryMediaClick(iItem)"
             >
               <div 
                 class="mediaBox"
-                :style="'background: transparent url(' + track.thumbnailImg + ') no-repeat left top'"
+                :style="'background: transparent url(' + item.thumbnailImg + ') no-repeat left top'"
               />
               <div class="boxOverlay mb-5">
                 <transition name="fade">
-                  <span class="thumbnailCaption absCenter hideOnHover">{{ track.caption }}</span>
+                  <span class="thumbnailCaption absCenter hideOnHover">{{ item.caption }}</span>
                 </transition>
                 
                 <transition name="fade">
-                  <g-image alt="Play symbol" src="~/assets/images/music_symbol_circle.png" class="absCenter showOnHover" />
+                  <g-image v-if="item.type == 'audio'" alt="Play symbol" src="~/assets/images/music_symbol_circle.png" class="absCenter showOnHover" />
+                  <g-image v-else alt="Eye icon" src="~/assets/images/eye.png" class="absCenter showOnHover" />
                 </transition>
               </div>
 
             </div>
           </template>
-
-          <!-- ARTICLE GALLERY -->
-          <template v-if="articles != null">            
-            <div 
-              v-for="(article, iArticle) in articles"
-              :key="'article'+iArticle"
-              @click.prevent="articleIndex = iArticle; toggleFullscreen()"
-              class="galleryBox"
-            >
-              <div 
-                class="mediaBox"
-                :style="'background: transparent url(' + article.thumbnailImg + ') no-repeat left top'"
-              />
-              <div class="boxOverlay mb-5">
-                <transition name="fade">
-                  <span class="thumbnailCaption absCenter hideOnHover">{{ article.caption }}</span>
-                </transition>
-                
-                <transition name="fade">
-                  <g-image alt="Eye icon" src="~/assets/images/eye.png" class="absCenter showOnHover" />
-                </transition>
-              </div>
-            </div>
-          </template>
+          
         </div>
       </div>
       
@@ -219,23 +197,23 @@ query ($id: ID!) {
       commonPath
       numImages
     }
-    otherGalleries {
-      audios {
-        caption
-        url
-        thumbnailImg
-      }
-      articles {
-        caption
-        thumbnailImg
-        commonPathStdRes
-        commonFilenameStdRes
-        commonFilenameStartNum
-        commonFilenameLastNum
-        orientation
-        width
-        height
-      }
+    audioGallery {
+      orderNo
+      caption
+      url
+      thumbnailImg
+    }
+    articleGallery {
+      orderNo
+      caption
+      thumbnailImg
+      commonPathStdRes
+      commonFilenameStdRes
+      commonFilenameStartNum
+      commonFilenameLastNum
+      orientation
+      width
+      height
     }
   }
 }
@@ -369,28 +347,13 @@ export default {
       }
     },
     audioTracks() {
-      console.log('this.node.otherGalleries:')
-      console.log(this.node.otherGalleries)
-      for (let i = 0; i < this.node.otherGalleries.length; i++) {
-        const iGallery = this.node.otherGalleries[i]
-        if (iGallery.hasOwnProperty('audios')) {
-          if (iGallery.audios != null && iGallery.audios.length > 0) {
-            return iGallery.audios
-          }
-        }
-      }
+      return this.node.audioGallery.map(obj => ({ ...obj, type: 'audio' }))
     },
     articles() {
-      console.log('this.node.otherGalleries:')
-      console.log(this.node.otherGalleries)
-      for (let i = 0; i < this.node.otherGalleries.length; i++) {
-        const iGallery = this.node.otherGalleries[i]
-        if (iGallery.hasOwnProperty('articles')) {
-          if (iGallery.articles != null && iGallery.articles.length > 0) {
-            return iGallery.articles
-          }
-        }
-      }
+      return this.node.articleGallery.map(obj => ({ ...obj, type: 'article' }))
+    },
+    audiosAndArticles() {
+      return [...this.audioTracks, ...this.articles].sort((a, b) => (a.orderNo > b.orderNo) ? 1 : -1); 
     },
     numItems() {
       let num = 0
@@ -515,6 +478,21 @@ export default {
     scrollHandler() {      
       if (this.zoomedImgIndex !== null) {
         this.closeLargeImg()
+      }
+    },
+    onGalleryMediaClick(iItem) {
+      const item = this.audiosAndArticles[iItem]
+      function callback(arrItem) {
+        return arrItem.thumbnailImg == item.thumbnailImg
+      }
+      if (item.type == 'audio') {
+        const index = this.audioTracks.findIndex(callback)
+        this.audioIndex = index >= 0 ? index : null
+      }
+      else if (item.type == 'article') {
+        const index = this.articles.findIndex(callback)
+        this.articleIndex = index >= 0 ? index : null
+        this.toggleFullscreen()
       }
     },
     updateWindowDims() {      
