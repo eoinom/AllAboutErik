@@ -714,6 +714,7 @@ collections:
                 required: false
                 fields:
                   - {label: "Caption", name: "caption", widget: "string", required: false}
+                  - {label: "Thumbnail image", name: "thumbnailImg", widget: "image", required: false}
                   - {label: 'URL common path (Std. Res)', name: 'commonPathStdRes', widget: 'string', required: false}
                   - {label: 'URL common filename (Std. Res)', name: 'commonFilenameStdRes', widget: 'string', required: false}
                   - {label: 'URL common path (Hi-Res)', name: 'commonPathHiRes', widget: 'string', required: false}
