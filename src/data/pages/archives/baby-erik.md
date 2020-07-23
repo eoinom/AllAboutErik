@@ -14,7 +14,7 @@ headerSlideshowRight:
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592865656/Archives/08.%20Baby%20Erik/header-slideshows/3.%20right/baby-erik_slideshow-right_
   numImages: 6
 imageGallery:
-  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592865653/Archives/08.%20Baby%20Erik/gallery/baby-erik_gallery-img_
-  numImages: 69
+  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1595540329/Archives/08.%20Baby%20Erik/gallery/baby-erik_gallery-img_
+  numImages: 67
 ---
 How cute can you get?

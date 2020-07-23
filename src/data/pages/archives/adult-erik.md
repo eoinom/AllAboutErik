@@ -14,6 +14,6 @@ headerSlideshowRight:
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592864708/Archives/04.%20Adult%20Erik/header-slideshows/3.%20right/adult-erik_slideshow-right_
   numImages: 6
 imageGallery:
-  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1592864708/Archives/04.%20Adult%20Erik/gallery/adult-erik_gallery-img_
-  numImages: 103
+  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1595539773/Archives/04.%20Adult%20Erik/gallery/adult-erik_gallery-img_
+  numImages: 94
 ---
