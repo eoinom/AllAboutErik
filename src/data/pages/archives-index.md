@@ -180,6 +180,6 @@ tiles:
     img_bright: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1590447307/Archives/tiles/21-icon-documentation-bright_blgqv8.jpg
     opacity: 100
 ---
-These so called archives are comprised of a potpourri of memorabilia.  
+These archives are comprised of a potpourri of memorabilia.  
 
 There’s a little music stuff, a few stories, flower pics from my garden, and lots of old photos of uncertain interest to anyone outside of my relatives or immediate family.
