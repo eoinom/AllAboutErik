@@ -36,7 +36,7 @@ mediaItems:
             orderNo: 6
         orderNo: 1
         type: imageGallery    
-  - label: Live Videos at the Sweetwater
+  - label: Video Snippets
     orderNo: 2
     mediaType: videos
     thumbnailImg: >-
