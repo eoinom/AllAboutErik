@@ -10,6 +10,10 @@ body {
   background-color: black !important;
 }
 
+.col {
+  min-width: auto !important; /* Fix for collections & publications index pages which was impacted by Bootstrap-Vue's change (added min-width: 0) */
+}
+
 .discography_content h2 {
   font-family: 'NeueHaasGroteskText Pro55';
   font-feature-settings: 'liga';
