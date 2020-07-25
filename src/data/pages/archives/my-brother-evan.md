@@ -3,7 +3,7 @@ title: My Brother Evan
 titleImg1Line: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1593547688/Archives/17.%20My%20Brother%20Evan/my_brother_evan.png
 titleImgMaxWidth: 79.8
-titleImgTopOffset: 67.6
+titleImgTopOffset: 52.6
 headerImgLeft: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1593547693/Archives/17.%20My%20Brother%20Evan/header-images/my-brother-evan_header-img1_left.jpg
 headerImgCentre: >-
