@@ -428,7 +428,7 @@ export default {
       this.$refs.slideshowCenter.start()
     },
     onGalleryImgClick(iImg) {
-      if (this.zoomedImgIndex == iImg) {
+      if (this.zoomedImgIndex == iImg || this.windowWidth < 768) {
         return
       }
       
@@ -825,6 +825,10 @@ export default {
   }
   .galleryBox {
     max-height: calc(350px - 32px);
+  }
+  .galleryImage {
+    height: calc(350px - 32px);
+    top: calc(175px - 16px);
   }
 }
 
