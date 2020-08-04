@@ -259,12 +259,11 @@ export default {
       applyLargeImgStyles: false,
       eventName: null,
       windowWidth: 0.0,
-      windowHeight: 0.0,
-      
+      windowHeight: 0.0,      
       articleIndex: null,
       isBookFullscreen: false,
       bookShowSinglePage: false,
-      bookKey: 1,
+      bookKey: 1
     }
   },
 
@@ -389,24 +388,13 @@ export default {
   },
 
   mounted() {
-    // to preload the hi-res images (ref: https://stackoverflow.com/q/3646036/13159696)
-    // if (this.node.imageGallery != null) {
-    //   for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
-    //     const image = new Image();
-    //     image.src = this.node.imageGallery.commonPathHiRes + i + '.jpg'
-    //     this.hiResImages.push(image)
-    //   }
-    // }
-
     if (this.node.headerSlideshowLeft != null) {
       this.$refs.slideshowLeft.pause()
       this.$refs.slideshowCenter.pause()
       this.$refs.slideshowRight.pause()
       this.staggerSlideshowStarts()
     }
-
     this.updateWindowDims()
-
     this.bindEvents()
   },
 
@@ -514,16 +502,7 @@ export default {
 
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 
-@font-face {
-  font-family: NeueHaasGroteskText Pro55;
-  src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot'); /* IE9 Compat Modes */
-  src: url('../assets/fonts/nhaasgrotesktxpro-55rg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../assets/fonts/nhaasgrotesktxpro-55rg.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
-  font-weight: normal;
-}
 @font-face {
   font-family: NeueHaasGroteskText Pro65;
   src: url('../assets/fonts/nhaasgrotesktxpro-65md.eot'); /* IE9 Compat Modes */
@@ -575,22 +554,6 @@ export default {
   z-index: -1;
 }
 
-// #headerTextDevice {
-//   color:#ECECEC;
-//   font-size: 0.925rem;
-//   margin: 20px;
-// }
-
-// .arrow {
-//   margin-left: 5px;
-//   margin-right: -3px;
-// }
-// .arrow > line {
-//   stroke: rgb(203,203,201);
-//   stroke-width: 2px;
-// }
-
-
 .headerWrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -599,10 +562,7 @@ export default {
 }
 .headerBox {
   width: 100%;
-  // max-width: 786px;
-  // height: 617px;
   max-width: 821px;
-  // height: 644px;
   position: relative;
   place-self: center;
 }
@@ -796,20 +756,12 @@ export default {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media only screen and (max-width: 575.98px) {
-  // .titleImg1Line {
-  //   display: none;
-  // }
-  // .titleImg2Lines {
-  //   display: inline;
-  //   margin: 10px 0px;
-  //   padding: 0px 60px;
-  // }
-  .galleryWrapper {
-    grid-gap: 16px;
+  .titleImg {
+    max-width: 85%;
+    padding: 0 32px 8px 32px;
   }
-  .headerText {
-    line-height: 1.4375rem;
-    font-size: 1rem;
+  .headerOverlay {
+    padding-bottom: 0px;
   }
   .backToArchives {
     top: 20px;
@@ -818,18 +770,13 @@ export default {
   .backToArchivesImg {
     max-width: 100px;
   }
+  .galleryWrapper {
+    grid-gap: 16px;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {  
-  // .titleImg {
-  //   max-width: 100%;
-  //   padding: 15px 40px 10px 70px;
-  //   margin: 0px;
-  // }
-  .galleryWrapper {
-    grid-gap: 16px;
-  }
   .backToArchives {
     top: 27px;
     right: 27px;
@@ -837,18 +784,13 @@ export default {
   .backToArchivesImg {
     max-width: 110px;
   }
+  .galleryWrapper {
+    grid-gap: 16px;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  // .titleImg1Line {
-  //   display: none;
-  // }
-  // .titleImg2Lines {
-  //   display: inline;
-  //   margin: 10px 0px;
-  //   padding: 0px 80px;
-  // }
   .galleryWrapper {
     grid-gap: 24px;
   }
@@ -863,9 +805,6 @@ export default {
 
 /* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
-  .titleImg {
-    // padding: 0px 100px;
-  }
   .galleryWrapper {
     grid-gap: 24px;
   }
@@ -878,17 +817,9 @@ export default {
   }
 }
 
-/* Special - Larger devices (desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) and (max-width: 1499.98px) {
-  .headerText, .titleImg {
-    // padding: 0px 120px;
-  }
-}
-
-/* Special - Larger devices (desktops, 1200px and up) */
+/* Special */
 @media only screen and (max-width: 360px) {
   .galleryWrapper {
-    // grid-template-columns: repeat(1fr);
     grid-template-rows: repeat(1fr);
     grid-gap: 16px;
   }
@@ -897,15 +828,10 @@ export default {
   }
 }
 
-/* Special - Larger devices (desktops, 1200px and up) */
+/* Special */
 @media only screen and (max-width: 1199.98px) {
-  // #slideshowLeft, #slideshowRight {
-  // .headerBox:first-child, .headerBox:last-child {
-  //   display: none;
-  // }
   .headerWrapper {
     grid-template-columns: 1fr;
-    // grid-gap: 30px;
   }
 }
 

@@ -144,6 +144,12 @@ body {
     font-size: calc(0.9375rem + 3 * (100vw - 375px) / (576 - 375) ); /* varies between 15px (0.9375rem) and 18px */
     line-height: calc(1.0625rem + 7 * (100vw - 375px) / (576 - 375) ); /* varies between 17px (1.0625rem) and 24px */
   }
+
+  #archive_headerText > p { 
+    letter-spacing: 0.9px;
+    line-height: 1.25rem;
+    font-size: 0.95rem;
+  }
 }
 
 /* Small devices (landscape phones, 576 - 768px) */
