@@ -40,21 +40,101 @@ landscapeLayout:
       posX: 63%
       posY: -40vh
       width: 33%
-      height: 85%
     - sectionNo: 3
-      text: " Here she is with her older sister Ruth."
+      text: Here she is with her older sister Ruth.
+      posX: 0.7%
+      posY: 39vh
+      width: 26%
     - sectionNo: 3
-      text: " The girls with their brother Walter."
+      text: The girls with their brother Walter.
+      posX: 57.5%
+      posY: 42vh
+      width: 38%
     - sectionNo: 4
       text: The whole family.
-    - text: Elsie, on the right, in her swimming class.
-      sectionNo: 5
+      posX: 1%
+      posY: 1vh
+      width: 30%
+    - sectionNo: 5
+      text: Elsie, on the right, in her swimming class.
+      posX: 1%
+      posY: -10vh
+      width: 30%
     - sectionNo: 5
       text: Dance class.
-    - text: With her brother and mom.
-      sectionNo: 5
+      posX: 1%
+      posY: 35vh
+      width: 30%
+    - sectionNo: 5
+      text: With her brother and mom.
+      posX: 20%
+      posY: 25vh
+      width: 30%
     - sectionNo: 5
       text: With her mom and older sister on the boat to Norway in 1927.
+      posX: 55%
+      posY: 35vh
+      width: 30%
+    - sectionNo: 6
+      text: The young lady comes of age.
+      posX: 20%
+      posY: 25vh
+      width: 30%
+    - sectionNo: 6
+      text: At the prom.
+      posX: 55%
+      posY: 35vh
+      width: 30%
+    - sectionNo: 7
+      text: As a teenager my mom started off on the wrong foot with her dentist, doctor Earl Jacobsen, my future dad. He had suggested to Elsie's father that she get her braces reapplied and he'd agreed. My mom considered the braces the social ruination of her high school years. She went off to the University of Wisconsin, and after graduation she spent a semester studying in Norway.
+      posX: 55%
+      posY: 35vh
+      width: 40%
+    - sectionNo: 8
+      text: She graduated Phi Beta Kappa in 1936. After college my mom worked as a telephone operator. She wasn’t happy with her social life, and when her mom suggested attending a dance at the Country Club, she was unenthusiastic due to the lack of a suitable and exciting date. Her mom suggested she go with Doctor Jacobsen and with some reluctance she agreed. Apparently, they hit it off big time, because they began dating.
+      posX: 1%
+      posY: 5vh
+      width: 40%
+    - sectionNo: 8
+      text: They got married in 1938.
+      posX: 92%
+      posY: -40vh
+      width: 7%
+    - sectionNo: 9
+      text: It was the start of a wonderful lifelong partnership.
+      posX: 1%
+      posY: 35vh
+      width: 30%
+    - sectionNo: 10
+      text: Along came little Erik.
+      posX: 5%
+      posY: 15vh
+      width: 20%
+    - sectionNo: 12
+      text: She had a second son, my brother Evan.
+      posX: 1.5%
+      posY: -45vh
+      width: 15%
+    - sectionNo: 13
+      text: We went on family trips and excursions.
+      posX: 1%
+      posY: 45vh
+      width: 35%
+    - sectionNo: 14
+      text: Here's a handmade invite she made for a circus themed lunch she threw for me.
+      posX: 0.5%
+      posY: -14vh
+      width: 33%
+    - sectionNo: 14
+      text: My cowboy birthday party.
+      posX: 0.5%
+      posY: 42vh
+      width: 33%
+    - sectionNo: 14
+      text: We admired my little pet robin Chirpy together.
+      posX: 36%
+      posY: 42vh
+      width: 42%
 ---
 SCROLL
 

@@ -173,6 +173,13 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        path: 'src/data/pages/archives/narrative/*.md',
+        typeName: 'ArchivesNarrative'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         path: 'src/data/pages/contact.md',
         typeName: 'Contact'
       }

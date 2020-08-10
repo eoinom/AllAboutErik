@@ -710,3 +710,77 @@ collections:
           - {label: "Page Orientation", name: "orientation", widget: "select", options: ["landscape", "portrait"]}
           - {label: 'Page Width (px)', name: 'width', widget: 'number', valueType: "float", min: 0, required: false}
           - {label: 'Page Height (px)', name: 'height', widget: 'number', valueType: "float", min: 0, required: false}
+
+  - label: "Archives (narrative)"
+    name: "archives-narrative"
+    folder: "src/data/pages/archives/narrative"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - {label: 'Title', name: 'title', widget: 'string', required: false}
+      - label: "Title Image"
+        name: "titleImg"
+        widget: "object"
+        required: false
+        fields: 
+          - {label: "Single line Image", name: "singleLine", widget: "image", required: false}
+          - {label: "Double line Image", name: "doubleLine", widget: "image", required: false}
+          - {label: "Top Offset (%)", name: "topOffset", widget: "number", valueType: "float", min: 0, max: 100, required: false}
+          - {label: "Max Width (%)", name: "maxWidth", widget: "number", valueType: "float", min: 0, max: 100, required: false}
+      - label: "Header Static Images"
+        name: "headerImages"
+        widget: "list"
+        required: false
+        fields: 
+          - {label: "Image", name: "img", widget: "image", required: false}
+          - {label: "Apply filter?", name: "applyFilter", widget: "boolean", required: false}
+      - label: "Header Slideshows"
+        name: "headerSlideshows"
+        widget: "list"
+        required: false
+        fields: 
+          - {label: 'URL common path', name: 'commonPath', widget: 'string', required: false}
+          - {label: 'Number of images', name: 'numImages', widget: 'number', valueType: "int", min: 1, required: false}
+          - {label: "Apply filter?", name: "applyFilter", widget: "boolean", required: false}
+      - {label: 'Header Text', name: 'body', widget: 'markdown', required: false}
+      - label: "Landscape Layout"
+        name: "landscapeLayout"
+        widget: "object"
+        required: false
+        fields: 
+          - {label: "Number of Sections", name: "noSections", widget: 'number', valueType: "int", min: 1, required: false}
+          - {label: "Images URL common path", name: "commonPath", widget: "string", required: false}
+          - label: "Text List"
+            name: "textList"
+            widget: "list"
+            required: false
+            fields: 
+              - {label: "Section Number", name: "sectionNo", widget: 'number', valueType: "int", min: 1, required: false}
+              - {label: "Text", name: "text", widget: "markdown", required: false}
+              - {label: "Vertical position", name: "posY", widget: "string", required: false}
+              - {label: "Horizontal position", name: "posX", widget: "string", required: false}
+              - {label: "Width", name: "width", widget: "string", required: false}
+              - {label: "Height", name: "height", widget: "string", required: false}
+              - {label: "Background color", name: "bgColor", widget: "string", required: false}
+              - {label: "Background opacity (%)", name: "bgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+      - label: "Portrait Layout"
+        name: "portraitLayout"
+        widget: "object"
+        required: false
+        fields: 
+          - {label: "Number of Sections", name: "noSections", widget: 'number', valueType: "int", min: 1, required: false}
+          - {label: "Images URL common path", name: "commonPath", widget: "string", required: false}
+          - label: "Text List"
+            name: "textList"
+            widget: "list"
+            required: false
+            fields: 
+              - {label: "Section Number", name: "sectionNo", widget: 'number', valueType: "int", min: 1, required: false}
+              - {label: "Text", name: "text", widget: "markdown", required: false}
+              - {label: "Vertical position", name: "posY", widget: "string", required: false}
+              - {label: "Horizontal position", name: "posX", widget: "string", required: false}
+              - {label: "Width", name: "width", widget: "string", required: false}
+              - {label: "Height", name: "height", widget: "string", required: false}
+              - {label: "Background color", name: "bgColor", widget: "string", required: false}
+              - {label: "Background opacity (%)", name: "bgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
