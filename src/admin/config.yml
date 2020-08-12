@@ -762,6 +762,8 @@ collections:
               - {label: "Horizontal position", name: "posX", widget: "string", required: false}
               - {label: "Width", name: "width", widget: "string", required: false}
               - {label: "Height", name: "height", widget: "string", required: false}
+              - {label: "Font Size", name: "fontSize", widget: "string", required: false}
+              - {label: "Line Height", name: "lineHeight", widget: "string", required: false}
               - {label: "Background color", name: "bgColor", widget: "string", required: false}
               - {label: "Background opacity (%)", name: "bgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
       - label: "Portrait Layout"
@@ -782,5 +784,7 @@ collections:
               - {label: "Horizontal position", name: "posX", widget: "string", required: false}
               - {label: "Width", name: "width", widget: "string", required: false}
               - {label: "Height", name: "height", widget: "string", required: false}
+              - {label: "Font Size", name: "fontSize", widget: "string", required: false}
+              - {label: "Line Height", name: "lineHeight", widget: "string", required: false}
               - {label: "Background color", name: "bgColor", widget: "string", required: false}
               - {label: "Background opacity (%)", name: "bgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}

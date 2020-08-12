@@ -60,28 +60,6 @@
       </header> -->
 
       
-      <!-- <div id="mainContent" class="" style="">
-        <div class="">
-
-          <template v-if="flatImgUrls != null">
-            <div 
-              v-for="(img, iImg) in flatImgUrls" 
-              :key="'img'+iImg" 
-              class="mb-4 flatImgContainer"
-            >
-              <img 
-                :src="img"
-                :id="'galleryImage_' + iImg"
-                class="flatImg" 
-                style=""
-              />
-            </div>
-          </template>
-          
-        </div>
-      </div> -->
-
-      
       
       <ksvuefp :options="options" :sections="sections">
         <ksvuefp-section 
@@ -92,36 +70,61 @@
           :section-index="iSec"
           :background-image="'url('+ s.img_url +')'"
         >
-          <!-- <span>{{ s.text }}</span> -->
+          <header v-if="s.header" id="header" class="px-3">
+            <div class="headerWrapper">
+              <SlideshowImages 
+                v-for="(slideshow, iSlideshow) in node.headerSlideshows"
+                v-show="windowWidth >= 1200 || iSlideshow == 1"
+                :key="iSlideshow"
+                :slides="slideshowImgs(iSlideshow)" 
+                :interval="4500" 
+                borderRadius="15px" 
+                :ref="'slideshow'+iSlideshow" 
+                class="headerBox" 
+              >                  
+                <div v-if="iSlideshow == 1" class="headerOverlay" :style="overlayStyles">
+                  <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg" />
+                  <!-- <span id="archive_headerText" v-html="node.content" /> -->
+                  <p class="headerText">SCROLL</p>
+                  <p class="headerText">TO READ MY RECOLLECTIONS</p>
+                </div>
+              </SlideshowImages>              
+            </div>
+
+            <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
+              <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
+              <g-image v-else alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-top.png" class="backToArchivesImg" />
+            </g-link>
+          </header>
+
+          <g-link v-if="s.backLink" to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchivesEnd">
+            <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
+          </g-link>
+
           <div 
+            v-else
             v-for="(txtObj, iText) in s.txtArr"
             :key="iText"
             class="slideTextDiv"
             :style="
               `top: ${txtObj.posY};
               left: ${txtObj.posX};
-              width: ${txtObj.width};`"
+              width: ${txtObj.width};
+              font-size: ${txtObj.fontSize};
+              line-height: ${txtObj.lineHeight};`"
           >
-            <!-- {{ txtObj.text }} -->
-            <span v-html="renderMarkdown(txtObj.text)" class="slideText" />
+            <transition name="textAnimation">
+              <span 
+                v-show="$ksvuefp.canAnimContent(iSec, true) && !$ksvuefp.slidingActive" 
+                v-html="renderMarkdown(txtObj.text)" 
+                class="slideText" 
+              />
+            </transition> 
           </div>
+
+          
         </ksvuefp-section>
       </ksvuefp>
-       <!-- <ksvuefp :options="options" :sections="sections">
-        <ksvuefp-section v-for="(section,index) in sections" :section="section" :key="section.bgColor" :section-index="index" :background-color="section.bgColor">
-          <transition name="fade">
-            <h2 v-show="$ksvuefp.canAnimContent(index, true)"> 
-              {{ section.content }}
-            </h2>
-          </transition>    
-        </ksvuefp-section>
-      </ksvuefp> -->
-
-      
-      <!-- <ScrollToTop
-        text="BACK TO THE TOP"
-        :includeArrow="true"
-      /> -->
       
     <!-- </div> -->
 
@@ -153,7 +156,8 @@ query ($id: ID!) {
         posX
         posY
         width
-        height
+        fontSize
+        lineHeight
       }
     }
   }
@@ -162,9 +166,7 @@ query ($id: ID!) {
 
 
 <script scoped>
-// import ScrollToTop from '../components/ScrollToTop.vue'
 import SlideshowImages from '../components/SlideshowImages.vue'
-// import KsVueFullpage from 'ks-vue-fullpage'
 // import simplebar from 'simplebar-vue'
 // import 'simplebar/dist/simplebar.min.css'
 const MarkdownIt = require('markdown-it')
@@ -180,7 +182,6 @@ export default {
   },
 
   components: {
-    // ScrollToTop,
     'SlideshowImages': require('../components/SlideshowImages.vue').default,
     // simplebar
   },
@@ -201,25 +202,12 @@ export default {
       // isBookFullscreen: false,
       // bookShowSinglePage: false,
       // bookKey: 1
-      // sections: [
-      //   {
-      //     bgColor: '#ec407a',
-      //     content: 'I am section 1'
-      //   },
-      //   {
-      //     bgColor: '#42a5f5',
-      //     content: 'I am section 2'
-      //   },
-      //   {
-      //     bgColor: '#66bb6a',
-      //     content: 'I am section 3'
-      //   }
-      // ],
+
       options: {
-        duration: 800,
-        // easing: [1, 0, 0, 1],
+        duration: 850,
+        easing: 'easeInOut',
         overlay: false,
-        dotNavEnabled: false,
+        dotNavEnabled: true,
       },
     }
   },
@@ -234,146 +222,86 @@ export default {
     node() {
       return this.$page.archive
     },
-    // titleImg() {
-    //   return this.node.titleImg1Line != '' ? this.node.titleImg1Line : this.node.titleImg2Lines
-    // },
+    titleImg() {
+      return this.node.titleImg.singleLine != '' ? this.node.titleImg.singleLine : this.node.titleImg.doubleLine
+    },
     // headerTextStyles() {
     //   let css = {}
     //   css.textAlign = this.node.content.length < 80 ? 'center' : 'justify'
     //   return css
     // },
-    // slideshowLeftImgs() {
-    //   if (this.node.headerSlideshowLeft == null)
-    //     return null
-    //   let imgs = []
-    //   for (let i = 1; i <= this.node.headerSlideshowLeft.numImages; i++) {
-    //     let url = this.node.headerSlideshowLeft.commonPath + i + '.jpg'
-    //     imgs.push({img: url})
-    //   }
-    //   return imgs
-    // },
-    // slideshowCenterImgs() {
-    //   if (this.node.headerSlideshowCenter == null)
-    //     return null
-    //   let imgs = []
-    //   for (let i = 1; i <= this.node.headerSlideshowCenter.numImages; i++) {
-    //     let url = this.node.headerSlideshowCenter.commonPath + i + '.jpg'
-    //     imgs.push({img: url})
-    //   }
-    //   return imgs
-    // },
-    // overlayStyles() {
-    //   let css = {}
-    //   if (this.windowWidth < 576)
-    //     var topOffset = Math.min(50, this.node.titleImgTopOffset)
-    //   else if (this.windowWidth < 768)
-    //     topOffset = Math.min(60, this.node.titleImgTopOffset)
-    //   else
-    //     topOffset = this.node.titleImgTopOffset
-    //   css['--titleTopOffset'] = topOffset + '%'
-    //   css['--titleMaxWidth'] = this.node.titleImgMaxWidth + '%'
-    //   return css
-    // },
-    // slideshowRightImgs() {
-    //   if (this.node.headerSlideshowRight == null)
-    //     return null
-    //   let imgs = []
-    //   for (let i = 1; i <= this.node.headerSlideshowRight.numImages; i++) {
-    //     let url = this.node.headerSlideshowRight.commonPath + i + '.jpg'
-    //     imgs.push({img: url})
-    //   }
-    //   return imgs
-    // },
-    // galleryImgUrls() {
-    flatImgUrls() {
-      // if (this.node.imageGallery == null)
-      //   return null
-      let urls = []
-      // for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
-      //   let url = this.node.imageGallery.commonPath + i + '.jpg'
-      //   urls.push(url)
-      // }
-      const commonPath = 'https://res.cloudinary.com/all-about-erik/image/upload/v1596580503/Archives/05.%20My%20Amazing%20Mom/flat-images/My_amazing_mom-Flat_pages'
-      for (let i = 1; i <= 42; i++) {
-        let url = commonPath + i + '.jpg'
-        urls.push(url)
-      }
-      return urls
+    overlayStyles() {
+      let css = {}
+      if (this.windowWidth < 576)
+        var topOffset = Math.min(50, this.node.titleImg.topOffset)
+      else if (this.windowWidth < 768)
+        topOffset = Math.min(60, this.node.titleImg.topOffset)
+      else
+        topOffset = this.node.titleImg.topOffset
+      css['--titleTopOffset'] = topOffset + '%'
+      css['--titleMaxWidth'] = this.node.titleImg.maxWidth + '%'
+      return css
     },
-    // sections() {
-    //   let sections = []
-    //   // console.log('this.flatImgUrls:')
-    //   // console.log(this.flatImgUrls)
-    //   // console.log('this.flatImgUrls.length :' + this.flatImgUrls.length )
-    //   for (let i = 0; i < this.flatImgUrls.length; i++) {
-    //     if (i < 13)
-    //       continue
-    //     let section = {
-    //       id: i + 1,
-    //       // text: `I'm section ${i + 1}`,
-    //       txtArr: [{
-    //         text: `I'm section ${i + 1}`,
-    //         posX: '0.5%',
-    //         posY: '-11vh',
-    //         width: '38%',
-    //         height: '20vh'
-    //       }],
-    //       img_url: this.flatImgUrls[i]
-    //     }
-    //     if (i == 13) {
-    //       section.txtArr[0].text = "Here's a handmade invite she made for a circus themed lunch she threw for me."
-    //     }
-    //     sections.push(section)
-    //   }
-    //   // console.log('sections:')
-    //   // console.log(sections)
-    //   return sections
-    // }
     sections() {
       let sections = []
+      let s = 1 // section no.
+
+      // add section for header
+      sections.push({ id: 'section' + s++, header: true })
 
       const layout = this.node.landscapeLayout
-      console.log('layout: ')
-      console.log(layout)
 
+      // get sections (background images) from CMS
       for (let i = 1; i <= layout.noSections; i++) {
         let section = {
-          id: 'section' + i,
+          id: 'section' + s++,
           img_url: layout.commonPath + i + '.jpg',
           txtArr: []
         }
         sections.push(section)
       }
 
+      // add text from CMS to sections
       for (let t = 0; t < layout.textList.length; t++) {
         const textObj = layout.textList[t]
         if (!textObj.hasOwnProperty('sectionNo') || textObj.sectionNo > sections.length) 
           continue
-        const sectionIndex = textObj.sectionNo - 1
-        // console.log('sectionIndex: ' + sectionIndex)
-        // console.log('sections: ')
-        // console.log(sections)
+        const sectionIndex = textObj.sectionNo
         sections[sectionIndex].txtArr.push({
           text: textObj.text,
           posX: textObj.posX ? textObj.posX : '0.5%',
           posY: textObj.posY ? textObj.posY : '-11vh',
-          width: textObj.width ? textObj.width : '38%'
+          width: textObj.width ? textObj.width : '38%',
+          fontSize: textObj.fontSize ? textObj.fontSize : '44px',
+          lineHeight: textObj.lineHeight ? textObj.lineHeight : '57px'
         })
       }
+
+      // add another section for "back to archives" link
+      // sections.push({ id: 'section' + (layout.noSections + 1), backLink: true })
+      sections.push({ id: 'section' + s++, backLink: true })
 
       return sections
     }
   },
 
   mounted() {
-    // if (this.node.headerSlideshowLeft != null) {
-    //   this.$refs.slideshowLeft.pause()
-    //   this.$refs.slideshowCenter.pause()
-    //   this.$refs.slideshowRight.pause()
-    //   this.staggerSlideshowStarts()
-    // }
-    console.log('this.node:')
-    console.log(this.node)
+    if (this.node.hasOwnProperty('headerSlideshows') && this.node.headerSlideshows.length > 0) {
+      // for (let i = 0; i < this.node.headerSlideshows.length; i++) {
+      //   const ref = `slideshow${i}`
+      //   // this.$refs[ref].pause()
+      //   // this.$refs[`slideshow${i}`].pause()
+      //   const slideshow = this.$refs[`slideshow${i}`]
+      //   slideshow.pause()
+      // }
+      console.log('this.$refs:')
+      console.log(this.$refs)
+      
+
+      this.staggerSlideshowStarts()
+    }
+    // console.log('this.node:')
+    // console.log(this.node)
     this.updateWindowDims()
     this.bindEvents()
   },
@@ -398,18 +326,58 @@ export default {
     delay(ms) {
       return new Promise(res => setTimeout(res, ms))
     },
-    async staggerSlideshowStarts() {
-      this.$refs.slideshowLeft.start()
+    async staggerSlideshowStarts() {  
+      for (let i = 0; i < this.node.headerSlideshows.length; i++) {
+        this.$refs[`slideshow${i}`][0].pause()
+      }
+      // this.$refs.slideshow0[0].pause()
+      // this.$refs.slideshow1[0].pause()
+      // this.$refs.slideshow2[0].pause()
+      // if (this.node.headerSlideshows.length == 6) {
+      //   this.$refs.slideshow3[0].pause()
+      //   this.$refs.slideshow4[0].pause()
+      //   this.$refs.slideshow5[0].pause()
+      // }
 
-      await this.delay(1500)
-      this.$refs.slideshowRight.start()
+      if (this.windowWidth >= 1200 & this.node.headerSlideshows.length == 6) {
+        this.$refs.slideshow0.start()
+        this.$refs.slideshow4.start()
 
-      await this.delay(1500)
-      this.$refs.slideshowCenter.start()
+        await this.delay(1500)
+        this.$refs.slideshow2.start()
+        this.$refs.slideshow3.start()
+
+        await this.delay(1500)
+        this.$refs.slideshow1.start()
+        this.$refs.slideshow5.start()
+      }
+      else if (this.windowWidth >= 1200 & this.node.headerSlideshows.length == 3) {
+        this.$refs.slideshow0.start()
+
+        await this.delay(1500)
+        this.$refs.slideshow1.start()
+
+        await this.delay(1500)
+        this.$refs.slideshow2.start()
+      }
+      // else if (this.node.headerSlideshows.length == 3) {
+      //   this.$refs.slideshow1.pause()
+      //   this.$refs.slideshow1.start()
+      // }
     },
     renderMarkdown(text) {
       const md = new MarkdownIt()
       return md.render(text) 
+    },
+    slideshowImgs(index) {
+      if (this.node.headerSlideshows == null)
+        return null
+      let imgs = []
+      for (let i = 1; i <= this.node.headerSlideshows[index].numImages; i++) {
+        let url = this.node.headerSlideshows[index].commonPath + i + '.jpg'
+        imgs.push({img: url})
+      }
+      return imgs
     },
     // onGalleryImgClick(iImg) {
     //   if (this.zoomedImgIndex == iImg || this.windowWidth < 768) {
@@ -517,6 +485,11 @@ export default {
   max-width: 222px;
   height: auto;
 }
+.backToArchivesEnd {
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 10px);
+}
 
 #header {
   position: relative;
@@ -586,10 +559,27 @@ export default {
 //   display: none;
 // }
 
-#archive_headerText { 
-  padding-right: 0px;
-  padding-left: 0px;
-  // see styles.css for more
+// #archive_headerText { 
+//   padding-right: 0px;
+//   padding-left: 0px;
+//   // see styles.css for more
+// }
+.headerText {
+  color: #FFF;
+  font-family: 'Lora', serif;
+  font-feature-settings: 'liga';
+  font-weight: 400;
+  font-size: 1.9375rem;
+  line-height: 2.8125rem;
+  letter-spacing: 0.5625rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 0px;
+}
+.headerText:nth-of-type(2) {
+  font-size: 1.4375rem;
+  line-height: 2.0625rem;
 }
 
 .simple-scrollbar {
@@ -753,14 +743,18 @@ body {
     color: white;
   }
 }
-.fade-enter-active, .fade-leave-active {
-  transition: all .5s;
+.textAnimation-enter-active, .textAnimation-leave-active {
+  transition: opacity 1s, transform 1s cubic-bezier(.13,.07,.26,.99);
   opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
-.fade-enter, .fade-leave-active {
+.textAnimation-enter {
+  opacity: 0;  
+  transform: translate3d(0, 4rem, 0);
+}
+.textAnimation-leave-active {
   opacity: 0;
 }
-
 
 .slideTextDiv {
   position: absolute;
@@ -768,19 +762,16 @@ body {
 }
 .slideText {
   display: block;
-  background-color: aqua;
-
+  // background-color: aqua;
   color: #FFF;
   font-family: 'Lora', serif;
   font-feature-settings: 'liga';
   font-weight: 400;
-  font-size: 44px;
-  letter-spacing: 2px;
-  line-height: 57px;
   text-align: justify !important;
   margin: 0px;
-  padding: 0px;
+  padding: 0px;  
 }
+
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
