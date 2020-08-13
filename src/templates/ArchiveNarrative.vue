@@ -2,7 +2,6 @@
 <!-- <ClientOnly> -->
   <Layout>
     <!-- <div v-on:[eventName]="closeLargeImg()" class="pb-5"> -->
-    <!-- <div class="pb-5"> -->
 
       <!-- <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
         <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
@@ -61,72 +60,106 @@
 
       
       
-      <ksvuefp :options="options" :sections="sections">
-        <ksvuefp-section 
-          class="flatImgContainer mb-4"
-          v-for="(s, iSec) in sections" 
-          :section="s"
-          :key="s.id" 
-          :section-index="iSec"
-          :background-image="'url('+ s.img_url +')'"
-        >
-          <header v-if="s.header" id="header" class="px-3">
-            <div class="headerWrapper">
-              <SlideshowImages 
-                v-for="(slideshow, iSlideshow) in node.headerSlideshows"
-                v-show="windowWidth >= 1200 || iSlideshow == 1"
-                :key="iSlideshow"
-                :slides="slideshowImgs(iSlideshow)" 
-                :interval="4500" 
-                borderRadius="15px" 
-                :ref="'slideshow'+iSlideshow" 
-                class="headerBox" 
-              >                  
-                <div v-if="iSlideshow == 1" class="headerOverlay" :style="overlayStyles">
-                  <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg" />
-                  <!-- <span id="archive_headerText" v-html="node.content" /> -->
-                  <p class="headerText">SCROLL</p>
-                  <p class="headerText">TO READ MY RECOLLECTIONS</p>
-                </div>
-              </SlideshowImages>              
-            </div>
-
-            <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
-              <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
-              <g-image v-else alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-top.png" class="backToArchivesImg" />
-            </g-link>
-          </header>
-
-          <g-link v-if="s.backLink" to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchivesEnd">
-            <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
-          </g-link>
-
-          <div 
-            v-else
-            v-for="(txtObj, iText) in s.txtArr"
-            :key="iText"
-            class="slideTextDiv"
-            :style="
-              `top: ${txtObj.posY};
-              left: ${txtObj.posX};
-              width: ${txtObj.width};
-              font-size: ${txtObj.fontSize};
-              line-height: ${txtObj.lineHeight};`"
-          >
-            <transition name="textAnimation">
-              <span 
-                v-show="$ksvuefp.canAnimContent(iSec, true) && !$ksvuefp.slidingActive" 
-                v-html="renderMarkdown(txtObj.text)" 
-                class="slideText" 
-              />
-            </transition> 
+    <ksvuefp :options="options" :sections="sections">
+      <ksvuefp-section 
+        class="flatImgContainer mb-4"
+        v-for="(s, iSec) in sections" 
+        :section="s"
+        :key="s.id" 
+        :section-index="iSec"
+        :background-image="'url('+ s.img_url +')'"
+      >
+        <header v-if="s.header" id="header" class="px-3">
+          <div class="headerWrapper">
+            <SlideshowImages 
+              v-for="(slideshow, iSlideshow) in node.headerSlideshows"
+              v-show="windowWidth >= 1200 || iSlideshow == 1"
+              :key="iSlideshow"
+              :slides="slideshowImgs(iSlideshow)" 
+              :interval="4500" 
+              borderRadius="15px" 
+              :ref="'slideshow'+iSlideshow" 
+              class="headerBox" 
+            >                  
+              <div v-if="iSlideshow == 1" class="headerOverlay" :style="overlayStyles">
+                <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg" />
+                <p class="headerText">SCROLL</p>
+                <p class="headerText">TO READ MY RECOLLECTIONS</p>
+              </div>
+            </SlideshowImages>              
           </div>
 
-          
-        </ksvuefp-section>
-      </ksvuefp>
-      
-    <!-- </div> -->
+          <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
+            <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
+            <g-image v-else alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-top.png" class="backToArchivesImg" />
+          </g-link>
+        </header>
+
+        <g-link v-else-if="s.backLink" to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchivesEnd">
+          <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
+        </g-link>
+
+        <div 
+          v-else
+          v-for="(txtObj, iText) in s.txtArr"
+          :key="iText"
+          class="slideTextDiv"
+          :style="
+            `left: ${txtObj.posX};
+            top: ${txtObj.posY};
+            width: ${txtObj.width};
+            font-size: ${txtObj.fontSize};
+            line-height: ${txtObj.lineHeight};`"
+        >
+          <transition name="textAnimation">
+            <span 
+              v-show="$ksvuefp.canAnimContent(iSec, true) && !$ksvuefp.slidingActive" 
+              v-html="renderMarkdown(txtObj.text)" 
+              class="slideText" 
+            />
+          </transition> 
+        </div>
+
+        <!-- GALLERY ITEMS -->
+        <template v-if="s.galleryItems">
+          <div 
+            v-for="(item, iItem) in s.galleryItems" 
+            :key="'item'+iItem" 
+            class="galleryBox"
+            @click.prevent="onGalleryMediaClick(item)"
+            :style="
+              `left: ${item.posX};
+              top: ${item.posY};`"
+          >
+            <div 
+              class="mediaBox"
+              :style="'background: transparent url(' + item.thumbnailImg + ') no-repeat left top'"
+            />
+            <div class="boxOverlay mb-5">
+              <transition name="fade">
+                <span class="thumbnailCaption absCenter hideOnHover">{{ item.caption }}</span>
+              </transition>
+              
+              <transition name="fade">
+                <g-image v-if="item.type == 'audio'" alt="Play symbol" src="~/assets/images/music_symbol_circle.png" class="absCenter showOnHover" />
+                <g-image v-else alt="Eye icon" src="~/assets/images/eye.png" class="absCenter showOnHover" />
+              </transition>
+            </div>
+
+          </div>
+        </template>
+      </ksvuefp-section>
+    </ksvuefp>
+
+    <BookViewer 
+      v-show="isBookFullscreen"
+      :pages="bookImagesUrlsStdRes" 
+      :isFullscreen="isBookFullscreen"
+      :showSinglePage="bookShowSinglePage"
+      :key="'bookViewer'+bookKey" 
+      @toggleFullscreen="toggleFullscreen()" 
+      @reload="reloadBook()" 
+    />
 
   </Layout>
   <!-- </ClientOnly> -->
@@ -159,6 +192,17 @@ query ($id: ID!) {
         fontSize
         lineHeight
       }
+      galleryItems {
+        sectionNo
+        posX
+        posY
+        caption
+        thumbnailImg
+        commonPathStdRes
+        commonFilenameStartNum
+        commonFilenameLastNum
+        orientation
+      }
     }
   }
 }
@@ -166,6 +210,7 @@ query ($id: ID!) {
 
 
 <script scoped>
+import BookViewer from '../components/BookViewer.vue'
 import SlideshowImages from '../components/SlideshowImages.vue'
 // import simplebar from 'simplebar-vue'
 // import 'simplebar/dist/simplebar.min.css'
@@ -182,6 +227,7 @@ export default {
   },
 
   components: {
+    BookViewer,
     'SlideshowImages': require('../components/SlideshowImages.vue').default,
     // simplebar
   },
@@ -199,9 +245,10 @@ export default {
       windowWidth: 0.0,
       windowHeight: 0.0,      
       // articleIndex: null,
-      // isBookFullscreen: false,
-      // bookShowSinglePage: false,
-      // bookKey: 1
+      bookItem: null,
+      isBookFullscreen: false,
+      bookShowSinglePage: false,
+      bookKey: 1,
 
       options: {
         duration: 850,
@@ -242,6 +289,17 @@ export default {
       css['--titleMaxWidth'] = this.node.titleImg.maxWidth + '%'
       return css
     },
+    bookImagesUrlsStdRes() {
+      const book = this.bookItem
+      if (book == null)
+        return []
+      let pages = []
+      for (let i = book.commonFilenameStartNum; i <= book.commonFilenameLastNum; i++) {
+        let url = book.commonPathStdRes + i + '.jpg'
+        pages.push(url)
+      }
+      return pages
+    },
     sections() {
       let sections = []
       let s = 1 // section no.
@@ -256,7 +314,8 @@ export default {
         let section = {
           id: 'section' + s++,
           img_url: layout.commonPath + i + '.jpg',
-          txtArr: []
+          txtArr: [],
+          galleryItems: []
         }
         sections.push(section)
       }
@@ -277,8 +336,16 @@ export default {
         })
       }
 
+      // add gallery items from CMS to sections
+      for (let i = 0; i < layout.galleryItems.length; i++) {
+        const galObj = layout.galleryItems[i]
+        if (!galObj.hasOwnProperty('sectionNo') || galObj.sectionNo > sections.length) 
+          continue
+        const sectionIndex = galObj.sectionNo
+        sections[sectionIndex].galleryItems.push(galObj)
+      }
+
       // add another section for "back to archives" link
-      // sections.push({ id: 'section' + (layout.noSections + 1), backLink: true })
       sections.push({ id: 'section' + s++, backLink: true })
 
       return sections
@@ -420,32 +487,34 @@ export default {
       //   this.closeLargeImg()
       // }
     },
-    // onGalleryMediaClick(iItem) {
-    //   const item = this.audiosAndArticles[iItem]
-    //   function callback(arrItem) {
-    //     return arrItem.thumbnailImg == item.thumbnailImg
-    //   }
-    //   if (item.type == 'audio') {
-    //     const index = this.audioTracks.findIndex(callback)
-    //     this.audioIndex = index >= 0 ? index : null
-    //   }
-    //   else if (item.type == 'article') {
-    //     const index = this.articles.findIndex(callback)
-    //     this.articleIndex = index >= 0 ? index : null
-    //     this.toggleFullscreen()
-    //   }
-    // },
+    onGalleryMediaClick(item) {
+      // function callback(arrItem) {
+      //   return arrItem.thumbnailImg == item.thumbnailImg
+      // }
+      // if (item.type == 'audio') {
+      //   const index = this.audioTracks.findIndex(callback)
+      //   this.audioIndex = index >= 0 ? index : null
+      // }
+      // else if (item.type == 'article') {
+      //   const index = this.articles.findIndex(callback)
+      //   this.articleIndex = index >= 0 ? index : null
+      //   this.toggleFullscreen()
+      // }
+      // this.articleIndex = itemIndex >= 0 ? itemIndex : null
+      this.bookItem = item
+      this.toggleFullscreen()
+    },
     updateWindowDims() {      
       this.windowWidth = window.innerWidth
       this.windowHeight = window.innerHeight
     },
-    // toggleFullscreen() {
-    //   this.isBookFullscreen = !this.isBookFullscreen
-    //   this.reloadBook()
-    // },
-    // reloadBook() {
-    //   this.bookKey += 1 // increment component key to force reload between toggle of fullscreen / normal-screen
-    // },
+    toggleFullscreen() {
+      this.isBookFullscreen = !this.isBookFullscreen
+      this.reloadBook()
+    },
+    reloadBook() {
+      this.bookKey += 1 // increment component key to force reload between toggle of fullscreen / normal-screen
+    },
   }
 }
 </script>
@@ -600,14 +669,19 @@ export default {
   align-items: center;
   justify-content: center;
 }
+// .galleryBox {
+//   background-color: black;
+//   width: 100%;
+//   max-width: var(--boxSize);
+//   height: var(--boxSize);
+//   position: relative;
+//   place-self: center;
+//   cursor: pointer;
+// }
 .galleryBox {
-  background-color: black;
-  width: 100%;
-  max-width: var(--boxSize);
-  height: var(--boxSize);
-  position: relative;
-  place-self: center;
-  cursor: pointer;
+  position: absolute;
+  height: 420px;
+  width: 420px;
 }
 
 .mediaBox {
@@ -618,6 +692,7 @@ export default {
   left: 0;
   height: 100%;
   width: 100%;
+  background-size: contain;
 }
 .galleryBox .mediaBox::before {
   content: "";

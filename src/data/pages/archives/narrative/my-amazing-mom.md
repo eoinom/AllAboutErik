@@ -5,17 +5,17 @@ titleImg:
   topOffset: 74
   maxWidth: 89
 headerSlideshows:
-  - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597093363/Archives/05.%20My%20Amazing%20Mom/header-slideshows/1.%20top-left/
+  - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597270740/Archives/05.%20My%20Amazing%20Mom/header-slideshows/1.%20top-left/
     numImages: 6
-  - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597093365/Archives/05.%20My%20Amazing%20Mom/header-slideshows/2.%20top-center/
+  - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597270741/Archives/05.%20My%20Amazing%20Mom/header-slideshows/2.%20top-center/
     numImages: 6
-  - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597093366/Archives/05.%20My%20Amazing%20Mom/header-slideshows/3.%20top-right/
+  - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597270742/Archives/05.%20My%20Amazing%20Mom/header-slideshows/3.%20top-right/
     numImages: 6
-  - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597093370/Archives/05.%20My%20Amazing%20Mom/header-slideshows/4.%20bottom-left/
+  - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597270743/Archives/05.%20My%20Amazing%20Mom/header-slideshows/4.%20bottom-left/
     numImages: 6
-  - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597093371/Archives/05.%20My%20Amazing%20Mom/header-slideshows/5.%20bottom-center/
+  - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597270743/Archives/05.%20My%20Amazing%20Mom/header-slideshows/5.%20bottom-center/
     numImages: 6
-  - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597093373/Archives/05.%20My%20Amazing%20Mom/header-slideshows/6.%20bottom-right/
+  - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597270744/Archives/05.%20My%20Amazing%20Mom/header-slideshows/6.%20bottom-right/
     numImages: 6
 landscapeLayout:
   noSections: 42
@@ -205,7 +205,7 @@ landscapeLayout:
       posY: -2vh
       width: 24%
     - sectionNo: 29
-      text: They would give their presentation promising that the students would be kept abreast of the construction of the school and become pen pals with the kids that lived there.My mom was a very persuasive salesperson, and although it involved a great deal of time and effort, the program was a great success with local kids. Over the years they built school after school. At the time she retired from the effort, many years later, she had been instrumental in building over 300 schools in 90 different third world countries. My mom, sister, and I attended a wonderful ceremony dedicating one of her schools to her late husband, my dad, in Esmeralda, Guatemala. It was a heartwarming occasion with the entire village, mostly Indians, turning out for the dedication of their new school. Elsie did a short write up about the visit.
+      text: They would give their presentation promising that the students would be kept abreast of the construction of the school and become pen pals with the kids that lived there. My mom was a very persuasive salesperson, and although it involved a great deal of time and effort, the program was a great success with local kids. Over the years they built school after school. At the time she retired from the effort, many years later, she had been instrumental in building over 300 schools in 90 different third world countries. My mom, sister, and I attended a wonderful ceremony dedicating one of her schools to her late husband, my dad, in Esmeralda, Guatemala. It was a heartwarming occasion with the entire village, mostly Indians, turning out for the dedication of their new school. Elsie did a short write up about the visit.
       posX: 60%
       posY: -49vh
       width: 38%
@@ -284,6 +284,16 @@ landscapeLayout:
       width: 19%
       fontSize: 55px
       lineHeight: 71px
+  galleryItems:
+    - sectionNo: 29
+      posX: 70%
+      posY: 15vh
+      caption: Read notes from Elsi's visit
+      thumbnailImg: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597280413/Archives/05.%20My%20Amazing%20Mom/Notes%20from%20Elsi%27s%20Visit/Notes_from_trip_thumbnail.jpg
+      commonPathStdRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597280414/Archives/05.%20My%20Amazing%20Mom/Notes%20from%20Elsi%27s%20Visit/Notes_from_trip_
+      commonFilenameStartNum: 1
+      commonFilenameLastNum: 4
+      orientation: portrait
 ---
 SCROLL
 
