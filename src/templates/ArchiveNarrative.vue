@@ -1,6 +1,6 @@
 <template>
-<!-- <ClientOnly> -->
   <Layout>
+  <ClientOnly>
     <!-- <div v-on:[eventName]="closeLargeImg()" class="pb-5"> -->
 
       <!-- <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
@@ -111,7 +111,7 @@
             font-size: ${txtObj.fontSize};
             line-height: ${txtObj.lineHeight};`"
         >
-          <transition name="textAnimation">
+          <transition appear name="textAnimation">
             <span 
               v-show="$ksvuefp.canAnimContent(iSec, true) && !$ksvuefp.slidingActive" 
               v-html="renderMarkdown(txtObj.text)" 
@@ -150,19 +150,19 @@
         </template>
       </ksvuefp-section>
     </ksvuefp>
+  </ClientOnly>
 
-    <BookViewer 
-      v-show="isBookFullscreen"
-      :pages="bookImagesUrlsStdRes" 
-      :isFullscreen="isBookFullscreen"
-      :showSinglePage="bookShowSinglePage"
-      :key="'bookViewer'+bookKey" 
-      @toggleFullscreen="toggleFullscreen()" 
-      @reload="reloadBook()" 
-    />
+  <BookViewer 
+    v-show="isBookFullscreen"
+    :pages="bookImagesUrlsStdRes" 
+    :isFullscreen="isBookFullscreen"
+    :showSinglePage="bookShowSinglePage"
+    :key="'bookViewer'+bookKey" 
+    @toggleFullscreen="toggleFullscreen()" 
+    @reload="reloadBook()" 
+  />
 
   </Layout>
-  <!-- </ClientOnly> -->
 </template>
 
 
@@ -212,12 +212,12 @@ query ($id: ID!) {
 <script scoped>
 import BookViewer from '../components/BookViewer.vue'
 import SlideshowImages from '../components/SlideshowImages.vue'
+import 'ks-vue-fullpage/dist/ks-vue-fullpage.min.css'
+import 'ks-vue-fullpage/dist/ks-vue-fullpage.min.js'
 // import simplebar from 'simplebar-vue'
 // import 'simplebar/dist/simplebar.min.css'
 const MarkdownIt = require('markdown-it')
 const slugify = require('@sindresorhus/slugify')
-import Velocity from 'velocity-animate'               // for KsVueFullpage
-import 'ks-vue-fullpage/dist/ks-vue-fullpage.min.css' // for KsVueFullpage
 
 export default {
   metaInfo() {
@@ -353,6 +353,8 @@ export default {
   },
 
   mounted() {
+    window.Velocity = require('velocity-animate')   // needed for KsVueFullpage (ref: https://github.com/pirony/ks-vue-fullpage)
+
     if (this.node.hasOwnProperty('headerSlideshows') && this.node.headerSlideshows.length > 0) {
       // for (let i = 0; i < this.node.headerSlideshows.length; i++) {
       //   const ref = `slideshow${i}`
@@ -362,13 +364,11 @@ export default {
       //   slideshow.pause()
       // }
       console.log('this.$refs:')
-      console.log(this.$refs)
-      
-
+      console.log(this.$refs)    
       this.staggerSlideshowStarts()
     }
-    // console.log('this.node:')
-    // console.log(this.node)
+    console.log('this.node:')
+    console.log(this.node)
     this.updateWindowDims()
     this.bindEvents()
   },
@@ -394,17 +394,18 @@ export default {
       return new Promise(res => setTimeout(res, ms))
     },
     async staggerSlideshowStarts() {  
-      for (let i = 0; i < this.node.headerSlideshows.length; i++) {
-        this.$refs[`slideshow${i}`][0].pause()
-      }
-      // this.$refs.slideshow0[0].pause()
-      // this.$refs.slideshow1[0].pause()
-      // this.$refs.slideshow2[0].pause()
-      // if (this.node.headerSlideshows.length == 6) {
-      //   this.$refs.slideshow3[0].pause()
-      //   this.$refs.slideshow4[0].pause()
-      //   this.$refs.slideshow5[0].pause()
+      // for (let i = 0; i < this.node.headerSlideshows.length; i++) {
+      //   // this.$refs[`slideshow${i}`][0].pause()
+      //   this.$refs[`slideshow${i}`].pause()
       // }
+      this.$refs.slideshow0[0].pause()
+      this.$refs.slideshow1[0].pause()
+      this.$refs.slideshow2[0].pause()
+      if (this.node.headerSlideshows.length == 6) {
+        this.$refs.slideshow3[0].pause()
+        this.$refs.slideshow4[0].pause()
+        this.$refs.slideshow5[0].pause()
+      }
 
       if (this.windowWidth >= 1200 & this.node.headerSlideshows.length == 6) {
         this.$refs.slideshow0.start()
