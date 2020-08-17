@@ -1,76 +1,22 @@
 <template>
   <Layout>
   <ClientOnly>
-    <!-- <div v-on:[eventName]="closeLargeImg()" class="pb-5"> -->
 
-      <!-- <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
-        <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
-        <g-image v-else alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-top.png" class="backToArchivesImg" />
-      </g-link> -->
-
-      <!-- HEADER SLIDESHOWS -->
-      <!-- <header id="header" class="px-3">
-        <div class="headerWrapper">
-
-          <template v-if="slideshowLeftImgs != null">
-            <SlideshowImages 
-              v-show="windowWidth >= 1200"
-              :slides="slideshowLeftImgs" 
-              :interval="4500" 
-              borderRadius="15px" 
-              ref="slideshowLeft" 
-              id="slideshowLeft" 
-              class="headerBox" 
-            />
-
-            <SlideshowImages 
-              :slides="slideshowCenterImgs"  
-              :interval="4500" 
-              borderRadius="15px" 
-              ref="slideshowCenter" 
-              id="slideshowCenter"
-              class="headerBox"
-            >
-              
-              <div class="headerOverlay" :style="overlayStyles">
-                <g-image 
-                  :src="titleImg"
-                  :alt="node.title + ' title image'" 
-                  class="titleImg" 
-                />
-                <simplebar class="simple-scrollbar" data-simplebar-auto-hide="false">
-                  <span id="archive_headerText" :style="headerTextStyles" v-html="node.content" />
-                </simplebar>
-              </div>
-            </SlideshowImages>
-
-            <SlideshowImages 
-              v-show="windowWidth >= 1200"
-              :slides="slideshowRightImgs" 
-              :interval="4500" 
-              borderRadius="15px" 
-              ref="slideshowRight" 
-              id="slideshowRight" 
-              class="headerBox" 
-            />
-          </template>
-          
-        </div>
-      </header> -->
-
-      
-      
     <ksvuefp :options="options" :sections="sections">
       <ksvuefp-section 
-        class="flatImgContainer mb-4"
+        class="flatImgContainer mt-4 mb-5"
         v-for="(s, iSec) in sections" 
         :section="s"
         :key="s.id" 
         :section-index="iSec"
         :background-image="'url('+ s.img_url +')'"
       >
+
+        <!-- HEADER -->
         <header v-if="s.header" id="header" class="px-3">
-          <div class="headerWrapper">
+
+          <!-- SLIDESHOWS -->
+          <div v-if="node.headerSlideshows" class="headerWrapper">
             <SlideshowImages 
               v-for="(slideshow, iSlideshow) in node.headerSlideshows"
               v-show="windowWidth >= 1200 || iSlideshow == 1"
@@ -86,20 +32,42 @@
                 <p class="headerText">SCROLL</p>
                 <p class="headerText">TO READ MY RECOLLECTIONS</p>
               </div>
-            </SlideshowImages>              
+            </SlideshowImages>
           </div>
 
+          <!-- STATIC HEADER IMAGES -->
+          <div v-if="node.headerImages" class="headerWrapper">
+            <div 
+              v-for="(headerImg, iImg) in node.headerImages"
+              v-show="windowWidth >= 1200 || iImg == 1"
+              :key="iImg"
+              class="headerBox"
+            >
+              <div v-if="headerImg.applyFilter !== false" class="headerFilter" />
+
+              <img :src="headerImg.img" />
+
+              <div v-if="iImg == 1" class="headerOverlay" :style="overlayStyles">
+                <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg" />
+                <p class="headerText">SCROLL</p>
+                <p class="headerText">TO READ MY RECOLLECTIONS</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- BACK TO ARCHIVES LINK (AT TOP) -->
           <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
             <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
             <g-image v-else alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-top.png" class="backToArchivesImg" />
           </g-link>
         </header>
 
+        <!-- BACK TO ARCHIVES LINK (AT END) -->
         <g-link v-else-if="s.backLink" to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchivesEnd">
           <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
         </g-link>
 
-        <div 
+        <!-- <div 
           v-else
           v-for="(txtObj, iText) in s.txtArr"
           :key="iText"
@@ -110,6 +78,13 @@
             width: ${txtObj.width};
             font-size: ${txtObj.fontSize};
             line-height: ${txtObj.lineHeight};`"
+        > -->
+        <div 
+          v-else
+          v-for="(txtObj, iText) in s.txtArr"
+          :key="iText"
+          class="slideTextDiv"
+          :style="slideTextStyles(txtObj)"
         >
           <transition appear name="textAnimation">
             <span 
@@ -174,6 +149,10 @@ query ($id: ID!) {
       singleLine
       topOffset
       maxWidth
+    }
+    headerImages {
+      img
+      applyFilter
     }
     headerSlideshows {
       commonPath
@@ -322,18 +301,44 @@ export default {
 
       // add text from CMS to sections
       for (let t = 0; t < layout.textList.length; t++) {
-        const textObj = layout.textList[t]
-        if (!textObj.hasOwnProperty('sectionNo') || textObj.sectionNo > sections.length) 
+        const txtObj = layout.textList[t]
+        if (!txtObj.hasOwnProperty('sectionNo') || txtObj.sectionNo > sections.length) 
           continue
-        const sectionIndex = textObj.sectionNo
-        sections[sectionIndex].txtArr.push({
-          text: textObj.text,
-          posX: textObj.posX ? textObj.posX : '0.5%',
-          posY: textObj.posY ? textObj.posY : '-11vh',
-          width: textObj.width ? textObj.width : '38%',
-          fontSize: textObj.fontSize ? textObj.fontSize : '44px',
-          lineHeight: textObj.lineHeight ? textObj.lineHeight : '57px'
-        })
+        const sectionIndex = txtObj.sectionNo
+
+        // sections[sectionIndex].txtArr.push({
+        //   text: txtObj.text,
+        //   posX: txtObj.posX ? txtObj.posX : '0.5%',
+        //   posY: txtObj.posY ? txtObj.posY : '-11vh',
+        //   width: txtObj.width ? txtObj.width : '38%',
+        //   fontSize: txtObj.fontSize ? txtObj.fontSize : '44px',
+        //   lineHeight: txtObj.lineHeight ? txtObj.lineHeight : '57px'
+        // })
+
+        sections[sectionIndex].txtArr.push(txtObj)
+
+        // if (txtObj.pos == 'left') {
+        //   let posX = '1.0%'
+
+        //   sections[sectionIndex].txtArr.push({
+        //     text: txtObj.text,
+        //     posX: txtObj.pos == ' ' ? txtObj.posX : '0.5%',
+        //     posY: txtObj.posY ? txtObj.posY : '-11vh',
+        //     width: txtObj.width ? txtObj.width : '38%',
+        //     fontSize: txtObj.fontSize ? txtObj.fontSize : '44px',
+        //     lineHeight: txtObj.lineHeight ? txtObj.lineHeight : '57px'
+        //   })
+        // } else {
+        //   sections[sectionIndex].txtArr.push({
+        //     text: txtObj.text,
+        //     posX: txtObj.posX ? txtObj.posX : '0.5%',
+        //     posY: txtObj.posY ? txtObj.posY : '-11vh',
+        //     width: txtObj.width ? txtObj.width : '38%',
+        //     fontSize: txtObj.fontSize ? txtObj.fontSize : '44px',
+        //     lineHeight: txtObj.lineHeight ? txtObj.lineHeight : '57px'
+        //   })
+        // }
+        
       }
 
       // add gallery items from CMS to sections
@@ -446,6 +451,32 @@ export default {
         imgs.push({img: url})
       }
       return imgs
+    },
+    slideTextStyles(txtObj) {
+      let css = {}
+      if (txtObj.hasOwnProperty('pos') && txtObj.pos != null) {
+        if (txtObj == 'left') {
+          css.left = '1.0%'
+          css.top = '-11vh'
+        }
+        else if (txtObj == 'right') {
+          css.left = '69.0%'
+          css.top = '-11vh'
+        }
+        else if (txtObj == 'center') {
+          css.left = '40.0%'
+          css.top = '11vh'
+        }
+        css.width = txtObj.width ? txtObj.width : '30%'
+      }
+      else {
+        css.left = txtObj.posX ? txtObj.posX : '0.5%'
+        css.top = txtObj.posY ? txtObj.posY : '-11vh'
+        css.width = txtObj.width ? txtObj.width : '38%'
+      }
+      css.fontSize = txtObj.fontSize ? txtObj.fontSize : '44px'
+      css.lineHeight = txtObj.lineHeight ? txtObj.lineHeight : '57px'
+      return css
     },
     // onGalleryImgClick(iImg) {
     //   if (this.zoomedImgIndex == iImg || this.windowWidth < 768) {

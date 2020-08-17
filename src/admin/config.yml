@@ -758,12 +758,14 @@ collections:
             fields: 
               - {label: "Section Number", name: "sectionNo", widget: 'number', valueType: "int", min: 1, required: false}
               - {label: "Text", name: "text", widget: "markdown", required: false}
+              - {label: "Preset position", name: "pos", widget: "string", required: false}
               - {label: "Horizontal position", name: "posX", widget: "string", required: false}
               - {label: "Vertical position", name: "posY", widget: "string", required: false}
               - {label: "Width", name: "width", widget: "string", required: false}
               - {label: "Height", name: "height", widget: "string", required: false}
               - {label: "Font Size", name: "fontSize", widget: "string", required: false}
               - {label: "Line Height", name: "lineHeight", widget: "string", required: false}
+              - {label: "Apply filter?", name: "applyFilter", widget: "boolean", required: false}
               - {label: "Background color", name: "bgColor", widget: "string", required: false}
               - {label: "Background opacity (%)", name: "bgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
           - label: "Gallery Items"
@@ -796,12 +798,14 @@ collections:
             fields: 
               - {label: "Section Number", name: "sectionNo", widget: 'number', valueType: "int", min: 1, required: false}
               - {label: "Text", name: "text", widget: "markdown", required: false}
+              - {label: "Preset position", name: "pos", widget: "string", required: false}
               - {label: "Horizontal position", name: "posX", widget: "string", required: false}
               - {label: "Vertical position", name: "posY", widget: "string", required: false}
               - {label: "Width", name: "width", widget: "string", required: false}
               - {label: "Height", name: "height", widget: "string", required: false}
               - {label: "Font Size", name: "fontSize", widget: "string", required: false}
               - {label: "Line Height", name: "lineHeight", widget: "string", required: false}
+              - {label: "Apply filter?", name: "applyFilter", widget: "boolean", required: false}
               - {label: "Background color", name: "bgColor", widget: "string", required: false}
               - {label: "Background opacity (%)", name: "bgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
           - label: "Gallery Items"
