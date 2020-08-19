@@ -4,7 +4,7 @@
 
     <ksvuefp :options="options" :sections="sections">
       <ksvuefp-section 
-        class="flatImgContainer mt-4 mb-5"
+        class="flatImgContainer"
         v-for="(s, iSec) in sections" 
         :section="s"
         :key="s.id" 
@@ -84,13 +84,14 @@
           v-for="(txtObj, iText) in s.txtArr"
           :key="iText"
           class="slideTextDiv"
-          :style="slideTextStyles(txtObj)"
+          :style="slideTextDivStyles(txtObj)"
         >
           <transition appear name="textAnimation">
             <span 
               v-show="$ksvuefp.canAnimContent(iSec, true) && !$ksvuefp.slidingActive" 
               v-html="renderMarkdown(txtObj.text)" 
               class="slideText" 
+              :style="slideTextStyles(txtObj)"
             />
           </transition> 
         </div>
@@ -165,11 +166,13 @@ query ($id: ID!) {
       textList {
 		  	sectionNo
         text
+        pos
         posX
         posY
         width
         fontSize
         lineHeight
+        applyFilter
       }
       galleryItems {
         sectionNo
@@ -305,40 +308,7 @@ export default {
         if (!txtObj.hasOwnProperty('sectionNo') || txtObj.sectionNo > sections.length) 
           continue
         const sectionIndex = txtObj.sectionNo
-
-        // sections[sectionIndex].txtArr.push({
-        //   text: txtObj.text,
-        //   posX: txtObj.posX ? txtObj.posX : '0.5%',
-        //   posY: txtObj.posY ? txtObj.posY : '-11vh',
-        //   width: txtObj.width ? txtObj.width : '38%',
-        //   fontSize: txtObj.fontSize ? txtObj.fontSize : '44px',
-        //   lineHeight: txtObj.lineHeight ? txtObj.lineHeight : '57px'
-        // })
-
-        sections[sectionIndex].txtArr.push(txtObj)
-
-        // if (txtObj.pos == 'left') {
-        //   let posX = '1.0%'
-
-        //   sections[sectionIndex].txtArr.push({
-        //     text: txtObj.text,
-        //     posX: txtObj.pos == ' ' ? txtObj.posX : '0.5%',
-        //     posY: txtObj.posY ? txtObj.posY : '-11vh',
-        //     width: txtObj.width ? txtObj.width : '38%',
-        //     fontSize: txtObj.fontSize ? txtObj.fontSize : '44px',
-        //     lineHeight: txtObj.lineHeight ? txtObj.lineHeight : '57px'
-        //   })
-        // } else {
-        //   sections[sectionIndex].txtArr.push({
-        //     text: txtObj.text,
-        //     posX: txtObj.posX ? txtObj.posX : '0.5%',
-        //     posY: txtObj.posY ? txtObj.posY : '-11vh',
-        //     width: txtObj.width ? txtObj.width : '38%',
-        //     fontSize: txtObj.fontSize ? txtObj.fontSize : '44px',
-        //     lineHeight: txtObj.lineHeight ? txtObj.lineHeight : '57px'
-        //   })
-        // }
-        
+        sections[sectionIndex].txtArr.push(txtObj)        
       }
 
       // add gallery items from CMS to sections
@@ -452,30 +422,44 @@ export default {
       }
       return imgs
     },
-    slideTextStyles(txtObj) {
+    slideTextDivStyles(txtObj) {
       let css = {}
-      if (txtObj.hasOwnProperty('pos') && txtObj.pos != null) {
-        if (txtObj == 'left') {
-          css.left = '1.0%'
-          css.top = '-11vh'
+      console.log(txtObj)
+      if (txtObj.hasOwnProperty('pos') && txtObj.pos) {
+        css.top = '-50vh'
+        css.width = txtObj.width ? txtObj.width : '35%'
+        css.height = txtObj.height ? txtObj.height : '100vh'
+
+        if (txtObj.pos == 'center') {
+          css.left = '32.5%'
+          css.top = '-37vh'
+          css.height = '87vh'
+        } else {
+          css.left = txtObj.pos == 'right' ? '65.0%' : '0%'
         }
-        else if (txtObj == 'right') {
-          css.left = '69.0%'
-          css.top = '-11vh'
-        }
-        else if (txtObj == 'center') {
-          css.left = '40.0%'
-          css.top = '11vh'
-        }
-        css.width = txtObj.width ? txtObj.width : '30%'
-      }
-      else {
+      } else {
         css.left = txtObj.posX ? txtObj.posX : '0.5%'
         css.top = txtObj.posY ? txtObj.posY : '-11vh'
         css.width = txtObj.width ? txtObj.width : '38%'
       }
-      css.fontSize = txtObj.fontSize ? txtObj.fontSize : '44px'
-      css.lineHeight = txtObj.lineHeight ? txtObj.lineHeight : '57px'
+      if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true) {
+        css.backgroundColor = 'rgb(0,0,0,0.47)'
+      }
+      return css
+    },
+    slideTextStyles(txtObj) {
+      let css = {}
+      if (txtObj.hasOwnProperty('pos') && txtObj.pos) {        
+        css.display = 'inline-flex'
+        css.height = '100vh'
+        css.alignItems = 'center'
+        css.padding = '100px'
+        css.fontSize = txtObj.fontSize ? txtObj.fontSize : '36px'
+        css.lineHeight = txtObj.lineHeight ? txtObj.lineHeight : '52px'        
+      } else {
+        css.fontSize = txtObj.fontSize ? txtObj.fontSize : '44px'
+        css.lineHeight = txtObj.lineHeight ? txtObj.lineHeight : '57px'
+      }      
       return css
     },
     // onGalleryImgClick(iImg) {
@@ -599,6 +583,10 @@ export default {
   padding-bottom: 12.5px;
   width: 100%;
   margin: 0 auto;
+
+  height: calc(100vh - 120px);
+  transform: translate3d(0, -40px, 0);
+  padding: 0 80px !important;
 }
 #header:after  {
   content : "";
@@ -829,6 +817,7 @@ export default {
 .flatImgContainer {
   display: flex;
   justify-content: center;
+  // background-size: contain;
 }
 
 .flatImg {
