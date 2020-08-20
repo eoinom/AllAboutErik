@@ -186,7 +186,7 @@ landscapeLayout:
       posY: 37vh
       width: 32%
     - sectionNo: 27
-      text: The longest project my mom took part in, was her work with the Oak Park Council of International Affairs. She started a program called “School to School “. She traveled to Washington DC and had a meeting with Sargent Shriver in ‘63 or ‘64 asking him how Oak Park could contribute to the Peace Corps and the United Nations. He suggested she get Oak Park schools involved with a program by which money could be raised, and schools built in third world countries worldwide. The concept called for money coming from three sources. One third from the local people who would build the school, one third from the US government on behalf of the Peace Corps, and the final third raised from contributions from local schools in Oak Park.
+      text: The longest project my mom took part in, was her work with the Oak Park Council of International Affairs. She started a program called “School to School”. She traveled to Washington DC and had a meeting with Sargent Shriver in ‘63 or ‘64 asking him how Oak Park could contribute to the Peace Corps and the United Nations. He suggested she get Oak Park schools involved with a program by which money could be raised, and schools built in third world countries worldwide. The concept called for money coming from three sources. One third from the local people who would build the school, one third from the US government on behalf of the Peace Corps, and the final third raised from contributions from local schools in Oak Park.
       posX: 70%
       posY: -44vh
       width: 27%
