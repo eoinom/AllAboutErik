@@ -167,6 +167,7 @@ query ($id: ID!) {
 		  	sectionNo
         text
         pos
+        alignItems
         posX
         posY
         width
@@ -452,8 +453,8 @@ export default {
       if (txtObj.hasOwnProperty('pos') && txtObj.pos) {        
         css.display = 'inline-flex'
         css.height = '100vh'
-        css.alignItems = 'center'
         css.padding = '100px'
+        css.alignItems = txtObj.alignItems ? txtObj.alignItems : 'center'
         css.fontSize = txtObj.fontSize ? txtObj.fontSize : '36px'
         css.lineHeight = txtObj.lineHeight ? txtObj.lineHeight : '52px'        
       } else {

@@ -799,6 +799,7 @@ collections:
               - {label: "Section Number", name: "sectionNo", widget: 'number', valueType: "int", min: 1, required: false}
               - {label: "Text", name: "text", widget: "markdown", required: false}
               - {label: "Preset position", name: "pos", widget: "string", required: false}
+              - {label: "Vertical alignment", name: "alignItems", widget: "string", required: false}
               - {label: "Horizontal position", name: "posX", widget: "string", required: false}
               - {label: "Vertical position", name: "posY", widget: "string", required: false}
               - {label: "Width", name: "width", widget: "string", required: false}
