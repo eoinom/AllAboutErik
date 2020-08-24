@@ -44,8 +44,8 @@ landscapeLayout:
     - sectionNo: 5
       text: >-
         Being Norwegian he was big on winter sports. As a boy he skied, but as he got older speed skating became his thing. He got so good at it that he appeared in some exhibition shows with the world-famous skater Sonja Henie. He was strong and threw the shotput. He worked for a summer as a draftsman in his dad's factory. One day Thorbjörn put his hand on his son’s shoulder and told him, “Earl you've got to think of something else to do. You're looking up at the clock too much”.
-      pos: right
-      applyFilter: true
+      pos: left
+      applyFilter: false
 
     - sectionNo: 6
       text: >-
