@@ -66,19 +66,7 @@
         <g-link v-else-if="s.backLink" to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchivesEnd">
           <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
         </g-link>
-
-        <!-- <div 
-          v-else
-          v-for="(txtObj, iText) in s.txtArr"
-          :key="iText"
-          class="slideTextDiv"
-          :style="
-            `left: ${txtObj.posX};
-            top: ${txtObj.posY};
-            width: ${txtObj.width};
-            font-size: ${txtObj.fontSize};
-            line-height: ${txtObj.lineHeight};`"
-        > -->
+        
         <div 
           v-else
           v-for="(txtObj, iText) in s.txtArr"
@@ -187,6 +175,20 @@ query ($id: ID!) {
         orientation
       }
     }
+    portraitLayout {
+      noSections
+	    commonPath
+      textList {
+		  	sectionNo
+        text
+        pos
+        posY
+        height
+        fontSize
+        lineHeight
+        applyFilter
+      }
+    }
   }
 }
 </page-query>
@@ -226,7 +228,7 @@ export default {
       // applyLargeImgStyles: false,
       // eventName: null,
       windowWidth: 0.0,
-      windowHeight: 0.0,      
+      windowHeight: 1.0,      
       // articleIndex: null,
       bookItem: null,
       isBookFullscreen: false,
@@ -237,8 +239,26 @@ export default {
         duration: 850,
         easing: 'easeInOut',
         overlay: false,
-        dotNavEnabled: false,
+        dotNavEnabled: true,
       },
+
+      portrait: {
+        maxAspect: 1.25,
+        width: 768,
+        height: 1024,
+        area: 768 * 1024,
+        fontSize: 18,      // in px
+        lineHeight: 26,    // in px
+        padding: 50,      // in px
+      },
+      landscape: {
+        width: 2560,
+        height: 1380,
+        area: 2560 * 1380,
+        fontSize: 36,      // in px
+        lineHeight: 52,    // in px
+        padding: 100,      // in px
+      }
     }
   },
 
@@ -260,6 +280,25 @@ export default {
     //   css.textAlign = this.node.content.length < 80 ? 'center' : 'justify'
     //   return css
     // },
+    aspectRatio() {
+      return this.windowWidth / this.windowHeight
+    },
+    windowArea() {
+      return this.windowWidth * this.windowHeight
+    },
+    windowScale() {
+      // return this.windowArea / this.currentLayout.area
+      return Math.sqrt(this.windowArea) / Math.sqrt(this.currentLayout.area)
+    },
+    currentLayout() {
+      let layout = {}
+      if (this.aspectRatio < this.portrait.maxAspect) {
+        layout = { ...this.portrait, ...this.node.portraitLayout }
+      } else {
+        layout = { ...this.landscape, ...this.node.landscapeLayout }
+      }
+      return layout
+    },
     overlayStyles() {
       let css = {}
       if (this.windowWidth < 576)
@@ -272,6 +311,59 @@ export default {
       css['--titleMaxWidth'] = this.node.titleImg.maxWidth + '%'
       return css
     },
+    sections() {
+      let sections = []
+      let s = 1 // section no.
+
+      // add section for header
+      sections.push({ id: 'section' + s++, header: true })
+
+      // const layout = this.aspectRatio < this.portrait.maxAspect ? 
+      //   this.node.portraitLayout : this.node.landscapeLayout
+      const layout = this.currentLayout
+      console.log('layout:')
+      console.log(layout)
+
+      // get sections (background images) from CMS`
+      if (layout.hasOwnProperty('noSections')) {
+        for (let i = 1; i <= layout.noSections; i++) {
+          let section = {
+            id: 'section' + s++,
+            img_url: layout.commonPath + i + '.jpg',
+            txtArr: [],
+            galleryItems: []
+          }
+          sections.push(section)
+        }
+      }
+
+      // add text from CMS to sections     
+      if (layout.hasOwnProperty('textList')) {
+        for (let t = 0; t < layout.textList.length; t++) {
+          const txtObj = layout.textList[t]
+          if (!txtObj.hasOwnProperty('sectionNo') || txtObj.sectionNo > sections.length) 
+            continue
+          const sectionIndex = txtObj.sectionNo
+          sections[sectionIndex].txtArr.push(txtObj)        
+        }
+      }
+
+      // add gallery items from CMS to sections
+      if (layout.hasOwnProperty('galleryItems')) {
+        for (let i = 0; i < layout.galleryItems.length; i++) {
+          const galObj = layout.galleryItems[i]
+          if (!galObj.hasOwnProperty('sectionNo') || galObj.sectionNo > sections.length) 
+            continue
+          const sectionIndex = galObj.sectionNo
+          sections[sectionIndex].galleryItems.push(galObj)
+        }
+      }
+
+      // add another section for "back to archives" link
+      sections.push({ id: 'section' + s++, backLink: true })
+
+      return sections
+    },
     bookImagesUrlsStdRes() {
       const book = this.bookItem
       if (book == null)
@@ -282,49 +374,6 @@ export default {
         pages.push(url)
       }
       return pages
-    },
-    sections() {
-      let sections = []
-      let s = 1 // section no.
-
-      // add section for header
-      sections.push({ id: 'section' + s++, header: true })
-
-      const layout = this.node.landscapeLayout
-
-      // get sections (background images) from CMS
-      for (let i = 1; i <= layout.noSections; i++) {
-        let section = {
-          id: 'section' + s++,
-          img_url: layout.commonPath + i + '.jpg',
-          txtArr: [],
-          galleryItems: []
-        }
-        sections.push(section)
-      }
-
-      // add text from CMS to sections
-      for (let t = 0; t < layout.textList.length; t++) {
-        const txtObj = layout.textList[t]
-        if (!txtObj.hasOwnProperty('sectionNo') || txtObj.sectionNo > sections.length) 
-          continue
-        const sectionIndex = txtObj.sectionNo
-        sections[sectionIndex].txtArr.push(txtObj)        
-      }
-
-      // add gallery items from CMS to sections
-      for (let i = 0; i < layout.galleryItems.length; i++) {
-        const galObj = layout.galleryItems[i]
-        if (!galObj.hasOwnProperty('sectionNo') || galObj.sectionNo > sections.length) 
-          continue
-        const sectionIndex = galObj.sectionNo
-        sections[sectionIndex].galleryItems.push(galObj)
-      }
-
-      // add another section for "back to archives" link
-      sections.push({ id: 'section' + s++, backLink: true })
-
-      return sections
     }
   },
 
@@ -339,12 +388,12 @@ export default {
       //   const slideshow = this.$refs[`slideshow${i}`]
       //   slideshow.pause()
       // }
-      console.log('this.$refs:')
-      console.log(this.$refs)    
+      // console.log('this.$refs:')
+      // console.log(this.$refs)    
       this.staggerSlideshowStarts()
     }
-    console.log('this.node:')
-    console.log(this.node)
+    // console.log('this.node:')
+    // console.log(this.node)
     this.updateWindowDims()
     this.bindEvents()
   },
@@ -357,14 +406,10 @@ export default {
     bindEvents() {
       window.addEventListener('resize', this.updateWindowDims, false)
       window.addEventListener('orientationchange', this.updateWindowDims, false)
-      // document.addEventListener('keydown', this.keyDownHandler, false)
-      document.addEventListener('scroll', this.scrollHandler, false)
     },
     unbindEvents() {
       window.removeEventListener('resize', this.updateWindowDims, false)
       window.removeEventListener('orientationchange', this.updateWindowDims, false)
-      // document.removeEventListener('keydown', this.keyDownHandler, false)
-      document.removeEventListener('scroll', this.scrollHandler, false)
     },
     delay(ms) {
       return new Promise(res => setTimeout(res, ms))
@@ -427,103 +472,106 @@ export default {
       let css = {}
       console.log(txtObj)
       if (txtObj.hasOwnProperty('pos') && txtObj.pos) {
+        // default values (left)
+        css.left = '0%'
         css.top = '-50vh'
-        css.width = txtObj.width ? txtObj.width : '35%'
-        css.height = txtObj.height ? txtObj.height : '100vh'
+        css.width = '35%'
+        css.height = '100vh'
 
-        if (txtObj.pos == 'center') {
+        // presets
+        if (txtObj.pos == 'right') {
+          css.left = '65.0%'
+        } else if (txtObj.pos == 'center') {
           css.left = '32.5%'
           css.top = '-37vh'
           css.height = '87vh'
-        } else {
-          css.left = txtObj.pos == 'right' ? '65.0%' : '0%'
+        } else if (txtObj.pos == 'bottom') {
+          css.left = '0%'
+          css.top = '17vh'
+          css.width = '100%'
+          css.height = '33vh'
+          css.display = 'flex'
+          css.flexDirection = 'column-reverse'
+        } else if (txtObj.pos == 'top') {
+          css.width = '100%'
+          css.height = '33vh'
         }
+
+        // overwrites
+        if ( txtObj.posX ) css.left = txtObj.posX
+        if ( txtObj.posY ) css.top = txtObj.posY
+        if ( txtObj.width ) css.width = txtObj.width
+        if ( txtObj.height ) css.height = txtObj.height
+
       } else {
         css.left = txtObj.posX ? txtObj.posX : '0.5%'
         css.top = txtObj.posY ? txtObj.posY : '-11vh'
         css.width = txtObj.width ? txtObj.width : '38%'
       }
-      if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true) {
+      if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true && txtObj.pos !== 'bottom') {
         css.backgroundColor = 'rgb(0,0,0,0.47)'
       }
       return css
     },
     slideTextStyles(txtObj) {
+      const layout = this.currentLayout
+      const scale = this.windowScale
       let css = {}
       if (txtObj.hasOwnProperty('pos') && txtObj.pos) {        
         css.display = 'inline-flex'
-        css.height = '100vh'
-        css.padding = '100px'
-        css.alignItems = txtObj.alignItems ? txtObj.alignItems : 'center'
-        css.fontSize = txtObj.fontSize ? txtObj.fontSize : '36px'
-        css.lineHeight = txtObj.lineHeight ? txtObj.lineHeight : '52px'        
+        // css.height = '100vh'
+        css.height = '100%'
+
+        if (txtObj.pos == 'bottom') {
+          css.height = 'initial'
+          if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true) {
+            css.backgroundColor = 'rgb(0,0,0,0.47)'
+          }
+        }
+
+        // align-items (align text vertically)
+        if (txtObj.alignItems) {
+          var alignItems = txtObj.alignItems
+        } else if (!txtObj.hasOwnProperty('applyFilter') || !txtObj.applyFilter) {
+          alignItems = 'flex-end'
+        } else {
+          alignItems = 'center'
+        }
+        css.alignItems = alignItems
+
+        // font-size
+        if (txtObj.fontSize) {
+          var fontSizePx = scale * parseFloat(txtObj.fontSize.replace(/[^0-9.]/g,''))
+        } else {
+          fontSizePx = scale * layout.fontSize
+        }
+        css.fontSize = fontSizePx + 'px'
+
+        // line-height
+        if (txtObj.lineHeight) {
+          var lineHeightPx = scale * parseFloat(txtObj.lineHeight.replace(/[^0-9.]/g,''))
+        } else {
+          lineHeightPx = scale * layout.lineHeight
+        }
+        css.lineHeight = lineHeightPx + 'px'
+
+        // padding
+        if (txtObj.padding) {
+          var paddingPx = scale * parseFloat(txtObj.padding.replace(/[^0-9.]/g,''))
+        } else {
+          paddingPx = scale * layout.padding
+        }
+        css.padding = paddingPx + 'px'
+
       } else {
         css.fontSize = txtObj.fontSize ? txtObj.fontSize : '44px'
         css.lineHeight = txtObj.lineHeight ? txtObj.lineHeight : '57px'
       }      
       return css
     },
-    // onGalleryImgClick(iImg) {
-    //   if (this.zoomedImgIndex == iImg || this.windowWidth < 768) {
-    //     return
-    //   }
-      
-    //   const imgEl = document.getElementById('galleryImage_' + iImg)
-    //   const elemRect = imgEl.getBoundingClientRect()
-    //   this.imgCenterPos.top = elemRect.top + (elemRect.height / 2)
-    //   this.imgCenterPos.left = elemRect.left + (elemRect.width / 2)
-
-    //   this.$nextTick(() => {
-    //     this.zoomedImgIndex = iImg
-    //     this.applyLargeImgStyles = true
-    //   })
-      
-    //   this.eventName = 'click'
-    // },
-    // closeLargeImg() {
-    //   if (this.applyLargeImgStyles) {
-    //     this.applyLargeImgStyles = false        
-
-    //     this.$nextTick(() => {
-    //       this.eventName = null
-    //       this.zoomedImgIndex = null
-    //     })
-    //   }
-    // },
-    // keyDownHandler(event) {
-    //   switch (event.keyCode) {
-    //     case keyMap.ESC:
-    //       this.closeLargeImg()
-    //       break
-    //     default:
-    //       break
-    //   }
-    // },
-    scrollHandler() {      
-      // if (this.zoomedImgIndex !== null) {
-      //   this.closeLargeImg()
-      // }
-    },
     onGalleryMediaClick(item) {
-      // function callback(arrItem) {
-      //   return arrItem.thumbnailImg == item.thumbnailImg
-      // }
-      // if (item.type == 'audio') {
-      //   const index = this.audioTracks.findIndex(callback)
-      //   this.audioIndex = index >= 0 ? index : null
-      // }
-      // else if (item.type == 'article') {
-      //   const index = this.articles.findIndex(callback)
-      //   this.articleIndex = index >= 0 ? index : null
-      //   this.toggleFullscreen()
-      // }
-      // this.articleIndex = itemIndex >= 0 ? itemIndex : null
       this.bookItem = item
       this.toggleFullscreen()
-    },
-    updateWindowDims() {      
-      this.windowWidth = window.innerWidth
-      this.windowHeight = window.innerHeight
     },
     toggleFullscreen() {
       this.isBookFullscreen = !this.isBookFullscreen
@@ -531,6 +579,10 @@ export default {
     },
     reloadBook() {
       this.bookKey += 1 // increment component key to force reload between toggle of fullscreen / normal-screen
+    },
+    updateWindowDims() {      
+      this.windowWidth = window.innerWidth
+      this.windowHeight = window.innerHeight
     },
   }
 }
@@ -672,24 +724,6 @@ export default {
   line-height: 2.0625rem;
 }
 
-.simple-scrollbar {
-  height: inherit;
-}
-
-#mainContent {
-  // max-width: calc(var(--maxPerRow) * var(--boxSize) + (var(--maxPerRow - 1) * var(--gridGap)) + 2 * 16px);
-  width: 100%;
-  margin: 0 auto;
-}
-
-.galleryWrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--boxSize), 1fr));
-  grid-auto-flow: row;
-  grid-gap: var(--gridGap);
-  align-items: center;
-  justify-content: center;
-}
 // .galleryBox {
 //   background-color: black;
 //   width: 100%;
@@ -888,9 +922,6 @@ body {
   .backToArchivesImg {
     max-width: 100px;
   }
-  .galleryWrapper {
-    grid-gap: 16px;
-  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -902,16 +933,10 @@ body {
   .backToArchivesImg {
     max-width: 110px;
   }
-  .galleryWrapper {
-    grid-gap: 16px;
-  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .galleryWrapper {
-    grid-gap: 24px;
-  }
   .backToArchives {
     top: 33px;
     right: 33px;
@@ -923,9 +948,6 @@ body {
 
 /* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
-  .galleryWrapper {
-    grid-gap: 24px;
-  }
   .backToArchives {
     top: 37px;
     right: 37px;
@@ -937,10 +959,6 @@ body {
 
 /* Special */
 @media only screen and (max-width: 360px) {
-  .galleryWrapper {
-    grid-template-rows: repeat(1fr);
-    grid-gap: 16px;
-  }
   .galleryBox {
     max-height: calc(350px - 32px);
   }
