@@ -184,8 +184,6 @@ query ($id: ID!) {
         pos
         posY
         height
-        fontSize
-        lineHeight
         applyFilter
       }
     }
