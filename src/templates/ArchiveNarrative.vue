@@ -19,7 +19,7 @@
           <div v-if="node.headerSlideshows" class="headerWrapper">
             <SlideshowImages 
               v-for="(slideshow, iSlideshow) in node.headerSlideshows"
-              v-show="windowWidth >= 1200 || iSlideshow == 1"
+              v-show="showHeaderTile(iSlideshow)"
               :key="iSlideshow"
               :slides="slideshowImgs(iSlideshow)" 
               :interval="4500" 
@@ -39,18 +39,19 @@
           <div v-if="node.headerImages" class="headerWrapper">
             <div 
               v-for="(headerImg, iImg) in node.headerImages"
-              v-show="windowWidth >= 1200 || iImg == 1"
+              v-show="showHeaderTile(iImg)"
               :key="iImg"
               class="headerBox"
             >
-              <div v-if="headerImg.applyFilter !== false" class="headerFilter" />
+              <!-- <div v-if="headerImg.applyFilter !== false" class="headerFilter" /> -->
+              <div v-if="headerImg.applyFilter !== false || iImg == headerTextTileIndex" class="headerFilter" />
 
               <img :src="headerImg.img" />
 
-              <div v-if="iImg == 1" class="headerOverlay" :style="overlayStyles">
-                <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg" />
-                <p class="headerText">SCROLL</p>
-                <p class="headerText">TO READ MY RECOLLECTIONS</p>
+              <div class="headerOverlay" :style="overlayStyles">
+                <g-image v-if="iImg == 1" :src="titleImg" :alt="node.title + ' title image'" class="titleImg mt-4 mt-sm-0" />
+                <p v-if="iImg == headerTextTileIndex" class="headerText mt-n1 mt-sm-0">SCROLL</p>
+                <p v-if="iImg == headerTextTileIndex" class="headerText">TO READ MY RECOLLECTIONS</p>
               </div>
             </div>
           </div>
@@ -67,7 +68,7 @@
           <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
         </g-link>
         
-        <div 
+        <!-- <div 
           v-else
           v-for="(txtObj, iText) in s.txtArr"
           :key="iText"
@@ -82,6 +83,48 @@
               :style="slideTextStyles(txtObj)"
             />
           </transition> 
+        </div> -->
+        <div 
+          v-else 
+          v-for="(txtObj, iText) in s.txtArr"
+          :key="iText"
+          class="slideTextContainer"
+          :style="slideTextContainerStyles(txtObj)"
+        >
+          <div
+            class="slideTextDiv"
+            :style="slideTextDivStyles(txtObj)"
+          >
+            <!-- <transition appear name="textAnimation">
+              <simplebar class="simple-scrollbar" data-simplebar-auto-hide="false">
+                <span 
+                  v-show="$ksvuefp.canAnimContent(iSec, true) && !$ksvuefp.slidingActive" 
+                  v-html="renderMarkdown(txtObj.text)" 
+                  class="slideText" 
+                  :style="slideTextStyles(txtObj)"
+                />
+              </simplebar>            
+            </transition>  -->
+            <simplebar v-if="windowWidth < 992" class="simple-scrollbar" data-simplebar-auto-hide="false">
+              <transition appear name="textAnimation">
+                <span 
+                  v-show="$ksvuefp.canAnimContent(iSec, true) && !$ksvuefp.slidingActive" 
+                  v-html="renderMarkdown(txtObj.text)" 
+                  class="slideText" 
+                  :style="slideTextStyles(txtObj)"
+                />
+              </transition>
+            </simplebar>
+
+            <transition v-else appear name="textAnimation">
+              <span 
+                v-show="$ksvuefp.canAnimContent(iSec, true) && !$ksvuefp.slidingActive" 
+                v-html="renderMarkdown(txtObj.text)" 
+                class="slideText" 
+                :style="slideTextStyles(txtObj)"
+              />
+            </transition>
+          </div>
         </div>
 
         <!-- GALLERY ITEMS -->
@@ -187,6 +230,18 @@ query ($id: ID!) {
         applyFilter
       }
     }
+    squareLayout {
+      noSections
+	    commonPath
+      textList {
+		  	sectionNo
+        text
+        pos
+        posY
+        height
+        applyFilter
+      }
+    }
   }
 }
 </page-query>
@@ -197,8 +252,9 @@ import BookViewer from '../components/BookViewer.vue'
 import SlideshowImages from '../components/SlideshowImages.vue'
 import 'ks-vue-fullpage/dist/ks-vue-fullpage.min.css'
 import 'ks-vue-fullpage/dist/ks-vue-fullpage.min.js'
-// import simplebar from 'simplebar-vue'
-// import 'simplebar/dist/simplebar.min.css'
+import * as Hammer from 'hammerjs'
+import simplebar from 'simplebar-vue'
+import 'simplebar/dist/simplebar.min.css'
 const MarkdownIt = require('markdown-it')
 const slugify = require('@sindresorhus/slugify')
 
@@ -212,7 +268,7 @@ export default {
   components: {
     BookViewer,
     'SlideshowImages': require('../components/SlideshowImages.vue').default,
-    // simplebar
+    simplebar
   },
 
   data() {
@@ -237,21 +293,35 @@ export default {
         duration: 850,
         easing: 'easeInOut',
         overlay: false,
-        dotNavEnabled: true,
+        dotNavEnabled: false,
+        // animationType: 'slideX',
       },
 
       portrait: {
-        maxAspect: 1.25,
-        width: 768,
-        height: 1024,
-        area: 768 * 1024,
-        fontSize: 18,      // in px
-        lineHeight: 26,    // in px
+        maxAspect: 0.85,
+        // width: 768,
+        // height: 1024,
+        // area: 768 * 1024,
+        // fontSize: 18,      // in px
+        // lineHeight: 26,    // in px
+        // padding: 50,      // in px
+        area: 375 * 667,     // iPhone 6
+        fontSize: 20.3,      // in px
+        lineHeight: 29.3,    // in px
+        padding: 28.2,       // in px
+      },
+      square: {
+        maxAspect: 1.6,
+        // width: 1080,
+        // height: 1080,
+        area: 1080 * 1080,
+        fontSize: 26,      // in px
+        lineHeight: 37.5,    // in px
         padding: 50,      // in px
       },
       landscape: {
-        width: 2560,
-        height: 1380,
+        // width: 2560,
+        // height: 1380,
         area: 2560 * 1380,
         fontSize: 36,      // in px
         lineHeight: 52,    // in px
@@ -292,6 +362,8 @@ export default {
       let layout = {}
       if (this.aspectRatio < this.portrait.maxAspect) {
         layout = { ...this.portrait, ...this.node.portraitLayout }
+      } else if (this.aspectRatio < this.square.maxAspect) {
+        layout = { ...this.square, ...this.node.squareLayout }
       } else {
         layout = { ...this.landscape, ...this.node.landscapeLayout }
       }
@@ -300,9 +372,12 @@ export default {
     overlayStyles() {
       let css = {}
       if (this.windowWidth < 576)
-        var topOffset = Math.min(50, this.node.titleImg.topOffset)
+        // var topOffset = Math.min(50, this.node.titleImg.topOffset)
+        var topOffset = Math.min(60, this.node.titleImg.topOffset)
       else if (this.windowWidth < 768)
         topOffset = Math.min(60, this.node.titleImg.topOffset)
+      else if (this.windowWidth < 992)
+        topOffset = Math.min(65, this.node.titleImg.topOffset)
       else
         topOffset = this.node.titleImg.topOffset
       css['--titleTopOffset'] = topOffset + '%'
@@ -372,7 +447,14 @@ export default {
         pages.push(url)
       }
       return pages
-    }
+    },
+    headerTextTileIndex() {
+      if (this.windowWidth < 576 && this.aspectRatio < 0.97) {
+        return 3
+      } else {
+        return 1
+      }
+    },
   },
 
   mounted() {
@@ -456,6 +538,18 @@ export default {
       const md = new MarkdownIt()
       return md.render(text) 
     },
+    showHeaderTile(index) {
+      if (this.windowWidth >= 1200 && this.aspectRatio < 2.1) {
+        return index <= 5                               // show all six tiles
+      } else if (this.aspectRatio < 0.65) {
+        return index == 1 || index == 3 || index == 5   // show three tiles
+        // return index == 0 || index == 1 || index == 3   // show three tiles
+      } else if (this.aspectRatio < 0.97) {
+        return index == 1 || index == 3                 // show two tiles
+      } else {
+        return index == 1                               // show one tile
+      }
+    },
     slideshowImgs(index) {
       if (this.node.headerSlideshows == null)
         return null
@@ -466,7 +560,7 @@ export default {
       }
       return imgs
     },
-    slideTextDivStyles(txtObj) {
+    slideTextContainerStyles(txtObj) {
       let css = {}
       console.log(txtObj)
       if (txtObj.hasOwnProperty('pos') && txtObj.pos) {
@@ -489,7 +583,7 @@ export default {
           css.width = '100%'
           css.height = '33vh'
           css.display = 'flex'
-          css.flexDirection = 'column-reverse'
+          // css.flexDirection = 'column-reverse'
         } else if (txtObj.pos == 'top') {
           css.width = '100%'
           css.height = '33vh'
@@ -506,9 +600,57 @@ export default {
         css.top = txtObj.posY ? txtObj.posY : '-11vh'
         css.width = txtObj.width ? txtObj.width : '38%'
       }
-      if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true && txtObj.pos !== 'bottom') {
+      // if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true && txtObj.pos !== 'bottom') {
+      if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true) {
         css.backgroundColor = 'rgb(0,0,0,0.47)'
       }
+      return css
+    },
+    slideTextDivStyles(txtObj) {
+      let css = {}
+      // console.log(txtObj)
+      if (txtObj.hasOwnProperty('pos') && txtObj.pos) {
+        // default values (left)
+        // css.left = '0%'
+        // css.top = '-50vh'
+        // css.width = '35%'
+        css.width = '100%'
+        // css.height = '100vh'
+
+        // presets
+        if (txtObj.pos == 'right') {
+          // css.left = '65.0%'
+        } else if (txtObj.pos == 'center') {
+          // css.left = '32.5%'
+          // css.top = '-37vh'
+          // css.height = '87vh'
+        } else if (txtObj.pos == 'bottom') {
+          // css.left = '0%'
+          // css.top = '17vh'
+          css.width = '100%'
+          // css.height = '33vh'
+          css.height = 'calc(100% - 8px)'
+          // css.display = 'flex'
+          // css.flexDirection = 'column-reverse'
+        } else if (txtObj.pos == 'top') {
+          // css.width = '100%'
+          // css.height = '33vh'
+        }
+
+        // overwrites
+        // if ( txtObj.posX ) css.left = txtObj.posX
+        // if ( txtObj.posY ) css.top = txtObj.posY
+        // if ( txtObj.width ) css.width = txtObj.width
+        // if ( txtObj.height ) css.height = txtObj.height
+
+      } else {
+        // css.left = txtObj.posX ? txtObj.posX : '0.5%'
+        // css.top = txtObj.posY ? txtObj.posY : '-11vh'
+        // css.width = txtObj.width ? txtObj.width : '38%'
+      }
+      // if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true && txtObj.pos !== 'bottom') {
+      //   css.backgroundColor = 'rgb(0,0,0,0.47)'
+      // }
       return css
     },
     slideTextStyles(txtObj) {
@@ -517,21 +659,23 @@ export default {
       let css = {}
       if (txtObj.hasOwnProperty('pos') && txtObj.pos) {        
         css.display = 'inline-flex'
-        // css.height = '100vh'
-        css.height = '100%'
+        
 
         if (txtObj.pos == 'bottom') {
-          css.height = 'initial'
-          if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true) {
-            css.backgroundColor = 'rgb(0,0,0,0.47)'
-          }
+          // css.height = 'initial'
+          css.height = '100%'
+          // if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true) {
+          //   css.backgroundColor = 'rgb(0,0,0,0.47)'
+          // }
+        } else {
+          css.height = '100vh'
         }
 
         // align-items (align text vertically)
         if (txtObj.alignItems) {
           var alignItems = txtObj.alignItems
-        } else if (!txtObj.hasOwnProperty('applyFilter') || !txtObj.applyFilter) {
-          alignItems = 'flex-end'
+        // } else if (!txtObj.hasOwnProperty('applyFilter') || !txtObj.applyFilter) {
+          // alignItems = 'flex-end'
         } else {
           alignItems = 'center'
         }
@@ -559,12 +703,18 @@ export default {
         } else {
           paddingPx = scale * layout.padding
         }
-        css.padding = paddingPx + 'px'
+        if (txtObj.pos !== 'bottom') {
+          css.padding = `${paddingPx}px`
+        } else if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter) {
+          css.padding = `${paddingPx}px ${paddingPx}px 0px`
+        } else {
+          css.padding = `0px ${paddingPx}px`
+        }
 
       } else {
         css.fontSize = txtObj.fontSize ? txtObj.fontSize : '44px'
         css.lineHeight = txtObj.lineHeight ? txtObj.lineHeight : '57px'
-      }      
+      }
       return css
     },
     onGalleryMediaClick(item) {
@@ -669,6 +819,14 @@ export default {
   border-radius: 15px;
   width: 100%;
   height: auto;
+}
+.headerFilter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 40;
+  background-color: #3E2E20;
+  opacity: 0.29;
 }
 .headerOverlay {
   position: absolute;
@@ -885,6 +1043,15 @@ body {
   opacity: 0;
 }
 
+.slideTextContainer {
+  position: absolute;
+  display: flex;
+  // background-color: rgba(0, 0, 0, 0.47);
+  // left: 0%;
+  // top: 22vh;
+  // width: 100%;
+  // height: 28vh;
+}
 .slideTextDiv {
   position: absolute;
   z-index: 1000;
@@ -900,6 +1067,15 @@ body {
   margin: 0px;
   padding: 0px;  
 }
+.slideText {
+  /deep/ p {
+    margin-bottom: 0;
+  }
+}
+.simple-scrollbar {
+  height: inherit;
+  width: 100%;
+}
 
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
@@ -907,7 +1083,7 @@ body {
 /* Extra small devices (portrait phones, less than 576px) */
 @media only screen and (max-width: 575.98px) {
   .titleImg {
-    max-width: 85%;
+    max-width: 100%;
     padding: 0 32px 8px 32px;
   }
   .headerOverlay {
@@ -919,6 +1095,39 @@ body {
   }
   .backToArchivesImg {
     max-width: 100px;
+  }
+  #header {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    transform: translate3d(0, 0, 0);    
+    padding: 0 64px !important;
+  }
+  .headerWrapper {
+    grid-gap: 15px;
+  }
+  .headerText {
+    font-size: 1.25rem;
+    line-height: 1.8145rem;
+    letter-spacing: 0.3629rem;
+  }
+  .headerText:nth-of-type(2) {
+    font-size: 0.9274rem;
+    line-height: 1.3306rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  #header {
+    padding: 0 59px !important;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #header {
+    padding: 0 54px !important;
+  }
+  .headerText:nth-of-type(2) {
+    font-size: 0.835rem;
+    line-height: 1.197rem;
   }
 }
 
