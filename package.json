@@ -19,7 +19,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "flipbook-vue": "^0.8.1",
     "global": "^4.4.0",
-    "gridsome": "^0.7.19",
+    "gridsome": "^0.7.20",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-plugin-netlify-cms-paths": "^0.3.0",
     "ks-vue-fullpage": "^1.2.8",
