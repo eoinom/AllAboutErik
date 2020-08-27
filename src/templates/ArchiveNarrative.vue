@@ -292,38 +292,26 @@ export default {
         duration: 850,
         easing: 'easeInOut',
         overlay: false,
-        dotNavEnabled: false,
+        dotNavEnabled: true,
         // animationType: 'slideX',
       },
 
       portrait: {
         maxAspect: 0.85,
-        // width: 768,
-        // height: 1024,
-        // area: 768 * 1024,
-        // fontSize: 18,      // in px
-        // lineHeight: 26,    // in px
-        // padding: 50,      // in px
         area: 375 * 667,     // iPhone 6
         fontSize: 20.3,      // in px
-        lineHeight: 29.3,    // in px
+        maxFontSize: 30,    // in px
         padding: 28.2,       // in px
       },
       square: {
         maxAspect: 1.6,
-        // width: 1080,
-        // height: 1080,
         area: 1080 * 1080,
         fontSize: 26,      // in px
-        lineHeight: 37.5,    // in px
         padding: 50,      // in px
       },
       landscape: {
-        // width: 2560,
-        // height: 1380,
         area: 2560 * 1380,
         fontSize: 36,      // in px
-        lineHeight: 52,    // in px
         padding: 100,      // in px
       }
     }
@@ -685,7 +673,7 @@ export default {
         if (txtObj.fontSize) {
           var fontSizePx = scale * parseFloat(txtObj.fontSize.replace(/[^0-9.]/g,''))
         } else {
-          fontSizePx = scale * layout.fontSize
+          fontSizePx = Math.min(scale * layout.fontSize, layout.maxFontSize)
         }
         css.fontSize = fontSizePx + 'px'
 
@@ -693,7 +681,7 @@ export default {
         if (txtObj.lineHeight) {
           var lineHeightPx = scale * parseFloat(txtObj.lineHeight.replace(/[^0-9.]/g,''))
         } else {
-          lineHeightPx = scale * layout.lineHeight
+          lineHeightPx = 1.444 * fontSizePx
         }
         css.lineHeight = lineHeightPx + 'px'
 

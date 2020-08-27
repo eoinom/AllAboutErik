@@ -122,36 +122,46 @@ portraitLayout:
       text: >-
         My dad was named Jarl, or Earl in English. His parents Thorbjörn and Anna immigrated to Chicago from Norway in 1903. There, Thorbjörn got a job as a bicycle repairman, a job far below his skill level. He’d been the superintendent and manager of machine fabrication factory back in Norway.
       pos: bottom
-      applyFilter: false
+      applyFilter: true
 
     - sectionNo: 2
       text: >-
         Soon after they arrived Chicago, my dad was born, but in 1908 his parents made the decision to return to the old country with their young boy, who was then three. He told me some stories from his boyhood there. He and his dad would pedal their bikes into the woods in the spring and return with gallons of blueberries. It snowed a lot, and many mornings when they opened the front door, they were confronted with deep snow that had fallen overnight. He had to shovel his way out and take snowshoes or skis to get to school. It was a long way away.
       pos: bottom
+      posY: 10vh
+      height: 40vh
       applyFilter: false
 
     - sectionNo: 3
       text: >-        
         Once as a boy he ran into a skunk and got sprayed badly, and yelling for his mom, he ran for home. She heard him coming and from across the yard she told him to stop right there by the gate, dig a hole, take off his clothes, and bury them there. Anna went to get some warm water and brought soap and a big galvanized tub to wash him down.
       pos: bottom
+      posY: 10vh
+      height: 40vh
       applyFilter: false
 
     - sectionNo: 4
       text: >-
         He had a summer job breaking congealed oil from the walls deep in the bowels of the whale oil tankers. Once, overcome by fumes, he passed out, and had to be quickly hoisted to safety above deck. Many of our relatives on my dad’s side were in the whaling business. Returning from Antarctica every season, the fleet stopped to refuel in Brazil and brought oranges home for the kids at Christmas. He remembered that a single orange was the best Christmas present he got each year. A famous harpoonist in our family had killed more whales with his right arm than any man that had ever lived.
       pos: bottom
+      posY: 10vh
+      height: 40vh
       applyFilter: true
 
     - sectionNo: 5
       text: >-
         Being Norwegian he was big on winter sports. As a boy he skied, but as he got older speed skating became his thing. He got so good at it that he appeared in some exhibition shows with the world-famous skater Sonja Henie. He was strong and threw the shotput. He worked for a summer as a draftsman in his dad's factory. One day Thorbjörn put his hand on his son’s shoulder and told him, “Earl you've got to think of something else to do. You're looking up at the clock too much”.
       pos: bottom
+      posY: 10vh
+      height: 40vh
       applyFilter: false
 
     - sectionNo: 6
       text: >-
         He was a top student and decided to study history. But after pursuing that possibility in school for a time, he changed his mind. Later, my dad said, “My hands won't leave me alone”. So, at age 20, in 1926, he headed back to the states to study dentistry. He went back to Chicago to the University of Illinois dental school. Earl was a US citizen by birth, but as they say, you can't take Norway out of the boy. Although I couldn't hear it myself, my friends told me he had a pretty heavy Norwegian accent. Soon after he came, his parents and his brother Wesley joined him in Chicago. He made his way through dental school, earning good money by working as a “roughneck”, “walking the girders”, constructing skyscrapers high above the city with no harnesses or safety ropes.
       pos: bottom
+      posY: 5vh
+      height: 45vh
       applyFilter: true
 
     - sectionNo: 7
@@ -162,6 +172,8 @@ portraitLayout:
 
         So, he started his dental practice in the Chicago loop as the depression took hold. One of his patients had to pay him with bushels of apples. Like most immigrant ethnic groups do, the Norwegians in Chicago looked out for each other.
       pos: bottom
+      posY: 5vh
+      height: 45vh
       applyFilter: true
       
     - sectionNo: 8
@@ -182,6 +194,8 @@ portraitLayout:
       text: >-
         Earl was a collector of Norwegian and Icelandic stamps and corresponded with fellow stamp collectors and dealers the world over wherever he could find them. He was raising Siamese fighting fish, trying to produce one that was cornflower blue. I started collecting butterflies and moths and he made a beautiful butterfly net for me. Some nights we went sugaring for moths.
       pos: bottom
+      posY: -8.5vh
+      height: 58.5vh
       applyFilter: true
 
     - sectionNo: 11
@@ -206,12 +220,16 @@ portraitLayout:
       text: >-
         I began traveling in college and kept it up over the years. I showed my parents pictures I'd taken in far off lands and hyped them into going around the world together. They had a wonderful trip and the timing was good.
       pos: bottom
+      posY: 9vh
+      height: 41vh
       applyFilter: true
 
     - sectionNo: 15
       text: >-
         Shortly thereafter Earl began feeling ill and had a pain in his hip. He took a short trip to Norway to celebrate the 50th anniversary of his graduating class, but he was feeling “too rotten” as he used to say, to have a good time. He was diagnosed with lymphoma. He died in 1974 at the age of 69. I was a lucky son to have a dad like him.
       pos: bottom
+      posY: -2.5vh
+      height: 52.5vh
       applyFilter: false
 
 squareLayout:
