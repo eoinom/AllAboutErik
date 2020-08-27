@@ -252,7 +252,6 @@ import BookViewer from '../components/BookViewer.vue'
 import SlideshowImages from '../components/SlideshowImages.vue'
 import 'ks-vue-fullpage/dist/ks-vue-fullpage.min.css'
 import 'ks-vue-fullpage/dist/ks-vue-fullpage.min.js'
-// import * as Hammer from 'hammerjs'
 import simplebar from 'simplebar-vue'
 import 'simplebar/dist/simplebar.min.css'
 const MarkdownIt = require('markdown-it')
@@ -459,7 +458,7 @@ export default {
 
   mounted() {
     window.Velocity = require('velocity-animate')   // needed for KsVueFullpage (ref: https://github.com/pirony/ks-vue-fullpage)
-    // window.Hammer = require('hammerjs')             // needed for KsVueFullpage (ref: https://github.com/pirony/ks-vue-fullpage)
+    window.Hammer = require('hammerjs/hammer.js')   // needed for KsVueFullpage 
 
     if (this.node.hasOwnProperty('headerSlideshows') && this.node.headerSlideshows.length > 0) {
       // for (let i = 0; i < this.node.headerSlideshows.length; i++) {
