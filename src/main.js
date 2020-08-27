@@ -30,6 +30,11 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   // ks-vue-fullpage: (ref: https://github.com/pirony/ks-vue-fullpage)
   Vue.use(KsVueFullpage)
 
+  if (isClient) {
+    const { Hammer } = require('hammerjs')
+    Vue.use(Hammer)
+  }
+
   // vue-scrollto (ref: https://github.com/rigor789/vue-scrollto)
   const VueScrollTo = require('vue-scrollto')
   Vue.use(VueScrollTo)
