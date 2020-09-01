@@ -379,8 +379,8 @@ export default {
       // const layout = this.aspectRatio < this.portrait.maxAspect ? 
       //   this.node.portraitLayout : this.node.landscapeLayout
       const layout = this.currentLayout
-      console.log('layout:')
-      console.log(layout)
+      // console.log('layout:')
+      // console.log(layout)
 
       // get sections (background images) from CMS`
       if (layout.hasOwnProperty('noSections')) {
@@ -436,6 +436,8 @@ export default {
     headerTextTileIndex() {
       if (this.windowWidth < 576 && this.aspectRatio < 0.97) {
         return 3
+      // } else if (this.windowWidth >= 1200 && this.aspectRatio > 1.5 && this.aspectRatio < 2.15) {
+      //   return 4
       } else {
         return 1
       }
@@ -525,11 +527,12 @@ export default {
       return md.render(text) 
     },
     showHeaderTile(index) {
-      if (this.windowWidth >= 1200 && this.aspectRatio < 2.1) {
+      if (this.windowWidth >= 1200 && this.aspectRatio < 2.15) {
         return index <= 5                               // show all six tiles
+      } else if (this.windowWidth >= 1200 && this.aspectRatio >= 2.15) {
+        return index <= 2
       } else if (this.aspectRatio < 0.65) {
         return index == 1 || index == 3 || index == 5   // show three tiles
-        // return index == 0 || index == 1 || index == 3   // show three tiles
       } else if (this.aspectRatio < 0.97) {
         return index == 1 || index == 3                 // show two tiles
       } else {
@@ -548,7 +551,7 @@ export default {
     },
     slideTextContainerStyles(txtObj) {
       let css = {}
-      console.log(txtObj)
+      // console.log(txtObj)
       if (txtObj.hasOwnProperty('pos') && txtObj.pos) {
         // default values (left)
         css.left = '0%'
@@ -642,6 +645,9 @@ export default {
     slideTextStyles(txtObj) {
       const layout = this.currentLayout
       const scale = this.windowScale
+      console.log('layout: ')
+      console.log(layout)
+      console.log('scale: ' + scale)
       let css = {}
       if (txtObj.hasOwnProperty('pos') && txtObj.pos) {        
         css.display = 'inline-flex'
@@ -668,10 +674,12 @@ export default {
         css.alignItems = alignItems
 
         // font-size
+        // console.log('txtObj: ')
+        // console.log(txtObj)
         if (txtObj.fontSize) {
           var fontSizePx = scale * parseFloat(txtObj.fontSize.replace(/[^0-9.]/g,''))
         } else {
-          fontSizePx = Math.min(scale * layout.fontSize, layout.maxFontSize)
+          fontSizePx = layout.maxFontSize ? Math.min(scale * layout.fontSize, layout.maxFontSize) : scale * layout.fontSize
         }
         css.fontSize = fontSizePx + 'px'
 
