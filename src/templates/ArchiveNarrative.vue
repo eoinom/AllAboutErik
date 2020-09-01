@@ -290,7 +290,7 @@ export default {
         duration: 850,
         easing: 'easeInOut',
         overlay: false,
-        dotNavEnabled: true,
+        dotNavEnabled: false,
         // animationType: 'slideX',
       },
 
