@@ -5,7 +5,8 @@ import DefaultLayout from '~/layouts/Default.vue'
 import BootstrapVue from 'bootstrap-vue'
 // import 'bootstrap/dist/css/bootstrap.css'  (import happens in custom.scss now instead)
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import KsVueFullpage from 'ks-vue-fullpage' // ref: https://github.com/pirony/ks-vue-fullpage
+import KsVueFullpage from '~/components/ks-vue-fullpage.js'   // copied js page into project and made some custom modifications to try fix touchpad scrolling issue (skipping sections)
+import 'ks-vue-fullpage/dist/ks-vue-fullpage.min.css'
 import '~/assets/styles.css'
 import '~/assets/custom.scss'
 

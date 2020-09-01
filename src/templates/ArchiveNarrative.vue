@@ -107,8 +107,8 @@
             </transition>  -->
             <simplebar v-if="windowWidth < 992" class="simple-scrollbar" data-simplebar-auto-hide="false">
               <transition appear name="textAnimation">
-                <span 
-                  v-show="$ksvuefp.canAnimContent(iSec, true) && !$ksvuefp.slidingActive" 
+                 <span 
+                  v-show="$ksvuefp.canAnimContent(iSec, true)" 
                   v-html="renderMarkdown(txtObj.text)" 
                   class="slideText" 
                   :style="slideTextStyles(txtObj)"
@@ -118,7 +118,7 @@
 
             <transition v-else appear name="textAnimation">
               <span 
-                v-show="$ksvuefp.canAnimContent(iSec, true) && !$ksvuefp.slidingActive" 
+                v-show="$ksvuefp.canAnimContent(iSec, true)" 
                 v-html="renderMarkdown(txtObj.text)" 
                 class="slideText" 
                 :style="slideTextStyles(txtObj)"
@@ -250,8 +250,6 @@ query ($id: ID!) {
 <script scoped>
 import BookViewer from '../components/BookViewer.vue'
 import SlideshowImages from '../components/SlideshowImages.vue'
-import 'ks-vue-fullpage/dist/ks-vue-fullpage.min.css'
-import 'ks-vue-fullpage/dist/ks-vue-fullpage.min.js'
 import simplebar from 'simplebar-vue'
 import 'simplebar/dist/simplebar.min.css'
 const MarkdownIt = require('markdown-it')
