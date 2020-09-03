@@ -20,7 +20,7 @@ headerSlideshows:
 
 landscapeLayout:
   noSections: 42
-  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599174367/Archives/05.%20My%20Amazing%20Mom/sections-images/landscape/My-amazing-mom_landscape-section_41.jpg
+  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599174367/Archives/05.%20My%20Amazing%20Mom/sections-images/landscape/My-amazing-mom_landscape-section_
   textList:
     - sectionNo: 2
       text: >-
