@@ -68,22 +68,6 @@
           <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
         </g-link>
         
-        <!-- <div 
-          v-else
-          v-for="(txtObj, iText) in s.txtArr"
-          :key="iText"
-          class="slideTextDiv"
-          :style="slideTextDivStyles(txtObj)"
-        >
-          <transition appear name="textAnimation">
-            <span 
-              v-show="$ksvuefp.canAnimContent(iSec, true) && !$ksvuefp.slidingActive" 
-              v-html="renderMarkdown(txtObj.text)" 
-              class="slideText" 
-              :style="slideTextStyles(txtObj)"
-            />
-          </transition> 
-        </div> -->
         <div 
           v-else 
           v-for="(txtObj, iText) in s.txtArr"
@@ -95,17 +79,11 @@
             class="slideTextDiv"
             :style="slideTextDivStyles(txtObj)"
           >
-            <!-- <transition appear name="textAnimation">
-              <simplebar class="simple-scrollbar" data-simplebar-auto-hide="false">
-                <span 
-                  v-show="$ksvuefp.canAnimContent(iSec, true) && !$ksvuefp.slidingActive" 
-                  v-html="renderMarkdown(txtObj.text)" 
-                  class="slideText" 
-                  :style="slideTextStyles(txtObj)"
-                />
-              </simplebar>            
-            </transition>  -->
-            <simplebar v-if="windowWidth < 992" class="simple-scrollbar" data-simplebar-auto-hide="false">
+            <simplebar 
+              v-if="(txtObj.hasOwnProperty('showScrollbar') && txtObj.showScrollbar == true) || windowWidth < 992" 
+              class="simple-scrollbar" 
+              data-simplebar-auto-hide="false"
+            >
               <transition appear name="textAnimation">
                  <span 
                   v-show="$ksvuefp.canAnimContent(iSec, true)" 
@@ -237,9 +215,12 @@ query ($id: ID!) {
 		  	sectionNo
         text
         pos
+        posX
         posY
+        width
         height
         applyFilter
+        showScrollbar
       }
     }
   }
@@ -302,7 +283,8 @@ export default {
         padding: 28.2,       // in px
       },
       square: {
-        maxAspect: 1.6,
+        // maxAspect: 1.6,
+        maxAspect: 1.4,
         area: 1080 * 1080,
         fontSize: 26,      // in px
         padding: 50,      // in px
@@ -562,6 +544,7 @@ export default {
         // presets
         if (txtObj.pos == 'right') {
           css.left = '65.0%'
+          // css.left = txtObj.posX ? txtObj.posX : '65.0%'
         } else if (txtObj.pos == 'center') {
           css.left = '32.5%'
           css.top = '-37vh'
@@ -588,6 +571,7 @@ export default {
         css.left = txtObj.posX ? txtObj.posX : '0.5%'
         css.top = txtObj.posY ? txtObj.posY : '-11vh'
         css.width = txtObj.width ? txtObj.width : '38%'
+        css.height = '100%'
       }
       // if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true && txtObj.pos !== 'bottom') {
       if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true) {
@@ -598,6 +582,11 @@ export default {
     slideTextDivStyles(txtObj) {
       let css = {}
       // console.log(txtObj)
+      css.width = '100%'
+      // css.height = 'auto'
+      // css.height = 'calc(100% - 8px)'
+      // css.height = 'calc(100% + 16px)'
+
       if (txtObj.hasOwnProperty('pos') && txtObj.pos) {
         // default values (left)
         // css.left = '0%'
@@ -616,9 +605,9 @@ export default {
         } else if (txtObj.pos == 'bottom') {
           // css.left = '0%'
           // css.top = '17vh'
-          css.width = '100%'
-          // css.height = '33vh'
+          // css.width = '100%'
           css.height = 'calc(100% - 8px)'
+          // css.height = '33vh'
           // css.display = 'flex'
           // css.flexDirection = 'column-reverse'
         } else if (txtObj.pos == 'top') {
@@ -650,7 +639,7 @@ export default {
       console.log('scale: ' + scale)
       let css = {}
       if (txtObj.hasOwnProperty('pos') && txtObj.pos) {        
-        css.display = 'inline-flex'
+        // css.display = 'inline-flex'
         
 
         if (txtObj.pos == 'bottom') {
@@ -673,23 +662,21 @@ export default {
         }
         css.alignItems = alignItems
 
-        // font-size
-        // console.log('txtObj: ')
-        // console.log(txtObj)
-        if (txtObj.fontSize) {
-          var fontSizePx = scale * parseFloat(txtObj.fontSize.replace(/[^0-9.]/g,''))
-        } else {
-          fontSizePx = layout.maxFontSize ? Math.min(scale * layout.fontSize, layout.maxFontSize) : scale * layout.fontSize
-        }
-        css.fontSize = fontSizePx + 'px'
+        // // font-size
+        // if (txtObj.fontSize) {
+        //   var fontSizePx = scale * parseFloat(txtObj.fontSize.replace(/[^0-9.]/g,''))
+        // } else {
+        //   fontSizePx = layout.maxFontSize ? Math.min(scale * layout.fontSize, layout.maxFontSize) : scale * layout.fontSize
+        // }
+        // css.fontSize = fontSizePx + 'px'
 
-        // line-height
-        if (txtObj.lineHeight) {
-          var lineHeightPx = scale * parseFloat(txtObj.lineHeight.replace(/[^0-9.]/g,''))
-        } else {
-          lineHeightPx = 1.444 * fontSizePx
-        }
-        css.lineHeight = lineHeightPx + 'px'
+        // // line-height
+        // if (txtObj.lineHeight) {
+        //   var lineHeightPx = scale * parseFloat(txtObj.lineHeight.replace(/[^0-9.]/g,''))
+        // } else {
+        //   lineHeightPx = 1.444 * fontSizePx
+        // }
+        // css.lineHeight = lineHeightPx + 'px'
 
         // padding
         if (txtObj.padding) {
@@ -706,9 +693,26 @@ export default {
         }
 
       } else {
-        css.fontSize = txtObj.fontSize ? txtObj.fontSize : '44px'
-        css.lineHeight = txtObj.lineHeight ? txtObj.lineHeight : '57px'
+        // css.fontSize = txtObj.fontSize ? txtObj.fontSize : '44px'
+        // css.lineHeight = txtObj.lineHeight ? txtObj.lineHeight : '57px'
       }
+
+      // font-size
+      if (txtObj.fontSize) {
+        var fontSizePx = scale * parseFloat(txtObj.fontSize.replace(/[^0-9.]/g,''))
+      } else {
+        fontSizePx = layout.maxFontSize ? Math.min(scale * layout.fontSize, layout.maxFontSize) : scale * layout.fontSize
+      }
+      css.fontSize = fontSizePx + 'px'
+
+      // line-height
+      if (txtObj.lineHeight) {
+        var lineHeightPx = scale * parseFloat(txtObj.lineHeight.replace(/[^0-9.]/g,''))
+      } else {
+        lineHeightPx = 1.444 * fontSizePx
+      }
+      css.lineHeight = lineHeightPx + 'px'
+
       return css
     },
     onGalleryMediaClick(item) {
@@ -861,17 +865,24 @@ export default {
   font-family: 'Lora', serif;
   font-feature-settings: 'liga';
   font-weight: 400;
-  font-size: 1.9375rem;
-  line-height: 2.8125rem;
-  letter-spacing: 0.5625rem;
+
+  // font-size: 1.9375rem;
+  // line-height: 2.8125rem;
+  // letter-spacing: 0.5625rem;  
+  font-size: 1.264789vw;
+  line-height: 1.835985vw;
+  letter-spacing: 0.367197vw;
+  
   text-align: center;
   text-transform: uppercase;
   margin: 0px;
   padding: 0px;
 }
 .headerText:nth-of-type(2) {
-  font-size: 1.4375rem;
-  line-height: 2.0625rem;
+  // font-size: 1.4375rem;
+  // line-height: 2.0625rem;
+  font-size: 0.938392vw;
+  line-height: 1.346389vw;
 }
 
 // .galleryBox {
@@ -885,8 +896,11 @@ export default {
 // }
 .galleryBox {
   position: absolute;
-  height: 420px;
-  width: 420px;
+  // height: 420px;
+  // width: 420px;
+  height: 17.13586vw;
+  width: 17.13586vw;
+
 }
 
 .mediaBox {
@@ -945,15 +959,18 @@ export default {
   font-family: 'Open Sans Condensed', sans-serif;
   font-feature-settings: 'liga';
   font-weight: 300;
-  font-size: 53px;
-  line-height: 53px;
-  letter-spacing: 9px;
   text-align: center;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.32);
   text-transform: uppercase;
   transition: inherit;
   width: 100%;
   padding: 0 20px 0 26px;
+  // font-size: 53px;
+  // line-height: 53px;
+  // letter-spacing: 9px;
+  font-size: 2.162382vw;
+  line-height: 2.162382vw;
+  letter-spacing: 0.367197vw;
 }
 
 .absCenter {
@@ -1156,6 +1173,15 @@ body {
   .backToArchivesImg {
     max-width: 130px;
   }
+  // .headerText {
+  //   font-size: 1.9375rem;
+  //   line-height: 2.8125rem;
+  //   letter-spacing: 0.5625rem;
+  // }
+  // .headerText:nth-of-type(2) {
+  //   font-size: 1.4375rem;
+  //   line-height: 2.0625rem;
+  // }
 }
 
 /* Special */
@@ -1173,6 +1199,20 @@ body {
 @media only screen and (max-width: 1199.98px) {
   .headerWrapper {
     grid-template-columns: 1fr;
+  }
+  .headerText {
+    // font-size: 1.264789vw;
+    // line-height: 1.835985vw;
+    // letter-spacing: 0.367197vw;
+    font-size: 2.841613vw;
+    line-height: 4.124924vw;
+    letter-spacing: 0.824985vw;
+  }
+  .headerText:nth-of-type(2) {
+    // font-size: 0.938392vw;
+    // line-height: 1.346389vw;
+    font-size: 2.108294vw;
+    line-height: 3.024945vw;
   }
 }
 
