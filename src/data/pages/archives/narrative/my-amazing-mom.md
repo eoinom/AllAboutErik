@@ -347,7 +347,6 @@ landscapeLayout:
       commonPathStdRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597280414/Archives/05.%20My%20Amazing%20Mom/Notes%20from%20Elsi%27s%20Visit/Notes_from_trip_
       commonFilenameStartNum: 1
       commonFilenameLastNum: 4
-      orientation: portrait
 
 fiveBySevenLayout:
   noSections: 58
@@ -1093,7 +1092,6 @@ squareLayout:
       commonPathStdRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597280414/Archives/05.%20My%20Amazing%20Mom/Notes%20from%20Elsi%27s%20Visit/Notes_from_trip_
       commonFilenameStartNum: 1
       commonFilenameLastNum: 4
-      orientation: portrait
     
 portraitLayout:
   noSections: 84
@@ -1423,5 +1421,4 @@ portraitLayout:
       commonPathStdRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597280414/Archives/05.%20My%20Amazing%20Mom/Notes%20from%20Elsi%27s%20Visit/Notes_from_trip_
       commonFilenameStartNum: 1
       commonFilenameLastNum: 4
-      orientation: portrait
 ---

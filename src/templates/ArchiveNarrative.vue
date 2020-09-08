@@ -194,7 +194,6 @@ query ($id: ID!) {
         commonPathStdRes
         commonFilenameStartNum
         commonFilenameLastNum
-        orientation
       }
     }
     squareLayout {
@@ -235,7 +234,6 @@ query ($id: ID!) {
         commonPathStdRes
         commonFilenameStartNum
         commonFilenameLastNum
-        orientation
       }
     }
     portraitLayout {

@@ -782,9 +782,6 @@ collections:
               - {label: 'URL common path (Std. Res)', name: 'commonPathStdRes', widget: 'string', required: false}
               - {label: 'URL common filename start number', name: 'commonFilenameStartNum', widget: 'number', valueType: "int", min: 1, required: false}
               - {label: 'URL common filename last number', name: 'commonFilenameLastNum', widget: 'number', valueType: "int", min: 1, required: false}
-              - {label: "Page Orientation", name: "orientation", widget: "select", options: ["landscape", "portrait"]}
-              - {label: 'Page Width (px)', name: 'width', widget: 'number', valueType: "float", min: 0, required: false}
-              - {label: 'Page Height (px)', name: 'height', widget: 'number', valueType: "float", min: 0, required: false}
       - label: "Square Layout"
         name: "squareLayout"
         widget: "object"
@@ -824,9 +821,6 @@ collections:
               - {label: 'URL common path (Std. Res)', name: 'commonPathStdRes', widget: 'string', required: false}
               - {label: 'URL common filename start number', name: 'commonFilenameStartNum', widget: 'number', valueType: "int", min: 1, required: false}
               - {label: 'URL common filename last number', name: 'commonFilenameLastNum', widget: 'number', valueType: "int", min: 1, required: false}
-              - {label: "Page Orientation", name: "orientation", widget: "select", options: ["landscape", "portrait"]}
-              - {label: 'Page Width (px)', name: 'width', widget: 'number', valueType: "float", min: 0, required: false}
-              - {label: 'Page Height (px)', name: 'height', widget: 'number', valueType: "float", min: 0, required: false}
       - label: "5x7 Layout"
         name: "fiveBySevenLayout"
         widget: "object"
@@ -866,9 +860,6 @@ collections:
               - {label: 'URL common path (Std. Res)', name: 'commonPathStdRes', widget: 'string', required: false}
               - {label: 'URL common filename start number', name: 'commonFilenameStartNum', widget: 'number', valueType: "int", min: 1, required: false}
               - {label: 'URL common filename last number', name: 'commonFilenameLastNum', widget: 'number', valueType: "int", min: 1, required: false}
-              - {label: "Page Orientation", name: "orientation", widget: "select", options: ["landscape", "portrait"]}
-              - {label: 'Page Width (px)', name: 'width', widget: 'number', valueType: "float", min: 0, required: false}
-              - {label: 'Page Height (px)', name: 'height', widget: 'number', valueType: "float", min: 0, required: false}
       - label: "Portrait Layout"
         name: "portraitLayout"
         widget: "object"
@@ -908,6 +899,3 @@ collections:
               - {label: 'URL common path (Std. Res)', name: 'commonPathStdRes', widget: 'string', required: false}
               - {label: 'URL common filename start number', name: 'commonFilenameStartNum', widget: 'number', valueType: "int", min: 1, required: false}
               - {label: 'URL common filename last number', name: 'commonFilenameLastNum', widget: 'number', valueType: "int", min: 1, required: false}
-              - {label: "Page Orientation", name: "orientation", widget: "select", options: ["landscape", "portrait"]}
-              - {label: 'Page Width (px)', name: 'width', widget: 'number', valueType: "float", min: 0, required: false}
-              - {label: 'Page Height (px)', name: 'height', widget: 'number', valueType: "float", min: 0, required: false}
