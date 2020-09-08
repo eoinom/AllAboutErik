@@ -22,6 +22,12 @@ landscapeLayout:
   noSections: 42
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599174367/Archives/05.%20My%20Amazing%20Mom/sections-images/landscape/My-amazing-mom_landscape-section_
   textList:
+    - sectionNo: 1
+      text: >-
+        My mom Elsie was born in 1914. Her parents were Dietrich Lunde and Marianne Larsen.
+      posX: 48%
+      posY: -45vh
+      width: 25%
     - sectionNo: 2
       text: >-
         Both had immigrated from Norway in 1906, when each was only 16 years
@@ -347,6 +353,13 @@ portraitLayout:
   noSections: 84
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599084412/Archives/05.%20My%20Amazing%20Mom/sections-images/portrait/My-amazing-mom_portrait-section_
   textList:
+    - sectionNo: 1
+      text: >-
+        My mom Elsie was born in 1914. Her parents were Dietrich Lunde and Marianne Larsen.
+      pos: bottom
+      posY: 25vh
+      height: 25vh
+      applyFilter: true
     - sectionNo: 3
       text: >-
         Both had immigrated from Norway in 1906, when each was only 16 years
@@ -670,6 +683,13 @@ squareLayout:
   noSections: 71
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599085288/Archives/05.%20My%20Amazing%20Mom/sections-images/square/My-amazing-mom_square-section_
   textList:
+    - sectionNo: 2
+      text: >-
+        My mom Elsie was born in 1914. Her parents were Dietrich Lunde and Marianne Larsen.
+      pos: bottom
+      posY: 35vh
+      height: 15vh
+      applyFilter: true
     - sectionNo: 3
       text: >-
         Both had immigrated from Norway in 1906, when each was only 16 years
@@ -689,9 +709,9 @@ squareLayout:
     - sectionNo: 4
       text: Here she is with her older sister Ruth.
       pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: false
+      posY: 35vh
+      height: 15vh
+      applyFilter: true
 
     - sectionNo: 5
       text: The girls with their brother Walter.
