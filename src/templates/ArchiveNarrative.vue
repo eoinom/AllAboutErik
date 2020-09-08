@@ -115,6 +115,7 @@
             :style="
               `left: ${item.posX};
               top: ${item.posY};`"
+            style="background-color: black"
           >
             <div 
               class="mediaBox"
@@ -171,9 +172,9 @@ query ($id: ID!) {
     content
     landscapeLayout {
       noSections
-	    commonPath
+      commonPath
       textList {
-		  	sectionNo
+        sectionNo
         text
         pos
         alignItems
@@ -196,23 +197,11 @@ query ($id: ID!) {
         orientation
       }
     }
-    portraitLayout {
-      noSections
-	    commonPath
-      textList {
-		  	sectionNo
-        text
-        pos
-        posY
-        height
-        applyFilter
-      }
-    }
     squareLayout {
       noSections
-	    commonPath
+      commonPath
       textList {
-		  	sectionNo
+        sectionNo
         text
         pos
         posX
@@ -221,6 +210,44 @@ query ($id: ID!) {
         height
         applyFilter
         showScrollbar
+      }
+    }
+    fiveBySevenLayout {
+      noSections
+      commonPath
+      textList {
+        sectionNo
+        text
+        pos
+        posX
+        posY
+        width
+        height
+        applyFilter
+        showScrollbar
+      }
+      galleryItems {
+        sectionNo
+        posX
+        posY
+        caption
+        thumbnailImg
+        commonPathStdRes
+        commonFilenameStartNum
+        commonFilenameLastNum
+        orientation
+      }
+    }
+    portraitLayout {
+      noSections
+	    commonPath
+      textList {
+        sectionNo
+        text
+        pos
+        posY
+        height
+        applyFilter
       }
     }
   }
@@ -271,7 +298,7 @@ export default {
         duration: 850,
         easing: 'easeInOut',
         overlay: false,
-        dotNavEnabled: false,
+        dotNavEnabled: true,
         // animationType: 'slideX',
       },
 
@@ -279,15 +306,20 @@ export default {
         maxAspect: 0.85,
         area: 375 * 667,     // iPhone 6
         fontSize: 20.3,      // in px
-        maxFontSize: 30,    // in px
+        maxFontSize: 30,     // in px
         padding: 28.2,       // in px
       },
       square: {
-        // maxAspect: 1.6,
-        maxAspect: 1.4,
+        maxAspect: 1.2,
         area: 1080 * 1080,
         fontSize: 26,      // in px
-        padding: 50,      // in px
+        padding: 50,       // in px
+      },
+      fiveBySeven: {
+        maxAspect: 1.6,
+        area: 2016 * 1380,
+        fontSize: 32,      // in px
+        padding: 50,       // in px
       },
       landscape: {
         area: 2560 * 1380,
@@ -331,6 +363,8 @@ export default {
         layout = { ...this.portrait, ...this.node.portraitLayout }
       } else if (this.aspectRatio < this.square.maxAspect) {
         layout = { ...this.square, ...this.node.squareLayout }
+      } else if (this.aspectRatio < this.fiveBySeven.maxAspect) {
+        layout = { ...this.fiveBySeven, ...this.node.fiveBySevenLayout }
       } else {
         layout = { ...this.landscape, ...this.node.landscapeLayout }
       }

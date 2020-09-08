@@ -785,8 +785,8 @@ collections:
               - {label: "Page Orientation", name: "orientation", widget: "select", options: ["landscape", "portrait"]}
               - {label: 'Page Width (px)', name: 'width', widget: 'number', valueType: "float", min: 0, required: false}
               - {label: 'Page Height (px)', name: 'height', widget: 'number', valueType: "float", min: 0, required: false}
-      - label: "Portrait Layout"
-        name: "portraitLayout"
+      - label: "Square Layout"
+        name: "squareLayout"
         widget: "object"
         required: false
         fields: 
@@ -827,8 +827,50 @@ collections:
               - {label: "Page Orientation", name: "orientation", widget: "select", options: ["landscape", "portrait"]}
               - {label: 'Page Width (px)', name: 'width', widget: 'number', valueType: "float", min: 0, required: false}
               - {label: 'Page Height (px)', name: 'height', widget: 'number', valueType: "float", min: 0, required: false}
-      - label: "Square Layout"
-        name: "squareLayout"
+      - label: "5x7 Layout"
+        name: "fiveBySevenLayout"
+        widget: "object"
+        required: false
+        fields: 
+          - {label: "Number of Sections", name: "noSections", widget: 'number', valueType: "int", min: 1, required: false}
+          - {label: "Images URL common path", name: "commonPath", widget: "string", required: false}
+          - label: "Text List"
+            name: "textList"
+            widget: "list"
+            required: false
+            fields: 
+              - {label: "Section Number", name: "sectionNo", widget: 'number', valueType: "int", min: 1, required: false}
+              - {label: "Text", name: "text", widget: "markdown", required: false}
+              - {label: "Preset position", name: "pos", widget: "string", required: false}
+              - {label: "Vertical alignment", name: "alignItems", widget: "string", required: false}
+              - {label: "Horizontal position", name: "posX", widget: "string", required: false}
+              - {label: "Vertical position", name: "posY", widget: "string", required: false}
+              - {label: "Width", name: "width", widget: "string", required: false}
+              - {label: "Height", name: "height", widget: "string", required: false}
+              - {label: "Font Size", name: "fontSize", widget: "string", required: false}
+              - {label: "Line Height", name: "lineHeight", widget: "string", required: false}
+              - {label: "Apply filter?", name: "applyFilter", widget: "boolean", required: false}
+              - {label: "Show scrollbar?", name: "showScrollbar", widget: "boolean", required: false}
+              - {label: "Background color", name: "bgColor", widget: "string", required: false}
+              - {label: "Background opacity (%)", name: "bgOpacity", widget: "number", valueType: "int", min: 0, max: 100, required: false}
+          - label: "Gallery Items"
+            name: "galleryItems"
+            widget: "list"
+            required: false
+            fields: 
+              - {label: "Section Number", name: "sectionNo", widget: 'number', valueType: "int", min: 1, required: false}
+              - {label: "Horizontal position", name: "posX", widget: "string", required: false}
+              - {label: "Vertical position", name: "posY", widget: "string", required: false}
+              - {label: "Caption", name: "caption", widget: "string", required: false}
+              - {label: "Thumbnail image", name: "thumbnailImg", widget: "image", required: false}
+              - {label: 'URL common path (Std. Res)', name: 'commonPathStdRes', widget: 'string', required: false}
+              - {label: 'URL common filename start number', name: 'commonFilenameStartNum', widget: 'number', valueType: "int", min: 1, required: false}
+              - {label: 'URL common filename last number', name: 'commonFilenameLastNum', widget: 'number', valueType: "int", min: 1, required: false}
+              - {label: "Page Orientation", name: "orientation", widget: "select", options: ["landscape", "portrait"]}
+              - {label: 'Page Width (px)', name: 'width', widget: 'number', valueType: "float", min: 0, required: false}
+              - {label: 'Page Height (px)', name: 'height', widget: 'number', valueType: "float", min: 0, required: false}
+      - label: "Portrait Layout"
+        name: "portraitLayout"
         widget: "object"
         required: false
         fields: 
