@@ -177,10 +177,10 @@ query ($id: ID!) {
         sectionNo
         text
         pos
-        alignItems
         posX
         posY
         width
+        alignItems
         fontSize
         lineHeight
         applyFilter
@@ -222,6 +222,9 @@ query ($id: ID!) {
         posY
         width
         height
+        alignItems
+        fontSize
+        lineHeight
         applyFilter
         showScrollbar
       }
@@ -296,7 +299,7 @@ export default {
         duration: 850,
         easing: 'easeInOut',
         overlay: false,
-        dotNavEnabled: false,
+        dotNavEnabled: true,
         // animationType: 'slideX',
       },
 
@@ -671,7 +674,7 @@ export default {
       console.log('scale: ' + scale)
       let css = {}
       if (txtObj.hasOwnProperty('pos') && txtObj.pos) {        
-        // css.display = 'inline-flex'
+        css.display = 'inline-flex'
         
 
         if (txtObj.pos == 'bottom') {
