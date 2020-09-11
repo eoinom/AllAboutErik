@@ -7,7 +7,6 @@ titleImg:
 headerImages:
   - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599696417/Archives/15.%20My%20Uncle%20Wesley/header-images/my-uncle-wesley_header-img1.jpg
   - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599696417/Archives/15.%20My%20Uncle%20Wesley/header-images/my-uncle-wesley_header-img2.jpg
-    applyFilter: true
   - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599696417/Archives/15.%20My%20Uncle%20Wesley/header-images/my-uncle-wesley_header-img3.jpg
   - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599696418/Archives/15.%20My%20Uncle%20Wesley/header-images/my-uncle-wesley_header-img4.jpg
   - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599696417/Archives/15.%20My%20Uncle%20Wesley/header-images/my-uncle-wesley_header-img5.jpg

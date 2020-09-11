@@ -43,8 +43,7 @@
               :key="iImg"
               class="headerBox"
             >
-              <!-- <div v-if="headerImg.applyFilter !== false" class="headerFilter" /> -->
-              <div v-if="headerImg.applyFilter !== false || iImg == headerTextTileIndex" class="headerFilter" />
+              <div v-if="headerImg.applyFilter == true" class="headerFilter" />
 
               <img :src="headerImg.img" />
 
