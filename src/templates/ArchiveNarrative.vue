@@ -157,6 +157,7 @@ query ($id: ID!) {
     title
     titleImg {
       singleLine
+      doubleLine
       topOffset
       maxWidth
     }
@@ -567,7 +568,6 @@ export default {
     },
     slideTextContainerStyles(txtObj) {
       let css = {}
-      // console.log(txtObj)
       if (txtObj.hasOwnProperty('pos') && txtObj.pos) {
         // default values (left)
         css.left = '0%'
@@ -615,65 +615,22 @@ export default {
     },
     slideTextDivStyles(txtObj) {
       let css = {}
-      // console.log(txtObj)
       css.width = '100%'
-      // css.height = 'auto'
-      // css.height = 'calc(100% - 8px)'
-      // css.height = 'calc(100% + 16px)'
 
       if (txtObj.hasOwnProperty('pos') && txtObj.pos) {
-        // default values (left)
-        // css.left = '0%'
-        // css.top = '-50vh'
-        // css.width = '35%'
-        css.width = '100%'
-        // css.height = '100vh'
-
-        // presets
-        if (txtObj.pos == 'right') {
-          // css.left = '65.0%'
-        } else if (txtObj.pos == 'center') {
-          // css.left = '32.5%'
-          // css.top = '-37vh'
-          // css.height = '87vh'
-        } else if (txtObj.pos == 'bottom') {
-          // css.left = '0%'
-          // css.top = '17vh'
-          // css.width = '100%'
+        if (txtObj.pos == 'bottom') {
           css.height = 'calc(100% - 8px)'
-          // css.height = '33vh'
-          // css.display = 'flex'
-          // css.flexDirection = 'column-reverse'
-        } else if (txtObj.pos == 'top') {
-          // css.width = '100%'
-          // css.height = '33vh'
         }
-
-        // overwrites
-        // if ( txtObj.posX ) css.left = txtObj.posX
-        // if ( txtObj.posY ) css.top = txtObj.posY
-        // if ( txtObj.width ) css.width = txtObj.width
-        // if ( txtObj.height ) css.height = txtObj.height
-
-      } else {
-        // css.left = txtObj.posX ? txtObj.posX : '0.5%'
-        // css.top = txtObj.posY ? txtObj.posY : '-11vh'
-        // css.width = txtObj.width ? txtObj.width : '38%'
       }
-      // if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true && txtObj.pos !== 'bottom') {
-      //   css.backgroundColor = 'rgb(0,0,0,0.47)'
-      // }
       return css
     },
     slideTextStyles(txtObj) {
       const layout = this.currentLayout
       const scale = this.windowScale
-      console.log('layout: ')
-      console.log(layout)
-      console.log('scale: ' + scale)
       let css = {}
       if (txtObj.hasOwnProperty('pos') && txtObj.pos) {        
-        css.display = 'inline-flex'
+        // css.display = 'inline-flex'
+        css.display = 'flex'
         
 
         if (txtObj.pos == 'bottom') {
@@ -687,30 +644,7 @@ export default {
         }
 
         // align-items (align text vertically)
-        if (txtObj.alignItems) {
-          var alignItems = txtObj.alignItems
-        // } else if (!txtObj.hasOwnProperty('applyFilter') || !txtObj.applyFilter) {
-          // alignItems = 'flex-end'
-        } else {
-          alignItems = 'center'
-        }
-        css.alignItems = alignItems
-
-        // // font-size
-        // if (txtObj.fontSize) {
-        //   var fontSizePx = scale * parseFloat(txtObj.fontSize.replace(/[^0-9.]/g,''))
-        // } else {
-        //   fontSizePx = layout.maxFontSize ? Math.min(scale * layout.fontSize, layout.maxFontSize) : scale * layout.fontSize
-        // }
-        // css.fontSize = fontSizePx + 'px'
-
-        // // line-height
-        // if (txtObj.lineHeight) {
-        //   var lineHeightPx = scale * parseFloat(txtObj.lineHeight.replace(/[^0-9.]/g,''))
-        // } else {
-        //   lineHeightPx = 1.444 * fontSizePx
-        // }
-        // css.lineHeight = lineHeightPx + 'px'
+        css.alignItems = txtObj.alignItems ? txtObj.alignItems : 'center'
 
         // padding
         if (txtObj.padding) {
@@ -725,10 +659,6 @@ export default {
         } else {
           css.padding = `0px ${paddingPx}px`
         }
-
-      } else {
-        // css.fontSize = txtObj.fontSize ? txtObj.fontSize : '44px'
-        // css.lineHeight = txtObj.lineHeight ? txtObj.lineHeight : '57px'
       }
 
       // font-size
