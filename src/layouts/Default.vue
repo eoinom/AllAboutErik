@@ -444,6 +444,24 @@ body {
   .closebtn img {
     max-width: 30px;
   }
+  .title-text {
+    font-size: 22px;
+    letter-spacing: 2.5px;
+    line-height: 32px;
+  }
+}
+@media only screen and (max-width: 375.98px) {
+  .title-text {
+    font-size: 5.3vw;
+    letter-spacing: 2px;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 329.98px) {
+  .title-text {
+    font-size: 4.85vw;
+    line-height: 28px;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
