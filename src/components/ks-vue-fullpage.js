@@ -1187,7 +1187,6 @@ function plugin(Vue) {
       });
 
       vm.$on('ksvuefp-change-begin', function (nextIndex, oldIndex, direction, delay) {
-        console.log('in ksvuefp-change-begin')
         vm.slidingActive = true;
         vm.slidingFinished = false;
         vm.sliderDirection = direction;
@@ -1199,7 +1198,6 @@ function plugin(Vue) {
       });
 
       vm.$on('ksvuefp-change-done', function () {
-        console.log('in ksvuefp-change-done')
         // vm.slidingActive = false;  // original
         vm.slidingFinished = true;    // EOM added
         setTimeout(function () {      // EOM added
