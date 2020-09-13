@@ -79,7 +79,7 @@
             :style="slideTextDivStyles(txtObj)"
           >
             <simplebar 
-              v-if="(txtObj.hasOwnProperty('showScrollbar') && txtObj.showScrollbar == true) || windowWidth < 992" 
+              v-if="(txtObj.hasOwnProperty('showScrollbar') && !txtObj.showScrollbar == false) || windowWidth < 992" 
               class="simple-scrollbar" 
               data-simplebar-auto-hide="false"
             >
@@ -207,6 +207,7 @@ query ($id: ID!) {
         posY
         width
         height
+        alignItems
         applyFilter
         showScrollbar
       }
@@ -249,6 +250,7 @@ query ($id: ID!) {
         posY
         height
         applyFilter
+        showScrollbar
       }
     }
   }
@@ -655,7 +657,8 @@ export default {
         if (txtObj.pos !== 'bottom') {
           css.padding = `${paddingPx}px`
         } else if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter) {
-          css.padding = `${paddingPx}px ${paddingPx}px 0px`
+          // css.padding = `${paddingPx}px ${paddingPx}px 0px`
+          css.padding = `${paddingPx}px ${paddingPx}px`
         } else {
           css.padding = `0px ${paddingPx}px`
         }
