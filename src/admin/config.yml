@@ -899,3 +899,43 @@ collections:
               - {label: 'URL common path (Std. Res)', name: 'commonPathStdRes', widget: 'string', required: false}
               - {label: 'URL common filename start number', name: 'commonFilenameStartNum', widget: 'number', valueType: "int", min: 1, required: false}
               - {label: 'URL common filename last number', name: 'commonFilenameLastNum', widget: 'number', valueType: "int", min: 1, required: false}
+
+  - label: "Archives (narrative) gallery"
+    name: "archives-narrative-gallery"
+    folder: "src/data/pages/archives/narrative-gallery"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - {label: 'Title', name: 'title', widget: 'string', required: false}
+      - label: "Title Image"
+        name: "titleImg"
+        widget: "object"
+        required: false
+        fields: 
+          - {label: "Single line Image", name: "singleLine", widget: "image", required: false}
+          - {label: "Double line Image", name: "doubleLine", widget: "image", required: false}
+          - {label: "Top Offset (%)", name: "topOffset", widget: "number", valueType: "float", min: 0, max: 100, required: false}
+          - {label: "Max Width (%)", name: "maxWidth", widget: "number", valueType: "float", min: 0, max: 100, required: false}
+      - label: "Header Static Images"
+        name: "headerImages"
+        widget: "list"
+        required: false
+        fields: 
+          - {label: "Image", name: "img", widget: "image", required: false}
+          - {label: "Apply filter?", name: "applyFilter", widget: "boolean", required: false}
+      - label: "Image Gallery"
+        name: "imageGallery"
+        widget: "object"
+        required: false
+        fields: 
+          - {label: 'URL common path', name: 'commonPath', widget: 'string', required: false}
+          - {label: 'Number of images', name: 'numImages', widget: 'number', valueType: "int", min: 1, required: false}
+      - label: "Image Gallery Sections"
+        name: "imageGallerySections"
+        widget: "list"
+        required: false
+        fields: 
+          - {label: 'Heading', name: 'heading', widget: 'string', required: false}
+          - {label: 'Start images number', name: 'imageStartNo', widget: 'number', valueType: "int", min: 1, required: false}
+          - {label: 'Number of images', name: 'numImages', widget: 'number', valueType: "int", min: 1, required: false}

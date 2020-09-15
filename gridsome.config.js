@@ -180,6 +180,13 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        path: 'src/data/pages/archives/narrative-gallery/*.md',
+        typeName: 'ArchivesNarrativeGallery'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         path: 'src/data/pages/contact.md',
         typeName: 'Contact'
       }

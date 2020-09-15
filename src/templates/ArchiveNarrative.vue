@@ -52,6 +52,17 @@
                 <p v-if="iImg == headerTextTileIndex" class="headerText mt-n1 mt-sm-0">SCROLL</p>
                 <p v-if="iImg == headerTextTileIndex" class="headerText">TO READ MY RECOLLECTIONS</p>
               </div>
+
+              <g-link 
+                v-if="iImg == headerGalleryTextTileIndex" 
+                :to="`/archives/${titleSlug}-gallery`" 
+                v-b-tooltip.hover.bottom="{ variant: 'secondary' }" 
+                title="Click to see the gallery" 
+                class="headerOverlay link pt-3"
+              >
+                <p class="headerText mt-n1 mt-sm-0">CLICK</p>
+                <p class="headerText">TO SEE THE GALLERY</p>
+              </g-link>
             </div>
           </div>
 
@@ -376,7 +387,6 @@ export default {
     overlayStyles() {
       let css = {}
       if (this.windowWidth < 576)
-        // var topOffset = Math.min(50, this.node.titleImg.topOffset)
         var topOffset = Math.min(60, this.node.titleImg.topOffset)
       else if (this.windowWidth < 768)
         topOffset = Math.min(60, this.node.titleImg.topOffset)
@@ -453,14 +463,26 @@ export default {
       return pages
     },
     headerTextTileIndex() {
+      // if (this.windowWidth < 576 && this.aspectRatio < 0.97) {
+      //   return 3
+      // // } else if (this.windowWidth >= 1200 && this.aspectRatio > 1.5 && this.aspectRatio < 2.15) {
+      // //   return 4
+      // } else {
+      //   return 1
+      // }
+      return 1
+    },
+    headerGalleryTextTileIndex() {
       if (this.windowWidth < 576 && this.aspectRatio < 0.97) {
         return 3
       // } else if (this.windowWidth >= 1200 && this.aspectRatio > 1.5 && this.aspectRatio < 2.15) {
       //   return 4
+      } else if (this.windowWidth < 1200) {
+        return 3
       } else {
-        return 1
+        return 4
       }
-    },
+    }
   },
 
   mounted() {
@@ -832,10 +854,7 @@ export default {
   font-family: 'Lora', serif;
   font-feature-settings: 'liga';
   font-weight: 400;
-
-  // font-size: 1.9375rem;
-  // line-height: 2.8125rem;
-  // letter-spacing: 0.5625rem;  
+  
   font-size: 1.264789vw;
   line-height: 1.835985vw;
   letter-spacing: 0.367197vw;
@@ -844,12 +863,15 @@ export default {
   text-transform: uppercase;
   margin: 0px;
   padding: 0px;
+
+  cursor: context-menu;
 }
 .headerText:nth-of-type(2) {
-  // font-size: 1.4375rem;
-  // line-height: 2.0625rem;
   font-size: 0.938392vw;
   line-height: 1.346389vw;
+}
+.link .headerText {
+  cursor: pointer;
 }
 
 // .galleryBox {
@@ -1168,16 +1190,11 @@ body {
     grid-template-columns: 1fr;
   }
   .headerText {
-    // font-size: 1.264789vw;
-    // line-height: 1.835985vw;
-    // letter-spacing: 0.367197vw;
     font-size: 2.841613vw;
     line-height: 4.124924vw;
     letter-spacing: 0.824985vw;
   }
   .headerText:nth-of-type(2) {
-    // font-size: 0.938392vw;
-    // line-height: 1.346389vw;
     font-size: 2.108294vw;
     line-height: 3.024945vw;
   }
