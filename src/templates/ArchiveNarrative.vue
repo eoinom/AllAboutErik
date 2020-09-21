@@ -69,7 +69,7 @@
           <!-- BACK TO ARCHIVES LINK (AT TOP) -->
           <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives backToArchivesImgTranslate">
             <!-- <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" /> -->
-            <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-single-line.png" />
+            <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-single-line.png" style="max-width:18.5vmax" />
             <g-image v-else alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-top.png" class="backToArchivesImg" />
           </g-link>
         </header>
