@@ -2,7 +2,7 @@
 title: My Uncle Wesley
 titleImg:
   singleLine: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599696581/Archives/15.%20My%20Uncle%20Wesley/my_uncle_wesley.png
-  topOffset: 70
+  topOffset: 67
   maxWidth: 90
 headerImages:
   - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599696417/Archives/15.%20My%20Uncle%20Wesley/header-images/my-uncle-wesley_header-img1.jpg

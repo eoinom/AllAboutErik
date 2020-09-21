@@ -2,7 +2,7 @@
 title: My Dad Earl
 titleImg:
   singleLine: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597700756/Archives/14.%20My%20Dad%20Earl/my_dad_earl.png
-  topOffset: 70
+  topOffset: 68
   maxWidth: 78
 headerImages:
   - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597700754/Archives/14.%20My%20Dad%20Earl/header-images/my-dad-earl_header-img1.jpg

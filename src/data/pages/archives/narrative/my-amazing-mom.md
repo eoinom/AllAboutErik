@@ -2,7 +2,7 @@
 title: My Amazing Mom
 titleImg:
   singleLine: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597091178/Archives/05.%20My%20Amazing%20Mom/my_amazing_mom.png
-  topOffset: 70
+  topOffset: 67
   maxWidth: 89
 # headerSlideshows:
 #   - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597270740/Archives/05.%20My%20Amazing%20Mom/header-slideshows/1.%20top-left/
