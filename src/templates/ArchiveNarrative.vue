@@ -13,7 +13,7 @@
       >
 
         <!-- HEADER -->
-        <header v-if="s.header" id="header" class="px-3">
+        <header v-if="s.header" id="header" class="px-3" :style="headerStyles">
 
           <!-- SLIDESHOWS -->
           <div v-if="node.headerSlideshows" class="headerWrapper">
@@ -54,7 +54,7 @@
               </div>
 
               <g-link 
-                v-if="iImg == headerGalleryTextTileIndex" 
+                v-if="showGalleryLink && iImg == headerGalleryTextTileIndex" 
                 :to="`/archives/${titleSlug}-gallery`" 
                 v-b-tooltip.hover.bottom="{ variant: 'secondary' }" 
                 title="Click to see the gallery" 
@@ -67,8 +67,9 @@
           </div>
 
           <!-- BACK TO ARCHIVES LINK (AT TOP) -->
-          <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
-            <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
+          <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives backToArchivesImgTranslate">
+            <!-- <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" /> -->
+            <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-single-line.png" />
             <g-image v-else alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-top.png" class="backToArchivesImg" />
           </g-link>
         </header>
@@ -356,6 +357,24 @@ export default {
     titleImg() {
       return this.node.titleImg.singleLine != '' ? this.node.titleImg.singleLine : this.node.titleImg.doubleLine
     },
+    headerStyles() {
+      let css = {}
+      if (this.windowWidth > 1200) {
+        if (this.aspectRatio > 2.1) 
+          css.marginTop = '120px'
+        else if (this.aspectRatio > 2.02) 
+          css.marginTop = '90px'
+        else if (this.aspectRatio > 1.97) 
+          css.marginTop = '70px'
+        else if (this.aspectRatio > 1.895) 
+          css.marginTop = '50px'
+        else if (this.aspectRatio > 1.85) 
+          css.marginTop = '35px'
+        else if (this.aspectRatio > 1.82) 
+          css.marginTop = '20px'
+      }
+      return css
+    },
     // headerTextStyles() {
     //   let css = {}
     //   css.textAlign = this.node.content.length < 80 ? 'center' : 'justify'
@@ -482,6 +501,9 @@ export default {
       } else {
         return 4
       }
+    },
+    showGalleryLink() {
+      return this.titleSlug === 'my-dad-earl'
     }
   },
 
@@ -490,15 +512,15 @@ export default {
     window.Hammer = require('hammerjs/hammer.js')   // needed for KsVueFullpage 
 
     if (this.node.hasOwnProperty('headerSlideshows') && this.node.headerSlideshows.length > 0) {
-      // for (let i = 0; i < this.node.headerSlideshows.length; i++) {
-      //   const ref = `slideshow${i}`
-      //   // this.$refs[ref].pause()
-      //   // this.$refs[`slideshow${i}`].pause()
-      //   const slideshow = this.$refs[`slideshow${i}`]
-      //   slideshow.pause()
-      // }
-      // console.log('this.$refs:')
-      // console.log(this.$refs)    
+      for (let i = 0; i < this.node.headerSlideshows.length; i++) {
+        const ref = `slideshow${i}`
+        // this.$refs[ref].pause()
+        // this.$refs[`slideshow${i}`].pause()
+        const slideshow = this.$refs[`slideshow${i}`]
+        slideshow.pause()
+      }
+      console.log('this.$refs:')
+      console.log(this.$refs)    
       this.staggerSlideshowStarts()
     }
     // console.log('this.node:')
@@ -572,7 +594,8 @@ export default {
         return index <= 5                               // show all six tiles
       } else if (this.windowWidth >= 1200 && this.aspectRatio >= 2.15) {
         return index <= 2
-      } else if (this.aspectRatio < 0.65) {
+      // } else if (this.aspectRatio < 0.65) {
+      } else if (this.aspectRatio < 0.565) {
         return index == 1 || index == 3 || index == 5   // show three tiles
       } else if (this.aspectRatio < 0.97) {
         return index == 1 || index == 3                 // show two tiles
@@ -581,6 +604,8 @@ export default {
       }
     },
     slideshowImgs(index) {
+      // let imgs = [{img: '/assets/static/src/assets/temp/' + (index + 1) + '.jpg'}]
+      // return imgs
       if (this.node.headerSlideshows == null)
         return null
       let imgs = []
@@ -758,6 +783,9 @@ export default {
   max-width: 222px;
   height: auto;
 }
+.backToArchivesImgTranslate {
+  // transform: translate3d(0, -100px, 0);
+}
 .backToArchivesEnd {
   position: absolute;
   left: 50%;
@@ -772,8 +800,16 @@ export default {
   width: 100%;
   margin: 0 auto;
 
-  height: calc(100vh - 120px);
-  transform: translate3d(0, -40px, 0);
+  // margin-top: 70px;
+
+  // height: calc(100vh - 120px);
+  // transform: translate3d(0, -40px, 0);
+  
+  // transform: translate3d(0, 50px, 0);
+  
+  // height: initial;
+  // transform: translate3d(0, 0, 0);
+
   padding: 0 80px !important;
 }
 #header:after  {
