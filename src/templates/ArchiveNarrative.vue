@@ -177,10 +177,6 @@ query ($id: ID!) {
       img
       applyFilter
     }
-    headerSlideshows {
-      commonPath
-      numImages
-    }
     content
     landscapeLayout {
       noSections
