@@ -13,6 +13,6 @@ headerImgRight: >-
 applyCenterFilter: false
 imageGallery:
   commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1593547688/Archives/17.%20My%20Brother%20Evan/gallery/my-brother-evan_gallery-img_
-  numImages: 92
+  numImages: 88
 ---
 He was a cute little brother. We went our separate ways in life and have only seen each other intermittently over the years. We speak on the phone occasionally. He’s a sweet guy.
