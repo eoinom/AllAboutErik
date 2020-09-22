@@ -25,7 +25,7 @@ landscapeLayout:
 
     - sectionNo: 2
       text: >-
-        I agreed to go somewhat reluctantly. I was a freshman in college. Bearing in mind the age difference between a 19-year-old adolescent and a seven-year-old sister, with a brother in between, we were a somewhat disparate group. But we all departed from New York City aboard the Kungsholm together and headed out across the Atlantic toward Europe.  
+        I agreed to go somewhat reluctantly. I was a freshman in college. Bearing in mind the age difference between a 19-year-old and a 9-year-old sister, with a brother in between, we were a somewhat disparate group. But we all departed from New York City aboard the Kungsholm together and headed out across the Atlantic toward Europe.  
         
         We had the perfunctory lifeboat drill and put on our flotation devices.
       pos: right
