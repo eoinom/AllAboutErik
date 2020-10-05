@@ -1063,13 +1063,14 @@ body {
   }
 }
 .textAnimation-enter-active, .textAnimation-leave-active {
-  transition: opacity 1s, transform 1s cubic-bezier(.13,.07,.26,.99);
+  // transition: opacity 1s, transform 1s cubic-bezier(.13,.07,.26,.99);
+  transition: opacity 1.5s;
   opacity: 1;
-  transform: translate3d(0, 0, 0);
+  // transform: translate3d(0, 0, 0);
 }
 .textAnimation-enter {
   opacity: 0;  
-  transform: translate3d(0, 4rem, 0);
+  // transform: translate3d(0, 4rem, 0);
 }
 .textAnimation-leave-active {
   opacity: 0;
