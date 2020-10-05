@@ -688,9 +688,8 @@ export default {
         } else {
           css.height = '100vh'
         }
-
-        // align-items (align text vertically)
-        css.alignItems = txtObj.alignItems ? txtObj.alignItems : 'center'
+        
+        css.alignItems = txtObj.alignItems ? txtObj.alignItems : 'start'
 
         // padding
         if (txtObj.padding) {
