@@ -676,6 +676,7 @@ export default {
       if (txtObj.hasOwnProperty('pos') && txtObj.pos) {        
         // css.display = 'inline-flex'
         css.display = 'flex'
+        css.flexDirection = 'column'
         
 
         if (txtObj.pos == 'bottom') {
