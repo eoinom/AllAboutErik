@@ -8,8 +8,8 @@
       <div class="showOnHover">
         <h4 class="playVideoText mb-1 mb-sm-2 mb-lg-4">PLAY VIDEO</h4>
         <span v-if="video.duration != null" class="videoDurationText ">
-            {{ durationInMinsText(video.duration) }} 
-          </span>
+          {{ durationInMinsText(video.duration) }} 
+        </span>
       </div>
     </div>
 

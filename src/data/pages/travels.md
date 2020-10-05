@@ -24,11 +24,11 @@ videos:
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642923/Travels/malaysia_zcxazn.jpg
     title: Peninsular Malaysia
     url: 'https://player.vimeo.com/video/298625007'
-  - duration: 1541
+  - duration: 1542
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642923/Travels/uae_pdtrdu.jpg
     title: Black Gold - United Arab Emirates & Oman
-    url: 'https://player.vimeo.com/video/169738312'
+    url: 'https://player.vimeo.com/video/460734403'
   - duration: 1588
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642923/Travels/samba_mofqhz.jpg
@@ -113,7 +113,7 @@ videos:
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642924/Travels/burj_kalifa_wbcmha.jpg
     title: Dubai
-    url: 'https://player.vimeo.com/video/169764004'
+    url: 'https://player.vimeo.com/video/452713409'
   - duration: 588
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642923/Travels/mumbai_kmen3j.jpg
