@@ -29,7 +29,7 @@ mediaItems:
           - caption: Lover's Roulette
             orderNo: 1
             url: >-
-              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/910342297&&visual=true&hide_related=true
+              https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/910342297&&visual=true&hide_related=true&show_comments=false&show_reposts=false&show_teaser=false&sharing=false
           - caption: Heavy Weather
             orderNo: 2
             url: >-
