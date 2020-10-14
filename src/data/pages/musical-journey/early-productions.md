@@ -12,7 +12,7 @@ bgAudioDuration: 138
 bgAudioFadeInDuration: 3.5
 bgAudioFadeOutDuration: 3.5
 sections:
-  - imageLightboxes:
+  - lightboxes:
       - buttonText: Original Lyrics
         caption: ''
         image: >-
@@ -41,7 +41,7 @@ sections:
           I wrote the song and recorded it under the stage name of Little Peetie
           Love, don’t ask me why. Jack Holzman actually considered releasing it
           but look at the letter of rejection he sent me.
-  - imageLightboxes:
+  - lightboxes:
       - buttonText: Original Vinyl
         caption: ''
         image: >-
@@ -66,7 +66,7 @@ sections:
           Jerry Yester did a great job on a song I wrote. We recorded several
           other songs together. I think Henry Diltz and some other pals sang
           backup.
-  - imageLightboxes:
+  - lightboxes:
       - buttonText: Original Vinyl
         caption: ''
         image: >-
@@ -91,14 +91,14 @@ sections:
           My old partner Dwain Story sang on a song I wrote called "A Little
           Lovin". I'm pretty sure some guys from The Spoonful backed him up on
           this one.
-  - imageLightboxes:
+  - lightboxes:
       - buttonText: Tony Studd Contract
         caption: ''
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576022132/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/tony_studd_contract_uv14dw.jpg
       - buttonText: Slurp Sound
         caption: ''
-        image: >-
+        audio: >-
           https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576022134/Musical%20Journey/Early%20Productions/Production%20Sections/04%20-%20The%20Slurp/slurp-sound_a8jyww.mp3
     productions:
       - artist: Dee & Zee
@@ -136,7 +136,7 @@ sections:
     textBoxes:
       - heading: The Slurp
         text: "After I resigned from the banjo business I stayed in Greenwich village, trying to write songs and make some recordings, including the pathetically naive concept of starting my own dance craze, which I called The Slurp.\r\n\nI recorded several different songs and artists, including my old partner Dwain Story, as well as Dee & Z, Denny Doherty and Zal Yanovsky. Understandably none ever got released. A totally cringe worthy concept from the start."
-  - imageLightboxes:
+  - lightboxes:
       - buttonText: Recording Receipt
         caption: ''
         image: >-
@@ -200,7 +200,7 @@ sections:
         text: >-
           I recorded several tunes with this cast of characters, Cass, Denny
           Doherty, Jerry Yester, Zal and possibly others.
-  - imageLightboxes:
+  - lightboxes:
       - buttonText: Original Vinyl
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1578527571/Musical%20Journey/Early%20Productions/Production%20Sections/07%20-%20Lady%20Godiva/godiva-vinyl_y95sxc.jpg
@@ -224,7 +224,7 @@ sections:
           Erik goes surfin! Arrangement help from Felix Pappalardi, with John
           Sebastian and Jerry Yester singing lead. Henry Diltz and others in the
           backup vocal group.
-  - imageLightboxes:
+  - lightboxes:
       - buttonText: Original Lyrics
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576102709/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/tweedle-lyrics_zqldri.jpg
@@ -242,7 +242,7 @@ sections:
             track: >-
               https://res.cloudinary.com/all-about-erik/video/upload/q_auto/v1576018290/Musical%20Journey/Early%20Productions/Production%20Sections/08%20-%20Tweedlede%20Dums%20Drive-In/A_Surfin_Crew_-_Tweedlede_Dums_Drive-In_lmnn4a.mp3
         writer: Erik Jacobsen & Henry Diltz
-  - imageLightboxes:
+  - lightboxes:
       - buttonText: Original Vinyl
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576103147/Musical%20Journey/Early%20Productions/Production%20Sections/09%20-%20The%20Strangers/thestrangersvinyl_xxipbo.jpg
@@ -279,7 +279,7 @@ sections:
         text: >-
           Talented group of guys from New York City with a sweet and singular
           take on Motown and R&B classics as well as some great original songs.
-  - imageLightboxes:
+  - lightboxes:
       - buttonText: Original Lyrics
         image: >-
           https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1576104090/Musical%20Journey/Early%20Productions/Production%20Sections/10%20-%20The%20Sellouts/ill_tell_you_lyrics_njlq8w.jpg

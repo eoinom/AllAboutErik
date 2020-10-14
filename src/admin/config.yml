@@ -231,13 +231,14 @@ collections:
                     fields:
                       - {label: "Title", name: "title", widget: "string"}
                       - {label: "Track", name: "track", widget: "file"}
-              - label: "Image Lightboxes"
-                name: "imageLightboxes"
+              - label: "Lightboxes"
+                name: "lightboxes"
                 widget: "list"
                 required: false
                 fields:
                   - {label: "Button Text", name: "buttonText", widget: "string"}
-                  - {label: "Image", name: "image", widget: "image"}
+                  - {label: "Image", name: "image", widget: "image", required: false}
+                  - {label: "Audio", name: "audio", widget: "string", required: false}
                   - {label: "Caption", name: "caption", widget: "string", required: false}
 
       - label: "Musical Journey - Discography"

@@ -37,7 +37,7 @@
             />
             <div class="responsiveBtnDiv">
               <button 
-                v-for="(lightBox, iLightBox) in section.imageLightboxes" 
+                v-for="(lightBox, iLightBox) in section.lightboxes" 
                 :key="'S'+(iSec+1) + 'L'+(iLightBox + 1)" 
                 class="lightBoxBtn"
                 @click="lightBoxBtnClick(lightBox)">
@@ -82,11 +82,11 @@
               :includeBorder="false"
               :divHeight="'fit-content'"
               divPadding='0'
-              :style="section.imageLightboxes.length == 0 ? 'padding-bottom: 8px' : ''"
+              :style="section.lightboxes.length == 0 ? 'padding-bottom: 8px' : ''"
             />
-            <div v-if="section.imageLightboxes.length > 0" class="responsiveBtnDiv">
+            <div v-if="section.lightboxes.length > 0" class="responsiveBtnDiv">
               <button 
-                v-for="(lightBox, iLightBox) in section.imageLightboxes" 
+                v-for="(lightBox, iLightBox) in section.lightboxes" 
                 :key="iLightBox + 1" 
                 class="lightBoxBtn"
                 @click="lightBoxBtnClick(lightBox)">
@@ -119,7 +119,7 @@
               :production="production"
             />
             <button 
-              v-for="(lightBox, iLightBox) in sections[0].imageLightboxes" 
+              v-for="(lightBox, iLightBox) in sections[0].lightboxes" 
               :key="iLightBox + 1" 
               class="lightBoxBtn"
               @click="lightBoxBtnClick(lightBox)">
@@ -153,7 +153,7 @@
               :production="production"
             />
             <button 
-              v-for="(lightBox, iLightBox) in sections[1].imageLightboxes" 
+              v-for="(lightBox, iLightBox) in sections[1].lightboxes" 
               :key="iLightBox + 1" 
               class="lightBoxBtn"
               @click="lightBoxBtnClick(lightBox)">
@@ -171,7 +171,7 @@
               :production="production"
             />
             <button 
-              v-for="(lightBox, iLightBox) in sections[2].imageLightboxes" 
+              v-for="(lightBox, iLightBox) in sections[2].lightboxes" 
               :key="iLightBox + 1" 
               class="lightBoxBtn"
               @click="lightBoxBtnClick(lightBox)">
@@ -200,7 +200,7 @@
             />
             <div v-if="windowWidth >= 1200" style="display:flex; justify-content:space-between">
               <button 
-                v-for="(lightBox, iLightBox) in sections[3].imageLightboxes" 
+                v-for="(lightBox, iLightBox) in sections[3].lightboxes" 
                 :key="iLightBox + 1" 
                 class="lightBoxBtn"
                 style="margin-right:0"
@@ -218,7 +218,7 @@
             />
             <div v-if="windowWidth < 1200">
               <button 
-                v-for="(lightBox, iLightBox) in sections[3].imageLightboxes" 
+                v-for="(lightBox, iLightBox) in sections[3].lightboxes" 
                 :key="iLightBox + 1" 
                 class="lightBoxBtn"
                 @click="lightBoxBtnClick(lightBox)">
@@ -247,7 +247,7 @@
             <div style="width:100%; display: flex; flex-direction: row; flex:1">
               <div style="display: flex; flex-direction: column; flex:1; justify-content:space-between">
                 <button 
-                  v-for="(lightBox, iLightBox) in sections[4].imageLightboxes" 
+                  v-for="(lightBox, iLightBox) in sections[4].lightboxes" 
                   :key="iLightBox + 1" 
                   class="lightBoxBtn"
                   @click="lightBoxBtnClick(lightBox)">
@@ -275,7 +275,7 @@
               :production="production"
             />
             <button 
-              v-for="(lightBox, iLightBox) in sections[5].imageLightboxes" 
+              v-for="(lightBox, iLightBox) in sections[5].lightboxes" 
               :key="iLightBox + 1" 
               class="lightBoxBtn"
               @click="lightBoxBtnClick(lightBox)">
@@ -310,7 +310,7 @@
               :production="production"
             />
             <button 
-              v-for="(lightBox, iLightBox) in sections[6].imageLightboxes" 
+              v-for="(lightBox, iLightBox) in sections[6].lightboxes" 
               :key="iLightBox + 1" 
               class="lightBoxBtn"
               @click="lightBoxBtnClick(lightBox)">
@@ -328,9 +328,9 @@
               :production="production"
             />          
           </div>
-          <div style="min-width: 200px; position:relative" v-if="sections[7].imageLightboxes.length > 0">            
+          <div style="min-width: 200px; position:relative" v-if="sections[7].lightboxes.length > 0">            
             <button 
-              v-for="(lightBox, iLightBox) in sections[7].imageLightboxes" 
+              v-for="(lightBox, iLightBox) in sections[7].lightboxes" 
               :key="iLightBox + 1" 
               class="lightBoxBtn"
               style="position:absolute; bottom:0; right:0; margin-right:0" 
@@ -352,7 +352,7 @@
             />
             <div>
               <button 
-                v-for="(lightBox, iLightBox) in sections[8].imageLightboxes" 
+                v-for="(lightBox, iLightBox) in sections[8].lightboxes" 
                 :key="iLightBox + 1" 
                 class="lightBoxBtn"
                 @click="lightBoxBtnClick(lightBox)">
@@ -378,7 +378,7 @@
               :production="production"
             />
             <button 
-              v-for="(lightBox, iLightBox) in sections[9].imageLightboxes" 
+              v-for="(lightBox, iLightBox) in sections[9].lightboxes" 
               :key="iLightBox + 1" 
               class="lightBoxBtn"
               @click="lightBoxBtnClick(lightBox)">
@@ -412,7 +412,7 @@
               :production="production"
             />
             <button 
-              v-for="(lightBox, iLightBox) in sections[10].imageLightboxes" 
+              v-for="(lightBox, iLightBox) in sections[10].lightboxes" 
               :key="iLightBox + 1" 
               class="lightBoxBtn"
               @click="lightBoxBtnClick(lightBox)">
@@ -430,7 +430,7 @@
               :production="production"
             />
             <button 
-              v-for="(lightBox, iLightBox) in sections[11].imageLightboxes" 
+              v-for="(lightBox, iLightBox) in sections[11].lightboxes" 
               :key="iLightBox + 1" 
               class="lightBoxBtn"
               @click="lightBoxBtnClick(lightBox)">
@@ -464,7 +464,7 @@
               :production="production"
             />
             <button 
-              v-for="(lightBox, iLightBox) in sections[12].imageLightboxes" 
+              v-for="(lightBox, iLightBox) in sections[12].lightboxes" 
               :key="iLightBox + 1" 
               class="lightBoxBtn"
               @click="lightBoxBtnClick(lightBox)">
@@ -482,7 +482,7 @@
               :production="production"
             />
             <button 
-              v-for="(lightBox, iLightBox) in sections[13].imageLightboxes" 
+              v-for="(lightBox, iLightBox) in sections[13].lightboxes" 
               :key="iLightBox + 1" 
               class="lightBoxBtn"
               @click="lightBoxBtnClick(lightBox)">
@@ -518,7 +518,7 @@
               :production="production"
             />
             <button 
-              v-for="(lightBox, iLightBox) in sections[14].imageLightboxes" 
+              v-for="(lightBox, iLightBox) in sections[14].lightboxes" 
               :key="iLightBox + 1" 
               class="lightBoxBtn"
               @click="lightBoxBtnClick(lightBox)">
@@ -531,6 +531,16 @@
       <!-- END OF LAYOUT FOR TABLETS & PHONES -->
             
     </b-container>
+    
+
+    <AudioLightBox
+      v-if="audioTracks != null"
+      :audios="audioTracks"
+      :index="audioIndex"
+      :disable-scroll="true"
+      :show-caption="true"
+      @close="audioIndex = null; audioTracks = null"
+    />
 
 
     <ImageLightBox
@@ -580,9 +590,10 @@
               track
             }
           }
-          imageLightboxes {
+          lightboxes {
             buttonText
             caption
+            audio
             image
           }
         }
@@ -595,6 +606,7 @@
 
 <script scoped>
 import BackgroundMusic from '../../components/BackgroundMusic.vue'
+import AudioLightBox from '../../components/AudioLightBox.vue'
 import ImageLightBox from '../../components/ImageLightBox.vue'
 import MusicProduction from '../../components/MusicProduction.vue'
 import MusicProductionText from '../../components/MusicProductionText.vue'
@@ -609,6 +621,8 @@ export default {
 
   data() {
     return {
+      audioIndex: null,
+      audioTracks: null,
       imageIndex: null,
       image: null,
       windowWidth: 0.0
@@ -642,12 +656,21 @@ export default {
   },
 
   methods: {
-    lightBoxBtnClick(lightBox) {
-      this.image = [{
-          'img': lightBox.image, 
-          'caption': lightBox.caption
-        }]
-      this.imageIndex = 0
+    lightBoxBtnClick(lightbox) {
+      if (lightbox.image !== '') {
+        this.image = [{
+            'img': lightbox.image, 
+            'caption': lightbox.caption
+          }]
+        this.imageIndex = 0
+      } 
+      else if (lightbox.audio !== '') {
+        this.audioTracks = [{
+            'url': lightbox.audio, 
+            'caption': lightbox.caption
+          }]
+        this.audioIndex = 0
+      }
     },
     sectionContainerDevicesStyles(production) {
       return {
@@ -689,6 +712,7 @@ export default {
 
   components: {
     BackgroundMusic,
+    AudioLightBox,
     ImageLightBox,
     MusicProduction,
     MusicProductionText,
