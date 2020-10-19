@@ -5,12 +5,19 @@ titleImg:
   topOffset: 49
   maxWidth: 66
 headerImages:
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599858401/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img1.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599858401/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img2.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599858401/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img3.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599858401/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img4.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599858402/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img5.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599858402/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img6.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img1.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img2.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img3.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img4.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img5.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img6.jpg
+headerMobileImages:
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img1.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img2.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img3.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img4.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img5.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/12.%20Family%20Trip%20to%20Europe%2057/header-images/family-trip_header-img6.jpg
 
 landscapeLayout:
   noSections: 37

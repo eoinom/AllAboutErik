@@ -13,10 +13,11 @@
       >
 
         <!-- HEADER -->
-        <header v-if="s.header" id="header" class="px-3" :style="headerStyles">
+        <!-- <header v-if="s.header" id="header" class="px-3" :style="headerStyles"> -->
+        <header v-if="s.header" id="header">
 
           <!-- SLIDESHOWS -->
-          <div v-if="node.headerSlideshows" class="headerWrapper">
+          <!-- <div v-if="node.headerSlideshows" class="headerWrapper">
             <SlideshowImages 
               v-for="(slideshow, iSlideshow) in node.headerSlideshows"
               v-show="showHeaderTile(iSlideshow)"
@@ -33,13 +34,12 @@
                 <p class="headerText">TO READ MY RECOLLECTIONS</p>
               </div>
             </SlideshowImages>
-          </div>
+          </div> -->
 
           <!-- STATIC HEADER IMAGES -->
-          <div v-if="node.headerImages" class="headerWrapper">
+          <div v-if="!isPortrait && node.headerImages" class="headerWrapper">
             <div 
               v-for="(headerImg, iImg) in node.headerImages"
-              v-show="showHeaderTile(iImg)"
               :key="iImg"
               class="headerBox"
             >
@@ -50,7 +50,8 @@
               <div class="headerOverlay" :style="overlayStyles">
                 <g-image v-if="iImg == 1" :src="titleImg" :alt="node.title + ' title image'" class="titleImg mt-4 mt-sm-0" />
                 <p v-if="iImg == headerTextTileIndex" class="headerText mt-n1 mt-sm-0">SCROLL</p>
-                <p v-if="iImg == headerTextTileIndex" class="headerText">TO READ MY RECOLLECTIONS</p>
+                <p v-if="iImg == headerTextTileIndex" class="headerText">TO READ MY</p>
+                <p v-if="iImg == headerTextTileIndex" class="headerText">RECOLLECTIONS</p>
               </div>
 
               <g-link 
@@ -64,6 +65,24 @@
                 <p class="headerText">TO SEE THE GALLERY</p>
               </g-link>
             </div>
+          </div>
+
+          <!-- PORTRAIT SLIDESHOW -->
+          <div v-else-if="isPortrait && node.headerMobileImages" class="headerWrapperPortrait">
+            <SlideshowImages 
+              :slides="node.headerMobileImages" 
+              :interval="4500" 
+              borderRadius="15px" 
+              :ref="'slideshow'+iSlideshow" 
+              class="headerBoxPortrait" 
+            >
+              <div class="headerOverlay" :style="overlayStyles">
+                <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg" />
+                <p class="headerText">SCROLL</p>
+                <p class="headerText">TO READ MY</p>
+                <p class="headerText">RECOLLECTIONS</p>
+              </div>
+            </SlideshowImages>
           </div>
 
           <!-- BACK TO ARCHIVES LINK (AT TOP) -->
@@ -174,6 +193,10 @@ query ($id: ID!) {
       maxWidth
     }
     headerImages {
+      img
+      applyFilter
+    }
+    headerMobileImages {
       img
       applyFilter
     }
@@ -353,24 +376,24 @@ export default {
     titleImg() {
       return this.node.titleImg.singleLine != '' ? this.node.titleImg.singleLine : this.node.titleImg.doubleLine
     },
-    headerStyles() {
-      let css = {}
-      if (this.windowWidth > 1200) {
-        if (this.aspectRatio > 2.1) 
-          css.marginTop = '120px'
-        else if (this.aspectRatio > 2.02) 
-          css.marginTop = '90px'
-        else if (this.aspectRatio > 1.97) 
-          css.marginTop = '70px'
-        else if (this.aspectRatio > 1.895) 
-          css.marginTop = '50px'
-        else if (this.aspectRatio > 1.85) 
-          css.marginTop = '35px'
-        else if (this.aspectRatio > 1.82) 
-          css.marginTop = '20px'
-      }
-      return css
-    },
+    // headerStyles() {
+    //   let css = {}
+    //   if (this.windowWidth > 1200) {
+    //     if (this.aspectRatio > 2.1) 
+    //       css.marginTop = '120px'
+    //     else if (this.aspectRatio > 2.02) 
+    //       css.marginTop = '90px'
+    //     else if (this.aspectRatio > 1.97) 
+    //       css.marginTop = '70px'
+    //     else if (this.aspectRatio > 1.895) 
+    //       css.marginTop = '50px'
+    //     else if (this.aspectRatio > 1.85) 
+    //       css.marginTop = '35px'
+    //     else if (this.aspectRatio > 1.82) 
+    //       css.marginTop = '20px'
+    //   }
+    //   return css
+    // },
     // headerTextStyles() {
     //   let css = {}
     //   css.textAlign = this.node.content.length < 80 ? 'center' : 'justify'
@@ -398,6 +421,9 @@ export default {
         layout = { ...this.landscape, ...this.node.landscapeLayout }
       }
       return layout
+    },
+    isPortrait() {
+      return this.aspectRatio < this.portrait.maxAspect
     },
     overlayStyles() {
       let css = {}
@@ -507,18 +533,18 @@ export default {
     window.Velocity = require('velocity-animate')   // needed for KsVueFullpage (ref: https://github.com/pirony/ks-vue-fullpage)
     window.Hammer = require('hammerjs/hammer.js')   // needed for KsVueFullpage 
 
-    if (this.node.hasOwnProperty('headerSlideshows') && this.node.headerSlideshows.length > 0) {
-      for (let i = 0; i < this.node.headerSlideshows.length; i++) {
-        const ref = `slideshow${i}`
-        // this.$refs[ref].pause()
-        // this.$refs[`slideshow${i}`].pause()
-        const slideshow = this.$refs[`slideshow${i}`]
-        slideshow.pause()
-      }
-      console.log('this.$refs:')
-      console.log(this.$refs)    
-      this.staggerSlideshowStarts()
-    }
+    // if (this.node.hasOwnProperty('headerSlideshows') && this.node.headerSlideshows.length > 0) {
+    //   for (let i = 0; i < this.node.headerSlideshows.length; i++) {
+    //     const ref = `slideshow${i}`
+    //     // this.$refs[ref].pause()
+    //     // this.$refs[`slideshow${i}`].pause()
+    //     const slideshow = this.$refs[`slideshow${i}`]
+    //     slideshow.pause()
+    //   }
+    //   console.log('this.$refs:')
+    //   console.log(this.$refs)    
+    //   this.staggerSlideshowStarts()
+    // }
     // console.log('this.node:')
     // console.log(this.node)
     this.updateWindowDims()
@@ -541,64 +567,64 @@ export default {
     delay(ms) {
       return new Promise(res => setTimeout(res, ms))
     },
-    async staggerSlideshowStarts() {  
-      // for (let i = 0; i < this.node.headerSlideshows.length; i++) {
-      //   // this.$refs[`slideshow${i}`][0].pause()
-      //   this.$refs[`slideshow${i}`].pause()
-      // }
-      this.$refs.slideshow0[0].pause()
-      this.$refs.slideshow1[0].pause()
-      this.$refs.slideshow2[0].pause()
-      if (this.node.headerSlideshows.length == 6) {
-        this.$refs.slideshow3[0].pause()
-        this.$refs.slideshow4[0].pause()
-        this.$refs.slideshow5[0].pause()
-      }
+    // async staggerSlideshowStarts() {  
+    //   // for (let i = 0; i < this.node.headerSlideshows.length; i++) {
+    //   //   // this.$refs[`slideshow${i}`][0].pause()
+    //   //   this.$refs[`slideshow${i}`].pause()
+    //   // }
+    //   this.$refs.slideshow0[0].pause()
+    //   this.$refs.slideshow1[0].pause()
+    //   this.$refs.slideshow2[0].pause()
+    //   if (this.node.headerSlideshows.length == 6) {
+    //     this.$refs.slideshow3[0].pause()
+    //     this.$refs.slideshow4[0].pause()
+    //     this.$refs.slideshow5[0].pause()
+    //   }
 
-      if (this.windowWidth >= 1200 & this.node.headerSlideshows.length == 6) {
-        this.$refs.slideshow0.start()
-        this.$refs.slideshow4.start()
+    //   if (this.windowWidth >= 1200 & this.node.headerSlideshows.length == 6) {
+    //     this.$refs.slideshow0.start()
+    //     this.$refs.slideshow4.start()
 
-        await this.delay(1500)
-        this.$refs.slideshow2.start()
-        this.$refs.slideshow3.start()
+    //     await this.delay(1500)
+    //     this.$refs.slideshow2.start()
+    //     this.$refs.slideshow3.start()
 
-        await this.delay(1500)
-        this.$refs.slideshow1.start()
-        this.$refs.slideshow5.start()
-      }
-      else if (this.windowWidth >= 1200 & this.node.headerSlideshows.length == 3) {
-        this.$refs.slideshow0.start()
+    //     await this.delay(1500)
+    //     this.$refs.slideshow1.start()
+    //     this.$refs.slideshow5.start()
+    //   }
+    //   else if (this.windowWidth >= 1200 & this.node.headerSlideshows.length == 3) {
+    //     this.$refs.slideshow0.start()
 
-        await this.delay(1500)
-        this.$refs.slideshow1.start()
+    //     await this.delay(1500)
+    //     this.$refs.slideshow1.start()
 
-        await this.delay(1500)
-        this.$refs.slideshow2.start()
-      }
-      // else if (this.node.headerSlideshows.length == 3) {
-      //   this.$refs.slideshow1.pause()
-      //   this.$refs.slideshow1.start()
-      // }
-    },
+    //     await this.delay(1500)
+    //     this.$refs.slideshow2.start()
+    //   }
+    //   // else if (this.node.headerSlideshows.length == 3) {
+    //   //   this.$refs.slideshow1.pause()
+    //   //   this.$refs.slideshow1.start()
+    //   // }
+    // },
     renderMarkdown(text) {
       const md = new MarkdownIt()
       return md.render(text) 
     },
-    showHeaderTile(index) {
-      if (this.windowWidth >= 1200 && this.aspectRatio < 2.15) {
-        return index <= 5                               // show all six tiles
-      } else if (this.windowWidth >= 1200 && this.aspectRatio >= 2.15) {
-        return index <= 2
-      // } else if (this.aspectRatio < 0.65) {
-      } else if (this.aspectRatio < 0.565) {
-        return index == 1 || index == 3 || index == 5   // show three tiles
-      } else if (this.aspectRatio < 0.97) {
-        return index == 1 || index == 3                 // show two tiles
-      } else {
-        return index == 1                               // show one tile
-      }
-    },
+    // showHeaderTile(index) {
+    //   if (this.windowWidth >= 1200 && this.aspectRatio < 2.15) {
+    //     return index <= 5                               // show all six tiles
+    //   } else if (this.windowWidth >= 1200 && this.aspectRatio >= 2.15) {
+    //     return index <= 2
+    //   // } else if (this.aspectRatio < 0.65) {
+    //   } else if (this.aspectRatio < 0.565) {
+    //     return index == 1 || index == 3 || index == 5   // show three tiles
+    //   } else if (this.aspectRatio < 0.97) {
+    //     return index == 1 || index == 3                 // show two tiles
+    //   } else {
+    //     return index == 1                               // show one tile
+    //   }
+    // },
     slideshowImgs(index) {
       // let imgs = [{img: '/assets/static/src/assets/temp/' + (index + 1) + '.jpg'}]
       // return imgs
@@ -791,22 +817,14 @@ export default {
 #header {
   position: relative;
   text-align: center;
-  padding-top: 12.5px;
-  padding-bottom: 12.5px;
+  // padding-top: 12.5px;
+  // padding-bottom: 12.5px;
   width: 100%;
   margin: 0 auto;
+  // padding: 0 80px !important;
 
-  // margin-top: 70px;
-
-  // height: calc(100vh - 120px);
-  // transform: translate3d(0, -40px, 0);
-  
-  // transform: translate3d(0, 50px, 0);
-  
-  // height: initial;
-  // transform: translate3d(0, 0, 0);
-
-  padding: 0 80px !important;
+  height: 100vh;
+  padding: 130px 60px 30px 60px !important;
 }
 #header:after  {
   content : "";
@@ -827,17 +845,42 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 25px;
   justify-content: center;
+
+  height: 100%;
+  max-width: 2030px;
+  margin: 0 auto;
+}
+.headerWrapperPortrait {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+  align-content: center;
 }
 .headerBox {
   width: 100%;
-  max-width: 821px;
+  // max-width: 821px;
   position: relative;
   place-self: center;
+
+  height: 100%;
+  max-width: 660px;
 }
-.headerBox img {
+.headerBoxPortrait {
+  width: 100%;
+  // max-width: 821px;
+  position: relative;
+  place-self: center;
+
+  height: 100%;
+  // max-width: 660px;
+}
+.headerBox > img {
   border-radius: 15px;
   width: 100%;
-  height: auto;
+  // height: auto;
+
+  height: 100%;
+  object-fit: cover;
 }
 .headerFilter {
   position: absolute;
@@ -887,9 +930,13 @@ export default {
   font-feature-settings: 'liga';
   font-weight: 400;
   
-  font-size: 1.264789vw;
-  line-height: 1.835985vw;
-  letter-spacing: 0.367197vw;
+  // font-size: 1.264789vw;
+  // line-height: 1.835985vw;
+  // letter-spacing: 0.367197vw;
+  --font-size: 20px;
+  font-size: var(--font-size);
+  line-height: calc(1.35 * var(--font-size));
+  letter-spacing: calc(0.29 * var(--font-size));
   
   text-align: center;
   text-transform: uppercase;
@@ -898,10 +945,10 @@ export default {
 
   cursor: context-menu;
 }
-.headerText:nth-of-type(2) {
-  font-size: 0.938392vw;
-  line-height: 1.346389vw;
-}
+// .headerText:nth-of-type(2) {
+//   font-size: 0.938392vw;
+//   line-height: 1.346389vw;
+// }
 .link .headerText {
   cursor: pointer;
 }
@@ -1134,7 +1181,8 @@ body {
     align-items: center;
     height: 100vh;
     transform: translate3d(0, 0, 0);    
-    padding: 0 64px !important;
+    // padding: 0 64px !important;
+    padding: 90px 4px 4px 4px !important;
   }
   .headerWrapper {
     grid-gap: 15px;
@@ -1151,12 +1199,14 @@ body {
 }
 @media only screen and (max-width: 375px) {
   #header {
-    padding: 0 59px !important;
+    // padding: 0 59px !important;
+    padding: 90px 4px 4px 4px !important;
   }
 }
 @media only screen and (max-width: 320px) {
   #header {
-    padding: 0 54px !important;
+    // padding: 0 54px !important;
+    padding: 90px 4px 4px 4px !important;
   }
   .headerText:nth-of-type(2) {
     font-size: 0.835rem;
@@ -1173,6 +1223,10 @@ body {
   .backToArchivesImg {
     max-width: 110px;
   }
+  #header {
+    // padding: 130px 45px 30px 45px !important;
+    padding: 130px 4px 4px 4px !important;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -1184,6 +1238,10 @@ body {
   .backToArchivesImg {
     max-width: 120px;
   }
+  #header {
+    padding: 130px 50px 30px 50px !important;
+    // padding: 130px 4px 4px 4px !important;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -1194,6 +1252,9 @@ body {
   }
   .backToArchivesImg {
     max-width: 130px;
+  }
+  #header {
+    padding: 130px 50px 30px 50px !important;
   }
   // .headerText {
   //   font-size: 1.9375rem;
@@ -1219,18 +1280,18 @@ body {
 
 /* Special */
 @media only screen and (max-width: 1199.98px) {
-  .headerWrapper {
-    grid-template-columns: 1fr;
-  }
-  .headerText {
-    font-size: 2.841613vw;
-    line-height: 4.124924vw;
-    letter-spacing: 0.824985vw;
-  }
-  .headerText:nth-of-type(2) {
-    font-size: 2.108294vw;
-    line-height: 3.024945vw;
-  }
+  // .headerWrapper {
+  //   grid-template-columns: 1fr;
+  // }
+  // .headerText {
+  //   font-size: 2.841613vw;
+  //   line-height: 4.124924vw;
+  //   letter-spacing: 0.824985vw;
+  // }
+  // .headerText:nth-of-type(2) {
+  //   font-size: 2.108294vw;
+  //   line-height: 3.024945vw;
+  // }
 }
 
 </style>

@@ -2,28 +2,22 @@
 title: My Amazing Mom
 titleImg:
   singleLine: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597091178/Archives/05.%20My%20Amazing%20Mom/my_amazing_mom.png
-  topOffset: 67
+  topOffset: 49
   maxWidth: 89
-# headerSlideshows:
-#   - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597270740/Archives/05.%20My%20Amazing%20Mom/header-slideshows/1.%20top-left/
-#     numImages: 6
-#   - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597270741/Archives/05.%20My%20Amazing%20Mom/header-slideshows/2.%20top-center/
-#     numImages: 6
-#   - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597270742/Archives/05.%20My%20Amazing%20Mom/header-slideshows/3.%20top-right/
-#     numImages: 6
-#   - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597270743/Archives/05.%20My%20Amazing%20Mom/header-slideshows/4.%20bottom-left/
-#     numImages: 6
-#   - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597270743/Archives/05.%20My%20Amazing%20Mom/header-slideshows/5.%20bottom-center/
-#     numImages: 6
-#   - commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597270744/Archives/05.%20My%20Amazing%20Mom/header-slideshows/6.%20bottom-right/
-#     numImages: 6
 headerImages:
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1600723514/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img1.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1600723514/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img2.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1600723514/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img3.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1600723514/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img4.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1600723514/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img5.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1600723514/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img6.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img1.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img2.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img3.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img4.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img5.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img6.jpg
+headerMobileImages:
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img1.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img2.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img3.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img4.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img5.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img6.jpg
 
 
 landscapeLayout:
