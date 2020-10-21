@@ -1180,8 +1180,7 @@ body {
     display: flex;
     align-items: center;
     height: 100vh;
-    transform: translate3d(0, 0, 0);    
-    // padding: 0 64px !important;
+    transform: translate3d(0, 0, 0);
     padding: 90px 4px 4px 4px !important;
   }
   .headerWrapper {
@@ -1199,13 +1198,11 @@ body {
 }
 @media only screen and (max-width: 375px) {
   #header {
-    // padding: 0 59px !important;
     padding: 90px 4px 4px 4px !important;
   }
 }
 @media only screen and (max-width: 320px) {
   #header {
-    // padding: 0 54px !important;
     padding: 90px 4px 4px 4px !important;
   }
   .headerText:nth-of-type(2) {
@@ -1224,7 +1221,6 @@ body {
     max-width: 110px;
   }
   #header {
-    // padding: 130px 45px 30px 45px !important;
     padding: 130px 4px 4px 4px !important;
   }
 }
@@ -1240,7 +1236,13 @@ body {
   }
   #header {
     padding: 130px 50px 30px 50px !important;
-    // padding: 130px 4px 4px 4px !important;
+  }
+}
+
+/* iPad */
+@media only screen and (min-width: 767.98px) and (max-width: 768.02px) {
+  #header {
+    padding: 130px 4px 4px 4px !important;
   }
 }
 
