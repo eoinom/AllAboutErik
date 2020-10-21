@@ -809,6 +809,9 @@ export default {
 .galleryBox:hover .mediaBox::before {
   box-shadow: none;
 }
+.galleryBox:hover .boxOverlay {
+  cursor: pointer;
+}
 
 .galleryImage {
   position: absolute;
