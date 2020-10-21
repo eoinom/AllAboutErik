@@ -63,16 +63,16 @@
           </div>
 
           <!-- BACK TO ARCHIVES LINK (AT TOP) -->
-          <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives backToArchivesImgTranslate">
-            <!-- <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" /> -->
-            <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-single-line.png" style="max-width:18.5vmax" />
-            <g-image v-else alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-top.png" class="backToArchivesImg" />
+          <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
+            <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-single-line.png" class="backToArchivesImg pt-3 pt-md-2" />
+            <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-single-line-yellow1.png" class="backToArchivesImg-hover pt-3 pt-md-2" />
           </g-link>
         </header>
 
         <!-- BACK TO ARCHIVES LINK (AT END) -->
         <g-link v-else-if="s.backLink" to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchivesEnd">
-          <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
+          <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png"  class="backToArchivesEndImg"/>
+          <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left-yellow.png" class="backToArchivesEndImg-hover" />
         </g-link>
         
         <div 
@@ -646,15 +646,42 @@ export default {
   right: 60px;
   z-index: 100;
 }
-.backToArchivesImg {
-  max-width: 222px;
+.backToArchivesImg,
+.backToArchivesImg-hover {
+  width: 50vw;
+  max-width: 260px;
   height: auto;
 }
+.backToArchivesImg {
+  display: inline-block;
+}
+.backToArchivesImg-hover {
+  display: none;
+}
+
 .backToArchivesEnd {
   position: absolute;
   left: 50%;
   transform: translate3d(-50%, -50%, 10px);
 }
+.backToArchivesEndImg {
+  display: inline-block;
+}
+.backToArchivesEndImg-hover {
+  display: none;
+}
+
+@media (hover) {
+  .backToArchives:hover .backToArchivesImg-hover,
+  .backToArchivesEnd:hover .backToArchivesEndImg-hover {
+    display: inline-block;
+  }
+  .backToArchives:hover .backToArchivesImg,
+  .backToArchivesEnd:hover .backToArchivesEndImg {
+    display: none;
+  }
+}
+
 
 #header {
   position: relative;
@@ -966,9 +993,6 @@ body {
     top: 20px;
     right: 20px;
   }
-  .backToArchivesImg {
-    max-width: 100px;
-  }
   #header {
     display: flex;
     align-items: center;
@@ -1002,9 +1026,6 @@ body {
     top: 27px;
     right: 27px;
   }
-  .backToArchivesImg {
-    max-width: 110px;
-  }
   #header {
     padding: 130px 4px 4px 4px !important;
   }
@@ -1015,9 +1036,6 @@ body {
   .backToArchives {
     top: 33px;
     right: 33px;
-  }
-  .backToArchivesImg {
-    max-width: 120px;
   }
   #header {
     padding: 130px 50px 30px 50px !important;
@@ -1037,11 +1055,16 @@ body {
     top: 37px;
     right: 37px;
   }
-  .backToArchivesImg {
-    max-width: 130px;
-  }
   #header {
     padding: 130px 50px 30px 50px !important;
+  }
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) { 
+  .backToArchivesImg,
+  .backToArchivesImg-hover {
+    max-width: 300px;
   }
 }
 

@@ -3,8 +3,8 @@
     <div v-on:[eventName]="closeLargeImg()" class="pb-5">
 
       <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
-        <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
-        <g-image v-else alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-top.png" class="backToArchivesImg" />
+        <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-single-line.png" class="backToArchivesImg pt-3 pt-md-2" />
+        <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-single-line-yellow1.png" class="backToArchivesImg-hover pt-3 pt-md-2" />
       </g-link>
 
       <header id="header" class="px-3">
@@ -527,9 +527,25 @@ export default {
   right: 60px;
   z-index: 100;
 }
-.backToArchivesImg {
-  max-width: 222px;
+.backToArchivesImg,
+.backToArchivesImg-hover {
+  width: 50vw;
+  max-width: 260px;
   height: auto;
+}
+.backToArchivesImg {
+  display: inline-block;
+}
+.backToArchivesImg-hover {
+  display: none;
+}
+@media (hover) {
+  .backToArchives:hover .backToArchivesImg-hover {
+    display: inline-block;
+  }
+  .backToArchives:hover .backToArchivesImg {
+    display: none;
+  }
 }
 
 #header {
@@ -767,9 +783,6 @@ export default {
     top: 20px;
     right: 20px;
   }
-  .backToArchivesImg {
-    max-width: 100px;
-  }
   .galleryWrapper {
     grid-gap: 16px;
   }
@@ -780,9 +793,6 @@ export default {
   .backToArchives {
     top: 27px;
     right: 27px;
-  }
-  .backToArchivesImg {
-    max-width: 110px;
   }
   .galleryWrapper {
     grid-gap: 16px;
@@ -798,9 +808,6 @@ export default {
     top: 33px;
     right: 33px;
   }
-  .backToArchivesImg {
-    max-width: 120px;
-  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -812,8 +819,13 @@ export default {
     top: 37px;
     right: 37px;
   }
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) { 
+  .backToArchivesImg-hover,
   .backToArchivesImg {
-    max-width: 130px;
+    max-width: 300px;
   }
 }
 
