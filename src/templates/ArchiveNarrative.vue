@@ -1,7 +1,6 @@
 <template>
   <Layout>
   <ClientOnly>
-
     <ksvuefp :options="options" :sections="sections">
       <ksvuefp-section 
         class="flatImgContainer"
@@ -11,30 +10,8 @@
         :section-index="iSec"
         :background-image="'url('+ s.img_url +')'"
       >
-
         <!-- HEADER -->
-        <!-- <header v-if="s.header" id="header" class="px-3" :style="headerStyles"> -->
         <header v-if="s.header" id="header">
-
-          <!-- SLIDESHOWS -->
-          <!-- <div v-if="node.headerSlideshows" class="headerWrapper">
-            <SlideshowImages 
-              v-for="(slideshow, iSlideshow) in node.headerSlideshows"
-              v-show="showHeaderTile(iSlideshow)"
-              :key="iSlideshow"
-              :slides="slideshowImgs(iSlideshow)" 
-              :interval="4500" 
-              borderRadius="15px" 
-              :ref="'slideshow'+iSlideshow" 
-              class="headerBox" 
-            >                  
-              <div v-if="iSlideshow == 1" class="headerOverlay" :style="overlayStyles">
-                <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg" />
-                <p class="headerText">SCROLL</p>
-                <p class="headerText">TO READ MY RECOLLECTIONS</p>
-              </div>
-            </SlideshowImages>
-          </div> -->
 
           <!-- STATIC HEADER IMAGES -->
           <div v-if="!isPortrait && node.headerImages" class="headerWrapper">
@@ -152,14 +129,10 @@
               :style="'background: transparent url(' + item.thumbnailImg + ') no-repeat left top'"
             />
             <div class="boxOverlay mb-5">
-              <transition name="fade">
-                <span class="thumbnailCaption absCenter hideOnHover">{{ item.caption }}</span>
-              </transition>
+              <span class="thumbnailCaption absCenter hideOnHover">{{ item.caption }}</span>
               
-              <transition name="fade">
-                <g-image v-if="item.type == 'audio'" alt="Play symbol" src="~/assets/images/music_symbol_circle.png" class="absCenter showOnHover" />
-                <g-image v-else alt="Eye icon" src="~/assets/images/eye.png" class="absCenter showOnHover" />
-              </transition>
+              <g-image v-if="item.type == 'audio'" alt="Play symbol" src="~/assets/images/music_symbol_circle.png" class="absCenter showOnHover" />
+              <g-image v-else alt="Eye icon" src="~/assets/images/eye.png" class="absCenter showOnHover" />
             </div>
 
           </div>
@@ -312,22 +285,12 @@ export default {
 
   data() {
     return {
-      // audioIndex: null,
-      // zoomedImgIndex: null,
-      // imgCenterPos: {
-      //   top: 0,
-      //   left: 0
-      // },
-      // applyLargeImgStyles: false,
-      // eventName: null,
       windowWidth: 0.0,
-      windowHeight: 1.0,      
-      // articleIndex: null,
+      windowHeight: 1.0,
       bookItem: null,
       isBookFullscreen: false,
       bookShowSinglePage: false,
       bookKey: 1,
-
       options: {
         duration: 850,
         easing: 'easeInOut',
@@ -335,7 +298,6 @@ export default {
         dotNavEnabled: false,
         // animationType: 'slideX',
       },
-
       portrait: {
         maxAspect: 0.85,
         area: 375 * 667,     // iPhone 6
@@ -376,29 +338,6 @@ export default {
     titleImg() {
       return this.node.titleImg.singleLine != '' ? this.node.titleImg.singleLine : this.node.titleImg.doubleLine
     },
-    // headerStyles() {
-    //   let css = {}
-    //   if (this.windowWidth > 1200) {
-    //     if (this.aspectRatio > 2.1) 
-    //       css.marginTop = '120px'
-    //     else if (this.aspectRatio > 2.02) 
-    //       css.marginTop = '90px'
-    //     else if (this.aspectRatio > 1.97) 
-    //       css.marginTop = '70px'
-    //     else if (this.aspectRatio > 1.895) 
-    //       css.marginTop = '50px'
-    //     else if (this.aspectRatio > 1.85) 
-    //       css.marginTop = '35px'
-    //     else if (this.aspectRatio > 1.82) 
-    //       css.marginTop = '20px'
-    //   }
-    //   return css
-    // },
-    // headerTextStyles() {
-    //   let css = {}
-    //   css.textAlign = this.node.content.length < 80 ? 'center' : 'justify'
-    //   return css
-    // },
     aspectRatio() {
       return this.windowWidth / this.windowHeight
     },
@@ -406,7 +345,6 @@ export default {
       return this.windowWidth * this.windowHeight
     },
     windowScale() {
-      // return this.windowArea / this.currentLayout.area
       return Math.sqrt(this.windowArea) / Math.sqrt(this.currentLayout.area)
     },
     currentLayout() {
@@ -445,12 +383,8 @@ export default {
 
       // add section for header
       sections.push({ id: 'section' + s++, header: true })
-
-      // const layout = this.aspectRatio < this.portrait.maxAspect ? 
-      //   this.node.portraitLayout : this.node.landscapeLayout
+      
       const layout = this.currentLayout
-      // console.log('layout:')
-      // console.log(layout)
 
       // get sections (background images) from CMS`
       if (layout.hasOwnProperty('noSections')) {
@@ -533,20 +467,6 @@ export default {
     window.Velocity = require('velocity-animate')   // needed for KsVueFullpage (ref: https://github.com/pirony/ks-vue-fullpage)
     window.Hammer = require('hammerjs/hammer.js')   // needed for KsVueFullpage 
 
-    // if (this.node.hasOwnProperty('headerSlideshows') && this.node.headerSlideshows.length > 0) {
-    //   for (let i = 0; i < this.node.headerSlideshows.length; i++) {
-    //     const ref = `slideshow${i}`
-    //     // this.$refs[ref].pause()
-    //     // this.$refs[`slideshow${i}`].pause()
-    //     const slideshow = this.$refs[`slideshow${i}`]
-    //     slideshow.pause()
-    //   }
-    //   console.log('this.$refs:')
-    //   console.log(this.$refs)    
-    //   this.staggerSlideshowStarts()
-    // }
-    // console.log('this.node:')
-    // console.log(this.node)
     this.updateWindowDims()
     this.bindEvents()
   },
@@ -567,75 +487,9 @@ export default {
     delay(ms) {
       return new Promise(res => setTimeout(res, ms))
     },
-    // async staggerSlideshowStarts() {  
-    //   // for (let i = 0; i < this.node.headerSlideshows.length; i++) {
-    //   //   // this.$refs[`slideshow${i}`][0].pause()
-    //   //   this.$refs[`slideshow${i}`].pause()
-    //   // }
-    //   this.$refs.slideshow0[0].pause()
-    //   this.$refs.slideshow1[0].pause()
-    //   this.$refs.slideshow2[0].pause()
-    //   if (this.node.headerSlideshows.length == 6) {
-    //     this.$refs.slideshow3[0].pause()
-    //     this.$refs.slideshow4[0].pause()
-    //     this.$refs.slideshow5[0].pause()
-    //   }
-
-    //   if (this.windowWidth >= 1200 & this.node.headerSlideshows.length == 6) {
-    //     this.$refs.slideshow0.start()
-    //     this.$refs.slideshow4.start()
-
-    //     await this.delay(1500)
-    //     this.$refs.slideshow2.start()
-    //     this.$refs.slideshow3.start()
-
-    //     await this.delay(1500)
-    //     this.$refs.slideshow1.start()
-    //     this.$refs.slideshow5.start()
-    //   }
-    //   else if (this.windowWidth >= 1200 & this.node.headerSlideshows.length == 3) {
-    //     this.$refs.slideshow0.start()
-
-    //     await this.delay(1500)
-    //     this.$refs.slideshow1.start()
-
-    //     await this.delay(1500)
-    //     this.$refs.slideshow2.start()
-    //   }
-    //   // else if (this.node.headerSlideshows.length == 3) {
-    //   //   this.$refs.slideshow1.pause()
-    //   //   this.$refs.slideshow1.start()
-    //   // }
-    // },
     renderMarkdown(text) {
       const md = new MarkdownIt()
       return md.render(text) 
-    },
-    // showHeaderTile(index) {
-    //   if (this.windowWidth >= 1200 && this.aspectRatio < 2.15) {
-    //     return index <= 5                               // show all six tiles
-    //   } else if (this.windowWidth >= 1200 && this.aspectRatio >= 2.15) {
-    //     return index <= 2
-    //   // } else if (this.aspectRatio < 0.65) {
-    //   } else if (this.aspectRatio < 0.565) {
-    //     return index == 1 || index == 3 || index == 5   // show three tiles
-    //   } else if (this.aspectRatio < 0.97) {
-    //     return index == 1 || index == 3                 // show two tiles
-    //   } else {
-    //     return index == 1                               // show one tile
-    //   }
-    // },
-    slideshowImgs(index) {
-      // let imgs = [{img: '/assets/static/src/assets/temp/' + (index + 1) + '.jpg'}]
-      // return imgs
-      if (this.node.headerSlideshows == null)
-        return null
-      let imgs = []
-      for (let i = 1; i <= this.node.headerSlideshows[index].numImages; i++) {
-        let url = this.node.headerSlideshows[index].commonPath + i + '.jpg'
-        imgs.push({img: url})
-      }
-      return imgs
     },
     slideTextContainerStyles(txtObj) {
       let css = {}
@@ -678,7 +532,6 @@ export default {
         css.width = txtObj.width ? txtObj.width : '38%'
         css.height = '100%'
       }
-      // if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true && txtObj.pos !== 'bottom') {
       if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true) {
         css.backgroundColor = 'rgb(0,0,0,0.47)'
       }
@@ -699,18 +552,12 @@ export default {
       const layout = this.currentLayout
       const scale = this.windowScale
       let css = {}
-      if (txtObj.hasOwnProperty('pos') && txtObj.pos) {        
-        // css.display = 'inline-flex'
+      if (txtObj.hasOwnProperty('pos') && txtObj.pos) {     
         css.display = 'flex'
         css.flexDirection = 'column'
         
-
         if (txtObj.pos == 'bottom') {
-          // css.height = 'initial'
           css.height = '100%'
-          // if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter == true) {
-          //   css.backgroundColor = 'rgb(0,0,0,0.47)'
-          // }
         } else {
           css.height = '100vh'
         }
@@ -726,7 +573,6 @@ export default {
         if (txtObj.pos !== 'bottom') {
           css.padding = `${paddingPx}px`
         } else if (txtObj.hasOwnProperty('applyFilter') && txtObj.applyFilter) {
-          // css.padding = `${paddingPx}px ${paddingPx}px 0px`
           css.padding = `${paddingPx}px ${paddingPx}px`
         } else {
           css.padding = `0px ${paddingPx}px`
@@ -787,7 +633,6 @@ export default {
 
 .layout {
   background-color: #222222;
-  // padding: 0 12px;
   padding: 0;
   overflow: hidden; /* added for pseudo-element */
   position: relative; /* added for pseudo-element */
@@ -804,9 +649,6 @@ export default {
 .backToArchivesImg {
   max-width: 222px;
   height: auto;
-}
-.backToArchivesImgTranslate {
-  // transform: translate3d(0, -100px, 0);
 }
 .backToArchivesEnd {
   position: absolute;
@@ -912,28 +754,13 @@ export default {
   margin: auto;
   padding: 0 0 16px 0;
 }
-// .titleImg1Line {
-//   display: inline;
-// }
-// .titleImg2Lines {
-//   display: none;
-// }
-
-// #archive_headerText { 
-//   padding-right: 0px;
-//   padding-left: 0px;
-//   // see styles.css for more
-// }
 .headerText {
   color: #FFF;
   font-family: 'Lora', serif;
   font-feature-settings: 'liga';
   font-weight: 400;
-  
-  // font-size: 1.264789vw;
-  // line-height: 1.835985vw;
-  // letter-spacing: 0.367197vw;
-  --font-size: 20px;
+
+  --font-size: 1.25rem;
   font-size: var(--font-size);
   line-height: calc(1.35 * var(--font-size));
   letter-spacing: calc(0.29 * var(--font-size));
@@ -942,35 +769,19 @@ export default {
   text-transform: uppercase;
   margin: 0px;
   padding: 0px;
-
   cursor: context-menu;
 }
-// .headerText:nth-of-type(2) {
-//   font-size: 0.938392vw;
-//   line-height: 1.346389vw;
-// }
 .link .headerText {
   cursor: pointer;
 }
 
-// .galleryBox {
-//   background-color: black;
-//   width: 100%;
-//   max-width: var(--boxSize);
-//   height: var(--boxSize);
-//   position: relative;
-//   place-self: center;
-//   cursor: pointer;
-// }
 .galleryBox {
   position: absolute;
   // height: 420px;
   // width: 420px;
   height: 17.13586vw;
   width: 17.13586vw;
-
 }
-
 .mediaBox {
   opacity: 0.46;
   transition: opacity 0.2s ease;
@@ -1062,12 +873,6 @@ export default {
   width: 100%;
 }
 
-// .fade-enter-active, .fade-leave-active {
-//   transition: opacity 0.5s;
-// }
-// .fade-enter, .fade-leave-to {
-//   opacity: 0;
-// }
 .hideOnHover {
   opacity: 1;
   transition: all 0.5s ease 0s;
@@ -1083,17 +888,13 @@ export default {
   opacity: 1;
 }
 
-
 .flatImgContainer {
   display: flex;
   justify-content: center;
-  // background-size: contain;
 }
-
 .flatImg {
   height: 100vh;
 }
-
 
 // For the ks-vue-fullpage component
 body {
@@ -1110,14 +911,11 @@ body {
   }
 }
 .textAnimation-enter-active, .textAnimation-leave-active {
-  // transition: opacity 1s, transform 1s cubic-bezier(.13,.07,.26,.99);
   transition: opacity 1.5s;
   opacity: 1;
-  // transform: translate3d(0, 0, 0);
 }
 .textAnimation-enter {
-  opacity: 0;  
-  // transform: translate3d(0, 4rem, 0);
+  opacity: 0;
 }
 .textAnimation-leave-active {
   opacity: 0;
@@ -1138,7 +936,6 @@ body {
 }
 .slideText {
   display: block;
-  // background-color: aqua;
   color: #FFF;
   font-family: 'Lora', serif;
   font-feature-settings: 'liga';
@@ -1162,13 +959,6 @@ body {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media only screen and (max-width: 575.98px) {
-  .titleImg {
-    max-width: 100%;
-    padding: 0 32px 8px 32px;
-  }
-  .headerOverlay {
-    padding-bottom: 0px;
-  }
   .backToArchives {
     top: 20px;
     right: 20px;
@@ -1186,28 +976,20 @@ body {
   .headerWrapper {
     grid-gap: 15px;
   }
+  .headerOverlay {
+    padding-bottom: 0px;
+  }
+  .titleImg {
+    max-width: 100%;
+    padding: 0 32px 8px 32px;
+  }
   .headerText {
-    font-size: 1.25rem;
-    line-height: 1.8145rem;
-    letter-spacing: 0.3629rem;
-  }
-  .headerText:nth-of-type(2) {
-    font-size: 0.9274rem;
-    line-height: 1.3306rem;
-  }
+    --font-size: 1.1rem;
+  }  
 }
 @media only screen and (max-width: 375px) {
-  #header {
-    padding: 90px 4px 4px 4px !important;
-  }
-}
-@media only screen and (max-width: 320px) {
-  #header {
-    padding: 90px 4px 4px 4px !important;
-  }
-  .headerText:nth-of-type(2) {
-    font-size: 0.835rem;
-    line-height: 1.197rem;
+  .headerText {
+    --font-size: 1rem;
   }
 }
 
@@ -1258,15 +1040,6 @@ body {
   #header {
     padding: 130px 50px 30px 50px !important;
   }
-  // .headerText {
-  //   font-size: 1.9375rem;
-  //   line-height: 2.8125rem;
-  //   letter-spacing: 0.5625rem;
-  // }
-  // .headerText:nth-of-type(2) {
-  //   font-size: 1.4375rem;
-  //   line-height: 2.0625rem;
-  // }
 }
 
 /* Special */
@@ -1278,22 +1051,6 @@ body {
     height: calc(350px - 32px);
     top: calc(175px - 16px);
   }
-}
-
-/* Special */
-@media only screen and (max-width: 1199.98px) {
-  // .headerWrapper {
-  //   grid-template-columns: 1fr;
-  // }
-  // .headerText {
-  //   font-size: 2.841613vw;
-  //   line-height: 4.124924vw;
-  //   letter-spacing: 0.824985vw;
-  // }
-  // .headerText:nth-of-type(2) {
-  //   font-size: 2.108294vw;
-  //   line-height: 3.024945vw;
-  // }
 }
 
 </style>
