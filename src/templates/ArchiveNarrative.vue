@@ -185,6 +185,7 @@ query ($id: ID!) {
         posY
         width
         alignItems
+        textAlign
         fontSize
         lineHeight
         applyFilter
@@ -395,6 +396,10 @@ export default {
             txtArr: [],
             galleryItems: []
           }
+          // add "back to archives" link to last section
+          if (i == layout.noSections) {
+            section.backLink = true
+          }
           sections.push(section)
         }
       }
@@ -420,9 +425,6 @@ export default {
           sections[sectionIndex].galleryItems.push(galObj)
         }
       }
-
-      // add another section for "back to archives" link
-      sections.push({ id: 'section' + s++, backLink: true })
 
       return sections
     },
@@ -595,6 +597,9 @@ export default {
       }
       css.lineHeight = lineHeightPx + 'px'
 
+      // text-align
+      css.textAlign = txtObj.textAlign ? txtObj.textAlign : 'justify'
+
       return css
     },
     onGalleryMediaClick(item) {
@@ -662,7 +667,15 @@ export default {
 .backToArchivesEnd {
   position: absolute;
   left: 50%;
-  transform: translate3d(-50%, -50%, 10px);
+  top: 30vh;
+  transform: translate3d(-50%, -50%, 0);
+}
+.backToArchivesEndImg,
+.backToArchivesEndImg-hover {
+  width: 10vw;
+  min-width: 200px;
+  max-width: 300px;
+  height: auto;
 }
 .backToArchivesEndImg {
   display: inline-block;
@@ -970,7 +983,6 @@ body {
   font-family: 'Lora', serif;
   font-feature-settings: 'liga';
   font-weight: 400;
-  text-align: justify !important;
   margin: 0px;
   padding: 0px;  
 }
