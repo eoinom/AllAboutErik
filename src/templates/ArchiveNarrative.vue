@@ -65,7 +65,7 @@
           <!-- BACK TO ARCHIVES LINK (AT TOP) -->
           <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
             <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-single-line.png" class="backToArchivesImg pt-3 pt-md-2" />
-            <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-single-line-yellow1.png" class="backToArchivesImg-hover pt-3 pt-md-2" />
+            <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-single-line-yellow.png" class="backToArchivesImg-hover pt-3 pt-md-2" />
           </g-link>
         </header>
 
