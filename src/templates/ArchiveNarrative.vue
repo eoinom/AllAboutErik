@@ -201,22 +201,6 @@ query ($id: ID!) {
         commonFilenameLastNum
       }
     }
-    squareLayout {
-      noSections
-      commonPath
-      textList {
-        sectionNo
-        text
-        pos
-        posX
-        posY
-        width
-        height
-        alignItems
-        applyFilter
-        showScrollbar
-      }
-    }
     fiveBySevenLayout {
       noSections
       commonPath
@@ -229,6 +213,7 @@ query ($id: ID!) {
         width
         height
         alignItems
+        textAlign
         fontSize
         lineHeight
         applyFilter
@@ -243,6 +228,22 @@ query ($id: ID!) {
         commonPathStdRes
         commonFilenameStartNum
         commonFilenameLastNum
+      }
+    }
+    squareLayout {
+      noSections
+      commonPath
+      textList {
+        sectionNo
+        text
+        pos
+        posX
+        posY
+        width
+        height
+        alignItems
+        applyFilter
+        showScrollbar
       }
     }
     portraitLayout {
