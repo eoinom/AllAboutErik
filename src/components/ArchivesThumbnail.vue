@@ -188,7 +188,7 @@ https://codepen.io/beije/pen/zxjeae */
   .overlayText {
     font-size: calc(2.0703125rem + 19.875 * (100vw - 332px) / (512 - 332));
     line-height: calc(2.0703125rem + 19.875 * (100vw - 332px) / (512 - 332));
-    letter-spacing: calc(8.125px + 4.875 * (100vw - 332px) / (512 - 332));
+    letter-spacing: calc(4.125px + 4.875 * (100vw - 332px) / (512 - 332));
   }
   .thumbnailImgContainer:after {
     --blur_px: calc(var(--blur) * 1px * (0.078125rem + 0.75 * (100vw - 332px) / (512 - 332)) );
@@ -201,7 +201,7 @@ https://codepen.io/beije/pen/zxjeae */
   .overlayText {
     font-size: calc(2.2083333rem + 17.6666667 * (100vw - 768px) / (1152 - 768));
     line-height: calc(2.2083333rem + 17.6666667 * (100vw - 768px) / (1152 - 768));
-    letter-spacing: calc(8.667px + 4.333 * (100vw - 768px) / (1152 - 768));
+    letter-spacing: calc(4.667px + 4.333 * (100vw - 768px) / (1152 - 768));
   }
   .thumbnailImgContainer:after {
     --blur_px: calc(var(--blur) * 1px * (0.08333rem + 0.6667 * (100vw - 768px) / (1152 - 768)) );
@@ -214,7 +214,7 @@ https://codepen.io/beije/pen/zxjeae */
   .overlayText {
     font-size: calc(2.0703125rem + 19.875 * (100vw - 1200px) / (1920 - 1200));
     line-height: calc(2.0703125rem + 19.875 * (100vw - 1200px) / (1920 - 1200));
-    letter-spacing: calc(8.125px + 4.875 * (100vw - 1200px) / (1920 - 1200));
+    letter-spacing: calc(4.125px + 4.875 * (100vw - 1200px) / (1920 - 1200));
   }
   .thumbnailImgContainer:after {
     --blur_px: calc(var(--blur) * 1px * (0.078125rem + 0.75 * (100vw - 1200px) / (1920 - 1200)) );
