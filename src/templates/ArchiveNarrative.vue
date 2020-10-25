@@ -242,8 +242,19 @@ query ($id: ID!) {
         width
         height
         alignItems
+        textAlign
         applyFilter
         showScrollbar
+      }
+      galleryItems {
+        sectionNo
+        posX
+        posY
+        caption
+        thumbnailImg
+        commonPathStdRes
+        commonFilenameStartNum
+        commonFilenameLastNum
       }
     }
     portraitLayout {
@@ -668,14 +679,14 @@ export default {
 .backToArchivesEnd {
   position: absolute;
   left: 50%;
-  top: 30vh;
+  top: 22vh;
   transform: translate3d(-50%, -50%, 0);
 }
 .backToArchivesEndImg,
 .backToArchivesEndImg-hover {
-  width: 10vw;
+  width: 30vw;
   min-width: 200px;
-  max-width: 300px;
+  max-width: 350px;
   height: auto;
 }
 .backToArchivesEndImg {
@@ -820,8 +831,8 @@ export default {
   position: absolute;
   // height: 420px;
   // width: 420px;
-  height: 17.13586vw;
-  width: 17.13586vw;
+  height: 23vw;
+  width: 23vw;
 }
 .mediaBox {
   opacity: 0.46;
