@@ -737,7 +737,7 @@ squareLayout:
       text: >-
         My mom Elsie was born in 1914.  
         
-        Her parents were Dietrich Lunde and Marianne Larsen1.
+        Her parents were Dietrich Lunde and Marianne Larsen.
       posX: 60px
       posY: -37vh
       width: 38%
