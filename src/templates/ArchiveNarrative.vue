@@ -264,10 +264,49 @@ query ($id: ID!) {
         sectionNo
         text
         pos
+        posX
         posY
+        width
         height
+        alignItems
+        textAlign
         applyFilter
         showScrollbar
+      }
+      galleryItems {
+        sectionNo
+        posX
+        posY
+        caption
+        thumbnailImg
+        commonPathStdRes
+        commonFilenameStartNum
+        commonFilenameLastNum
+      }
+    }    
+    mobileLayout {
+      noSections
+	    commonPath
+      textList {
+        sectionNo
+        text
+        pos
+        posX
+        posY
+        width
+        height
+        textAlign
+        applyFilter
+      }
+      galleryItems {
+        sectionNo
+        posX
+        posY
+        caption
+        thumbnailImg
+        commonPathStdRes
+        commonFilenameStartNum
+        commonFilenameLastNum
       }
     }
   }
@@ -308,9 +347,17 @@ export default {
         duration: 850,
         easing: 'easeInOut',
         overlay: false,
-        dotNavEnabled: false,
+        // dotNavEnabled: false,
+        dotNavEnabled: true,
         // animationType: 'slideX',
       },
+      // mobile: {
+      //   maxAspect: 0.85,
+      //   area: 375 * 667,     // iPhone 6
+      //   fontSize: 20.3,      // in px
+      //   maxFontSize: 30,     // in px
+      //   padding: 28.2,       // in px
+      // },
       portrait: {
         maxAspect: 0.85,
         area: 375 * 667,     // iPhone 6
@@ -363,7 +410,11 @@ export default {
     currentLayout() {
       let layout = {}
       if (this.aspectRatio < this.portrait.maxAspect) {
-        layout = { ...this.portrait, ...this.node.portraitLayout }
+        // layout = { ...this.portrait, ...this.node.portraitLayout }
+        if (this.windowWidth < 541 )
+          layout = { ...this.portrait, ...this.node.mobileLayout }
+        else
+          layout = { ...this.portrait, ...this.node.portraitLayout }
       } else if (this.aspectRatio < this.square.maxAspect) {
         layout = { ...this.square, ...this.node.squareLayout }
       } else if (this.aspectRatio < this.fiveBySeven.maxAspect) {
@@ -625,9 +676,10 @@ export default {
     reloadBook() {
       this.bookKey += 1 // increment component key to force reload between toggle of fullscreen / normal-screen
     },
-    updateWindowDims() {      
-      this.windowWidth = window.innerWidth
-      this.windowHeight = window.innerHeight
+    updateWindowDims() {
+      const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; // ref: https://stackoverflow.com/a/39345914
+      this.windowWidth = (iOS) ? screen.width : window.innerWidth;
+      this.windowHeight = (iOS) ? screen.height : window.innerHeight;
     },
   }
 }
@@ -653,7 +705,8 @@ export default {
   padding: 0;
   overflow: hidden; /* added for pseudo-element */
   position: relative; /* added for pseudo-element */
-  min-height: 100vh;
+  // min-height: 100vh;
+  // height: 100vh;
   width: 100%;
 }
 
@@ -670,7 +723,8 @@ export default {
   height: auto;
 }
 .backToArchivesImg {
-  display: inline-block;
+  // display: inline-block;
+  display: block;
 }
 .backToArchivesImg-hover {
   display: none;
@@ -684,6 +738,7 @@ export default {
 }
 .backToArchivesEndImg,
 .backToArchivesEndImg-hover {
+  // width: 10vw;
   width: 30vw;
   min-width: 200px;
   max-width: 350px;
@@ -831,6 +886,8 @@ export default {
   position: absolute;
   // height: 420px;
   // width: 420px;
+  // height: 17.13586vw;
+  // width: 17.13586vw;
   height: 23vw;
   width: 23vw;
 }
@@ -1000,7 +1057,8 @@ body {
 }
 .slideText {
   /deep/ p {
-    margin-bottom: 0;
+    // margin-bottom: 0;
+    margin: auto;
   }
 }
 .simple-scrollbar {
@@ -1014,7 +1072,8 @@ body {
 /* Extra small devices (portrait phones, less than 576px) */
 @media only screen and (max-width: 575.98px) {
   .backToArchives {
-    top: 20px;
+    top: 48px;
+    // top: 128px;
     right: 20px;
   }
   #header {
