@@ -347,8 +347,8 @@ export default {
         duration: 850,
         easing: 'easeInOut',
         overlay: false,
-        // dotNavEnabled: false,
-        dotNavEnabled: true,
+        dotNavEnabled: false,
+        // dotNavEnabled: true,
         // animationType: 'slideX',
       },
       // mobile: {
