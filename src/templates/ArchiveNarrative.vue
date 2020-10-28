@@ -268,7 +268,6 @@ query ($id: ID!) {
         posY
         width
         height
-        alignItems
         textAlign
         applyFilter
         showScrollbar
@@ -1109,7 +1108,7 @@ body {
     right: 27px;
   }
   #header {
-    padding: 130px 4px 4px 4px !important;
+    padding: 130px 30px 30px 30px !important;
   }
 }
 
@@ -1127,7 +1126,7 @@ body {
 /* iPad */
 @media only screen and (min-width: 767.98px) and (max-width: 768.02px) {
   #header {
-    padding: 130px 4px 4px 4px !important;
+    padding: 130px 40px 40px 40px !important;
   }
 }
 
