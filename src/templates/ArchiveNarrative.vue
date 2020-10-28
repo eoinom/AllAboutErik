@@ -351,17 +351,17 @@ export default {
         // dotNavEnabled: true,
         // animationType: 'slideX',
       },
-      // mobile: {
-      //   maxAspect: 0.85,
-      //   area: 375 * 667,     // iPhone 6
-      //   fontSize: 20.3,      // in px
-      //   maxFontSize: 30,     // in px
-      //   padding: 28.2,       // in px
-      // },
-      portrait: {
+      portraitMobile: {
         maxAspect: 0.85,
         area: 375 * 667,     // iPhone 6
         fontSize: 20.3,      // in px
+        maxFontSize: 24,     // in px
+        padding: 28.2,       // in px
+      },
+      portraitTablet: {
+        maxAspect: 0.85,
+        area: 768 * 1024,     // iPad
+        fontSize: 24,      // in px
         maxFontSize: 30,     // in px
         padding: 28.2,       // in px
       },
@@ -409,12 +409,11 @@ export default {
     },
     currentLayout() {
       let layout = {}
-      if (this.aspectRatio < this.portrait.maxAspect) {
-        // layout = { ...this.portrait, ...this.node.portraitLayout }
+      if (this.aspectRatio < this.portraitTablet.maxAspect) {
         if (this.windowWidth < 541 )
-          layout = { ...this.portrait, ...this.node.mobileLayout }
+          layout = { ...this.portraitMobile, ...this.node.mobileLayout }
         else
-          layout = { ...this.portrait, ...this.node.portraitLayout }
+          layout = { ...this.portraitTablet, ...this.node.portraitLayout }
       } else if (this.aspectRatio < this.square.maxAspect) {
         layout = { ...this.square, ...this.node.squareLayout }
       } else if (this.aspectRatio < this.fiveBySeven.maxAspect) {
@@ -425,7 +424,7 @@ export default {
       return layout
     },
     isPortrait() {
-      return this.aspectRatio < this.portrait.maxAspect
+      return this.aspectRatio < this.portraitTablet.maxAspect
     },
     overlayStyles() {
       let css = {}
@@ -1058,7 +1057,7 @@ body {
 .slideText {
   /deep/ p {
     // margin-bottom: 0;
-    margin: auto;
+    margin: auto 0;
   }
 }
 .simple-scrollbar {

@@ -5,24 +5,24 @@ titleImg:
   topOffset: 49
   maxWidth: 89
 headerImages:
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img1.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img2.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img3.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img4.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img5.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img6.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img1.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img2.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img3.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img4.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img5.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_header-img6.jpg
 headerMobileImages:
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img1.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img2.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img3.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img4.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img5.jpg
-  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img6.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img1.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img2.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img3.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img4.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img5.jpg
+  - img: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/header-images/my-amazing-mom_mobileslideshow-img6.jpg
 
 
 landscapeLayout:
   noSections: 47
-  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/sections-images/landscape/my-amazing-mom_9x16-section_
+  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/sections-images/landscape/my-amazing-mom_9x16-section_
   textList:
     - sectionNo: 1
       text: >-
@@ -379,7 +379,7 @@ landscapeLayout:
 
 fiveBySevenLayout:
   noSections: 66
-  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/sections-images/5x7/my-amazing-mom_5x7-section_
+  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/sections-images/5x7/my-amazing-mom_5x7-section_
   textList:
     - sectionNo: 1
       text: >-
@@ -731,7 +731,7 @@ fiveBySevenLayout:
 
 squareLayout:
   noSections: 74
-  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/sections-images/square/my-amazing-mom_1x1-section_
+  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/sections-images/square/my-amazing-mom_1x1-section_
   textList:
     - sectionNo: 1
       text: >-
@@ -1100,7 +1100,7 @@ squareLayout:
 
 portraitLayout:
   noSections: 93
-  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/sections-images/portrait/my-amazing-mom_768x1024-section_
+  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/sections-images/portrait/my-amazing-mom_768x1024-section_
   textList:
     - sectionNo: 1
       text: >-
@@ -1126,11 +1126,9 @@ portraitLayout:
 
 
         Here's little Elsie.
-      # pos: bottom
-      # applyFilter: true
-      posX: 4%
+      posX: 5%
       posY: -37vh
-      width: 92%
+      width: 90%
 
     - sectionNo: 4
       text: Here she is with her older sister Ruth.
@@ -1203,21 +1201,12 @@ portraitLayout:
 
     - sectionNo: 16
       text: As a teenager my mom started off on the wrong foot with her dentist, doctor Earl Jacobsen, my future dad. He had suggested to Elsie's father that she get her braces reapplied and he'd agreed. My mom considered the braces the social ruination of her high school years. She went off to the University of Wisconsin, and after graduation she spent a semester studying in Norway.
-      # pos: bottom
-      # posY: 10vh
-      # height: 40vh
-      # applyFilter: true
-      posX: 5%
-      posY: 10vh
-      width: 90%
+      pos: bottom
+      height: 42vh
 
     - sectionNo: 17
       text: She graduated Phi Beta Kappa in 1936. After college my mom worked as a telephone operator. She wasn’t happy with her social life, and when her mom suggested attending a dance at the Country Club, she was unenthusiastic due to the lack of a suitable and exciting date. Her mom suggested she go with Doctor Jacobsen and with some reluctance she agreed. Apparently, they hit it off big time, because they began dating.
-      # posX: 5%
-      # posY: -37vh
-      # width: 64%
       pos: left
-      # posY: -37vh
       width: 71%
 
     - sectionNo: 19
@@ -1225,7 +1214,7 @@ portraitLayout:
 
 
         in 1938.
-      posX: 6.5%
+      posX: 5%
       posY: -34vh
       width: 90%
       textAlign: right
@@ -1245,15 +1234,18 @@ portraitLayout:
       textAlign: left
 
     - sectionNo: 29
-      text: She had a second son, my brother Evan.
-      posX: 5%
-      posY: -37vh
-      width: 45%
+      text: She had a second son,
+
+
+        my brother Evan.
+      posX: 50px
+      posY: -36vh
+      width: 50%
       textAlign: left
 
     - sectionNo: 30
       text: We went on family trips and excursions.
-      posX: 5%
+      posX: 50px
       posY: 38vh
       width: 95%
       textAlign: left
@@ -1295,13 +1287,9 @@ portraitLayout:
 
     - sectionNo: 37
       text: At this time my mother's involvement in civic affairs really began to gather steam.
-      pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
-      # posX: 15%
-      # posY: -5vh
-      # width: 73%
+      posX: 19%
+      posY: 2vh
+      width: 61%
 
     - sectionNo: 38
       text: A few years after my brother was born, she had joined the League of Women Voters. In ‘54 she got involved with the United Nations Association. One day she picked up Eleanor Roosevelt at the airport and they dropped by our house on the way into Chicago. She idolized Mrs. Roosevelt.
@@ -1311,174 +1299,183 @@ portraitLayout:
 
 
         I gave her an orchid I had grown.
-      # pos: bottom
-      # applyFilter: true
       posX: 5%
-      posY: -38vh
-      width: 91%
+      posY: -37vh
+      width: 90%
 
     - sectionNo: 39
       text: Here she is with Liv Ullmann, a big UN supporter.
-      posX: 5%
+      pos: bottom
+      posX: 13px
       posY: 38vh
-      width: 90%
-      textAlign: left
+      height: 12vh
 
     - sectionNo: 40
       text: On behalf of her love for Oak Park, the next decades saw her build a dizzying portfolio of supporting causes and involvement in civic life. She joined the Oak Park League and served as its president. She worked on the district school board for six years and served as the president there as well. My mom was on the high school Board of Education. Elsie started a beautification Commission and served as chairperson, planting trees and flower gardens all over town. She started local block parties, so neighbours could get to know each other, and feel a sense of belonging to the community. Mom started the Oak Park Historical Society, and as its driving force, it fell in her bailiwick in ’73 to have the first Saturday night drink served in Oak Park after it had been dry for 107 years.
-      # pos: bottom
-      # posY: 5vh
-      # height: 45vh
-      # applyFilter: true
-      # posX: 5%
-      # posY: -37vh
-      # width: 90%
-      # alignItems: center
       pos: left
-      # posX: 5%
-      # posY: center
+      posX: 13px
       width: 96%
-      height: 90vh
-      alignItems: center
 
-    - sectionNo: 42
+    - sectionNo: 45
       text: She saved the local Conservatory, originally built in 1914 and expanded in 1929. It was meant to house exotic plants that residents brought back from their travels. It had fallen into disrepair and was slated to be demolished and replaced by a parking lot. Mom couldn't let that happen. She started the “Save the Conservatory” committee in 1970, and as was typical of her approach and style, she took botany and horticulture classes to be able to speak knowledgeably about the plant collection. The conservatory was expanded in 2000. Today it houses 3000 plants, some dating all the way back to 1914.
       pos: bottom
-      posY: 5vh
-      height: 45vh
-      applyFilter: true
+      posX: 13px
+      posY: 6vh
+      width: 96%
+      height: 44vh
 
-    - sectionNo: 46
+    - sectionNo: 49
       text: Frank Lloyd Wright and Ernest Hemingway were two of Oak park's most notable former residents. When my mom heard Frank Lloyd Wright's old home had been sold, and the new owner planed extensive remodeling, she swung into action. She organized a committee and raised the money to save the house. The home and studio are now a National Historic landmark. Elsie was instrumental in the founding of the Frank Lloyd Wright Preservation Trust and helped pioneer and promote walks and visits to local homes built by Wright. Last year 65,000 people walked this Frank Lloyd Wright trail. The trust also raised the money to restore the famous Unity Temple. She was personal friends with the architect’s son Eric Wright.
-      pos: bottom
-      applyFilter: true
-
-    - sectionNo: 48
-      text: I had the same English teacher that taught Ernest Hemingway. To honour Hemingway as an Oak Park boy, my mom successfully pushed to have the author honoured with his own postage stamp.
-      pos: bottom
-      applyFilter: true
-
-    - sectionNo: 50
-      text: The longest project my mom took part in, was her work with the Oak Park Council of International Affairs. She started a program called “School to School”. She traveled to Washington DC and had a meeting with Sargent Shriver in ‘63 or ‘64 asking him how Oak Park could contribute to the Peace Corps and the United Nations. He suggested she get Oak Park schools involved with a program by which money could be raised, and schools built in third world countries worldwide. The concept called for money coming from three sources. One third from the local people who would build the school, one third from the US government on behalf of the Peace Corps, and the final third raised from contributions from local schools in Oak Park.
-      pos: bottom
-      posY: 5vh
-      height: 45vh
-      applyFilter: true
+      pos: left
+      posX: 13px
+      width: 96%
 
     - sectionNo: 51
-      text: The distinguished citizen's award.
+      text: I had the same English teacher that taught Ernest Hemingway. To honour Hemingway as an Oak Park boy, my mom successfully pushed to have the author honoured with his own postage stamp.
       pos: bottom
-      posY: 35vh
-      height: 15vh
+      posY: 26vh
+      height: 24vh
       applyFilter: true
 
     - sectionNo: 53
-      text: The process involved my mom contacting Peace Corps volunteers working around the world, and asking them if they knew any local villages in the areas where they worked who might be interested in taking part in a project to erect their own school. If one of the volunteers had an idea and wanted to be involved, my mom would ask them to take pictures of the place, and on their next trip back to the states come to Oak Park and appear with my mom at a local Oak Park school assemblies to solicit contributions for the building program.
-      pos: bottom
-      posY: 5vh
-      height: 45vh
-      applyFilter: true
+      text: The distinguished citizen's award.
+      posX: 50px
+      posY: 35vh
+      width: 90%
+      textAlign: left
 
     - sectionNo: 54
-      text: The accolades kept coming.
-      pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
+      text: The longest project my mom took part in, was her work with the Oak Park Council of International Affairs. She started a program called “School to School”. She traveled to Washington DC and had a meeting with Sargent Shriver in ‘63 or ‘64 asking him how Oak Park could contribute to the Peace Corps and the United Nations. He suggested she get Oak Park schools involved with a program by which money could be raised, and schools built in third world countries worldwide. The concept called for money coming from three sources. One third from the local people who would build the school, one third from the US government on behalf of the Peace Corps, and the final third raised from contributions from local schools in Oak Park.
+      pos: left
+      posX: 13px
+      width: 96%
+
+    - sectionNo: 55
+      text: The process involved my mom contacting Peace Corps volunteers working around the world, and asking them if they knew any local villages in the areas where they worked who might be interested in taking part in a project to erect their own school. If one of the volunteers had an idea and wanted to be involved, my mom would ask them to take pictures of the place, and on their next trip back to the states come to Oak Park and appear with my mom at a local Oak Park school assemblies to solicit contributions for the building program.
+      pos: left
+      posX: 13px
+      width: 96%
 
     - sectionNo: 56
       text: They would give their presentation promising that the students would be kept abreast of the construction of the school and become pen pals with the kids that lived there. My mom was a very persuasive salesperson, and although it involved a great deal of time and effort, the program was a great success with local kids. Over the years they built school after school. At the time she retired from the effort, many years later, she had been instrumental in building over 300 schools in 90 different third world countries. My mom, sister, and I attended a wonderful ceremony dedicating one of her schools to her late husband, my dad, in Esmeralda, Guatemala. It was a heartwarming occasion with the entire village, mostly Indians, turning out for the dedication of their new school. Elsie did a short write up about the visit.
-      pos: bottom
-      posY: 5vh
-      height: 45vh
-      applyFilter: true
+      pos: left
+      posX: 13px
+      width: 96%
 
     - sectionNo: 58
+      text: The accolades kept coming.
+      posX: 13%
+      posY: 1vh
+      width: 80%
+      textAlign: left
+
+    - sectionNo: 66
       text: She worked very hard but was always a game and adventurous gal. Here she is riding a donkey in Santorini.
       pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
-
-    - sectionNo: 59
-      text: Attending Margo Saint James’s Coyote fundraiser in San Francisco with my son Nico.
-      pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
-
-    - sectionNo: 60
-      text: Out on a tour of Cuba with fellow seniors.
-      pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
-
-    - sectionNo: 61
-      text: She ate her first and last raw oyster with me at Hog Island.
-      pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
-
-    - sectionNo: 62
-      text: She fished with me. Three small salmon from 16 miles out in the Pacific in dense fog.
-      pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
-
-    - sectionNo: 63
-      text: We got one small flounder in the Bay.
-      pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
-
-    - sectionNo: 64
-      text: She went back to college at 83 to do Scandinavian studies.
-      pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
+      posX: 13px
+      posY: 35vh
+      width: 95%
+      height: 15vh
 
     - sectionNo: 67
-      text: She loved the people I loved. She was a wonderful grandma to my two boys.
+      text: Attending Margo Saint James’s Coyote fundraiser in San Francisco with my son Nico.
+      posX: 5.5%
+      posY: -37vh
+      width: 89%
+
+    - sectionNo: 68
+      text: Out on a tour of Cuba with fellow seniors.
       pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
+      posX: 13px
+      posY: 38vh
+      width: 95%
+      height: 12vh
+
+    - sectionNo: 69
+      text: She ate her first and last raw oyster with me at Hog Island.
+      pos: bottom
+      posX: 13px
+      posY: 38vh
+      width: 95%
+      height: 12vh
 
     - sectionNo: 70
-      text: Most boys love their mothers, and I sure did. She was smart, funny, creative, warm, loyal, enthusiastic, and inspiring.
+      text: She fished with me. Three small salmon from 16 miles out in the Pacific in dense fog.
       pos: bottom
-      posY: 22vh
-      height: 28vh
-      applyFilter: true
+      posX: 13px
+      posY: 36vh
+      width: 95%
+      height: 14vh
 
     - sectionNo: 71
-      text: She was a lifelong pal to me.
+      text: We got one small flounder in the Bay.
       pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
+      posX: 13px
+      posY: 36vh
+      width: 95%
+      height: 14vh
 
-    - sectionNo: 75
+    - sectionNo: 72
+      text: She went back to college at 83 to do Scandinavian studies.
+      pos: bottom
+      posX: 5%
+      posY: 38vh
+      width: 90%
+      height: 12vh
+
+    - sectionNo: 74
+      text: She loved the people I loved. She was a wonderful grandma to my two boys.
+      pos: bottom
+      posX: 13px
+      posY: 36vh
+      width: 95%
+      height: 14vh
+
+    - sectionNo: 78
+      text: Most boys love their mothers,
+
+
+        and I sure did. She was smart,
+
+
+        funny, creative, warm, loyal,
+
+
+        enthusiastic, and inspiring.
+      posX: 50%
+      posY: -36vh
+      width: 46%
+      textAlign: right
+
+    - sectionNo: 79
+      text: She was a lifelong 
+        
+        
+        pal to me.
+      posX: 60%
+      posY: -36vh
+      width: 35%
+      textAlign: right
+
+    - sectionNo: 83
       text: Time finally caught up with her, and she passed at age 89. Her memorial was held at the Unity Temple that she had helped save and restore. Although she wasn't constantly on the phone anymore like she always had been, hundreds turned out to honor her and remember the splendid life she had led.
       pos: bottom
-      applyFilter: true
-
-    - sectionNo: 79
-      text: My amazing mom.
-      pos: bottom
-      posY: 30vh
+      posX: 12px
+      posY: 28.5vh
+      width: 98%
       height: 20vh
-      applyFilter: true
+
+    - sectionNo: 87
+      text: My amazing mom.
+      posX: 50%
+      posY: -39vh
+      width: 46%
+      textAlign: right
 
   galleryItems:
-    - sectionNo: 79
-      posX: 70%
-      posY: 15vh
+    - sectionNo: 56
+      posX: 37.5%
+      posY: 25vh
       caption: Read notes from Elsi's visit
       thumbnailImg: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597280413/Archives/05.%20My%20Amazing%20Mom/Notes%20from%20Elsi%27s%20Visit/Notes_from_trip_thumbnail.jpg
       commonPathStdRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597280414/Archives/05.%20My%20Amazing%20Mom/Notes%20from%20Elsi%27s%20Visit/Notes_from_trip_
@@ -1487,7 +1484,7 @@ portraitLayout:
 
 mobileLayout:
   noSections: 93
-  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/05.%20My%20Amazing%20Mom/sections-images/portrait/my-amazing-mom_768x1024-section_
+  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1/Archives/05.%20My%20Amazing%20Mom/sections-images/portrait/my-amazing-mom_768x1024-section_
   textList:
     - sectionNo: 1
       text: >-
