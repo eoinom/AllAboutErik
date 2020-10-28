@@ -882,10 +882,6 @@ export default {
 
 .galleryBox {
   position: absolute;
-  // height: 420px;
-  // width: 420px;
-  // height: 17.13586vw;
-  // width: 17.13586vw;
   height: 23vw;
   width: 23vw;
 }
@@ -954,12 +950,10 @@ export default {
   transition: inherit;
   width: 100%;
   padding: 0 20px 0 26px;
-  // font-size: 53px;
-  // line-height: 53px;
-  // letter-spacing: 9px;
-  font-size: 2.162382vw;
-  line-height: 2.162382vw;
-  letter-spacing: 0.367197vw;
+  --fontSize: 2.162382vw;
+  font-size: var(--fontSize);
+  line-height: var(--fontSize);
+  letter-spacing: calc(0.17 * var(--fontSize));
 }
 
 .absCenter {
@@ -1093,7 +1087,14 @@ body {
   }
   .headerText {
     --font-size: 1.1rem;
-  }  
+  }
+  .galleryBox {
+    height: 40vw;
+    width: 40vw;
+  }
+  .thumbnailCaption {
+    --fontSize: 4.5vw;
+  }
 }
 @media only screen and (max-width: 375px) {
   .headerText {

@@ -1489,8 +1489,8 @@ mobileLayout:
     - sectionNo: 1
       text: >-
         My mom Elsie was born in 1914. Her parents were Dietrich Lunde and Marianne Larsen.
-      posX: 5%
-      posY: -37vh
+      posX: 6%
+      posY: -35vh
       width: 50%
       textAlign: left
 
@@ -1510,14 +1510,14 @@ mobileLayout:
 
         Here's little Elsie.
       pos: bottom
-      posY: -37vh
-      height: 40vh
+      posY: -35vh
+      height: 39.2vh
 
     - sectionNo: 4
       text: Here she is with her older sister Ruth.
-      posX: 5%
-      posY: 35vh
-      width: 90%
+      posX: 6%
+      posY: 34.5vh
+      width: 88%
       textAlign: left
 
     - sectionNo: 6
@@ -1525,16 +1525,16 @@ mobileLayout:
 
 
         brother Walter.
-      posX: 5%
-      posY: -37vh
-      width: 90%
+      posX: 6%
+      posY: -36vh
+      width: 88%
       textAlign: right
 
     - sectionNo: 7
       text: The whole family.
-      posX: 5%
+      posX: 6%
       posY: -36vh
-      width: 90%
+      width: 88%
       textAlign: right
 
     - sectionNo: 8
@@ -1542,44 +1542,44 @@ mobileLayout:
 
 
         swimming class.
-      posX: 5%
+      posX: 6%
       posY: -37vh
-      width: 90%
+      width: 88%
       textAlign: right
 
     - sectionNo: 9
       text: Dance class.
-      posX: 5%
+      posX: 6%
       posY: -37vh
-      width: 90%
+      width: 88%
       textAlign: right
 
     - sectionNo: 10
       text: With her brother and mom.
-      posX: 5%
+      posX: 6%
       posY: 36vh
-      width: 90%
+      width: 88%
       textAlign: left
 
     - sectionNo: 11
       text: With her mom and older sister on the boat to Norway in 1927.
-      posX: 5%
-      posY: 35vh
-      width: 90%
+      posX: 6%
+      posY: 34.5vh
+      width: 88%
       textAlign: left
 
     - sectionNo: 13
       text: The young lady comes of age.
-      posX: 5%
+      posX: 6%
       posY: 36vh
-      width: 90%
+      width: 88%
       textAlign: left
 
     - sectionNo: 14
       text: At the prom.
-      posX: 5%
+      posX: 6%
       posY: 36vh
-      width: 90%
+      width: 88%
       textAlign: left
 
     - sectionNo: 16
@@ -1594,9 +1594,6 @@ mobileLayout:
       posX: 3.5%
       posY: -35vh
       width: 69%
-      # posY: -47vh
-      # pos: left
-      # width: 80%
 
     - sectionNo: 19
       text: They got
@@ -1613,50 +1610,50 @@ mobileLayout:
 
     - sectionNo: 20
       text: It was the start of a wonderful lifelong partnership.
-      posX: 5%
-      posY: 35vh
-      width: 90%
+      posX: 6%
+      posY: 34.5vh
+      width: 88%
       textAlign: left
 
     - sectionNo: 23
       text: Along came little Erik.
-      posX: 5%
+      posX: 6%
       posY: -18vh
       width: 35%
       textAlign: left
 
     - sectionNo: 29
       text: She had a second son, my brother Evan.
-      posX: 6%
-      posY: -36vh
+      posX: 6.5%
+      posY: -34vh
       width: 45%
       textAlign: left
 
     - sectionNo: 30
       text: We went on family trips and excursions.
       posX: 6%
-      posY: 35vh
+      posY: 34.5vh
       width: 88%
       textAlign: left
 
     - sectionNo: 32
       text: Here's a handmade invite she made for a circus themed lunch she threw for me.
       posX: 6%
-      posY: 28vh
+      posY: 27vh
       width: 88%
       textAlign: left
 
     - sectionNo: 33
       text: My cowboy birthday party.
       posX: 6%
-      posY: 30vh
+      posY: 27vh
       width: 88%
       textAlign: left
 
     - sectionNo: 34
       text: We admired my little pet robin Chirpy together.
       posX: 6%
-      posY: 30vh
+      posY: 27vh
       width: 88%
       textAlign: left
 
@@ -1665,21 +1662,16 @@ mobileLayout:
       posX: 6%
       posY: 32vh
       width: 88%
-      textAlign: left
 
     - sectionNo: 36
       text: The whole family in ’59.
       posX: 6%
-      posY: 30vh
+      posY: 27vh
       width: 88%
       textAlign: left
 
     - sectionNo: 37
       text: At this time my mother's involvement in civic affairs really began to gather steam.
-      # pos: bottom
-      # posY: 25vh
-      # height: 25vh
-      # applyFilter: true
       posX: 14%
       posY: -5vh
       width: 73%
@@ -1692,11 +1684,9 @@ mobileLayout:
 
 
         I gave her an orchid I had grown.
-      # pos: bottom
-      # applyFilter: true
-      posX: 5%
+      posX: 6%
       posY: -35vh
-      width: 91%
+      width: 88%
 
     - sectionNo: 39
       text: Here she is with Liv Ullmann, a big UN supporter.
@@ -1719,42 +1709,38 @@ mobileLayout:
       height: 45vh
       applyFilter: true
 
-    - sectionNo: 46
+    - sectionNo: 49
       text: Frank Lloyd Wright and Ernest Hemingway were two of Oak park's most notable former residents. When my mom heard Frank Lloyd Wright's old home had been sold, and the new owner planed extensive remodeling, she swung into action. She organized a committee and raised the money to save the house. The home and studio are now a National Historic landmark. Elsie was instrumental in the founding of the Frank Lloyd Wright Preservation Trust and helped pioneer and promote walks and visits to local homes built by Wright. Last year 65,000 people walked this Frank Lloyd Wright trail. The trust also raised the money to restore the famous Unity Temple. She was personal friends with the architect’s son Eric Wright.
-      pos: bottom
-      applyFilter: true
-
-    - sectionNo: 48
-      text: I had the same English teacher that taught Ernest Hemingway. To honour Hemingway as an Oak Park boy, my mom successfully pushed to have the author honoured with his own postage stamp.
-      pos: bottom
-      applyFilter: true
-
-    - sectionNo: 50
-      text: The longest project my mom took part in, was her work with the Oak Park Council of International Affairs. She started a program called “School to School”. She traveled to Washington DC and had a meeting with Sargent Shriver in ‘63 or ‘64 asking him how Oak Park could contribute to the Peace Corps and the United Nations. He suggested she get Oak Park schools involved with a program by which money could be raised, and schools built in third world countries worldwide. The concept called for money coming from three sources. One third from the local people who would build the school, one third from the US government on behalf of the Peace Corps, and the final third raised from contributions from local schools in Oak Park.
       pos: bottom
       posY: 5vh
       height: 45vh
       applyFilter: true
 
     - sectionNo: 51
-      text: The distinguished citizen's award.
+      text: I had the same English teacher that taught Ernest Hemingway. To honour Hemingway as an Oak Park boy, my mom successfully pushed to have the author honoured with his own postage stamp.
       pos: bottom
-      posY: 35vh
-      height: 15vh
+      posY: 11.5vh
+      height: 38.5vh
       applyFilter: true
 
     - sectionNo: 53
-      text: The process involved my mom contacting Peace Corps volunteers working around the world, and asking them if they knew any local villages in the areas where they worked who might be interested in taking part in a project to erect their own school. If one of the volunteers had an idea and wanted to be involved, my mom would ask them to take pictures of the place, and on their next trip back to the states come to Oak Park and appear with my mom at a local Oak Park school assemblies to solicit contributions for the building program.
+      text: The distinguished citizen's award.
+      posX: 6%
+      posY: 32vh
+      width: 88%
+
+    - sectionNo: 54
+      text: The longest project my mom took part in, was her work with the Oak Park Council of International Affairs. She started a program called “School to School”. She traveled to Washington DC and had a meeting with Sargent Shriver in ‘63 or ‘64 asking him how Oak Park could contribute to the Peace Corps and the United Nations. He suggested she get Oak Park schools involved with a program by which money could be raised, and schools built in third world countries worldwide. The concept called for money coming from three sources. One third from the local people who would build the school, one third from the US government on behalf of the Peace Corps, and the final third raised from contributions from local schools in Oak Park.
       pos: bottom
       posY: 5vh
       height: 45vh
       applyFilter: true
 
-    - sectionNo: 54
-      text: The accolades kept coming.
+    - sectionNo: 55
+      text: The process involved my mom contacting Peace Corps volunteers working around the world, and asking them if they knew any local villages in the areas where they worked who might be interested in taking part in a project to erect their own school. If one of the volunteers had an idea and wanted to be involved, my mom would ask them to take pictures of the place, and on their next trip back to the states come to Oak Park and appear with my mom at a local Oak Park school assemblies to solicit contributions for the building program.
       pos: bottom
-      posY: 25vh
-      height: 25vh
+      posY: 5vh
+      height: 45vh
       applyFilter: true
 
     - sectionNo: 56
@@ -1765,91 +1751,91 @@ mobileLayout:
       applyFilter: true
 
     - sectionNo: 58
+      text: The accolades kept coming.
+      posX: 7%
+      posY: 0vh
+      width: 88%
+
+    - sectionNo: 66
       text: She worked very hard but was always a game and adventurous gal. Here she is riding a donkey in Santorini.
       pos: bottom
       posY: 25vh
       height: 25vh
-      applyFilter: true
-
-    - sectionNo: 59
-      text: Attending Margo Saint James’s Coyote fundraiser in San Francisco with my son Nico.
-      pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
-
-    - sectionNo: 60
-      text: Out on a tour of Cuba with fellow seniors.
-      pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
-
-    - sectionNo: 61
-      text: She ate her first and last raw oyster with me at Hog Island.
-      pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
-
-    - sectionNo: 62
-      text: She fished with me. Three small salmon from 16 miles out in the Pacific in dense fog.
-      pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
-
-    - sectionNo: 63
-      text: We got one small flounder in the Bay.
-      pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
-
-    - sectionNo: 64
-      text: She went back to college at 83 to do Scandinavian studies.
-      pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
 
     - sectionNo: 67
-      text: She loved the people I loved. She was a wonderful grandma to my two boys.
+      text: Attending Margo Saint James’s Coyote fundraiser in San Francisco with my son Nico.
+      posX: 6%
+      posY: -34vh
+      width: 88%
+
+    - sectionNo: 68
+      text: Out on a tour of Cuba with fellow seniors.
       pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
+      posY: 32vh
+      height: 18vh
+
+    - sectionNo: 69
+      text: She ate her first and last raw oyster with me at Hog Island.
+      pos: bottom
+      posY: 32vh
+      height: 18vh
 
     - sectionNo: 70
-      text: Most boys love their mothers, and I sure did. She was smart, funny, creative, warm, loyal, enthusiastic, and inspiring.
+      text: She fished with me. Three small salmon from 16 miles out in the Pacific in dense fog.
       pos: bottom
-      posY: 22vh
-      height: 28vh
-      applyFilter: true
+      posY: 29vh
+      height: 21vh
 
     - sectionNo: 71
-      text: She was a lifelong pal to me.
+      text: We got one small flounder in the Bay.
       pos: bottom
-      posY: 25vh
-      height: 25vh
-      applyFilter: true
+      posY: 32vh
+      height: 18vh
 
-    - sectionNo: 75
+    - sectionNo: 72
+      text: She went back to college at 83 to do Scandinavian studies.
+      pos: bottom
+      posY: 33vh
+      height: 17vh
+
+    - sectionNo: 74
+      text: She loved the people I loved. She was a wonderful grandma to my two boys.
+      pos: bottom
+      posY: 29vh
+      height: 21vh
+
+    - sectionNo: 78
+      text: Most boys love their mothers, and I sure did. She was smart, funny, creative, warm, loyal, enthusiastic, and inspiring.
+      posX: 30%
+      posY: -36vh
+      width: 64%
+      textAlign: right
+
+    - sectionNo: 79
+      text: She was a lifelong 
+        
+        
+        pal to me.
+      posX: 30%
+      posY: -36vh
+      width: 64%
+      textAlign: right
+
+    - sectionNo: 83
       text: Time finally caught up with her, and she passed at age 89. Her memorial was held at the Unity Temple that she had helped save and restore. Although she wasn't constantly on the phone anymore like she always had been, hundreds turned out to honor her and remember the splendid life she had led.
       pos: bottom
       applyFilter: true
 
-    - sectionNo: 79
+    - sectionNo: 87
       text: My amazing mom.
       pos: bottom
-      posY: 30vh
-      height: 20vh
-      applyFilter: true
+      posY: 35vh
+      height: 15vh
 
   galleryItems:
-    - sectionNo: 79
-      posX: 70%
-      posY: 15vh
+    - sectionNo: 56
+      posX: 55%
+      posY: -30vh
       caption: Read notes from Elsi's visit
       thumbnailImg: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597280413/Archives/05.%20My%20Amazing%20Mom/Notes%20from%20Elsi%27s%20Visit/Notes_from_trip_thumbnail.jpg
       commonPathStdRes: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1597280414/Archives/05.%20My%20Amazing%20Mom/Notes%20from%20Elsi%27s%20Visit/Notes_from_trip_
