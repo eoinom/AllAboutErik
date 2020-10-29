@@ -1122,9 +1122,12 @@ body {
   #header {
     padding: 130px 50px 30px 50px !important;
   }
+  .thumbnailCaption {
+    --fontSize: 3vw;
+  }
 }
 
-/* iPad */
+/* iPad only */
 @media only screen and (min-width: 767.98px) and (max-width: 768.02px) {
   #header {
     padding: 130px 40px 40px 40px !important;
