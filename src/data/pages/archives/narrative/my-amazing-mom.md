@@ -43,7 +43,9 @@ landscapeLayout:
         The family moved to Oak Park Illinois in 1916. My mom lived there for
         the rest of her life. She loved Oak Park.
 
+
         &nbsp;
+
 
         Here's little Elsie.
       posX: 60%
@@ -400,7 +402,9 @@ fiveBySevenLayout:
         The family moved to Oak Park Illinois in 1916. My mom lived there for
         the rest of her life. She loved Oak Park.
 
+
         &nbsp;
+
 
         Here's little Elsie.
       posX: 4%
@@ -753,6 +757,7 @@ squareLayout:
         and Marianne had five kids together, the youngest of which was my mom.
         The family moved to Oak Park Illinois in 1916. My mom lived there for
         the rest of her life. She loved Oak Park.
+
 
         &nbsp;
 
@@ -1504,6 +1509,7 @@ mobileLayout:
         and Marianne had five kids together, the youngest of which was my mom.
         The family moved to Oak Park Illinois in 1916. My mom lived there for
         the rest of her life. She loved Oak Park.
+
 
         &nbsp;
 
