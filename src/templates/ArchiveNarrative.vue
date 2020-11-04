@@ -39,7 +39,7 @@
                 class="headerOverlay link pt-3"
               >
                 <p class="headerText mt-n1 mt-sm-0">CLICK</p>
-                <p class="headerText">TO SEE THE GALLERY</p>
+                <p class="headerText">TO VIEW THE GALLERY</p>
               </g-link>
             </div>
           </div>
@@ -69,11 +69,27 @@
           </g-link>
         </header>
 
-        <!-- BACK TO ARCHIVES LINK (AT END) -->
-        <g-link v-else-if="s.backLink" to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchivesEnd">
-          <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png"  class="backToArchivesEndImg"/>
-          <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left-yellow.png" class="backToArchivesEndImg-hover" />
-        </g-link>
+        <!-- BACK TO ARCHIVES LINK (AT END) -->        
+        <template v-else-if="s.backLink">
+          <template v-if="titleSlug == 'my-dad-earl'">
+            <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchivesEndEarl">
+              <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png"  class="backToArchivesEndImg"/>
+              <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left-yellow.png" class="backToArchivesEndImg-hover" />
+            </g-link>
+
+            <g-link :to="`/archives/${titleSlug}-gallery`" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="View the Gallery" class="toEarlGalleryEnd">
+              <g-image alt="View the Gallery" src="~/assets/images/earl-gallery-menu.png" class="backToArchivesEndImg pt-3 pt-md-2" />
+              <g-image alt="View the Gallery" src="~/assets/images/earl-gallery-menu-yellow.png" class="backToArchivesEndImg-hover pt-3 pt-md-2" />
+            </g-link>
+          </template>
+
+          <template v-else>
+            <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchivesEnd">
+              <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png"  class="backToArchivesEndImg"/>
+              <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left-yellow.png" class="backToArchivesEndImg-hover" />
+            </g-link>
+          </template>
+        </template>
         
         <div 
           v-else 
@@ -734,9 +750,20 @@ export default {
   top: 22vh;
   transform: translate3d(-50%, -50%, 0);
 }
+.backToArchivesEndEarl {
+  position: absolute;
+  left: 40%;
+  top: 6vh;
+  transform: translate3d(-50%, -50%, 0);
+}
+.toEarlGalleryEnd {
+  position: absolute;
+  left: 60%;
+  top: -6vh;
+  transform: translate3d(-50%, -50%, 0);
+}
 .backToArchivesEndImg,
 .backToArchivesEndImg-hover {
-  // width: 10vw;
   width: 30vw;
   min-width: 200px;
   max-width: 350px;
@@ -751,11 +778,15 @@ export default {
 
 @media (hover) {
   .backToArchives:hover .backToArchivesImg-hover,
-  .backToArchivesEnd:hover .backToArchivesEndImg-hover {
+  .backToArchivesEnd:hover .backToArchivesEndImg-hover,
+  .backToArchivesEndEarl:hover .backToArchivesEndImg-hover,
+  .toEarlGalleryEnd:hover .backToArchivesEndImg-hover {
     display: inline-block;
   }
   .backToArchives:hover .backToArchivesImg,
-  .backToArchivesEnd:hover .backToArchivesEndImg {
+  .backToArchivesEnd:hover .backToArchivesEndImg,
+  .backToArchivesEndEarl:hover .backToArchivesEndImg,
+  .toEarlGalleryEnd:hover .backToArchivesEndImg {
     display: none;
   }
 }
@@ -878,6 +909,9 @@ export default {
 }
 .link .headerText {
   cursor: pointer;
+}
+.headerOverlay.link:hover .headerText {
+  color: #EECF49;
 }
 
 .galleryBox {

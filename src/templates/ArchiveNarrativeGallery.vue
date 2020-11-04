@@ -459,6 +459,9 @@ export default {
 .link .headerText {
   cursor: pointer;
 }
+.headerOverlay.link:hover .headerText {
+  color: #EECF49;
+}
 
 #mainContent {
   max-width: calc(var(--maxPerRow) * var(--boxSize) + (var(--maxPerRow - 1) * var(--gridGap)) + 2 * 16px);
