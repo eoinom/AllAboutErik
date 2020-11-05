@@ -242,9 +242,7 @@ query ($id: ID!) {
         alignItems
         textAlign
         fontSize
-        lineHeight
         applyFilter
-        showScrollbar
       }
       galleryItems {
         sectionNo
