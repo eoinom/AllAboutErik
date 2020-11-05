@@ -24,15 +24,15 @@
 
               <img :src="headerImg.img" />
 
-              <div class="headerOverlay" :style="overlayStyles">
-                <g-image v-if="iImg == 1" :src="titleImg" :alt="node.title + ' title image'" class="titleImg mt-4 mt-sm-0" />
-                <p v-if="iImg == headerTextTileIndex" class="headerText mt-n1 mt-sm-0">SCROLL</p>
-                <p v-if="iImg == headerTextTileIndex" class="headerText">TO READ MY</p>
-                <p v-if="iImg == headerTextTileIndex" class="headerText">RECOLLECTIONS</p>
+              <div v-if="iImg == 1" class="headerOverlay" :style="overlayStyles">
+                <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg mt-4 mt-sm-0" />
+                <p class="headerText mt-n1 mt-sm-0">SCROLL</p>
+                <p class="headerText">TO READ MY</p>
+                <p class="headerText">RECOLLECTIONS</p>
               </div>
 
               <g-link 
-                v-if="showGalleryLink && iImg == headerGalleryTextTileIndex" 
+                v-if="showGalleryLink && iImg == 4" 
                 :to="`/archives/${titleSlug}-gallery`" 
                 v-b-tooltip.hover.bottom="{ variant: 'secondary' }" 
                 title="Click to see the gallery" 
@@ -50,7 +50,7 @@
               :slides="node.headerMobileImages" 
               :interval="4500" 
               borderRadius="15px" 
-              :ref="'slideshow'+iSlideshow" 
+              ref="portraitSlideshow" 
               class="headerBoxPortrait" 
             >
               <div class="headerOverlay" :style="overlayStyles">
@@ -58,6 +58,17 @@
                 <p class="headerText">SCROLL</p>
                 <p class="headerText">TO READ MY</p>
                 <p class="headerText">RECOLLECTIONS</p>
+
+                <g-link 
+                  v-if="showGalleryLink" 
+                  :to="`/archives/${titleSlug}-gallery`" 
+                  v-b-tooltip.hover.bottom="{ variant: 'secondary' }" 
+                  title="Click to see the gallery" 
+                  class="headerOverlay link pt-3"
+                >
+                  <p class="headerText mt-n1 mt-sm-0">CLICK</p>
+                  <p class="headerText">TO VIEW THE GALLERY</p>
+                </g-link>
               </div>
             </SlideshowImages>
           </div>
@@ -515,27 +526,6 @@ export default {
         pages.push(url)
       }
       return pages
-    },
-    headerTextTileIndex() {
-      // if (this.windowWidth < 576 && this.aspectRatio < 0.97) {
-      //   return 3
-      // // } else if (this.windowWidth >= 1200 && this.aspectRatio > 1.5 && this.aspectRatio < 2.15) {
-      // //   return 4
-      // } else {
-      //   return 1
-      // }
-      return 1
-    },
-    headerGalleryTextTileIndex() {
-      if (this.windowWidth < 576 && this.aspectRatio < 0.97) {
-        return 3
-      // } else if (this.windowWidth >= 1200 && this.aspectRatio > 1.5 && this.aspectRatio < 2.15) {
-      //   return 4
-      } else if (this.windowWidth < 1200) {
-        return 3
-      } else {
-        return 4
-      }
     },
     showGalleryLink() {
       return this.titleSlug === 'my-dad-earl'
