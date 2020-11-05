@@ -768,6 +768,7 @@ export default {
   min-width: 200px;
   max-width: 350px;
   height: auto;
+  padding: 16px;
 }
 .backToArchivesEndImg {
   display: inline-block;
