@@ -6,40 +6,7 @@
         <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-single-line.png" class="backToArchivesImg pt-0 pt-md-2" />
         <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-single-line-yellow.png" class="backToArchivesImg-hover pt-0 pt-md-2" />
       </g-link>
-
-      <!-- STATIC HEADER IMAGES -->
-      <!-- <header id="header" class="px-3">          
-        <div v-if="node.headerImages" class="headerWrapper">
-          <div 
-            v-for="(headerImg, iImg) in node.headerImages"
-            v-show="showHeaderTile(iImg)"
-            :key="iImg"
-            class="headerBox"
-          >
-            <div v-if="headerImg.applyFilter == true" class="headerFilter" />
-
-            <img :src="headerImg.img" />
-
-            <div class="headerOverlay" :style="overlayStyles">
-              <g-image v-if="iImg == 1" :src="titleImg" :alt="node.title + ' title image'" class="titleImg mt-4 mt-sm-0" />
-              <p v-if="iImg == headerGalleryTextTileIndex" class="headerText mt-n1 mt-sm-0">SCROLL</p>
-              <p v-if="iImg == headerGalleryTextTileIndex" class="headerText">TO SEE THE GALLERY</p>
-            </div>
-
-            <g-link 
-              v-if="iImg == headerTextTileIndex" 
-              :to="`/archives/${titleSlug}`" 
-              v-b-tooltip.hover.bottom="{ variant: 'secondary' }" 
-              title="Click to read my recollections" 
-              class="headerOverlay link pt-3"
-            >
-              <p class="headerText mt-n1 mt-sm-0">CLICK</p>
-              <p class="headerText">TO READ MY RECOLLECTIONS</p>
-            </g-link>
-          </div>
-        </div>
-      </header> -->
-      <!-- HEADER -->
+      
       <header id="header">
 
         <!-- STATIC HEADER IMAGES -->
@@ -52,12 +19,6 @@
             <div v-if="headerImg.applyFilter == true" class="headerFilter" />
 
             <img :src="headerImg.img" />
-
-            <!-- <div v-if="iImg == 1" class="headerOverlay" :style="overlayStyles">
-              <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg mt-4 mt-sm-0" />
-              <p class="headerText mt-n1 mt-sm-0">SCROLL</p>
-              <p class="headerText">TO VIEW THE GALLERY</p>
-            </div> -->
 
             <div v-if="iImg == 1" class="headerOverlay headerOverlayBtm pb-4" :style="overlayStylesBtm">
               <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg mt-4 mt-sm-0" />
@@ -141,10 +102,8 @@
       <ScrollToTop
         text="BACK TO THE TOP"
         :includeArrow="true"
-      />
-      
+      />      
     </div>
-
   </Layout>
 </template>
 
@@ -296,20 +255,6 @@ export default {
         css['--gridGap'] = '30px'
       }
       return css
-    },
-    headerTextTileIndex() {
-      if (this.windowWidth < 576 && this.aspectRatio < 0.97) {
-        return 3
-      // } else if (this.windowWidth >= 1200 && this.aspectRatio > 1.5 && this.aspectRatio < 2.15) {
-      //   return 4
-      } else if (this.windowWidth < 1200) {
-        return 3
-      } else {
-        return 4
-      }
-    },
-    headerGalleryTextTileIndex() {
-      return 1
     }
   },
 
@@ -334,19 +279,6 @@ export default {
       window.removeEventListener('orientationchange', this.updateWindowDims, false)
       document.removeEventListener('keydown', this.keyDownHandler, false)
       document.removeEventListener('scroll', this.scrollHandler, false)
-    },
-    showHeaderTile(index) {
-      if (this.windowWidth >= 1200 && this.aspectRatio < 2.15) {
-        return index <= 5                               // show all six tiles
-      } else if (this.windowWidth >= 1200 && this.aspectRatio >= 2.15) {
-        return index <= 2
-      } else if (this.aspectRatio < 0.65) {
-        return index == 1 || index == 3 || index == 5   // show three tiles
-      } else if (this.aspectRatio < 0.97) {
-        return index == 1 || index == 3                 // show two tiles
-      } else {
-        return index == 1                               // show one tile
-      }
     },
     onGalleryImgClick(img_Id) {
       if (this.zoomedImgIndex == img_Id || this.windowWidth < 768) {
@@ -451,11 +383,8 @@ export default {
 #header {
   position: relative;
   text-align: center;
-  // padding-top: 12.5px;
-  // padding-bottom: 12.5px;
   width: 100%;
   margin: 0 auto;
-  // padding: 0 80px !important;
   padding: 130px 50px 0px 50px !important;
 }
 #header:after  {
@@ -496,18 +425,13 @@ export default {
 }
 .headerBoxPortrait {
   width: 100%;
-  // max-width: 821px;
   position: relative;
   place-self: center;
-
   height: 100%;
-  // max-width: 660px;
 }
 .headerBox > img {
   border-radius: 15px;
   width: 100%;
-  // height: auto;
-
   height: 100%;
   object-fit: cover;
 }
@@ -571,7 +495,6 @@ export default {
 
 #mainContent {
   max-width: calc(var(--maxPerRow) * var(--boxSize) + (var(--maxPerRow - 1) * var(--gridGap)) + 2 * 16px);
-  // width: 100%;
   width: 70%;
   margin: 0 auto;
 }
@@ -579,11 +502,9 @@ export default {
 .galleryWrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--boxSize), 1fr));
-  // grid-template-columns: repeat(auto-fit, var(--boxSize));
   grid-auto-flow: row;
   grid-gap: var(--gridGap);
   align-items: center;
-  // justify-content: center;
   justify-content: left;
 }
 .galleryBox {
@@ -592,7 +513,6 @@ export default {
   max-width: var(--boxSize);
   height: var(--boxSize);
   position: relative;
-  // place-self: center;
   place-self: left;
   cursor: pointer;
 }
@@ -632,41 +552,12 @@ export default {
   transition: all 0.3s linear;
 }
 
-// .hideOnHover {
-//   opacity: 1;
-//   transition: all 0.5s ease 0s;
-// }
-// .galleryBox:hover .hideOnHover {
-//   opacity: 0;
-// }
-// .showOnHover {
-//   opacity: 0;
-//   transition: all 0.5s ease 0s;
-// }
-// .galleryBox:hover .showOnHover {
-//   opacity: 1;
-// }
-
 
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media only screen and (max-width: 575.98px) {
-  // .titleImg {
-  //   max-width: 85%;
-  //   padding: 0 32px 8px 32px;
-  // }
-  // .headerOverlay {
-  //   padding-bottom: 0px;
-  // }
-  // .backToArchives {
-  //   top: 20px;
-  //   right: 20px;
-  // }
-  // .backToArchivesImg {
-  //   max-width: 100px;
-  // }
   #mainContent {
     width: 100%;
   }
@@ -674,38 +565,15 @@ export default {
     grid-gap: 16px;
     justify-content: center;
   }
-  #header {
-    // display: flex;
-    // align-items: center;
-    // height: 100vh;
-    // transform: translate3d(0, 0, 0);    
+  #header {  
     padding: 110px 16px 0px 16px !important;
   }
-  // .headerWrapper {
-  //   grid-gap: 15px;
-  // }
-  // .headerText {
-  //   font-size: 1.25rem;
-  //   line-height: 1.8145rem;
-  //   letter-spacing: 0.3629rem;
-  // }
-  // .headerText:nth-of-type(2) {
-  //   font-size: 0.9274rem;
-  //   line-height: 1.3306rem;
-  // }
 
   .backToArchives {
     // top: 48px;
     top: 30px;
     right: 20px;
   }
-  // #header {
-  //   display: flex;
-  //   align-items: center;
-  //   height: 100vh;
-  //   transform: translate3d(0, 0, 0);
-  //   padding: 90px 4px 4px 4px !important;
-  // }
   .headerWrapper {
     grid-gap: 15px;
   }
@@ -719,10 +587,6 @@ export default {
   .headerText {
     --font-size: 1.1rem;
   }
-  // .galleryBox {
-  //   height: 40vw;
-  //   width: 40vw;
-  // }
   .thumbnailCaption {
     --fontSize: 4.5vw;
   }
@@ -733,22 +597,10 @@ export default {
   }
 }
 @media only screen and (max-width: 375px) {
-  // #header {
-  //   padding: 0 59px !important;
-  // }
   .headerText {
     --font-size: 1rem;
   }
 }
-// @media only screen and (max-width: 320px) {
-//   #header {
-//     padding: 0 54px !important;
-//   }
-//   .headerText:nth-of-type(2) {
-//     font-size: 0.835rem;
-//     line-height: 1.197rem;
-//   }
-// }
 
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {  
@@ -759,9 +611,6 @@ export default {
   #header {
     padding: 130px 30px 0px 30px !important;
   }
-  // .backToArchivesImg {
-  //   max-width: 110px;
-  // }
   .galleryWrapper {
     grid-gap: 16px;
     justify-content: center;
@@ -789,9 +638,6 @@ export default {
   #header {
     padding: 130px 35px 0px 35px !important;
   }
-  // .backToArchivesImg {
-  //   max-width: 120px;
-  // }
   .sectionHeading {
     font-size: 32px;
     letter-spacing: 3px;
@@ -799,17 +645,9 @@ export default {
   }
 }
 
-/* iPad only */
-// @media only screen and (min-width: 767.98px) and (max-width: 768.02px) {
-//   #header {
-//     padding: 130px 40px 0px 40px !important;
-//   }
-// }
-
 /* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
   .galleryWrapper {
-    // grid-template-columns: repeat(auto-fit, minmax(var(--boxSize), 1fr));
     justify-content: center;
     grid-gap: 24px;
   }
@@ -823,9 +661,6 @@ export default {
   #header {
     padding: 130px 35px 0px 35px !important;
   }
-  // .backToArchivesImg {
-  //   max-width: 130px;
-  // }
   .sectionHeading {
     font-size: 34px;
     letter-spacing: 3px;
@@ -855,21 +690,5 @@ export default {
     top: calc(175px - 16px);
   }
 }
-
-/* Special */
-// @media only screen and (max-width: 1199.98px) {
-//   .headerWrapper {
-//     grid-template-columns: 1fr;
-//   }
-//   .headerText {
-//     font-size: 2.841613vw;
-//     line-height: 4.124924vw;
-//     letter-spacing: 0.824985vw;
-//   }
-//   .headerText:nth-of-type(2) {
-//     font-size: 2.108294vw;
-//     line-height: 3.024945vw;
-//   }
-// }
 
 </style>
