@@ -3,14 +3,12 @@
     <div v-on:[eventName]="closeLargeImg()" class="pb-5">
 
       <g-link to="/archives/menu" v-b-tooltip.hover.bottom="{ variant: 'secondary' }" title="Back to Archives menu" class="backToArchives">
-        <!-- <g-image v-if="windowWidth >= 1200" alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-left.png" />
-        <g-image v-else alt="Back to Archives" src="~/assets/images/back-to-archives-with-arrow-on-top.png" class="backToArchivesImg" /> -->
-        <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-single-line.png" class="backToArchivesImg pt-3 pt-md-2" />
-        <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-single-line-yellow.png" class="backToArchivesImg-hover pt-3 pt-md-2" />
+        <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-single-line.png" class="backToArchivesImg pt-0 pt-md-2" />
+        <g-image alt="Back to Archives" src="~/assets/images/back-to-archives-single-line-yellow.png" class="backToArchivesImg-hover pt-0 pt-md-2" />
       </g-link>
 
-      <header id="header" class="px-3">          
-        <!-- STATIC HEADER IMAGES -->
+      <!-- STATIC HEADER IMAGES -->
+      <!-- <header id="header" class="px-3">          
         <div v-if="node.headerImages" class="headerWrapper">
           <div 
             v-for="(headerImg, iImg) in node.headerImages"
@@ -40,8 +38,76 @@
             </g-link>
           </div>
         </div>
+      </header> -->
+      <!-- HEADER -->
+      <header id="header">
+
+        <!-- STATIC HEADER IMAGES -->
+        <div v-if="!isPortrait && node.headerImages" class="headerWrapper">
+          <div 
+            v-for="(headerImg, iImg) in node.headerImages"
+            :key="iImg"
+            class="headerBox"
+          >
+            <div v-if="headerImg.applyFilter == true" class="headerFilter" />
+
+            <img :src="headerImg.img" />
+
+            <!-- <div v-if="iImg == 1" class="headerOverlay" :style="overlayStyles">
+              <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg mt-4 mt-sm-0" />
+              <p class="headerText mt-n1 mt-sm-0">SCROLL</p>
+              <p class="headerText">TO VIEW THE GALLERY</p>
+            </div> -->
+
+            <div v-if="iImg == 1" class="headerOverlay headerOverlayBtm pb-4" :style="overlayStylesBtm">
+              <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg mt-4 mt-sm-0" />
+              <p class="headerText mt-n1 mt-sm-0">SCROLL</p>
+              <p class="headerText">TO VIEW THE GALLERY</p>
+            </div>
+
+            <g-link 
+              v-if="iImg == 4" 
+              :to="`/archives/${titleSlug}`" 
+              v-b-tooltip.hover.bottom="{ variant: 'secondary' }" 
+              title="Click to see the gallery" 
+              class="headerOverlay link pt-3"
+            >
+              <p class="headerText mt-n1 mt-sm-0">CLICK</p>
+              <p class="headerText">TO READ MY</p>
+              <p class="headerText">RECOLLECTIONS</p>
+            </g-link>
+          </div>
+        </div>
+
+        <!-- PORTRAIT SLIDESHOW -->
+        <div v-else-if="isPortrait && node.headerMobileImages" class="headerWrapperPortrait">
+          <SlideshowImages 
+            :slides="node.headerMobileImages" 
+            :interval="4500" 
+            borderRadius="15px" 
+            ref="portraitSlideshow" 
+            class="headerBoxPortrait" 
+          >
+            <div class="headerOverlay headerOverlayBtm" :style="overlayStylesBtm" style="bottom:0px">
+              <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg" />
+              <p class="headerText">SCROLL</p>
+              <p class="headerText">TO VIEW THE GALLERY</p>
+
+              <g-link 
+                :to="`/archives/${titleSlug}`" 
+                v-b-tooltip.hover.bottom="{ variant: 'secondary' }" 
+                title="Click to see the gallery" 
+                class="link"
+              >
+                <p class="headerText mt-n1 mt-sm-0">CLICK</p>
+                <p class="headerText">TO READ MY</p>
+                <p class="headerText">RECOLLECTIONS</p>
+              </g-link>
+            </div>
+          </SlideshowImages>
+        </div>
       </header>
-      
+
 
       <div id="mainContent" class="px-3 pt-5 mt-4" :style="mainContentStyles">
         <!-- IMAGE GALLERY SECTIONS -->
@@ -96,6 +162,10 @@ query ($id: ID!) {
       img
       applyFilter
     }
+    headerMobileImages {
+      img
+      applyFilter
+    }
     imageGallery {
       commonPath
       numImages
@@ -112,6 +182,7 @@ query ($id: ID!) {
 
 <script scoped>
 import ScrollToTop from '../components/ScrollToTop.vue'
+import SlideshowImages from '../components/SlideshowImages.vue'
 const slugify = require('@sindresorhus/slugify')
 
 const keyMap = {
@@ -126,7 +197,8 @@ export default {
   },
 
   components: {
-    ScrollToTop
+    ScrollToTop,
+    'SlideshowImages': require('../components/SlideshowImages.vue').default,
   },
 
   data() {
@@ -137,7 +209,10 @@ export default {
         left: 0
       },
       applyLargeImgStyles: false,
-      eventName: null,
+      eventName: null,      
+      portraitTablet: {
+        maxAspect: 0.85
+      },
       windowWidth: 0.0,
       windowHeight: 0.0
     }
@@ -159,6 +234,9 @@ export default {
     aspectRatio() {
       return this.windowWidth / this.windowHeight
     },
+    isPortrait() {
+      return this.aspectRatio < this.portraitTablet.maxAspect
+    },
     overlayStyles() {
       let css = {}
       if (this.windowWidth < 576)
@@ -170,6 +248,11 @@ export default {
       else
         topOffset = this.node.titleImg.topOffset
       css['--titleTopOffset'] = topOffset + '%'
+      css['--titleMaxWidth'] = this.node.titleImg.maxWidth + '%'
+      return css
+    },
+    overlayStylesBtm() {
+      let css = {}
       css['--titleMaxWidth'] = this.node.titleImg.maxWidth + '%'
       return css
     },
@@ -368,10 +451,12 @@ export default {
 #header {
   position: relative;
   text-align: center;
-  padding-top: 12.5px;
-  padding-bottom: 12.5px;
+  // padding-top: 12.5px;
+  // padding-bottom: 12.5px;
   width: 100%;
   margin: 0 auto;
+  // padding: 0 80px !important;
+  padding: 130px 50px 0px 50px !important;
 }
 #header:after  {
   content : "";
@@ -392,6 +477,16 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 25px;
   justify-content: center;
+
+  height: 100%;
+  max-width: 2030px;
+  margin: 0 auto;
+}
+.headerWrapperPortrait {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+  align-content: center;
 }
 .headerBox {
   width: 100%;
@@ -399,10 +494,22 @@ export default {
   position: relative;
   place-self: center;
 }
-.headerBox img {
+.headerBoxPortrait {
+  width: 100%;
+  // max-width: 821px;
+  position: relative;
+  place-self: center;
+
+  height: 100%;
+  // max-width: 660px;
+}
+.headerBox > img {
   border-radius: 15px;
   width: 100%;
-  height: auto;
+  // height: auto;
+
+  height: 100%;
+  object-fit: cover;
 }
 .headerFilter {
   position: absolute;
@@ -426,6 +533,9 @@ export default {
   padding-right: 32px;
   padding-left: 32px;
 }
+.headerOverlayBtm {
+  bottom: 0;
+}
 
 .titleImg {
   position: relative;
@@ -440,21 +550,17 @@ export default {
   font-family: 'Lora', serif;
   font-feature-settings: 'liga';
   font-weight: 400;
-  
-  font-size: 1.264789vw;
-  line-height: 1.835985vw;
-  letter-spacing: 0.367197vw;
+
+  --font-size: 1.25rem;
+  font-size: var(--font-size);
+  line-height: calc(1.35 * var(--font-size));
+  letter-spacing: calc(0.29 * var(--font-size));
   
   text-align: center;
   text-transform: uppercase;
   margin: 0px;
   padding: 0px;
-
   cursor: context-menu;
-}
-.headerText:nth-of-type(2) {
-  font-size: 0.938392vw;
-  line-height: 1.346389vw;
 }
 .link .headerText {
   cursor: pointer;
@@ -547,20 +653,20 @@ export default {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media only screen and (max-width: 575.98px) {
-  .titleImg {
-    max-width: 85%;
-    padding: 0 32px 8px 32px;
-  }
-  .headerOverlay {
-    padding-bottom: 0px;
-  }
-  .backToArchives {
-    top: 20px;
-    right: 20px;
-  }
-  .backToArchivesImg {
-    max-width: 100px;
-  }
+  // .titleImg {
+  //   max-width: 85%;
+  //   padding: 0 32px 8px 32px;
+  // }
+  // .headerOverlay {
+  //   padding-bottom: 0px;
+  // }
+  // .backToArchives {
+  //   top: 20px;
+  //   right: 20px;
+  // }
+  // .backToArchivesImg {
+  //   max-width: 100px;
+  // }
   #mainContent {
     width: 100%;
   }
@@ -569,23 +675,56 @@ export default {
     justify-content: center;
   }
   #header {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    transform: translate3d(0, 0, 0);    
-    padding: 0 64px !important;
+    // display: flex;
+    // align-items: center;
+    // height: 100vh;
+    // transform: translate3d(0, 0, 0);    
+    padding: 110px 16px 0px 16px !important;
   }
+  // .headerWrapper {
+  //   grid-gap: 15px;
+  // }
+  // .headerText {
+  //   font-size: 1.25rem;
+  //   line-height: 1.8145rem;
+  //   letter-spacing: 0.3629rem;
+  // }
+  // .headerText:nth-of-type(2) {
+  //   font-size: 0.9274rem;
+  //   line-height: 1.3306rem;
+  // }
+
+  .backToArchives {
+    // top: 48px;
+    top: 30px;
+    right: 20px;
+  }
+  // #header {
+  //   display: flex;
+  //   align-items: center;
+  //   height: 100vh;
+  //   transform: translate3d(0, 0, 0);
+  //   padding: 90px 4px 4px 4px !important;
+  // }
   .headerWrapper {
     grid-gap: 15px;
   }
-  .headerText {
-    font-size: 1.25rem;
-    line-height: 1.8145rem;
-    letter-spacing: 0.3629rem;
+  .headerOverlay {
+    padding-bottom: 0px;
   }
-  .headerText:nth-of-type(2) {
-    font-size: 0.9274rem;
-    line-height: 1.3306rem;
+  .titleImg {
+    max-width: 100%;
+    padding: 0 32px 8px 32px;
+  }
+  .headerText {
+    --font-size: 1.1rem;
+  }
+  // .galleryBox {
+  //   height: 40vw;
+  //   width: 40vw;
+  // }
+  .thumbnailCaption {
+    --fontSize: 4.5vw;
   }
   .sectionHeading {
     font-size: 24px;
@@ -594,19 +733,22 @@ export default {
   }
 }
 @media only screen and (max-width: 375px) {
-  #header {
-    padding: 0 59px !important;
+  // #header {
+  //   padding: 0 59px !important;
+  // }
+  .headerText {
+    --font-size: 1rem;
   }
 }
-@media only screen and (max-width: 320px) {
-  #header {
-    padding: 0 54px !important;
-  }
-  .headerText:nth-of-type(2) {
-    font-size: 0.835rem;
-    line-height: 1.197rem;
-  }
-}
+// @media only screen and (max-width: 320px) {
+//   #header {
+//     padding: 0 54px !important;
+//   }
+//   .headerText:nth-of-type(2) {
+//     font-size: 0.835rem;
+//     line-height: 1.197rem;
+//   }
+// }
 
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {  
@@ -614,9 +756,12 @@ export default {
     top: 27px;
     right: 27px;
   }
-  .backToArchivesImg {
-    max-width: 110px;
+  #header {
+    padding: 130px 30px 0px 30px !important;
   }
+  // .backToArchivesImg {
+  //   max-width: 110px;
+  // }
   .galleryWrapper {
     grid-gap: 16px;
     justify-content: center;
@@ -641,15 +786,25 @@ export default {
     top: 33px;
     right: 33px;
   }
-  .backToArchivesImg {
-    max-width: 120px;
+  #header {
+    padding: 130px 35px 0px 35px !important;
   }
+  // .backToArchivesImg {
+  //   max-width: 120px;
+  // }
   .sectionHeading {
     font-size: 32px;
     letter-spacing: 3px;
     line-height: 32.67px;
   }
 }
+
+/* iPad only */
+// @media only screen and (min-width: 767.98px) and (max-width: 768.02px) {
+//   #header {
+//     padding: 130px 40px 0px 40px !important;
+//   }
+// }
 
 /* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
@@ -665,13 +820,24 @@ export default {
     top: 37px;
     right: 37px;
   }
-  .backToArchivesImg {
-    max-width: 130px;
+  #header {
+    padding: 130px 35px 0px 35px !important;
   }
+  // .backToArchivesImg {
+  //   max-width: 130px;
+  // }
   .sectionHeading {
     font-size: 34px;
     letter-spacing: 3px;
     line-height: 40px;
+  }
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) { 
+  .backToArchivesImg,
+  .backToArchivesImg-hover {
+    max-width: 300px;
   }
 }
 
@@ -691,19 +857,19 @@ export default {
 }
 
 /* Special */
-@media only screen and (max-width: 1199.98px) {
-  .headerWrapper {
-    grid-template-columns: 1fr;
-  }
-  .headerText {
-    font-size: 2.841613vw;
-    line-height: 4.124924vw;
-    letter-spacing: 0.824985vw;
-  }
-  .headerText:nth-of-type(2) {
-    font-size: 2.108294vw;
-    line-height: 3.024945vw;
-  }
-}
+// @media only screen and (max-width: 1199.98px) {
+//   .headerWrapper {
+//     grid-template-columns: 1fr;
+//   }
+//   .headerText {
+//     font-size: 2.841613vw;
+//     line-height: 4.124924vw;
+//     letter-spacing: 0.824985vw;
+//   }
+//   .headerText:nth-of-type(2) {
+//     font-size: 2.108294vw;
+//     line-height: 3.024945vw;
+//   }
+// }
 
 </style>
