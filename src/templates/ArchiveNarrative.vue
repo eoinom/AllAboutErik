@@ -24,7 +24,7 @@
 
               <img :src="headerImg.img" />
 
-              <div v-if="iImg == 1" class="headerOverlay" :style="overlayStyles">
+              <div v-if="iImg == 1" class="headerOverlay headerOverlayBtm pb-4" :style="overlayStylesBtm">
                 <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg mt-4 mt-sm-0" />
                 <p class="headerText mt-n1 mt-sm-0">SCROLL</p>
                 <p class="headerText">TO READ MY</p>
@@ -448,7 +448,7 @@ export default {
       return layout
     },
     isPortrait() {
-      return this.aspectRatio < this.portraitTablet.maxAspect
+      return this.aspectRatio < this.portraitTablet.maxAspect || this.windowWidth < 992
     },
     overlayStyles() {
       let css = {}
@@ -462,6 +462,12 @@ export default {
         topOffset = this.node.titleImg.topOffset
       css['--titleTopOffset'] = topOffset + '%'
       css['--titleMaxWidth'] = this.node.titleImg.maxWidth + '%'
+      return css
+    },
+    overlayStylesBtm() {
+      let css = {}
+      css['--titleMaxWidth'] = this.node.titleImg.maxWidth + '%'
+      css.bottom = '0px'
       return css
     },
     sections() {

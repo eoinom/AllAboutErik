@@ -49,7 +49,7 @@
             ref="portraitSlideshow" 
             class="headerBoxPortrait" 
           >
-            <div class="headerOverlay headerOverlayBtm" :style="overlayStylesBtm" style="bottom:0px">
+            <div class="headerOverlay headerOverlayBtm" :style="overlayStylesBtm">
               <g-image :src="titleImg" :alt="node.title + ' title image'" class="titleImg" />
               <p class="headerText">SCROLL</p>
               <p class="headerText">TO VIEW THE GALLERY</p>
@@ -194,25 +194,12 @@ export default {
       return this.windowWidth / this.windowHeight
     },
     isPortrait() {
-      return this.aspectRatio < this.portraitTablet.maxAspect
-    },
-    overlayStyles() {
-      let css = {}
-      if (this.windowWidth < 576)
-        var topOffset = Math.min(60, this.node.titleImg.topOffset)
-      else if (this.windowWidth < 768)
-        topOffset = Math.min(60, this.node.titleImg.topOffset)
-      else if (this.windowWidth < 992)
-        topOffset = Math.min(65, this.node.titleImg.topOffset)
-      else
-        topOffset = this.node.titleImg.topOffset
-      css['--titleTopOffset'] = topOffset + '%'
-      css['--titleMaxWidth'] = this.node.titleImg.maxWidth + '%'
-      return css
+      return this.aspectRatio < this.portraitTablet.maxAspect || this.windowWidth < 992
     },
     overlayStylesBtm() {
       let css = {}
       css['--titleMaxWidth'] = this.node.titleImg.maxWidth + '%'
+      css.bottom = '0px'
       return css
     },
     galleryImgUrls() {
