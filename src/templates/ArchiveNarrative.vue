@@ -211,6 +211,7 @@ query ($id: ID!) {
         posX
         posY
         width
+        height
         alignItems
         textAlign
         fontSize
