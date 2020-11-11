@@ -242,7 +242,6 @@ query ($id: ID!) {
         height
         alignItems
         textAlign
-        fontSize
         applyFilter
       }
       galleryItems {
