@@ -630,7 +630,7 @@ fiveBySevenLayout:
 
 squareLayout:
   noSections: 33
-  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1599696471/Archives/15.%20My%20Uncle%20Wesley/section-images/square/my-uncle-wesley_square-section_
+  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1605196563/Archives/15.%20My%20Uncle%20Wesley/section-images/square/my-uncle-wesley_1x1-section_
   textList:
     - sectionNo: 1
       text: >-
