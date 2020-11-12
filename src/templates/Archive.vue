@@ -333,7 +333,11 @@ export default {
       let urls = []
       for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
         let url = this.node.imageGallery.commonPath + i + '.jpg'
-        urls.push(url)
+        if (this.titleSlug === 'lots-of-fishing' && (i == 356 || i == 379)) {
+          continue
+        } else {
+          urls.push(url)
+        }
       }
       return urls
     },
