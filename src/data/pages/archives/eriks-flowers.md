@@ -15,7 +15,7 @@ headerSlideshowRight:
   numImages: 6
 applyCenterFilter: false
 imageGallery:
-  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1595540458/Archives/06.%20Eriks%20Flowers/gallery/eriks-flowers_gallery-img_
-  numImages: 101
+  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/Archives/06.%20Eriks%20Flowers/gallery/eriks-flowers_gallery-img_
+  numImages: 110
 ---
 I love my garden and have plenty of flowers and a little orchard. There’s plums, apples, oranges, lemons, tangerines, and persimmons. I had pears and fuji apples too, but fire blight, moving northward every year with climate change, destroyed both trees.
