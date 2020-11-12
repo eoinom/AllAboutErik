@@ -319,8 +319,8 @@ landscapeLayout:
       applyFilter: false
       
 fiveBySevenLayout:
-  noSections: 26
-  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1605052310/Archives/15.%20My%20Uncle%20Wesley/section-images/5x7/my-uncle-wesley_5x7-section_
+  noSections: 27
+  commonPath: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1605194837/Archives/15.%20My%20Uncle%20Wesley/section-images/5x7/my-uncle-wesley_5x7-section_
   textList:
     - sectionNo: 1
       pos: bottom
@@ -424,7 +424,7 @@ fiveBySevenLayout:
       width: 27%
       applyFilter: false
 
-    - sectionNo: 11
+    - sectionNo: 12
       text: >-
         Here he is in his car with my mom, grandma, and little Erik.
       pos: bottom
@@ -432,7 +432,7 @@ fiveBySevenLayout:
       height: 18vh
       applyFilter: true
 
-    - sectionNo: 12
+    - sectionNo: 13
       text: >-
         He lavished attention on me, and my little brother as well.
       pos: bottom
@@ -441,7 +441,7 @@ fiveBySevenLayout:
       width: 32.7%
       applyFilter: true
 
-    - sectionNo: 13
+    - sectionNo: 14
       text: >-
         He never had a son of his own.
       pos: bottom
@@ -450,7 +450,7 @@ fiveBySevenLayout:
       width: 32.7%
       applyFilter: true
 
-    - sectionNo: 14
+    - sectionNo: 15
       text: >-
         He loved going to closeout auctions and bought all kinds of stuff. When I was eight, he gave me a full-on bandsaw for my birthday, and a professional lathe for my ninth. My dad told him that he was crazy to give those dangerous tools to a kid, but I never lost a finger, and watching him work I ended up being pretty familiar with almost every type of tool. He bought a series of boats.
 
@@ -464,7 +464,7 @@ fiveBySevenLayout:
       width: 31%
       applyFilter: false
 
-    - sectionNo: 15
+    - sectionNo: 16
       text: >-
         We took it out perch fishing in Lake Michigan and we scored big time.
       pos: bottom
@@ -473,7 +473,7 @@ fiveBySevenLayout:
       width: 41.7%
       applyFilter: true
 
-    - sectionNo: 15
+    - sectionNo: 16
       text: >-
         Later, he took the boat down the Mississippi and across the Gulf of Mexico to Florida. My brother, my cousin, and I flew down to Fort Myers to join him. When we arrived, he was lying on the bottom of the boat under one of the engines, covered in grease and oil and surrounded by parts and tools. When the repairs were completed, we headed up the waterway towards Lake Okeechobee. As we motored out on the Lake, we went aground, and Wesley made us jump into the murky water to help push the boat free. Our bare feet sank deeply into the muddy ooze. We kept a nervous eye out for alligators, but finally got the boat free. Halfway across the lake, a terrible storm came up. The lake was only 13 feet deep and the waves were 13 feet high. We hit the bottom repeatedly, losing one propeller and bending the other. We bailed frantically as waves crashed onto the deck. Everything was floating around. But as suddenly as it had started, the wind died down and the sun reappeared.
       posX: 46%
@@ -481,14 +481,14 @@ fiveBySevenLayout:
       width: 50%
       applyFilter: false
 
-    - sectionNo: 16
+    - sectionNo: 17
       text: >-
         The boat limped out into the Atlantic near Stuart, the “Sailfish Capital of the World”. Wesley had bought an old rod and clunky reel strung with antique braided line, as well as some old-fashioned lures. I trolled one behind the boat. A large dark shadow rose from the depths following behind the lure. To our astonishment it was a sailfish, which ate the lure, and after a struggle, we landed this beauty.
       pos: left
       width: 48%
       applyFilter: false
 
-    - sectionNo: 17
+    - sectionNo: 18
       text: >-
         Wesley became quite wealthy and had properties in Arkansas, Indiana, and Wisconsin, as well as in Chicago. He bought this beautiful home on a lake in Delavan Wisconsin.
       pos: bottom
@@ -496,21 +496,21 @@ fiveBySevenLayout:
       height: 18vh
       applyFilter: true
 
-    - sectionNo: 18
+    - sectionNo: 19
       text: >-
         He was a thrifty guy, and one night around midnight he and I headed up to Wisconsin, driving for hours along a narrow two -lane road that paralleled the highway, just to save a few bucks in tolls. We got there a little after 4:00 AM. He headed straight to the bathroom, where the toilet had been removed. He picked up a 50-pound pipe wrench, the biggest I'd ever seen, got on the floor, and set the jaws of the wrench around a huge flat 6-inch nut that held the outlet pipe in place. Lying on his back, his arms and shoulders braced against the wall, and his feet on the handle of the wrench, he pushed with all the strength his legs could muster, finally breaking the nut free.  When Wesley had something to do, he did it. The next day we went to his favorite market up in Delavan, where they sold damaged goods at half price.
       pos: left
-      width: 53%
+      width: 48%
       applyFilter: false
 
-    - sectionNo: 19
+    - sectionNo: 20
       text: >-
         Wesley did have a temper and could act gruff and tough, but inside he had a heart of gold. In his big apartment building he often gave free rent to the occasional wino or hooker down on their luck. He had a nice apartment he kept for stray cats. He loved kids.
       pos: left
       width: 48%
       applyFilter: false
 
-    - sectionNo: 19
+    - sectionNo: 20
       text: >-
         Here he is with my sister's oldest son.
       pos: bottom
@@ -519,7 +519,7 @@ fiveBySevenLayout:
       height: 18vh
       applyFilter: true
 
-    - sectionNo: 20
+    - sectionNo: 21
       text: >-
         My mom, his granddaughter, my older son, and my bother.
       pos: bottom
@@ -527,7 +527,7 @@ fiveBySevenLayout:
       height: 18vh
       applyFilter: true
 
-    - sectionNo: 21
+    - sectionNo: 22
       text: >-
         With my baby son Nico.
       pos: bottom
@@ -535,7 +535,7 @@ fiveBySevenLayout:
       height: 18vh
       applyFilter: true
 
-    - sectionNo: 21
+    - sectionNo: 22
       text: >-
         As an old man with his daughter, my cousin Karen.
       pos: bottom
@@ -545,7 +545,7 @@ fiveBySevenLayout:
       width: 36%
       applyFilter: false
 
-    # - sectionNo: 22
+    # - sectionNo: 23
     #   text: >-
     #     He made yearly contributions to the church and claimed God gave him a new Cadillac every year. This was a pink one he wrecked down in Florida.
     #   pos: bottom
@@ -554,7 +554,7 @@ fiveBySevenLayout:
     #   width: 36%
     #   applyFilter: false
 
-    # - sectionNo: 22
+    # - sectionNo: 23
     #   pos: bottom
     #   posX: 36%
     #   posY: 26vh
@@ -562,13 +562,13 @@ fiveBySevenLayout:
     #   width: 65%
     #   applyFilter: true
 
-    - sectionNo: 22
+    - sectionNo: 23
       pos: bottom
       posY: 26vh
       height: 24vh
       applyFilter: true
 
-    - sectionNo: 22
+    - sectionNo: 23
       text: >-
         He made yearly contributions to the church and claimed God gave him a new Cadillac every year. This was a pink one he wrecked down in Florida.
       pos: bottom
@@ -577,7 +577,7 @@ fiveBySevenLayout:
       width: 36%
       applyFilter: false
 
-    - sectionNo: 22
+    - sectionNo: 23
       text: >-
         He rarely wore a suit or tie. He’s dressed up here to meet the captain of a Hawaiian cruise ship, which he took with his girlfriend Alice.
       pos: bottom
@@ -587,13 +587,13 @@ fiveBySevenLayout:
       width: 61%
       applyFilter: false
 
-    - sectionNo: 23
+    - sectionNo: 24
       pos: bottom
       posY: 32vh
       height: 18vh
       applyFilter: true
 
-    - sectionNo: 23
+    - sectionNo: 24
       text: >-
         When I was a young boy, he taught me expletives I had never heard. He was an inspiration to me in so many ways. We had great adventures.
       pos: bottom
@@ -602,7 +602,7 @@ fiveBySevenLayout:
       width: 55%
       applyFilter: false
 
-    - sectionNo: 23
+    - sectionNo: 24
       text: >-
         When he was older, I tried to reminisce, but he couldn’t remember a lot of stuff.
       pos: bottom
@@ -612,7 +612,7 @@ fiveBySevenLayout:
       width: 43%
       applyFilter: false
 
-    - sectionNo: 24
+    - sectionNo: 25
       text: >-
         He told me, “Erik stop reminding me what I forgot!” Dementia slowly took him away.
       pos: bottom
@@ -620,7 +620,7 @@ fiveBySevenLayout:
       height: 18vh
       applyFilter: true
 
-    - sectionNo: 25
+    - sectionNo: 26
       text: >-
         What an extraordinary guy and a one of a kind my uncle Wesley was.
       posX: 5%
