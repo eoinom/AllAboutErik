@@ -34,7 +34,7 @@ landscapeLayout:
 
     - sectionNo: 2
       text: >-
-        Both had immigrated from Norway in 1906, when each was only 16 years
+        Both had immigrated from Norway in 1901, when each was only 16 years
         old, and they met each other in Chicago. Both had come from the same
         little town back home. Marianne's mom had died giving birth to her, and
         Dietrich was the youngest son of Ole Pedersen, who had six kids with his
@@ -393,7 +393,7 @@ fiveBySevenLayout:
 
     - sectionNo: 2
       text: >-
-        Both had immigrated from Norway in 1906, when each was only 16 years
+        Both had immigrated from Norway in 1901, when each was only 16 years
         old, and they met each other in Chicago. Both had come from the same
         little town back home. Marianne's mom had died giving birth to her, and
         Dietrich was the youngest son of Ole Pedersen, who had six kids with his
@@ -749,7 +749,7 @@ squareLayout:
 
     - sectionNo: 3
       text: >-
-        Both had immigrated from Norway in 1906, when each was only 16 years
+        Both had immigrated from Norway in 1901, when each was only 16 years
         old, and they met each other in Chicago. Both had come from the same
         little town back home. Marianne's mom had died giving birth to her, and
         Dietrich was the youngest son of Ole Pedersen, who had six kids with his
@@ -1117,7 +1117,7 @@ portraitLayout:
 
     - sectionNo: 3
       text: >-
-        Both had immigrated from Norway in 1906, when each was only 16 years
+        Both had immigrated from Norway in 1901, when each was only 16 years
         old, and they met each other in Chicago. Both had come from the same
         little town back home. Marianne's mom had died giving birth to her, and
         Dietrich was the youngest son of Ole Pedersen, who had six kids with his
@@ -1501,7 +1501,7 @@ mobileLayout:
 
     - sectionNo: 3
       text: >-
-        Both had immigrated from Norway in 1906, when each was only 16 years
+        Both had immigrated from Norway in 1901, when each was only 16 years
         old, and they met each other in Chicago. Both had come from the same
         little town back home. Marianne's mom had died giving birth to her, and
         Dietrich was the youngest son of Ole Pedersen, who had six kids with his
