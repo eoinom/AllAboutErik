@@ -269,6 +269,7 @@ query ($id: ID!) {
         alignItems
         textAlign
         applyFilter
+        fontSize
         showScrollbar
       }
       galleryItems {
