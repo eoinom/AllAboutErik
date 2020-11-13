@@ -179,5 +179,10 @@ videos:
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1600810319/Travels/barcelona.jpg
     title: Barcelona
     url: 'https://player.vimeo.com/video/452720441'
+  - duration: 831
+    thumbnailImg: >-
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1605225442/Travels/paris.jpg
+    title: Paris
+    url: 'https://player.vimeo.com/video/476493806'
 ---
 
