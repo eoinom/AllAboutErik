@@ -874,6 +874,7 @@ mobileLayout:
         It snowed a lot, and many mornings when they opened the front door, they were confronted with deep snow that had fallen overnight. He had to shovel his way out and take snowshoes or skis to get to school. It was a long ways away.
       pos: bottom
       applyFilter: true
+      bgImgContain: true
 
     - sectionNo: 4
       text: >-
@@ -970,6 +971,7 @@ mobileLayout:
         We played chess when my dad came home from work. He helped me memorize every bird in Audubon book. My dad took me fishing. I wasn't allowed to litter, swear, or use any racially derogatory terms. He poured himself into educating me.
       pos: bottom
       applyFilter: true
+      bgImgContain: true
 
     - sectionNo: 20
       text: >-
