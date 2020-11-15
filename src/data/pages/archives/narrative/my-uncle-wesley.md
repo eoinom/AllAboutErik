@@ -1207,8 +1207,8 @@ mobileLayout:
       text: >-
         The boys with their dad and mother.
       pos: bottom
-      posY: 38.8vh
-      height: 11.2vh
+      posY: 37vh
+      height: 13vh
       applyFilter: false
       bgImgContain: true
 
@@ -1216,16 +1216,16 @@ mobileLayout:
       text: >-
         Wesley and his folks.
       pos: bottom
-      posY: 38vh
-      height: 12vh
+      posY: 35vh
+      height: 15vh
       applyFilter: true
 
     - sectionNo: 5
       text: >-
         Here’s the Jacobsen family.
       pos: bottom
-      posY: 40vh
-      height: 10vh
+      posY: 38vh
+      height: 12vh
       applyFilter: false
       bgImgContain: true
 
@@ -1273,8 +1273,8 @@ mobileLayout:
       text: >-
         Here's a letter and a picture he sent me that his buddy had drawn.
       pos: bottom
-      posY: 29vh
-      height: 21vh
+      posY: 27vh
+      height: 23vh
       applyFilter: true
       bgImgContain: true
 
@@ -1282,7 +1282,7 @@ mobileLayout:
       text: >-
         Around this time, Wesley was dating a Greek girl back in Chicago. One evening, when he came to pick her up for a date, he was confronted by her drunken father who was sitting on the front porch, with booze in one hand, and a pistol in the other.
       pos: bottom
-      posY: 24vh
+      posY: 22vh
       height: 26vh
       applyFilter: false
       bgImgContain: true
@@ -1291,7 +1291,7 @@ mobileLayout:
       text: >-
         Intent upon dissuading Wesley from seeing his daughter, he ordered him to leave immediately, and began counting to ten. Wesley thought it was a joke at first, but by the count of four, he became convinced otherwise, and turned and ran for his life. At the count of six, the old son of a bitch shot my uncle in the leg as he fled.
       pos: bottom
-      posY: 10vh
+      posY: 8vh
       height: 40vh
       applyFilter: false
       bgImgContain: true
@@ -1316,8 +1316,8 @@ mobileLayout:
       text: >-
         He never had a son of his own.
       pos: bottom
-      posY: 38vh
-      height: 12vh
+      posY: 35vh
+      height: 15vh
       applyFilter: true
 
     - sectionNo: 22
@@ -1360,7 +1360,7 @@ mobileLayout:
       text: >-
         Wesley became quite wealthy and had properties in Arkansas, Indiana, and Wisconsin, as well as in Chicago. He bought this beautiful home on a lake in Delavan Wisconsin.
       pos: bottom
-      posY: 26vh
+      posY: 23vh
       height: 24vh
       applyFilter: false
 
@@ -1376,8 +1376,8 @@ mobileLayout:
       text: >-
         Lying on his back, his arms and shoulders braced against the wall, and his feet on the handle of the wrench, he pushed with all the strength his legs could muster, finally breaking the nut free.  When Wesley had something to do, he did it. The next day we went to his favorite market up in Delavan, where they sold damaged goods at half price.
       pos: bottom
-      posY: 22vh
-      height: 28vh
+      posY: 20vh
+      height: 30vh
       applyFilter: true
 
     - sectionNo: 29
@@ -1400,16 +1400,16 @@ mobileLayout:
       text: >-
         My mom and his granddaughter.
       pos: bottom
-      posY: 38vh
-      height: 12vh
+      posY: 35vh
+      height: 15vh
       applyFilter: true
 
     - sectionNo: 32
       text: >-
         With my baby son Nico.
       pos: bottom
-      posY: 38vh
-      height: 12vh
+      posY: 35vh
+      height: 15vh
       applyFilter: true
 
     - sectionNo: 33
@@ -1424,7 +1424,7 @@ mobileLayout:
       text: >-
         He made yearly contributions to the church and claimed God gave him a new Cadillac every year. This was a pink one he wrecked down in Florida.
       pos: bottom
-      posY: 33vh
+      posY: 30vh
       height: 17vh
       applyFilter: false
 
@@ -1432,7 +1432,7 @@ mobileLayout:
       text: >-
         He rarely wore a suit or tie. He’s dressed up here to meet the captain of a Hawaiian cruise ship, which he took with his girlfriend Alice.
       pos: bottom
-      posY: 33vh
+      posY: 30vh
       height: 17vh
       applyFilter: false
 
@@ -1440,31 +1440,31 @@ mobileLayout:
       text: >-
         When I was a young boy, he taught me expletives I had never heard. He was an inspiration to me in so many ways. We had great adventures.
       pos: bottom
-      posY: 30vh
-      height: 20vh
+      posY: 26vh
+      height: 24vh
       applyFilter: true
 
     - sectionNo: 37
       text: >-
         When he was older, I tried to reminisce, but he couldn’t remember a lot of stuff.
       pos: bottom
-      posY: 30vh
-      height: 20vh
+      posY: 26vh
+      height: 24vh
       applyFilter: true
 
     - sectionNo: 38
       text: >-
         He told me, “Erik stop reminding me what I forgot!” Dementia slowly took him away.
       pos: bottom
-      posY: 30vh
-      height: 20vh
+      posY: 26vh
+      height: 24vh
       applyFilter: true
 
     - sectionNo: 39
       text: >-
         What an extraordinary guy and a one of a kind my uncle Wesley was.
       pos: bottom
-      posY: 30vh
-      height: 20vh
+      posY: 26vh
+      height: 24vh
       applyFilter: true
 ---
