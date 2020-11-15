@@ -3,12 +3,13 @@
   <ClientOnly>
     <ksvuefp :options="options" :sections="sections">
       <ksvuefp-section 
-        class="flatImgContainer"
         v-for="(s, iSec) in sections" 
         :section="s"
         :key="s.id" 
         :section-index="iSec"
         :background-image="'url('+ s.img_url +')'"
+        class="flatImgContainer"
+        :class="{containImg: containBgImg(s)}"
       >
         <!-- HEADER -->
         <header v-if="s.header" id="header">
@@ -322,6 +323,7 @@ query ($id: ID!) {
         height
         textAlign
         applyFilter
+        bgImgContain
       }
       galleryItems {
         sectionNo
@@ -480,7 +482,7 @@ export default {
       
       const layout = this.currentLayout
 
-      // get sections (background images) from CMS`
+      // get sections (background images) from CMS
       if (layout.hasOwnProperty('noSections')) {
         for (let i = 1; i <= layout.noSections; i++) {
           let section = {
@@ -560,6 +562,13 @@ export default {
     },
     delay(ms) {
       return new Promise(res => setTimeout(res, ms))
+    },
+    containBgImg(section) {
+      if (section.hasOwnProperty('txtArr') && section.txtArr.length > 0
+        && section.txtArr[0].hasOwnProperty('bgImgContain')) {
+        return section.txtArr[0].bgImgContain
+      } else
+        return false
     },
     renderMarkdown(text) {
       const md = new MarkdownIt()
@@ -1028,6 +1037,9 @@ export default {
 }
 .flatImg {
   height: 100vh;
+}
+.containImg {
+  background-size: contain;
 }
 
 // For the ks-vue-fullpage component
