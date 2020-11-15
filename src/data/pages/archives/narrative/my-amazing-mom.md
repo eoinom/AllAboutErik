@@ -1539,9 +1539,10 @@ mobileLayout:
     - sectionNo: 7
       text: The whole family.
       posX: 6%
-      posY: -36vh
+      posY: -30vh
       width: 88%
       textAlign: right
+      bgImgContain: true
 
     - sectionNo: 8
       text: Elsie, on the right, in her
@@ -1628,6 +1629,9 @@ mobileLayout:
       width: 35%
       textAlign: left
 
+    - sectionNo: 27
+      bgImgContain: true
+
     - sectionNo: 29
       text: She had a second son, my brother Evan.
       posX: 6.5%
@@ -1645,9 +1649,10 @@ mobileLayout:
     - sectionNo: 32
       text: Here's a handmade invite she made for a circus themed lunch she threw for me.
       posX: 6%
-      posY: 27vh
+      posY: 22vh
       width: 88%
       textAlign: left
+      bgImgContain: true
 
     - sectionNo: 33
       text: My cowboy birthday party.
@@ -1672,9 +1677,10 @@ mobileLayout:
     - sectionNo: 36
       text: The whole family in ’59.
       posX: 6%
-      posY: 27vh
+      posY: 22vh
       width: 88%
       textAlign: left
+      bgImgContain: true
 
     - sectionNo: 37
       text: At this time my mother's involvement in civic affairs really began to gather steam.
@@ -1697,9 +1703,10 @@ mobileLayout:
     - sectionNo: 39
       text: Here she is with Liv Ullmann, a big UN supporter.
       posX: 6%
-      posY: 34vh
+      posY: 35vh
       width: 88%
       textAlign: left
+      bgImgContain: true
 
     - sectionNo: 40
       text: On behalf of her love for Oak Park, the next decades saw her build a dizzying portfolio of supporting causes and involvement in civic life. She joined the Oak Park League and served as its president. She worked on the district school board for six years and served as the president there as well. My mom was on the high school Board of Education. Elsie started a beautification Commission and served as chairperson, planting trees and flower gardens all over town. She started local block parties, so neighbours could get to know each other, and feel a sense of belonging to the community. Mom started the Oak Park Historical Society, and as its driving force, it fell in her bailiwick in ’73 to have the first Saturday night drink served in Oak Park after it had been dry for 107 years.
@@ -1708,12 +1715,27 @@ mobileLayout:
       height: 45vh
       applyFilter: true
 
+    - sectionNo: 41
+      bgImgContain: true
+
+    - sectionNo: 43
+      bgImgContain: true
+
+    - sectionNo: 44
+      bgImgContain: true
+
     - sectionNo: 45
       text: She saved the local Conservatory, originally built in 1914 and expanded in 1929. It was meant to house exotic plants that residents brought back from their travels. It had fallen into disrepair and was slated to be demolished and replaced by a parking lot. Mom couldn't let that happen. She started the “Save the Conservatory” committee in 1970, and as was typical of her approach and style, she took botany and horticulture classes to be able to speak knowledgeably about the plant collection. The conservatory was expanded in 2000. Today it houses 3000 plants, some dating all the way back to 1914.
       pos: bottom
       posY: 5vh
       height: 45vh
       applyFilter: true
+
+    - sectionNo: 47
+      bgImgContain: true
+
+    - sectionNo: 48
+      bgImgContain: true
 
     - sectionNo: 49
       text: Frank Lloyd Wright and Ernest Hemingway were two of Oak park's most notable former residents. When my mom heard Frank Lloyd Wright's old home had been sold, and the new owner planed extensive remodeling, she swung into action. She organized a committee and raised the money to save the house. The home and studio are now a National Historic landmark. Elsie was instrumental in the founding of the Frank Lloyd Wright Preservation Trust and helped pioneer and promote walks and visits to local homes built by Wright. Last year 65,000 people walked this Frank Lloyd Wright trail. The trust also raised the money to restore the famous Unity Temple. She was personal friends with the architect’s son Eric Wright.
@@ -1722,6 +1744,9 @@ mobileLayout:
       height: 45vh
       applyFilter: true
 
+    - sectionNo: 50
+      bgImgContain: true
+
     - sectionNo: 51
       text: I had the same English teacher that taught Ernest Hemingway. To honour Hemingway as an Oak Park boy, my mom successfully pushed to have the author honoured with his own postage stamp.
       pos: bottom
@@ -1729,11 +1754,15 @@ mobileLayout:
       height: 38.5vh
       applyFilter: true
 
+    - sectionNo: 52
+      bgImgContain: true
+
     - sectionNo: 53
       text: The distinguished citizen's award.
       posX: 6%
-      posY: 32vh
+      posY: 28vh
       width: 88%
+      bgImgContain: true
 
     - sectionNo: 54
       text: The longest project my mom took part in, was her work with the Oak Park Council of International Affairs. She started a program called “School to School”. She traveled to Washington DC and had a meeting with Sargent Shriver in ‘63 or ‘64 asking him how Oak Park could contribute to the Peace Corps and the United Nations. He suggested she get Oak Park schools involved with a program by which money could be raised, and schools built in third world countries worldwide. The concept called for money coming from three sources. One third from the local people who would build the school, one third from the US government on behalf of the Peace Corps, and the final third raised from contributions from local schools in Oak Park.
@@ -1741,6 +1770,7 @@ mobileLayout:
       posY: 5vh
       height: 45vh
       applyFilter: true
+      bgImgContain: true
 
     - sectionNo: 55
       text: The process involved my mom contacting Peace Corps volunteers working around the world, and asking them if they knew any local villages in the areas where they worked who might be interested in taking part in a project to erect their own school. If one of the volunteers had an idea and wanted to be involved, my mom would ask them to take pictures of the place, and on their next trip back to the states come to Oak Park and appear with my mom at a local Oak Park school assemblies to solicit contributions for the building program.
@@ -1756,11 +1786,36 @@ mobileLayout:
       height: 45vh
       applyFilter: true
 
+    - sectionNo: 57
+      bgImgContain: true
+
     - sectionNo: 58
       text: The accolades kept coming.
-      posX: 7%
+      posX: 9%
       posY: 0vh
-      width: 88%
+      width: 87%
+      bgImgContain: true
+
+    - sectionNo: 59
+      bgImgContain: true
+
+    - sectionNo: 60
+      bgImgContain: true
+
+    - sectionNo: 61
+      bgImgContain: true
+
+    - sectionNo: 62
+      bgImgContain: true
+
+    - sectionNo: 63
+      bgImgContain: true
+
+    - sectionNo: 64
+      bgImgContain: true
+
+    - sectionNo: 65
+      bgImgContain: true
 
     - sectionNo: 66
       text: She worked very hard but was always a game and adventurous gal. Here she is riding a donkey in Santorini.
@@ -1773,6 +1828,7 @@ mobileLayout:
       posX: 6%
       posY: -34vh
       width: 88%
+      bgImgContain: true
 
     - sectionNo: 68
       text: Out on a tour of Cuba with fellow seniors.
@@ -1801,8 +1857,12 @@ mobileLayout:
     - sectionNo: 72
       text: She went back to college at 83 to do Scandinavian studies.
       pos: bottom
-      posY: 33vh
+      posY: 36vh
       height: 17vh
+      bgImgContain: true
+
+    - sectionNo: 73
+      bgImgContain: true
 
     - sectionNo: 74
       text: She loved the people I loved. She was a wonderful grandma to my two boys.
@@ -1823,9 +1883,10 @@ mobileLayout:
         
         pal to me.
       posX: 30%
-      posY: -36vh
+      posY: -30vh
       width: 64%
       textAlign: right
+      bgImgContain: true
 
     - sectionNo: 83
       text: Time finally caught up with her, and she passed at age 89. Her memorial was held at the Unity Temple that she had helped save and restore. Although she wasn't constantly on the phone anymore like she always had been, hundreds turned out to honor her and remember the splendid life she had led.
