@@ -47,7 +47,7 @@ videos:
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1579900417/Short%20Films/06-diningwithchunky_iozq6g.jpg
     title: Dining with Chunky
     url: 'https://player.vimeo.com/video/111801736'
-  - duration: 251
+  - duration: 203
     subText: >-
       Promotional piece for my fascinating self-published book featuring early
       1900's hunting and fishing photography.
