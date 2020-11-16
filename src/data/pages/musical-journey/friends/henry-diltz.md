@@ -106,9 +106,6 @@ mediaItems:
           - caption: Mud Wedding Sausalito '71
             orderNo: 3
             url: 'https://player.vimeo.com/video/322612046'
-          - caption: ''
-            orderNo: 4
-            url: 'https://player.vimeo.com/video/322612231'
     label: Home Movies Shot by Henry
     mediaType: videos
     orderNo: 3
