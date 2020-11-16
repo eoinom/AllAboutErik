@@ -5,7 +5,9 @@
     <b-row no-gutters class="innerContainerRow">
 
       <b-col :order="imgOrder" :cols="imgCols" class="thumbnailImgCol" :style="imgContainerDims" :id="'thumbnailImgCol' + this.index" >
-        <g-image :src="friend.thumbnailImg" class="thumbnailImg" :style="imgDims" :id="'friendImg' + this.index" />
+        <g-link :to="'/musical-journey/musical-friends/'+friend.link">
+          <g-image :src="friend.thumbnailImg" class="thumbnailImg" :style="imgDims" :id="'friendImg' + this.index" />
+        </g-link>
       </b-col>
       
       <b-col order="1" :cols="imgCols" class="px-3 pt-2 mb-0 textCol" :style="textColDims">
