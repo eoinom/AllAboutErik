@@ -99,10 +99,7 @@
         </div>
       </div>
 
-      <ScrollToTop
-        text="BACK TO THE TOP"
-        :includeArrow="true"
-      />      
+      <BackToTop />
     </div>
   </Layout>
 </template>
@@ -140,7 +137,7 @@ query ($id: ID!) {
 
 
 <script scoped>
-import ScrollToTop from '../components/ScrollToTop.vue'
+import BackToTop from '../components/BackToTop.vue'
 import SlideshowImages from '../components/SlideshowImages.vue'
 const slugify = require('@sindresorhus/slugify')
 
@@ -156,7 +153,7 @@ export default {
   },
 
   components: {
-    ScrollToTop,
+    BackToTop,
     'SlideshowImages': require('../components/SlideshowImages.vue').default,
   },
 

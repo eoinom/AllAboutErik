@@ -1210,10 +1210,7 @@
 
 
 
-    <ScrollToTop
-      text="BACK TO THE TOP"
-      :includeArrow="true"
-    />
+    <BackToTop />
 
   </Layout>
 </template>
@@ -1247,7 +1244,7 @@
 <script scoped>
 import FriendCard from './FriendCard.vue'
 import ScrollDownArrow from './ScrollDownArrow.vue'
-import ScrollToTop from './ScrollToTop.vue'
+import BackToTop from './BackToTop.vue'
 
 export default {
   metaInfo() {
@@ -1259,7 +1256,7 @@ export default {
   components: {
     FriendCard,
     ScrollDownArrow,
-    ScrollToTop
+    BackToTop
   },
 
   props: {

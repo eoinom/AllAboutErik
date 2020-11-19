@@ -157,10 +157,7 @@
         @reload="reloadBook()" 
       />
 
-      <ScrollToTop
-        text="BACK TO THE TOP"
-        :includeArrow="true"
-      />
+      <BackToTop />
       
     </div>
 
@@ -223,7 +220,7 @@ query ($id: ID!) {
 <script scoped>
 import AudioLightBox from '../components/AudioLightBox.vue'
 import BookViewer from '../components/BookViewer.vue'
-import ScrollToTop from '../components/ScrollToTop.vue'
+import BackToTop from '../components/BackToTop.vue'
 import SlideshowImages from '../components/SlideshowImages.vue'
 import simplebar from 'simplebar-vue'
 import 'simplebar/dist/simplebar.min.css'
@@ -243,7 +240,7 @@ export default {
   components: {
     AudioLightBox,
     BookViewer,
-    ScrollToTop,
+    BackToTop,
     'SlideshowImages': require('../components/SlideshowImages.vue').default,
     simplebar
   },

@@ -12,7 +12,7 @@
       <g-image :src="titleImg" id="titleImg" class="my-4" />
     </header>
 
-    <b-container fluid id="mainContainer" class="pb-5 pb-xl-3 px-1">
+    <b-container fluid id="mainContainer" class="mb-3 pb-5 pb-xl-3 px-1">
 
       <b-row no-gutters class="mt-2">
         <b-col>
@@ -80,10 +80,7 @@
       @close="videoIndex = null"
     />
 
-    <ScrollToTop 
-      text="BACK TO THE TOP"
-      :includeArrow="true"
-    />
+    <BackToTop />
 
   </Layout>
 </template>
@@ -122,7 +119,7 @@
 <script scoped>
 import BackgroundMusic from '../../components/BackgroundMusic.vue'
 import VideoLightBox from '../../components/VideoLightBox.vue'
-import ScrollToTop from '../../components/ScrollToTop.vue'
+import BackToTop from '../../components/BackToTop.vue'
 
 export default { 
   metaInfo() {
@@ -198,7 +195,7 @@ export default {
   components: {
     BackgroundMusic,
     VideoLightBox,
-    ScrollToTop
+    BackToTop
   },
 }
 </script>

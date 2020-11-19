@@ -11,7 +11,7 @@
       <g-image :src="titleImg" id="titleImg" class="my-4" />
     </header>
 
-    <b-container fluid id="mainContainer" class="pb-5 px-2 px-md-3 px-lg-4 px-xl-5">
+    <b-container fluid id="mainContainer" class="mb-5 pb-5 px-2 px-md-3 px-lg-4 px-xl-5">
 
       <b-row no-gutters>
         <b-col>
@@ -550,10 +550,7 @@
       @close="imageIndex = null; image = null"
     />
 
-    <ScrollToTop 
-      text="BACK TO THE TOP"
-      :includeArrow="true"
-    />
+    <BackToTop />
 
   </Layout>
 </template>
@@ -610,7 +607,7 @@ import AudioLightBox from '../../components/AudioLightBox.vue'
 import ImageLightBox from '../../components/ImageLightBox.vue'
 import MusicProduction from '../../components/MusicProduction.vue'
 import MusicProductionText from '../../components/MusicProductionText.vue'
-import ScrollToTop from '../../components/ScrollToTop.vue'
+import BackToTop from '../../components/BackToTop.vue'
 
 export default { 
   metaInfo() {
@@ -716,7 +713,7 @@ export default {
     ImageLightBox,
     MusicProduction,
     MusicProductionText,
-    ScrollToTop
+    BackToTop
   },
 }
 </script>

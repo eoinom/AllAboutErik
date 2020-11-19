@@ -27,7 +27,7 @@
 
     <div id="topOfMainBody"></div>
 
-    <b-container fluid :style="bodyOpacity" class="py-3 main-col">
+    <b-container fluid :style="bodyOpacity" class="mb-5 py-3 main-col">
       <div class="px-4 py-3">
         <span v-html="content" class="discography_content" />
       </div>
@@ -92,10 +92,7 @@
     </b-container>
 
 
-    <ScrollToTop
-      text="BACK TO THE TOP"
-      :includeArrow="true"
-    />
+    <BackToTop />
 
   </Layout>
 </template>
@@ -140,7 +137,7 @@
 <script scoped>
 import BackgroundMusic from '../../components/BackgroundMusic.vue'
 import ScrollDownArrow from '../../components/ScrollDownArrow.vue'
-import ScrollToTop from '../../components/ScrollToTop.vue'
+import BackToTop from '../../components/BackToTop.vue'
 
 export default { 
   metaInfo() {
@@ -360,7 +357,7 @@ export default {
   components: {
     BackgroundMusic,
     ScrollDownArrow,
-    ScrollToTop
+    BackToTop
   },
 }
 </script>

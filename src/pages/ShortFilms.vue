@@ -12,7 +12,7 @@
       <g-image :src="titleImg" id="titleImg" class="my-4" />
     </header>
 
-    <b-container fluid id="mainContainer" class="pb-5 pb-xl-3 px-1">
+    <b-container fluid id="mainContainer" class="mb-4 pb-5 pb-xl-3 px-1">
 
       <!-- MAIN VIDEO -->
       <b-row no-gutters align-h="center" align-v="center" id="mainVideoContainer" class="my-2 my-sm-3 px-2 px-sm-3">
@@ -53,11 +53,8 @@
       :disable-scroll="true"
       @close="videoIndex = null"
     />
-
-    <ScrollToTop 
-      text="BACK TO THE TOP"
-      :includeArrow="true"
-    />
+    
+    <BackToTop />
 
   </Layout>
 </template>
@@ -94,7 +91,7 @@
 import BackgroundMusic from '../components/BackgroundMusic.vue'
 import VideoLightBox from '../components/VideoLightBox.vue'
 import VideoThumbnailShortFilms from '../components/VideoThumbnailShortFilms.vue'
-import ScrollToTop from '../components/ScrollToTop.vue'
+import BackToTop from '../components/BackToTop.vue'
 
 export default { 
   metaInfo() {
@@ -129,17 +126,11 @@ export default {
     },
   },
 
-  methods: {
-  },
-
-  mounted() {
-  },
-
   components: {
     BackgroundMusic,
     VideoLightBox,
     VideoThumbnailShortFilms,
-    ScrollToTop
+    BackToTop
   },
 }
 </script>

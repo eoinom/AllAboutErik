@@ -70,10 +70,7 @@
     </b-container>
 
 
-    <ScrollToTop
-      text="BACK TO THE TOP"
-      :includeArrow="true"
-    />
+    <BackToTop />
 
   </Layout>
 </template>
@@ -112,7 +109,7 @@
 <script scoped>
 import BackgroundMusic from '../../components/BackgroundMusic.vue'
 import PublicationThumbnail from '../../components/PublicationThumbnail.vue'
-import ScrollToTop from '../../components/ScrollToTop.vue'
+import BackToTop from '../../components/BackToTop.vue'
 import SlideshowKenBurnsSmall from '../../components/SlideshowKenBurnsSmall.vue'
 
 export default {
@@ -125,7 +122,7 @@ export default {
   components: {
     BackgroundMusic,
     PublicationThumbnail,
-    ScrollToTop,
+    BackToTop,
     SlideshowKenBurnsSmall
   },
 
@@ -269,6 +266,10 @@ export default {
   height: auto;
   margin: auto;
   padding-bottom: 15px;
+}
+
+.publicationsContainer {
+  margin-bottom: 88px;
 }
 
 .publicationsContainer,

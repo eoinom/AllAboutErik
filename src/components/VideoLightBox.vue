@@ -180,23 +180,47 @@ export default {
       css.height = (0.8 * this.windowHeight) + 'px'
       return css
     },
+    containerWidth() {
+      return 0.8 * this.windowWidth
+    },
+    containerHeight() {
+      return 0.8 * this.windowHeight
+    },
+    containerAspectRatio() {
+      return this.containerWidth / this.containerHeight
+    },
+    heightGoverns() {
+      return this.containerAspectRatio >= this.videoAspectRatio
+    },
     videoTitleCss() {
       let css = {}
-      let containerWidth = 0.8 * this.windowWidth
-      let containerHeight = 0.8 * this.windowHeight      
-      const containerAspectRatio = containerWidth / containerHeight
-      const heightGoverns = containerAspectRatio >= this.videoAspectRatio
-      if (heightGoverns) {
-        var actualVidHeight = containerHeight
-        var actualVidWidth = actualVidHeight * this.videoAspectRatio
+      // let containerWidth = 0.8 * this.windowWidth
+      // let containerHeight = 0.8 * this.windowHeight      
+      // const containerAspectRatio = containerWidth / containerHeight
+      // const heightGoverns = containerAspectRatio >= this.videoAspectRatio
+      // if (heightGoverns) {
+      //   var actualVidHeight = containerHeight
+      //   var actualVidWidth = actualVidHeight * this.videoAspectRatio
+      // }
+      // else {
+      //   var actualVidWidth = containerWidth
+      //   var actualVidHeight = actualVidWidth / this.videoAspectRatio
+      // }
+      // css.padding = 0
+      // css.bottom = ((containerHeight - actualVidHeight) / 2 - 40) + 'px';
+      // // css.left = ((containerWidth - actualVidWidth) / 2) + 'px';
+
+      if (this.heightGoverns) {
+        var actualVidHeight = this.containerHeight
+        var actualVidWidth = this.actualVidHeight * this.videoAspectRatio
       }
       else {
-        var actualVidWidth = containerWidth
-        var actualVidHeight = actualVidWidth / this.videoAspectRatio
+        var actualVidWidth = this.containerWidth
+        var actualVidHeight = this.actualVidWidth / this.videoAspectRatio
       }
       css.padding = 0
-      css.bottom = ((containerHeight - actualVidHeight) / 2 - 40) + 'px';
-      // css.left = ((containerWidth - actualVidWidth) / 2) + 'px';
+      css.bottom = ((this.containerHeight - this.actualVidHeight) / 2 - 40) + 'px';
+
       css.width = '100%';
       css.textAlign = this.titlePosition
       return css

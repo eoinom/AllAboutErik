@@ -23,10 +23,7 @@
     <!-- TILES -->
     <ArchivesTiles :tiles="tiles" />    
 
-    <ScrollToTop
-      text="BACK TO THE TOP"
-      :includeArrow="true"
-    />
+    <BackToTop />
   </Layout>
 </template>
 
@@ -53,7 +50,7 @@
 
 <script scoped>
 import ArchivesTiles from '../../components/ArchivesTiles.vue'
-import ScrollToTop from '../../components/ScrollToTop.vue'
+import BackToTop from '../../components/BackToTop.vue'
 
 export default { 
   metaInfo() {
@@ -64,7 +61,7 @@ export default {
 
   components: {
     ArchivesTiles,
-    ScrollToTop
+    BackToTop
   },
 
   computed: {

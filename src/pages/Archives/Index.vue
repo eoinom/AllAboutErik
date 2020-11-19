@@ -43,10 +43,7 @@
     <!-- TILES -->
     <ArchivesTiles :tiles="tiles" :style="tilesContainerStyles" />
 
-    <ScrollToTop
-      text="BACK TO THE TOP"
-      :includeArrow="true"
-    />
+    <BackToTop />
   </Layout>
 </template>
 
@@ -85,7 +82,7 @@
 import ArchivesTiles from '../../components/ArchivesTiles.vue'
 import BackgroundMusic from '../../components/BackgroundMusic.vue'
 import ScrollDownArrow from '../../components/ScrollDownArrow.vue'
-import ScrollToTop from '../../components/ScrollToTop.vue'
+import BackToTop from '../../components/BackToTop.vue'
 import SlideshowKenBurnsSmall from '../../components/SlideshowKenBurnsSmall.vue'
 
 export default { 
@@ -99,7 +96,7 @@ export default {
     ArchivesTiles,
     BackgroundMusic,
     ScrollDownArrow,
-    ScrollToTop,
+    BackToTop,
     SlideshowKenBurnsSmall
   },
 
