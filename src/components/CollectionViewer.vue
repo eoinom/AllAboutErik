@@ -15,7 +15,7 @@
       </div>
       
       <b-container fluid style="padding:0">
-        <b-row no-gutters align-v="center" id="navLinksRow">
+        <!-- <b-row no-gutters align-v="center" id="navLinksRow">
           <b-col cols="2" lg="" xl="4">
             <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_small" id="nav_prev">PREV</g-link>
             <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_big" id="nav_prev">PREVIOUS COLLECTION</g-link>
@@ -28,8 +28,40 @@
           <b-col cols="2" lg="" xl="4">
             <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_small" id="nav_next">NEXT</g-link>
             <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_big" id="nav_next">NEXT COLLECTION</g-link>
+          </b-col>
+        </b-row> -->
+        
+        <b-row no-gutters align-v="center" id="navLinksRow">
+          <b-col cols="2" lg="" xl="4">
+            <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_small" id="nav_prev">
+              <g-image alt="previous" src="../assets/images/previous-collection-2lines-white.png" class="hideOnHover" />
+              <g-image alt="previous" src="../assets/images/previous-collection-2lines-yellow.png" class="showOnHover" /> 
+            </g-link>
+
+            <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_big" id="nav_prev">
+              <g-image alt="previous" src="../assets/images/previous-collection-1line-white.png" class="hideOnHover" />
+              <g-image alt="previous" src="../assets/images/previous-collection-1line-yellow.png" class="showOnHover" /> 
+            </g-link>
+          </b-col>
+          
+          <b-col cols="8" lg="7" xl="4">
+            <div v-if="windowWidth > 1366" class="collection-viewer__text">HOVER OVER IMAGE FOR CLOSE-UP</div>
+          </b-col>
+          
+          <b-col cols="2" lg="" xl="4">
+            <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_small" id="nav_next">
+              <g-image alt="previous" src="../assets/images/next-collection-2lines-white.png" class="hideOnHover" />
+              <g-image alt="previous" src="../assets/images/next-collection-2lines-yellow.png" class="showOnHover" /> 
+            </g-link>
+
+            <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_big" id="nav_next">
+              <g-image alt="previous" src="../assets/images/next-collection-1line-white.png" class="" />
+              <!-- <g-image alt="previous" src="../assets/images/next-collection-1line-white.png" class="hideOnHover" />
+              <g-image alt="previous" src="../assets/images/next-collection-1line-yellow.png" class="showOnHover" />  -->
+            </g-link>
           </b-col>            
         </b-row>
+
       </b-container>
 
       <div class="collection-viewer__container">
@@ -85,7 +117,16 @@
         />
       </div>
 
-      <g-link :to="{ path: '/collections/', query: { playMusic: 'false' }}" class="nav_link pt-3" id="nav_back">BACK TO COLLECTIONS MENU</g-link>
+      <!-- <g-link :to="{ path: '/collections/', query: { playMusic: 'false' }}" class="nav_link pt-3" id="nav_back">BACK TO COLLECTIONS MENU</g-link> -->
+      <g-link :to="{ path: '/collections/', query: { playMusic: 'false' }}" class="nav_link nav_link_big pt-3" id="nav_back">
+        <g-image alt="Back to collections menu" src="../assets/images/back-to-collections-menu-1line-white.png" class="hideOnHover" />
+        <g-image alt="Back to collections menu" src="../assets/images/back-to-collections-menu-1line-yellow.png" class="showOnHover" />
+      </g-link>
+      
+      <g-link :to="{ path: '/collections/', query: { playMusic: 'false' }}" class="nav_link nav_link_small pt-3" id="nav_back">
+        <g-image alt="Back to collections menu" src="../assets/images/back-to-collections-menu-3lines-white.png" class="hideOnHover" />
+        <g-image alt="Back to collections menu" src="../assets/images/back-to-collections-menu-3lines-yellow.png" class="showOnHover" />
+      </g-link>
     </div>
 
   </div>
@@ -329,6 +370,7 @@ export default {
   text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
   margin: 0px;
   padding: 0px;
+  padding-top: 8px;
   width: fit-content;
   z-index: 1000;
 }
@@ -348,7 +390,7 @@ export default {
   padding-right: var(--linkGutter);
 }
 #nav_back { 
-  display: block;
+  // display: block;
   position: fixed;
   top: auto;
   bottom: 20px;
@@ -360,6 +402,34 @@ export default {
 #nav_prev:hover, #nav_next:hover, #nav_back:hover {
   color:	#EED047;
   cursor: pointer;
+}
+
+.nav_link_big img {
+  height: 3vw;
+  max-height: 35px;
+  width: auto;
+}
+.nav_link_small img {
+  max-height: 50px;
+  width: auto;
+}
+#nav_back.nav_link_small img {
+  max-height: 75px;
+  width: auto;
+}
+
+.showOnHover,
+#nav_prev:hover .hideOnHover,
+#nav_previous:hover .hideOnHover,
+#nav_next:hover .hideOnHover,
+#nav_back:hover .hideOnHover {
+  display: none;
+}
+#nav_prev:hover .showOnHover,
+#nav_previous:hover .showOnHover,
+#nav_next:hover .showOnHover,
+#nav_back:hover .showOnHover {
+  display: inline;
 }
 
 .collection-viewer {
@@ -541,6 +611,14 @@ export default {
   .nav_link_small {
     display: block;
   }
+  .nav_link_small img {
+    height: 10vw;
+    max-height: 40px;
+  }
+  #nav_back.nav_link_small img {
+    height: 13vw;
+    max-height: 50px;
+  }
   .nav_link_big {
     display: none;
   }
@@ -566,6 +644,9 @@ export default {
   }
   .nav_link_small {
     display: block;
+  }  
+  .nav_link_small img {
+    max-height: 40px;
   }
   .nav_link_big {
     display: none;
@@ -577,10 +658,12 @@ export default {
   * {
     --arrowOffset: 4.5%;
   }
-  .nav_link_small {
+  .nav_link_small,
+  #nav_back.nav_link_big {
     display: block;
   }
-  .nav_link_big {
+  .nav_link_big,
+  #nav_back.nav_link_small {
     display: none;
   }
 }
@@ -593,11 +676,13 @@ export default {
   }
   #nav_prev {
     text-align: center;
-    padding: 0 var(--linkGutter);
+    padding-right: var(--linkGutter);
+    padding-left: var(--linkGutter);
   }
   #nav_next {
     text-align: center;
-    padding: 0 var(--linkGutter);
+    padding-right: var(--linkGutter);
+    padding-left: var(--linkGutter);
   }
 }
 </style>
