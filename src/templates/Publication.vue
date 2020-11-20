@@ -66,21 +66,9 @@
         <!-- MAIN CONTENT -->
         <b-container fluid class="py-3 py-md-4 px-3 px-md-5">
           <b-row no-gutters align-v="start" align-h="center">
-            <!-- <b-col cols="">
+            <b-col cols="">
               <g-link :to="'/publications/' + prevPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevPublication.title" class="nav_link nav_link_small" id="nav_prev">PREV</g-link>
               <g-link :to="'/publications/' + prevPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevPublication.title" class="nav_link nav_link_big" id="nav_prev">PREVIOUS PUBLICATION</g-link>
-            </b-col> -->
-
-            <b-col cols="">
-              <g-link :to="'/publications/' + prevPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevPublication.title" class="nav_link nav_link_small" id="nav_prev">
-                <g-image alt="previous" src="../assets/images/previous-publication-2lines-white.png" class="hideOnHover" />
-                <g-image alt="previous" src="../assets/images/previous-publication-2lines-yellow.png" class="showOnHover" /> 
-              </g-link>
-
-              <g-link :to="'/publications/' + prevPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevPublication.title" class="nav_link nav_link_big" id="nav_prev">
-                <g-image alt="previous" src="../assets/images/previous-publication-1line-white.png" class="hideOnHover" />
-                <g-image alt="previous" src="../assets/images/previous-publication-1line-yellow.png" class="showOnHover" />
-              </g-link>
             </b-col>
             
             <b-col cols="11" sm="8" md="7" order="3" order-sm="2" class="pt-3 pb-3 pt-sm-0" id="mainCol">
