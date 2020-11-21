@@ -67,8 +67,15 @@
         <b-container fluid class="py-3 py-md-4 px-3 px-md-5">
           <b-row no-gutters align-v="start" align-h="center">
             <b-col cols="">
-              <g-link :to="'/publications/' + prevPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevPublication.title" class="nav_link nav_link_small" id="nav_prev">PREV</g-link>
-              <g-link :to="'/publications/' + prevPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevPublication.title" class="nav_link nav_link_big" id="nav_prev">PREVIOUS PUBLICATION</g-link>
+              <g-link :to="'/publications/' + prevPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevPublication.title" class="nav_link nav_link_small" id="nav_prev">
+                <g-image alt="previous" src="../assets/images/previous-publication-2lines-white.png" class="hideOnHover" />
+                <g-image alt="previous" src="../assets/images/previous-publication-2lines-yellow.png" class="showOnHover" />
+              </g-link>
+
+              <g-link :to="'/publications/' + prevPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevPublication.title" class="nav_link nav_link_big" id="nav_prev">
+                <g-image alt="previous" src="../assets/images/previous-publication-1line-white.png" class="hideOnHover" />
+                <g-image alt="previous" src="../assets/images/previous-publication-1line-yellow.png" class="showOnHover" />
+              </g-link>
             </b-col>
             
             <b-col cols="11" sm="8" md="7" order="3" order-sm="2" class="pt-3 pb-3 pt-sm-0" id="mainCol">
@@ -102,14 +109,29 @@
             </b-col>
             
             <b-col cols="" order="2" order-sm="3">
-              <g-link :to="'/publications/' + nextPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextPublication.title" class="nav_link nav_link_small" id="nav_next">NEXT</g-link>
-              <g-link :to="'/publications/' + nextPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextPublication.title" class="nav_link nav_link_big" id="nav_next">NEXT PUBLICATION</g-link>
+              <g-link :to="'/publications/' + nextPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextPublication.title" class="nav_link nav_link_small" id="nav_next">
+                <g-image alt="previous" src="../assets/images/next-publication-2lines-white.png" class="hideOnHover" />
+                <g-image alt="previous" src="../assets/images/next-publication-2lines-yellow.png" class="showOnHover" />
+              </g-link>
+
+              <g-link :to="'/publications/' + nextPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextPublication.title" class="nav_link nav_link_big" id="nav_next">
+                <g-image alt="previous" src="../assets/images/next-publication-1line-white.png" class="hideOnHover" />
+                <g-image alt="previous" src="../assets/images/next-publication-1line-yellow.png" class="showOnHover" />
+              </g-link>
             </b-col>            
           </b-row>
 
           <b-row no-gutters>
             <b-col>
-              <g-link :to="{ path: '/publications/', query: { playMusic: 'false' }}" class="nav_link" id="nav_back">BACK TO PUBLICATIONS MENU</g-link>
+              <g-link :to="{ path: '/publications/', query: { playMusic: 'false' }}" class="nav_link nav_link_big" id="nav_back">
+                <g-image alt="Back to publications menu" src="../assets/images/back-to-publications-menu-1line-white.png" class="hideOnHover" />
+                <g-image alt="Back to publications menu" src="../assets/images/back-to-publications-menu-1line-yellow.png" class="showOnHover" />
+              </g-link>
+              
+              <g-link :to="{ path: '/publications/', query: { playMusic: 'false' }}" class="nav_link nav_link_small" id="nav_back">
+                <g-image alt="Back to publications menu" src="../assets/images/back-to-publications-menu-3lines-white.png" class="hideOnHover" />
+                <g-image alt="Back to publications menu" src="../assets/images/back-to-publications-menu-3lines-yellow.png" class="showOnHover" />
+              </g-link>
             </b-col>
           </b-row>
         </b-container>
@@ -536,8 +558,7 @@ export default {
   float: right;
   padding-right: var(--linkGutter);
 }
-#nav_back { 
-  display: block;
+#nav_back {
   text-align: center;
   padding: 0 20px;
   width: 100%;
@@ -546,6 +567,35 @@ export default {
   color:	#EED047;
   cursor: pointer;
 }
+
+.nav_link_big img {
+  height: 3vw;
+  max-height: 35px;
+  width: auto;
+}
+.nav_link_small img {
+  max-height: 50px;
+  width: auto;
+}
+#nav_back.nav_link_small img {
+  max-height: 75px;
+  width: auto;
+}
+
+.showOnHover,
+#nav_prev:hover .hideOnHover,
+#nav_previous:hover .hideOnHover,
+#nav_next:hover .hideOnHover,
+#nav_back:hover .hideOnHover {
+  display: none;
+}
+#nav_prev:hover .showOnHover,
+#nav_previous:hover .showOnHover,
+#nav_next:hover .showOnHover,
+#nav_back:hover .showOnHover {
+  display: inline;
+}
+
 
 .publication_mainText {
   font-family: 'NeueHaasGroteskText Pro55', sans-serif;
@@ -759,9 +809,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Special */
 @media only screen and (min-width: 1200px) {
-  #nav_next {
-    padding-left: 54.5px; // so goes over two lines at same point as the "nav_prev" link
-  }
   #mainCol {
     margin: 0 40px;
   }
@@ -770,6 +817,16 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 /* Special */
 @media only screen and (max-width: 1399.98px) { 
   .headerImageCol {   
+    display: none;
+  }
+}
+
+/* Special */
+@media only screen and (max-width: 1799.98px) {  
+  .nav_link_small {
+    display: block;
+  }
+  .nav_link_big {
     display: none;
   }
 }
