@@ -14,23 +14,7 @@
         <div class="collection-viewer__dot" :style="`border-color: ${interfaceColor}`" />
       </div>
       
-      <b-container fluid style="padding:0">
-        <!-- <b-row no-gutters align-v="center" id="navLinksRow">
-          <b-col cols="2" lg="" xl="4">
-            <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_small" id="nav_prev">PREV</g-link>
-            <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_big" id="nav_prev">PREVIOUS COLLECTION</g-link>
-          </b-col>
-          
-          <b-col cols="8" lg="7" xl="4">
-            <div v-if="windowWidth > 1366" class="collection-viewer__text">HOVER OVER IMAGE FOR CLOSE-UP</div>
-          </b-col>
-          
-          <b-col cols="2" lg="" xl="4">
-            <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_small" id="nav_next">NEXT</g-link>
-            <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_big" id="nav_next">NEXT COLLECTION</g-link>
-          </b-col>
-        </b-row> -->
-        
+      <b-container fluid style="padding:0">        
         <b-row no-gutters align-v="center" id="navLinksRow">
           <b-col cols="2" lg="" xl="4">
             <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_small" id="nav_prev">
@@ -40,7 +24,7 @@
 
             <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_big" id="nav_prev">
               <g-image alt="previous" src="../assets/images/previous-collection-1line-white.png" class="hideOnHover" />
-              <g-image alt="previous" src="../assets/images/previous-collection-1line-yellow.png" class="showOnHover" /> 
+              <g-image alt="previous" src="../assets/images/previous-collection-1line-yellow.png" class="showOnHover" />
             </g-link>
           </b-col>
           
@@ -55,9 +39,8 @@
             </g-link>
 
             <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_big" id="nav_next">
-              <g-image alt="previous" src="../assets/images/next-collection-1line-white.png" class="" />
-              <!-- <g-image alt="previous" src="../assets/images/next-collection-1line-white.png" class="hideOnHover" />
-              <g-image alt="previous" src="../assets/images/next-collection-1line-yellow.png" class="showOnHover" />  -->
+               <g-image alt="previous" src="../assets/images/next-collection-1line-white.png" class="hideOnHover" />
+              <g-image alt="previous" src="../assets/images/next-collection-1line-yellow.png" class="showOnHover" /> 
             </g-link>
           </b-col>            
         </b-row>
@@ -116,8 +99,7 @@
           class="nextArrow arrowImg" 
         />
       </div>
-
-      <!-- <g-link :to="{ path: '/collections/', query: { playMusic: 'false' }}" class="nav_link pt-3" id="nav_back">BACK TO COLLECTIONS MENU</g-link> -->
+      
       <g-link :to="{ path: '/collections/', query: { playMusic: 'false' }}" class="nav_link nav_link_big pt-3" id="nav_back">
         <g-image alt="Back to collections menu" src="../assets/images/back-to-collections-menu-1line-white.png" class="hideOnHover" />
         <g-image alt="Back to collections menu" src="../assets/images/back-to-collections-menu-1line-yellow.png" class="showOnHover" />
@@ -359,15 +341,6 @@ export default {
 }
 
 .nav_link {
-  color: white;
-  font-family: 'Ubuntu Condensed', sans-serif;
-  font-feature-settings: 'liga';
-  font-weight: 400;
-  font-style: italic;
-  font-size: 1.75rem;
-  letter-spacing: 1px;
-  line-height: 2.1875rem;
-  text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
   margin: 0px;
   padding: 0px;
   padding-top: 8px;
@@ -389,8 +362,7 @@ export default {
   float: right;
   padding-right: var(--linkGutter);
 }
-#nav_back { 
-  // display: block;
+#nav_back {
   position: fixed;
   top: auto;
   bottom: 20px;
@@ -605,9 +577,6 @@ export default {
     --linkGutter: 25px;
     --arrowOffset: 3.0%;
   }
-  .nav_link {
-    font-size: calc(1.25rem + 4 * (100vw - 350px) / (576 - 350) ); /* varies between 20px - 24px */
-  }
   .nav_link_small {
     display: block;
   }
@@ -638,9 +607,6 @@ export default {
   * {
     --linkGutter: calc(25px + 20 * (100vw - 576px) / (768 - 576) ); /* varies between 25px - 45px */
     --arrowOffset: 3.0%;
-  }
-  .nav_link {
-    font-size: calc(1.5rem + 4 * (100vw - 576px) / (768 - 576) ); /* varies between 24px - 28px */
   }
   .nav_link_small {
     display: block;
