@@ -720,7 +720,7 @@ export default {
 
 
 
-<style scoped>
+<style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Lato:700i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lora:700i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
@@ -841,6 +841,9 @@ body {
 }
 .lightBoxBtn:hover {
   background-color: #4B5B45;
+}
+.lightBoxBtn:focus {
+  outline: none;  // remove blue border in iOS Chrome
 }
 
 .sectionContainerDevices {
