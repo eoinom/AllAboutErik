@@ -88,7 +88,7 @@
       </header>
 
       
-      <div id="mainContent" class="px-3" :style="mainContentStyles">
+      <div id="mainContent" class="px-3 pb-5" :style="mainContentStyles">
         <div class="galleryWrapper">
 
           <!-- IMAGE GALLERY -->
