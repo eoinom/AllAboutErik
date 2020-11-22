@@ -59,16 +59,22 @@ videos:
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642924/Travels/bali_si2btf.jpg
     title: Bali
     url: 'https://player.vimeo.com/video/212333307'
+    width: 1321.33
+    height: 990.992
   - duration: 1082
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642924/Travels/cuba_fgmvfk.jpg
     title: Cuba
     url: 'https://player.vimeo.com/video/140978809'
+    width: 1321.33
+    height: 990.992
   - duration: 1159
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642923/Travels/papua_viclph.jpg
     title: Papua New Guinea
     url: 'https://player.vimeo.com/video/211560875'
+    width: 1321.33
+    height: 990.992
   - duration: 670
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580647124/Travels/venice_cemorb.jpg
@@ -79,11 +85,15 @@ videos:
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642924/Travels/bhutan_wzklvo.jpg
     title: Bhutan
     url: 'https://player.vimeo.com/video/272732141'
+    width: 1321.33
+    height: 990.992
   - duration: 901
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642923/Travels/sulawesi_ddeel8.jpg
     title: Sulawesi Road Trip
     url: 'https://player.vimeo.com/video/211544218'
+    width: 1321.33
+    height: 990.992
   - duration: 265
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642924/Travels/holland_woygop.jpg
@@ -99,11 +109,15 @@ videos:
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642924/Travels/diningwithchunky_pvl2mo.jpg
     title: Dining with Chunky
     url: 'https://player.vimeo.com/video/111801736'
+    width: 1321.33
+    height: 990.992
   - duration: 654
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642924/Travels/baltic_mvyknf.jpg
     title: The Baltic Cruise
     url: 'https://player.vimeo.com/video/213149248'
+    width: 1321.33
+    height: 990.992
   - duration: 581
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642923/Travels/rajaampat_vbaqi6.jpg
@@ -134,6 +148,8 @@ videos:
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580642923/Travels/tanatoraja_z0jqx4.jpg
     title: Tana Toraja
     url: 'https://player.vimeo.com/video/211557056'
+    width: 1321.33
+    height: 990.992
   - duration: 1078
     thumbnailImg: >-
       https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1580645879/Travels/fiji_x2e1ro.jpg

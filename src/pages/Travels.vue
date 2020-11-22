@@ -74,6 +74,8 @@
           url
           thumbnailImg
           duration
+          width
+          height
         }
       }
     }

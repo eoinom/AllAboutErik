@@ -163,8 +163,7 @@ export default {
         flag: false,
       },
       windowWidth: 0,
-      windowHeight: 0,
-      videoAspectRatio: 1502.22 / 845.0
+      windowHeight: 0
     };
   },
 
@@ -189,38 +188,28 @@ export default {
     containerAspectRatio() {
       return this.containerWidth / this.containerHeight
     },
+    videoAspectRatio() {
+      if (this.formattedVideos[this.currentIndex].hasOwnProperty('width') && this.formattedVideos[this.currentIndex].width > 0 &&
+      this.formattedVideos[this.currentIndex].hasOwnProperty('height') && this.formattedVideos[this.currentIndex].height > 0) {
+        return this.formattedVideos[this.currentIndex].width / this.formattedVideos[this.currentIndex].height
+      }
+      else {
+        return 1502.22 / 845.0
+      }
+    },
     heightGoverns() {
       return this.containerAspectRatio >= this.videoAspectRatio
     },
+    actualVidHeight() {
+      return this.heightGoverns ? this.containerHeight : this.containerWidth / this.videoAspectRatio
+    },
+    actualVidWidth() {
+      return this.heightGoverns ? this.containerHeight * this.videoAspectRatio : this.containerWidth
+    },
     videoTitleCss() {
       let css = {}
-      // let containerWidth = 0.8 * this.windowWidth
-      // let containerHeight = 0.8 * this.windowHeight      
-      // const containerAspectRatio = containerWidth / containerHeight
-      // const heightGoverns = containerAspectRatio >= this.videoAspectRatio
-      // if (heightGoverns) {
-      //   var actualVidHeight = containerHeight
-      //   var actualVidWidth = actualVidHeight * this.videoAspectRatio
-      // }
-      // else {
-      //   var actualVidWidth = containerWidth
-      //   var actualVidHeight = actualVidWidth / this.videoAspectRatio
-      // }
-      // css.padding = 0
-      // css.bottom = ((containerHeight - actualVidHeight) / 2 - 40) + 'px';
-      // // css.left = ((containerWidth - actualVidWidth) / 2) + 'px';
-
-      if (this.heightGoverns) {
-        var actualVidHeight = this.containerHeight
-        var actualVidWidth = this.actualVidHeight * this.videoAspectRatio
-      }
-      else {
-        var actualVidWidth = this.containerWidth
-        var actualVidHeight = this.actualVidWidth / this.videoAspectRatio
-      }
       css.padding = 0
       css.bottom = ((this.containerHeight - this.actualVidHeight) / 2 - 40) + 'px';
-
       css.width = '100%';
       css.textAlign = this.titlePosition
       return css
@@ -255,7 +244,7 @@ export default {
 
     if (!document) return;
     this.bodyOverflowStyle = document.body.style.overflow;
-    this.bindEvents();
+    this.bindEvents();    
   },
 
   beforeDestroy() {

@@ -296,6 +296,8 @@ collections:
               - {label: "Vimeo Url", name: "url", widget: "string"}
               - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
               - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
+              - {label: "Width", name: "width", widget: "number", valueType: "float", min: 0, required: false}
+              - {label: "Height", name: "height", widget: "number", valueType: "float", min: 0, required: false}
 
       - label: "Travels"
         name: "travels"
@@ -318,6 +320,8 @@ collections:
               - {label: "Vimeo Url", name: "url", widget: "string"}
               - {label: "Thumbnail Image", name: "thumbnailImg", widget: "image"}
               - {label: "Duration (secs)", name: "duration", widget: "number", valueType: "float", min: 0, required: false}
+              - {label: "Width", name: "width", widget: "number", valueType: "float", min: 0, required: false}
+              - {label: "Height", name: "height", widget: "number", valueType: "float", min: 0, required: false}
 
       - label: "Collections Index"
         name: "collections-index"
