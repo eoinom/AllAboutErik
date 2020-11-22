@@ -19,7 +19,7 @@
           <b-col cols="2" lg="" xl="4">
             <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_small" id="nav_prev">
               <g-image alt="previous" src="../assets/images/previous-collection-2lines-white.png" class="hideOnHover" />
-              <g-image alt="previous" src="../assets/images/previous-collection-2lines-yellow.png" class="showOnHover" /> 
+              <g-image alt="previous" src="../assets/images/previous-collection-2lines-yellow.png" class="showOnHover" />
             </g-link>
 
             <g-link :to="'/collections/' + prevCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prevCollection.title" class="nav_link nav_link_big" id="nav_prev">
@@ -35,12 +35,12 @@
           <b-col cols="2" lg="" xl="4">
             <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_small" id="nav_next">
               <g-image alt="previous" src="../assets/images/next-collection-2lines-white.png" class="hideOnHover" />
-              <g-image alt="previous" src="../assets/images/next-collection-2lines-yellow.png" class="showOnHover" /> 
+              <g-image alt="previous" src="../assets/images/next-collection-2lines-yellow.png" class="showOnHover" />
             </g-link>
 
             <g-link :to="'/collections/' + nextCollection.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextCollection.title" class="nav_link nav_link_big" id="nav_next">
-               <g-image alt="previous" src="../assets/images/next-collection-1line-white.png" class="hideOnHover" />
-              <g-image alt="previous" src="../assets/images/next-collection-1line-yellow.png" class="showOnHover" /> 
+              <g-image alt="previous" src="../assets/images/next-collection-1line-white.png" class="hideOnHover" />
+              <g-image alt="previous" src="../assets/images/next-collection-1line-yellow.png" class="showOnHover" />
             </g-link>
           </b-col>            
         </b-row>
@@ -580,16 +580,16 @@ export default {
   .nav_link_small {
     display: block;
   }
+  .nav_link_big {
+    display: none;
+  }
   .nav_link_small img {
-    height: 10vw;
+    height: 11vw;
     max-height: 40px;
   }
   #nav_back.nav_link_small img {
-    height: 13vw;
-    max-height: 50px;
-  }
-  .nav_link_big {
-    display: none;
+    height: 15vw;
+    max-height: 60px;
   }
 }
 

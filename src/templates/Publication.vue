@@ -78,7 +78,7 @@
               </g-link>
             </b-col>
             
-            <b-col cols="11" sm="8" md="7" order="3" order-sm="2" class="pt-3 pb-3 pt-sm-0" id="mainCol">
+            <b-col cols="11" sm="11" lg="8" xl="7" order="3" order-lg="2" class="pt-3 pb-3 pt-sm-0" id="mainCol">
               <BookViewer 
                 :pages="bookImagesUrlsStdRes" 
                 :pagesHiRes="bookImagesUrlsHiRes" 
@@ -108,7 +108,7 @@
 
             </b-col>
             
-            <b-col cols="" order="2" order-sm="3">
+            <b-col cols="" order="2" order-lg="3">
               <g-link :to="'/publications/' + nextPublication.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="nextPublication.title" class="nav_link nav_link_small" id="nav_next">
                 <g-image alt="previous" src="../assets/images/next-publication-2lines-white.png" class="hideOnHover" />
                 <g-image alt="previous" src="../assets/images/next-publication-2lines-yellow.png" class="showOnHover" />
@@ -708,6 +708,14 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .nav_link_big {
     display: none;
   }
+  .nav_link_small img {
+    height: 10vw;
+    max-height: 40px;
+  }
+  #nav_back.nav_link_small img {
+    height: 15vw;
+    max-height: 60px;
+  }
   .publication_mainText {
     font-size: calc(1rem + 2 * (100vw - 375px) / (576 - 375) ); /* varies between 16px (1rem) and 18px */
     line-height: calc(1.0625rem + 7 * (100vw - 375px) / (576 - 375) ); /* varies between 17px (1.0625rem) and 24px */
@@ -822,7 +830,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 
 /* Special */
-@media only screen and (max-width: 1799.98px) {  
+@media only screen and (max-width: 1889.98px) {  
   .nav_link_small {
     display: block;
   }
