@@ -516,4 +516,15 @@ body {
     max-width: 69px;
   }
 }
+
+/* X-Large devices (desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) { 
+  .openbtn {
+    top: 50.5px;
+    left: 50.5px;
+  }
+  .openbtn img {
+    max-width: 73.5px;
+  }
+}
 </style>
