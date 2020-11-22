@@ -237,7 +237,7 @@ export default {
 
 
 
-<style scoped>
+<style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap');
 
 #outerContainer {
@@ -285,7 +285,6 @@ export default {
   position: absolute;
   bottom: 0;
 }
-
 .seeMoreBtn {
   width: 182px;
   height: 38px;
@@ -305,9 +304,11 @@ export default {
   opacity: 1;
   transition: opacity 0.25s ease;
 }
-
 .seeMoreBtn:hover {
   opacity: 0.75;
+}
+.seeMoreBtn:focus {
+  outline: none;  // remove blue border in iOS Chrome
 }
 
 .thumbnailImgCol {

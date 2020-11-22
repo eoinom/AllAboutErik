@@ -407,6 +407,9 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   max-width: 275px;
   height: 193px;
 }
+.mediaItems:focus {
+  outline: none;  // remove blue border in iOS Chrome
+}
 .mediaItemsText {
   font-family: 'Ubuntu Condensed', sans-serif;
   font-feature-settings: 'liga';

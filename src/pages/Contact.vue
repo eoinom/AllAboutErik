@@ -194,6 +194,9 @@ input[type=submit] {
   letter-spacing: 5px;
   text-transform: uppercase;
 }
+input[type=submit]:focus {
+  outline: none;  // remove blue border in iOS Chrome
+}
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
