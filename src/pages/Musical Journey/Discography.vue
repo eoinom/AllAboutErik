@@ -9,8 +9,8 @@
     />
 
     <div v-for="(img,index) in backgroundImages" :key="index" >
-      <g-image :src="backgroundImages[index].img" class="bgImg bgImgBack" :class="hideBgImg(index)" :style="bgStyles" />
-      <g-image :src="backgroundImages[index].imgOverlay" class="bgImg bgImgOverlay" :class="hideBgImgOverlay(index)" :style="bgStyles" />
+      <g-image :src="img.img" class="bgImg bgImgBack" :class="hideBgImg(index)" :style="bgStyles" />
+      <g-image :src="img.imgOverlay" class="bgImg bgImgOverlay" :class="hideBgImgOverlay(index)" :style="bgStyles" />
     </div>
     
     <header id="header" :style="headerStyles">
@@ -230,10 +230,21 @@ export default {
 
   methods: {
     hideBgImg(index) {
-      return index === this.bgImgIndex ? 'show' : 'hidden'
+      if (index === this.bgImgIndex)
+        return 'show'
+      else if (index === this.bgImgIndex - 1 || index === this.bgImgIndex + 1)
+        return 'hidden'
+      else
+        return 'displayNone'  // avoids having too many layers using up too much memory (causes page load failures on iOS devices) 
+                              // Ref: https://medium.com/@jeffreyrussom/deadly-css-transforms-1e12b4c23f8
     },
     hideBgImgOverlay(index) {
-      return index === this.bgImgOverlayIndex ? 'showOverlay' : 'hidden'
+      if (index === this.bgImgOverlayIndex)
+        return 'showOverlay'
+      else if (index === this.bgImgOverlayIndex - 1 || index === this.bgImgOverlayIndex + 1)
+        return 'hidden'
+      else
+        return 'displayNone'
     },
     scrollFunction() {
       this.getDocumentHeight();
@@ -396,6 +407,10 @@ export default {
 }
 .show {
   opacity: 1;
+}
+.displayNone {
+  opacity: 0;
+  display: none;
 }
 .showOverlay {
   opacity: 0.51;
