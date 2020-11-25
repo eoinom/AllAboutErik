@@ -457,6 +457,30 @@ body {
     line-height: 30px;
   }
 }
+@media only screen and (max-width: 370.98px) {
+  .title-text {
+    font-size: 5.2vw;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 359.98px) {
+  .title-text {
+    font-size: 5.1vw;
+    line-height: 29px;
+  }
+}
+@media only screen and (max-width: 344.98px) {
+  .title-text {
+    font-size: 5vw;
+    line-height: 29px;
+  }
+}
+@media only screen and (max-width: 334.98px) {
+  .title-text {
+    font-size: 4.95vw;
+    line-height: 28px;
+  }
+}
 @media only screen and (max-width: 329.98px) {
   .title-text {
     font-size: 4.85vw;
