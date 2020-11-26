@@ -9,13 +9,29 @@
           <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.name" class="nav_link" id="nav_next">NEXT</g-link>
         </div>
 
-        <b-container fluid class="wrapper">
-          <b-container fluid class="main-col mt-4 pt-4 px-4 pb-2 mb-2"> 
-            <h1 id="heading"> {{ heading }} </h1>
+          <b-container fluid class="wrapper">
+          <header>
+            <b-container>
+              <b-row>
+                <b-col class="headerNavCol">
+                  <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_prev">PREV</g-link>
+                </b-col>
+                <b-col cols="6" class="headerTextCol px-0">
+                  <h1 class="heading headingMobile"> {{ heading }} </h1>
+                </b-col>
+                <b-col class="headerNavCol">
+                  <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.name" class="nav_link" id="nav_next">NEXT</g-link>
+                </b-col>
+              </b-row>
+            </b-container>
+          </header>
+
+          <b-container fluid class="main-col mt-3 pt-3 mt-sm-4 pt-sm-4 px-4 pb-2 mb-2"> 
+            <h1 class="heading headingMain"> {{ heading }} </h1>
             <div v-html="$page.friend.content" id="mainContent" />
           </b-container>
 
-          <b-container fluid class="mediaItemsContainer">
+          <b-container fluid class="galleriesContainer">
             <b-row align-h="center" id="mediaItemsRow">
               <b-col v-for="(item,index) in $page.friend.mediaItems" :key="index" class="mediaItems p-2" v-b-toggle="String(index+1)" @click="mediaItemClick(item, index)">
                 <g-image :src="item.thumbnailImg" class="mediaItemsImg" :id="'mediaItemImg'+index" />
@@ -368,7 +384,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   border-radius: 15px;
 }
 
-#heading {
+.heading {
   color: #FFFFFF;
   font-family: 'Ubuntu Condensed', sans-serif;
   font-feature-settings: 'liga';
@@ -383,6 +399,14 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   margin: 0px;
   padding: 0px;
 }
+.headingMain {
+  display: inline;
+}
+.headingMobile {
+  display: none;
+  text-align: center;
+  padding-top: 36px;
+}
 
 #mainContent {
   color: #FFFFFF;
@@ -396,10 +420,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   // text-shadow: 0px 0px 250px #1C0F07,0px 0px 250px #1C0F07/* glow */,1px 1px 2px rgba(28,16,23,0.89)/* drop shadow*/;  // NOTE: DISABLED AS THIS CAUSES A SEVERE PERFORMANCE HIT
 }
 
-.mediaItemsContainer {
-  width: 100%;
-  padding: 4px 20% 20px 20%;
-}
 .mediaItems {
   max-width: 295px;
 }
@@ -464,23 +484,42 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 /* Extra small devices (portrait phones, less than 576px) */
 @media only screen and (max-width: 575.98px) {
   .nav_link {
-    font-size: 5vw;
+    font-size: 6vw;
   }
   #nav_previous {
     display: none;
   }
   #nav_prev {
-    display: block;
-    left: 4%;
+    display: none;
   }
   #nav_next {
-    right: 4%;
+    display: none;
   }
   .main-col, .galleriesContainer {
-    max-width: 61.46%;
+    max-width: 100%;
   }
-  #heading {
+  .heading {
     font-size: 31.5px;
+  }
+  .headingMain {
+    display: none;
+  }
+  header {
+    display: flex;
+    .headerNavCol, .headerTextCol {
+      align-self: flex-end;
+    }
+    #nav_prev, #nav_next {
+      display: block;
+      position: relative;
+      padding-top: 72px;
+    }
+  }
+  .headingMobile {
+    display: flex;
+    line-height: initial;
+    justify-content: center;
+    white-space: pre-wrap;
   }
   #mainContent {
     font-size: 15px;
@@ -495,6 +534,11 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .galleriesImg {
     max-width: 100%;
     height: auto;
+  }
+}
+@media only screen and (max-width: 355px) { /* e.g. for iPhone 5 etc. */
+  .heading {
+    font-size: 27px;
   }
 }
 
@@ -512,7 +556,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .main-col, .galleriesContainer {
     max-width: 61.46%;
   }
-  #heading {
+  .heading {
     font-size: 36.75px;
   }
   #mainContent {
@@ -543,7 +587,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .main-col, .galleriesContainer {
     max-width: 61.46%;
   }
-  #heading {
+  .heading {
     font-size: 36.75px;
   }
   #mainContent {
