@@ -9,7 +9,7 @@
           <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.name" class="nav_link" id="nav_next">NEXT</g-link>
         </div>
 
-          <b-container fluid class="wrapper">
+        <b-container fluid class="wrapper">
           <header>
             <b-container>
               <b-row>
@@ -26,7 +26,7 @@
             </b-container>
           </header>
 
-          <b-container fluid class="main-col mt-3 pt-3 mt-sm-4 pt-sm-4 px-4 pb-2 mb-2"> 
+          <b-container fluid class="main-col mt-3 pt-3 mt-sm-4 pt-md-4 px-4 pb-2 mb-2"> 
             <h1 class="heading headingMain"> {{ heading }} </h1>
             <div v-html="$page.friend.content" id="mainContent" />
           </b-container>
@@ -483,23 +483,16 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media only screen and (max-width: 575.98px) {
-  .nav_link {
-    font-size: 6vw;
-  }
-  #nav_previous {
-    display: none;
-  }
-  #nav_prev {
-    display: none;
-  }
-  #nav_next {
+  .navLinksContainer {
     display: none;
   }
   .main-col, .galleriesContainer {
     max-width: 100%;
   }
+  .nav_link,
   .heading {
-    font-size: 31.5px;
+    font-size: 6vw;
+    line-height: 6vw;
   }
   .headingMain {
     display: none;
@@ -544,20 +537,36 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
-  .nav_link {
-    font-size: 30px;
-  }
-  #nav_previous {
+  .navLinksContainer {
     display: none;
   }
-  #nav_prev {
-    display: block;
-  }
   .main-col, .galleriesContainer {
-    max-width: 61.46%;
+    max-width: 100%;
   }
+  .nav_link,
   .heading {
-    font-size: 36.75px;
+    font-size: 31.5px;
+    line-height: initial;
+  }
+  .headingMain {
+    display: none;
+  }
+  header {
+    display: flex;
+    .headerNavCol, .headerTextCol {
+      align-self: flex-end;
+    }
+    #nav_prev, #nav_next {
+      display: block;
+      position: relative;
+      padding-top: 84px;
+    }
+  }
+  .headingMobile {
+    display: flex;
+    line-height: initial;
+    justify-content: center;
+    white-space: pre-wrap;
   }
   #mainContent {
     font-size: 17.5px;
