@@ -2,6 +2,8 @@
 name: Kevin Mooney
 backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906559/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/Background_Thumbnails/KevinMooneyAndMe-background2_rgwd7q.jpg
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606429200/Musical%20Journey/Musical%20Friends/Friends/Kevin%20Mooney/Background_Thumbnails/Background_kevin_mooney_768x1024.jpg
 backgroundOpacity: 100
 mediaItems:
   - label: Fishing Photo with Kevin

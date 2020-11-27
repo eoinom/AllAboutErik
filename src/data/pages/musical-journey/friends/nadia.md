@@ -2,6 +2,8 @@
 name: Nadia
 backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906819/Musical%20Journey/Musical%20Friends/Friends/Nadia/Background_Thumbnails/background_Nadia4-_mgferm.jpg
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606429239/Musical%20Journey/Musical%20Friends/Friends/Nadia/Background_Thumbnails/Background_nadia_768x1024.jpg
 backgroundOpacity: 88
 mediaItems:
   - galleries:

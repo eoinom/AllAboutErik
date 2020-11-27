@@ -2,6 +2,8 @@
 name: Chris Isaak
 backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572904578/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Background_ChrisIsaak-2_lsyafq.jpg
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606428971/Musical%20Journey/Musical%20Friends/Friends/Chris%20Issak/Background_Thumbnails/Background_chris_isaak_768x1024.jpg
 backgroundOpacity: 88
 mediaItems:
   - galleries:

@@ -2,6 +2,8 @@
 name: Brian Elliot
 backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572901752/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Background_brianelliot-studio_it6tv0.jpg
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606428872/Musical%20Journey/Musical%20Friends/Friends/Brian%20Elliot/Background_Thumbnails/Background_brian_elliot_768x1024.jpg
 backgroundOpacity: 100
 mediaItems:
   - galleries:

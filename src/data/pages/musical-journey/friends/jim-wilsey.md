@@ -2,6 +2,8 @@
 name: Jim Wilsey
 backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905805/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/Background_thumbnails/background-james-wilsey-chris-isaak-_zkwzxw.jpg
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606429132/Musical%20Journey/Musical%20Friends/Friends/Jim%20Wilsey/Background_thumbnails/Background_jim_wilsey_768x1024.jpg
 backgroundOpacity: 88
 mediaItems:
   - label: Photos

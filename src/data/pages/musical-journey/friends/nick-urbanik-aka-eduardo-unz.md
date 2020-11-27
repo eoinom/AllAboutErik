@@ -3,6 +3,8 @@ name: Eduardo Unz
 heading: Nick Urbanik aka Eduardo Unz
 backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910960/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/background-img442-2_zqukkx.jpg
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606429076/Musical%20Journey/Musical%20Friends/Friends/Eduardo%20Unz/Background_Thumbnails/Background_unz_768x1024.jpg
 backgroundOpacity: 88
 mediaItems:
   - galleries:

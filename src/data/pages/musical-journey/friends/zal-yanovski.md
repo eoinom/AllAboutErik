@@ -2,6 +2,8 @@
 name: Zal Yanovsky
 backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910269/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Background_Thumbnails/Background_img388-zal-_dvr0u8.jpg
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606429480/Musical%20Journey/Musical%20Friends/Friends/Zal%20Yanovsky/Background_Thumbnails/Background_zal_768x1024.jpg
 backgroundOpacity: 88
 mediaItems:
   - galleries:

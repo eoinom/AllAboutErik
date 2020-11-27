@@ -2,6 +2,8 @@
 name: John Sebastian
 backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572906387/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/Background_Thumbnails/Background_JohnSebastianErikJacobsen-background3_iqozdf.jpg
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606429154/Musical%20Journey/Musical%20Friends/Friends/John%20Sebastian/Background_Thumbnails/Background_john_sebastian_768x1024.jpg
 backgroundOpacity: 83
 mediaItems:
   - galleries:

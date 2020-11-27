@@ -2,6 +2,8 @@
 name: Phil Ochs
 backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907986/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/Background_Thumbnails/Background_Phil_Erik-_tlgkoo.jpg
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606429345/Musical%20Journey/Musical%20Friends/Friends/Phil%20Ochs/Background_Thumbnails/Background_phil_ochs_768x1024.jpg
 backgroundOpacity: 81
 mediaItems:
   - galleries:

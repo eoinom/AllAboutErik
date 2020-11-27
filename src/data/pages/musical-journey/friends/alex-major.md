@@ -2,6 +2,8 @@
 name: Alex Major
 backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572899776/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/Background_Thumbnails/background_FishingWithAlex-_wxmvfy.jpg
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606428898/Musical%20Journey/Musical%20Friends/Friends/Alex%20Major/Background_Thumbnails/Background_alex_major_768x1024.jpg
 backgroundOpacity: 100
 mediaItems:
   - galleries:

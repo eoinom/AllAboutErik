@@ -2,6 +2,8 @@
 name: Norman Greenbaum
 backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572907512/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/Background_Thumbnails/Background_erik_and_normie_vn789h.jpg
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606429290/Musical%20Journey/Musical%20Friends/Friends/Norman%20Greenbaum/Background_Thumbnails/Background_norman_greenbaum_768x1024.jpg
 backgroundOpacity: 100
 mediaItems:
   - galleries:

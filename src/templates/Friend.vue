@@ -17,7 +17,7 @@
                   <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_prev">PREV</g-link>
                 </b-col>
                 <b-col cols="6" class="headerTextCol px-0">
-                  <h1 class="heading headingMobile"> {{ heading }} </h1>
+                  <h1 class="heading headingMobile" v-html="headingMobile" />
                 </b-col>
                 <b-col class="headerNavCol">
                   <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.name" class="nav_link" id="nav_next">NEXT</g-link>
@@ -53,7 +53,7 @@
 
             <b-row align-h="center" class="text-center">
               <b-col>
-                <div :style="navLinksVisibility" class="navLinksContainer">
+                <div :style="navLinksVisibility" class="backToMenuContainer">
                   <g-link to="/musical-journey/musical-friends/menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
                 </div>
               </b-col>
@@ -98,6 +98,7 @@ query ($id: ID!) {
     name
     heading
     backgroundImg
+    backgroundImgMobile
     backgroundOpacity
     content
     mediaItems {
@@ -174,7 +175,9 @@ export default {
       galleryIndex: null,
       imageIndex: null,
       videoIndex: null,
-      audioIndex: null
+      audioIndex: null,
+      windowWidth: 0.0,
+      windowHeight: 1.0
     }
   },
 
@@ -187,6 +190,9 @@ export default {
     },
     heading() {
       return this.$page.friend.heading ? this.$page.friend.heading : this.name
+    },
+    headingMobile() {
+      return this.heading.replace(/ /g, '<br>');
     },
     mediaItems() {
       return this.$page.friend.mediaItems
@@ -240,9 +246,13 @@ export default {
         next_i = i + 1
       return this.friends[next_i]
     },
+    aspectRatio() {
+      return this.windowWidth / this.windowHeight
+    },
     backgroundStyles() {
+      let img = this.aspectRatio < 1.0 ? this.$page.friend.backgroundImgMobile : this.$page.friend.backgroundImg
       return {
-        '--backgroundImg': 'url(' + this.$page.friend.backgroundImg + ')',
+        '--backgroundImg': 'url(' + img + ')',
         '--backgroundOpacity': this.$page.friend.backgroundOpacity / 100
       }
     },
@@ -258,6 +268,10 @@ export default {
       }
       return css
     }
+  },
+
+  mounted() {
+    this.updateWindowDims()
   },
 
   methods: {
@@ -286,7 +300,12 @@ export default {
       if (mediaType == 'audio') {
         this.audioIndex = 0
       }
-    }
+    },
+    updateWindowDims() {
+      const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; // ref: https://stackoverflow.com/a/39345914
+      this.windowWidth = (iOS) ? screen.width : window.innerWidth;
+      this.windowHeight = (iOS) ? screen.height : window.innerHeight;
+    },
   }
 }
 </script>
@@ -328,7 +347,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   opacity: var(--backgroundOpacity);
 }
 
-.navLinksContainer {
+.navLinksContainer, .backToMenuContainer {
   visibility: visible;
   opacity: 1;
   transition: visibility 0.5s linear 1s, opacity 0.5s linear 1s;
@@ -505,7 +524,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
     #nav_prev, #nav_next {
       display: block;
       position: relative;
-      padding-top: 72px;
+      padding-top: 84px;
     }
   }
   .headingMobile {

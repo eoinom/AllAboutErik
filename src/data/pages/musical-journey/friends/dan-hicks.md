@@ -1,7 +1,9 @@
 ---
 name: Dan Hicks
 backgroundImg: >-
-  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905372/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Background_danhicks-_t1pcfo.jpg
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905372/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Background_danhicks-_t1pcfo.jpg 
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606429047/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Background_dan_hicks_768x1024.jpg
 backgroundOpacity: 89
 mediaItems:
   - galleries:
@@ -202,7 +204,7 @@ mediaItems:
     mediaType: videos
     orderNo: 5
     thumbnailImg: >-
-      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_5_dan_video_icon_fcvufw.jpg
+      https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905371/Musical%20Journey/Musical%20Friends/Friends/Dan%20Hicks/Background_Thumbnails/Thumbnail_5_dan_video_icon_fcvufw.jpg 
   - galleries:
       - orderNo: 1
         type: videoGallery

@@ -2,6 +2,8 @@
 name: Tim Hardin
 backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572910020/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/Background_Thumbnails/background_tim-img319-_f4myat.jpg
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606429416/Musical%20Journey/Musical%20Friends/Friends/Tim%20Hardin/Background_Thumbnails/Background_tim_hardin_768x1024.jpg
 backgroundOpacity: 100
 mediaItems:
   - galleries:

@@ -2,6 +2,8 @@
 name: Rita Abrams
 backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1573905051/Musical%20Journey/Musical%20Friends/Friends/Rita%20Abrams/Background_Thumbnails/Background_rita_guitar_e6nejr.jpg
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606429393/Musical%20Journey/Musical%20Friends/Friends/Rita%20Abrams/Background_Thumbnails/Background_rita_abrams_768x1024.jpg
 backgroundOpacity: 88
 mediaItems:
   - galleries:

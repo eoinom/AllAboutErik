@@ -2,6 +2,8 @@
 name: Henry Diltz
 backgroundImg: >-
   https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1572905466/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/Thumbnails_%20Background/Background_HenryAndMe_v30v6q.jpg
+backgroundImgMobile: >-
+  https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1606429102/Musical%20Journey/Musical%20Friends/Friends/Henry%20Diltz/Thumbnails_%20Background/Background_henry_diltz_768x1024.jpg
 backgroundOpacity: 85
 mediaItems:
   - galleries:
