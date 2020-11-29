@@ -543,12 +543,6 @@ export default {
   width: fit-content;
   z-index: 1000;
 }
-.nav_link_small {
-  display: none;
-}
-.nav_link_big {
-  display: block;
-}
 #nav_prev {
   text-align: left;
   padding-left: var(--linkGutter);
@@ -562,38 +556,6 @@ export default {
   text-align: center;
   padding: 0 20px;
   width: 100%;
-}
-#nav_prev:hover, #nav_next:hover, #nav_back:hover {
-  color:	#EED047;
-  cursor: pointer;
-}
-
-.nav_link_big img {
-  height: 3vw;
-  max-height: 35px;
-  width: auto;
-}
-.nav_link_small img {
-  max-height: 50px;
-  width: auto;
-}
-#nav_back.nav_link_small img {
-  max-height: 75px;
-  width: auto;
-}
-
-.showOnHover,
-#nav_prev:hover .hideOnHover,
-#nav_previous:hover .hideOnHover,
-#nav_next:hover .hideOnHover,
-#nav_back:hover .hideOnHover {
-  display: none;
-}
-#nav_prev:hover .showOnHover,
-#nav_previous:hover .showOnHover,
-#nav_next:hover .showOnHover,
-#nav_back:hover .showOnHover {
-  display: inline;
 }
 
 
@@ -702,20 +664,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .sportsmenLinkText img {
     margin-left: -15px;
   }
-  .nav_link_small {
-    display: block;
-  }
-  .nav_link_big {
-    display: none;
-  }
-  .nav_link_small img {
-    height: 10vw;
-    max-height: 40px;
-  }
-  #nav_back.nav_link_small img {
-    height: 15vw;
-    max-height: 60px;
-  }
   .publication_mainText {
     font-size: calc(1rem + 2 * (100vw - 375px) / (576 - 375) ); /* varies between 16px (1rem) and 18px */
     line-height: calc(1.0625rem + 7 * (100vw - 375px) / (576 - 375) ); /* varies between 17px (1.0625rem) and 24px */
@@ -743,12 +691,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
     line-height: 1.325rem;
     letter-spacing: 7px;
   }
-  .nav_link_small {
-    display: block;
-  }
-  .nav_link_big {
-    display: none;
-  }
   .publication_mainText {
     font-size: calc(1.125rem + 1.0 * (100vw - 576px) / (768 - 576) ); /* varies between 18px (1.125rem) and 19px */
     line-height: calc(1.5rem + 12 * (100vw - 576px) / (768 - 576) ); /* varies between 24px (1.5rem) and 32px */
@@ -769,12 +711,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   }
   .headerItems {
     padding: 0px 120px;
-  }
-  .nav_link_small {
-    display: block;
-  }
-  .nav_link_big {
-    display: none;
   }
 }
 
@@ -831,10 +767,12 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Special */
 @media only screen and (max-width: 1889.98px) {  
-  .nav_link_small {
+  .nav_link_small#nav_prev,
+  .nav_link_small#nav_next {
     display: block;
   }
-  .nav_link_big {
+  .nav_link_big#nav_prev,
+  .nav_link_big#nav_next {
     display: none;
   }
 }

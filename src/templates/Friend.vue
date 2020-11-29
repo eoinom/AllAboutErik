@@ -3,29 +3,40 @@
     <transition name="page" mode="out-in">
       <div :key="'friend_' + nameSlug" class="background" :style="backgroundStyles"> <!-- Need a unique key for the transition above to work on route change -->
 
-        <div :style="navLinksVisibility" class="navLinksContainer">
+        <!-- <div :style="navLinksVisibility" class="navLinksContainer">
           <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_prev">PREV</g-link>
           <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_previous">PREVIOUS</g-link>
           <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.name" class="nav_link" id="nav_next">NEXT</g-link>
+        </div> -->
+
+        <div :style="navLinksVisibility" class="navLinksContainer">
+          <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.title" class="nav_link nav_link_small" id="nav_prev">
+            <g-image alt="previous" src="../assets/images/prev-white.png" class="hideOnHover" />
+            <g-image alt="previous" src="../assets/images/prev-yellow.png" class="showOnHover" />
+          </g-link>
+
+          <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.title" class="nav_link nav_link_big" id="nav_previous">
+            <g-image alt="previous" src="../assets/images/previous-white.png" class="hideOnHover" />
+            <g-image alt="previous" src="../assets/images/previous-yellow.png" class="showOnHover" />
+          </g-link>
+
+          <!-- <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.title" class="nav_link" id="nav_next">
+            <g-image alt="previous" src="../assets/images/next-white.png" class="hideOnHover" />
+            <g-image alt="previous" src="../assets/images/next-yellow.png" class="showOnHover" />
+          </g-link> -->
+
+          <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.title" class="nav_link nav_link_small" id="nav_next">
+            <g-image alt="previous" src="../assets/images/next-white.png" class="hideOnHover" />
+            <g-image alt="previous" src="../assets/images/next-yellow.png" class="showOnHover" />
+          </g-link>
+
+          <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.title" class="nav_link nav_link_big" id="nav_next">
+            <g-image alt="previous" src="../assets/images/next-white.png" class="hideOnHover" />
+            <g-image alt="previous" src="../assets/images/next-yellow.png" class="showOnHover" />
+          </g-link>
         </div>
 
         <b-container fluid class="wrapper">
-          <header>
-            <b-container>
-              <b-row class="mb-3 mb-sm-4 mb-md-0">
-                <b-col class="headerNavCol">
-                  <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_prev">PREV</g-link>
-                </b-col>
-                <b-col cols="6" class="headerTextCol px-0">
-                  <h1 class="heading headingMobile" v-html="headingMobile" />
-                </b-col>
-                <b-col class="headerNavCol">
-                  <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.name" class="nav_link" id="nav_next">NEXT</g-link>
-                </b-col>
-              </b-row>
-            </b-container>
-          </header>
-
 
           <!-- 768px wide (iPads) and higher -->
           <template v-if="windowWidth >= 768">
@@ -57,7 +68,16 @@
               <b-row align-h="center" class="text-center">
                 <b-col>
                   <div :style="navLinksVisibility" class="backToMenuContainer">
-                    <g-link to="/musical-journey/musical-friends/menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
+                    <g-link to="/musical-journey/musical-friends/menu/" class="nav_link nav_link_big pt-3" id="nav_back">
+                      <g-image alt="Back to musical friends menu" src="../assets/images/back-to-musical-friends-menu-1line-white.png" class="hideOnHover" />
+                      <g-image alt="Back to musical friends menu" src="../assets/images/back-to-musical-friends-menu-1line-yellow.png" class="showOnHover" />
+                    </g-link>
+                    
+                    <g-link to="/musical-journey/musical-friends/menu/" class="nav_link nav_link_small pt-3" id="nav_back">
+                      <g-image alt="Back to musical friends menu" src="../assets/images/back-to-musical-friends-menu-3lines-white.png" class="hideOnHover" />
+                      <g-image alt="Back to musical friends menu" src="../assets/images/back-to-musical-friends-menu-3lines-yellow.png" class="showOnHover" />
+                    </g-link>
+
                   </div>
                 </b-col>
               </b-row>
@@ -65,11 +85,26 @@
           </template>
 
           <!-- Mobiles and Tables less than 768px wide -->
-          <template v-else>
+          <template v-else>            
+            <header>
+              <b-container fluid>
+                <b-row class="mb-3 mb-sm-4 mb-md-0">
+                  <b-col cols="" class="headerNavCol">
+                    <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_prev">PREV</g-link>
+                  </b-col>
+                  <b-col cols="6" class="headerTextCol px-0">
+                    <h1 class="heading headingMobile" v-html="headingMobile" />
+                  </b-col>
+                  <b-col cols="" class="headerNavCol">
+                    <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.name" class="nav_link" id="nav_next">NEXT</g-link>
+                  </b-col>
+                </b-row>
+              </b-container>
+            </header>
+
             <b-container fluid class="mainContainer">
               <b-row>
-                <b-col class="main-col pt-3 pt-md-4 px-4 pb-2 mb-2"> 
-                  <h1 class="heading headingMain"> {{ heading }} </h1>
+                <b-col class="main-col pt-3 pt-md-4 px-4 pb-2 mb-2">
                   <div v-html="$page.friend.content" id="mainContent" />
                 </b-col>
               </b-row>
@@ -95,8 +130,11 @@
 
               <b-row align-h="center" class="text-center galleriesContainer">
                 <b-col>
-                  <div :style="navLinksVisibility" class="backToMenuContainer">
-                    <g-link to="/musical-journey/musical-friends/menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
+                  <div :style="navLinksVisibility" class="backToMenuContainer">                    
+                    <g-link to="/musical-journey/musical-friends/menu/" class="nav_link nav_link_small pt-3" id="nav_back">
+                      <g-image alt="Back to musical friends menu" src="../assets/images/back-to-musical-friends-menu-3lines-white.png" class="hideOnHover" />
+                      <g-image alt="Back to musical friends menu" src="../assets/images/back-to-musical-friends-menu-3lines-yellow.png" class="showOnHover" />
+                    </g-link>
                   </div>
                 </b-col>
               </b-row>
@@ -393,13 +431,11 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 }
 
 .navLinksContainer, .backToMenuContainer {
-  visibility: visible;
   opacity: 1;
-  transition: visibility 0.5s linear 1s, opacity 0.5s linear 1s;
+  transition: opacity 0.5s linear 1s;
 }
 .nav_link {
-  color: white; 
-  display: block;
+  color: white;
   font-family: 'Ubuntu Condensed', sans-serif;
   font-feature-settings: 'liga';
   font-weight: 400;
@@ -409,12 +445,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   text-shadow: 1px 1px 2px rgba(28,16,23,0.83);
   margin: 0px;
   padding: 0px;
-}
-.nav_link:hover,
-.mediaItems:hover,
-.mediaItems:hover .mediaItemsLabel {
-  color:	#EED047;
-  cursor: pointer;
 }
 #nav_prev, #nav_previous {
   position: fixed;
@@ -426,13 +456,16 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   display: none;
 }
 #nav_next {
+  // display: block;
   position: fixed;
   top: 44%;
   right: 5%;
   text-align: right;
 }
-#nav_back {
-  text-align: center;
+
+.nav_link_small img {
+  max-height: 30px;
+  width: auto;
 }
 
 .wrapper {
@@ -486,6 +519,11 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 .mediaItems {
   max-width: 295px;
+}
+.mediaItems:hover,
+.mediaItems:hover .mediaItemsLabel {
+  color:	#EED047;
+  cursor: pointer;
 }
 .mediaItemsImg {
   max-width: 275px;
