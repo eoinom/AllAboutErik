@@ -12,7 +12,7 @@
         <b-container fluid class="wrapper">
           <header>
             <b-container>
-              <b-row>
+              <b-row class="mb-3 mb-sm-4 mb-md-0">
                 <b-col class="headerNavCol">
                   <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_prev">PREV</g-link>
                 </b-col>
@@ -26,40 +26,83 @@
             </b-container>
           </header>
 
-          <b-container fluid class="main-col mt-3 pt-3 mt-sm-4 pt-md-4 px-4 pb-2 mb-2"> 
-            <h1 class="heading headingMain"> {{ heading }} </h1>
-            <div v-html="$page.friend.content" id="mainContent" />
-          </b-container>
 
-          <b-container fluid class="galleriesContainer">
-            <b-row align-h="center" id="mediaItemsRow">
-              <b-col v-for="(item,index) in $page.friend.mediaItems" :key="index" class="mediaItems p-2" v-b-toggle="String(index+1)" @click="mediaItemClick(item, index)">
-                <g-image :src="item.thumbnailImg" class="mediaItemsImg" :id="'mediaItemImg'+index" />
-                <br />
-                <span class="mediaItemsText mediaItemsLabel">{{ item.label }}</span>
-                <b-collapse v-if="item.galleries[0].label" :id="String(index+1)" accordion="mediaItems-accordion">
-                  <div v-for="(gallery,galIndex) in item.galleries" :key="galIndex">
-                    <br />
-                    <span
-                      @click="galleryIndex = galIndex; setMediaIndexToZero(item.mediaType)"
-                      class="mediaItemsText galleriesLabel py-2 pr-2"
-                    >
-                      {{ gallery.label }}
-                    </span>
+          <!-- 768px wide (iPads) and higher -->
+          <template v-if="windowWidth >= 768">
+            <b-container fluid class="main-col mt-3 pt-3 mt-sm-4 pt-md-4 px-4 pb-2 mb-2"> 
+              <h1 class="heading headingMain"> {{ heading }} </h1>
+              <div v-html="$page.friend.content" id="mainContent" />
+            </b-container>
+
+            <b-container fluid class="galleriesContainer">
+              <b-row align-h="center" id="mediaItemsRow">
+                <b-col v-for="(item,index) in $page.friend.mediaItems" :key="index" class="mediaItems p-2" v-b-toggle="String(index+1)" @click="mediaItemClick(item, index)">
+                  <g-image :src="item.thumbnailImg" class="mediaItemsImg" :id="'mediaItemImg'+index" />
+                  <br />
+                  <span class="mediaItemsText mediaItemsLabel">{{ item.label }}</span>
+                  <b-collapse v-if="item.galleries[0].label" :id="String(index+1)" accordion="mediaItems-accordion">
+                    <div v-for="(gallery,galIndex) in item.galleries" :key="galIndex">
+                      <br />
+                      <span
+                        @click="galleryIndex = galIndex; setMediaIndexToZero(item.mediaType)"
+                        class="mediaItemsText galleriesLabel py-2 pr-2"
+                      >
+                        {{ gallery.label }}
+                      </span>
+                    </div>
+                  </b-collapse>
+                </b-col>
+              </b-row>
+
+              <b-row align-h="center" class="text-center">
+                <b-col>
+                  <div :style="navLinksVisibility" class="backToMenuContainer">
+                    <g-link to="/musical-journey/musical-friends/menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
                   </div>
-                </b-collapse>
-              </b-col>
-            </b-row>
+                </b-col>
+              </b-row>
+            </b-container>
+          </template>
 
-            <b-row align-h="center" class="text-center">
-              <b-col>
-                <div :style="navLinksVisibility" class="backToMenuContainer">
-                  <g-link to="/musical-journey/musical-friends/menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
-                </div>
-              </b-col>
-            </b-row>
-            
-          </b-container>
+          <!-- Mobiles and Tables less than 768px wide -->
+          <template v-else>
+            <b-container fluid class="mainContainer">
+              <b-row>
+                <b-col class="main-col pt-3 pt-md-4 px-4 pb-2 mb-2"> 
+                  <h1 class="heading headingMain"> {{ heading }} </h1>
+                  <div v-html="$page.friend.content" id="mainContent" />
+                </b-col>
+              </b-row>
+
+              <b-row align-h="center" id="mediaItemsRow" class="galleriesContainer mx-0">
+                <b-col v-for="(item,index) in $page.friend.mediaItems" :key="index" class="mediaItems p-2" v-b-toggle="String(index+1)" @click="mediaItemClick(item, index)">
+                  <g-image :src="item.thumbnailImg" class="mediaItemsImg" :id="'mediaItemImg'+index" />
+                  <br />
+                  <span class="mediaItemsText mediaItemsLabel">{{ item.label }}</span>
+                  <b-collapse v-if="item.galleries[0].label" :id="String(index+1)" accordion="mediaItems-accordion">
+                    <div v-for="(gallery,galIndex) in item.galleries" :key="galIndex">
+                      <br />
+                      <span
+                        @click="galleryIndex = galIndex; setMediaIndexToZero(item.mediaType)"
+                        class="mediaItemsText galleriesLabel py-2 pr-2"
+                      >
+                        {{ gallery.label }}
+                      </span>
+                    </div>
+                  </b-collapse>
+                </b-col>
+              </b-row>
+
+              <b-row align-h="center" class="text-center galleriesContainer">
+                <b-col>
+                  <div :style="navLinksVisibility" class="backToMenuContainer">
+                    <g-link to="/musical-journey/musical-friends/menu/" class="nav_link pt-3" id="nav_back">BACK TO MUSICAL FRIENDS MENU</g-link>
+                  </div>
+                </b-col>
+              </b-row>
+            </b-container>
+          </template>
+
         </b-container>
 
       </div>
@@ -272,6 +315,8 @@ export default {
 
   mounted() {
     this.updateWindowDims()
+    window.addEventListener('resize', () => this.updateWindowDims())
+    window.addEventListener('orientationchange', () => this.updateWindowDims())
   },
 
   methods: {
@@ -516,8 +561,16 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .headingMain {
     display: none;
   }
+  .wrapper {
+    overflow-y: hidden;
+    height: 100vh;
+  }
+  .mainContainer {
+    overflow-y: scroll;
+  }
   header {
     display: flex;
+
     .headerNavCol, .headerTextCol {
       align-self: flex-end;
     }
@@ -569,6 +622,13 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   }
   .headingMain {
     display: none;
+  }
+  .wrapper {
+    overflow-y: hidden;
+    height: 100vh;
+  }
+  .mainContainer {
+    overflow-y: scroll;
   }
   header {
     display: flex;
