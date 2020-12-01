@@ -79,7 +79,7 @@
         />
         <img
           alt="Left arrow, click for previous image" 
-          src="../assets/images/arrow-left-hover.png" 
+          src="../assets/images/arrow-left-hover-yellow.png" 
           id="prevArrowImg-hover"
           class="prevArrow arrowImg" 
         />
@@ -94,7 +94,7 @@
         />
         <img
           alt="Right arrow, click for next image" 
-          src="../assets/images/arrow-right-hover.png" 
+          src="../assets/images/arrow-right-hover-yellow.png" 
           id="nextArrowImg-hover"
           class="nextArrow arrowImg" 
         />
