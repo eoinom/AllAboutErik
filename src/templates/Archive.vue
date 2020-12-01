@@ -366,12 +366,15 @@ export default {
       if (this.numItems <= 8) {
         css['--maxPerRow'] = 1
         css['--boxSize'] = '480px'
-        css['--gridGap'] = '30px'
+      } else if (this.windowWidth < 375) {
+        css['--maxPerRow'] = 1
+        const boxSize = this.windowWidth - 32
+        css['--boxSize'] = boxSize + 'px'
       } else {
         css['--maxPerRow'] = 5
         css['--boxSize'] = '350px'
-        css['--gridGap'] = '30px'
       }
+      css['--gridGap'] = '30px'
       return css
     },
     bookImagesUrlsStdRes() {
@@ -552,8 +555,7 @@ export default {
 #header {
   position: relative;
   text-align: center;
-  padding-top: 12.5px;
-  padding-bottom: 12.5px;
+  padding: 130px 60px 30px 60px !important;
   width: 100%;
   margin: 0 auto;
 }
@@ -618,12 +620,6 @@ export default {
   margin: auto;
   padding: 0 0 16px 0;
 }
-// .titleImg1Line {
-//   display: inline;
-// }
-// .titleImg2Lines {
-//   display: none;
-// }
 
 #archive_headerText { 
   padding-right: 0px;
@@ -691,10 +687,10 @@ export default {
   transform: translate3d(-50%, -50%, 0);
   object-fit: contain;
   margin: auto;
-  top: 175px;
-  left: 175px;
-  width: 350px;
-  height: 350px;
+  top: calc(var(--boxSize)/2);
+  left: calc(var(--boxSize)/2);
+  width: var(--boxSize);
+  height: var(--boxSize);
   z-index: 10;
   cursor: zoom-in;
   transition: all 0.3s linear;
@@ -782,7 +778,10 @@ export default {
   }
   .backToArchives {
     top: 20px;
-    right: 20px;
+    right: 26px;
+  }
+  #header {
+    padding: 90px 16px 16px 16px !important;
   }
   .galleryWrapper {
     grid-gap: 16px;
@@ -794,6 +793,9 @@ export default {
   .backToArchives {
     top: 27px;
     right: 27px;
+  }
+  #header {
+    padding: 100px 24px 16px 24px !important;
   }
   .galleryWrapper {
     grid-gap: 16px;
@@ -809,6 +811,9 @@ export default {
     top: 33px;
     right: 33px;
   }
+  #header {
+    padding: 100px 36px 24px 36px !important;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -819,6 +824,9 @@ export default {
   .backToArchives {
     top: 37px;
     right: 37px;
+  }
+  #header {
+    padding: 130px 50px 30px 50px !important;
   }
 }
 
@@ -840,8 +848,8 @@ export default {
     max-height: calc(350px - 32px);
   }
   .galleryImage {
-    height: calc(350px - 32px);
-    top: calc(175px - 16px);
+    height: calc(var(--boxSize));
+    top: calc(var(--boxSize)/2);
   }
 }
 
