@@ -3,12 +3,6 @@
     <transition name="page" mode="out-in">
       <div :key="'friend_' + nameSlug" class="background" :style="backgroundStyles"> <!-- Need a unique key for the transition above to work on route change -->
 
-        <!-- <div :style="navLinksVisibility" class="navLinksContainer">
-          <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_prev">PREV</g-link>
-          <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.name" class="nav_link" id="nav_previous">PREVIOUS</g-link>
-          <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.name" class="nav_link" id="nav_next">NEXT</g-link>
-        </div> -->
-
         <div :style="navLinksVisibility" class="navLinksContainer">
           <g-link :to="'/musical-journey/musical-friends/' + prev_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_friend.title" class="nav_link nav_link_small" id="nav_prev">
             <g-image alt="previous" src="../assets/images/prev-white.png" class="hideOnHover" />
@@ -19,11 +13,6 @@
             <g-image alt="previous" src="../assets/images/previous-white.png" class="hideOnHover" />
             <g-image alt="previous" src="../assets/images/previous-yellow.png" class="showOnHover" />
           </g-link>
-
-          <!-- <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.title" class="nav_link" id="nav_next">
-            <g-image alt="previous" src="../assets/images/next-white.png" class="hideOnHover" />
-            <g-image alt="previous" src="../assets/images/next-yellow.png" class="showOnHover" />
-          </g-link> -->
 
           <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.title" class="nav_link nav_link_small" id="nav_next">
             <g-image alt="previous" src="../assets/images/next-white.png" class="hideOnHover" />
@@ -456,16 +445,10 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   display: none;
 }
 #nav_next {
-  // display: block;
   position: fixed;
   top: 44%;
   right: 5%;
   text-align: right;
-}
-
-.nav_link_small img {
-  max-height: 30px;
-  width: auto;
 }
 
 .wrapper {
@@ -704,12 +687,6 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  #nav_previous {
-    display: none;
-  }
-  #nav_prev {
-    display: block;
-  }
   .main-col, .galleriesContainer {
     max-width: 61.46%;
   }
@@ -731,21 +708,30 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
     max-width: 100%;
     height: auto;
   }
+  .nav_link_small img {
+    height: 30px;
+    max-height: 3.65vw;
+    width: auto;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
-  #nav_previous {
-    display: none;
-  }
-  #nav_prev {
-    display: block;
-  }
   .main-col, .galleriesContainer {
     max-width: 61.46%;
   }
   .galleriesContainer {
     padding: 4px 0 20px 0;
+  }
+}
+
+/* Special */
+@media only screen and (max-width: 1299.98px) { 
+  #nav_previous {
+    display: none;
+  }
+  #nav_prev {
+    display: block;
   }
 }
 
