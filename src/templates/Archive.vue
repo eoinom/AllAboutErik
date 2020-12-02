@@ -85,7 +85,38 @@
           </template>
 
         </div>
+
+        <b-container fluid style="padding:0">        
+          <b-row no-gutters align-v="center" id="navLinksRow" class="pt-2">
+            <b-col style="text-align:left">
+              <g-link :to="'/archives/' + prev_archive.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_archive.title" class="nav_link nav_link_big" id="nav_previous">
+                <g-image alt="previous" src="../assets/images/previous-white.png" class="hideOnHover" />
+                <g-image alt="previous" src="../assets/images/previous-yellow.png" class="showOnHover" />
+              </g-link>
+
+              <g-link :to="'/archives/' + prev_archive.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="prev_archive.title" class="nav_link nav_link_small" id="nav_prev">
+                <g-image alt="previous" src="../assets/images/prev-white.png" class="hideOnHover" />
+                <g-image alt="previous" src="../assets/images/prev-yellow.png" class="showOnHover" />
+              </g-link>
+            </b-col>
+            
+            <b-col style="text-align:right">
+              <g-link :to="'/archives/' + next_archive.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_archive.title" class="nav_link nav_link_big" id="nav_next">
+                <g-image alt="next" src="../assets/images/next-white.png" class="hideOnHover" />
+                <g-image alt="next" src="../assets/images/next-yellow.png" class="showOnHover" />
+              </g-link>
+              
+              <g-link :to="'/archives/' + next_archive.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_archive.title" class="nav_link nav_link_small" id="nav_next">
+                <g-image alt="next" src="../assets/images/next-white.png" class="hideOnHover" />
+                <g-image alt="next" src="../assets/images/next-yellow.png" class="showOnHover" />
+              </g-link>
+            </b-col>
+          </b-row>
+        </b-container>
       </header>
+
+
+      
 
       
       <div id="mainContent" class="px-3 pb-5" :style="mainContentStyles">
@@ -215,6 +246,20 @@ query ($id: ID!) {
   }
 }
 </page-query>
+
+<static-query>
+{
+  Archives: allArchivesIndex {
+    edges {
+      node {
+        tiles {
+          text
+        }
+      }
+    }
+  }
+}
+</static-query>
 
 
 <script scoped>
@@ -388,6 +433,29 @@ export default {
         pages.push(url)
       }
       return pages
+    },
+    archive_names() {
+      let archive_names = []
+      this.$static.Archives.edges[0].node.tiles.forEach(tile => {
+        archive_names.push(tile.text)
+      });
+      return archive_names
+    },
+    prev_archive() {
+      const i = this.archive_names.indexOf(this.title)
+      const prev_i = i === 0 ? this.archive_names.length - 1 : i - 1
+      return {
+        title: this.archive_names[prev_i],
+        link: slugify(this.archive_names[prev_i], {customReplacements: [['\'', '']]})
+      }
+    },
+    next_archive() {
+      const i = this.archive_names.indexOf(this.title)
+      const next_i = i === this.archive_names.length - 1 ? 0 : i + 1
+      return {
+        title: this.archive_names[next_i],
+        link: slugify(this.archive_names[next_i], {customReplacements: [['\'', '']]})
+      }
     }
   },
 
@@ -631,6 +699,14 @@ export default {
   height: inherit;
 }
 
+
+.nav_link {
+  width: min-content;
+  img {
+    max-height: 25px;
+  }
+}
+
 #mainContent {
   max-width: calc(var(--maxPerRow) * var(--boxSize) + (var(--maxPerRow - 1) * var(--gridGap)) + 2 * 16px);
   width: 100%;
@@ -748,18 +824,18 @@ export default {
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
-.hideOnHover {
+.boxOverlay .hideOnHover {
   opacity: 1;
   transition: all 0.5s ease 0s;
 }
-.galleryBox:hover .hideOnHover {
+.galleryBox:hover .boxOverlay .hideOnHover {
   opacity: 0;
 }
-.showOnHover {
+.boxOverlay .showOnHover {
   opacity: 0;
   transition: all 0.5s ease 0s;
 }
-.galleryBox:hover .showOnHover {
+.galleryBox:hover .boxOverlay .showOnHover {
   opacity: 1;
 }
 
@@ -780,6 +856,9 @@ export default {
     top: 20px;
     right: 26px;
   }
+  .nav_link img {
+    max-height: 15px;
+  }
   #header {
     padding: 90px 16px 16px 16px !important;
   }
@@ -793,6 +872,9 @@ export default {
   .backToArchives {
     top: 27px;
     right: 27px;
+  }
+  .nav_link img {
+    max-height: 20px;
   }
   #header {
     padding: 100px 24px 16px 24px !important;
@@ -811,6 +893,9 @@ export default {
     top: 33px;
     right: 33px;
   }
+  .nav_link img {
+    max-height: 20px;
+  }
   #header {
     padding: 100px 36px 24px 36px !important;
   }
@@ -824,6 +909,9 @@ export default {
   .backToArchives {
     top: 37px;
     right: 37px;
+  }
+  .nav_link img {
+    max-height: 20px;
   }
   #header {
     padding: 130px 50px 30px 50px !important;

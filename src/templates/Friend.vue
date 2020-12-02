@@ -15,13 +15,13 @@
           </g-link>
 
           <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.title" class="nav_link nav_link_small" id="nav_next">
-            <g-image alt="previous" src="../assets/images/next-white.png" class="hideOnHover" />
-            <g-image alt="previous" src="../assets/images/next-yellow.png" class="showOnHover" />
+            <g-image alt="next" src="../assets/images/next-white.png" class="hideOnHover" />
+            <g-image alt="next" src="../assets/images/next-yellow.png" class="showOnHover" />
           </g-link>
 
           <g-link :to="'/musical-journey/musical-friends/' + next_friend.link" v-b-tooltip.hover="{ variant: 'secondary' }" :title="next_friend.title" class="nav_link nav_link_big" id="nav_next">
-            <g-image alt="previous" src="../assets/images/next-white.png" class="hideOnHover" />
-            <g-image alt="previous" src="../assets/images/next-yellow.png" class="showOnHover" />
+            <g-image alt="next" src="../assets/images/next-white.png" class="hideOnHover" />
+            <g-image alt="next" src="../assets/images/next-yellow.png" class="showOnHover" />
           </g-link>
         </div>
 

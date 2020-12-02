@@ -19,7 +19,7 @@ body {
   display: none;
 }
 .nav_link_big {
-  display: block;
+  display: inline;
 }
 .nav_link_big img {
   height: 3vw;
@@ -157,7 +157,7 @@ body {
 @media only screen and (max-width: 575.98px) {
   
   .nav_link_small {
-    display: block;
+    display: inline;
   }
   .nav_link_big {
     display: none;
@@ -209,7 +209,7 @@ body {
 /* Small devices (landscape phones, 576 - 768px) */
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .nav_link_small {
-    display: block;
+    display: inline;
   }
   .nav_link_big {
     display: none;
@@ -230,7 +230,7 @@ body {
 /* Medium devices (tablets, 768 - 992px) */
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .nav_link_small {
-    display: block;
+    display: inline;
   }
   .nav_link_big {
     display: none;
