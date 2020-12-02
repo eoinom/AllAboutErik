@@ -401,18 +401,15 @@ export default {
     audiosAndArticles() {
       return [...this.audioTracks, ...this.articles].sort((a, b) => (a.orderNo > b.orderNo) ? 1 : -1); 
     },
-    numItems() {
-      let num = 0
-      num += this.galleryImgUrls ? this.galleryImgUrls.length : 0
-      num += this.audioTracks ? this.audioTracks.length : 0
-      return num
-    },
+    // numItems() {
+    //   let num = 0
+    //   num += this.galleryImgUrls ? this.galleryImgUrls.length : 0
+    //   num += this.audioTracks ? this.audioTracks.length : 0
+    //   return num
+    // },
     mainContentStyles() {
       let css = {}
-      if (this.numItems <= 8) {
-        css['--maxPerRow'] = 1
-        css['--boxSize'] = '480px'
-      } else if (this.windowWidth < 375) {
+      if (this.windowWidth < 375) {
         css['--maxPerRow'] = 1
         const boxSize = this.windowWidth - 32
         css['--boxSize'] = boxSize + 'px'
@@ -788,9 +785,9 @@ export default {
   font-family: 'Open Sans Condensed', sans-serif;
   font-feature-settings: 'liga';
   font-weight: 300;
-  font-size: 53px;
-  line-height: 53px;
-  letter-spacing: 9px;
+  font-size: 46px;
+  line-height: 46px;
+  letter-spacing: 6px;
   text-align: center;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.32);
   text-transform: uppercase;
