@@ -375,7 +375,8 @@ export default {
       let urls = []
       for (let i = 1; i <= this.node.imageGallery.numImages; i++) {
         let url = this.node.imageGallery.commonPath + i + '.jpg'
-        if (this.titleSlug === 'lots-of-fishing' && (i == 356 || i == 379)) {
+        if ((this.titleSlug === 'lots-of-fishing' && (i == 356 || i == 379)) ||
+           (this.titleSlug === 'boyhood' && (i == 57))) {
           continue
         } else {
           urls.push(url)
@@ -434,28 +435,29 @@ export default {
       }
       return pages
     },
-    archive_names() {
-      let archive_names = []
+    archives() {
+      let archives = []
       this.$static.Archives.edges[0].node.tiles.forEach(tile => {
-        archive_names.push(tile.text)
+        archives.push({
+          title: tile.text,
+          link: slugify(tile.text, {customReplacements: [['\'', '']]})
+        });
       });
-      return archive_names
+      return archives
+    },
+    currentIndex() {
+      for (let i = 0; i < this.archives.length; i++) {
+        if (this.archives[i].link == slugify(this.title, {customReplacements: [['\'', '']]}))
+          return i
+      }
     },
     prev_archive() {
-      const i = this.archive_names.indexOf(this.title)
-      const prev_i = i === 0 ? this.archive_names.length - 1 : i - 1
-      return {
-        title: this.archive_names[prev_i],
-        link: slugify(this.archive_names[prev_i], {customReplacements: [['\'', '']]})
-      }
+      const prev_i = this.currentIndex === 0 ? this.archives.length - 1 : this.currentIndex - 1
+      return this.archives[prev_i]
     },
     next_archive() {
-      const i = this.archive_names.indexOf(this.title)
-      const next_i = i === this.archive_names.length - 1 ? 0 : i + 1
-      return {
-        title: this.archive_names[next_i],
-        link: slugify(this.archive_names[next_i], {customReplacements: [['\'', '']]})
-      }
+      const next_i = this.currentIndex === this.archives.length - 1 ? 0 : this.currentIndex + 1
+      return this.archives[next_i]
     }
   },
 
