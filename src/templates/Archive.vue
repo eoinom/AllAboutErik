@@ -655,7 +655,7 @@ export default {
   position: relative;
   place-self: center;
 }
-.headerBox img {
+.headerBox > img {
   border-radius: 15px;
   width: 100%;
   height: auto;
