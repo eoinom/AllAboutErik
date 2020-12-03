@@ -156,6 +156,8 @@ export default {
 .carousel {
   text-shadow: 1px 1px 2px #333;
   border-radius: var(--borderRadius);
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
 }
 .carousel-inner {
   border-radius: var(--borderRadius);
