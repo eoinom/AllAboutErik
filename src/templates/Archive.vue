@@ -593,7 +593,7 @@ export default {
 }
 
 .backToArchives {
-  position: fixed;
+  position: absolute;
   top: 50px;
   right: 60px;
   z-index: 100;
