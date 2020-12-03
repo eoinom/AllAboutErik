@@ -178,7 +178,7 @@ export default {
 
 
 
-<style scoped>
+<style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 
 @font-face {
@@ -212,12 +212,12 @@ export default {
 }
 #header:after  {
   content : "";
-  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
   background: var(--headerBgImg) no-repeat center;
   background-size: cover;
+  transform: translate3d(0,0,0);
   opacity : var(--bgOpacity);
   width: 100%;
   height: 100%;
