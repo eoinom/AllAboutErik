@@ -7,28 +7,26 @@
             <g-image :src="titleImg1Line" class="titleImg titleImg1Line" />
             <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
 
-            <div v-if="windowWidth < 1200 && !showIntro" v-b-toggle.collapse-1 class="collection_headerText" style="font-style: italic" @click="showIntro = true">
-              Read intro
+            <div 
+              v-if="windowWidth < 1200"
+              class="collection_headerText pointer" 
+              style="font-style: italic"
+              :aria-expanded="showIntro ? 'true' : 'false'"
+              aria-controls="collapse-1"
+              @click="showIntro = !showIntro"
+            >
+              {{ showIntro ? 'Hide intro' : 'Read intro' }}
               <svg viewBox="0 0 20 20" width="20" height="20" class="arrow">
-                <line x1="1" y1="4.5" x2="9" y2="13" />
-                <line x1="8" y1="13" x2="16" y2="4.5" />
+                <line v-if="showIntro" x1="1" y1="13" x2="9" y2="4.5" />
+                <line v-if="showIntro" x1="8" y1="4.5" x2="16" y2="13" />
+                <line v-if="!showIntro" x1="1" y1="4.5" x2="9" y2="13" />
+                <line v-if="!showIntro" x1="8" y1="13" x2="16" y2="4.5" />
               </svg>
             </div>
-
-            <div v-else-if="windowWidth < 1200 && showIntro" v-b-toggle.collapse-1 class="collection_headerText" style="font-style: italic" @click="showIntro = false">
-              Hide intro
-              <svg viewBox="0 0 20 20" width="20" height="20" class="arrow">
-                <line x1="1" y1="13" x2="9" y2="4.5" />
-                <line x1="8" y1="4.5" x2="16" y2="13" />
-              </svg>
-            </div>
-            
-            <div v-else v-html="$page.collection.content" class="collection_headerText" />
-
           </div>
         </header>
-        
-        <b-collapse id="collapse-1">
+
+        <b-collapse id="collapse-1" v-model="showIntro">
           <div v-html="$page.collection.content" class="collection_headerText" id="headerTextDevice" />
         </b-collapse>
         
@@ -240,9 +238,14 @@ export default {
   line-height: 1.625rem;
   font-size: 1.125rem;
   font-weight: 500;
-  margin: 0px;
+  margin: 0 auto;
   padding: 0px;
+  width: fit-content;
   /* See styles.css for further styles */
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 #headerTextDevice {
