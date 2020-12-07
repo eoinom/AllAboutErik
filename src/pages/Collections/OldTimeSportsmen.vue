@@ -92,7 +92,7 @@
       </b-container>
     </header>
         
-    <b-collapse id="collapse-1" v-model="showIntro">
+    <b-collapse v-if="windowWidth < 1200" v-model="showIntro" id="collapse-1">
       <div v-html="node.content" class="collections_headerText" id="headerTextDevice" />
     </b-collapse>
 
@@ -352,7 +352,7 @@ export default {
       imageIndex: 0,
       sportsmenSiteHover: false,
       sportsmenGalleryHover: false,
-      showIntro: false,
+      showIntro: true,
       windowWidth: 0.0,
       postcardSizes: [
         {width: 480, height: 297},
