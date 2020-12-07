@@ -99,15 +99,10 @@
           class="nextArrow arrowImg" 
         />
       </div>
-      
-      <g-link :to="{ path: '/collections/', query: { playMusic: 'false' }}" class="nav_link nav_link_big pt-3" id="nav_back">
+
+      <g-link :to="{ path: '/collections/', query: { playMusic: 'false' }}" class="nav_link pt-3" id="nav_back">
         <g-image alt="Back to collections menu" src="../assets/images/back-to-collections-menu-1line-white.png" class="hideOnHover" />
         <g-image alt="Back to collections menu" src="../assets/images/back-to-collections-menu-1line-yellow.png" class="showOnHover" />
-      </g-link>
-      
-      <g-link :to="{ path: '/collections/', query: { playMusic: 'false' }}" class="nav_link nav_link_small pt-3" id="nav_back">
-        <g-image alt="Back to collections menu" src="../assets/images/back-to-collections-menu-3lines-white.png" class="hideOnHover" />
-        <g-image alt="Back to collections menu" src="../assets/images/back-to-collections-menu-3lines-yellow.png" class="showOnHover" />
       </g-link>
     </div>
 
@@ -364,6 +359,9 @@ export default {
   transform: translate(-50%, 0);
   text-align: center;
   padding: 0 20px;
+  img {
+    max-width: 100%;
+  }
 }
 
 .collection-viewer {

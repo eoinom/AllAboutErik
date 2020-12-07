@@ -23,6 +23,12 @@
                 <line v-if="!showIntro" x1="8" y1="13" x2="16" y2="4.5" />
               </svg>
             </div>
+
+            <div v-else
+              v-html="$page.collection.content" 
+              class="collection_headerText mx-auto my-0" 
+              id="headerTextDevice" 
+            />
           </div>
         </header>
 
@@ -265,7 +271,7 @@ export default {
 
 .titleImg {
   max-width: 100%;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
 }
 .titleImg1Line {
   display: inline;
