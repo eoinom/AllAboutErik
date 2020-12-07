@@ -32,7 +32,7 @@
           </div>
         </header>
 
-        <b-collapse id="collapse-1" v-model="showIntro">
+        <b-collapse v-if="windowWidth < 1200" v-model="showIntro" id="collapse-1">
           <div v-html="$page.collection.content" class="collection_headerText" id="headerTextDevice" />
         </b-collapse>
         
@@ -103,7 +103,7 @@ export default {
   data() {
     return {
       imageIndex: 0,
-      showIntro: false,
+      showIntro: true,
       windowWidth: 0.0
     }
   },
