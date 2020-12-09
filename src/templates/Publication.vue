@@ -22,7 +22,7 @@
 
                 <b-row align-v="start" align-h="center" style="min-height:68px; padding-top:8px">                  
                   <b-col>
-                    <a href="http://sportsmenysportsmenphotogallery.com/gallery/" target="_blank"
+                    <a href="http://oldtimeysportsmenphotogallery.com/gallery/" target="_blank"
                       class="sportsmenLinkText"
                       style="margin: 0 auto"
                       @mouseover="updateSportsmenGalleryHover(true)" 
