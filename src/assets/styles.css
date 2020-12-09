@@ -19,7 +19,7 @@ body {
   display: none;
 }
 .nav_link_big {
-  display: inline;
+  display: inline-block;
 }
 .nav_link_big img {
   height: 3vw;

@@ -31,57 +31,10 @@
 
             <div v-else v-html="node.content" class="collections_headerText" />
 
-            <b-row align-v="start" align-h="center" style="min-height:68px; padding-top:8px">
-              <b-col sm="1" md="2" class="d-none d-sm-block" />
-
-              <b-col cols="6" sm="4" md="3" style="padding:0 5px">
-                <div 
-                  v-scroll-to="{ el:'#postcardHistory', duration:1500, easing:'ease' }"
-                  class="sportsmenLinkText collections_headerLinkText" 
-                  id="sportsmenMoreInfoText"
-                  @mouseover="updateSportsmenSiteHover(true)" 
-                  @mouseleave="updateSportsmenSiteHover(false)" 
-                >
-                  <div v-if="windowWidth > 484">
-                    <span>MORE INFORMATION ON</span>
-                    <br><span>Old-Time Sportsmen</span>
-                  </div>
-                  <div v-else-if="windowWidth > 479">
-                    <span>MORE INFORMATION <br>ON</span>
-                    <br><span>Old-Time Sportsmen</span>
-                  </div>
-                  <div v-else>
-                    <span>MORE INFORMATION <br>ON</span>
-                    <br><span>Old-Time <br>Sportsmen</span>
-                  </div>
-
-                  <g-image class="sportsmenSiteHoverImg" alt="Fishing fly line" :src="sportsmenSiteHoverImg" :class="{ showImage: sportsmenSiteHover }" />
-                </div>
-              </b-col>
-
-              <b-col sm="1" md="2" class="d-none d-sm-block" />
-              
-              <b-col cols="6" sm="4" md="3" style="padding:0 5px">
-                <a :href="sportsmenGalleryLink" target="_blank"
-                  class="sportsmenLinkText collections_headerLinkText"
-                  @mouseover="updateSportsmenGalleryHover(true)" 
-                  @mouseleave="updateSportsmenGalleryHover(false)"
-                >
-                  <div v-if="windowWidth > 350">
-                    <span>OPEN A NEW TAB TO SEE THE</span>
-                    <br><span>Old-Time Sportsmen Gallery</span>
-                  </div>
-                  <div v-else>
-                    <span>OPEN A NEW TAB TO SEE THE</span>
-                    <br><span>Old-Time Sportsmen <br>Gallery</span>
-                  </div>
-
-                  <g-image class="sportsmenGalleryHoverImg" alt="Old log cabin" :src="sportsmenGalleryHoverImg" :class="{ showImage: sportsmenGalleryHover }" />
-                </a>
-              </b-col>
-
-              <b-col sm="1" md="2" class="d-none d-sm-block" />
-            </b-row>            
+            <g-link :to="{ path: '/collections/', query: { playMusic: 'false' }}" class="nav_link py-2" id="nav_back">
+              <g-image alt="Back to collections menu" src="../../assets/images/back-to-collections-menu-1line-black.png" class="hideOnHover" />
+              <g-image alt="Back to collections menu" src="../../assets/images/back-to-collections-menu-1line-yellow.png" class="showOnHover" />
+            </g-link>
           </b-col>
           
           <b-col cols="3" class="headerImageCol" style="text-align:left">            
@@ -103,10 +56,11 @@
       :disable-scroll="true"
       :prevCollection="prev_collection"
       :nextCollection="next_collection"
+      :isOldTime="true"
     />
 
 
-    <section id="postcardHistory">
+    <section class="postcardHistory">
       <b-container fluid class="slideshowOverlay">
         <b-row align-v="center">
 
@@ -115,7 +69,7 @@
           </b-col>
           
           <b-col> 
-            <div id="postcardHistory__textDiv">
+            <div class="postcardHistory__textDiv">
               <h2 class="title">{{ postcardHistory.title }}</h2>
               <div class="pb-2 pb-sm-3 pb-md-4 pb-lg-5">
                 <div class="pb-4 pb-xl-2 pt-3 pt-xl-0 mb-3 mb-xl-0 pl-5 pr-3" style="float:right">
@@ -257,8 +211,34 @@
 
         </b-row>
 
-      </b-container>
-    
+        <b-row>
+          <b-col>
+            <div class="postcardHistory__textDiv text-justify">
+              <span class="postcardText">
+                If you would like to see a large selection of the Old-Time Sportsmen collection, 
+                click the link below to open the gallery website in a new tab.
+              </span>
+              <a :href="sportsmenGalleryLink" target="_blank"
+                class="sportsmenLinkText collections_headerLinkText mx-auto"
+                style="width:fit-content"
+              >
+                <div class="pt-3 pb-4" style="width:fit-content; max-width:90vw">
+                  <span style="font-size:18px">SEE THE COLLECTION</span>
+                  <br>
+                  <span class="d-block mb-n4" style="font-size:28px">GALLERY WEBSITE</span>
+                  <g-image 
+                    src="https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1587596183/Publications/2.%20Old-Time%20Sportsmen/guns-crossed_imnn0f.png" 
+                    alt="Guns crossed" 
+                    class="d-block mx-auto w-100"
+                  />
+                </div>
+              </a>
+            </div>
+            
+            <BackToTop :staticImg="true" />
+          </b-col>
+        </b-row>
+      </b-container>    
     </section>
 
     <footer :style="footerStyles" />
@@ -336,6 +316,7 @@
 import CollectionViewer from '../../components/CollectionViewer.vue'
 import FlipPostcard from '../../components/FlipPostcard.vue'
 import SlideshowZoom from '../../components/SlideshowZoom.vue'
+import BackToTop from '../../components/BackToTop.vue'
 
 const slugify = require('@sindresorhus/slugify')
 const MarkdownIt = require('markdown-it')
@@ -345,6 +326,13 @@ export default {
     return {
       title: this.title
     }
+  },
+  
+  components: {
+    CollectionViewer,
+    FlipPostcard,
+    SlideshowZoom,
+    BackToTop
   },
 
   data() {
@@ -491,14 +479,6 @@ export default {
       const md = new MarkdownIt()
       return md.render(text) 
     },
-    updateSportsmenSiteHover(val) {
-      if (this.windowWidth > 1366)
-        this.sportsmenSiteHover = val
-    },
-    updateSportsmenGalleryHover(val) {
-      if (this.windowWidth > 1366)
-        this.sportsmenGalleryHover = val      
-    },
     postcardSize(index) {
       if (this.windowWidth >= 620)
         return this.postcardSizes[index]
@@ -510,13 +490,7 @@ export default {
         }
       }
     }
-  },
-
-  components: {
-    CollectionViewer,
-    FlipPostcard,
-    SlideshowZoom
-  },
+  }
 }
 </script>
 
@@ -680,6 +654,19 @@ header:after  {
 }
 
 
+#nav_back {
+  text-align: center;
+  padding: 0 20px;
+  width: 100%;
+  display: block;
+  img {
+    max-width: 100%;
+    max-height: 29px;
+    width: auto;
+  }
+}
+
+
 footer {
   position: relative;
   text-align: center;
@@ -714,7 +701,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   z-index: -3;
 }
 
-#postcardHistory {
+.postcardHistory {
     // background-color: #E6E5DF;
     position: relative;
     background-color: transparent;
@@ -763,7 +750,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   }
 }
 
-#postcardHistory:after  {
+.postcardHistory:after  {
   content : "";
   display: inline-block;
   position: absolute;
@@ -804,7 +791,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   #sportsmenMoreInfoText {
     float: none;
   }
-  #postcardHistory {
+  .postcardHistory {
     &__textDiv {
       width: 90%;
     }
@@ -827,7 +814,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
     left: -58px;
     top: 0px;
   }
-  #postcardHistory {
+  .postcardHistory {
     &__textDiv {
       width: 90%;
     }
@@ -848,7 +835,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .titleImg2Lines {
     display: inline;
   }
-  #postcardHistory {
+  .postcardHistory {
     &__textDiv {
       width: 90%;
     }
@@ -857,7 +844,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) { 
-  #postcardHistory {
+  .postcardHistory {
     &__textDiv {
       width: 90%;
     }

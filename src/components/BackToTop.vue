@@ -1,8 +1,14 @@
 <template>
-  <div v-if="addBtnToDOM" id="backToTopContainer">
+  <div v-if="staticImg">
+    <div v-scroll-to="{ el:'body', duration:1500, easing:'ease' }" id="backToTopStaticDiv">
+      <g-image alt="back to top" src="../assets/images/back-to-top-1line-black.png" />
+    </div>
+  </div>
+
+  <div v-else-if="addBtnToDOM" id="backToTopContainer">
     <button v-scroll-to="{ el:'body', duration:1500, easing:'ease' }" id="scrollToTopBtn" class="hide">
       <g-image alt="back to top" src="../assets/images/back-to-top-1line-white-150px.png" class="hideOnHover" />
-      <g-image alt="back to top" src="../assets/images/back-to-top-1line-yellow-150px.png" class="showOnHover" />      
+      <g-image alt="back to top" src="../assets/images/back-to-top-1line-yellow-150px.png" class="showOnHover" />
     </button>    
   </div>
 </template>
@@ -11,6 +17,13 @@
 <script scoped>
 export default {
   name: 'BackToTop',
+
+  props: {
+    staticImg: {
+      type: Boolean,
+      default: false,
+    }
+  },
 
   data() {
     return {
@@ -43,7 +56,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style scoped lang="scss">
 
 @font-face {
   font-family: NeueHaasGroteskText Pro55;
@@ -52,6 +65,16 @@ export default {
        url('../assets/fonts/nhaasgrotesktxpro-55rg.woff') format('woff'), /* Pretty Modern Browsers */
        url('../assets/fonts/nhaasgrotesktxpro-55rg.svg#NHaasGroteskTXPro-55Rg') format('svg'); /* Legacy iOS */
   font-weight: normal;
+}
+
+#backToTopStaticDiv {
+  cursor: pointer;
+  img {
+    display: block;
+    width: 247px;
+    max-width: 90vw;
+    margin: 0 auto;
+  }
 }
 
 #backToTopContainer {
@@ -85,10 +108,10 @@ export default {
 
   transition: visibility 0.8s, opacity 0.8s; 
   visibility: visible;
-}
 
-#scrollToTopBtn img {
-  max-width: 150px;
+  img {
+    max-width: 150px;
+  }
 }
 
 .showOnHover,

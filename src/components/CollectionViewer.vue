@@ -55,16 +55,22 @@
             :style="`transform: translate3d(${currentIndex * -100}%, 0px, 0px);`"
             class="collection-viewer__image-container"
           >
-            <div class="collection-viewer__image">
-                <image-magnifier 
-                  :src="image.img"
-                  :zoom-src="image.img"
-                  :zoom="2"                    
-                  :zoom-diameter=500
-                  zoom-radius="50%"
-                  :show-cursor="false"
-                  @imgloaded="imageLoaded($event, imageIndex)"
-                />                 
+            <div class="collection-viewer__image" style="position:relative">
+              <image-magnifier 
+                :src="image.img"
+                :zoom-src="image.img"
+                :zoom="2"                    
+                :zoom-diameter=500
+                zoom-radius="50%"
+                :show-cursor="false"
+                @imgloaded="imageLoaded($event, imageIndex)"
+              />
+              
+              <div v-if="isOldTime" class="collections_headerLinkText">
+                <span>READ ALL ABOUT IT</span>
+                <br>
+                <span>KEEP SCROLLING</span>
+              </div>
             </div>
           </li>
         </ul>
@@ -100,10 +106,11 @@
         />
       </div>
 
-      <g-link :to="{ path: '/collections/', query: { playMusic: 'false' }}" class="nav_link pt-3" id="nav_back">
+      <g-link v-if="!isOldTime" :to="{ path: '/collections/', query: { playMusic: 'false' }}" class="nav_link pt-3" id="nav_back">
         <g-image alt="Back to collections menu" src="../assets/images/back-to-collections-menu-1line-white.png" class="hideOnHover" />
         <g-image alt="Back to collections menu" src="../assets/images/back-to-collections-menu-1line-yellow.png" class="showOnHover" />
       </g-link>
+
     </div>
 
   </div>
@@ -146,6 +153,10 @@ export default {
     },
     nextCollection: {
       type: Object
+    },
+    isOldTime: {
+      type: Boolean,
+      default: false,
     }
   },
 
@@ -527,6 +538,29 @@ export default {
 #rightArrowContainer:hover #nextArrowImg-hover {
   display: inline;
 }
+
+.collections_headerLinkText {
+  display: block;
+  color: #fff;
+  font-family: 'Francois One', sans-serif;
+  font-feature-settings: 'liga';
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.8px;
+  text-align: center;
+  line-height: 20px;
+  margin: 0 auto;
+  padding: 0px;
+  width: 100%;
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+}
+.collections_headerLinkText > span:nth-of-type(2) {
+  font-size: 0.75rem;
+  bottom: 25px;
+}
+
 
 
 /* Responsive breakpoints ref: https://getbootstrap.com/docs/4.3/layout/overview/ */
