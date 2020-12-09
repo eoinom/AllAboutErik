@@ -1,6 +1,6 @@
 <template>
-  <div class="flip-card" :style="dimStyles">
-    <img v-if="seeTheBack" src="../assets/images/see-the-back.png" alt="See the back" class="flip-card-seeTheBack"  @click="lightBoxOpen()">
+  <div class="flip-card" :style="dimStyles" @click="lightBoxOpen()">
+    <img v-if="seeTheBack" src="../assets/images/see-the-back.png" alt="See the back" class="flip-card-seeTheBack" @click="lightBoxOpen()">
     <div class="flip-card-inner">
       <div class="flip-card-front">
         <img :src="imgFront" :alt="caption" :style="dimStyles">
@@ -124,6 +124,7 @@ export default {
 .flip-card {
   position: relative;
   background-color: transparent;
+  cursor: pointer;
 }
 .flip-card-seeTheBack {
   position: absolute;

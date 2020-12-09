@@ -71,7 +71,7 @@
           <b-col> 
             <div class="postcardHistory__textDiv">
               <h2 class="title">{{ postcardHistory.title }}</h2>
-              <div class="pb-2 pb-sm-3 pb-md-4 pb-lg-5">
+              <div class="pb-2 pb-sm-3">
                 <div class="pb-4 pb-xl-2 pt-3 pt-xl-0 mb-3 mb-xl-0 pl-5 pr-3" style="float:right">
                   <flip-postcard
                     v-if="windowWidth > 850"
@@ -101,16 +101,11 @@
                 <img :src="postcardHistory.images[1].img" class="pl-3" style="float:right; max-width:55%">
                 <span v-html="postcardHistory.textPt3" class="postcardText" />
               </div>
-
-              
-              <h2 class="title">{{ about.title }}</h2>
-              <span v-html="about.text" class="postcardText" />
-
             </div>
           </b-col>
 
           <b-col v-if="windowWidth >= 2200" align-self="start">
-            <div id="postcardsSidebar" class="pt-5">
+            <div id="postcardsSidebar" class="pt-3">
               <flip-postcard
                 :imgFront="postcardHistory.postcards[1].imgFront"
                 :imgBack="postcardHistory.postcards[1].imgBack"
@@ -152,15 +147,13 @@
         </b-row>
 
 
-
         <b-row v-if="windowWidth < 2200" align-v="center" align-h="center">
-
           <b-col v-if="windowWidth > 1149" align-self="start" style="padding-top:250px">
             <slideshow-zoom :slides="people_images" />
           </b-col>
           
           <b-col align-self="start" :style="postcardsSidebarStyles">
-            <div id="postcardsSidebar" class="pt-4">
+            <div id="postcardsSidebar" class="py-3">
               <flip-postcard
                 v-if="windowWidth < 768"
                 :imgFront="postcardHistory.postcards[0].imgFront"
@@ -208,12 +201,22 @@
               />
             </div>
           </b-col>
-
         </b-row>
+
 
         <b-row>
           <b-col>
-            <div class="postcardHistory__textDiv text-justify">
+            <div class="postcardHistory__textDiv">
+              <h2 class="title">{{ about.title }}</h2>
+              <span v-html="about.text" class="postcardText" />
+            </div>
+          </b-col>
+        </b-row>
+
+
+        <b-row class="mt-4">
+          <b-col>
+            <div class="postcardHistory__textDiv text-justify pt-3">
               <span class="postcardText">
                 If you would like to see a large selection of the Old-Time Sportsmen collection, 
                 click the link below to open the gallery website in a new tab.

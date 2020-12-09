@@ -89,7 +89,7 @@ postcardHistory:
         _How is this for luck_
 
         _C.B._
-      caption: How's this for luck?...
+      caption: How is this for luck
       imgBack: >-
         https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard02-luck1466-back_beyhgn.jpg
       imgBackLarge: >-
@@ -106,7 +106,7 @@ postcardHistory:
         _We are all well, and we are catching a lots of fish,_
 
         _Carl_
-      caption: 'Dear Grandpa, ...'
+      caption: Dear Grandpa, We are all well and we are catching a lot of fish, Carl
       imgBack: >-
         https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583083148/Collections/06%20Old-Time%20Sportsmen/postcards/postcard03-grandpa027-back_qpccou.jpg
       imgBackLarge: >-
@@ -129,7 +129,7 @@ postcardHistory:
 
 
         _Lewis_
-      caption: 'Say Fred, How....'
+      caption: Say, Fred, how would you like to be with this bunch for a few days during this beastly weather? All well and enjoying life full up to the brim. Yours, Lewis
       imgBack: >-
         https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1583083149/Collections/06%20Old-Time%20Sportsmen/postcards/postcard04-fred648-back_y3wrvs.jpg
       imgBackLarge: >-
