@@ -14,7 +14,7 @@
                 <g-image alt="Hunter" :src="node.headerLeftImg" id="headerLeftImg" />
               </b-col>
               
-              <b-col class="sportsmenHeaderMainCol" align-self="end">          
+              <b-col class="sportsmenHeaderMainCol" align-self="end">
                 <g-image :src="node.titleImg1Line" class="titleImg titleImg1Line pt-3" />
                 <g-image :src="node.titleImg2Lines" class="titleImg titleImg2Lines sportsmen2LineTitleImg" />
 
@@ -59,6 +59,7 @@
             <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
             
             <div v-html="node.content" class="publication_headerText" />
+            <div v-if="node.volumeInfo != ''" v-html="node.volumeInfo" class="publication_headerText pt-1" />
           </div>
         </header>
 
@@ -91,6 +92,7 @@
               />
 
               <div v-if="title != 'Old Timey Sportsmen'" v-html="node.fullTitle" class="publication_headerText text-left pt-4" />
+              <div v-if="node.volumeInfo != ''" v-html="node.volumeInfo" class="publication_headerText text-left pt-2" />
               <div class="publication_mainText pt-4">{{ node.mainTextTop }}</div>
               <div class="publication_mainText pt-4">{{ node.mainTextBottom }}</div>
 
@@ -148,6 +150,7 @@ query ($id: ID!) {
   Publication: publications(id: $id) {
     title
     fullTitle
+    volumeInfo
     titleImg1Line
     titleImg2Lines
     titleImg2LinesConcise
@@ -477,19 +480,17 @@ export default {
   font-weight: 500;
   font-size: 1.0625rem;
   line-height: 1.5rem;
-  letter-spacing: 8px;
+  letter-spacing: 5px;
   text-align: center;
   text-shadow: 4px 4px 3px rgba(0,0,0,0.18);
   text-transform: uppercase;
   margin: 0px;
   padding: 0px;
-  * {
-    margin: 10px !important;
+  &:first-of-type {
+    letter-spacing: 8px;
   }
 }
-.publication_headerText >>> .temp {
-  margin: 10px !important;
-}
+
 
 .sportsmenHeaderMainCol {
   width: 1240px;
@@ -658,7 +659,9 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .publication_headerText {
     font-size: 0.875rem;
     line-height: 1.25rem;
-    letter-spacing: 7px;
+    &:first-of-type {
+      letter-spacing: 7px;
+    }
   }
   .sportsmenHeaderMainCol {
     max-width: 100%;
@@ -697,7 +700,9 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .publication_headerText {
     font-size: 0.9375rem;
     line-height: 1.325rem;
-    letter-spacing: 7px;
+    &:first-of-type {
+      letter-spacing: 7px;
+    }
   }
   .publication_mainText {
     font-size: calc(1.125rem + 1.0 * (100vw - 576px) / (768 - 576) ); /* varies between 18px (1.125rem) and 19px */

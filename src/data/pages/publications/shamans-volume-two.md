@@ -1,7 +1,7 @@
 ---
 title: Shamans Volume Two
-fullTitle: '<span>Shamans, Supernaturals & Animal Spirits: Mythic Figures From The Ancient Andes</span>
-<span>Volume Two: Tiwanaku Pukara, Wari, Huarmey, Chimú, Chancay, Pachacamac</span>'
+fullTitle: 'Shamans, Supernaturals & Animal Spirits: Mythic Figures From The Ancient Andes'
+volumeInfo: 'Volume Two: Tiwanaku Pukara, Wari, Huarmey, Chimú, Chancay, Pachacamac'
 titleImg2Lines: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586900042/Publications/4.%20Shamans%20Vol1%20and%20Vol2/title-shamans-white-2lines_ow7pfq.png
 titleImg2LinesConcise:
   - https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1589409475/Publications/4.%20Shamans%20Vol1%20and%20Vol2/title-shamans-white-2lines_concise_mqaqm6.png

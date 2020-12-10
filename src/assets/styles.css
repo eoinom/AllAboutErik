@@ -115,10 +115,6 @@ body {
   line-height: 1.5625rem;
   letter-spacing: 5px;
 }
-.publication_headerText > span:nth-child(2) {
-  display: inline-block;
-  margin-top: 8px;
-}
 
 #archive_headerText > p { 
   font-family: 'NeueHaasGroteskText Pro65';

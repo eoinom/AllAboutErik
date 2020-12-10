@@ -615,6 +615,7 @@ collections:
     fields:
       - {label: 'Title', name: 'title', widget: 'string', required: false}
       - {label: 'Full Title', name: 'fullTitle', widget: 'string', required: false}
+      - {label: 'Volume Info', name: 'volumeInfo', widget: 'string', required: false}
       - {label: "Title Image (Single line)", name: "titleImg1Line", widget: "image", required: false}
       - {label: "Title Image (Two lines)", name: "titleImg2Lines", widget: "image", required: false}
       - {label: "Title Image (Two lines concise)", name: "titleImg2LinesConcise", widget: "image", required: false}
