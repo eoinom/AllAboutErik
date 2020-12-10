@@ -256,7 +256,7 @@ export default {
 
 #titleImg {
   width: 100%;
-  max-width: 755px;
+  max-width: 650px;
   min-width: 250px;
   height: auto;
   margin: auto;
@@ -269,7 +269,7 @@ export default {
   font-feature-settings: 'liga';
   font-size: 1.375rem;
   font-weight: 400;
-  line-height: 2.0625rem;
+  line-height: 1.75rem;
   letter-spacing: 2px;
   text-align: justify;
   text-shadow: 0px 0px 250px #1C0F07,0px 0px 250px #1C0F07/* glow */, 1px 1px 2px rgba(28,16,23,0.89)/* drop shadow*/;
@@ -362,7 +362,7 @@ export default {
   }
   #slideshowText {
     font-size: 1.3125rem;
-    line-height: 33px;
+    line-height: 1.65rem;
   }
 }
 
