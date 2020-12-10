@@ -18,7 +18,7 @@
                 <g-image :src="node.titleImg1Line" class="titleImg titleImg1Line pt-3" />
                 <g-image :src="node.titleImg2Lines" class="titleImg titleImg2Lines sportsmen2LineTitleImg" />
 
-                <div v-html="node.content" class="headerText" />
+                <div v-html="node.content" class="publication_headerText" />
 
                 <b-row align-v="start" align-h="center" style="min-height:68px; padding-top:8px">                  
                   <b-col>
@@ -58,7 +58,7 @@
             <g-image :src="titleImg1Line" class="titleImg titleImg1Line pt-3" />
             <g-image :src="titleImg2Lines" class="titleImg titleImg2Lines" />
             
-            <div v-html="node.content" class="headerText" />
+            <div v-html="node.content" class="publication_headerText" />
           </div>
         </header>
 
@@ -90,6 +90,7 @@
                 @reload="reloadBook()"
               />
 
+              <div v-if="title != 'Old Timey Sportsmen'" v-html="node.fullTitle" class="publication_headerText text-left pt-4" />
               <div class="publication_mainText pt-4">{{ node.mainTextTop }}</div>
               <div class="publication_mainText pt-4">{{ node.mainTextBottom }}</div>
 
@@ -146,6 +147,7 @@
 query ($id: ID!) {
   Publication: publications(id: $id) {
     title
+    fullTitle
     titleImg1Line
     titleImg2Lines
     titleImg2LinesConcise
@@ -468,7 +470,7 @@ export default {
   text-align: center;
   margin: 0 auto;
 }
-.headerText {
+.publication_headerText {
   color: #FFFFFF;
   font-family: 'NeueHaasGroteskText Pro65';
   font-feature-settings: 'liga';  
@@ -481,6 +483,12 @@ export default {
   text-transform: uppercase;
   margin: 0px;
   padding: 0px;
+  * {
+    margin: 10px !important;
+  }
+}
+.publication_headerText >>> .temp {
+  margin: 10px !important;
 }
 
 .sportsmenHeaderMainCol {
@@ -647,7 +655,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .headerItems {
     padding: 0px 60px;
   }
-  .headerText {
+  .publication_headerText {
     font-size: 0.875rem;
     line-height: 1.25rem;
     letter-spacing: 7px;
@@ -686,7 +694,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
   .headerItems {
     padding: 0px 80px;
   }
-  .headerText {
+  .publication_headerText {
     font-size: 0.9375rem;
     line-height: 1.325rem;
     letter-spacing: 7px;
@@ -736,7 +744,7 @@ Ref: https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-wil
 
 /* Special - Larger devices (desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) and (max-width: 1499.98px) {
-  .headerText {
+  .publication_headerText {
     padding: 0px 120px;
   }
   .titleImg1Line {

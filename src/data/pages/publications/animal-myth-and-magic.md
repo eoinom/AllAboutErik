@@ -1,5 +1,6 @@
 ---
 title: Animal Myth and Magic
+fullTitle: Animal Myth and Magic
 titleImg2Lines: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586992211/Publications/3.%20Animal%20Myth%20and%20Magic/animalmythmagic_-_cropped_fdlmnj.png
 titleImg2LinesConcise:
   - https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1589409430/Publications/3.%20Animal%20Myth%20and%20Magic/animalmythmagic_-_cropped_concise_u77fo5.png

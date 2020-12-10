@@ -1,5 +1,6 @@
 ---
 title: Old Timey Sportsmen
+fullTitle: Old Timey Sportsmen
 titleImg1Line: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586896741/Old%20Time%20Sportsmen%20%28Common%29/title-old-time-sportsmen-black-1line_vxphwj.png
 titleImg2Lines: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586896741/Old%20Time%20Sportsmen%20%28Common%29/title-old-time-sportsmen-black-2lines_em3dwd.png
 headerBgImg: https://res.cloudinary.com/all-about-erik/image/upload/f_auto/v1586896743/Old%20Time%20Sportsmen%20%28Common%29/banner-old-time-sportsmen_fql1sy.png
